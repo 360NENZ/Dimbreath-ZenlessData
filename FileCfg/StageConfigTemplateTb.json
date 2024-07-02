@@ -1,0 +1,5545 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": "Construction1_1",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction1_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite1_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction1_2",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction1_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite1_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction1_2_C02_SQ08",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction1_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite1_2_C02_SQ08.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_1",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_1.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_1_NPCTask",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_1.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_1_NPCTask.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_2",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_2_MidLv2_6",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_2_Mid_6.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_2_NPCTask",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_2_NPCTask.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_2_RescueNPC",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_2_RescueNPC.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_2_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_2_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_Boss",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_Boss.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_GoldenBomb",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_Mid2_7",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_Mid2_7.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_NPCTask",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_NPCTask.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_PersonalLine",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_PersonalLine.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_PersonalStory",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_Character.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_3_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_3_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_4",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_4.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_4Test",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_4_GoldenBomb",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_4.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_4_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_4_PersonalStory",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_4.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_4_Character.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_5",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_5_Fan.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_5.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_5_Rally",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_5_Fan.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_5.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_5_Rally.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_5_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction2_5_Rally_2",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_5.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_5_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_1",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_1_HollowResearcher",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_1_HollowResearcher.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_1_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_1_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_2",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_2_NPCTask",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_2_NPCTask.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_2_RescueNPC",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_2_RescueNPC.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_2_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_2_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_3",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_3_Character_Rina",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_3_Character_Rina.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_3_JaneOVA",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_3_JaneOVA.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_3_Mid2_7",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_2_Mid2_7.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_3_NPCTask",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_3_NPCTask.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_3_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_3.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_3_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_HollowResearcher",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_HollowResearcher.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_Mid_4",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_Mid_4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_NPCEvent",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_SpecialAnchor.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_NPCTask",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_NPCTask.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_RescueNPC",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_RescueNPC.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_SuccessiveLevel",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_SuccessiveLevel.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_Test",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset"
+      ],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_4_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_5",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_5.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_5_Character",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_5_Character.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_5_GoldenBomb",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_5_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_5_SideQuest",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_5_SideQuest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_5_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_5_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_5_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_6",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_6.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_6.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_6_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_6.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_6_GoldenBomb",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_6.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_6.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_6_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_6_HollowResearcher",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_6.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_6.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_6_HollowResearcher.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Construction3_6_RescueNPC",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_6.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_6.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_6_RescueNPC.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionSite1_1_PersonalLines",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_1_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite1_1_PersonalLines.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionSite2_4_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction2_4.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite2_4_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionSite3_3_PersonalLine",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_3_PersonalLine.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionSite3_4_SideQuest",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_4_SideQuest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionSite3_5_PersonalLine",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_5_PersonalLine.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionSite3_6_Zero",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_6.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_ConstructionSite/FCS_Construction3_6.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_ConstructionSite/Env_ConstructionSite3_6_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "ConstructionTest",
+      "FHGIPCOBKPL": "ConstructionSite",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Event_ConstructionSite2_3_BossBattle",
+      "FHGIPCOBKPL": "Event",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Event_ConstructionSite2_3_BossBattle.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Event_SkyScraper_H_2_1_Bangboo_Safety",
+      "FHGIPCOBKPL": "Event",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Event_SkyScraper_H_2_1_Bangboo_Safety.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Event_SkyScraper_H_2_2_SOMA_Fight",
+      "FHGIPCOBKPL": "Event",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Event_SkyScraper_H_2_2_SOMA_Fight.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Event_SkyScraper_L_1_2_Bangboo_Butler",
+      "FHGIPCOBKPL": "Event",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Event_SkyScraper_L_1_2_Bangboo_Butler.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_ConstructionSite",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_NPCWorksite.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_FortuneHIA",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/FortuneSquare/FortuneHIA.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_FortuneSquare",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/FortuneSquare/FortuneSquare.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_Garage",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCityStreet.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_MainCity/Env_Garage.prefab",
+      "DOLABKHKCHO": "Assets/NapResources/StageLogic/OnlyForBake_MainCity/OnlyForBake_Street.prefab",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_SkyScraper",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_NPCWorksite.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_Street",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCityStreet.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_MainCity/Env_Street.prefab",
+      "DOLABKHKCHO": "Assets/NapResources/StageLogic/OnlyForBake_MainCity/OnlyForBake_Street.prefab",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "MainCity_Workshop",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "MainCity_Back",
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCityWorkshop.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_MainCity/Env_Workshop.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Maincity_Subway_FortuneSquare",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCitySubway.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Maincity_Subway_Street",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCitySubway_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Maincity_Zero",
+      "FHGIPCOBKPL": "MainCity",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_NPCWorksite.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_GamePlay_Zero_SpecialRoom_2",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_GamePlay_ZeroSp_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_HadalZone_Periodic",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Hadal_Periodic.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_HadalZone_Periodic_1",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_1_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Hadal_Periodic_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_HadalZone_Periodic_2",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Hadal_Periodic_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_HadalZone_Permanent",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Hadal_Permanent.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_HadalZone_Permanent_1",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Hadal_Permanent_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_HadalZone_Permanent_2",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Hadal_Permanent_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_MetroArea_4_1_Lycaon",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro4_1.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_1_Lycaon.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_1_1",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_1_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_1_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_1_1_Rally",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_1_1_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_1_2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_1_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_1_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_1_2_Casual",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_1_2_Casual.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_1_2_Successive",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_1_2_Successive.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_1",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_2_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_1_Casual",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_1_Casual.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_1_GoldenBomb",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_1_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_1_Rally",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Main/FC_Successive/FCS_SkyScraper_H_2_1_KickOpenDoorRally.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_1_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_1_Searching",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_1_Searching.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_1_Zero",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_2_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_1_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_2_Active_ButlerBangboo",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_2_Active.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_2_BattleCommission",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_2_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_2_Challenge",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_2_Challenge.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_2_Test",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_2_Test.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_3",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_3_Destroy",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_3_Destroy.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_2_3_Successive",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_2_3_Successive.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_3_1",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_3_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_3_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_3_2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_H_3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_3_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_3_2_Active_SafetyBangboo",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_3_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_3_2_Active.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_H_3_2_Rally",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_3_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_H_3_2_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_1",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_1_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_1_BattleCommission",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_1_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_1_C03_SQ15",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_1_C03_SQ15.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_1_Rally",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_1_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_1_Searching",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_1_Searching.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_2_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_2_Challenge",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_2_Challenge.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_2_Lycaon",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_2_Lycaon.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_2_WorldLevelUnlock",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_2_WorldLevelUnlock.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_2_Zero",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_2_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_2_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_3",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_3_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_3_C03_SQ13",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_3_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_3_C03_SQ13.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_3_GoldenBomb",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_3_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_1_3_Special",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_1_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_1_3_Special.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_1",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_2_1_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_1_C03_SQ02",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_2_1_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_1_C03_SQ02.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_1_Successive",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_1_Successive.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_1_WorldLevelUnlock",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_1_WorldLevelUnlock.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_2_2_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_2_Domain",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_2_Domain.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_2_GoldenBomb",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_2_GoldenBomb.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_2_Searching",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_2_Searching.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_2_Searching2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_2_Searching2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_2_2_SideQuest",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_2_2_SideQuest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_1",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_3_1_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_1_AvoidDemo",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_1_AvoidDemo.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_2",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_3_2_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_2_BattleQuest_10304411",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_3_2_Trap.asset",
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_2_BattleQuest_10304411.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_2_C03_SQ12",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_L_3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_2_C03_SQ12.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_2_Domain",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_2_Domain.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_2_Gather",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_2_Gather.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_SkyScraper_L_3_2_Rally",
+      "FHGIPCOBKPL": "SkyScraper",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_SkyScraper/FCS_SkyScraper_LightControl.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_SkyScraper/Env_SkyScraper_L_3_2_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_ConstructionSite_50R",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_ConstructionSite_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_50R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_Metro_50R",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_Metro_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_50R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_SkyScraper_50R",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_SkyScraper_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_50R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_TrainingRoom_30R",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_1_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_30R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_TrainingRoom_30R_01",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_1_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_30R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_TrainingRoom_30R_02",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_1_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_30R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_VR_TrainingRoom_50R",
+      "FHGIPCOBKPL": "DailyVRQuest",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Event/Env_Stage_VR_TrainingRoom_50R.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_Boss_Nineveh",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Boss_Nineveh.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroNineveh.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_1",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_10",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_10.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero10.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_10_BattleCommission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_10.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero10_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_11",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_11.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero11.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_11_BattleCommission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_11.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero11_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_12",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_12.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero12.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_12_Rally",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_12.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero12_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_13",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_13.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero13.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_13_Nineveh",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_13.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero13_Nineveh.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_14",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_14.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero14.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_15",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_15.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero15.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_15_Rally",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_15.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero15_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_15_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_15.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero15_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_16",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_16.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero16.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_16_BattleCommission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_16.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero16_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_17",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_17.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero17.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_18",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_18.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero18.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_18_BattleCommission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_18.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero18_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_19",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_19.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero19.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_1GoldenBangboo",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial1_GoldenBangboo.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_1_WorldLevelUnlock",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero1_WorldLevelUnlock.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_2",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_20",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_20.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero20.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_20_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_20.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero20_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_21",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_21.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero21.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_21_SPMission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_21.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero21_SPM.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_22",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_22.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero22.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_22_WorldLevelUnlock",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_22.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero22_WorldLevelUnlock.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_23",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_23.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero23.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_23_JaneOVA",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_23.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero23_JaneOVA.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_23_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_23.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero23_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_24",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_24.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero24.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_24_BattleQuest_10304408",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_24.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero24_BattleQuest_10304408.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_25",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_25.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero25.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_25_SuccessiveLevel",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_25.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero25_SuccessiveLevel.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_2_Battlecommission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero2_Battlecommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_2_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero2_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_3",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_3Special",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero3_Special.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_4",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_4_Nineveh",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero4_Nineveh.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_4_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero4_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_5",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_5.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero5.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_6",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_6.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero6.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_6_SuccessiveLevel",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_6.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero6_SuccessiveLevel.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_7",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_7.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero7.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_8",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_8.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero8.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_8Special",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_8.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero8_Special.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_8_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_8.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero8_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_9",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_9.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero9.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_ComplexRoom_9_BattleCommission",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_9.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_Zero9_BattleCommission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_Loop",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_LoopRoom_1_LD.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroLoop.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_1",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_1_Variant",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial1_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_2",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_3",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_3-1",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial3-1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_4",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_5",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_5.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial5.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "Stage_Zero_SpecialRoom_5_SuccessiveLevel",
+      "FHGIPCOBKPL": "Zero",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_5.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Zero/Env_ZeroSpecial5_SuccessiveLevel.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_1",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_1_mode1",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_1_Mode1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_2",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_2_SideQuest",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/metro1_2_SideQuest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_2_Zero",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_2_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_3",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_3_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_3_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_3_SuccessiveLevel",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_3_SuccessiveLevel.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_4",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro1_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro1_4_Room3.5",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_4_Room3.5.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_1",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro2_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_1_Comic.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_1_Comic",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_1_Comic.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_1_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_1_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_2",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro2_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_2_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_2_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_2_Zero",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_2_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_3",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro2_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_3_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_3_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_3_Guard",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_3_Guard.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_3_Room6",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_3_Room6.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_3_Successive",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_3_Room6.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro2_3_Zero",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro2_3_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_1",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_1_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_1_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_1_SideQuest",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_1_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/metro3_1_SideQuest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_2",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_2_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_2_LeveLItemTest",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_2_LeveLItemTest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_MidLv2_3",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_3_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_MidLv2_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_NPCMission",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_NPCMission.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_PersonalLine",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_PersonalLine.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_Room6",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_Room6.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_Thunder",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_Thunder.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_Zero",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_ZeroSearch",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_ZeroSearch.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_3_variant",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_3_Variant.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_4.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4_1",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_4_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4_2",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_4_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4_Fight",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/metro3_4_Fight.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_4_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4_Recording",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_4_Recording.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_4_Zero",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro3_4_Trap.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro3_4_Zero.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 0,
+        "DAANNBFJJCE": 0
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro3_test_Alexthunder",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_3.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro1_3.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro4_1",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro4_1.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_1.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro4_1_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro4_1.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_1_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro4_1_Rally",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_1.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro4_1.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_1_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro4_2",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_2.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro4_2_GoldenBombIntro",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_2_GoldenBombIntro.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro4_2_Rally",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_2.unity",
+      "ELFNINFCMHH": [
+        "Assets/NapResources/LevelProcess/Level/FC_Sub/FC_Sub_Metro/FCS_Metro4_2.asset"
+      ],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_Metro4_2_Rally.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro_act1",
+      "FHGIPCOBKPL": "Metro",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "metro_act2",
+      "FHGIPCOBKPL": "Metro",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "metro_act3",
+      "FHGIPCOBKPL": "Metro",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_2.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": false
+    },
+    {
+      "HBKDOIKGNDE": "metro_escapetest",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_EscapteTest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    },
+    {
+      "HBKDOIKGNDE": "metro_patrotest",
+      "FHGIPCOBKPL": "Metro_Prefix",
+      "GEOEKEOJGBE": "",
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_1.unity",
+      "ELFNINFCMHH": [],
+      "EPHKMOPGMFJ": "Assets/NapResources/StageLogic/Env_Metro/Env_PatroTest.prefab",
+      "DOLABKHKCHO": "",
+      "POCIGJHPCNO": "",
+      "MKEFAMCMLDL": false,
+      "OKGPKKMDBDB": {
+        "BLKLOPMFNEH": -100,
+        "DAANNBFJJCE": 100
+      },
+      "PMJNCNOBMNP": {
+        "BLKLOPMFNEH": 100,
+        "DAANNBFJJCE": 100
+      },
+      "ABDABKCDLIF": true
+    }
+  ]
+}

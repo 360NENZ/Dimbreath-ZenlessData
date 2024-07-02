@@ -1,0 +1,655 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/FortuneSquare/FortuneHIA.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_FortuneHIA.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/FortuneHIA.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/FortuneSquare/FortuneSquare.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_FortuneSquare.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/FortuneSquare.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCityStreet.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_MainCityStreet.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/MainCityStreet.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCitySubway.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_MainCitySubway.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/MainCitySubway.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCitySubway_1.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_MainCitySubway_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/MainCitySubway_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/MainCity/MainCityWorkshop.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_MainCityWorkshop.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/MainCityWorkshop.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_1_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_1_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_1_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_1_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_1_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_1_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_1_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_1_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_2_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_2_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_2_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_2_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_2_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_2_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_4.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_2_4.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_2_4.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_2_4.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_2_5.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_2_5.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_2_5.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_2_5.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_3_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_3_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_3_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_3_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_3_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_3_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_3_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_3_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_3_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_4.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_3_4.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_3_4.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_3_4.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_5.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_3_5.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_3_5.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_3_5.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_3_6.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_ConstructionSite_3_6.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_3_6.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_3_6.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_ConstructionSite/Stage_ConstructionSite_NPCWorksite.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_ConstructionSite_NPCWorksite.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_ConstructionSite_NPCWorksite.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_ConstructionSite_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_ConstructionSite_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_ConstructionSite_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_ConstructionSite_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_Metro_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_Metro_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_Metro_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_Metro_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_SkyScraper_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_SkyScraper_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_SkyScraper_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_SkyScraper_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_1_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_TrainingRoom_1_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_TrainingRoom_1_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_TrainingRoom_1_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_1_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_TrainingRoom_1_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_TrainingRoom_1_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_TrainingRoom_1_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_1_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_TrainingRoom_1_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_TrainingRoom_1_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_TrainingRoom_1_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Event/Stage_VR_TrainingRoom_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_VR_TrainingRoom_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_VR_TrainingRoom_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_VR_TrainingRoom_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_1_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_1_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_1_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_1_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_1_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_1_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_1_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_1_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_1_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_1_4.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_1_4.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_1_4.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_1_4.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_2_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_2_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_2_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_2_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_2_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_2_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_2_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_3_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_3_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_3_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_3_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_3_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_3_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_3_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_3_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_3_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_3_4.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_3_4.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_3_4.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_3_4.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_4_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_4_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_4_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_MetroArea_New/Stage_MetroArea_4_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_MetroArea_4_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_MetroArea_4_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_MetroArea_4_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_1_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_1_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_1_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_1_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_1_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_1_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_1_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_2_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_2_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_2_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_2_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_2_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_2_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_2_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_3_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_3_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_3_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_3_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_H_3_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_H_3_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_H_3_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_H_3_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_1_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_1_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_1_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_1_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_1_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_1_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_1_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_1_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_1_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_1_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_2_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_2_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_2_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_2_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_3_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_3_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_3_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_L_3_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_SkyScraper_L_3_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_L_3_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_L_3_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_SkyScraper/Stage_SkyScraper_NPCWorksite.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_SkyScraper_NPCWorksite.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_SkyScraper_NPCWorksite.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Abyss_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Abyss_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Abyss_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_1_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Abyss_1_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Abyss_1_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Abyss_1_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_1_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Abyss_1_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Abyss_1_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Abyss_1_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Abyss_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Abyss_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Abyss_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_2_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Abyss_2_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Abyss_2_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Abyss_2_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Abyss_2_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Abyss_2_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Abyss_2_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Abyss_2_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_Boss_Nineveh.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_Boss_Nineveh.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_Boss_Nineveh.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_Boss_Nineveh.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_10.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_10.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_10.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_10.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_11.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_11.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_11.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_11.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_12.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_12.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_12.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": ""
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_13.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_13.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_13.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_13.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_14.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_14.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_14.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_14.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_15.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_15.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_15.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_15.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_16.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_16.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_16.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_16.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_17.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_17.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_17.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_17.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_18.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_18.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_18.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_18.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_19.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_19.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_19.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_19.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_20.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_20.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_20.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_20.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_21.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_21.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_21.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_21.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_22.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_22.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_22.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_22.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_23.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_23.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_23.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_23.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_24.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_24.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_24.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_24.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_25.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_25.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_25.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_25.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_4.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_4.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_4.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_4.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_5.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_5.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_5.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_5.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_6.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_6.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_6.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_6.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_7.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_7.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_7.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_7.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_8.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_8.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_8.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_8.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_ComplexRoom_9.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_ComplexRoom_9.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_ComplexRoom_9.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_ComplexRoom_9.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_NPCWorksite.unity",
+      "DGNMHGKAOLA": "",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_NPCWorksite.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_NPCWorksite.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_1.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_SpecialRoom_1.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_SpecialRoom_1.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_SpecialRoom_1.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_2.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_SpecialRoom_2.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_SpecialRoom_2.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_SpecialRoom_2.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_3.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_SpecialRoom_3.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_SpecialRoom_3.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_SpecialRoom_3.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_4.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_SpecialRoom_4.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_SpecialRoom_4.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_SpecialRoom_4.bytes"
+    },
+    {
+      "FPMEJGMAHHP": "Assets/Scenes/Stage_Zero/Stage_Zero_SpecialRoom_5.unity",
+      "DGNMHGKAOLA": "Assets/Scenes/AutoBaked/SceneCollider/SceneProp_Stage_Zero_SpecialRoom_5.prefab",
+      "KCFODGIGIBG": "Assets/Scenes/AutoBaked/AudioData/NapAudio_Stage_Zero_SpecialRoom_5.prefab",
+      "AAECCIBPGBD": "",
+      "EHMOIKPCBIB": "Assets/NapResources/Data/JsonBytes/AreaData/Stage_Zero_SpecialRoom_5.bytes"
+    }
+  ]
+}

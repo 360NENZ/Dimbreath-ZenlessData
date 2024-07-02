@@ -1,0 +1,2085 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1,
+      "AEGOLPCLNCJ": "Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 2,
+      "CKHIFCAOGMF": 500,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 1,
+      "JGNEJDKKKBI": 5,
+      "HKLOCCGFECO": 1,
+      "IKLGLFGBLCM": 3,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_apple_get"
+    },
+    {
+      "HBKDOIKGNDE": 2,
+      "AEGOLPCLNCJ": "Wall_Small_Idle",
+      "DMELKKCGMLF": [
+        0.8999999761581421,
+        0.8999999761581421
+      ],
+      "LLLNBAHJDLB": [
+        105,
+        105,
+        105
+      ],
+      "DAAMKKCKDAD": 2,
+      "OKANCLLNAEA": [
+        9,
+        100
+      ],
+      "PLMODGOBMIA": 2,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 1,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 3,
+      "AEGOLPCLNCJ": "Mine_Idle",
+      "DMELKKCGMLF": [
+        8.5,
+        8.5
+      ],
+      "LLLNBAHJDLB": [
+        0,
+        0,
+        0
+      ],
+      "DAAMKKCKDAD": 3,
+      "OKANCLLNAEA": [
+        10,
+        100
+      ],
+      "PLMODGOBMIA": 3,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 1200,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 4,
+      "AEGOLPCLNCJ": "Fast_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 900,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 5000,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeedup",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 5,
+      "AEGOLPCLNCJ": "Slow_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        139,
+        69,
+        19
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 2,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 900,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 5000,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeeddown",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 6,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 900,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 1,
+      "JGNEJDKKKBI": 5,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 2,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeDiamond",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 7,
+      "AEGOLPCLNCJ": "Invincible_Idle",
+      "DMELKKCGMLF": [
+        10.800000190734863,
+        10.800000190734863
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 4,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 901,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "Snakeinvincible",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "SnakeinvincibleStrokeIdle",
+      "JDMHCKFIGCL": [
+        2,
+        2
+      ],
+      "BNMPEAPCNKC": "Idle_Background_High_2",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 8,
+      "AEGOLPCLNCJ": "Bomb_Idle",
+      "DMELKKCGMLF": [
+        12.0,
+        12.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 5,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 902,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeBomb",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_bomb_get"
+    },
+    {
+      "HBKDOIKGNDE": 9,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 0,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 0,
+      "GKHDCHGDLOL": 900,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 1,
+      "JGNEJDKKKBI": 5,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeDiamond",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 101,
+      "AEGOLPCLNCJ": "Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 102,
+      "CKHIFCAOGMF": 500,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_apple_get"
+    },
+    {
+      "HBKDOIKGNDE": 102,
+      "AEGOLPCLNCJ": "Wall_Small_Idle",
+      "DMELKKCGMLF": [
+        1.0,
+        1.0
+      ],
+      "LLLNBAHJDLB": [
+        105,
+        105,
+        105
+      ],
+      "DAAMKKCKDAD": 2,
+      "OKANCLLNAEA": [
+        5100
+      ],
+      "PLMODGOBMIA": 2,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 101,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 103,
+      "AEGOLPCLNCJ": "Mine_Idle",
+      "DMELKKCGMLF": [
+        8.5,
+        8.5
+      ],
+      "LLLNBAHJDLB": [
+        0,
+        0,
+        0
+      ],
+      "DAAMKKCKDAD": 3,
+      "OKANCLLNAEA": [
+        10,
+        100
+      ],
+      "PLMODGOBMIA": 3,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1300,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 104,
+      "AEGOLPCLNCJ": "Fast_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 5000,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 3,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeedup",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 105,
+      "AEGOLPCLNCJ": "Slow_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        139,
+        69,
+        19
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 2,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeeddown",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 106,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 107,
+      "AEGOLPCLNCJ": "Invincible_Idle",
+      "DMELKKCGMLF": [
+        10.800000190734863,
+        10.800000190734863
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 4,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1101,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "Snakeinvincible",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "SnakeinvincibleStrokeIdle",
+      "JDMHCKFIGCL": [
+        2,
+        2
+      ],
+      "BNMPEAPCNKC": "Idle_Background_High_Move_2",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 108,
+      "AEGOLPCLNCJ": "Bomb_Idle",
+      "DMELKKCGMLF": [
+        12.0,
+        12.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 5,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1002,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeBomb",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_bomb_get"
+    },
+    {
+      "HBKDOIKGNDE": 109,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 0,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1000,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeDiamond",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 201,
+      "AEGOLPCLNCJ": "Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 102,
+      "CKHIFCAOGMF": 500,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_apple_get"
+    },
+    {
+      "HBKDOIKGNDE": 202,
+      "AEGOLPCLNCJ": "Wall_Small_Idle",
+      "DMELKKCGMLF": [
+        1.0,
+        1.0
+      ],
+      "LLLNBAHJDLB": [
+        105,
+        105,
+        105
+      ],
+      "DAAMKKCKDAD": 2,
+      "OKANCLLNAEA": [
+        5100
+      ],
+      "PLMODGOBMIA": 2,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 101,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 203,
+      "AEGOLPCLNCJ": "Mine_Idle",
+      "DMELKKCGMLF": [
+        8.5,
+        8.5
+      ],
+      "LLLNBAHJDLB": [
+        0,
+        0,
+        0
+      ],
+      "DAAMKKCKDAD": 3,
+      "OKANCLLNAEA": [
+        10,
+        100
+      ],
+      "PLMODGOBMIA": 3,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1300,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 204,
+      "AEGOLPCLNCJ": "Fast_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 5000,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 3,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeedup",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 205,
+      "AEGOLPCLNCJ": "Slow_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        139,
+        69,
+        19
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 2,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeeddown",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 206,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 207,
+      "AEGOLPCLNCJ": "Invincible_Idle",
+      "DMELKKCGMLF": [
+        10.800000190734863,
+        10.800000190734863
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 4,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1101,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "Snakeinvincible",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "SnakeinvincibleStrokeIdle",
+      "JDMHCKFIGCL": [
+        2,
+        2
+      ],
+      "BNMPEAPCNKC": "Idle_Background_High_Move_2",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 208,
+      "AEGOLPCLNCJ": "Bomb_Idle",
+      "DMELKKCGMLF": [
+        12.0,
+        12.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 5,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1002,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeBomb",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_bomb_get"
+    },
+    {
+      "HBKDOIKGNDE": 209,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 90,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1102,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeDiamond",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 301,
+      "AEGOLPCLNCJ": "Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 102,
+      "CKHIFCAOGMF": 500,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_apple_get"
+    },
+    {
+      "HBKDOIKGNDE": 302,
+      "AEGOLPCLNCJ": "Wall_Small_Idle",
+      "DMELKKCGMLF": [
+        1.0,
+        1.0
+      ],
+      "LLLNBAHJDLB": [
+        105,
+        105,
+        105
+      ],
+      "DAAMKKCKDAD": 2,
+      "OKANCLLNAEA": [
+        5100
+      ],
+      "PLMODGOBMIA": 2,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 101,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 303,
+      "AEGOLPCLNCJ": "Mine_Idle",
+      "DMELKKCGMLF": [
+        8.5,
+        8.5
+      ],
+      "LLLNBAHJDLB": [
+        0,
+        0,
+        0
+      ],
+      "DAAMKKCKDAD": 3,
+      "OKANCLLNAEA": [
+        10,
+        100
+      ],
+      "PLMODGOBMIA": 3,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1300,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 304,
+      "AEGOLPCLNCJ": "Fast_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 5000,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 3,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeedup",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 305,
+      "AEGOLPCLNCJ": "Slow_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        139,
+        69,
+        19
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 2,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeeddown",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 306,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 307,
+      "AEGOLPCLNCJ": "Invincible_Idle",
+      "DMELKKCGMLF": [
+        10.800000190734863,
+        10.800000190734863
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 4,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1101,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "Snakeinvincible",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "SnakeinvincibleStrokeIdle",
+      "JDMHCKFIGCL": [
+        2,
+        2
+      ],
+      "BNMPEAPCNKC": "Idle_Background_High_Move_2",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 308,
+      "AEGOLPCLNCJ": "Bomb_Idle",
+      "DMELKKCGMLF": [
+        12.0,
+        12.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 5,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1002,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeBomb",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_bomb_get"
+    },
+    {
+      "HBKDOIKGNDE": 309,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 45,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1102,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeDiamond",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 401,
+      "AEGOLPCLNCJ": "Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 102,
+      "CKHIFCAOGMF": 500,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_apple_get"
+    },
+    {
+      "HBKDOIKGNDE": 402,
+      "AEGOLPCLNCJ": "Wall_Small_Idle",
+      "DMELKKCGMLF": [
+        1.0,
+        1.0
+      ],
+      "LLLNBAHJDLB": [
+        105,
+        105,
+        105
+      ],
+      "DAAMKKCKDAD": 2,
+      "OKANCLLNAEA": [
+        5100
+      ],
+      "PLMODGOBMIA": 2,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 101,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 403,
+      "AEGOLPCLNCJ": "Mine_Idle",
+      "DMELKKCGMLF": [
+        8.5,
+        8.5
+      ],
+      "LLLNBAHJDLB": [
+        0,
+        0,
+        0
+      ],
+      "DAAMKKCKDAD": 3,
+      "OKANCLLNAEA": [
+        10,
+        100
+      ],
+      "PLMODGOBMIA": 3,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1300,
+      "CKHIFCAOGMF": 0,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 0,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeApple",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeApple",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 404,
+      "AEGOLPCLNCJ": "Fast_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 1,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 5000,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 3,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeedup",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 405,
+      "AEGOLPCLNCJ": "Slow_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        139,
+        69,
+        19
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 2,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeSpeeddown",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "Idle_Background_High_1",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 406,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1100,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    },
+    {
+      "HBKDOIKGNDE": 407,
+      "AEGOLPCLNCJ": "Invincible_Idle",
+      "DMELKKCGMLF": [
+        10.800000190734863,
+        10.800000190734863
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 4,
+      "MCEDJIPCCDB": 4,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1101,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "Snakeinvincible",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "",
+      "FEGEAKCCJLA": "SnakeinvincibleStrokeIdle",
+      "JDMHCKFIGCL": [
+        2,
+        2
+      ],
+      "BNMPEAPCNKC": "Idle_Background_High_Move_2",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": ""
+    },
+    {
+      "HBKDOIKGNDE": 408,
+      "AEGOLPCLNCJ": "Bomb_Idle",
+      "DMELKKCGMLF": [
+        12.0,
+        12.0
+      ],
+      "LLLNBAHJDLB": [
+        255,
+        215,
+        0
+      ],
+      "DAAMKKCKDAD": 4,
+      "OKANCLLNAEA": [
+        4,
+        100
+      ],
+      "PLMODGOBMIA": 5,
+      "MCEDJIPCCDB": 0,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        2,
+        2
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1002,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeBomb",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_High",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_bomb_get"
+    },
+    {
+      "HBKDOIKGNDE": 409,
+      "AEGOLPCLNCJ": "Big_Point_Idle",
+      "DMELKKCGMLF": [
+        4.0,
+        4.0
+      ],
+      "LLLNBAHJDLB": [
+        220,
+        20,
+        60
+      ],
+      "DAAMKKCKDAD": 1,
+      "OKANCLLNAEA": [
+        2,
+        100
+      ],
+      "PLMODGOBMIA": 1,
+      "MCEDJIPCCDB": 5,
+      "GKGANNFKMPM": 0,
+      "NJAIEJDMPBI": [
+        1,
+        1
+      ],
+      "HOGFDBBPGJD": 1,
+      "FOEACDLFILB": 135,
+      "JCMDJPBPAAB": 1000,
+      "GKHDCHGDLOL": 1102,
+      "CKHIFCAOGMF": 5000,
+      "BPMMOOLKDBN": 0,
+      "PBENCNPEOCA": 0,
+      "JGNEJDKKKBI": 0,
+      "HKLOCCGFECO": 0,
+      "IKLGLFGBLCM": 1,
+      "MEHDLKDGKDI": "SnakeItemGenerate",
+      "LHEPLNFBPIF": "SnakeDiamond",
+      "LLLJMGEKPKF": "",
+      "JPDGNGLEKBI": "SnakeDiamond",
+      "PCJIPKFHABE": "SnakeItemBoom",
+      "MEOFBDCGEDL": "SnakeItemIdle",
+      "FEGEAKCCJLA": "",
+      "JDMHCKFIGCL": [],
+      "BNMPEAPCNKC": "",
+      "CEBNNEOLCPH": "Eat_Background_Low",
+      "LGHGLAAFPBM": "Play_sfx_minigame_snake_prop_diamond_get"
+    }
+  ]
+}

@@ -1,0 +1,1554 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "CGNEOEMHAAP": 1001001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_Counter",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AddedDamageRatio:0.3",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001002,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_AidStun",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AddedStunRatio:1",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001003,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_AttackAid",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.3",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001004,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle01_CounterBuff",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_RecoverSp:10",
+      "CGFNBDDFIAM": "AddedDamageRatio:1.2",
+      "CEEHLCINCFE": "AS_BreakStunRatio:0.8",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001005,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle02_AidBuff",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AddedDamageRatio:1",
+      "CGFNBDDFIAM": "AddedStunRatio:0.5",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001006,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle03_Abnormal",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedAccumulationRatio:0.5",
+      "CGFNBDDFIAM": "AS_AddedDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001007,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle_EXSPUp",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:1",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001008,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle_BreakStunUp",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_BreakStunRatio:0.3",
+      "CGFNBDDFIAM": "StunDamageTakeRatio:0.5",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001201,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle_ElementResist",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_EtherResist:-0.2",
+      "CGFNBDDFIAM": "AS_IceResist:-0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001202,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle_ElementResist",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_FireResist:-0.2",
+      "CGFNBDDFIAM": "AS_PhysicsResist:-0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001203,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle_ElementResist",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_ElecResist:-0.2",
+      "CGFNBDDFIAM": "AS_PhysicsResist:-0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1001204,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_DiscBattle_ElementResist",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_FireResist:-0.2",
+      "CGFNBDDFIAM": "AS_EtherResist:-0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1002001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_MultiPlayer2",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_SPGetRatio:0",
+      "CGFNBDDFIAM": "AS_FeverGetRatio:1.3",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 1002002,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_MultiPlayer2",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_SPGetRatio:0",
+      "CGFNBDDFIAM": "AS_FeverGetRatio:1.3",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2000001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Level_Buff_ACT3_Fever",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_RecoverFever:0.4",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_DurahanBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:-0.15",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:0.2",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.15",
+      "OCIALINEKJP": "AS_RecoverStunRatio:0.2",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001002,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_DurahanBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:-0.2",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:0.25",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.2",
+      "OCIALINEKJP": "AS_RecoverStunRatio:0.2",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001003,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_DurahanBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:-0.25",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:0.3",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.25",
+      "OCIALINEKJP": "AS_RecoverStunRatio:0.2",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001004,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_DurahanBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:-0.3",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:0.35",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.3",
+      "OCIALINEKJP": "AS_RecoverStunRatio:0.2",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001005,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_HatiArmoredBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedElementAccumulationRatio:-0.1",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:1",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.2",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001006,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_HatiArmoredBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedElementAccumulationRatio:-0.2",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:1.2",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.2",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001007,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_HatiArmoredBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedElementAccumulationRatio:-0.3",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:1.4",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.2",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001008,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_HatiArmoredBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedElementAccumulationRatio:-0.4",
+      "CGFNBDDFIAM": "AS_AddBreakStunRatio:1.6",
+      "CEEHLCINCFE": "AS_DestroyRecoverRate_Ratio:-0.2",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001009,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MaterialHandlerRed",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.2",
+      "CGFNBDDFIAM": "AS_PartDestroy_ReplacedStunPercentage:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001010,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MaterialHandlerRed",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.25",
+      "CGFNBDDFIAM": "AS_PartDestroy_ReplacedStunPercentage:0.25",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001011,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MaterialHandlerRed",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.3",
+      "CGFNBDDFIAM": "AS_PartDestroy_ReplacedStunPercentage:0.3",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001012,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MaterialHandlerRed",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.35",
+      "CGFNBDDFIAM": "AS_PartDestroy_ReplacedStunPercentage:0.35",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001013,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MetalGorillaPro",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.2",
+      "CGFNBDDFIAM": "AS_AddedElementAccumulationRatio:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001014,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MetalGorillaPro",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.3",
+      "CGFNBDDFIAM": "AS_AddedElementAccumulationRatio:0.3",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001015,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MetalGorillaPro",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.4",
+      "CGFNBDDFIAM": "AS_AddedElementAccumulationRatio:0.4",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001016,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_MetalGorillaPro",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddBreakStunRatio:-0.5",
+      "CGFNBDDFIAM": "AS_AddedElementAccumulationRatio:0.5",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001017,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_ThugBulkyEnforcerBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_Actor_AddedDamageRatio:0.04",
+      "CGFNBDDFIAM": "AS_MaxDamageRatio:0.2",
+      "CEEHLCINCFE": "AS_BuffMaxStack:5",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001018,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_ThugBulkyEnforcerBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_Actor_AddedDamageRatio:0.06",
+      "CGFNBDDFIAM": "AS_MaxDamageRatio:0.3",
+      "CEEHLCINCFE": "AS_BuffMaxStack:5",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001019,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_ThugBulkyEnforcerBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_Actor_AddedDamageRatio:0.08",
+      "CGFNBDDFIAM": "AS_MaxDamageRatio:0.4",
+      "CEEHLCINCFE": "AS_BuffMaxStack:5",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 2001020,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "VR_SmallBoss_ThugBulkyEnforcerBOSS",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_Actor_AddedDamageRatio:0.1",
+      "CGFNBDDFIAM": "AS_MaxDamageRatio:0.5",
+      "CEEHLCINCFE": "AS_BuffMaxStack:5",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60000001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_RoomBuff_Physical",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.4",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60000002,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_RoomBuff_Elec",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.4",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60000003,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_RoomBuff_Ether",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.4",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60000004,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_RoomBuff_Fire",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.4",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60000005,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_RoomBuff_Ice",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.4",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60000006,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Elec",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000007,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ether",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000007_Description",
+      "ABGPFDHHIEG": "60000007_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000008,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Fire",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000008_Description",
+      "ABGPFDHHIEG": "60000008_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000009,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ice",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000009_Description",
+      "ABGPFDHHIEG": "60000009_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000010,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Card_Froze_2001109",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000010_Description",
+      "ABGPFDHHIEG": "60000010_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000011,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "NotApply"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage_Elite:0.3",
+      "CGFNBDDFIAM": "HpPercentage_Boss:0.15",
+      "CEEHLCINCFE": "AS_AddDamageRatio:1",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000011_Description",
+      "ABGPFDHHIEG": "60000011_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000012,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Physical",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000009_Description",
+      "ABGPFDHHIEG": "60000009_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000013,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_FirePhysical",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000014,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_IcePhysical",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60000015,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_IceEther",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.3",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Elec",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001002,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ether",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000007_Description",
+      "ABGPFDHHIEG": "60000007_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001003,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Fire",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000008_Description",
+      "ABGPFDHHIEG": "60000008_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001004,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ice",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000009_Description",
+      "ABGPFDHHIEG": "60000009_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001005,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Physical",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000009_Description",
+      "ABGPFDHHIEG": "60000009_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001006,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_FirePhysical",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001007,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_IcePhysical",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60001008,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_IceEther",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.15",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60000006_Description",
+      "ABGPFDHHIEG": "60000006_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60003000,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "NotApply"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage_Elite:0.35",
+      "CGFNBDDFIAM": "HpPercentage_Boss:0.2",
+      "CEEHLCINCFE": "AS_AddDamageRatio:1",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "60003000_Description",
+      "ABGPFDHHIEG": "60003000_Title"
+    },
+    {
+      "CGNEOEMHAAP": 60003001,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Elec",
+      "CFJFMCLGAKJ": [
+        "Enemy_Elite"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.35",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003002,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ether",
+      "CFJFMCLGAKJ": [
+        "Enemy_Elite"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.35",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003003,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Fire",
+      "CFJFMCLGAKJ": [
+        "Enemy_Elite"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.35",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003004,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ice",
+      "CFJFMCLGAKJ": [
+        "Enemy_Elite"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.35",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003005,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Physical",
+      "CFJFMCLGAKJ": [
+        "Enemy_Elite"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.35",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003006,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Elec",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.2",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003007,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ether",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.2",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003008,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Fire",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.2",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003009,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Ice",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.2",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 60003010,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_ElementShield_Physical",
+      "CFJFMCLGAKJ": [
+        "Enemy_Boss"
+      ],
+      "NGCBKMNNOBD": [
+        "Shield"
+      ],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "HpPercentage:0.2",
+      "CGFNBDDFIAM": "AS_AddDamageRatio:1",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 61001011,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_01",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.8",
+      "CGFNBDDFIAM": "AS_AddedAccumulationRatio:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001011_Description",
+      "ABGPFDHHIEG": "61001011_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001021,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_02",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.8",
+      "CGFNBDDFIAM": "AS_AddedAccumulationRatio:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001021_Description",
+      "ABGPFDHHIEG": "61001021_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001031,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_03",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.8",
+      "CGFNBDDFIAM": "AS_AddedAccumulationRatio:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001031_Description",
+      "ABGPFDHHIEG": "61001031_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001041,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_04",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.8",
+      "CGFNBDDFIAM": "AS_AddedAccumulationRatio:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001041_Description",
+      "ABGPFDHHIEG": "61001041_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001051,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_05",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio:0.8",
+      "CGFNBDDFIAM": "AS_AddedAccumulationRatio:0.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001051_Description",
+      "ABGPFDHHIEG": "61001051_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001061,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_06",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AddedDamageRatio:1",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001061_Description",
+      "ABGPFDHHIEG": "61001061_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001071,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_07",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedAccumulationRatio:0.25",
+      "CGFNBDDFIAM": "AS_AddedDamageRatio:0.8",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001071_Description",
+      "ABGPFDHHIEG": "61001071_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001081,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_08",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_BreakStunRatio:0.5",
+      "CGFNBDDFIAM": "StunDamageTakeRatio:0.75",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001081_Description",
+      "ABGPFDHHIEG": "61001081_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001091,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_09",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_FeverGetRatio:0.5",
+      "CGFNBDDFIAM": "AS_AddedDamageRatio:1.2",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001091_Description",
+      "ABGPFDHHIEG": "61001091_Title"
+    },
+    {
+      "CGNEOEMHAAP": 61001101,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_FixedLayerBuff_10",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AddedStunRatio:1",
+      "CGFNBDDFIAM": "AddedDamageRatio:1.5",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "61001101_Description",
+      "ABGPFDHHIEG": "61001101_Title"
+    },
+    {
+      "CGNEOEMHAAP": 62001011,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_PeriodicLayerBuff_01",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio_Elite:-0.25",
+      "CGFNBDDFIAM": "AS_AddedDamageRatio_Normal:0.5",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "62001011_Description",
+      "ABGPFDHHIEG": "62001011_Title"
+    },
+    {
+      "CGNEOEMHAAP": 62001012,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_PeriodicLayerBuff_01_02",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio_01:0.2",
+      "CGFNBDDFIAM": "AS_AddedDamageRatio_02:0.5",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    },
+    {
+      "CGNEOEMHAAP": 62001021,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_PeriodicLayerBuff_02",
+      "CFJFMCLGAKJ": [
+        "Enemy"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "DestroyRecoverRate_Ratio:-0.17",
+      "CGFNBDDFIAM": "AS_AddedDamageRatio:-0.2",
+      "CEEHLCINCFE": "AS_AddedBreakStunRatio:0.5",
+      "OCIALINEKJP": "AS_BreakStunTime: 0.2",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "62001021_Description",
+      "ABGPFDHHIEG": "62001021_Title"
+    },
+    {
+      "CGNEOEMHAAP": 62001022,
+      "IHCIBFCFOEP": "",
+      "JELGCPBCOKH": "",
+      "PCFFHBAOCFO": "Abyss_PeriodicLayerBuff_02_02",
+      "CFJFMCLGAKJ": [
+        "Avatar"
+      ],
+      "NGCBKMNNOBD": [],
+      "JHOCJGHNGHN": [],
+      "AOBPPCBGHAP": "AS_AddedDamageRatio_01:0.2",
+      "CGFNBDDFIAM": "",
+      "CEEHLCINCFE": "",
+      "OCIALINEKJP": "",
+      "DMOBHDBPDHA": "",
+      "IKAEPDPHBOH": "",
+      "ABGPFDHHIEG": ""
+    }
+  ]
+}

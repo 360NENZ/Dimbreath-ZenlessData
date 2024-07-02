@@ -1,0 +1,94 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1,
+      "PDHGNMIAHGN": 1,
+      "CDOGHCLMADD": 2,
+      "KDHGLEDHFCG": 1,
+      "GOBPLGJCDBM": 1,
+      "AOBPPCBGHAP": 1,
+      "CGFNBDDFIAM": 550,
+      "OKEINMBLIJB": 10000,
+      "ECBKHJGHPCB": 0,
+      "KCBPOPOGKGP": "snake_face_fierce",
+      "LCOPPODHMGI": [
+        "Play_sfx_minigame_snake_prop_accelerate_get"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 2,
+      "PDHGNMIAHGN": 1,
+      "CDOGHCLMADD": 2,
+      "KDHGLEDHFCG": 1,
+      "GOBPLGJCDBM": 2,
+      "AOBPPCBGHAP": 1,
+      "CGFNBDDFIAM": 300,
+      "OKEINMBLIJB": 10000,
+      "ECBKHJGHPCB": 0,
+      "KCBPOPOGKGP": "",
+      "LCOPPODHMGI": [
+        "Play_sfx_minigame_snake_prop_decelerate_get"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 3,
+      "PDHGNMIAHGN": 1,
+      "CDOGHCLMADD": 0,
+      "KDHGLEDHFCG": 0,
+      "GOBPLGJCDBM": 1,
+      "AOBPPCBGHAP": 2,
+      "CGFNBDDFIAM": 5,
+      "OKEINMBLIJB": 0,
+      "ECBKHJGHPCB": 0,
+      "KCBPOPOGKGP": "",
+      "LCOPPODHMGI": [
+        "Play_sfx_minigame_snake_prop_diamond_get"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 4,
+      "PDHGNMIAHGN": 2,
+      "CDOGHCLMADD": 2,
+      "KDHGLEDHFCG": 1,
+      "GOBPLGJCDBM": 0,
+      "AOBPPCBGHAP": 720,
+      "CGFNBDDFIAM": 0,
+      "OKEINMBLIJB": 10000,
+      "ECBKHJGHPCB": 0,
+      "KCBPOPOGKGP": "snake_face_fierce",
+      "LCOPPODHMGI": [
+        "Play_sfx_minigame_snake_prop_invincble_get",
+        "Play_sfx_minigame_snake_prop_invincble_off"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 5,
+      "PDHGNMIAHGN": 2,
+      "CDOGHCLMADD": 2,
+      "KDHGLEDHFCG": 1,
+      "GOBPLGJCDBM": 0,
+      "AOBPPCBGHAP": 0,
+      "CGFNBDDFIAM": 0,
+      "OKEINMBLIJB": 2000,
+      "ECBKHJGHPCB": 0,
+      "KCBPOPOGKGP": "",
+      "LCOPPODHMGI": []
+    },
+    {
+      "HBKDOIKGNDE": 99,
+      "PDHGNMIAHGN": 2,
+      "CDOGHCLMADD": 2,
+      "KDHGLEDHFCG": 1,
+      "GOBPLGJCDBM": 0,
+      "AOBPPCBGHAP": 720,
+      "CGFNBDDFIAM": 0,
+      "OKEINMBLIJB": 10000000,
+      "ECBKHJGHPCB": 0,
+      "KCBPOPOGKGP": "snake_face_fierce",
+      "LCOPPODHMGI": [
+        "Play_sfx_minigame_snake_prop_invincble_get",
+        "Play_sfx_minigame_snake_prop_invincble_off"
+      ]
+    }
+  ]
+}

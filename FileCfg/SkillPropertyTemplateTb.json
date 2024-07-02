@@ -1,0 +1,25 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1001,
+      "DIIDBBGLDOL": "SkillDamageRate",
+      "EJILBHBGAKB": 10000,
+      "JNOANOGFKGG": "{0:0.#%}",
+      "AAKPMLNPCBC": 3
+    },
+    {
+      "HBKDOIKGNDE": 1002,
+      "DIIDBBGLDOL": "SkillStunRatio",
+      "EJILBHBGAKB": 10000,
+      "JNOANOGFKGG": "{0:0.#%}",
+      "AAKPMLNPCBC": 3
+    },
+    {
+      "HBKDOIKGNDE": 1003,
+      "DIIDBBGLDOL": "SkillSpRecovery",
+      "EJILBHBGAKB": 10000,
+      "JNOANOGFKGG": "{0:0}",
+      "AAKPMLNPCBC": 3
+    }
+  ]
+}

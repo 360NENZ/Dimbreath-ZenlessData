@@ -1,0 +1,257 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1,
+      "ECHBOGAOMPL": "UIVHSStorePageController",
+      "JDAJFLKDHHM": "WorkShop_CameraPos_VHSStore",
+      "IEJBFGOFMOG": "WorkShop_CameraPos_VHSStore",
+      "PKDAINCLKDK": 2,
+      "FMPLHLFEJOH": "Workshop_PlayerPos_FromStreet",
+      "EHBELOCKIDO": [
+        2028
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 2,
+      "ECHBOGAOMPL": "UIGroceryPageController",
+      "JDAJFLKDHHM": "Street_CameraPos_Grocery",
+      "IEJBFGOFMOG": "Street_CameraPos_Grocery",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        2016,
+        2017,
+        2018
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 3,
+      "ECHBOGAOMPL": "UIRamenStorePageController",
+      "JDAJFLKDHHM": "Street_CameraPos_RamenStore",
+      "IEJBFGOFMOG": "Street_CameraPos_RamenStore_PC",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        2019
+      ],
+      "CDPJIKLGCIL": "2019:200302:200301",
+      "NDKCHLPHPGG": "2019:noodle:false:true",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 4,
+      "ECHBOGAOMPL": "UICafePageController",
+      "JDAJFLKDHHM": "Street_CameraPos_CafeStore",
+      "IEJBFGOFMOG": "Street_CameraPos_CafeStore",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 5,
+      "ECHBOGAOMPL": "UIBangbooModGaragePageController",
+      "JDAJFLKDHHM": "Street_CameraPos_BangbooModGarage",
+      "IEJBFGOFMOG": "Street_CameraPos_BangbooModGarage",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 6,
+      "ECHBOGAOMPL": "UITrashbinHermitRecyclePageController",
+      "JDAJFLKDHHM": "Street_CameraPos_Trash01",
+      "IEJBFGOFMOG": "Street_CameraPos_Trash01_PC",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        10021,
+        10022
+      ],
+      "CDPJIKLGCIL": "10022:201007:201006",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 7,
+      "ECHBOGAOMPL": "UILandRevive_1",
+      "JDAJFLKDHHM": "Street_CameraPos_Land20001",
+      "IEJBFGOFMOG": "Street_CameraPos_Land20001_PC",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "",
+      "EHBELOCKIDO": [
+        215605
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 20001,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 8,
+      "ECHBOGAOMPL": "UILandRevive_2",
+      "JDAJFLKDHHM": "ConstructionSite_CameraPos_Land20002",
+      "IEJBFGOFMOG": "ConstructionSite_CameraPos_Land20002_PC",
+      "PKDAINCLKDK": 4,
+      "FMPLHLFEJOH": "",
+      "EHBELOCKIDO": [
+        2232
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 20002,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 9,
+      "ECHBOGAOMPL": "UIDailyChallengePageController",
+      "JDAJFLKDHHM": "WorkShop_CameraPos_VHSStore",
+      "IEJBFGOFMOG": "WorkShop_CameraPos_VHSStore",
+      "PKDAINCLKDK": 2,
+      "FMPLHLFEJOH": "Workshop_PlayerPos_FromStreet",
+      "EHBELOCKIDO": [],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 10,
+      "ECHBOGAOMPL": "UIActivityOperationalPageController",
+      "JDAJFLKDHHM": "Street_CameraPos_HelloBoo",
+      "IEJBFGOFMOG": "Street_CameraPos_HelloBoo_PC",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        10011,
+        10012,
+        100101,
+        100102
+      ],
+      "CDPJIKLGCIL": "10011:300202:300201",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 11,
+      "ECHBOGAOMPL": "UINewsStandPageController",
+      "JDAJFLKDHHM": "Street_CameraPos_Woof",
+      "IEJBFGOFMOG": "Street_CameraPos_Woof",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        2097,
+        2099,
+        2100
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 12,
+      "ECHBOGAOMPL": "UITrendyStorePageController",
+      "JDAJFLKDHHM": "Street_CameraPos_TrendyStore",
+      "IEJBFGOFMOG": "Street_CameraPos_TrendyStore",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 13,
+      "ECHBOGAOMPL": "UIActivityGoldenWeekPageController",
+      "JDAJFLKDHHM": "Street_CameraPos_KeyBoo",
+      "IEJBFGOFMOG": "Street_CameraPos_KeyBoo_PC",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        100401,
+        100402
+      ],
+      "CDPJIKLGCIL": "100401:300202:300201",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 14,
+      "ECHBOGAOMPL": "UIBillyTrustQuestPageController",
+      "JDAJFLKDHHM": "Street_CameraPos_Trust_Billy",
+      "IEJBFGOFMOG": "Street_CameraPos_Trust_Billy",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "",
+      "EHBELOCKIDO": [],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 15,
+      "ECHBOGAOMPL": "UIAbyssEntrancePageController",
+      "JDAJFLKDHHM": "Zero_PlayerPos_Default",
+      "IEJBFGOFMOG": "Zero_PlayerPos_Default",
+      "PKDAINCLKDK": 151,
+      "FMPLHLFEJOH": "Zero_PlayerPos_Default",
+      "EHBELOCKIDO": [],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    },
+    {
+      "HBKDOIKGNDE": 16,
+      "ECHBOGAOMPL": "UIGroceryActivityPageController",
+      "JDAJFLKDHHM": "Street_CameraPos_ActivityGrocery",
+      "IEJBFGOFMOG": "Street_CameraPos_ActivityGrocery_PC",
+      "PKDAINCLKDK": 1,
+      "FMPLHLFEJOH": "Street_PlayerPos_FromGrocery",
+      "EHBELOCKIDO": [
+        602001,
+        602003
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": true
+    },
+    {
+      "HBKDOIKGNDE": 17,
+      "ECHBOGAOMPL": "UIPhotoWallPageController",
+      "JDAJFLKDHHM": "WorkshopUpStairs_CameraPos_PhotoWall",
+      "IEJBFGOFMOG": "WorkshopUpStairs_CameraPos_PhotoWall_PC",
+      "PKDAINCLKDK": 2,
+      "FMPLHLFEJOH": "WorkshopUpStairs_PlayerPos_ToUpStairs",
+      "EHBELOCKIDO": [
+        100910
+      ],
+      "CDPJIKLGCIL": "",
+      "NDKCHLPHPGG": "",
+      "FHMKKOHBEAL": 0,
+      "CDMAJNGDFNF": false
+    }
+  ]
+}

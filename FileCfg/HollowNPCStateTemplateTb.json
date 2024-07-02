@@ -1,0 +1,151 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1,
+      "DIIDBBGLDOL": "Raw",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 0,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2,
+      "DIIDBBGLDOL": "Test2",
+      "CKPENPKNGOI": "TriggerName",
+      "ADNLKEBNOIE": 0,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2000,
+      "DIIDBBGLDOL": "Sleep_Allied_Normal",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 2,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2001,
+      "DIIDBBGLDOL": "Error_Allied_Normal",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 3,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2002,
+      "DIIDBBGLDOL": "Funny_Allied_Normal",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 5,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2003,
+      "DIIDBBGLDOL": "Evil_Sleep",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 2,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2004,
+      "DIIDBBGLDOL": "Error_Evil",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 3,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2005,
+      "DIIDBBGLDOL": "LevelUp_Evil_EliteToBoss",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 4,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2006,
+      "DIIDBBGLDOL": "LevelUp_Evil_NormalToElite",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 4,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2007,
+      "DIIDBBGLDOL": "Sleep_Neutral_Normal",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 2,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2008,
+      "DIIDBBGLDOL": "Error_Neutral_Normal",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 3,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2009,
+      "DIIDBBGLDOL": "Common_Attack",
+      "CKPENPKNGOI": "Common_Attack",
+      "ADNLKEBNOIE": 0,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2010,
+      "DIIDBBGLDOL": "Common_BeAttacked",
+      "CKPENPKNGOI": "Common_BeAttacked",
+      "ADNLKEBNOIE": 0,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2000201,
+      "DIIDBBGLDOL": "BoombBox_1",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 3,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2000202,
+      "DIIDBBGLDOL": "BoombBox_2",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 4,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 2000203,
+      "DIIDBBGLDOL": "BoombBox_3",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 5,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 102010701,
+      "DIIDBBGLDOL": "MRL_LoadAmo_Enemy_Bangboo",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 1,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 102010702,
+      "DIIDBBGLDOL": "MRL_Attack_Enemy_Bangboo",
+      "CKPENPKNGOI": "MRL_Attack_Enemy_Bangboo",
+      "ADNLKEBNOIE": 0,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 102010703,
+      "DIIDBBGLDOL": "MRL_BeAttacked_Enemy_Bangboo",
+      "CKPENPKNGOI": "MRL_BeAttacked_Enemy_Bangboo",
+      "ADNLKEBNOIE": 0,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 1980701141,
+      "DIIDBBGLDOL": "EventIconBangbooEvil03_Show",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 4,
+      "MHFMECFEOPC": 0
+    },
+    {
+      "HBKDOIKGNDE": 1999999999,
+      "DIIDBBGLDOL": "MRL_AilledMachine",
+      "CKPENPKNGOI": "",
+      "ADNLKEBNOIE": 10,
+      "MHFMECFEOPC": 0
+    }
+  ]
+}

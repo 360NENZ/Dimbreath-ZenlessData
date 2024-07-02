@@ -1,0 +1,129 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1,
+      "FBEHIJGDCLJ": "Locked",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 2,
+      "FBEHIJGDCLJ": "Unlocked",
+      "PBDIMBMCKJB": [
+        "FLAG_UNLOCKED",
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 3,
+      "FBEHIJGDCLJ": "Finished",
+      "PBDIMBMCKJB": [
+        "FLAG_FINISHED",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_SHOW_EVENT_ID",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 4,
+      "FBEHIJGDCLJ": "ShowEvent",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_SHOW_EVENT_ID",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 6,
+      "FBEHIJGDCLJ": "Brighten",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_SHOW_EVENT_ID",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 7,
+      "FBEHIJGDCLJ": "Guide",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 8,
+      "FBEHIJGDCLJ": "Target",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 9,
+      "FBEHIJGDCLJ": "BrightenOnlyVisible",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 10,
+      "FBEHIJGDCLJ": "Unstable",
+      "PBDIMBMCKJB": [
+        "FLAG_UNSTABLE",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_SHOW_EVENT_ID"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 11,
+      "FBEHIJGDCLJ": "Empty",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 12,
+      "FBEHIJGDCLJ": "All",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_SHOW_EVENT_ID",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 13,
+      "FBEHIJGDCLJ": "",
+      "PBDIMBMCKJB": [
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_SHOW_EVENT_TYPE",
+        "FLAG_SHOW_EVENT_ID",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    },
+    {
+      "HBKDOIKGNDE": 14,
+      "FBEHIJGDCLJ": "LockedWithStamina",
+      "PBDIMBMCKJB": []
+    },
+    {
+      "HBKDOIKGNDE": 15,
+      "FBEHIJGDCLJ": "UnEmpty",
+      "PBDIMBMCKJB": [
+        "FLAG_UNLOCKED",
+        "FLAG_CAN_TRIGGER_EVENT",
+        "FLAG_CAN_TRIGGER_MULTI_TIMES"
+      ]
+    }
+  ]
+}

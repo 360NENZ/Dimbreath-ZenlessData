@@ -1,0 +1,64 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "HBKDOIKGNDE": 1,
+      "HBJCHMONAJN": "houndItemGetSmallChangeColor",
+      "CHNCGEHLNIG": "IdleBloodTooth_01",
+      "NHPFDMKIHIB": "UI/Sprite/Arcade/Game/SoulHoundsIII/UnPacker/Item/Item_Idle_BigBloodTooth.png",
+      "PANGLDEFEOE": 2,
+      "FEPDPAGEMLM": 10,
+      "AOBPPCBGHAP": 10,
+      "CGFNBDDFIAM": 0,
+      "CEEHLCINCFE": 0,
+      "OCIALINEKJP": 0,
+      "DMOBHDBPDHA": 0,
+      "FDLKLHLEDEM": 0,
+      "CJMDPHMIFEG": 101072
+    },
+    {
+      "HBKDOIKGNDE": 2,
+      "HBJCHMONAJN": "houndItemGetBigChangeColor",
+      "CHNCGEHLNIG": "IdleBloodTooth_02",
+      "NHPFDMKIHIB": "UI/Sprite/Arcade/Game/SoulHoundsIII/UnPacker/Item/Item_Idle_BloodTooth.png",
+      "PANGLDEFEOE": 1,
+      "FEPDPAGEMLM": 5,
+      "AOBPPCBGHAP": 5,
+      "CGFNBDDFIAM": 0,
+      "CEEHLCINCFE": 0,
+      "OCIALINEKJP": 0,
+      "DMOBHDBPDHA": 0,
+      "FDLKLHLEDEM": 0,
+      "CJMDPHMIFEG": 101072
+    },
+    {
+      "HBKDOIKGNDE": 3,
+      "HBJCHMONAJN": "houndItemGetWool",
+      "CHNCGEHLNIG": "IdleSheepSkin",
+      "NHPFDMKIHIB": "UI/Sprite/Arcade/Game/SoulHoundsIII/UnPacker/Item/Item_Idle_Sheep.png",
+      "PANGLDEFEOE": 3,
+      "FEPDPAGEMLM": 0,
+      "AOBPPCBGHAP": 0,
+      "CGFNBDDFIAM": 0,
+      "CEEHLCINCFE": 0,
+      "OCIALINEKJP": 0,
+      "DMOBHDBPDHA": 0,
+      "FDLKLHLEDEM": 0,
+      "CJMDPHMIFEG": 101073
+    },
+    {
+      "HBKDOIKGNDE": 4,
+      "HBJCHMONAJN": "houndItemGetInvicible",
+      "CHNCGEHLNIG": "IdleSickle",
+      "NHPFDMKIHIB": "UI/Sprite/Arcade/Game/SoulHoundsIII/UnPacker/Item/Item_Idle_crown.png",
+      "PANGLDEFEOE": 4,
+      "FEPDPAGEMLM": 9000,
+      "AOBPPCBGHAP": 9000,
+      "CGFNBDDFIAM": 1500,
+      "CEEHLCINCFE": 1500,
+      "OCIALINEKJP": 300,
+      "DMOBHDBPDHA": 0,
+      "FDLKLHLEDEM": 5,
+      "CJMDPHMIFEG": 101074
+    }
+  ]
+}

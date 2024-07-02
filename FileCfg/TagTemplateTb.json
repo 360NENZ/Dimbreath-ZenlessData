@@ -1,0 +1,328 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "KABECLJMOGJ": 10101,
+      "PLAALOJJIJI": "Dungeon_Buff_Cut_up1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Cut_up1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffCut.png",
+      "HACHMHIAJPK": "Cut",
+      "EEFOHMOKDKC": 1
+    },
+    {
+      "KABECLJMOGJ": 10102,
+      "PLAALOJJIJI": "Dungeon_Buff_Cut_up2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Cut_up2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffCut.png",
+      "HACHMHIAJPK": "Cut",
+      "EEFOHMOKDKC": 2
+    },
+    {
+      "KABECLJMOGJ": 10103,
+      "PLAALOJJIJI": "Dungeon_Buff_Cut_up3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Cut_up3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffCut.png",
+      "HACHMHIAJPK": "Cut",
+      "EEFOHMOKDKC": 3
+    },
+    {
+      "KABECLJMOGJ": 10111,
+      "PLAALOJJIJI": "Dungeon_Buff_Cut_down1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Cut_down1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffCut.png",
+      "HACHMHIAJPK": "Cut",
+      "EEFOHMOKDKC": -1
+    },
+    {
+      "KABECLJMOGJ": 10112,
+      "PLAALOJJIJI": "Dungeon_Buff_Cut_down2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Cut_down2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffCut.png",
+      "HACHMHIAJPK": "Cut",
+      "EEFOHMOKDKC": -2
+    },
+    {
+      "KABECLJMOGJ": 10113,
+      "PLAALOJJIJI": "Dungeon_Buff_Cut_down3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Cut_down3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffCut.png",
+      "HACHMHIAJPK": "Cut",
+      "EEFOHMOKDKC": -3
+    },
+    {
+      "KABECLJMOGJ": 10201,
+      "PLAALOJJIJI": "Dungeon_Buff_Punch_up1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Punch_up1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffHit.png",
+      "HACHMHIAJPK": "Punch",
+      "EEFOHMOKDKC": 1
+    },
+    {
+      "KABECLJMOGJ": 10202,
+      "PLAALOJJIJI": "Dungeon_Buff_Punch_up2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Punch_up2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffHit.png",
+      "HACHMHIAJPK": "Punch",
+      "EEFOHMOKDKC": 2
+    },
+    {
+      "KABECLJMOGJ": 10203,
+      "PLAALOJJIJI": "Dungeon_Buff_Punch_up3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Punch_up3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffHit.png",
+      "HACHMHIAJPK": "Punch",
+      "EEFOHMOKDKC": 3
+    },
+    {
+      "KABECLJMOGJ": 10211,
+      "PLAALOJJIJI": "Dungeon_Buff_Punch_down1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Punch_down1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffHit.png",
+      "HACHMHIAJPK": "Punch",
+      "EEFOHMOKDKC": -1
+    },
+    {
+      "KABECLJMOGJ": 10212,
+      "PLAALOJJIJI": "Dungeon_Buff_Punch_down2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Punch_down2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffHit.png",
+      "HACHMHIAJPK": "Punch",
+      "EEFOHMOKDKC": -2
+    },
+    {
+      "KABECLJMOGJ": 10213,
+      "PLAALOJJIJI": "Dungeon_Buff_Punch_down3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Punch_down3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffHit.png",
+      "HACHMHIAJPK": "Punch",
+      "EEFOHMOKDKC": -3
+    },
+    {
+      "KABECLJMOGJ": 10301,
+      "PLAALOJJIJI": "Dungeon_Buff_Pierce_up1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Pierce_up1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffWear.png",
+      "HACHMHIAJPK": "Pierce",
+      "EEFOHMOKDKC": 1
+    },
+    {
+      "KABECLJMOGJ": 10302,
+      "PLAALOJJIJI": "Dungeon_Buff_Pierce_up2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Pierce_up2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffWear.png",
+      "HACHMHIAJPK": "Pierce",
+      "EEFOHMOKDKC": 2
+    },
+    {
+      "KABECLJMOGJ": 10303,
+      "PLAALOJJIJI": "Dungeon_Buff_Pierce_up3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Pierce_up3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffWear.png",
+      "HACHMHIAJPK": "Pierce",
+      "EEFOHMOKDKC": 3
+    },
+    {
+      "KABECLJMOGJ": 10311,
+      "PLAALOJJIJI": "Dungeon_Buff_Pierce_down1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Pierce_down1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffWear.png",
+      "HACHMHIAJPK": "Pierce",
+      "EEFOHMOKDKC": -1
+    },
+    {
+      "KABECLJMOGJ": 10312,
+      "PLAALOJJIJI": "Dungeon_Buff_Pierce_down2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Pierce_down2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffWear.png",
+      "HACHMHIAJPK": "Pierce",
+      "EEFOHMOKDKC": -2
+    },
+    {
+      "KABECLJMOGJ": 10313,
+      "PLAALOJJIJI": "Dungeon_Buff_Pierce_down3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Pierce_down3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffWear.png",
+      "HACHMHIAJPK": "Pierce",
+      "EEFOHMOKDKC": -3
+    },
+    {
+      "KABECLJMOGJ": 20101,
+      "PLAALOJJIJI": "Dungeon_Buff_Fire_up1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Fire_up1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffFire.png",
+      "HACHMHIAJPK": "Fire",
+      "EEFOHMOKDKC": 1
+    },
+    {
+      "KABECLJMOGJ": 20102,
+      "PLAALOJJIJI": "Dungeon_Buff_Fire_up2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Fire_up2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffFire.png",
+      "HACHMHIAJPK": "Fire",
+      "EEFOHMOKDKC": 2
+    },
+    {
+      "KABECLJMOGJ": 20103,
+      "PLAALOJJIJI": "Dungeon_Buff_Fire_up3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Fire_up3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffFire.png",
+      "HACHMHIAJPK": "Fire",
+      "EEFOHMOKDKC": 3
+    },
+    {
+      "KABECLJMOGJ": 20111,
+      "PLAALOJJIJI": "Dungeon_Buff_Fire_down1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Fire_down1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffFire.png",
+      "HACHMHIAJPK": "Fire",
+      "EEFOHMOKDKC": -1
+    },
+    {
+      "KABECLJMOGJ": 20112,
+      "PLAALOJJIJI": "Dungeon_Buff_Fire_down2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Fire_down2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffFire.png",
+      "HACHMHIAJPK": "Fire",
+      "EEFOHMOKDKC": -2
+    },
+    {
+      "KABECLJMOGJ": 20113,
+      "PLAALOJJIJI": "Dungeon_Buff_Fire_down3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Fire_down3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffFire.png",
+      "HACHMHIAJPK": "Fire",
+      "EEFOHMOKDKC": -3
+    },
+    {
+      "KABECLJMOGJ": 20201,
+      "PLAALOJJIJI": "Dungeon_Buff_Ice_up1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Ice_up1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffIce.png",
+      "HACHMHIAJPK": "Ice",
+      "EEFOHMOKDKC": 1
+    },
+    {
+      "KABECLJMOGJ": 20202,
+      "PLAALOJJIJI": "Dungeon_Buff_Ice_up2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Ice_up2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffIce.png",
+      "HACHMHIAJPK": "Ice",
+      "EEFOHMOKDKC": 2
+    },
+    {
+      "KABECLJMOGJ": 20203,
+      "PLAALOJJIJI": "Dungeon_Buff_Ice_up3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Ice_up3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffIce.png",
+      "HACHMHIAJPK": "Ice",
+      "EEFOHMOKDKC": 3
+    },
+    {
+      "KABECLJMOGJ": 20211,
+      "PLAALOJJIJI": "Dungeon_Buff_Ice_down1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Ice_down1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffIce.png",
+      "HACHMHIAJPK": "Ice",
+      "EEFOHMOKDKC": -1
+    },
+    {
+      "KABECLJMOGJ": 20212,
+      "PLAALOJJIJI": "Dungeon_Buff_Ice_down2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Ice_down2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffIce.png",
+      "HACHMHIAJPK": "Ice",
+      "EEFOHMOKDKC": -2
+    },
+    {
+      "KABECLJMOGJ": 20213,
+      "PLAALOJJIJI": "Dungeon_Buff_Ice_down3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Ice_down3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffIce.png",
+      "HACHMHIAJPK": "Ice",
+      "EEFOHMOKDKC": -3
+    },
+    {
+      "KABECLJMOGJ": 20301,
+      "PLAALOJJIJI": "Dungeon_Buff_Electric_up1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Electric_up1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffThunder.png",
+      "HACHMHIAJPK": "Electric",
+      "EEFOHMOKDKC": 1
+    },
+    {
+      "KABECLJMOGJ": 20302,
+      "PLAALOJJIJI": "Dungeon_Buff_Electric_up2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Electric_up2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffThunder.png",
+      "HACHMHIAJPK": "Electric",
+      "EEFOHMOKDKC": 2
+    },
+    {
+      "KABECLJMOGJ": 20303,
+      "PLAALOJJIJI": "Dungeon_Buff_Electric_up3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Electric_up3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffThunder.png",
+      "HACHMHIAJPK": "Electric",
+      "EEFOHMOKDKC": 3
+    },
+    {
+      "KABECLJMOGJ": 20311,
+      "PLAALOJJIJI": "Dungeon_Buff_Electric_down1_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Electric_down1_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffThunder.png",
+      "HACHMHIAJPK": "Electric",
+      "EEFOHMOKDKC": -1
+    },
+    {
+      "KABECLJMOGJ": 20312,
+      "PLAALOJJIJI": "Dungeon_Buff_Electric_down2_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Electric_down2_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffThunder.png",
+      "HACHMHIAJPK": "Electric",
+      "EEFOHMOKDKC": -2
+    },
+    {
+      "KABECLJMOGJ": 20313,
+      "PLAALOJJIJI": "Dungeon_Buff_Electric_down3_Name",
+      "PMGALKGGFJK": 1,
+      "EEBNPEAJPCM": "Dungeon_Buff_Electric_down3_Des",
+      "OHGMNEBENNH": "UI/Sprite/A1DynamicLoad/IconDungeonBuff/UnPacker/IconDungeonBuffThunder.png",
+      "HACHMHIAJPK": "Electric",
+      "EEFOHMOKDKC": -3
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "GMNCBMLIHPE": [
+    {
+      "DIIDBBGLDOL": "ActorMaxCurHP",
+      "LKHGIFBNPNG": 4,
+      "LPOMPMJAFLK": 10000
+    },
+    {
+      "DIIDBBGLDOL": "EnableCardFusion",
+      "LKHGIFBNPNG": 3,
+      "LPOMPMJAFLK": 1
+    },
+    {
+      "DIIDBBGLDOL": "EnableCardRefresh",
+      "LKHGIFBNPNG": 4,
+      "LPOMPMJAFLK": 1
+    },
+    {
+      "DIIDBBGLDOL": "EnableCardUpgrade",
+      "LKHGIFBNPNG": 4,
+      "LPOMPMJAFLK": 1
+    },
+    {
+      "DIIDBBGLDOL": "EnableHpBuy",
+      "LKHGIFBNPNG": 5,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "EnableHpOverflowToCoin",
+      "LKHGIFBNPNG": 5,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "Gold_Delta",
+      "LKHGIFBNPNG": 2,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "Gold_Ratio",
+      "LKHGIFBNPNG": 2,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "HollowRetryTutorial",
+      "LKHGIFBNPNG": 7,
+      "LPOMPMJAFLK": 20017
+    },
+    {
+      "DIIDBBGLDOL": "HollowZeroCoinMaxNum",
+      "LKHGIFBNPNG": 2,
+      "LPOMPMJAFLK": 50000
+    },
+    {
+      "DIIDBBGLDOL": "Player_View",
+      "LKHGIFBNPNG": 4,
+      "LPOMPMJAFLK": 1
+    },
+    {
+      "DIIDBBGLDOL": "Shop_Price",
+      "LKHGIFBNPNG": 8,
+      "LPOMPMJAFLK": 10000
+    },
+    {
+      "DIIDBBGLDOL": "Stamina",
+      "LKHGIFBNPNG": 1,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "Stamina_Delta",
+      "LKHGIFBNPNG": 1,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "Stamina_Increase",
+      "LKHGIFBNPNG": 1,
+      "LPOMPMJAFLK": 10
+    },
+    {
+      "DIIDBBGLDOL": "Stamina_Max",
+      "LKHGIFBNPNG": 1,
+      "LPOMPMJAFLK": 100
+    },
+    {
+      "DIIDBBGLDOL": "Stamina_Ratio",
+      "LKHGIFBNPNG": 1,
+      "LPOMPMJAFLK": 0
+    },
+    {
+      "DIIDBBGLDOL": "Weather",
+      "LKHGIFBNPNG": 7,
+      "LPOMPMJAFLK": 0
+    }
+  ]
+}
