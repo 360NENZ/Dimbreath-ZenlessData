@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Affix_ShieldNotBeingHit_ReduceCD",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ShieldStartActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BeingHitRemove",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ReduceCD",
+        "Target": "Buddy"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BeingHitRemove": {
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ReduceCD",
+          "Target": "Buddy"
+        }
+      ]
+    },
+    "ReduceCD": {
+      "ModifierStacking": "Unique",
+      "ShieldEmptyActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ReduceCD",
+          "Target": "Self"
+        }
+      ],
+      "ShieldTimesUpActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BeingHitRemove",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ModifySkillTypeCDAction",
+          "Ratio": -1,
+          "SkillType": "Shield"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ReduceCD",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

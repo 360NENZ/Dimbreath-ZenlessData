@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Card_Ashes_2000100",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.1
+    },
+    "AS_PenRatio": {
+      "Value": 0.02
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AshesModifier_01": {
+      "Duration": 30,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_PenRatio": "%AS_PenRatio"
+      }
+    },
+    "AshesModifier_02": {
+      "Duration": 30,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_AddedDamageRatio_Fire": "%AS_AddedDamageRatio"
+      }
+    },
+    "TarotCard_Ashes_2000100_BuffIcon": {
+      "Buff": {
+        "BuffID": 3100011,
+        "IsOverrideDuration": false
+      },
+      "Duration": 30,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AshesModifier_01",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AshesModifier_02",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Ashes_2000100_BuffIcon",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Pre",
+          "FrameCountHigh": 65,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "TriggerResetModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Fly",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttackCheckModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Rocketboo_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_AttackLanded",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Rocketboo_Attackproperty_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackCheckModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimEvent",
+          "AnimEventID": "Bangboo_Rocketboo_Attackproperty_HitCheck"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AttackLanded",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "TriggerResetModifier01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AttackLanded",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

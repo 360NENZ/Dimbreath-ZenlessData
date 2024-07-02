@@ -1,0 +1,44 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Froze_2001100",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "0.5+specials(New_AS_IceDamageRatio)",
+          "ParamName": "Final_AS_IceDamageRatio",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "Final_AS_IceDamageRatio",
+                  "ParamName": "AS_IceDamageRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Froze_2001101",
+  "AbilitySpecials": {
+    "Final_AS_IceDamageRatio": {
+      "Value": 0
+    },
+    "New_AS_IceDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique"
+}

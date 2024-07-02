@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Level_ChallengeBuff_AttackAid",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 7
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackAid",
+              "AssaultAid"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Affix_ShieldDurationUp",
+  "AbilitySpecials": {
+    "ShieldDurationRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "ShieldDuration_Ratio": "%ShieldDurationRatio"
+    }
+  }
+}

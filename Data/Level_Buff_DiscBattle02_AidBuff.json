@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Level_Buff_DiscBattle02_AidBuff",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "AddedStunRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AssaultAid",
+              "AttackAid"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ParryAid",
+              "AttackAid"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_BreakStunRatio",
+        "PropertyValue": "%AddedStunRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "AbilityName": "Monster_Common_VR_In",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "VREffectModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "IsVR"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "VREffectModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1667,
+          "TimeUpActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Monster_VR_Enter_S",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Small",
+                  "CompareType": "LessEqual",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Monster_VR_Enter_M",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Middle",
+                  "CompareType": "Equal",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Monster_VR_Enter_L",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Large",
+                  "CompareType": "GreaterEqual",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Common_MA_Monster_VR_Enter_04_OverrideOutline_04",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Monster_VR_Enter_04_OverrideOutline_04"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Common_MA_Monster_VR_Enter_05_Override2Tone_05",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Monster_VR_Enter_05_Override2Tone_05"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Common_MA_Monster_VR_Enter_07_Dither_07",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Monster_VR_Enter_07_Dither_07"
+        }
+      ]
+    }
+  }
+}

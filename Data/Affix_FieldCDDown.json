@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Affix_FieldCDDown",
+  "AbilitySpecials": {
+    "FieldSkillCDRatio": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Field_SkillCD_Ratio": "%FieldSkillCDRatio"
+    }
+  }
+}

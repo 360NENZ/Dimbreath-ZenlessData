@@ -1,0 +1,669 @@
+{
+  "AbilityName": "Sound_LevelState",
+  "AbilitySpecials": {
+    "BossRange": {
+      "Value": 20
+    },
+    "SoundActionName": {
+      "Value": ""
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CheckModifiers",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetLevelAudioPara",
+        "BossRange": 13,
+        "BossRangeCheckCD": 0.5,
+        "BossRangeSustainCD": 2,
+        "BossRangeSustainSwitch": true,
+        "CheckAliveCountSwitch": true,
+        "CheckBossRangeForRTPCSwitch": true,
+        "CheckHighestStrengthSwitch": true,
+        "CheckHpSwitch": true,
+        "CheckSPSwitch": true,
+        "CountSwitch": true,
+        "HpThrehold": 50,
+        "LevelStatusSwitch": true,
+        "QTETimeSlowSwitch": true,
+        "SeqOpCountReachedWaitCD": 1,
+        "SeqOpCountResetCD": 5,
+        "SeqOperationCount": 4
+      }
+    ]
+  },
+  "Modifiers": {
+    "CheckModifiers": {
+      "OnLevelAudioConditionReached": [
+        {
+          "$type": "SendWwiseRTPCActionByEvtValue",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "CurrenAvatarHpPerc",
+              "NeedCompare": false
+            }
+          ],
+          "RTPCName": "SFX_Char_HP"
+        },
+        {
+          "$type": "SendWwiseRTPCActionByEvtValue",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "CurrenAliveCount",
+              "NeedCompare": false
+            }
+          ],
+          "RTPCName": "SFX_Char_AliveCount"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "CurrenAvatarHpPercUpTo",
+              "NeedCompare": false
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Common_HP_Normal"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "CurrenAvatarHpPercLowTo",
+              "NeedCompare": false
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Common_HP_Low"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "CurrenAliveCountUpTo",
+              "NeedCompare": false
+            }
+          ],
+          "soundActionKey": "Char_AliveCount_Other"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "CurrenAliveCountLowTo",
+              "NeedCompare": false
+            }
+          ],
+          "soundActionKey": "Char_AliveCount_1"
+        },
+        {
+          "$type": "SendWwiseRTPCActionByEvtValue",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "BossRange",
+              "NeedCompare": false
+            }
+          ],
+          "RTPCName": ""
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "BossRangeSustain",
+              "NeedCompare": true
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_vo_char_{}_offplay"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "BossRangeSustain",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "FarFromBoss_StateIn"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "BossRangeUpTo",
+              "NeedCompare": false
+            }
+          ],
+          "soundActionKey": ""
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "BossRangeLowTo",
+              "NeedCompare": false
+            }
+          ],
+          "soundActionKey": "FarFromBoss_StateOut"
+        },
+        {
+          "$type": "LocalAvatarFireAudio",
+          "AudioPattern": "",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 2,
+              "ConditionType": "CurHighestStrengthType",
+              "NeedCompare": true
+            }
+          ]
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "SeqSwitchAvatarSpecial",
+              "NeedCompare": false
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_vo_char_{}_battleswitch_reward"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "ConditionType": "SeqSwitchAvatarTimeUp",
+              "NeedCompare": false
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_vo_char_{}_reward"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 0,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_Born"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_vo_char_{}_stunrecovery_first"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Monster_BossStunGray_StateOut"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_Stun_End_First"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 2,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_vo_char_{}_stunrecovery_follow"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 2,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Monster_BossStunGray_StateOut"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 2,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_Stun_End_After"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 3,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Monster_BossStunGray_StateIn"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 3,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_Stun_Gray"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 4,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_Stun_Rainbow"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 5,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_Stun_100"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 6,
+              "ConditionType": "BossStunStatusChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossLiveState_StateChange"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "BossStageChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossStage_1"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 2,
+              "ConditionType": "BossStageChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossStage_2"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 3,
+              "ConditionType": "BossStageChange",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "BossStage_3"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "CurrenAvatarExSPAvailable",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Common_ExSP_Ready"
+        },
+        {
+          "$type": "LocalAvatarFireAudio",
+          "AudioPattern": "Play_SFX_Char_SwitchIn_{}",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "CurrenAvatarExSPAvailable",
+              "NeedCompare": true
+            }
+          ]
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "CurrenAvatarExSPAvailable",
+              "NeedCompare": true
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_SFX_Char_Common_VoBattleSwitch"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 0,
+              "ConditionType": "CurrenAvatarExSPAvailable",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Common_ExSP_NotReady"
+        },
+        {
+          "$type": "LocalAvatarFireAudio",
+          "AudioPattern": "Play_SFX_Char_SwitchIn_{}",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 0,
+              "ConditionType": "CurrenAvatarExSPAvailable",
+              "NeedCompare": true
+            }
+          ]
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 0,
+              "ConditionType": "CurrenAvatarExSPAvailable",
+              "NeedCompare": true
+            }
+          ],
+          "Target": "LocalAvatar",
+          "soundActionKey": "Play_SFX_Char_Common_VoBattleSwitch"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 0,
+              "ConditionType": "QTETimeSlow",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Impact_QTECount_No"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "QTETimeSlow",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Impact_QTECount_Yes"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Explore"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 2,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Talk"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 3,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Timeline"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 4,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Minion"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 4,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Monster_StrengthType_Minion"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 5,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Elite"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 5,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Monster_StrengthType_Elite"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 6,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Boss"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 6,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Monster_StrengthType_Boss"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 7,
+              "ConditionType": "LevelStatus",
+              "NeedCompare": true
+            }
+          ],
+          "soundActionKey": "Level_State_Surround"
+        },
+        {
+          "$type": "LocalAvatarFireAudio",
+          "AudioPattern": "",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 1,
+              "ConditionType": "MonsterClear",
+              "NeedCompare": true
+            }
+          ]
+        },
+        {
+          "$type": "LocalAvatarFireAudio",
+          "AudioPattern": "",
+          "Predicates": [
+            {
+              "$type": "ByLevelAudioCondition",
+              "CompareType": "Equal",
+              "ConditionPara": 3,
+              "ConditionType": "MonsterClear",
+              "NeedCompare": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

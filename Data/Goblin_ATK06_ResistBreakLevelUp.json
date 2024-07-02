@@ -1,0 +1,336 @@
+{
+  "AbilityName": "Goblin_ATK06_ResistBreakLevelUp",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.5
+    },
+    "AS_DamageTakeRatio": {
+      "Value": -0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    },
+    "AlliedEffect_Modifier": {
+      "Duration": 10,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_SecondaryEmission"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Buff_Hit"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AlliedEnhance_Modifier": {
+      "Duration": 10,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": 2,
+          "Tag": "Goblin_ATK06_ResistBreakLevelUp",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isMuteGlobalAI",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Goblin_ATK06_ResistBreakLevelUp",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "isMuteGlobalAI",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    },
+    "Enhance_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isMuteGlobalAI",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 0.0,
+          "ParamName": "AttackCD",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageTakeRatioModifier"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier"
+        },
+        {
+          "$type": "SetRBLOffsetAction",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Demote"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RBLOffset": 2,
+          "Tag": "Goblin_ATK06_ResistBreakLevelUp",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "ParryAid"
+              ]
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": 2,
+          "Target": "Target"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Goblin_ATK06_ResistBreakLevelUp",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "isMuteGlobalAI",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageTakeRatioModifier"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier"
+        }
+      ],
+      "OnStunDestroyActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Enhance_Modifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SkillEffect_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "ChestPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Goblin_Buff_SuperArmor",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_Goblin"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Metro_Goblin"
+            }
+          ],
+          "Tag": "Monster_Goblin_MA_ATK06_Body_ScreenImage",
+          "Target": "Self",
+          "key": "Monster_Goblin_MA_ATK06_Body_ScreenImage"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_GoblinGrey"
+            }
+          ],
+          "Tag": "Monster_GoblinGrey_MA_Attack_06_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_GoblinGrey_MA_Attack_06_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_SecondaryEmission"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Goblin_MA_ATK06_Body_ScreenImage",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_GoblinGrey_MA_Attack_06_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Goblin_ATK06_ResistBreakLevelUp",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self"
+        }
+      ],
+      "OnStunDestroyActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SkillEffect_Modifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SkillEffect_Modifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Enhance_Modifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "AlliedEnhance_Modifier",
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "GoblinLeader"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "AlliedEffect_Modifier",
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "GoblinLeader"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

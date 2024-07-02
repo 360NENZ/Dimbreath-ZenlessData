@@ -1,0 +1,176 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_SepcialAttack_Identifier_Modifier",
+            "Nineveh_SepcialAttack_ChangeHUD_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_02_Left",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_SepcialAttack_Identifier_Modifier",
+            "Nineveh_SepcialAttack_ChangeHUD_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_03_Left",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_SepcialAttack_Identifier_Modifier",
+            "Nineveh_SepcialAttack_ChangeHUD_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_04_Left",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_SepcialAttack_Identifier_Modifier",
+            "Nineveh_SepcialAttack_ChangeHUD_Modifier"
+          ]
+        },
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "Nineveh_SepcialAttack_CameraTrackOverride_Modifier",
+                "Nineveh_SepcialAttack_ChangeHUD_Modifier",
+                "Nineveh_SepcialAttack_PostProcessing_Modifier"
+              ],
+              "ZoneTag": "SpecialAttack"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_SpecialAttack_Manager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Nineveh_SepcialAttack_CameraTrackOverride_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "Nineveh_Attak_Ultimate_CameraOverrideTrack_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Nineveh_Attack_Ultimate_CameraOverrideTrack_01"
+        }
+      ]
+    },
+    "Nineveh_SepcialAttack_ChangeHUD_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushSpecialAttackHUDState",
+          "Tag": "SpecialAttack",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopSpecialAttackHUDState",
+          "Tag": "SpecialAttack",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_SepcialAttack_Identifier_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "SpecialAttack"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "SpecialAttack"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_SepcialAttack_PostProcessing_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_Common_Special_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_Common_Special_RadialBlur_02",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_Common_Special_ChromaticAberration",
+          "EffectType": "ChromaticAberration"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_Common_Special_FXFog_04",
+          "EffectType": "FXFog"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "Monster_Common_Special_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "RadialBlur",
+          "TargetKey": "Monster_Common_Special_RadialBlur_02"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "ChromaticAberration",
+          "TargetKey": "Monster_Common_Special_ChromaticAberration"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "FXFog",
+          "TargetKey": "Monster_Common_Special_FXFog_04"
+        }
+      ]
+    }
+  }
+}

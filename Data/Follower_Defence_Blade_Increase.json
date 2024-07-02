@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Follower_Defence_Blade_Increase",
+  "AbilitySpecials": {
+    "AddedPlayerDefence": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddPlayerDefence"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddPlayerDefence": {
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_DefenceRatio": "%AddedPlayerDefence"
+      }
+    }
+  }
+}

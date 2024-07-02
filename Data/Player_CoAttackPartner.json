@@ -1,0 +1,813 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenQTEMixin",
+      "ListenQTEWindowCanceled": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CoAttackModifier_Listener_ExSp_Player_CoAttackPartner",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "ListenQTEWindowClosed": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CoAttackModifier_Listener_ExSp_Player_CoAttackPartner",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "ListenQTEWindowOpened": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CoAttackModifier_Listener_ExSp_Player_CoAttackPartner",
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_CoAttackPartner",
+  "AbilitySpecials": {
+    "AS_IntervalCD_01": {
+      "Value": 10.0
+    },
+    "AS_IntervalCD_02": {
+      "Value": 7.5
+    },
+    "AS_IntervalCD_03": {
+      "Value": 5.0
+    },
+    "AS_IntervalCD_Current": {
+      "Value": 10.0
+    },
+    "AS_PartnerAvatarID_Current": {
+      "Value": 0
+    },
+    "AS_PartnerAvatarID_InUse_01": {
+      "Value": 0
+    },
+    "AS_PartnerAvatarID_InUse_02": {
+      "Value": 0
+    },
+    "AS_PartnerAvatarID_InUse_03": {
+      "Value": 0
+    },
+    "AS_PartnerAvatarID_Robot_01": {
+      "Value": 1091
+    },
+    "AS_PartnerAvatarID_Robot_02": {
+      "Value": 0
+    },
+    "AS_PartnerAvatarID_Robot_03": {
+      "Value": 0
+    },
+    "AS_PartnerAvatar_Count": {
+      "Value": 0
+    },
+    "AS_PartnerAvatar_Current_01": {
+      "Value": -1
+    },
+    "AS_PartnerAvatar_Current_02": {
+      "Value": 0
+    },
+    "AS_PartnerAvatar_Index_01": {
+      "Value": 0
+    },
+    "AS_PartnerAvatar_Index_02": {
+      "Value": 0
+    },
+    "AS_PartnerAvatar_Index_03": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CoAttackModifier_Listener_ExSp_Player_CoAttackPartner",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CoAttackModifier_Listener_QTE_Player_CoAttackPartner",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAvatarIDInTeam",
+                "AvatarID": "%AS_PartnerAvatarID_Robot_01"
+              },
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 0,
+                "ParamName": "AS_PartnerAvatarID_Robot_01",
+                "ParamType": "Integer"
+              }
+            ]
+          }
+        ],
+        "FailureActions": [
+          {
+            "$type": "SetAbilitySpecialByExpression",
+            "Expression": "specials(AS_PartnerAvatar_Count)+1",
+            "ParamName": "AS_PartnerAvatar_Count",
+            "Target": "Self",
+            "ValueType": "Integer"
+          },
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": "AS_PartnerAvatarID_Robot_01",
+            "ParamName": "AS_PartnerAvatarID_InUse_01",
+            "ParamType": "Integer"
+          },
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": 1,
+            "ParamName": "AS_PartnerAvatar_Index_01",
+            "ParamType": "Integer"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAvatarIDInTeam",
+                "AvatarID": "%AS_PartnerAvatarID_Robot_02"
+              },
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 0,
+                "ParamName": "AS_PartnerAvatarID_Robot_02",
+                "ParamType": "Integer"
+              }
+            ]
+          }
+        ],
+        "FailureActions": [
+          {
+            "$type": "SetAbilitySpecialByExpression",
+            "Expression": "specials(AS_PartnerAvatar_Count)+1",
+            "ParamName": "AS_PartnerAvatar_Count",
+            "Target": "Self",
+            "ValueType": "Integer"
+          },
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 1,
+                "ParamName": "AS_PartnerAvatar_Index_01",
+                "ParamType": "Integer"
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": "AS_PartnerAvatarID_Robot_02",
+                "ParamName": "AS_PartnerAvatarID_InUse_01",
+                "ParamType": "Integer"
+              },
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": 1,
+                "ParamName": "AS_PartnerAvatar_Index_01",
+                "ParamType": "Integer"
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": "AS_PartnerAvatarID_Robot_02",
+                "ParamName": "AS_PartnerAvatarID_InUse_02",
+                "ParamType": "Integer"
+              },
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": 1,
+                "ParamName": "AS_PartnerAvatar_Index_02",
+                "ParamType": "Integer"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAvatarIDInTeam",
+                "AvatarID": "%AS_PartnerAvatarID_Robot_03"
+              },
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 0,
+                "ParamName": "AS_PartnerAvatarID_Robot_03",
+                "ParamType": "Integer"
+              }
+            ]
+          }
+        ],
+        "FailureActions": [
+          {
+            "$type": "SetAbilitySpecialByExpression",
+            "Expression": "specials(AS_PartnerAvatar_Count)+1",
+            "ParamName": "AS_PartnerAvatar_Count",
+            "Target": "Self",
+            "ValueType": "Integer"
+          },
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 1,
+                "ParamName": "AS_PartnerAvatar_Index_01",
+                "ParamType": "Integer"
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": "AS_PartnerAvatarID_Robot_03",
+                "ParamName": "AS_PartnerAvatarID_InUse_01",
+                "ParamType": "Integer"
+              },
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": 1,
+                "ParamName": "AS_PartnerAvatar_Index_01",
+                "ParamType": "Integer"
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "BranchOperator",
+                "Conditions": [
+                  {
+                    "$type": "ByAbilitySpecial",
+                    "CompareType": "Equal",
+                    "Param": 1,
+                    "ParamName": "AS_PartnerAvatar_Index_02",
+                    "ParamType": "Integer"
+                  }
+                ],
+                "FailureActions": [
+                  {
+                    "$type": "SetAbilitySpecialAction",
+                    "ModifyFunction": "Replace",
+                    "Param": "AS_PartnerAvatarID_Robot_03",
+                    "ParamName": "AS_PartnerAvatarID_InUse_02",
+                    "ParamType": "Integer"
+                  },
+                  {
+                    "$type": "SetAbilitySpecialAction",
+                    "ModifyFunction": "Replace",
+                    "Param": 1,
+                    "ParamName": "AS_PartnerAvatar_Index_02",
+                    "ParamType": "Integer"
+                  }
+                ],
+                "SuccessActions": [
+                  {
+                    "$type": "SetAbilitySpecialAction",
+                    "ModifyFunction": "Replace",
+                    "Param": "AS_PartnerAvatarID_Robot_03",
+                    "ParamName": "AS_PartnerAvatarID_InUse_03",
+                    "ParamType": "Integer"
+                  },
+                  {
+                    "$type": "SetAbilitySpecialAction",
+                    "ModifyFunction": "Replace",
+                    "Param": 1,
+                    "ParamName": "AS_PartnerAvatar_Index_03",
+                    "ParamType": "Integer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "OnStunResetOtherActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "CoAttackModifier_Listener_QTE_Player_CoAttackPartner",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnStunResetOtherMaxActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CoAttackModifier_Listener_QTE_Player_CoAttackPartner",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CoAttackModifier_CountManager": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_PartnerAvatar_Current_01)+1",
+          "ParamName": "AS_PartnerAvatar_Current_01",
+          "Target": "Self",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_PartnerAvatar_Count",
+              "ParamType": "Integer"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Mod",
+              "Param": 1,
+              "ParamName": "AS_PartnerAvatar_Current_01",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(AS_PartnerAvatar_Current_01)+1",
+              "ParamName": "AS_PartnerAvatar_Current_02",
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "%AS_IntervalCD_01",
+              "ParamName": "AS_IntervalCD_Current",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CoAttackModifier_IntervalCD",
+              "Target": "TeamAvatars"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "%AS_PartnerAvatarID_InUse_01",
+              "ParamName": "AS_PartnerAvatarID_Current",
+              "ParamType": "Integer"
+            }
+          ]
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2,
+              "ParamName": "AS_PartnerAvatar_Count",
+              "ParamType": "Integer"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Mod",
+              "Param": 2,
+              "ParamName": "AS_PartnerAvatar_Current_01",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(AS_PartnerAvatar_Current_01)+1",
+              "ParamName": "AS_PartnerAvatar_Current_02",
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "%AS_IntervalCD_02",
+              "ParamName": "AS_IntervalCD_Current",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CoAttackModifier_IntervalCD",
+              "Target": "TeamAvatars"
+            },
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "AS_PartnerAvatar_Current_02",
+                  "ParamType": "Integer"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartnerAvatarID_InUse_01",
+                  "ParamName": "AS_PartnerAvatarID_Current",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "CoAttackModifier_CountManager",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 2,
+                  "ParamName": "AS_PartnerAvatar_Current_02",
+                  "ParamType": "Integer"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartnerAvatarID_InUse_02",
+                  "ParamName": "AS_PartnerAvatarID_Current",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "CoAttackModifier_CountManager",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 3,
+              "ParamName": "AS_PartnerAvatar_Count",
+              "ParamType": "Integer"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Mod",
+              "Param": 3,
+              "ParamName": "AS_PartnerAvatar_Current_01",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(AS_PartnerAvatar_Current_01)+1",
+              "ParamName": "AS_PartnerAvatar_Current_02",
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "%AS_IntervalCD_03",
+              "ParamName": "AS_IntervalCD_Current",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CoAttackModifier_IntervalCD",
+              "Target": "TeamAvatars"
+            },
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "AS_PartnerAvatar_Current_02",
+                  "ParamType": "Integer"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartnerAvatarID_InUse_01",
+                  "ParamName": "AS_PartnerAvatarID_Current",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "CoAttackModifier_CountManager",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 2,
+                  "ParamName": "AS_PartnerAvatar_Current_02",
+                  "ParamType": "Integer"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartnerAvatarID_InUse_02",
+                  "ParamName": "AS_PartnerAvatarID_Current",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "CoAttackModifier_CountManager",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 3,
+                  "ParamName": "AS_PartnerAvatar_Current_02",
+                  "ParamType": "Integer"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartnerAvatarID_InUse_03",
+                  "ParamName": "AS_PartnerAvatarID_Current",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "CoAttackModifier_CountManager",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "CoAttackModifier_ExSp": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CoAttackModifier_CountManager",
+          "Target": "Self"
+        },
+        {
+          "$type": "CoAttackPartnerStartAction",
+          "LockTargetID": "Player_SameTarget_LockTarget_01_OnlyMonster",
+          "MpExecMode": "NotExecuted",
+          "SwitchInIndex": 60,
+          "TargetAvatarID": "%AS_PartnerAvatarID_Current",
+          "TargetPosRot": {
+            "BackupCoordsOption": "Self",
+            "CoordsOption": "Relative",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "BackupAngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "BackupPositionOffset": {
+                "x": 1.5,
+                "y": 0.0,
+                "z": -2.0
+              },
+              "IsClampOffsetDistance": false,
+              "PositionOffset": {
+                "x": 1.5,
+                "y": 0,
+                "z": -2.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "BackupOffsetReferTarget": "Self",
+              "OffsetReferTarget": "LastSelfAttackTarget"
+            }
+          }
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CoAttackPartnerFinishAction",
+          "SwitchOutIndex": 2,
+          "TargetAvatarID": "%AS_PartnerAvatarID_Current"
+        }
+      ]
+    },
+    "CoAttackModifier_IntervalCD": {
+      "Duration": "%AS_IntervalCD_Current",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "CoAttackModifier_Listener_ExSp_Player_CoAttackPartner": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnCustomEventReceived": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CoAttackModifier_ExSp",
+          "Predicates": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "AbilityCustomEvent_ExSp_To_Evade_ForceTrigger"
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 1,
+              "ParamName": "AS_PartnerAvatar_Count",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "CoAttackModifier_IntervalCD"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "CoAttackModifier_Listener_QTE_Player_CoAttackPartner": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnCustomEventReceived": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CoAttackModifier_QTE",
+          "Predicates": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "AbilityCustomEvent_QTE_To_Evade_ForceTrigger"
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 1,
+              "ParamName": "AS_PartnerAvatar_Count",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "CoAttackModifier_IntervalCD"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "CoAttackModifier_QTE": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CoAttackModifier_CountManager",
+          "Target": "Self"
+        },
+        {
+          "$type": "CoAttackPartnerStartAction",
+          "LockTargetID": "Player_SameTarget_LockTarget_01_OnlyMonster",
+          "MpExecMode": "NotExecuted",
+          "SwitchInIndex": 10,
+          "TargetAvatarID": "%AS_PartnerAvatarID_Current",
+          "TargetPosRot": {
+            "BackupCoordsOption": "Self",
+            "CoordsOption": "Relative",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "BackupAngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "BackupPositionOffset": {
+                "x": 1.5,
+                "y": 0.0,
+                "z": -2.0
+              },
+              "IsClampOffsetDistance": false,
+              "PositionOffset": {
+                "x": 1.5,
+                "y": 0,
+                "z": -2.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "BackupOffsetReferTarget": "Self",
+              "OffsetReferTarget": "LastSelfAttackTarget"
+            }
+          }
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CoAttackPartnerFinishAction",
+          "SwitchOutIndex": 2,
+          "TargetAvatarID": "%AS_PartnerAvatarID_Current"
+        }
+      ]
+    }
+  }
+}

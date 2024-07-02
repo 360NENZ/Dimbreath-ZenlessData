@@ -1,0 +1,496 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Spawn",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveLaser",
+            "Close_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Idle_Unactive",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveLaser",
+            "Close_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Active",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Active_SFX",
+            "Shooting",
+            "Open_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Gap_Time",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveLaser",
+            "Close_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Military_LaserBlock_StateChange_SFX",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Active_SFX": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Root",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_01_02_Alert",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Close_All_Collider": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "HullColliderEnable": false,
+          "Tag": "AntiTheftWall_Collider",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Effect_Modifer": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_01_Store",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_01_04_LaunchWarning",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_2",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_01_Store",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_2",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_01_04_LaunchWarning",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_3",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_01_Store",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_3",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_01_04_LaunchWarning",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_4",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_01_Store",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TransmitPoint_4",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_01_04_LaunchWarning",
+          "EnableByDevicePerformance": true,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Open_All_Collider": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "AntiTheftWall_Collider",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RemoveLaser": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP01_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP02",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP02_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP03",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP03_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP04",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP04_To_Monster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Shooting": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP01_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP02",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP02_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP03",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP03_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP04",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP04_To_Monster",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP01_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP02",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP02_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP03",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP03_To_Monster",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP04",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Military_LaserBlock_LaserBeam_LP04_To_Monster",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

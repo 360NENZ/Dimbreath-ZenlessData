@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Player_DodgeDummy",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "CreateDodgeDummyAction",
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "Duration": 0.15,
+        "Height": 1.5,
+        "Radius": 1.5
+      }
+    ]
+  }
+}

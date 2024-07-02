@@ -1,0 +1,117 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 1.2,
+        "CapsuleColliderRadius": 0.4,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.6
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_RandomSkill_Shoot_Default_Flying"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0.7
+          },
+          "RandomAngleRange": {
+            "x": 0.85,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "#RandomSkill_Follower_Shoot_Default_AttackProperty",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_RandomSkill_Hit_Bullet_Small"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 0.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 50
+        },
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "RandomSkill_Follower_Shoot_Default",
+  "AbilityStacking": "Unique"
+}

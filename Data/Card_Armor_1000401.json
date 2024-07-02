@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Card_Armor_1000401",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ShieldModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Card_Armor",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh"
+    }
+  }
+}

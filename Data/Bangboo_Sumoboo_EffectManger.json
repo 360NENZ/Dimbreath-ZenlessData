@@ -1,0 +1,69 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_SkillMove",
+          "FrameCountHigh": 36,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MoveEffectModifier",
+            "MaterialPropertiesModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillSmash",
+          "FrameCountHigh": 70,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Sumoboo_EffectManger",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertiesModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Sumoboo_Attack",
+          "Target": "Self",
+          "key": "Bangboo_Sumoboo_MA_Eff_Bangboo_Sumoboo_Mat_01_OverrideRimGlow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Sumoboo_Attack",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MoveEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Sumoboo_SkillMove",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

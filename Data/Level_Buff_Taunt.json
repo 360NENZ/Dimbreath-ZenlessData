@@ -1,0 +1,61 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "Level_Buff_Taunt"
+          ],
+          "ZoneTag": "Taunt"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Level_Buff_Taunt",
+  "AbilitySpecials": {
+    "AS_FeverAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Level_Buff_Taunt": {
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0.0,
+          "ParamName": "AS_FeverAmount",
+          "ParamType": "Float"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "ModifyTeamFeverAction",
+          "Amount": "%AS_FeverAmount",
+          "ModifyFunction": "Add"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 0.2,
+          "ParamName": "AS_FeverAmount",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": 20,
+              "ParamName": "AS_FeverAmount",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "ThinkInterval": 0.05
+    }
+  }
+}

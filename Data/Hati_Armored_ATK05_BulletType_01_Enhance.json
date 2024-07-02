@@ -1,0 +1,116 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.5
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_Hati_P2_Attack_05_06_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Bn_Hati_HEad",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 6.0,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_Hati_Armored_ATK05_Attackproperty_01_Enhance",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Hati_P2_Attack_05_07_Explode"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 20
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_Hati_Armored_Bullet_01_Enhance_Explosion_CamShake_01"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_Ether_M"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_Ether_M_Ground"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Hati_Armored_ATK05_BulletType_01_Enhance",
+  "AbilityStacking": "Unique"
+}

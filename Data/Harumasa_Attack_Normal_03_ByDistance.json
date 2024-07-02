@@ -1,0 +1,245 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_End",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_MoveAttck_Left",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_MoveAttck_Right",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_End",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_02",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaDistanceCheckModifer"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "TargetNum_InRange",
+          "CustomReferMaxPropertyType": "TargetNum_InRange_Max",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_Normal_03_02",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_Normal_03_02",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Harumasa_Attack_Normal_03_ByDistance",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HarumasaDistanceCheckModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 2,
+            "FanCylinderColliderRadius": 8,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": 1,
+              "CustomPropertyType": "TargetNum_InRange",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByIsSelfAttackTarget",
+                  "IsSelfAttackTarget": true,
+                  "Target": "Target"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": -1,
+              "CustomPropertyType": "TargetNum_InRange",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByIsSelfAttackTarget",
+                  "IsSelfAttackTarget": true,
+                  "Target": "Target"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "FieldStopActions": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": 0,
+              "CustomPropertyType": "TargetNum_InRange",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "PropertyModifyFunction": "Replace",
+              "PropertyType": "Custom"
+            }
+          ],
+          "IsFollow": true,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

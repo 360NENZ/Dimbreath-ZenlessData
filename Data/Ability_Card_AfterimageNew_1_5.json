@@ -1,0 +1,103 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": "%AS_AfterImageDuration",
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 2.5
+      },
+      "BulletHitDelayTime": 0.5,
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.6,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "ExplodeAnimEventID": "#Card_AfterimageDamage_Type01_AttackProperty_05",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Afterimage_Chaos_Explode_02"
+      },
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 3.0,
+      "HitInterval": 0.0,
+      "HitOtherExplode": true,
+      "HitStageExplode": false,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "OnBulletCreateAction": [
+        {
+          "$type": "ApplyGhostEffectAction",
+          "AttachEffect": "Eff_Afterimage_Chaos_Loop_01",
+          "GhostOwner": "Bullet",
+          "GhostSource": "Caster",
+          "GhostTag": "AfterimageNew_1_5",
+          "MaterialPropertyParams": [
+            {
+              "ApplyAllRenderers": true,
+              "Tag": "AfterimageNew_1_5",
+              "key": "Common_MA_Afterimage_Common_Dither"
+            },
+            {
+              "ApplyAllRenderers": true,
+              "Tag": "AfterimageNew_1_5",
+              "key": "Common_MA_Afterimage_Chaos_02_OverrideOutline_02"
+            }
+          ]
+        }
+      ],
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Card_AfterimageDamage_Type01_CamShake_E01"
+        },
+        {
+          "$type": "RemoveGhostEffectAction",
+          "GhostOwner": "Bullet",
+          "GhostTag": "AfterimageNew_1_5"
+        }
+      ],
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Ability_Card_AfterimageNew_1_5",
+  "AbilitySpecials": {
+    "AS_AfterImageDuration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique"
+}

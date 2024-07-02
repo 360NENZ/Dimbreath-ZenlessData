@@ -1,0 +1,93 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 999999.0,
+      "AlliedHitAnimEventID": "Device_LaserBeam_Attackproperty_MS_LP01_To_Monster",
+      "AudioEffect": "",
+      "BlockColliderRadius": 0.1,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_06_Block"
+      },
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider",
+        "HitCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.45
+      },
+      "EffectName": "Eff_Device_Prop_DefensiveTower_03_Attack_02_04_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_06_Brust_End"
+      },
+      "FirstHitDelayTime": 0.1,
+      "HitAnimEventID": "Device_LaserBeam_Attackproperty_MS_LP01",
+      "HitColliderRadius": 0.1,
+      "HitEffect": {
+        "EffectPattern": "Hit_Smash_Large"
+      },
+      "HitInterval": 0.2,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Root",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "None"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaunchingPort_1",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 5,
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      }
+    }
+  ],
+  "AbilityName": "Device_Military_LaserDevice_LaserBeam_Short_LP01",
+  "AbilityStacking": "Unique"
+}

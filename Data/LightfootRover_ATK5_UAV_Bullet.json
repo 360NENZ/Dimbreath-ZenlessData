@@ -1,0 +1,145 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 1.0,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_UAVRaven_Attack_01_01_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 10.0,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "LightfootRover_Attack05_Attackproperty_UAV",
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode_Ground"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": 3,
+        "Gravity": 0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0.0,
+          "z": 100
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_LightfootRover_ATK5_CamShake_UAV_Explode_E_01"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "RotateType": "Instant",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": false
+    }
+  ],
+  "AbilityName": "LightfootRover_ATK5_UAV_Bullet",
+  "AbilityStacking": "Unique"
+}

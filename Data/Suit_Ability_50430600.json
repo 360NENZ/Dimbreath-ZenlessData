@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Suit_Ability_50430600",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 10.0
+    },
+    "AS_SpRecoverDelta": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSwitchInBegin": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutFinish": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpRecoverDeltaModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_SpRecoverDelta": "%AS_SpRecoverDelta"
+      }
+    }
+  }
+}

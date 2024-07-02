@@ -1,0 +1,132 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "EnhanceNum",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "EnhanceModifier"
+                }
+              ],
+              "Val": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Longinus_Enhance",
+  "AbilitySpecials": {
+    "AS_CriticalDamage_Talent_01": {
+      "Value": 0.15
+    },
+    "AS_Duration_Default": {
+      "Value": 30
+    },
+    "AS_Duration_Talent04": {
+      "Value": 30
+    },
+    "AS_EnhanceNum_Default": {
+      "Value": 8
+    },
+    "AS_MaxEnhanceNum_Default": {
+      "Value": 8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": "%AS_MaxEnhanceNum_Default",
+        "CustomPropertyType": "MaxEnhanceNum",
+        "Percentage": 0,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "EnhanceModifier": {
+      "Duration": "%AS_Duration_Default",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon02",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Longinus_Flame_Loop",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": -99,
+          "CustomPropertyType": "EnhanceNum",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyProperty",
+      "Amount": "%AS_EnhanceNum_Default",
+      "CustomPropertyType": "EnhanceNum",
+      "Percentage": 0,
+      "PropertyModifyFunction": "Add",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "EnhanceModifier"
+    }
+  ]
+}

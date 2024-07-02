@@ -1,0 +1,70 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Shoot_Hold",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShootStateModifer01"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Amillion001_Attack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ShootStateModifer01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.05,
+          "TimeUpActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ShootStateModifer02",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 4,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_01",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.1
+    },
+    "ShootStateModifer02": {
+      "Duration": 4,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_03",
+          "Target": "Self"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_02",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.1
+    }
+  }
+}

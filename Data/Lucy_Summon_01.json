@@ -1,0 +1,94 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "InheritPropertyMap": {
+        "Attack": {
+          "InheritType": "MasterBorn",
+          "Percentage": 1.0,
+          "SourceProperty": "Attack"
+        },
+        "BreakStun": {
+          "InheritType": "MasterBorn",
+          "Percentage": 1.0,
+          "SourceProperty": "BreakStun"
+        },
+        "ElementAbnormalPower": {
+          "InheritType": "MasterBorn",
+          "Percentage": 1.0,
+          "SourceProperty": "ElementAbnormalPower"
+        }
+      },
+      "OnSummonCreatedActions": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LucyWood01"
+          ],
+          "IsAdd": true,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199140511,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WoodFollowPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "SummonTag": [
+        "LucyWood01",
+        "Summon_LivingEntity"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Lucy_Summon_01",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Lucy_Summon_01",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByIsInZoneTags",
+                "CustomKey": "LucyWood_AbilityTargetting_01",
+                "Tags": [
+                  "Default"
+                ],
+                "Target": "Custom"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

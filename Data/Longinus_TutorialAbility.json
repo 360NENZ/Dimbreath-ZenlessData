@@ -1,0 +1,82 @@
+{
+  "AbilityName": "Longinus_TutorialAbility",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest1Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Longinus_Attack_Normal_Enhance_01_AttackProperty_01_01",
+              "Longinus_Attack_Normal_Enhance_01_AttackProperty_01_02",
+              "Longinus_Attack_Normal_Enhance_02_AttackProperty_01_01",
+              "Longinus_Attack_Normal_Enhance_02_AttackProperty_01_02",
+              "Longinus_Attack_Normal_Enhance_03_AttackProperty_01_01",
+              "Longinus_Attack_Normal_Enhance_03_AttackProperty_01_02",
+              "Longinus_Attack_Normal_Enhance_03_AttackProperty_02",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_01_01",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_01_02",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_02_01",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_02_02",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_03_01",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_03_02",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_04_01",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_04_02",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_05_01",
+              "Longinus_Attack_Normal_Enhance_04_AttackProperty_05_02",
+              "Longinus_Attack_Rush_Enhance_AttackProperty_01_01",
+              "Longinus_Attack_Rush_Enhance_AttackProperty_01_02",
+              "Longinus_Attack_Rush_Enhance_AttackProperty_02_01",
+              "Longinus_Attack_Rush_Enhance_AttackProperty_02_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest2Modifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Quest1Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Longinus_1"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Longinus_3"
+        }
+      ]
+    },
+    "Quest2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Longinus_2"
+        }
+      ]
+    }
+  }
+}

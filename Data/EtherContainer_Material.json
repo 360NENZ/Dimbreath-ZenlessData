@@ -1,0 +1,54 @@
+{
+  "AbilityName": "EtherContainer_Material",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "ApplyAllRenderers": true,
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Small"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Device_EtherContainer_Small_Glitch",
+      "Target": "Self",
+      "key": "Device_EtherContainer_Small_Glitch"
+    },
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "ApplyAllRenderers": true,
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Middle"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Device_EtherContainer_Middle_Glitch",
+      "Target": "Self",
+      "key": "Device_EtherContainer_Middle_Glitch"
+    },
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "ApplyAllRenderers": true,
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Big"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Device_EtherContainer_Big_Glitch",
+      "Target": "Self",
+      "key": "Device_EtherContainer_Big_Glitch"
+    }
+  ]
+}

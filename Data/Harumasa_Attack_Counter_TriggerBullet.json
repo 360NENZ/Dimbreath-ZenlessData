@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Harumasa_Attack_Counter_TriggerBullet",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "MainArrowTarget"
+        ],
+        "CustomKey": "Harumasa_AttackTarget_MainArrowTarget",
+        "IsAdd": false,
+        "Target": "Custom"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "MainArrowTarget"
+        ],
+        "IsAdd": true,
+        "Target": "Other"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Harumasa_SetTrap_Counter01",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Harumasa_Counter"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Harumasa_SetTrap_Counter02",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Harumasa_Counter"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

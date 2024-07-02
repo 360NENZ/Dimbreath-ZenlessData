@@ -1,0 +1,52 @@
+{
+  "AbilityName": "Curse_1100018",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": -0.9
+    },
+    "DamageRatio": {
+      "Value": 0
+    },
+    "DurationTime": {
+      "Value": 5
+    },
+    "Duration_Delta": {
+      "Value": 10
+    },
+    "OnBattle": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifySkillCDAction",
+        "Delta": 1.5,
+        "Ratio": 0,
+        "SkillCDType": "ForceCD",
+        "SkillType": "Evade",
+        "Target": "Self",
+        "ValueType": "DefaultValue"
+      },
+      {
+        "$type": "ModifySkillCDAction",
+        "Delta": 1.5,
+        "Ratio": 0,
+        "SkillCDType": "CountCD",
+        "SkillType": "Evade",
+        "Target": "Self",
+        "ValueType": "DefaultValue"
+      },
+      {
+        "$type": "ModifySkillCDAction",
+        "Delta": 1.5,
+        "Ratio": 0,
+        "SkillCDType": "SilenceCD",
+        "SkillType": "Evade",
+        "Target": "Self",
+        "ValueType": "DefaultValue"
+      }
+    ]
+  }
+}

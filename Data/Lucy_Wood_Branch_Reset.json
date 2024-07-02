@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Lucy_Wood_Branch_Reset",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ResetModifier": {
+      "Duration": 0.01,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Branch_Wood00"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Branch_Wood01"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Branch_Wood02"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "ModifierName": "ResetModifier",
+      "Target": "Custom"
+    }
+  ]
+}

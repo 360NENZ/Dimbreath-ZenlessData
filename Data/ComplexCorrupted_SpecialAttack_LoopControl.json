@@ -1,0 +1,95 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 2,
+              "ParamName": "SpecialAttack_02_RepeatTime",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(SpecialAttack_02_RepeatTime)-1",
+              "ParamName": "SpecialAttack_02_RepeatTime",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "SpecialAttack_02_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_IsLoopSpecialAttack",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "SpecialAttack_02_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_IsLoopSpecialAttack",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "SpecialAttack_02_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SpecialAttack_LoopControl",
+  "AbilitySpecials": {
+    "SpecialAttack_02_RepeatTime": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique"
+}

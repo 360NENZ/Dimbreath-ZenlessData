@@ -1,0 +1,563 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "IsSameAsMaster": true,
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "Source": "Self",
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeLerpSpeed",
+              "Speed": 9999
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "UAV_L",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Lerp",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "UAV_L",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Target"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilityTargetCount",
+              "AbilityTargetKey": "Monster_LightfootRover_UAV_L",
+              "CompareType": "NotEqual",
+              "CompareValue": 0
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "PopAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "LightfootRover_ExtraUAV"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "PushAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "LightfootRover_UAV_Extra"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "PushAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "LightfootRover_ExtraUAV"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "UpdateTargetModifier",
+          "Target": "Other"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LightfootRover_UAV_L"
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "ATK7_BaseTargetPoint_UAV",
+          "PosRot": {
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "Target": "Target"
+        },
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "ATK7_ActualTargetPoint_UAV",
+          "PosRot": {
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199141011,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "UAV_L",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "SummonTag": [
+        "LightfootRover_UAV"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "IsSameAsMaster": true,
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "Source": "Self",
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeLerpSpeed",
+              "Speed": 9999
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "UAV_R",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Lerp",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "UAV_R",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Target"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilityTargetCount",
+              "AbilityTargetKey": "Monster_LightfootRover_UAV_R",
+              "CompareType": "NotEqual",
+              "CompareValue": 0
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "PopAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "LightfootRover_ExtraUAV"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "PushAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "LightfootRover_UAV_Extra"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "PushAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "LightfootRover_ExtraUAV"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "UpdateTargetModifier",
+          "Target": "Other"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LightfootRover_UAV_R"
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "ATK7_BaseTargetPoint_UAV",
+          "PosRot": {
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "Target": "Target"
+        },
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "ATK7_ActualTargetPoint_UAV",
+          "PosRot": {
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199141011,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "UAV_R",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "SummonTag": [
+        "LightfootRover_UAV"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "LightfootRover_LaunchUAV",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ProcessAttachPointAction",
+        "AttachPointName": "UAV_L",
+        "HierarchyType": "World",
+        "PosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Skn_UAV_L",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "Target": "Self"
+      },
+      {
+        "$type": "ProcessAttachPointAction",
+        "AttachPointName": "UAV_R",
+        "HierarchyType": "World",
+        "PosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Skn_UAV_R",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FollowModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FollowModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "UAV_L",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_UAV_L",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Caster"
+            }
+          },
+          "PosRatio": 3.0,
+          "PosType": "Lerp",
+          "RotRatio": 8.0,
+          "RotType": "Lerp"
+        },
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "UAV_R",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_UAV_R",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Caster"
+            }
+          },
+          "PosRatio": 3.0,
+          "PosType": "Lerp",
+          "RotRatio": 8.0,
+          "RotType": "Lerp"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "UpdateTargetModifier": {
+      "OnAdded": [
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "OnUAV"
+          ],
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "OnUAV"
+          ],
+          "Target": "Caster"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "IgnoreSetAttackTargetCD": true,
+          "Source": "Caster",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.1
+    }
+  }
+}

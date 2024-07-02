@@ -1,0 +1,31 @@
+{
+  "AbilityName": "Device_Prop_TelescopicPedal_Open",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "OpenModifier": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsOpen",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "OpenModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "Device_Prop_TelescopicPedal_Close",
+      "Target": "Self"
+    }
+  ]
+}

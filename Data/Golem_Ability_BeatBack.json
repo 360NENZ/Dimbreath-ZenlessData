@@ -1,0 +1,42 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Hit_InDefence",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Golem_Ability_BeatBack"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Golem_Ability_BeatBack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Golem_Ability_BeatBack": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 6,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

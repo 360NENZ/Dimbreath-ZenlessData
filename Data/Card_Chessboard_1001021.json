@@ -1,0 +1,55 @@
+{
+  "AbilityName": "Card_Chessboard_1001021",
+  "AbilitySpecials": {
+    "CurseItem": {
+      "Value": 0
+    },
+    "SpRecover": {
+      "Value": 0
+    },
+    "SpRecoverRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(SpRecoverRatio)*property(MaxSP)*sceneproperty(Stamina)",
+        "ParamName": "SpRecover",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "itemtype(32)",
+        "ParamName": "CurseItem",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "sceneproperty(Stamina_Max)*specials(SpRecoverRatio)*property(MaxSP)",
+        "ParamName": "SpRecover",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 5,
+            "ParamName": "CurseItem",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%SpRecover",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Target": "Self"
+      }
+    ]
+  }
+}

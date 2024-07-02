@@ -1,0 +1,46 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "IsSameAsMaster": false,
+      "NeedRaycastGround": true,
+      "NeedSearchCloseLocalAvatar": true,
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199141111,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": -2.0,
+            "y": 0.0,
+            "z": -1.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "MiddlePoint",
+          "CustomKey": "Harumasa_CounterTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Custom"
+        }
+      },
+      "SummonTag": [
+        "Harumasa_Trap"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Harumasa_SetTrap_Counter02",
+  "AbilityStacking": "Unique"
+}

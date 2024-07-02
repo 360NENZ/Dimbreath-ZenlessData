@@ -1,0 +1,13 @@
+{
+  "AbilityName": "Affix_ShieldBreak_ReduceCD",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ShieldEmptyActions": [
+      {
+        "$type": "ModifySkillTypeCDAction",
+        "Ratio": -0.5,
+        "SkillType": "Shield"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_2_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 60,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_2_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_2_End",
+          "FrameCountHigh": 87,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nassellaria_Skill02_MaterialProperty",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_Nassellaria_FX"
+            }
+          ],
+          "Tag": "Monster_Nassellaria_MA_Attack_02_Start_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_Nassellaria_MA_Attack_02_Start_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nassellaria_MA_Attack_02_Start_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

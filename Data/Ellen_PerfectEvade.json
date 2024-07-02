@@ -1,0 +1,100 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Slash_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 26,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PerfectEvadeTagModifier"
+          ]
+        }
+      ],
+      "IsSeam": true
+    }
+  ],
+  "AbilityName": "Ellen_PerfectEvade",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PerfectEvadeBuffModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PerfectEvadeBuffModifier": {
+      "Duration": 5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Ellen_Talent_04",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 6,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "PerfectEvadeTagModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "PerfectDash"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "PerfectEvadeBuffModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "PerfectEvadeBuffModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "PerfectDash"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "PerfectEvadeBuffModifier",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Stay_Front",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Up",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Down",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Left",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Right",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Heavy_Front",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Hit_Ground_Heavy_Back",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Stun_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Stun_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Stun_End",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Attack_1_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Attack_1_End",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Attack_2",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Attack_3",
+          "FrameCountHigh": 73,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Born",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Idle",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Run_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Run_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_F_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_F",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_B_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_B",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_L_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_L",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_R_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_R",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_MoveLeft",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_MoveRight",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Evade",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Ignite_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Ignite_Start_Back",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier",
+            "StunTakeRatioModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "HeavySoldier_DamageReduction",
+  "AbilitySpecials": {
+    "AS_BreakStunTakeRatio": {
+      "Value": -0.75
+    },
+    "AS_DamageTakeRatio": {
+      "Value": -0.75
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 180,
+              "AngleMin": 0
+            }
+          ],
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%AS_DamageTakeRatio",
+          "Target": "Target"
+        }
+      ]
+    },
+    "StunTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 180,
+              "AngleMin": 0
+            }
+          ],
+          "PropertyKey": "Actor_BreakStunTakeRatio",
+          "PropertyValue": "%AS_BreakStunTakeRatio",
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 4.9,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Ether_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1.1,
+            "z": 1.3
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "HeadPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 3.5,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.75
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_Arlaune_ATK01_Explode_Attackproperty",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Ether_Explode_Ground"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Ether_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Ether_Explode"
+      },
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_Arlaune_ATK1_CamShake_Explode_E_01",
+          "Target": "Other"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_Ether_M"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_Ether_M_Ground"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": true,
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Ether_Explode"
+      }
+    }
+  ],
+  "AbilityName": "Arlaune_Attack_01_Bullet_01",
+  "AbilityStacking": "Unique"
+}

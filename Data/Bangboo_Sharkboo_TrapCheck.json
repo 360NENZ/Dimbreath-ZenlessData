@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Bangboo_Sharkboo_TrapCheck",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "ParamName": "Trigger_Attack",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Sharkboo_Trap_Attackproperty_Attack01_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "CreateSavePointAction",
+        "CustomKey": "AbilityTarget_Bangboo_Sharkboo",
+        "PointName": "Sharkboo_TrapPoint",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Sharkboo_Trap_Attackproperty_Attack01_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Custom"
+      }
+    ]
+  }
+}

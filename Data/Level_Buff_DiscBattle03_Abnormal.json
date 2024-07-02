@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Level_Buff_DiscBattle03_Abnormal",
+  "AbilitySpecials": {
+    "AS_AddedAccumulationRatio": {
+      "Value": 0.5
+    },
+    "AS_AddedDamageRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": "%AS_AddedAccumulationRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

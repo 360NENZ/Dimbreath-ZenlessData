@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Guardian_BeingHit_ShakeLight",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 1,
+        "ParamName": "Int_ShakeType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ShakeLight"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 0,
+        "ParamName": "Int_ShakeType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ShakeLight"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

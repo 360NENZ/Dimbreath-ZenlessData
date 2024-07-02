@@ -1,0 +1,423 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_StanceA_Normal_04",
+          "FrameCountHigh": 33,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "YanagiDitherModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Back",
+          "FrameCountHigh": 17,
+          "FrameCountLow": 7,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "YanagiDitherModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceA_Normal_03",
+          "FrameCountHigh": 36,
+          "FrameCountLow": 5,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceA_Normal_04",
+          "FrameCountHigh": 999,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceA_Normal_04_End",
+          "FrameCountHigh": 20,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceA_Normal_05",
+          "FrameCountHigh": 999,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02",
+            "StanceChangeWindowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceA_Normal_05_End",
+          "FrameCountHigh": 75,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceB_Normal_03",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceB_Normal_04",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 10,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceB_Normal_05",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02",
+            "StanceChangeWindowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceSwitch_AtoB",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 35,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_StanceSwitch_BtoA",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 25,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 999,
+          "FrameCountLow": 14,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 80,
+          "FrameCountLow": 6,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 70,
+          "FrameCountLow": 9,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 999,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Ctr_Weapon1_Size3",
+              "EffectPattern": "Eff_Yanagi_Attack_Common_04_Flash",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "QuickChangeModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Yanagi_GamepadRumble_E_QuickSwitch",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "QuickChangeModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "AnimatorStateName": "Attack_StanceA_Normal_04",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Ctr_Weapon1_Size3",
+              "EffectPattern": "Eff_Yanagi_Attack_Common_04_Flash",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "QuickChangeModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Yanagi_GamepadRumble_E_QuickSwitch",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "QuickChangeModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "AnimatorStateName": "Attack_StanceB_Normal_04",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Yanagi_EffectManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EffectModifier01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_Weapon1_Size3",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Yanagi_Attack_Common_01_GlowMod",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertiesModifier02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Yanagi_Weapon01"
+            }
+          ],
+          "Tag": "Yanagi_MaterialProperty01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size03_Yanagi_MA_Attack_Common_Mat01_OverrideOutline_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Yanagi_MaterialProperty01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "QuickChangeModifier": {
+      "Duration": 0.8,
+      "ModifierStacking": "Replace"
+    },
+    "StanceChangeWindowModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "QuickChangeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "YanagiDitherModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Yanagi_Dither_Fade",
+          "Tag": "Yanagi_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Yanagi_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

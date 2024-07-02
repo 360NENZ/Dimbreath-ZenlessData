@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Card_BangbooUpgrade_1044005",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageModifier_1044005",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageModifier_1044005": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooAttack"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

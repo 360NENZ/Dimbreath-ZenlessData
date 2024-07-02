@@ -1,0 +1,102 @@
+{
+  "AbilityName": "GamePlaySUMO_Player_OutRange_ContinueHurt",
+  "AbilitySpecials": {
+    "AS_AttackBonus": {
+      "Value": 0.5
+    },
+    "AS_SelfAttack": {
+      "Value": 0
+    },
+    "HpPercentage": {
+      "Value": 100.0
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OuterHit_Modifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlaySUMO_Player_OutRange_StopHurt",
+        "Target": "Self"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "OuterHit_Modifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Interval_Timer",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Interval_Timer": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "OuterHit_Modifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "OuterHit_Modifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(Attack)*specials(AS_AttackBonus)",
+          "ParamName": "AS_SelfAttack",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AttachPoint": "MiddlePoint",
+          "AttackProperty": {
+            "AddedDamageValue": "%AS_SelfAttack"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Interval_Timer",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TriggerHit_Modifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

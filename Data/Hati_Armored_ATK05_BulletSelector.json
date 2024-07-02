@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Hati_Armored_ATK05_BulletSelector",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Hati_Armored_ATK05_BulletType_01",
+      "Predicates": [
+        {
+          "$type": "ByDistance",
+          "CompareTarget": "SelfAttackTarget",
+          "CompareType": "GreaterEqual",
+          "Distance": 10,
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Hati_Armored_ATK05_BulletType_03",
+      "Predicates": [
+        {
+          "$type": "ByDistance",
+          "CompareTarget": "SelfAttackTarget",
+          "CompareType": "Less",
+          "Distance": 10,
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.1
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Billy_ShotRun_Bullet_AttackProperty_01",
+      "ExplodeEffect": {
+        "EffectPattern": "Hit_Bullet_Small"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 0.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 120
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 0.05,
+        "ReachTargetStop": true,
+        "RotateSpeed": 360,
+        "RotateType": "Fixed",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.15,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Billy_ShotRun_BulletType_01",
+  "AbilityStacking": "Unique"
+}

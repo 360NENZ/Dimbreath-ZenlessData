@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Card_Froze_1001107",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Frozen"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDelta",
+        "PropertyValue": "%CriticalDelta",
+        "Target": "Self"
+      }
+    ]
+  }
+}

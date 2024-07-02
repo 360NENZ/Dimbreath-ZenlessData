@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Device_Prop_AreaRelateStateChange",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnListenBattleEnter": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_IsInBattleArea",
+        "ParamType": 2,
+        "Target": "Self"
+      }
+    ],
+    "OnListenBattleExit": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Bool_IsInBattleArea",
+        "ParamType": 2,
+        "Target": "Self"
+      }
+    ]
+  }
+}

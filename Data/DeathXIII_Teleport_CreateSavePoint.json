@@ -1,0 +1,176 @@
+{
+  "AbilityName": "DeathXIII_Teleport_CreateSavePoint",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "DeathXIII_Attack01_SavePoint_01",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Camera",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.5
+          },
+          "RandomPositionRange": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      }
+    },
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "DeathXIII_Attack02_SavePoint_01",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Camera",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": 3,
+            "y": 0.0,
+            "z": 2
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "LocalAvatar"
+        }
+      }
+    },
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "DeathXIII_Attack02_SavePoint_02",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Camera",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": -3,
+            "y": 0.0,
+            "z": 2
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "LocalAvatar"
+        }
+      }
+    },
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "DeathXIII_Attack03_SavePoint_01",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Camera",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 6.0
+          },
+          "RandomPositionRange": {
+            "x": 3.0,
+            "y": 0.0,
+            "z": 1.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      }
+    },
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "DeathXIII_Attack03_SavePoint_02",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Target",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 6.0
+          },
+          "RandomPositionRange": {
+            "x": 3.0,
+            "y": 0.0,
+            "z": 1.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      }
+    },
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "DeathXIII_Attack04_SavePoint_01",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Camera",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 4.0
+          },
+          "RandomPositionRange": {
+            "x": 5.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      }
+    }
+  ]
+}

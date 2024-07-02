@@ -1,0 +1,49 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "QTE",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "QTE_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_FrameHaltSync",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FrameHaltModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FrameHaltSyncMixin",
+          "CustomTargetKey": "AbilityTarget_Bangboo_Sharkboo",
+          "SyncTargetting": "Custom"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_HasMinSP",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 60
+            },
+            {
+              "Val": 60,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 30,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_HasMinSP",
+                  "ParamType": 2,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ArrowModifier",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Finish_01",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Finish_02",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Flag_01",
+          "FrameCountHigh": 55,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Flag_02",
+          "FrameCountHigh": 55,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_Sp"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_ExSp"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_Sp"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_ExSp"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Flag",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "Aokaku_ExSp",
+              "Target": "Self"
+            },
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 30,
+              "Percentage": 0
+            },
+            {
+              "$type": "SetUIArrowAction",
+              "position": 30
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_Sp"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_ExSp"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Loop_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 11,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "Aokaku_ExSp",
+              "Target": "Self"
+            },
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 30,
+              "Percentage": 0
+            },
+            {
+              "$type": "SetUIArrowAction",
+              "position": 30
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_Sp"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Aokaku_ExSp"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Loop_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 11,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_SpecialSkill",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetUIArrowAction",
+        "position": 60
+      }
+    ]
+  },
+  "Modifiers": {
+    "ArrowModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetUIArrowAction",
+          "position": 60
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Blessing_Type02_EnemyAtkUp",
+  "AbilitySpecials": {
+    "AddedEnemyAttack": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedEnemyAttack"
+    }
+  }
+}

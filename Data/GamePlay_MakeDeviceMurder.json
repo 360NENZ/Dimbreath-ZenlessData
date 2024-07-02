@@ -1,0 +1,15 @@
+{
+  "AbilityName": "GamePlay_MakeDeviceMurder",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_EnableLastKill",
+        "PropertyValue": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

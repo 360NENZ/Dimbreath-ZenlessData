@@ -1,0 +1,656 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_AirMove",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DevilbooQTEMoveCtrInMoveModifier",
+            "MoveEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Attack",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DevilbooQTEMoveCtrInAttackModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_AirMove",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DevilbooQTEAudio1"
+          ],
+          "NormalizedTimeHigh": 0.2,
+          "NormalizedTimeLow": 0.14
+        },
+        {
+          "AnimatorStateName": "SwitchIn_AirMove",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DevilbooQTEAudio1"
+          ],
+          "NormalizedTimeHigh": 0.7,
+          "NormalizedTimeLow": 0.65
+        },
+        {
+          "AnimatorStateName": "SwitchIn_AirMove",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DevilbooQTEAudio2"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.07
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Devilboo_QTE",
+  "AbilitySpecials": {
+    "AS_QTEDuration": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DevilbooAttackModifier": {
+      "Duration": 0.2,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_QTE_Attack",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_QTE_Attack",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "DevilbooQTEAttackCtrModifier": {
+      "Duration": "%AS_QTEDuration",
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DevilbooAttackModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackNormal"
+              ]
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Greater",
+              "CustomNumerator": "QTEAttackCount",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Caster",
+              "Val1": 0
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "DevilbooQTEAttackTargetPointCtrModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "DevilbooQTEAttackTargetPointL",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.3
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "PosType": "Instant"
+        },
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "DevilbooQTEAttackTargetPointR",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.3
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "PosType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "DevilbooQTEAudio1": {
+      "Duration": 0.1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Foley_Devilboo_Fly_Idle",
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "CompareType": "Less",
+              "FloatVal": 6,
+              "ParamName": "Float_MoveSpeed",
+              "ParamType": 4,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "DevilbooQTEAudio2": {
+      "Duration": 0.1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Foley_Devilboo_Fly_Fast_Loop",
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "CompareType": "GreaterEqual",
+              "FloatVal": 6,
+              "ParamName": "Float_MoveSpeed",
+              "ParamType": 4,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "DevilbooQTEModifier": {
+      "Duration": "%AS_QTEDuration",
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "CustomPropertyType": "QTEAttackCount",
+              "CustomReferMaxPropertyType": "MaxQTEAttackCount",
+              "IsUsePercentage": false,
+              "PropertyType": "Custom",
+              "ReferMaxPropertyType": "Custom",
+              "ValueRangeActions": [
+                {
+                  "HighToValueActions": [
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "DevilbooQTEModifier",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Val": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "DevilbooQTEAttackTargetPointL",
+          "HierarchyType": "World",
+          "PosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.3
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "DevilbooQTEAttackTargetPointR",
+          "HierarchyType": "World",
+          "PosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.3
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachModifier",
+          "ModifierName": "DevilbooQTEAttackTargetPointCtrModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_QTE",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachModifier",
+          "ModifierName": "DevilbooQTEAttackCtrModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Devilboo_QTE_02",
+          "Target": "Self",
+          "key": "Bangboo_Devilboo_MA_Mat_Bangboo_Devilboo_02_SecondaryEmission_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Bangboo_Eyes_001_LOD0"
+            }
+          ],
+          "Tag": "Devilboo_QTE_03",
+          "Target": "Self",
+          "key": "Bangboo_Devilboo_MA_Mat_Bangboo_Devilboo_03_ScreenImage_03"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Skill_Devilboo_QTE_AirMove_Loop"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_QTE",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Devilboo_QTE_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Devilboo_QTE_03",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DevilbooQTEAttackCtrModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Stop_SFX_Bangboo_Skill_Devilboo_QTE_AirMove_Loop"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DevilbooQTEModifier"
+        }
+      ]
+    },
+    "DevilbooQTEMoveCtrInAttackModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeLerpSpeed",
+              "Speed": 5
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Camera",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 1.5,
+                  "y": 0.0,
+                  "z": -0.5
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": false,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByAIParam",
+              "CompareType": "Equal",
+              "IntParamValue": 0,
+              "ParamName": "Int_QTEFollowMode",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeLerpSpeed",
+              "Speed": 5
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Camera",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": -1.5,
+                  "y": 0.0,
+                  "z": -0.5
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": false,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByAIParam",
+              "CompareType": "Equal",
+              "IntParamValue": 1,
+              "ParamName": "Int_QTEFollowMode",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DevilbooQTEMoveCtrInMoveModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LogicVelocitySyncRootMotionMixin",
+          "BlendParamSpeed": "Float_MoveSpeed",
+          "BlendParamTargetSpeed": "Float_MoveTargetSpeed",
+          "LerpDuration": 0.1,
+          "MaxDistance": 2.0,
+          "MaxTargetSpeed": 12,
+          "MinDistance": 1.2,
+          "MinTargetSpeed": 0,
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "VelocityCurve": "Bangboo_Devilboo_QTE_Move"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0,
+          "ParamName": "Float_MoveSpeed",
+          "ParamType": 4,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0,
+          "ParamName": "Float_MoveTargetSpeed",
+          "ParamType": 4,
+          "Target": "Self"
+        }
+      ]
+    },
+    "MoveEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_TailA_05",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Bangboo_Devilboo_SwitchIn_AirMove_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "QTEStartLogicMoveModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": 0.05,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 1.0,
+                  "y": 0.0,
+                  "z": 0.3
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": false,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "DevilbooQTEModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "QTEStartLogicMoveModifier",
+      "Target": "Self"
+    }
+  ]
+}

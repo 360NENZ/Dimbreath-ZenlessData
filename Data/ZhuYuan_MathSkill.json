@@ -1,0 +1,59 @@
+{
+  "AbilityName": "ZhuYuan_MathSkill",
+  "AbilitySpecials": {
+    "AS_CriticalDelta": {
+      "Value": 0.4
+    },
+    "AS_Duration": {
+      "Value": 5.0
+    },
+    "AS_PairACount": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExSp",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUpModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CriticalDelta"
+      }
+    }
+  }
+}

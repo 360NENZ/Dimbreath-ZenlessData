@@ -1,0 +1,251 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_HighElement_Icemist",
+      "OnListenAbilityStarted": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ControlModifier",
+          "Target": "Self"
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_HighElement_Icemist",
+  "AbilitySpecials": {
+    "AS_CriticalDMGRatio": {
+      "Value": 0.2
+    },
+    "AS_IcemistDuration": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ControlModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Icemist"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ControlModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffDamageHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IcemistZoneTagModifier",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite"
+              ]
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FieldRangeModifier",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IcemistCoolDownModifier",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 10,
+            "FanCylinderColliderRadius": 5.5,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "IcemistPropertyModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "IcemistPropertyModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "CustomKey": "Card_HighElement_Icemist_AbilityTargetting",
+              "OffsetReferTarget": "Custom"
+            }
+          },
+          "FieldStartActions": [
+            {
+              "$type": "TriggerSoundAction",
+              "Target": "Self",
+              "soundActionKey": "Play_SFX_Char_TarotCard_Froze_2001102"
+            }
+          ],
+          "FieldStopActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "FieldRangeModifier",
+              "Target": "Self"
+            }
+          ],
+          "IsFollow": false,
+          "LoopEffectPattern": "Buff_Icemist",
+          "TotalDuration": "%AS_IcemistDuration"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": []
+    },
+    "IcemistCoolDownModifier": {
+      "Duration": "%AS_IcemistDuration",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ControlModifier",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_HighElement_Icemist",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "IcemistPropertyModifier": {
+      "Duration": "%AS_IcemistDuration",
+      "ModifierStacking": "GlobalUnique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ],
+          "PropertyKey": "Actor_CriticalDamageRatioDelta",
+          "PropertyValue": "%AS_CriticalDMGRatio",
+          "Target": "Target"
+        }
+      ]
+    },
+    "IcemistZoneTagModifier": {
+      "Duration": "%AS_IcemistDuration",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Icemist"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Icemist"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

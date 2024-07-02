@@ -1,0 +1,83 @@
+{
+  "AbilityName": "Corin_TutorialAbility",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest1Modifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "NormalHoldCondition"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest2Modifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "BranchHoldCondition"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Quest1Modifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Corin_1"
+        }
+      ]
+    },
+    "Quest2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Corin_2"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "BranchHoldCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Corin_Attack_Branch_02_AttackProperty_02_02_01",
+            "Corin_Attack_Branch_02_AttackProperty_02_02_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "NormalHoldCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Corin_Attack_Normal_03_AttackProperty_01_01",
+            "Corin_Attack_Normal_03_AttackProperty_01_02",
+            "Corin_Attack_Normal_05_AttackProperty_01_01",
+            "Corin_Attack_Normal_05_AttackProperty_01_02",
+            "Corin_Attack_Normal_05_AttackProperty_02",
+            "Corin_Attack_Normal_05_AttackProperty_04_01",
+            "Corin_Attack_Normal_05_AttackProperty_04_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Card_Froze_1001103",
+  "AbilitySpecials": {
+    "TimeOfDuration": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Frozen",
+        "Params": [
+          {
+            "Delta": "%TimeOfDuration",
+            "Name": "Duration"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

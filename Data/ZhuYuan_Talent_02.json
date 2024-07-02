@@ -1,0 +1,217 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Left_Shotgun",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Right_Shotgun",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Shotgun_AfterAttack04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ShotGunRBL_Modifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "ZhuYuan_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Duration": {
+      "Value": 5.0
+    },
+    "AS_AddedDamageRatio_Talent_02": {
+      "Value": 0.1
+    },
+    "AS_DamageTakeRatio": {
+      "Value": -0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "ZhuYuan_Talent_02"
+        ],
+        "IsAdd": true
+      }
+    ],
+    "OnHitOtherPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageControlModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByShotgunAmmo"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageControlModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageModifier": {
+      "Duration": "%AS_AddedDamageRatio_Duration",
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByShotgunAmmo"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Talent_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShotGunRBL_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 3,
+          "Tag": "ShotGunRBL",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "ShotGunRBL",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  },
+  "Predicates": {
+    "ByShotgunAmmo": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_01",
+            "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_02",
+            "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_03",
+            "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_01",
+            "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_02",
+            "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_03",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_01",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_02",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_03",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_04",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_05",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_06",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_07",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_08",
+            "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_09",
+            "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_01",
+            "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_02",
+            "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_03",
+            "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_01",
+            "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_02",
+            "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_03",
+            "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_01",
+            "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_02",
+            "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_03"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

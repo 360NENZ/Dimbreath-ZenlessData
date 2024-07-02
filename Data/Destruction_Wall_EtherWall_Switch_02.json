@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Destruction_Wall_EtherWall_Switch_02",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "Device_Wall_EtherWall_01"
+      ],
+      "Tag": "Device_Wall_EtherWall_01",
+      "Visible": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_2_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_2_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "MetalGorilla_Ability_MaterialProperty",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_MetalGorilla_MA_Attack_03_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_MetalGorilla_MA_Attack_03_Mat02_ScreenImage_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

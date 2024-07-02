@@ -1,0 +1,72 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Evade_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeFrontHoldModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front_Hold",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeFrontHoldModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Evade_Front_Hold",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EvadeFrontHoldModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ActiveDodgeDummyAction",
+          "EnableDodge": true,
+          "IsOverrideDuration": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_PerfectEvade",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ActiveDodgeDummyAction",
+          "EnableDodge": false,
+          "IsOverrideDuration": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_PerfectEvade",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

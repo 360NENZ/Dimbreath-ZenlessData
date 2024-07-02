@@ -1,0 +1,16 @@
+{
+  "AbilityName": "Device_Vehicle_MovingTrain_02_WindowEffect",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MoveStartModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": []
+    },
+    "WindowModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": []
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "AbilityName": "GamePlayEvadeChampion_LaserBeam_Interval",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnIntervalThink_LaunchMissle",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlayEvadeChampion_LaserBeam_GP01",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlayEvadeChampion_LaserBeam_GP02",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Delay_3s": {
+      "Duration": 7,
+      "ModifierStacking": "MultipleRefresh",
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlayEvadeChampion_LaserBeam_Interval",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 6.0
+    },
+    "OnIntervalThink_LaunchMissle": {
+      "Duration": 1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Delay_3s",
+          "Target": "Self"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlayEvadeChampion_LaserBeam_GP01",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlayEvadeChampion_LaserBeam_GP02",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.5
+    }
+  }
+}

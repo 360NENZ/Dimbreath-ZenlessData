@@ -1,0 +1,28 @@
+{
+  "AbilityName": "BuffBox_Eff",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffBox_Eff_BuffModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffBox_Eff_BuffModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Treasure_Open",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 1
+    }
+  }
+}

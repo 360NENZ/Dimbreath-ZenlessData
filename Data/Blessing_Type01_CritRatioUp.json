@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Blessing_Type01_CritRatioUp",
+  "AbilitySpecials": {
+    "AddedCriticalRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_CriticalDelta": "%AddedCriticalRatio"
+    }
+  }
+}

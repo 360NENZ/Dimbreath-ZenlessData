@@ -1,0 +1,156 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletShootingMixin",
+      "AbilityName": "ComplexCorrupted_SpecialAttack_01_BulletType_01",
+      "BulletCount": -1,
+      "EmitInheritPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "EmitInterval": -1,
+      "EmitOnAdd": false,
+      "PositionSelectFunction": {
+        "$type": "ConfigAbilityPosRotListSelectFunction",
+        "PosRotList": [
+          {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -4.75,
+                "y": 0.0,
+                "z": 18.18
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 13.28,
+                "y": 0.0,
+                "z": -16.38
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 7.71,
+                "y": 0.0,
+                "z": 4.95
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -18.31,
+                "y": 0.0,
+                "z": 2.38
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.11,
+                "y": 0.0,
+                "z": -16.83
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.3
+              },
+              "RandomPositionRange": {
+                "x": 0.8,
+                "y": 0.0,
+                "z": 0.8
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SelfAttackTarget"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SpecialAttack_01_BulletShooting_05",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Affix_ShieldEnd_RecoverSp",
+  "AbilitySpecials": {
+    "RecoverSp": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ShieldEmptyActions": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%RecoverSp",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Target": "LocalAvatar"
+      }
+    ],
+    "ShieldTimesUpActions": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%RecoverSp",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Target": "LocalAvatar"
+      }
+    ]
+  }
+}

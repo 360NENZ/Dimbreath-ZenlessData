@@ -1,0 +1,210 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_4",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Satyrus_Body_TrafficLight_ATK04"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_5",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Satyrus_Body_TrafficLight_ATK04"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Evade",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Satyrus_Body_TrafficLight_Evade"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Stun_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Satyrus_Body_TrafficLight_Stun_Start"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Stun_Loop",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Satyrus_Body_TrafficLight_Stun_Loop"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Satyrus_Body_TrafficLight",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Satyrus_Body_TrafficLight",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Satyrus_Body_TrafficLight": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "ChestPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Satyrus_Body_TrafficLight_ATK04": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Satyrus_Body_TrafficLight"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Satyrus_Body_TrafficLight_Evade": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Satyrus_Dodge_TrafficLight"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Satyrus_Body_TrafficLight_Stun_Loop": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Satyrus_Body_TrafficLight_Stun_Loop"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Satyrus_Body_TrafficLight_Stun_Start": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Satyrus_Body_TrafficLight_Stun_Start"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Satyrus_Body_TrafficLight",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

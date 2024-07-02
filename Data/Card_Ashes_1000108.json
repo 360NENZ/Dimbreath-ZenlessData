@@ -1,0 +1,16 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "FlameBurstMixin",
+      "CD": "%CD",
+      "TriggerStackingCount": 1
+    }
+  ],
+  "AbilityName": "Card_Ashes_1000108",
+  "AbilitySpecials": {
+    "CD": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique"
+}

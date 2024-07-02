@@ -1,0 +1,94 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 999999.0,
+      "AlliedHitAnimEventID": "Device_SkyScraper_AntiTheftWall_Activating_Attackproperty_ToMonster",
+      "AudioEffect": "",
+      "BlockColliderRadius": 0.001,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Device_Prop_LaserFence_01_Attack_01_010_Receive"
+      },
+      "BlockInterval": 0.2,
+      "BlockLayers": [
+        "ScenePropCollider",
+        "HitCollider",
+        "StageCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.45
+      },
+      "EffectName": "Eff_Device_Prop_Military_LaserBlock_01_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Device_Prop_LaserFence_01_Attack_01_011_ReceiveEnd"
+      },
+      "FirstHitDelayTime": 0.1,
+      "HitAnimEventID": "Device_SkyScraper_AntiTheftWall_Activating_Attackproperty",
+      "HitColliderRadius": 0.2,
+      "HitEffect": {
+        "EffectPattern": "Hit_Smash_Large"
+      },
+      "HitInterval": 0.001,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "TP_4_In",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "TP_4_Out",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 50,
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      }
+    }
+  ],
+  "AbilityName": "Device_SkyScraper_AttackTheftWall_LaserBeam_LP04",
+  "AbilityStacking": "Unique"
+}

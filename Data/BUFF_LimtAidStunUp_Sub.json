@@ -1,0 +1,174 @@
+{
+  "AbilityName": "BUFF_LimtAidStunUp_Sub",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "AddedStunRatio": {
+      "Value": -99
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ModifyPerfectSwitchPointAction",
+        "Amount": 3,
+        "ModifyFunction": "Add"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_BreakStunRatio",
+        "PropertyValue": "%AddedStunRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunBuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "EvadeAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AssaultAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ParryAid"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ModifyStunStateAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "EvadeAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AssaultAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ParryAid"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Target",
+        "TargetState": "Break"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AttackBuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "EvadeAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AssaultAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ParryAid"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackBuffModifier": {
+      "Duration": 2,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "CommonAttackMaterial",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Attack_RimGlow_01"
+        }
+      ],
+      "Properties": {
+        "Actor_BaseAttackRatio": 0.5
+      }
+    },
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true,
+        "OverrideAttackHitForwardType": "Push"
+      },
+      "Duration": -1
+    }
+  }
+}

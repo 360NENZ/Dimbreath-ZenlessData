@@ -1,0 +1,110 @@
+{
+  "AbilityName": "ZhuYuan_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Stun": {
+      "Value": 0.2
+    },
+    "AS_AddedDamageRatio_UniqueSkill": {
+      "Value": 0.2
+    },
+    "AS_InitBulletCount": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": "%AS_InitBulletCount",
+        "CustomPropertyType": "ShotgunBullet",
+        "IsUsePercentage": false,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_04",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_05",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_06",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_07",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_08",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_09",
+              "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_01",
+              "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_02",
+              "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_03",
+              "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_01",
+              "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_02",
+              "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_UniqueSkill",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_01_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_02_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_04",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_05",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_06",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_07",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_08",
+              "ZhuYuan_Shotgun_03_AttackProperty_Enhanced_09",
+              "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_01",
+              "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_02",
+              "ZhuYuan_Shotgun_04_AttackProperty_Enhanced_03",
+              "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_01",
+              "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_02",
+              "ZhuYuan_Shotgun_AttackProperty_EnhancedCounter_03",
+              "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_01",
+              "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_02",
+              "ZhuYuan_Shotgun_Rush_AttackProperty_EnhancedBullet_03"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_Stun",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Card_Ashes_2000103",
+  "AbilitySpecials": {
+    "AS_PenRatio": {
+      "Value": 0.3
+    },
+    "HpPercentage": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Greater",
+            "CountModifierType": "GlobalAbility",
+            "ModifierName": "AshesModifier_01",
+            "StackCount": 0,
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_PenRatio",
+        "PropertyValue": "%AS_PenRatio",
+        "Target": "Target"
+      }
+    ]
+  }
+}

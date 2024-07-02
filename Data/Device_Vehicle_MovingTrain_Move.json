@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Device_Vehicle_MovingTrain_Move",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 3
+    },
+    "EndType": {
+      "Value": 0
+    },
+    "MoveType": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "StartMoveModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": "%MoveType",
+          "ParamName": "Int_MoveType",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsMoving",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "StopMoveModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": "%EndType",
+          "ParamName": "Int_EndType",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsMoving",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "StartMoveModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "StartMoveModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "StopMoveModifier",
+      "Target": "Self"
+    }
+  ]
+}

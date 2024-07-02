@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Device_Prop_InOutBattle_Message_Immediately",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_IsInBattleArea",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": true,
+            "Target": "LocalAvatar"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Bool_IsInBattleArea",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": false,
+            "Target": "LocalAvatar"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

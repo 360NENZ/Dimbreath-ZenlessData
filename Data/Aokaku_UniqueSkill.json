@@ -1,0 +1,311 @@
+{
+  "AbilityName": "Aokaku_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio_Ice": {
+      "Value": 0.12
+    },
+    "AS_AtkIncreaseValue_BaseMax": {
+      "Value": 3
+    },
+    "AS_FlagAtkBuffRatio": {
+      "Value": 0.25
+    },
+    "AS_FlagBuffDuration": {
+      "Value": 10
+    },
+    "AtkIncreaseValue_Base": {
+      "Value": 0
+    },
+    "AtkIncreaseValue_Extra": {
+      "Value": 0
+    },
+    "AtkIncreaseValue_Total": {
+      "Value": 0
+    },
+    "FlagBuffDuration_Added_Talent01": {
+      "Value": 0.0
+    },
+    "FlagBuffDuration_Real": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 1,
+        "CustomPropertyType": "UnlockUniqueSkill",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AokakuSwitchBuffModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AokakuUniqueModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_FlagAtkBuffBase",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_FlagAtk_BuffIcon",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_FlagAtkBuffExtra",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "Modifier_FlagAtkBuffExtra"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Modifier_FlagAtkBuffBase",
+          "Target": "Caster"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Modifier_FlagAtk_BuffIcon",
+          "Target": "Caster"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Modifier_FlagAtkBuffExtra",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "AokakuUniqueModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnSwitchInBegin": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AokakuSwitchBuffModifier",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAidAttackType",
+                  "AidAttackType": "CommonAid"
+                },
+                {
+                  "$type": "ByAvatarSwitchType",
+                  "SwitchType": "QTE",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "AokakuAidFlag"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_FlagAtkBuffBase": {
+      "Duration": "%FlagBuffDuration_Real",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackDelta": "%AtkIncreaseValue_Base"
+      }
+    },
+    "Modifier_FlagAtkBuffExtra": {
+      "Duration": "%FlagBuffDuration_Real",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackDelta": "%AtkIncreaseValue_Extra"
+      }
+    },
+    "Modifier_FlagAtkBuffIceExtra": {
+      "Duration": "%FlagBuffDuration_Real",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio_Ice": "%AS_Actor_AddedDamageRatio_Ice"
+      }
+    },
+    "Modifier_FlagAtkBuffIceExtra_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000022,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%FlagBuffDuration_Real",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace"
+    },
+    "Modifier_FlagAtk_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000021,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%FlagBuffDuration_Real",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AokakuUniqueModifier",
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "DoRefresh": false,
+      "Expression": "specials(AS_FlagBuffDuration)+specials(FlagBuffDuration_Added_Talent01)",
+      "ParamName": "FlagBuffDuration_Real",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "DoRefresh": false,
+      "Expression": "property(Attack)*specials(AS_FlagAtkBuffRatio)",
+      "ParamName": "AtkIncreaseValue_Base",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "DoRefresh": false,
+      "ModifyFunction": "Replace",
+      "Param": "%AS_AtkIncreaseValue_BaseMax",
+      "ParamName": "AtkIncreaseValue_Base",
+      "ParamType": "Float",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": "%AS_AtkIncreaseValue_BaseMax",
+          "ParamName": "AtkIncreaseValue_Base",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "DoRefresh": false,
+      "Expression": "specials(AtkIncreaseValue_Base)",
+      "ParamName": "AtkIncreaseValue_Extra",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "DoRefresh": false,
+      "Expression": "specials(AtkIncreaseValue_Base)",
+      "ParamName": "AtkIncreaseValue_Total",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_FlagAtkBuffBase",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_FlagAtk_BuffIcon",
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "DoRefresh": false,
+      "Expression": "specials(AtkIncreaseValue_Base)+specials(AtkIncreaseValue_Extra)",
+      "ParamName": "AtkIncreaseValue_Total",
+      "Predicates": [
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "GreaterEqual",
+          "CustomNumerator": "RedLight",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 3
+        }
+      ],
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_FlagAtkBuffExtra",
+      "Predicates": [
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "GreaterEqual",
+          "CustomNumerator": "RedLight",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 3
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_FlagAtkBuffIceExtra",
+      "Predicates": [
+        {
+          "$type": "ByMathSkillSuccess"
+        },
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "GreaterEqual",
+          "CustomNumerator": "RedLight",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 3
+        }
+      ],
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_FlagAtkBuffIceExtra_BuffIcon",
+      "Predicates": [
+        {
+          "$type": "ByMathSkillSuccess"
+        },
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "GreaterEqual",
+          "CustomNumerator": "RedLight",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 3
+        }
+      ],
+      "Target": "TeamAvatars"
+    }
+  ]
+}

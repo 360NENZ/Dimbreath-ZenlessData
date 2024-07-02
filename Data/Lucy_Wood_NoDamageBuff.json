@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Lucy_Wood_NoDamageBuff",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NoDamageModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "NoDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_NoDamage": 1
+      }
+    }
+  }
+}

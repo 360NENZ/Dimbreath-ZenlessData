@@ -1,0 +1,10 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "plugin_deadEndButcher",
+  "Plugin": [
+    {
+      "$type": "CChessboardAtmosphere",
+      "key": "Chapter01_Metro_DeadEndButcher"
+    }
+  ]
+}

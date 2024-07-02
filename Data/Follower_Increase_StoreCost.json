@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Follower_Increase_StoreCost",
+  "AbilitySpecials": {
+    "AddedAbilityShopDiscount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "AbilityShopDiscount": "%AddedAbilityShopDiscount"
+    }
+  }
+}

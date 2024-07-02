@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Ability_Card_Blade_2",
+  "AbilitySpecials": {
+    "AddDamagePercent": {
+      "Op": "Add",
+      "OpValue": 0.1,
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAreaEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddDamageModifier_Blade2",
+        "Predicates": [
+          {
+            "$type": "ByLevelAreaExploreState",
+            "LevelAreaState": "UnExplored",
+            "LevelAreaType": "Room",
+            "Target": "Caster"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddDamageModifier_Blade2": {
+      "Duration": 10.0,
+      "ModifierMixins": [
+        {
+          "$type": "ModifyDamageMixin",
+          "Properties": {
+            "Actor_AddedDamageRatio": "%AddDamagePercent"
+          }
+        }
+      ],
+      "ModifierStacking": "Refresh"
+    }
+  }
+}

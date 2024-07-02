@@ -1,0 +1,32 @@
+{
+  "AbilityName": "GoldenBomb_FadeOut",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "InvisibleModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "GlodenBomb",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_GoldenBomb_Dither_Fade",
+          "Tag": "Monster_GoldenBomb_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": []
+}

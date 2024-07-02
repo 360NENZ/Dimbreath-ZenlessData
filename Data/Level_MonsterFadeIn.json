@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Level_MonsterFadeIn",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": 1.0,
+    "IgnoreTimeScale": false,
+    "ModifierStacking": "MultipleRefresh",
+    "OnAdded": [
+      {
+        "$type": "InterruptDitherFadeAction",
+        "Tag": "Level_MonsterFade",
+        "Target": "Self"
+      },
+      {
+        "$type": "PopEntityVisibleWithTagAction",
+        "Tag": "Level_MonsterFade"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "Level_MonsterFadeIn",
+        "Target": "Self"
+      }
+    ]
+  }
+}

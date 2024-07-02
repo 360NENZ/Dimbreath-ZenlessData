@@ -1,0 +1,15 @@
+{
+  "AbilityName": "NPC_LevelUp_01",
+  "DefaultModifier": {
+    "OnNPCTalk": [],
+    "OnNPCTalkOver": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_SelfDestruction",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Card_DailyUse_1000913",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AvatarDamageUp",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "AvatarDamageUp"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvatarDamageUp": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

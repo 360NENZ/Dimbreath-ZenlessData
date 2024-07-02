@@ -1,0 +1,123 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 1.2,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.6
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.5,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Monster_RangeSoldier_ATK01_Attackproperty",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Bullet_Hit"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 0.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 80
+        },
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_S"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_S_Ground"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "FollowerDefault_BulletType_01",
+  "AbilityStacking": "Unique"
+}

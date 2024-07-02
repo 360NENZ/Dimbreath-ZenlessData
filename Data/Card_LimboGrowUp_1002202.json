@@ -1,0 +1,115 @@
+{
+  "AbilityName": "Card_LimboGrowUp_1002202",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Battle": {
+      "Value": 0.3
+    },
+    "AS_AddedDamageRatio_Current": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_PerCount": {
+      "Value": 0.05
+    },
+    "AS_AddedDamageRatio_UpLimit": {
+      "Value": 0.5
+    },
+    "AS_Duration_Battle": {
+      "Value": 5
+    },
+    "BOOSTOn": {
+      "Value": 0
+    },
+    "CoinCount_Reduce": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(CoinCount_Reduce)*specials(AS_AddedDamageRatio_PerCount)*0.01",
+        "ParamName": "AS_AddedDamageRatio_Current",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "AS_AddedDamageRatio_UpLimit",
+        "ParamName": "AS_AddedDamageRatio_Current",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": "AS_AddedDamageRatio_UpLimit",
+            "ParamName": "AS_AddedDamageRatio_Current",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_ChessBoard",
+        "Target": "Self"
+      }
+    ],
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_Battle",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 1,
+            "ParamName": "BOOSTOn",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_Battle",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "EvadeAid",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 1,
+            "ParamName": "BOOSTOn",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_Battle": {
+      "Duration": "%AS_Duration_Battle",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_Battle"
+      }
+    },
+    "AddedDamageRatioModifier_ChessBoard": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_Current"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Curse_1100007",
+  "AbilitySpecials": {
+    "SPRatio": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DecreaseSP",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": false,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "DecreaseSP",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutFinish": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DecreaseSP",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DecreaseSP": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothDecreaseSPMixin",
+          "PropertyItem": {
+            "Amount": "%SPRatio",
+            "Percentage": 0
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

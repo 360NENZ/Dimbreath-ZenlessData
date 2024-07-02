@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Affix_CannonDamageUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Cannon"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

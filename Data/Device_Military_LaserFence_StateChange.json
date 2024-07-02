@@ -1,0 +1,200 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Generate_Up",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Open_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Holding",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Open_All_Collider",
+            "Mute_LaserBlock"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "CloseDown",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Open_All_Collider"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "CloseDown",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Close_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.31
+        },
+        {
+          "AnimatorStateName": "Idle_Alert",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Close_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Idle_Unactive",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Close_All_Collider"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Military_LaserFence_StateChange",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Close_All_Collider": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "HullColliderEnable": false,
+          "Tag": "LaserFence_HullCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHitColliderEnable",
+          "HitColliderEnable": false,
+          "Tag": "LaserFence_HitCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushWallColliderEnable",
+          "Tag": "LaserFence_WallCollider",
+          "Target": "Self",
+          "WallColliderEnable": false
+        },
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "StageCollider",
+            "NavMeshObstacle_Self"
+          ],
+          "IsActive": false,
+          "Tag": "LaserFenceNavmesh_Control"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "LaserFence_HullCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "LaserFence_HitCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopWallColliderEnable",
+          "Tag": "LaserFence_WallCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopPointGameObjectControlAction",
+          "Tag": "LaserFenceNavmesh_Control"
+        }
+      ]
+    },
+    "Mute_LaserBlock": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "MuteLaserHitBlockAction",
+          "Mute": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "MuteLaserHitBlockAction",
+          "Mute": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Open_All_Collider": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "HullColliderEnable": true,
+          "Tag": "LaserFence_HullCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHitColliderEnable",
+          "HitColliderEnable": true,
+          "Tag": "LaserFence_HitCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushWallColliderEnable",
+          "Tag": "LaserFence_WallCollider",
+          "Target": "Self",
+          "WallColliderEnable": true
+        },
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "StageCollider",
+            "NavMeshObstacle_Self"
+          ],
+          "IsActive": true,
+          "Tag": "LaserFenceNavmesh_Control"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "LaserFence_HullCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "LaserFence_HitCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopWallColliderEnable",
+          "Tag": "LaserFence_WallCollider",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopPointGameObjectControlAction",
+          "Tag": "LaserFenceNavmesh_Control"
+        }
+      ]
+    }
+  }
+}

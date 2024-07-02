@@ -1,0 +1,61 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Sports_2000800",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Sports_2000800",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": 1,
+                  "ParamName": "AS_HasCard2010802",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Sports_2000800",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_AddedDamageRatio",
+                  "ParamName": "AS_AddedExtraDamageRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Sports_2010802",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Sports_2000800",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  }
+}

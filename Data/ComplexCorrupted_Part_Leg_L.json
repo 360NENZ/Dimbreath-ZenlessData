@@ -1,0 +1,655 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_Foot_L"
+      ],
+      "CanHitAfterDestroyed": true,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxPartHP": "%MaxPartHP",
+      "OnPartDestroy": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "ParamName": "Int_HitPartIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_OnPartDestroyed",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_PartDestroyed_Leg_L",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_Part_Leg_L_P2_SFX",
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_IsPhase2",
+              "ParamType": 2
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_Part_Leg_L_Destroyed",
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Monster_ComplexCorrupted_PartDestroyed_Leg_Attackproperty_01",
+          "AttachPoint": "Skn_L_Leg_B03",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_PartDestroy_StunPercentage)*property(MaxStun)",
+          "ParamName": "StunRecoverAmount",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "Bool_IsCurseNoStun",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ]
+            }
+          ],
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_PartDestroy_StunPercentage_Curse_1100021)*property(MaxStun)",
+          "ParamName": "StunRecoverAmount",
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Equal",
+              "CustomNumerator": "Bool_IsCurseNoStun",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 1
+            }
+          ],
+          "ValueType": "Float"
+        },
+        {
+          "$type": "RecoverStunAction",
+          "Amount": "%StunRecoverAmount",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "Int_PartDestroyed",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(MaxHP)*specials(AS_RecoverPartHP_Ratio)",
+          "ParamName": "RecoverPartHP",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "ComplexCorrupted_Leg_FL",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_FL",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "ComplexCorrupted_Leg_FR",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_FR",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "ComplexCorrupted_Leg_BL",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_BL",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "ComplexCorrupted_Leg_BR",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_BR",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "ComplexCorrupted_Leg_R",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_R",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Phase2Recover",
+          "Target": "Self"
+        }
+      ],
+      "OnPartHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Int_HitPartIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Trigger_OnPartHit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnPartReactivated": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_PartDestroyed_Leg_L",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_Part_Leg_L_Destroyed",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": -1,
+          "CustomPropertyType": "Int_PartDestroyed",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%InitPartHP",
+      "PartName": "ComplexCorrupted_Leg_L"
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Part_Leg_L",
+  "AbilitySpecials": {
+    "AS_InitPartHP_Ratio": {
+      "Value": 0.1
+    },
+    "AS_MaxPartHP_Ratio": {
+      "Value": 0.1
+    },
+    "AS_PartDestroy_StunPercentage": {
+      "Value": 0.5
+    },
+    "AS_PartDestroy_StunPercentage_Curse_1100021": {
+      "Value": 0.5
+    },
+    "AS_RecoverPartHP_Ratio": {
+      "Value": 0.1
+    },
+    "HpReduceAmount": {
+      "Value": 1
+    },
+    "InitPartHP": {
+      "Value": 1
+    },
+    "MaxPartHP": {
+      "Value": 1
+    },
+    "RecoverPartHP": {
+      "Value": 1
+    },
+    "StunRecoverAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ComplexCorrupted_Part_Leg_L_Destroyed": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B03",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_LegBreak_Lightning_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_LegBreak_Lightning_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B04",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_LegBreak_Lightning_03",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_LegBreak_Dust_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B03",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_LegBreak_Dust_02",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B04",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Leg_L2"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Body_Break_SecondaryEmission_Leg_L",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Body_Break_SecondaryEmission_Leg_L"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Leg_L2"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Body_Break_MainMaps_Leg_L",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Body_Break_MainMaps_Leg_L"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_ComplexCorrupted_MA_Body_Break_MainMaps_Leg_L",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ComplexCorrupted_Part_Leg_L_P2_SFX": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B008",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_Body_Lightning_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_Body_Lightning_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_L_Leg_B04",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_Body_Lightning_03",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Leg_L2"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Body_Loop_P2_SecondaryEmission_Leg_L",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Body_Loop_P2_SecondaryEmission_Leg_L"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_ComplexCorrupted_MA_Body_Loop_P2_SecondaryEmission_Leg_L",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_MaxPartHP_Ratio)",
+      "ParamName": "MaxPartHP",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_InitPartHP_Ratio)",
+      "ParamName": "InitPartHP",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ComplexCorrupted_Part_Leg_L_P2_SFX",
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyPartParamAction",
+      "Amount": "%MaxPartHP",
+      "ModifyFunction": "Replace",
+      "ParamType": "MaxPartHP",
+      "PartName": "ComplexCorrupted_Leg_L",
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyPartParamAction",
+      "Amount": "%InitPartHP",
+      "ModifyFunction": "Replace",
+      "ParamType": "PartHP",
+      "PartName": "ComplexCorrupted_Leg_L",
+      "Target": "Self"
+    }
+  ],
+  "OnAdded": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_MaxPartHP_Ratio)",
+      "MpExecMode": "MpTotallyLocal",
+      "ParamName": "MaxPartHP",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_InitPartHP_Ratio)",
+      "MpExecMode": "MpTotallyLocal",
+      "ParamName": "InitPartHP",
+      "ValueType": "Float"
+    }
+  ]
+}

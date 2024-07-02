@@ -1,0 +1,108 @@
+{
+  "AbilityName": "TarasqueMixer_TeamSkill",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AlliedEffect_Modifier": {
+      "Duration": 2,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_SecondaryEmission"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Buff_Hit"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AlliedEnhance_Modifier": {
+      "Duration": 2,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": 2,
+          "Tag": "ResistBreakLevelUp",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_TeamSkill",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "ActionMode",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "ResistBreakLevelUp",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "AlliedEnhance_Modifier",
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "TarasqueMixerLeader"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "AlliedEffect_Modifier",
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "TarasqueMixerLeader"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_Blunt_1000707",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 99
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "NormalQTE"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

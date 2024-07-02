@@ -1,0 +1,13 @@
+{
+  "AbilityName": "Level_NoviceGuide_10",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_Avatar_LevelUp_01",
+        "Target": "Self"
+      }
+    ]
+  }
+}

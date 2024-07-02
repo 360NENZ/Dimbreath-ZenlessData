@@ -1,0 +1,444 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Parry_L_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Parry_L_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Parry_H",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "ParamName": "isCounter",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Parry_H",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 0,
+              "ParamName": "AS_ParryPoint",
+              "ParamType": "Integer"
+            }
+          ],
+          "AnimatorStateName": "Parry_H",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "FrenziedManiac_ParryManager",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio_Parry": {
+      "Value": -0.95
+    },
+    "AS_ParryPoint": {
+      "Value": 0
+    },
+    "AS_ParryPointMax": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LightParryListenerModifier"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HeavyParryListenerModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HeavyParryListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HeavyParryModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByHeavyParry"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HeavyParryModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "ParamName": "Int_FrenziedParryIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_FrenziedParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Hit_Shake",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsFrenziedParrying",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Target"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_FrenziedParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsFrenziedParrying",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightParryListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LightParryModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLightParry"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightParryModifier": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.5,
+          "OnFailure": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_FrenziedParryIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_FrenziedParryIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_FrenziedParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsFrenziedParrying",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isParrying",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_ParryPoint",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LightParryListenerModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LightParryListenerModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_FrenziedParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Hit_Shake",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsFrenziedParrying",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%AS_DamageTakeRatio_Parry",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByHeavyParry": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_ParryPointMax",
+              "ParamName": "AS_ParryPoint",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByCauseStun",
+              "IsCauseStun": true
+            }
+          ]
+        },
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "CanParry"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAIParam",
+          "CompareType": "Equal",
+          "IntParamValue": 0,
+          "ParamName": "ActionMode",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByLightParry": {
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Less",
+          "Param": "%AS_ParryPointMax",
+          "ParamName": "AS_ParryPoint",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByCauseStun",
+          "IsCauseStun": false
+        },
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "CanParry"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAIParam",
+          "CompareType": "Equal",
+          "IntParamValue": 0,
+          "ParamName": "ActionMode",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

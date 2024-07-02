@@ -1,0 +1,76 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LockLifePropertyMixin",
+      "OnLifeLockFirstTriggeredActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_LeaveBattle",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushInvincibleAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsSpecialDeath",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "PerformBeHitEffect": true,
+      "RatioLockList": [
+        {
+          "LockType": "Total",
+          "LockValue": 0.01
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "LDListenEntityAction",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsSpecialDeath",
+                  "ParamType": 2
+                }
+              ],
+              "TargetKey": "ListenLampasGreyDie"
+            }
+          ],
+          "AnimatorStateName": "Teleport_FadeOut",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 80,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_LevelSpecialDeath",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "SpecialDeath"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  }
+}

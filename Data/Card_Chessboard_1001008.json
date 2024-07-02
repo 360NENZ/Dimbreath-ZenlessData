@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Card_Chessboard_1001008",
+  "AbilitySpecials": {
+    "AddedDamage": {
+      "Value": 0
+    },
+    "AddedDamageRatio": {
+      "Value": 0.3
+    },
+    "CurCoin": {
+      "Value": 0
+    },
+    "Gold": {
+      "Value": 250
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "item(1)",
+        "ParamName": "CurCoin",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AddedDamageRatio)",
+        "ParamName": "AddedDamage",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Less",
+            "Param": "%Gold",
+            "ParamName": "CurCoin",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamage",
+        "Target": "Self"
+      }
+    ]
+  }
+}

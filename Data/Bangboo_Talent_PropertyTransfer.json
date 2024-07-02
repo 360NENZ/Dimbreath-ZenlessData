@@ -1,0 +1,73 @@
+{
+  "AbilityName": "Bangboo_Talent_PropertyTransfer",
+  "AbilitySpecials": {
+    "AS_AtkPercentage": {
+      "Value": 0.1
+    },
+    "AS_BaseAttackDelta": {
+      "Value": 0
+    },
+    "AS_DefPercentage": {
+      "Value": 0.2
+    },
+    "AS_DefenceDelta": {
+      "Value": 0
+    },
+    "AS_HpPercentage": {
+      "Value": 0.2
+    },
+    "AS_MaxHPDelta": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_MaxHPDelta",
+        "Percentage": "%AS_HpPercentage",
+        "PropertyType": "MaxHP",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_BaseAttackDelta",
+        "Percentage": "%AS_AtkPercentage",
+        "PropertyType": "Attack",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_DefenceDelta",
+        "Percentage": "%AS_DefPercentage",
+        "PropertyType": "Defence",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PropertyBuff",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "SendCustomEvent",
+        "EventKey": "BangbooPropertyTransferAdded",
+        "IsGlobal": true
+      }
+    ]
+  },
+  "Modifiers": {
+    "PropertyBuff": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BaseAttackDelta": "%AS_BaseAttackDelta",
+        "Actor_DefenceDelta": "%AS_DefenceDelta",
+        "Actor_MaxHPDelta": "%AS_MaxHPDelta"
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "AbilityName": "GamePlayGDRun_Cyclops_ChargeShot_Interval",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SkillTrigger_Delay",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SkillTrigger_Delay": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Trigger_Skill02",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Trigger_Skill02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Trigger_Skill02": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SkillTrigger_Delay",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

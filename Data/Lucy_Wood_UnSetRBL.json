@@ -1,0 +1,11 @@
+{
+  "AbilityName": "Lucy_Wood_UnSetRBL",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "UnsetRBLAction",
+      "Tag": "Lucy_Wood_RBL",
+      "Target": "Self"
+    }
+  ]
+}

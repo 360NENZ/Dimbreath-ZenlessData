@@ -1,0 +1,87 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "Device_Prop_Console_01",
+      "InteractTag": "Device_Prop_Console_01",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "Device_Prop_Console_01_OnInteract"
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    }
+  ],
+  "AbilityName": "Device_Prop_Console_01_Interact",
+  "AbilitySpecials": {
+    "OpenStatus": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "0to1Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_SwitchGear",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Switch",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "0to2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_SwitchGear",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Switch",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "1to2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_SwitchGear",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Switch",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

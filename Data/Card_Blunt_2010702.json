@@ -1,0 +1,78 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Blunt_2000700",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Blunt_2000700",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%New_AS_MaxStack",
+                  "ParamName": "AS_UseNewMaxStack",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Blunt_2010702",
+  "AbilitySpecials": {
+    "New_AS_MaxStack": {
+      "Value": 8
+    },
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunDMGTakeRatioUp_Card_2010702",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunDMGTakeRatioUp_Card_2010702",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunDMGTakeRatioUp_Card_2010702": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio"
+      }
+    }
+  }
+}

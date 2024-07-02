@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Talent_10101_AddedDamageRatio_Elec01",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.04
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Elec"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

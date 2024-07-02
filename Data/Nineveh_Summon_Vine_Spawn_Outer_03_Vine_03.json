@@ -1,0 +1,88 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "NormalBottom"
+          ],
+          "Target": "Other"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "VineExistModifier",
+          "Target": "Other"
+        },
+        {
+          "$type": "SetHintArrowAction",
+          "Enable": false,
+          "Target": "Other"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 900011653,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "OuterVineSpawnPoint_03_03",
+          "BackupNodePoint": "MonsterPos_A1",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true
+        }
+      },
+      "SummonPositionCorrection": false,
+      "SummonTag": [
+        "NinevehVine_Outer_03"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Nineveh_Summon_Vine_Spawn_Outer_03_Vine_03",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "VineExistModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "CustomKey": "Monster_Nineveh",
+          "Params": [
+            {
+              "AbilityName": "Nineveh_Summon_Vine_Spawn_Outer_03",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": -1,
+                  "ParamName": "KilledRemainCounting_Outer_03",
+                  "ParamType": "Integer"
+                }
+              ]
+            }
+          ],
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

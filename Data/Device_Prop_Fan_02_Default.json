@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Device_Prop_Fan_02_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_IsRotating",
+        "ParamType": 2,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 1,
+        "ParamName": "Int_RotateType",
+        "ParamType": 3,
+        "Target": "Self"
+      }
+    ]
+  }
+}

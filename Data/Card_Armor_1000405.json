@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_Armor_1000405",
+  "AbilitySpecials": {
+    "ShieldAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBeDamageCalculated": [
+      {
+        "$type": "ReplaceDamageByHpAction",
+        "Amount": 0,
+        "HpProperty": "MaxHP",
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "ShieldAmount",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnBeingHitPre": [
+      {
+        "$type": "SetAbilitySpecialsByHpShiledValueAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "ShieldAmount",
+        "ParamType": "Integer",
+        "Target": "Self",
+        "ValueType": "CurValue"
+      }
+    ]
+  }
+}

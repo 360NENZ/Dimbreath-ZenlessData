@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Longinus_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Longinus_Attack_Normal_Enhance_01_AttackProperty_01_01",
+            "Longinus_Attack_Normal_Enhance_01_AttackProperty_01_02",
+            "Longinus_Attack_Normal_Enhance_02_AttackProperty_01_01",
+            "Longinus_Attack_Normal_Enhance_02_AttackProperty_01_02",
+            "Longinus_Attack_Normal_Enhance_03_AttackProperty_01_01",
+            "Longinus_Attack_Normal_Enhance_03_AttackProperty_01_02",
+            "Longinus_Attack_Normal_Enhance_03_AttackProperty_02",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_01_01",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_01_02",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_02_01",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_02_02",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_03_01",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_03_02",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_04_01",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_04_02",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_05_01",
+            "Longinus_Attack_Normal_Enhance_04_AttackProperty_05_02",
+            "Longinus_Attack_Rush_Enhance_AttackProperty_01_01",
+            "Longinus_Attack_Rush_Enhance_AttackProperty_01_02",
+            "Longinus_Attack_Rush_Enhance_AttackProperty_02_01",
+            "Longinus_Attack_Rush_Enhance_AttackProperty_02_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

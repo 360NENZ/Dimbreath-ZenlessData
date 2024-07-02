@@ -1,0 +1,52 @@
+{
+  "AbilityName": "Weapon_Ability_13004",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.2
+    },
+    "AS_Duration": {
+      "Value": 12.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "Counter",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "BeHitAid",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "CommonAid",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "AbilityName": "GoldenBomb_HitTrigger",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": false,
+      "ParamName": "Trigger_Hit",
+      "ParamType": 1,
+      "Target": "Self"
+    }
+  ]
+}

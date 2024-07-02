@@ -1,0 +1,44 @@
+{
+  "AbilityName": "Card_Sports_2000809_Up",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.3
+    },
+    "Duration": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "CreateDodgeDummyAction",
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "Duration": "%Duration",
+        "Height": 1.5,
+        "Radius": 1.5
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Counter"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

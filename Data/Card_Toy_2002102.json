@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_Toy_2002102",
+  "AbilitySpecials": {
+    "AS_BuddyAtkRatio": {
+      "Value": 0
+    },
+    "AS_BuddyNum": {
+      "Value": 0
+    },
+    "AS_Ratio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "(buddycount(fight)+buddycount(support))*specials(AS_Ratio)",
+        "ParamName": "AS_BuddyAtkRatio",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyDMGupByNumModifier_Card_2002102",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyDMGupByNumModifier_Card_2002102": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BuddyAtkRatio"
+      }
+    }
+  }
+}

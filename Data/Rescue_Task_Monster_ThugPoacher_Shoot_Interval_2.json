@@ -1,0 +1,61 @@
+{
+  "AbilityName": "Rescue_Task_Monster_ThugPoacher_Shoot_Interval_2",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Trigger_Skill03_First",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Trigger_Skill03",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Trigger_Skill03": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 5
+    },
+    "Trigger_Skill03_First": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

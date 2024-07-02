@@ -1,0 +1,194 @@
+{
+  "AbilityMixins": [],
+  "AbilityName": "Follower_Default_Ability",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillBtnIndexChange": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "DefaultFollowTypeModifier",
+        "Predicates": [
+          {
+            "$type": "ByFollowerActive",
+            "CompareType": "Equal",
+            "IsActive": true,
+            "Target": "Caster"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DefaultFollowTypeModifier",
+        "Predicates": [
+          {
+            "$type": "ByFollowerActive",
+            "CompareType": "Equal",
+            "IsActive": true,
+            "Target": "Caster"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HideFollowerModifier_1",
+        "Predicates": [
+          {
+            "$type": "ByFollowerActive",
+            "CompareType": "Equal",
+            "IsActive": true,
+            "Target": "Caster"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_Follower_Trans_Start",
+        "Predicates": [
+          {
+            "$type": "ByFollowerActive",
+            "CompareType": "Equal",
+            "IsActive": true,
+            "Target": "Caster"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DefaultFollowTypeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "FollowType": "ModifyPosReferAvatar",
+          "PosLerpRatio": 0.1,
+          "PosOffset": {
+            "x": -0.7,
+            "y": 2.3,
+            "z": -0.6
+          },
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 2,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "FollowType": "ModifyPosReferAvatar",
+          "PosLerpRatio": 0.1,
+          "PosOffset": {
+            "x": 0.7,
+            "y": 2.3,
+            "z": -0.6
+          },
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 3,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "HideFollowerModifier_1": {
+      "Duration": 2.5,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetFollowerInvisibleAction",
+          "IsInvisible": true,
+          "Predicates": [
+            {
+              "$type": "ByFollowerActive",
+              "CompareType": "Equal",
+              "IsActive": true,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Follower_Trans_Start",
+          "Predicates": [
+            {
+              "$type": "ByFollowerActive",
+              "CompareType": "Equal",
+              "IsActive": true,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 2
+    },
+    "HideFollowerModifier_2": {
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetFollowerInvisibleAction",
+          "IsInvisible": true,
+          "Predicates": [
+            {
+              "$type": "ByFollowerActive",
+              "CompareType": "Equal",
+              "IsActive": true,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Follower_Trans_Start",
+          "Predicates": [
+            {
+              "$type": "ByFollowerActive",
+              "CompareType": "Equal",
+              "IsActive": true,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ProcessSkillBtnCtrlModifier": {
+      "Duration": 0.03,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessSkillBtnControlAction",
+          "BtnIndex": "%BtnIndex"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HideFollowerModifier_1"
+        },
+        {
+          "$type": "SetFollowerInvisibleAction",
+          "IsInvisible": false
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Follower_Trans_Start",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ProcessSkillBtnCtrlModifier"
+    }
+  ]
+}

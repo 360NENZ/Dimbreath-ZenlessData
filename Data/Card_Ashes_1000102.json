@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Card_Ashes_1000102",
+  "AbilitySpecials": {
+    "Ratio": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Burn",
+        "Params": [
+          {
+            "Delta": "%Ratio",
+            "Name": "DamagePercentage"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

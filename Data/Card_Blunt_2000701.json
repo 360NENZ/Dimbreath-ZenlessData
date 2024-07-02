@@ -1,0 +1,61 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Blunt_2000700",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Blunt_2000700",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": 1,
+                  "ParamName": "AS_GetCard_2000701",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Blunt_2000700",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_AddedAccumulationRatio",
+                  "ParamName": "AS_AddedAccumulationRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Blunt_2000701",
+  "AbilitySpecials": {
+    "AS_AddedAccumulationRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  }
+}

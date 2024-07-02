@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Card_Sports_1000804",
+  "AbilitySpecials": {
+    "TimeOfDuration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RushAttackToCounterAttack",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RushAttackToCounterAttack": {
+      "Block": 5,
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PerfectEvade",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Evade",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_Sports_1000804",
+          "IsOpenBlock": true,
+          "ModifierName": "RushAttackToCounterAttack",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter",
+              "Target": "LocalAvatar"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

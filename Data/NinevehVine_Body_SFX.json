@@ -1,0 +1,45 @@
+{
+  "AbilityName": "NinevehVine_Body_SFX",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "AttachEffect",
+        "EffectPattern": "Eff_Monster_NinevehVine_Born_04_Ground",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_Zero_Boss_Nineveh"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "NotCounting"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_Zero_Boss_Nineveh"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

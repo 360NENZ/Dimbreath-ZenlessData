@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Card_Ashes_2000109",
+  "AbilitySpecials": {
+    "AS_CritDamageRatio": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FireCritDamageUp",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FireCritDamageUp": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            }
+          ],
+          "PropertyKey": "Actor_CriticalDamageRatioDelta",
+          "PropertyValue": "%AS_CritDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

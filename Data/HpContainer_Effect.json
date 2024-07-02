@@ -1,0 +1,173 @@
+{
+  "AbilityName": "HpContainer_Effect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PlayTextureSheetSequenceAction",
+        "InterruptType": "Interrupt",
+        "IsKeepLastFrame": false,
+        "MeshPath": "Device_Prop_EtherContainer_01",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Small"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self",
+        "TextureSheetKey": "Device_Prop_EtherContainer_01"
+      },
+      {
+        "$type": "PlayTextureSheetSequenceAction",
+        "InterruptType": "Interrupt",
+        "IsKeepLastFrame": false,
+        "MeshPath": "Device_Prop_EtherContainer_02",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Middle"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self",
+        "TextureSheetKey": "Device_Prop_EtherContainer_01"
+      },
+      {
+        "$type": "PlayTextureSheetSequenceAction",
+        "InterruptType": "Interrupt",
+        "IsKeepLastFrame": false,
+        "MeshPath": "Device_Prop_EtherContainer_03",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Big"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self",
+        "TextureSheetKey": "Device_Prop_EtherContainer_01"
+      },
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Root",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "EffectPattern": "Eff_Device_EtherContainer_SpecialIdle_01",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Small"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Root",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "EffectPattern": "Eff_Device_EtherContainer_SpecialIdle_02",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Middle"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Root",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "EffectPattern": "Eff_Device_EtherContainer_SpecialIdle_03",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Big"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

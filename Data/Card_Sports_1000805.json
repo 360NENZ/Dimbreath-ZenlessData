@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_Sports_1000805",
+  "AbilitySpecials": {
+    "BreakStunRatio": {
+      "Value": 100
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Counter"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%BreakStunRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

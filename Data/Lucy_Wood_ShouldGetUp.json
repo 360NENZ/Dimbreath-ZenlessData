@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Lucy_Wood_ShouldGetUp",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": false,
+      "ParamName": "Bool_ShouldGetUp",
+      "ParamType": 2,
+      "Target": "Self"
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByAIParam",
+          "CompareType": "Equal",
+          "IntParamValue": 0,
+          "ParamName": "Int_WoodNum",
+          "Target": "Self"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ShouldGetUp",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAIParam",
+              "BoolParamValue": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_BattleStance",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ShouldGetUp",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAIParam",
+                  "BoolParamValue": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_LucyShow",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAIParam",
+                  "BoolParamValue": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_BattleStance",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

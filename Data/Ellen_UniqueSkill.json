@@ -1,0 +1,81 @@
+{
+  "AbilityName": "Ellen_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_CriticalDamageDelta": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDamageRatioDelta",
+        "PropertyValue": "%AS_CriticalDamageDelta",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Enhance_01_AttackProperty_01",
+                "Ellen_Attack_Normal_Enhance_01_AttackProperty_02",
+                "Ellen_Attack_Normal_Enhance_02_AttackProperty_01",
+                "Ellen_Attack_Normal_Enhance_02_AttackProperty_02",
+                "Ellen_Attack_Normal_Enhance_02_AttackProperty_03",
+                "Ellen_Attack_Normal_Enhance_02_AttackProperty_04",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_01",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_02",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_03",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_04",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_02_01",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_02_02",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_02_03",
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_02_04"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByAnimEventIDs",
+                  "AnimEventIDs": [
+                    "Ellen_Attack_Dash_Cut_01_AttackProperty_01_01",
+                    "Ellen_Attack_Dash_Cut_01_AttackProperty_01_02",
+                    "Ellen_Attack_Dash_Cut_01_AttackProperty_02_02",
+                    "Ellen_Attack_Dash_Cut_01_AttackProperty_03_01",
+                    "Ellen_Attack_Dash_Cut_01_AttackProperty_03_02"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Charge_Lv1"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

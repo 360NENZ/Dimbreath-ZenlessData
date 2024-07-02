@@ -1,0 +1,123 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_5_DefenceStart",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AddDefenceMax"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_5_DefenceLoop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AddDefenceMax"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_6_CounterDefence",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AddDefenceMax"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_6_Counter_Pre",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AddDefenceMax"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Golem_Ability_InDefenceMode_DefUp",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AddDefenceMax": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 180,
+              "AngleMin": 0
+            }
+          ],
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": -999,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Golem_Ability_ShieldBreak_Effect",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "InDefence_Stun_Start",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Golem_Ability_ShieldBreak_Effect": {
+      "Duration": 2,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Golem_Defence_Broken_Spark_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

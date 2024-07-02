@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Card_Trick_2001801_Purified",
+  "AbilitySpecials": {
+    "AS_FeverGetRatio": {
+      "Value": 0.3
+    },
+    "AS_SPGetRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_FeverGetRatio": "%AS_FeverGetRatio",
+      "Actor_SPGetRatio": "%AS_SPGetRatio"
+    }
+  }
+}

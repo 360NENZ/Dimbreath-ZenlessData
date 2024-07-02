@@ -1,0 +1,18 @@
+{
+  "AbilityName": "DEBUFF_HpReduce_Remove",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "DEBUFF_HpReduce_Real",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "DEBUFF_HpReduce_Remove",
+        "Target": "Self"
+      }
+    ]
+  }
+}

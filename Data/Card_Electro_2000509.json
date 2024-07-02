@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Electro_2000509",
+  "AbilitySpecials": {
+    "Duration_Delta": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Electric",
+        "Params": [
+          {
+            "Delta": "%Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      },
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Overload",
+        "Params": [
+          {
+            "Delta": "%Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

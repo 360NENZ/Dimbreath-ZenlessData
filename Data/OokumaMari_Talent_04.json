@@ -1,0 +1,70 @@
+{
+  "AbilityName": "OokumaMari_Talent_04",
+  "AbilitySpecials": {
+    "AS_AddedAttackDelta_01": {
+      "Value": 0
+    },
+    "AS_AddedAttackDelta_02": {
+      "Value": 0
+    },
+    "AS_Magnification": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(Atk_Battle)*specials(AS_Magnification)",
+        "ParamName": "AS_AddedAttackDelta_01",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(Atk_Battle)*specials(AS_Magnification)/3",
+        "ParamName": "AS_AddedAttackDelta_02",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "OokumaMari_Attack_Branch_02_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_Branch_02_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_06"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedAttackDelta",
+        "PropertyValue": "%AS_AddedAttackDelta_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "OokumaMari_Attack_QTE_AttackProperty_02",
+              "OokumaMari_Attack_QTE_AttackProperty_03",
+              "OokumaMari_Attack_QTE_AttackProperty_04",
+              "OokumaMari_Attack_ExQTE_AttackProperty_02",
+              "OokumaMari_Attack_ExQTE_AttackProperty_03",
+              "OokumaMari_Attack_ExQTE_AttackProperty_04"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedAttackDelta",
+        "PropertyValue": "%AS_AddedAttackDelta_02",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AbilityName": "GoldenBomb_DefaultDeathEnd",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "GoldenBomb_DefaultDeathEndModifier": {
+      "Duration": 4.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_DeathEnd",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "GoldenBomb_DefaultDeathEndModifier",
+      "Target": "Self"
+    }
+  ]
+}

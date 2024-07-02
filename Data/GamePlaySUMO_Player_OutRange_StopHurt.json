@@ -1,0 +1,15 @@
+{
+  "AbilityName": "GamePlaySUMO_Player_OutRange_StopHurt",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": 1,
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlaySUMO_Player_OutRange_ContinueHurt",
+        "Target": "Self"
+      }
+    ]
+  }
+}

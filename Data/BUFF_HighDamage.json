@@ -1,0 +1,37 @@
+{
+  "AbilityName": "BUFF_HighDamage",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByCampType",
+              "Camp": "TeamEvil",
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_Hiisazu",
+          "PropertyValue": 2,
+          "Target": "Target"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_EnableLastKill",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "CauseHiisazu"
+    }
+  ]
+}

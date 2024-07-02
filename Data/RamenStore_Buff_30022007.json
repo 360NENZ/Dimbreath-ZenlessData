@@ -1,0 +1,15 @@
+{
+  "AbilityName": "RamenStore_Buff_30022007",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Physics": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio_Physics": "%AS_AddedDamageRatio_Physics"
+    }
+  }
+}

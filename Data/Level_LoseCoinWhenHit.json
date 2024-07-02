@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Level_LoseCoinWhenHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LoseCoinModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LoseCoinModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "LoseCoinEvent"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_GoldenBomb_BeHit_02",
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  }
+}

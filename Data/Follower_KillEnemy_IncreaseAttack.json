@@ -1,0 +1,51 @@
+{
+  "AbilityName": "Follower_KillEnemy_IncreaseAttack",
+  "AbilitySpecials": {
+    "Dynamic_Actor_AddedAttackRatio": {
+      "Value": 0
+    },
+    "Dynamic_Duration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKillOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IncreaseAttackModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAliveState",
+                "AliveState": "ExecuteCore",
+                "Target": "Target"
+              },
+              {
+                "$type": "ByAliveState",
+                "AliveState": "Dead",
+                "Target": "Target"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "IncreaseAttackModifier": {
+      "Duration": "%Dynamic_Duration",
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%Dynamic_Actor_AddedAttackRatio"
+        }
+      ]
+    }
+  }
+}

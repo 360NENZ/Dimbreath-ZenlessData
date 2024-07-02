@@ -1,0 +1,469 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Hit_Break_NovicePerform_01_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_Break_NovicePerform_01_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.444,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_Body_SFX",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Durahan_Demote_SFX",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Demote"
+                ],
+                "Target": "Self"
+              },
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Prologue"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Durahan_Promote_SFX",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Promote"
+                ],
+                "Target": "Self"
+              },
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Boss"
+                ],
+                "Target": "Self"
+              }
+            ]
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Prologue"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChaosModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Chaos"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnBuffRemoved": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ChaosModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Chaos"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChaosModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ether_Core",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Buff_Chaos_Head_Hit",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Durahan_Demote_SFX": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ether_Core",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Common_Ether_Demote_HeadPoint_01",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "BornTransform"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Durahan_Promote_SFX": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ether_Core",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Common_Ether_Promote_HeadPoint_01",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "BornTransform"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HideEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Durahan_Demote_SFX",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Demote"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Prologue"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Durahan_Promote_SFX",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Promote"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Boss"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Prologue"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Durahan_Demote_SFX",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Demote"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Prologue"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Durahan_Promote_SFX",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Promote"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Boss"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Prologue"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "Durahan_Demote_SFX",
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Demote"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Prologue"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "Durahan_Promote_SFX",
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Promote"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Boss"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Prologue"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

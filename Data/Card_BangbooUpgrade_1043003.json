@@ -1,0 +1,72 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Bangboo_Exploreboo_Inspire",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Exploreboo_Inspire",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_RecoverRatio",
+                  "ParamName": "AS_RecoverRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Exploreboo_Inspire",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_HpRatio",
+                  "ParamName": "AS_HpRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Exploreboo_Inspire",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_SpRecover_Delta",
+                  "ParamName": "AS_SpRecover_Delta",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_BangbooUpgrade_1043003",
+  "AbilitySpecials": {
+    "AS_HpRatio": {
+      "Value": 0.5
+    },
+    "AS_RecoverRatio": {
+      "Value": 0.5
+    },
+    "AS_SpRecover_Delta": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique"
+}

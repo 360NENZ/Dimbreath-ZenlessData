@@ -1,0 +1,124 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_01",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_01_B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_02",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_02",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_02_B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_03",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_03",
+              "Target": "Custom"
+            },
+            {
+              "$type": "LDListenEntityAction",
+              "TargetKey": "LampasBlackVeil_CoAttack_03_FairyNote"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_04",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_04",
+              "Target": "Custom"
+            },
+            {
+              "$type": "LDListenEntityAction",
+              "TargetKey": "LampasBlackVeil_CoAttack_04_FairyNote"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_Opening",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "StartedSkillName": "LampasBlackVeil_CoAttack_Opening",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_Opening_B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_SkillStartEvent",
+  "AbilityStacking": "Unique"
+}

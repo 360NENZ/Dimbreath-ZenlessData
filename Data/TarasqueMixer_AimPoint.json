@@ -1,0 +1,52 @@
+{
+  "AbilityName": "TarasqueMixer_AimPoint",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AttachPointFollowModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttachPointFollowModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "AimPoint",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "LaserPoint_Start",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

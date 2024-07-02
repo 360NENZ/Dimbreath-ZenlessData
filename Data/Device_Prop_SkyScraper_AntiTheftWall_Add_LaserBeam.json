@@ -1,0 +1,91 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Active",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Shooting"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_Add_LaserBeam",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Shooting": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP02",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP03",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP04",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP05",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP06",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP02",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP03",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP04",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP05",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Device_Prop_SkyScraper_AntiTheftWall_LaserBeam_LP06",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 2.5,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.5
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_TarasqueMixer_Attack_05_Bullet_01"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "HeadPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 3.5,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.75
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_TarasqueMixer_ATK04_AttackProperty_Bullet",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_TarasqueMixer_Attack_05_boom_01"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": false,
+      "HitStageEffect": {
+        "EffectPattern": "Eff_Monster_TarasqueMixer_Attack_05_boom_02"
+      },
+      "HitStageExplode": false,
+      "HitTargetEffect": {
+        "EffectPattern": "Eff_Monster_TarasqueMixer_Attack_05_boom_01"
+      },
+      "IsCanReflect": true,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementParabola",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0
+        },
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.75,
+        "HitTangentialRatio": 0.75,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 1.5,
+              "z": 0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TimesUpMoveOption": "Remain",
+        "h1": 1.0,
+        "h2": 2.5,
+        "s1": 0.3,
+        "s2": 15,
+        "t1": 0.5,
+        "t2": 0.75
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_TarasqueMixer_ATK4_CamShake_Explode_01",
+          "Target": "Other"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ReflectEffect": {
+        "EffectPattern": "Eff_Monster_Cyclops_Attack_01_Bullet_02_Reflect"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_S_Ground"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "TarasqueMixer_ATK4_Bullet",
+  "AbilityStacking": "Unique"
+}

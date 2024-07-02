@@ -1,0 +1,178 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "RefPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "HeavyParryListenerModifier"
+                }
+              ],
+              "Val": "%AS_CanCounterHPPercentage_1"
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "HeavyParryListenerModifier"
+                }
+              ],
+              "Val": "%AS_CanCounterHPPercentage_2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "WickedWrath_Attack_05_Counter",
+  "AbilitySpecials": {
+    "AS_CanCounterHPPercentage_1": {
+      "Value": 0.7
+    },
+    "AS_CanCounterHPPercentage_2": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HeavyParryListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HeavyParryModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByParry"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HeavyParryModifier": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_WickedParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Hit_Shake",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isCounter",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Target"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_WickedParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HeavyParryListenerModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByParry": {
+      "Predicates": [
+        {
+          "$type": "ByHeavyAttack",
+          "IsHeavyAttack": true
+        },
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Move"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Idle"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "AbilityName": "Level_Buff_DiscBattle_BreakStunUp",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.3
+    },
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_BreakStunRatio",
+        "PropertyValue": "%AS_BreakStunRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DiscBattle_StunDmgTakeModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DiscBattle_StunDmgTakeModifier",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DiscBattle_StunDmgTakeModifier": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio"
+      }
+    }
+  }
+}

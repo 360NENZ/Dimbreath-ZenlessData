@@ -1,0 +1,290 @@
+{
+  "AbilityName": "LightfootRover_ATK7_TargetPointController",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnCustomEventReceived": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "LightfootRover_ATK7_InitTargetPoint"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "InitTargetProtect"
+            ],
+            "OperatorType": "Not"
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByDistance",
+                "CompareTarget": "SelfAttackTarget",
+                "CompareType": "GreaterEqual",
+                "Distance": 6.0,
+                "Target": "Caster"
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_L",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": -0.8,
+                      "y": -1.0,
+                      "z": 0.5
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "Caster"
+                  }
+                }
+              },
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_R",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": 0.8,
+                      "y": -1.0,
+                      "z": 0.5
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "Caster"
+                  }
+                }
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_L",
+                "TargetPosRot": {
+                  "CoordsOption": "Relative",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": -0.8,
+                      "y": 0.0,
+                      "z": -6.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SelfAttackTarget"
+                  }
+                }
+              },
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_R",
+                "TargetPosRot": {
+                  "CoordsOption": "Relative",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": 0.8,
+                      "y": 0.0,
+                      "z": -6.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SelfAttackTarget"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "LightfootRover_ExtraUAV"
+                ]
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_UAV",
+                "CustomKey": "Monster_LightfootRover_UAV_L",
+                "Target": "Custom",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": -1.6,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "AttachPoint": "ATK7_BaseTargetPoint_L",
+                    "IsUseAttachPointPos": true,
+                    "IsUseAttachPointRotation": true,
+                    "OffsetReferTarget": "Caster"
+                  }
+                }
+              },
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_UAV",
+                "CustomKey": "Monster_LightfootRover_UAV_R",
+                "Target": "Custom",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": 1.6,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "AttachPoint": "ATK7_BaseTargetPoint_R",
+                    "OffsetReferTarget": "Caster"
+                  }
+                }
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_UAV",
+                "CustomKey": "Monster_LightfootRover_UAV_L_Extra",
+                "Target": "Custom",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": -1.6,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "AttachPoint": "ATK7_BaseTargetPoint_L",
+                    "IsUseAttachPointPos": true,
+                    "IsUseAttachPointRotation": true,
+                    "OffsetReferTarget": "Caster"
+                  }
+                }
+              },
+              {
+                "$type": "SetAttachPointPosRotAction",
+                "AttachPointName": "ATK7_BaseTargetPoint_UAV",
+                "CustomKey": "Monster_LightfootRover_UAV_R_Extra",
+                "Target": "Custom",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "PositionOffset": {
+                      "x": 1.6,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "AttachPoint": "ATK7_BaseTargetPoint_R",
+                    "OffsetReferTarget": "Caster"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "$type": "AttachModifier",
+            "ModifierName": "InitTargetProtect"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "LightfootRover_ATK7_TargetPointRelease"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "InitTargetProtect"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "RemoveModifier",
+            "ModifierName": "InitTargetProtect"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "InitTargetProtect": {
+      "Duration": 5,
+      "IsUnique": true
+    }
+  },
+  "OnAdded": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK7_BaseTargetPoint_L",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK7_BaseTargetPoint_R",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK7_ActualTargetPoint_L",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK7_ActualTargetPoint_R",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      }
+    }
+  ]
+}

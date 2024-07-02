@@ -1,0 +1,283 @@
+{
+  "AbilityName": "HeavyStriker_Attack_4_Boss",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Attack_4_Burst_Ex_Modifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "SetAttachPointPosRotAction",
+              "AttachPointName": "ATK4_BurstPoint_1",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "PositionOffset": {
+                    "x": -3.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "ATK4_BurstPoint_1",
+                  "IsUseAttachPointPos": true,
+                  "OffsetReferTarget": "Caster"
+                }
+              }
+            },
+            {
+              "$type": "SetAttachPointPosRotAction",
+              "AttachPointName": "ATK4_BurstPoint_2",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "PositionOffset": {
+                    "x": -1.5,
+                    "y": 0.0,
+                    "z": 2.6
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "ATK4_BurstPoint_2",
+                  "IsUseAttachPointPos": true,
+                  "OffsetReferTarget": "Caster"
+                }
+              }
+            },
+            {
+              "$type": "SetAttachPointPosRotAction",
+              "AttachPointName": "ATK4_BurstPoint_3",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "PositionOffset": {
+                    "x": 1.5,
+                    "y": 0.0,
+                    "z": 2.6
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "ATK4_BurstPoint_3",
+                  "IsUseAttachPointPos": true,
+                  "OffsetReferTarget": "Caster"
+                }
+              }
+            },
+            {
+              "$type": "SetAttachPointPosRotAction",
+              "AttachPointName": "ATK4_BurstPoint_4",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "PositionOffset": {
+                    "x": 3.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "ATK4_BurstPoint_4",
+                  "IsUseAttachPointPos": true,
+                  "OffsetReferTarget": "Caster"
+                }
+              }
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "HeavyStriker_Attack_4_Burst_Ex",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_BurstPoint",
+                  "Value": "ATK4_BurstPoint_1",
+                  "ValueType": "String"
+                }
+              ]
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "HeavyStriker_Attack_4_Burst_Ex",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_BurstPoint",
+                  "Value": "ATK4_BurstPoint_2",
+                  "ValueType": "String"
+                }
+              ]
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "HeavyStriker_Attack_4_Burst_Ex",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_BurstPoint",
+                  "Value": "ATK4_BurstPoint_3",
+                  "ValueType": "String"
+                }
+              ]
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "HeavyStriker_Attack_4_Burst_Ex",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_BurstPoint",
+                  "Value": "ATK4_BurstPoint_4",
+                  "ValueType": "String"
+                }
+              ]
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Attack_4_Burst_Ex_Modifier",
+              "Predicates": [
+                {
+                  "$type": "ByModifierStackCount",
+                  "CompareType": "Less",
+                  "ModifierName": "Attack_4_Burst_Ex_Modifier",
+                  "StackCount": 3
+                }
+              ],
+              "StackCount": 1
+            }
+          ]
+        }
+      ],
+      "Duration": 1,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK4_BurstPoint_1",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": -90.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_Leg_L_05",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK4_BurstPoint_2",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": -90.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_Leg_L_05",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK4_BurstPoint_3",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": -90.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_Leg_L_05",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK4_BurstPoint_4",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": -90.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_Leg_L_05",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Attack_4_Burst_Ex_Modifier",
+      "StackCount": 1
+    }
+  ],
+  "OnAdded": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK4_BurstPoint_1",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK4_BurstPoint_2",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK4_BurstPoint_3",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK4_BurstPoint_4",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Corin_MathSkill",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio_Stun": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_Actor_AddedDamageRatio_Stun",
+        "Target": "Self"
+      }
+    ]
+  }
+}

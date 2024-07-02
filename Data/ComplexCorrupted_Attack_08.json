@@ -1,0 +1,92 @@
+{
+  "AbilityName": "ComplexCorrupted_Attack_08",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_Attack_08_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_08_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_ComplexCorrupted_Attack_08_Attackproperty_HeavyHit",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_Attack_08_HitCount",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_08_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_Attack_08_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_Attack_08_HitCount",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_08_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 5,
+        "Target": "Target"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_08_Attackproperty_Check"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_ComplexCorrupted_Attack_08_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

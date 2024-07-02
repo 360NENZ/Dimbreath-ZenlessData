@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Medical_1000605",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.18
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_MaxHPRatio": "%HpPercentage"
+    }
+  }
+}

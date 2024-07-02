@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Follower_Defence_Increase",
+  "AbilitySpecials": {
+    "Dynamic_Actor_DefenceDelta": {
+      "Value": 0
+    },
+    "Dynamic_Actor_DefenceRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_DefenceDelta": "%Dynamic_Actor_DefenceDelta",
+      "Actor_DefenceRatio": "%Dynamic_Actor_DefenceRatio"
+    }
+  }
+}

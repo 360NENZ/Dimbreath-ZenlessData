@@ -1,0 +1,48 @@
+{
+  "AbilityName": "Card_Gun_2000311",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.5
+    },
+    "CriticalMultiple": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "DoRefresh": true,
+        "ModifyFunction": "Add",
+        "Param": "%CriticalDelta",
+        "ParamName": "CriticalMultiple",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Normal"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "DoRefresh": true,
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "CriticalMultiple",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          }
+        ]
+      }
+    ],
+    "Properties": {
+      "Actor_CriticalDelta": "%CriticalMultiple"
+    }
+  }
+}

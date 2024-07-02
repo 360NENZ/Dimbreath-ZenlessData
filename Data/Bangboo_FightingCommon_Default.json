@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Bangboo_FightingCommon_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NoDamageModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Bangboo"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "NoDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_NoDamage": 1
+      }
+    }
+  }
+}

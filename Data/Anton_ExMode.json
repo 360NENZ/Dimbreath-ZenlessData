@@ -1,0 +1,477 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_01_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.39,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.075,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03_Loop",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.24,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_04_Loop",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_04_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.38,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.33,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Anton_ExMode",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AidAttackTagModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Anton_ExMode"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Anton_ExMode"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ApplyEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ConsumeSPModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "EffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon_1B",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Anton_ExMode_Mod_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon_1B",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Anton_Attack_Branch_02_Drill_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Anton_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Male_Size03_Anton_MA_Attack_Branch_02_Blend_Mat01_OverrideOutline_01",
+          "Target": "Self",
+          "key": "Avatar_Male_Size03_Anton_MA_Attack_Branch_02_Blend_Mat01_OverrideOutline_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Male_Size03_Anton_MA_Attack_Branch_02_Blend_Mat01_OverrideOutline_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ExModeModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Attack_Branch_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ApplyEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Branch_02_Blend",
+              "FrameCountHigh": 15,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": false,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ApplyEffectModifier"
+              ]
+            }
+          ],
+          "IsSeam": false
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ConsumeSPModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AidAttackTagModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "UIModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SPListenrModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Anton_ExMode"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ConsumeSPModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "RemoveEffectModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AidAttackTagModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "UIModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SPListenrModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Anton_ExMode"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "RemoveEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "ExModeModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SPListenrModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "IsUsePercentage": false,
+              "PropertyType": "CurSP",
+              "ReferMaxPropertyType": "MaxSP",
+              "ValueRangeActions": [
+                {
+                  "HighToValueActions": [
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "ExModeModifier",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Val": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "UIModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetUIArrowAction",
+          "IsVisible": false,
+          "position": -1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetUIArrowAction",
+          "IsVisible": true,
+          "position": 40
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ExModeModifier",
+      "Target": "Self"
+    }
+  ]
+}

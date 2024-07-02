@@ -1,0 +1,79 @@
+{
+  "AbilityName": "HeavyStriker_Attack_3_Fire",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HeavyStriker_Attack_3_Fire_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "HeavyStriker_Attack03_Attackproperty",
+              "HeavyStriker_Attack03_Attackproperty_Enhance"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "HeavyStriker_Attack01_Attackproperty_H",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "HeavyStriker_Attack_3_Fire_HitCount",
+            "StackCount": 3,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "HeavyStriker_Attack03_Attackproperty",
+              "HeavyStriker_Attack03_Attackproperty_Enhance"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "HeavyStriker_Attack_3_Fire_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "HeavyStriker_Attack_3_Fire_HitCount",
+            "StackCount": 3,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "HeavyStriker_Attack03_Attackproperty",
+              "HeavyStriker_Attack03_Attackproperty_Enhance"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 3,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HeavyStriker_Attack_3_Fire_HitCount": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

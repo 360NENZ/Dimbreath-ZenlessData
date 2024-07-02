@@ -1,0 +1,74 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CamEndModifer",
+            "QTEEndModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Exploreboo_BangbooQTE_AnimEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CamEndModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "Modifierstacking": "unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Exploreboo_SwitchIn_Attack_CamZoom_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Exploreboo_SwitchIn_Attack_CamZoom_02"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Exploreboo_SwitchIn_Attack_CamStretch_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Exploreboo_SwitchIn_Attack_CamStretch_02"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Exploreboo_SwitchIn_Attack_CameraOverrideTrack_01"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Exploreboo_SwitchIn_Attack_CameraOverrideTrack_02"
+        }
+      ]
+    },
+    "QTEEndModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "Modifierstacking": "unique",
+      "OnRemoved": [
+        {
+          "$type": "BangbooQTEEndAction",
+          "Predicates": [
+            {
+              "$type": "ByCameraFollowed",
+              "IsCameraFollowed": true,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

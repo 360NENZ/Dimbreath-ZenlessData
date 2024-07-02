@@ -1,0 +1,434 @@
+{
+  "AbilityName": "Monster_Common_Death_Effect_End",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BiosDeathEndModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_Death_Explosion_Red_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_Death_Explosion_Red_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_Death_Explosion_Red_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Dust_Red_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Dust_Red_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Dust_Red_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DeathEndEffectModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BiosDeathEndModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Mech"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BiosDeathEndModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Bios"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EtherDeathEndModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Ether"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "EtherDeathEndModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_Death_Explosion_Ether_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_Death_Explosion_Ether_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_Death_Explosion_Ether_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Dust_Ether_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Dust_Ether_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Dust_Ether_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "VRDeathEndModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Explosion_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Explosion_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Explosion_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Dust_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Dust_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Dust_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "DeathEndEffectModifier",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "IsVR"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "VRDeathEndModifier",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "IsVR"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "Predicates": {
+    "ByLarge": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Large",
+                  "CompareType": "GreaterEqual",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "UniqueDeathEff"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DeathEffLarge"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByMiddle": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Middle",
+                  "CompareType": "Equal",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "UniqueDeathEff"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DeathEffMiddle"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BySmall": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Small",
+                  "CompareType": "LessEqual",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "UniqueDeathEff"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DeathEffSmall"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

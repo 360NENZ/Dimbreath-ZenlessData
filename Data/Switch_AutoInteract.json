@@ -1,0 +1,36 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "Device_Prop_Console_01",
+      "InteractTag": "Device_Prop_Console_01",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_Open",
+          "ParamType": 1
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    }
+  ],
+  "AbilityName": "Switch_AutoInteract",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CloseModifier": {
+      "Duration": 6,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Close",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

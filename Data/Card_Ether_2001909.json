@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Card_Ether_2001909",
+  "AbilitySpecials": {
+    "AS_AddedAccumalationRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": "%AS_AddedAccumalationRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

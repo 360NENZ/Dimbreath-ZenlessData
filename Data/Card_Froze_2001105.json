@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Froze_2001100",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%NewAS_HasCard2001105",
+                  "ParamName": "AS_HasCard2001105",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%NewAS_IceAccumulationRatio",
+                  "ParamName": "AS_IceAccumulationRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Froze_2001105",
+  "AbilitySpecials": {
+    "NewAS_HasCard2001105": {
+      "Value": 1
+    },
+    "NewAS_IceAccumulationRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique"
+}

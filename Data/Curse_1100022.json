@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Curse_1100022",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 0.3
+    },
+    "AS_IsFastRevive": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Curse_1100022_AddDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Curse_1100022_FastRevive",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Curse_1100022_AddDamageRatio": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddDamageRatio"
+      }
+    },
+    "Curse_1100022_FastRevive": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsFastRevive"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_IsFastRevive",
+              "ParamType": "Float"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

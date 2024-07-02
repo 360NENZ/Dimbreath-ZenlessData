@@ -1,0 +1,107 @@
+{
+  "AbilityName": "Tsubaki_Talent_02",
+  "AbilitySpecials": {
+    "AS_SPGetRatio_Talent_02": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAwaked": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MonsterCountModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MonsterCountModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutFinish": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "MonsterCountModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MonsterCountModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "MonsterCountMonitorMixin",
+          "DoInitialCheck": true,
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "SpGetRatioModifier",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "SpGetRatioModifier",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "Val": 1,
+              "ValueToHighActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "SpGetRatioModifier",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 1,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "SpGetRatioModifier",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SpGetRatioModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpGetRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_SPGetRatio": "%AS_SPGetRatio_Talent_02"
+      }
+    }
+  }
+}

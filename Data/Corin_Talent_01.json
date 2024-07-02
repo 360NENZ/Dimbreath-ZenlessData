@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Corin_Talent_01",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Talent_01": {
+      "Value": 0.5
+    },
+    "AddedDamageDuration_Talent_01": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasModifier",
+            "ModifierCaster": "Caster",
+            "ModifierNameList": [
+              "AddedDamageByCorin_Talent_01"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_Talent_01",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOtherPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageByCorin_Talent_01",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackQTE"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageByCorin_Talent_01": {
+      "Duration": "%AddedDamageDuration_Talent_01",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh"
+    }
+  }
+}

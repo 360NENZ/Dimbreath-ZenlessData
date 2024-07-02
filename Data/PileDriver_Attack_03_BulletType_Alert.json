@@ -1,0 +1,82 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Common_Alert_Circle_10"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Relative",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DestroyExplode": false,
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "Targetting": "Stage"
+    }
+  ],
+  "AbilityName": "PileDriver_Attack_03_BulletType_Alert",
+  "AbilityStacking": "Unique"
+}

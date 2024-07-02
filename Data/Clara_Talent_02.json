@@ -1,0 +1,77 @@
+{
+  "AbilityName": "Clara_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Base": {
+      "Value": 0.1
+    },
+    "AS_AddedDamageRatio_Delta": {
+      "Value": 0.01
+    },
+    "AS_AddedDamageRatio_Final": {
+      "Value": 0.1
+    },
+    "AS_InspireCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Clara_Talent_02"
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "CustomPropertyType": "InspireCount",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_InspireCount",
+        "Percentage": 1,
+        "PropertyType": "Custom",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Base)+specials(AS_AddedDamageRatio_Delta)*specials(AS_InspireCount)",
+        "ParamName": "AS_AddedDamageRatio_Final",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Clara_Attack_Branch_01_AttackProperty_01",
+              "Clara_Attack_Branch_01_AttackProperty_02",
+              "Clara_Attack_Branch_02_AttackProperty_01",
+              "Clara_Attack_Branch_02_AttackProperty_02",
+              "Clara_Attack_Branch_03_AttackProperty_01",
+              "Clara_Attack_Branch_03_AttackProperty_02",
+              "Clara_Attack_Branch_03_AttackProperty_02_02",
+              "Clara_Attack_Branch_03_AttackProperty_03",
+              "Clara_Attack_Branch_03_AttackProperty_04",
+              "Clara_Attack_Branch_04_AttackProperty_01",
+              "Clara_Attack_Branch_04_AttackProperty_02",
+              "Clara_Attack_Branch_04_AttackProperty_03_01",
+              "Clara_Attack_Branch_04_AttackProperty_03_02",
+              "Clara_Attack_Branch_04_AttackProperty_04",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_05",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_06",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_07_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_07_02"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_Final",
+        "Target": "Self"
+      }
+    ]
+  }
+}

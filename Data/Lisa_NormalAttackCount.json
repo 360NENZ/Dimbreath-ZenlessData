@@ -1,0 +1,427 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 4,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 4,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_MoveFront",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 4,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_MoveLeft",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 4,
+              "ParamName": "Int_CurNormalAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_MoveRight",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_MoveFront",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_MoveLeft",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_MoveRight",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front",
+          "FrameCountHigh": 58,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Back",
+          "FrameCountHigh": 58,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Right",
+          "FrameCountHigh": 58,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Left",
+          "FrameCountHigh": 58,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_MoveLeft",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_MoveRight",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_MoveLeft",
+          "FrameCountHigh": 66,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_MoveRight",
+          "FrameCountHigh": 66,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_MoveFront",
+          "FrameCountHigh": 66,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_MoveLeft",
+          "FrameCountHigh": 51,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_MoveRight",
+          "FrameCountHigh": 51,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalAttackCountModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lisa_NormalAttackCount",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "NormalAttackCountModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_CurNormalAttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

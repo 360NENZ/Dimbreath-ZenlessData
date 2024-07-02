@@ -1,0 +1,39 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "HarumasaTrapNum",
+          "CustomReferMaxPropertyType": "MaxHarumasaTrapNum",
+          "IsUsePercentage": false,
+          "PropertyChangeActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Harumasa_TrapNumHandler",
+              "Predicates": [
+                {
+                  "$type": "ByAbilityTargetCount",
+                  "AbilityTargetKey": "Harumasa_AttackTarget_NearestTrap",
+                  "CompareType": "Greater",
+                  "CompareValue": "%AS_HarumasaTrap_MaxNum",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Harumasa_TrapNumCheck",
+  "AbilitySpecials": {
+    "AS_HarumasaTrap_MaxNum": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,57 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_2_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 81,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MetalGorillaATK2DitherModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_2_End",
+          "FrameCountHigh": 65,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MetalGorillaATK2DitherModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "MetalGorilla_Ability_Attack_02_Dither",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MetalGorillaATK2DitherModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_MetalGorilla_ATK2_Dither_Fade",
+          "Tag": "Monster_MetalGorilla_ATK2_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_MetalGorilla_ATK2_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

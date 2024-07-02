@@ -1,0 +1,176 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_4_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ThugBulkyAbuser_ParryManager",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio_Parry": {
+      "Value": -0.95
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHitPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HeavyParryModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByHeavyParry"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HeavyParryModifier": {
+      "Duration": 10,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_CounterAttack",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Hit_Shake",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_CounterAttack",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%AS_DamageTakeRatio_Parry",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isThugBulkyAbuserCounter",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByHeavyParry": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByCauseStun",
+              "IsCauseStun": true
+            },
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackAid"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "TagZone_CounterHitWindow"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Hit"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByHitAngleRange",
+          "AngleMax": 180.0,
+          "AngleMin": 0.0
+        }
+      ]
+    }
+  }
+}

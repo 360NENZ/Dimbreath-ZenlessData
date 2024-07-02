@@ -1,0 +1,151 @@
+{
+  "AbilityName": "Card_Gun_2000300",
+  "AbilitySpecials": {
+    "AS_CritcalDelta": {
+      "Value": 0.08
+    },
+    "AS_UseNewMaxStack": {
+      "Value": 0
+    },
+    "StackCanBeReduce": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CritModifier_02": {
+      "ModifierStacking": "Unique",
+      "OnBeAttackLanded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DecreaseCritBuff",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "StackCanBeReduce",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DecreaseCritBuff": {
+      "Duration": 5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TarotCard_CritModifier_01",
+          "StackCount": 1,
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TarotCard_Gun_2000300_BuffIcon_01",
+          "StackCount": 1,
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TarotCard_Gun_2000300_BuffIcon_02",
+          "StackCount": 1,
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "TarotCard_CritModifier_01": {
+      "Duration": -1,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CritcalDelta"
+      }
+    },
+    "TarotCard_Gun_2000300_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3100021,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "TarotCard_Gun_2000300_BuffIcon_02": {
+      "Buff": {
+        "BuffID": 3100022,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_CritModifier_01",
+      "Target": "Self"
+    },
+    {
+      "$type": "SetModifierMaxStackingNum",
+      "MaxStackingNum": 8,
+      "ModifierName": "TarotCard_CritModifier_01",
+      "ModifierTargetType": "CurTargetAbility",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "CritModifier_02",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "CritModifier_02",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Gun_2000300_BuffIcon_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Gun_2000300_BuffIcon_02",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

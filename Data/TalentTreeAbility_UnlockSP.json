@@ -1,0 +1,15 @@
+{
+  "AbilityName": "TalentTreeAbility_UnlockSP",
+  "AbilitySpecials": {
+    "AddedShopDiscount": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "AbilityShopDiscount": "%AddedShopDiscount"
+    }
+  }
+}

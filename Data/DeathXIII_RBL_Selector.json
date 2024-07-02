@@ -1,0 +1,49 @@
+{
+  "AbilityName": "DeathXIII_RBL_Selector",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHitPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DeathXIIIParryAidedModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ParryAid"
+            ]
+          },
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Boss"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DeathXIIIParryAidedModifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": -2,
+          "Tag": "DeathXIII_RBL_ParryAid",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "DeathXIII_RBL_ParryAid",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

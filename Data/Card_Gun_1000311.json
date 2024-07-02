@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Card_Gun_1000311",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.5
+    },
+    "TimeOfDuration": {
+      "Value": 3000
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CritBuff",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CritBuff",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CritBuff": {
+      "Duration": -1,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DecreaseBuffNum"
+        }
+      ],
+      "Properties": {
+        "Actor_CriticalDelta": "%CriticalDelta"
+      }
+    },
+    "DecreaseBuffNum": {
+      "Duration": "%TimeOfDuration",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CritBuff",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

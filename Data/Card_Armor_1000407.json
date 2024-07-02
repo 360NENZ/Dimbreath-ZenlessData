@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Card_Armor_1000407",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.1
+    },
+    "ShieldAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ShieldModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "CommonDefenseMaterial",
+              "Target": "Self",
+              "key": "Common_MA_Buff_Defence_RimGlow_01"
+            }
+          ],
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  }
+}

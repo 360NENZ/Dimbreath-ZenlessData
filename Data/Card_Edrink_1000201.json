@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Card_Edrink_1000201",
+  "AbilitySpecials": {
+    "SPRecover": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": 0,
+        "IgnoreRatio": false,
+        "Percentage": "%SPRecover"
+      }
+    ]
+  }
+}

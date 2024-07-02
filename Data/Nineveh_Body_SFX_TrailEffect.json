@@ -1,0 +1,256 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_1",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_3",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_4",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_5",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_6",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_7_L",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_7_R",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_8",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_9",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_10",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_11",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Invert",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Invert_ATK_1",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Invert_Idle",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Upright",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Loop_Phase_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Upright",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HideEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_Body_SFX_TrailEffect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Nineveh_TrailEffect",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HideEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Nineveh_TrailEffect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_TrailEffect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_Vine_02",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_StayLoop_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "Nineveh_TrailEffect",
+      "Target": "Self"
+    }
+  ]
+}

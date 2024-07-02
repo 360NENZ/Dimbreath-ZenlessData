@@ -1,0 +1,75 @@
+{
+  "AbilityName": "Card_Ether_2011901",
+  "AbilitySpecials": {
+    "AS_EtherDamageResistRatio": {
+      "Value": -0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Ether_2001900",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "EtherResistDownModifier_Card_2011901",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion",
+              "Chaos"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Ether_2001900",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion",
+              "Chaos"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "EtherResistDownModifier_Card_2011901": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EtherResistDownModifier_Card_2011901",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Erosion",
+                "Chaos"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_EtherDamageResist": "%AS_EtherDamageResistRatio"
+      }
+    }
+  }
+}

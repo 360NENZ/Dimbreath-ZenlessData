@@ -1,0 +1,86 @@
+{
+  "AbilityName": "Affix_FieldStay_DamageUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.1
+    },
+    "MultipleStayTimeAdded": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "FieldStartActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FieldStay_DamageUp",
+        "Target": "Buddy"
+      }
+    ],
+    "FieldStopActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "FieldStay_DamageUp",
+        "Target": "Buddy"
+      }
+    ],
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnBattleEnter": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleStayTimeAdded",
+        "ParamType": "Float"
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleStayTimeAdded",
+        "ParamType": "Float"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUp": {
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%MultipleStayTimeAdded",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FieldStay_DamageUp": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 0.01,
+          "ParamName": "MultipleStayTimeAdded",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByIsInFieldRange",
+              "Target": "LocalAvatar"
+            }
+          ]
+        }
+      ],
+      "ThinkInterval": 1
+    }
+  }
+}

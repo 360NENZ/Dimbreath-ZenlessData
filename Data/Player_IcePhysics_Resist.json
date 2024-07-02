@@ -1,0 +1,149 @@
+{
+  "AbilityName": "Player_IcePhysics_Resist",
+  "AbilitySpecials": {
+    "AS_IceCritDamageRatio": {
+      "Value": 0.05
+    },
+    "AS_PhysicsStunTakeRatio": {
+      "Value": -0.03
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FrostModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frost"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PhysicsModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FrostModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_CriticalDamageRatioDelta",
+          "PropertyValue": "%AS_IceCritDamageRatio",
+          "Target": "Self"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FrostModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frost"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "IceModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Common_Buff_FrozenStart_S",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Common_Buff_FrozenStart_M",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Middle",
+              "CompareType": "Equal",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Common_Buff_FrozenStart_L",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Large",
+              "CompareType": "GreaterEqual",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "PhysicsModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "PhysicsModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Strike"
+              ]
+            }
+          ],
+          "Target": "Target"
+        }
+      ],
+      "Properties": {
+        "Actor_BreakStunTakeRatio": "%AS_PhysicsStunTakeRatio"
+      }
+    }
+  }
+}

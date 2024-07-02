@@ -1,0 +1,115 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_HideBomb_02_Teleport_OutGround_Block_B",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Teleport_Modifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Teleport_End_Modifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Show",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Teleport_Modifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "DefaultOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 5.0
+            },
+            "Duration": 0.1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "TeleportPos_Way2_Spawn_1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Stop"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "MonsterPos_A1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Teleport_End_Modifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

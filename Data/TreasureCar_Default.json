@@ -1,0 +1,116 @@
+{
+  "AbilityName": "TreasureCar_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LockLifeModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 1,
+        "ParamName": "Int_RareType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "RareB"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 2,
+        "ParamName": "Int_RareType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "RareA"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 3,
+        "ParamName": "Int_RareType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "RareS"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LockLifeModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ]
+        }
+      ]
+    },
+    "SpecialIdleModifier": {
+      "Duration": -1,
+      "OnThinkInterval": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": false,
+              "CompareType": "Equal",
+              "ParamName": "Bool_IsOpen",
+              "ParamType": 2
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": false,
+              "CompareType": "Equal",
+              "ParamName": "Bool_IsOpen",
+              "ParamType": 2
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 15
+    }
+  }
+}

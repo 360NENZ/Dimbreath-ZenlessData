@@ -1,0 +1,79 @@
+{
+  "AbilityName": "Card_Sports_2000804",
+  "AbilitySpecials": {
+    "CounterTimer": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RushAttackToCounterAttack",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RushAttackToCounterAttack": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TriggerModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "Evade",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Greater",
+                  "Param": 0,
+                  "ParamName": "CounterTimer",
+                  "ParamType": "Float",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": -1,
+          "ParamName": "CounterTimer",
+          "ParamType": "Integer",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "TriggerModifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PerfectEvade",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

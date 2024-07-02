@@ -1,0 +1,52 @@
+{
+  "AbilityName": "Card_Armor_2010402",
+  "AbilitySpecials": {
+    "ShieldAmount": {
+      "Value": 0
+    },
+    "ShieldPercentage": {
+      "Value": 0
+    },
+    "ratio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AttackUpByShieldModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackUpByShieldModifier": {
+      "Block": 0.1,
+      "Duration": -1,
+      "OnHitOther": [
+        {
+          "$type": "SetAbilitySpecialsByHpShiledValueAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ShieldAmount",
+          "ParamType": "Integer",
+          "Target": "Self",
+          "ValueType": "CurValue"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(ShieldAmount)*specials(ratio)",
+          "ParamName": "ShieldPercentage",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedAttackDelta",
+          "PropertyValue": "%ShieldPercentage",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

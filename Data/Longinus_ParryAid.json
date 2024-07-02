@@ -1,0 +1,1075 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_ParryAid_L_Start",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LightParryAidContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H_Start",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryAidContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AutoParryAidContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_L_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_L",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier",
+            "TagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_L_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier",
+            "TagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Player_AssaultAid_EnableEffect",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "AssaultAid_Disable_Hint"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_ParryAid_L",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Player_AssaultAid_EnableEffect",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "AssaultAid_Disable_Hint"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_ParryAid_H",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Longinus_ParryAid",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AutoParryAidContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnParryBeingHit": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AssaultAid_Disable_Hint"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AutoParryModifer",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Longinus_Attack_ParryAid_Auto_AttackProperty_01",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        }
+      ]
+    },
+    "AutoParryModifer": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry_H",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_ParryAid_H_CamShake_01"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "ParryAid_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "ParryAid_TimeSlow_01",
+          "IsGlobal": true
+        }
+      ],
+      "OnAttackLanded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "Target": "Self",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_02",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.1,
+                "z": 0.7
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AutoParryModifer",
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "IgnoreParry"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": -4,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "EnhanceParry"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "CameraEventModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Avatar_Common_ParryAid_L_CamZoom_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Avatar_Common_ParryAid_H_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Avatar_Common_ParryAid_L_CamStretch_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Avatar_Common_ParryAid_H_CamStretch_01"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Avatar_Common_ParryAid_L_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Avatar_Common_ParryAid_H_CameraOverrideTrack_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HeavyParryAidContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "EnterParrySpecialModeAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "CustomKey": "PerfectSwitchAidTrigger_AbilityTargetting_01",
+          "IsAdd": true,
+          "Target": "Custom"
+        }
+      ],
+      "OnParryBeingHit": [
+        {
+          "$type": "ExitParrySpecialModeAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AssaultAid_Disable_Hint"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Longinus_Attack_ParryAid_H_AttackProperty_01",
+          "Target": "Target"
+        },
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": -2,
+          "ModifyFunction": "Add"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HeavyParryModifer",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HeavyParryAidContralModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ExitParrySpecialModeAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        }
+      ]
+    },
+    "HeavyParryModifer": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry_H",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_ParryAid_H_CamShake_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Avatar_Common_ParryAid_H_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_ParryAid_H_CamStretch_01"
+        },
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "Avatar_Common_ParryAid_H_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "ParryAid_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "ParryAid_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Longinus_ParryAid"
+        }
+      ],
+      "OnAttackLanded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "Target": "Self",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_02",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.1,
+                "z": 0.7
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HeavyParryModifer",
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "IgnoreParry"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": -4,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "EnhanceParry"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightParryAidContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "EnterParrySpecialModeAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "CustomKey": "PerfectSwitchAidTrigger_AbilityTargetting_01",
+          "IsAdd": true,
+          "Target": "Custom"
+        }
+      ],
+      "OnParryBeingHit": [
+        {
+          "$type": "ExitParrySpecialModeAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AssaultAid_Disable_Hint"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Longinus_Attack_ParryAid_L_AttackProperty_01",
+          "Target": "Target"
+        },
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": -1,
+          "ModifyFunction": "Add"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LightParryModifer",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LightParryAidContralModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ExitParrySpecialModeAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IgnoreWitchSlowDown_ParryAid"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        }
+      ]
+    },
+    "LightParryModifer": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry_L",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_ParryAid_L_CamShake_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Avatar_Common_ParryAid_L_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_ParryAid_L_CamStretch_01"
+        },
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "Avatar_Common_ParryAid_L_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "ParryAid_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "ParryAid_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Longinus_ParryAid"
+        }
+      ],
+      "OnAttackLanded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "Target": "Self",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.6
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LightParryModifer",
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "IgnoreParry"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": -2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "EnhanceParry"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "TagModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

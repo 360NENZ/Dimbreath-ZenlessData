@@ -1,0 +1,170 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "WatchEntityMixin",
+      "EntityTypes": [
+        "Avatar",
+        "Monster",
+        "Buddy"
+      ],
+      "OnEntityAwaked": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ListenModifier_Weapon_Ability_13115",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierCaster": "Self",
+              "ModifierNameList": [
+                "ListenModifier_Weapon_Ability_13115"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAllied"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DmgUpModifier_Weapon_Ability_13115",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierCaster": "Self",
+              "ModifierNameList": [
+                "ListenModifier_Weapon_Ability_13115"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAllied"
+        }
+      ],
+      "OnSummonedCreate": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ListenModifier_Weapon_Ability_13115",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierCaster": "Self",
+              "ModifierNameList": [
+                "ListenModifier_Weapon_Ability_13115"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAllied"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DmgUpModifier_Weapon_Ability_13115",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierCaster": "Self",
+              "ModifierNameList": [
+                "ListenModifier_Weapon_Ability_13115"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAllied"
+        }
+      ],
+      "Relationships": [
+        "Allied"
+      ]
+    }
+  ],
+  "AbilityName": "Weapon_Ability_13115",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio_PerCount": {
+      "Value": 0.05
+    },
+    "AS_BaseAttackRatio_Total": {
+      "Value": 0.0
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    },
+    "AS_StackCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenModifier_Weapon_Ability_13115",
+        "Target": "TeamAllied"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DmgUpModifier_Weapon_Ability_13115",
+        "Target": "TeamAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DmgUpModifier_Weapon_Ability_13115": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio_Total"
+      }
+    },
+    "ListenModifier_Weapon_Ability_13115": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ManageModifier_Weapon_Ability_13115",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ManageModifier_Weapon_Ability_13115": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_StackCount",
+          "ParamType": "Integer",
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio_PerCount)*min(4,specials(AS_StackCount))",
+          "ParamName": "AS_BaseAttackRatio_Total",
+          "Target": "Caster",
+          "ValueType": "Float"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "max(0,(specials(AS_StackCount)-1))",
+          "ParamName": "AS_StackCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio_PerCount)*min(4,specials(AS_StackCount))",
+          "ParamName": "AS_BaseAttackRatio_Total",
+          "Target": "Caster",
+          "ValueType": "Float"
+        }
+      ]
+    }
+  }
+}

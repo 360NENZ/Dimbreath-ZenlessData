@@ -1,0 +1,386 @@
+{
+  "AbilityName": "Card_Electro_2000500",
+  "AbilitySpecials": {
+    "AS_AccelerateRatio": {
+      "Value": 0.05
+    },
+    "AS_AddElectroCount": {
+      "Value": 0
+    },
+    "AS_AddedAccumulationRatio": {
+      "Value": 0.02
+    },
+    "AS_EXQTEDamageAddRatio": {
+      "Value": 0
+    },
+    "AS_EXQTERatio": {
+      "Value": 0.05
+    },
+    "AS_ElecDamageUpBy503": {
+      "Value": 0
+    },
+    "AS_ElectroCount": {
+      "Value": 0
+    },
+    "AS_ElementRatio": {
+      "Value": 0
+    },
+    "AS_FeverAccelerateValue": {
+      "Value": 0
+    },
+    "AS_FinalEXQTEDamageAddRatio": {
+      "Value": 0
+    },
+    "AS_GetCard_2000507": {
+      "Value": 0
+    },
+    "AS_IsAddBuffIcon": {
+      "Value": 0
+    },
+    "ElectroCountLimit": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CleanEXQTEDamage": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnSkillStart": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": 0,
+                  "ParamName": "AS_FinalEXQTEDamageAddRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CleanEXQTEDamage",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CleanElectroCount": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": 0,
+                  "ParamName": "AS_ElectroCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TarotCard_Electro_2000500_BuffIcon_01",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TarotCard_Electro_2000500_BuffIcon_02",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CleanElectroCount",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EXQTEDamageUpModifier": {
+      "Duration": 6,
+      "ModifierStacking": "Refresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "ExQTE"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_FinalEXQTEDamageAddRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ElectroUpBuff": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CleanEXQTEDamage",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "ExQTE"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_ElectroCount",
+              "ParamType": "Float"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_ElecDamageUpBy503",
+          "Target": "Self"
+        }
+      ],
+      "OnSkillStart": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_EXQTEDamageAddRatio)",
+          "ParamName": "AS_FinalEXQTEDamageAddRatio",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EXQTEDamageUpModifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CleanElectroCount",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "Properties": {
+        "Actor_FeverGetRatio": "%AS_FeverAccelerateValue"
+      }
+    },
+    "ElectroUpBuff_02": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%AS_ElementRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ElectroUpBuff_BuffIcon": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TarotCard_Electro_2000500_BuffIcon_01",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_GetCard_2000507",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "StackCount": "%AS_AddElectroCount",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TarotCard_Electro_2000500_BuffIcon_02",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_GetCard_2000507",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "StackCount": "%AS_AddElectroCount",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_IsAddBuffIcon",
+          "ParamType": "Integer"
+        }
+      ]
+    },
+    "TarotCard_Electro_2000500_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3100041,
+        "IsOverrideDuration": false
+      },
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "TarotCard_Electro_2000500_BuffIcon_02": {
+      "Buff": {
+        "BuffID": 3100041,
+        "IsOverrideDuration": false
+      },
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": "%ElectroCountLimit",
+      "ParamName": "AS_ElectroCount",
+      "ParamType": "Float",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "GreaterEqual",
+          "Param": "%ElectroCountLimit",
+          "ParamName": "AS_ElectroCount",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_ElectroCount)*specials(AS_AccelerateRatio)",
+      "ParamName": "AS_FeverAccelerateValue",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_ElectroCount)*specials(AS_EXQTERatio)",
+      "ParamName": "AS_EXQTEDamageAddRatio",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_ElectroCount)*specials(AS_AddedAccumulationRatio)",
+      "ParamName": "AS_ElementRatio",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ElectroUpBuff",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ElectroUpBuff_BuffIcon",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_IsAddBuffIcon",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ElectroUpBuff_02",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_GetCard_2000507",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "test_light",
+  "Plugin": [
+    {
+      "$type": "CHollowLightPluginConfig",
+      "BaseNoise": [
+        "EventIcon_InnerBackground"
+      ],
+      "Ghost": [
+        {
+          "$type": "CHollowGhostConfig",
+          "DistanceToLight": {
+            "x": 2,
+            "y": 3
+          },
+          "Frequency": {
+            "x": 3,
+            "y": 8
+          }
+        }
+      ],
+      "GhostTextureKey": "EventIcon_AtmosphereGhost_ForAdd",
+      "LightNoise": [
+        "EventIcon_InnerPath"
+      ],
+      "NPCDefaultLightLevel": 0,
+      "PlayerDefaultLightLevel": 1
+    },
+    {
+      "$type": "CChessboardPopUpConfig",
+      "Key": "BubbleByLight"
+    },
+    {
+      "$type": "CChessboardGhostConfig",
+      "GhostLightRenderConfigKey": "TestGhost"
+    }
+  ]
+}

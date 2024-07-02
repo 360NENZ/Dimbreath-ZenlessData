@@ -1,0 +1,127 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Born",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Death",
+          "FrameCountHigh": 4,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ResourceItem_02_Default",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "ItemPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_InLevelItem_Prop_ResourceItem_02_Light",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyAbilityAction",
+      "AbilityName": "Ability_HealSp",
+      "IsAutoTrigger": true,
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByInBlackCurtain",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Common_MA_Buff_AddSp_RimGlow_01",
+      "Target": "LocalAvatar",
+      "key": "Common_MA_Buff_AddSp_RimGlow_01"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_InLevelItem_Prop_ResourceItem_02_AddSp",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByInBlackCurtain",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "LocalAvatar"
+    }
+  ]
+}

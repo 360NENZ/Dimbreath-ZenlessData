@@ -1,0 +1,88 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "ReferMaxPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "TriggerActionModifier_02",
+                  "Predicates": [
+                    {
+                      "$type": "ByNot",
+                      "Predicates": [
+                        {
+                          "$type": "ByOr",
+                          "Predicates": [
+                            {
+                              "$type": "ByTags",
+                              "TagList": [
+                                "Promote"
+                              ],
+                              "Target": "Self"
+                            },
+                            {
+                              "$type": "ByTags",
+                              "TagList": [
+                                "BornTransform"
+                              ],
+                              "Target": "Self"
+                            },
+                            {
+                              "$type": "ByTags",
+                              "TagList": [
+                                "MuteTransform"
+                              ],
+                              "Target": "Self"
+                            }
+                          ],
+                          "Target": "Self"
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_HPLimit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_Transform",
+  "AbilitySpecials": {
+    "AS_HPLimit": {
+      "Value": 0.7
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "Modifiers": {
+    "TriggerActionModifier_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 2,
+          "ParamName": "Int_BossType_Target",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_IsSwitchingBossType",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

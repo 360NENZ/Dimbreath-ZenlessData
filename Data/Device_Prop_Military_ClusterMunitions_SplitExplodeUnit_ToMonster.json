@@ -1,0 +1,104 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 0.1,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        },
+        "Targetting": "Enemy"
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": false,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 2.0,
+        "CapsuleColliderRadius": 2.5,
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Device_Military_SplitMine_TiniUnit_Explode_ToEnemy",
+      "ExplodeEffect": {},
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2.5,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "LogStringAction",
+          "LogStr": "MonsterBulletDestroy"
+        }
+      ],
+      "Targetting": "Enemy",
+      "TrailEffect": {}
+    }
+  ],
+  "AbilityName": "Device_Prop_Military_ClusterMunitions_SplitExplodeUnit_ToMonster",
+  "AbilityStacking": "Unique"
+}

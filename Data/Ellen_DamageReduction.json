@@ -1,0 +1,102 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Slash_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 29,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Cut_01",
+          "FrameCountHigh": 11,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargeCheckModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Cut_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Cut_01",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_DamageReduction",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ChargeCheckModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageTakeRatioModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Charge_Lv1"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageTakeRatioModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  }
+}

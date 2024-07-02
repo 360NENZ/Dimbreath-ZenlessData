@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_Armor_1000408",
+  "AbilitySpecials": {
+    "ShieldAmount": {
+      "Value": 0
+    },
+    "ShieldPercentage": {
+      "Value": 0
+    },
+    "ratio": {
+      "Value": 2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialsByHpShiledValueAction",
+        "ModifyFunction": "Add",
+        "ParamName": "ShieldAmount",
+        "ParamType": "Integer",
+        "Target": "LocalAvatar",
+        "ValueType": "CurValue"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(ShieldAmount)*specials(ratio)",
+        "ParamName": "ShieldPercentage",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_BaseAttackDelta",
+        "PropertyValue": "%ShieldPercentage",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Weapon_Ability_12004",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.4
+    },
+    "AS_Duration": {
+      "Value": 10.0
+    },
+    "AS_IntervalCD": {
+      "Value": 20.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExSp",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BreakStunModifier_Effect_Weapon_Ability_12004",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "BreakStunModifier_Effect_Weapon_Ability_12004": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BreakStunRatio": "%AS_BreakStunRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": "%AS_LifeTime",
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": -90.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "%AS_LaunchPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitOther": false,
+      "CanHitStage": false,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletTimeUpDestroyAction": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_ExplodeCount",
+          "ParamName": "AS_Count",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Div",
+          "Param": 2,
+          "ParamName": "AS_Count",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_2",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_Count",
+              "Value": "%AS_ExplodeCount",
+              "ValueType": "Integer"
+            }
+          ],
+          "PositionArgument": "Bullet",
+          "Predicates": []
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_ExplodeCount",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_ExplodeCount",
+          "ParamType": "Integer",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 6,
+              "ParamName": "AS_ExplodeCount",
+              "ParamType": "Integer"
+            }
+          ]
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 0.5,
+        "RotateSpeed": 200,
+        "RotateType": "Fixed",
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 30.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart",
+        "TimesUpRotateOption": "Stop"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_1_BackUp",
+  "AbilitySpecials": {
+    "AS_Count": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_ExplodeCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_LaunchCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_LaunchPoint": {
+      "Value": "Skn_MissileWell_L",
+      "ValueType": "String"
+    },
+    "AS_LifeTime": {
+      "Value": 1,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_LaunchCount",
+          "ParamType": "Integer"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": -0.05,
+          "ParamName": "AS_LifeTime",
+          "ParamType": "Float"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_LifeTime",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_1",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -120.0,
+                "z": 0.0
+              },
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_2",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 180.0,
+                "z": 0.0
+              },
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": -2.6,
+                "y": 0.0,
+                "z": 1.5
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_3",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 120.0,
+                "z": 0.0
+              },
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": -2.6,
+                "y": 0.0,
+                "z": -1.5
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_4",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 60.0,
+                "z": 0.0
+              },
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_5",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 2.6,
+                "y": 0.0,
+                "z": -1.5
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_6",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 2.6,
+                "y": 0.0,
+                "z": 1.5
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Add",
+      "Param": 1,
+      "ParamName": "AS_LaunchCount",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": 0,
+      "ParamName": "AS_LaunchCount",
+      "ParamType": "Integer",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 6,
+          "ParamName": "AS_LaunchCount",
+          "ParamType": "Integer"
+        }
+      ]
+    }
+  ],
+  "OnAdded": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "TargetPoint_1",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "TargetPoint_2",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "TargetPoint_3",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "TargetPoint_4",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "TargetPoint_5",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "TargetPoint_6",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    }
+  ]
+}

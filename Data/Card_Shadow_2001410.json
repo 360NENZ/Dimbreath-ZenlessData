@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Card_Shadow_2001410",
+  "AbilitySpecials": {
+    "EvadeTimes": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ModifySkillMaxEP",
+        "DeltaValue": "%EvadeTimes",
+        "SkillType": "Evade",
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

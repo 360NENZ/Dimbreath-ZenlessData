@@ -1,0 +1,53 @@
+{
+  "AbilityName": "HeavyStriker_Attack_8_Boss",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DecreaseSpModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "HeavyStriker_Attack08_Attackproperty_01",
+              "HeavyStriker_Attack08_Attackproperty_02"
+            ]
+          },
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "GreaterEqual",
+            "IsUsePercent": false,
+            "Numerator": "CurSP",
+            "Target": "Other",
+            "Val1": 12.0
+          }
+        ],
+        "Target": "Other"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DecreaseSpModifier": {
+      "Duration": 4,
+      "MaxStackingNumber": 9999,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothRecoverSPMixin",
+          "IgnoreRatio": true,
+          "PropertyItem": {
+            "Amount": 3.0
+          }
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DecreaseSPAction",
+          "Amount": 12.0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

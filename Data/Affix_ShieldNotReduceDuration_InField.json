@@ -1,0 +1,49 @@
+{
+  "AbilityName": "Affix_ShieldNotReduceDuration_InField",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "FieldEnterActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyShieldNotReduceDuration",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Buddy"
+      }
+    ],
+    "FieldExitActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "BuddyShieldNotReduceDuration",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Buddy"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyShieldNotReduceDuration": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "ModifyArcanaCommonPropertyAction",
+          "ArcanaProperty": "ShieldDuration",
+          "Delta": 0.1,
+          "Target": "Buddy"
+        }
+      ],
+      "ThinkInterval": 0.1
+    }
+  }
+}

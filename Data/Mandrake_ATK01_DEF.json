@@ -1,0 +1,148 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "CustomKey": "Mandrake_ATK01",
+              "ModifierName": "ShieldModifier",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Death_Ground_Stay",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Mandrake_ATK01_DEF",
+  "AbilitySpecials": {
+    "AS_BuffDuration": {
+      "Value": 10
+    },
+    "AS_DefBuffRatio": {
+      "Value": 1
+    },
+    "AS_PromoteDefBuffRatio": {
+      "Value": 1
+    },
+    "DefIncreaseValue": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ShieldModifier": {
+      "Duration": "%AS_BuffDuration",
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Monster_Common_MA_Buff_Defence_RimGlow_01",
+              "Target": "Self",
+              "key": "Monster_Common_MA_Buff_Defence_RimGlow_01"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Monster_Common_MA_Buff_Defence_SecondaryEmission",
+              "Target": "Self",
+              "key": "Monster_Common_MA_Buff_Defence_SecondaryEmission"
+            },
+            {
+              "$type": "FireAudio",
+              "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Shield_Hit"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            }
+          ],
+          "Duration": "%AS_BuffDuration",
+          "EmptyActions": [
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Key": "Monster_Common_MA_Buff_Defence_RimGlow_01",
+              "Tag": "Monster_Common_MA_Buff_Defence_RimGlow_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Key": "Monster_Common_MA_Buff_Defence_SecondaryEmission",
+              "Tag": "Monster_Common_MA_Buff_Defence_SecondaryEmission",
+              "Target": "Self"
+            }
+          ],
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "RemovedActions": [
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Key": "Monster_Common_MA_Buff_Defence_RimGlow_01",
+              "Tag": "Monster_Common_MA_Buff_Defence_RimGlow_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Key": "Monster_Common_MA_Buff_Defence_SecondaryEmission",
+              "Tag": "Monster_Common_MA_Buff_Defence_SecondaryEmission",
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Mandrake_Shield",
+          "TotalValueConfig": {
+            "Amount": "%DefIncreaseValue"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_DefBuffRatio)",
+      "ParamName": "DefIncreaseValue",
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Demote"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_PromoteDefBuffRatio)",
+      "ParamName": "DefIncreaseValue",
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Promote"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "ShieldModifier",
+      "Target": "Custom"
+    }
+  ]
+}

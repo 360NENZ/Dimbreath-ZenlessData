@@ -1,0 +1,177 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_Counter",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_ClearCountModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_H_B",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_H_F",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_B_Down",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_B_Left",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_B_Right",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_B_Up",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_F_Down",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_F_Left",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_F_Right",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_L_F_Up",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Hit_S",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_BeHitCounterModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GoldenBomb_BeHitCounter",
+  "AbilitySpecials": {
+    "HitCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "GoldenBomb_BeHitCounterModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "HitCount",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": "%HitCount",
+          "ParamName": "Int_CounterCount",
+          "Target": "Self"
+        }
+      ]
+    },
+    "GoldenBomb_ClearCountModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 0,
+          "ParamName": "Int_CounterCount",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "HitCount",
+          "ParamType": "Integer"
+        }
+      ],
+      "ThinkInterval": 0.01
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_Exchange_2001607",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 15
+    },
+    "AS_PenRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PenRatioModifier_Card_2001607",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackAid",
+              "AssaultAid"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PenRatioModifier_Card_2001607": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_PenRatio": "%AS_PenRatio"
+      }
+    }
+  }
+}

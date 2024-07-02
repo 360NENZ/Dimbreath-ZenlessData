@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Player_ActiveTalent",
+  "AbilitySpecials": {
+    "baseAttackUp": {
+      "Value": 0
+    },
+    "baseDefenceUp": {
+      "Value": 0
+    },
+    "baseHpUp": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_BaseAttackRatio": "%baseAttackUp",
+      "Actor_BaseDefenceRatio": "%baseDefenceUp",
+      "Actor_BaseHPRatio": "%baseHpUp"
+    }
+  }
+}

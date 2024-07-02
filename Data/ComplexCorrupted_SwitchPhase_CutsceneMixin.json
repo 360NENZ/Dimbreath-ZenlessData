@@ -1,0 +1,31 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "CutSceneMixin",
+      "BlackScreenFadeIn": true,
+      "BlackScreenFadeOut": true,
+      "CutSceneTag": "ComplexCorrupted_SwitchPhase",
+      "MuteInputBeginAhead": 0.25,
+      "MuteInputEndDelay": 0.25,
+      "OnCutSceneEndPhase": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_CutsceneEnd",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SwitchPhaseEndAction",
+          "MixinTag": "ComplexCorrupted_SwitchPhase",
+          "Target": "Self"
+        }
+      ],
+      "OnCutSceneStartPhase": [],
+      "PerformID": 5020006,
+      "ProtectTime": 30
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SwitchPhase_CutsceneMixin",
+  "AbilityStacking": "Unique"
+}

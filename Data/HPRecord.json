@@ -1,0 +1,55 @@
+{
+  "AbilityName": "HPRecord",
+  "AbilitySpecials": {
+    "AS_CurHP": {
+      "Value": 1
+    },
+    "AS_CurHPRatio": {
+      "Value": 1
+    },
+    "AS_MaxHP": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_CurHP",
+        "Percentage": 1,
+        "PropertyType": "CurHP",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_MaxHP",
+        "Percentage": 1,
+        "PropertyType": "MaxHP",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%AS_CurHP",
+        "ParamName": "AS_CurHPRatio",
+        "ParamType": "Float",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Div",
+        "Param": "%AS_MaxHP",
+        "ParamName": "AS_CurHPRatio",
+        "ParamType": "Float",
+        "Target": "Self"
+      },
+      {
+        "$type": "LDListenEntityAction",
+        "TargetKey": "HPRecorded"
+      }
+    ]
+  }
+}

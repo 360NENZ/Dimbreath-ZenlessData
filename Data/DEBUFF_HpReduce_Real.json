@@ -1,0 +1,88 @@
+{
+  "AbilityName": "DEBUFF_HpReduce_Real",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.02
+    },
+    "HpReduceAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpReduceModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SignBuffModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HpReduceModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(HpPercentage)*property(CurHP)",
+          "ParamName": "HpReduceAmount",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "DecreaseHPAction",
+          "Amount": "%HpReduceAmount",
+          "IgnoreInvincible": "true",
+          "IgnoreLifeLock": "true",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "DecreaseHPAction",
+          "Amount": 1,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Amount": 1,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAliveState",
+              "AliveState": "Alive",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 1
+    },
+    "SignBuffModifier": {
+      "Buff": {
+        "BuffID": 2000002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

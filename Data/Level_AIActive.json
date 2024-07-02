@@ -1,0 +1,13 @@
+{
+  "AbilityName": "Level_AIActive",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "TriggerBehaviorTreeAction",
+        "Enable": true,
+        "Target": "Self"
+      }
+    ]
+  }
+}

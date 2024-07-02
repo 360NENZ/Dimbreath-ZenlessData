@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Affix_ResonateReduceCD_BeingHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ResonateReduceCD_BeingHit",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ResonateReduceCD_BeingHit": {
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifySkillTypeCDAction",
+          "Ratio": -1,
+          "SkillType": "Resonate",
+          "Target": "Buddy"
+        }
+      ]
+    }
+  }
+}

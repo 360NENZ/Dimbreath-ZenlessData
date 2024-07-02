@@ -1,0 +1,15 @@
+{
+  "AbilityName": "StaminaPunish_HPMaxLose",
+  "AbilitySpecials": {
+    "AddedMaxHpRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_MaxHPRatio": "%AddedMaxHpRatio"
+    }
+  }
+}

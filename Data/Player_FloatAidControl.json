@@ -1,0 +1,153 @@
+{
+  "AbilityName": "Player_FloatAidControl",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HandleTag_AidAttack_Float": {
+      "Duration": 0.1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Float"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Float"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "HandleTag_AidAttack_Float_Perfect": {
+      "Duration": 0.1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Float_Perfect"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Float_Perfect"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HandleTag_AidAttack_Float",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "Trigger_FloatAid"
+              ]
+            },
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTargetHitEffect",
+                  "HitEffectKind": "FinalHitEffect",
+                  "TargetSubHitEffectAirs": [
+                    "ThrowLow"
+                  ]
+                },
+                {
+                  "$type": "ByTargetHitEffect",
+                  "HitEffectKind": "FinalHitEffect",
+                  "TargetSubHitEffectAirs": [
+                    "ThrowHigh"
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Less",
+              "Denominator": "MaxStun",
+              "IsUsePercent": true,
+              "Numerator": "CurStun",
+              "Target": "Target",
+              "Val1": 0.5
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HandleTag_AidAttack_Float_Perfect",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "Trigger_FloatAid"
+              ]
+            },
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTargetHitEffect",
+                  "HitEffectKind": "FinalHitEffect",
+                  "TargetSubHitEffectAirs": [
+                    "ThrowLow"
+                  ]
+                },
+                {
+                  "$type": "ByTargetHitEffect",
+                  "HitEffectKind": "FinalHitEffect",
+                  "TargetSubHitEffectAirs": [
+                    "ThrowHigh"
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "Denominator": "MaxStun",
+              "IsUsePercent": true,
+              "Numerator": "CurStun",
+              "Target": "Target",
+              "Val1": 0.5
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

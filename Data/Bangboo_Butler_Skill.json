@@ -1,0 +1,70 @@
+{
+  "AbilityName": "Bangboo_Butler_Skill",
+  "AbilitySpecials": {
+    "AS_ExtraSpRecoverRatio": {
+      "Value": 0
+    },
+    "AS_SpRecoverValue": {
+      "Value": 0
+    },
+    "AS_SpRecoverValueBase": {
+      "Value": 8
+    },
+    "AS_SpRecoverValuePreLevel": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertyModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "BultlerMaterial",
+          "Target": "Self",
+          "key": "Common_MA_Buff_AddSp_RimGlow_01"
+        }
+      ]
+    },
+    "SpRecoverModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecoverValue",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_AddSp",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "(specials(AS_SpRecoverValueBase)+property(Level)*specials(AS_SpRecoverValuePreLevel))*(1+specials(AS_ExtraSpRecoverRatio))",
+      "ParamName": "AS_SpRecoverValue",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SpRecoverModifier",
+      "Target": "LocalAvatar"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_IsEnoughEnergy",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 60
+            },
+            {
+              "Val": 60,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_IsEnoughEnergy",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_SpecialSkill",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetUIArrowAction",
+        "position": 60
+      }
+    ]
+  }
+}

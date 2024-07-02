@@ -1,0 +1,21 @@
+{
+  "AbilityName": "TreasureCar_RemoveEffect",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "TreasureCar_LightEffect",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "TreasureCar_RareEffect",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "TreasureCar_GreenLightEffect",
+      "Target": "Self"
+    }
+  ]
+}

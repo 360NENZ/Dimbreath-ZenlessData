@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_DailyUse_1000948",
+  "AbilitySpecials": {
+    "AS_TemplateID": {
+      "Value": 1111
+    },
+    "BattleCount_Card1100948": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_TarotCard_CounterCombo",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": "%AS_TemplateID"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(BattleCount_Card1100948)",
+        "ParamName": "BattleCount_Card1100948",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  }
+}

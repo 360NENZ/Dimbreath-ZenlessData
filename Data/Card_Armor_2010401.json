@@ -1,0 +1,118 @@
+{
+  "AbilityName": "Card_Armor_2010401",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.25
+    },
+    "AS_IntervalCD": {
+      "Value": 10
+    },
+    "ShieldAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ReplaceDamageToZero",
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHitPre": [
+      {
+        "$type": "SetAbilitySpecialsByHpShiledValueAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "ShieldAmount",
+        "ParamType": "Integer",
+        "Target": "Self",
+        "ValueType": "CurValue"
+      }
+    ],
+    "OnHitOtherPre": [
+      {
+        "$type": "SetAbilitySpecialsByHpShiledValueAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "ShieldAmount",
+        "ParamType": "Integer",
+        "Target": "Self",
+        "ValueType": "CurValue"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "ShieldAmount",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDController": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ReplaceDamageToZero",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ReplaceDamageToZero",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "ReplaceDamageToZero": {
+      "ModifierStacking": "Replace",
+      "OnBeDamageCalculated": [
+        {
+          "$type": "ReplaceDamageByHpAction",
+          "Amount": 0,
+          "HpProperty": "MaxHP",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "ShieldAmount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDController",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "ShieldAmount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

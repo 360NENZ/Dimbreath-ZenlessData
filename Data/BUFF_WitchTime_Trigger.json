@@ -1,0 +1,12 @@
+{
+  "AbilityName": "BUFF_WitchTime_Trigger",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "BUFF_WitchTime_Dodge",
+      "IsAutoTrigger": false,
+      "Target": "TeamAvatars"
+    }
+  ]
+}

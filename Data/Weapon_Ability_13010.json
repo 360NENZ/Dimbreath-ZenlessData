@@ -1,0 +1,58 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenHpShieldChangeMixin",
+      "Duration": -1,
+      "IgnoreSource": true,
+      "OnShieldEmptyActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BaseAttackRatioModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnShieldRecoverActions": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BaseAttackRatioModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Weapon_Ability_13010",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.15
+    },
+    "AS_MaxHPRatio": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MaxHPRatioModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    },
+    "MaxHPRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_MaxHPRatio": "%AS_MaxHPRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_Mute_Player_Control",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MuteInputModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MuteInputModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": false,
+          "CharacterBagMute": false,
+          "CharacterMoveMute": false,
+          "CharacterQTEMute": false,
+          "CharacterSkillMute": false,
+          "CharacterSwitchMute": false
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": true,
+          "CharacterBagMute": true,
+          "CharacterMoveMute": true,
+          "CharacterQTEMute": true,
+          "CharacterSkillMute": true,
+          "CharacterSwitchMute": true
+        }
+      ]
+    }
+  }
+}

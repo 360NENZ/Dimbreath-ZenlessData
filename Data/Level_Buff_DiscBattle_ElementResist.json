@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Level_Buff_DiscBattle_ElementResist",
+  "AbilitySpecials": {
+    "AS_ElecResist": {
+      "Value": 0
+    },
+    "AS_EtherResist": {
+      "Value": 0
+    },
+    "AS_FireResist": {
+      "Value": 0
+    },
+    "AS_IceResist": {
+      "Value": 0
+    },
+    "AS_PhysicsResist": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": -1,
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AbnormalResistDelta_Elec": "%AS_ElecResist",
+      "Actor_AbnormalResistDelta_Ether": "%AS_EtherResist",
+      "Actor_AbnormalResistDelta_Fire": "%AS_FireResist",
+      "Actor_AbnormalResistDelta_Ice": "%AS_IceResist",
+      "Actor_AbnormalResistDelta_Physics": "%AS_PhysicsResist",
+      "Actor_ElecDamageResist": "%AS_ElecResist",
+      "Actor_EtherDamageResist": "%AS_EtherResist",
+      "Actor_FireDamageResist": "%AS_FireResist",
+      "Actor_IceDamageResist": "%AS_IceResist",
+      "Actor_PhysicsDamageResist": "%AS_PhysicsResist"
+    }
+  }
+}

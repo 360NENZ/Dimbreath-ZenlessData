@@ -1,0 +1,55 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_02_H",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PileDriver_Attack_05_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PileDriver_Attack_05_CameraOverrideTrack_01"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "PileDriver_CameraOverrideTrack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Modifier_PileDriver_Attack_05_CameraOverrideTrack_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "PileDriver_Attack_05_CameraOverrideTrack_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "PileDriver_Attack_05_CameraOverrideTrack_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

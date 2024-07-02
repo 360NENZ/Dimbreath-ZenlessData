@@ -1,0 +1,25 @@
+{
+  "AbilityName": "ThugBulkyEnforcer_AttackLanded",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "SendBehaviorTreeEventAction",
+        "EventName": "AttackLanded",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ThugBulkyEnforcer_Attackproperty_ATK1",
+              "Monster_ThugBulkyEnforcer_Attackproperty_ATK2_2",
+              "Monster_ThugBulkyEnforcer_Attackproperty_ATK3_2",
+              "Monster_ThugBulkyEnforcer_Attackproperty_ATK4",
+              "Monster_ThugBulkyEnforcer_Attackproperty_ATK5_1",
+              "Monster_ThugBulkyEnforcer_Attackproperty_ATK5_2_2"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

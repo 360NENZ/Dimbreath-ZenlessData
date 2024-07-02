@@ -1,0 +1,63 @@
+{
+  "AbilityName": "CenterControl_Rotate",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 41
+    },
+    "RotateType": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "StartRotateModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": "%RotateType",
+          "ParamName": "Int_RotateType",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_StartRotate",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "StopRotateModifier": {
+      "Duration": "%Duration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_EndRotate",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "StartRotateModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "StartRotateModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "StopRotateModifier",
+      "Target": "Self"
+    }
+  ]
+}

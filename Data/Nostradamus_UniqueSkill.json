@@ -1,0 +1,191 @@
+{
+  "AbilityName": "Nostradamus_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_DefenceRatio": {
+      "Value": 0.5
+    },
+    "AS_Duration": {
+      "Value": 1.5
+    },
+    "AS_PairA_Duration": {
+      "Value": 1.5
+    },
+    "Actor_AddedDamageRatio_Ether": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NosUniqueDebuffModifier_Nostradamus_UniqueSkill",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NosPairADebuffModifier_Nostradamus_UniqueSkill",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          },
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NosUniqueDebuffModifier_Nostradamus_UniqueSkill_BuffIcon",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByMathSkillSuccess"
+              }
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NosPairADebuffModifier_Nostradamus_UniqueSkill_BuffIcon",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          },
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "NosPairADebuffModifier_Nostradamus_UniqueSkill": {
+      "Duration": "%AS_PairA_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ether"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%Actor_AddedDamageRatio_Ether",
+          "Target": "Self"
+        }
+      ]
+    },
+    "NosPairADebuffModifier_Nostradamus_UniqueSkill_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000012,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace"
+    },
+    "NosUniqueDebuffModifier_Nostradamus_UniqueSkill": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_DefenceRatio": "%AS_DefenceRatio"
+      }
+    },
+    "NosUniqueDebuffModifier_Nostradamus_UniqueSkill_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000011,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace"
+    }
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Nostradamus_Attack_Branch_01_AttackProperty_02",
+                "Nostradamus_Attack_Branch_01_Explosion_AttackProperty_01",
+                "Nostradamus_Attack_Branch_02_AttackProperty_02",
+                "Nostradamus_Attack_Branch_02_Explosion_AttackProperty_01",
+                "Nostradamus_Attack_Branch_02_Explosion_AttackProperty_02",
+                "Nostradamus_Attack_QTE_Explosion_AttackProperty_01",
+                "Nostradamus_Attack_SwitchIn_Attack_Ex_Explosion_AttackProperty_01",
+                "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_01",
+                "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_02",
+                "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_03",
+                "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_01",
+                "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_02",
+                "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_03",
+                "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_04",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_01",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_02",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_03",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_04",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_05",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_06",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_07",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_08",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_09",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_10",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_11",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_12",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_13",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_14",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_15",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_16",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_17",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_18",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_19",
+                "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_20",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_01",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_02",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_03",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_04",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_05",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_06",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_07",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_08",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_09",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_10",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_11",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_12",
+                "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_13"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

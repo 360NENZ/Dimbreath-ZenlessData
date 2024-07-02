@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Electro_2000510",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio_Elec": "%AddedDamageRatio"
+    }
+  }
+}

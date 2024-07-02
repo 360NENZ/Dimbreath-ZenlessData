@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Anton_Talent_04",
+  "AbilitySpecials": {
+    "AS_BuffStacks": {
+      "Value": 0
+    },
+    "AS_ModifierDuration": {
+      "Value": 30
+    },
+    "AS_SingleStackAtkRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnPatternAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AntonDmgBuffStackModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "DriveAttack"
+            ]
+          },
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AntonDmgBuffStackModifier": {
+      "Duration": "%AS_ModifierDuration",
+      "MaxStackingNumber": 6,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Anton_Attack_Normal_Enhance_01_AttackProperty_01",
+                "Anton_Attack_Normal_Enhance_01_AttackProperty_02",
+                "Anton_Attack_Normal_Enhance_01_AttackProperty_03",
+                "Anton_Attack_Normal_Enhance_01_AttackProperty_04",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_01",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_02",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_03",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_04",
+                "Anton_Attack_Normal_Enhance_04_AttackProperty_01_01",
+                "Anton_Attack_Normal_Enhance_04_AttackProperty_01_02",
+                "Anton_Attack_Normal_Enhance_04_AttackProperty_02",
+                "Anton_Attack_Counter_02_AttackProperty_01_01",
+                "Anton_Attack_Counter_02_AttackProperty_01_02",
+                "Anton_Attack_Counter_02_AttackProperty_01_03",
+                "Anton_Attack_Counter_02_AttackProperty_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_SingleStackAtkRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

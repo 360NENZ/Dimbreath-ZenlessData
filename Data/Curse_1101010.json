@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Curse_1101010",
+  "AbilitySpecials": {
+    "AS_MaxHPRatio": {
+      "Value": 0
+    },
+    "AS_StunDestroyRecoverRate_Ratio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_MaxHPRatio": "%AS_MaxHPRatio",
+      "Actor_StunDestroyRecoverRate_Ratio": "%AS_StunDestroyRecoverRate_Ratio"
+    }
+  }
+}

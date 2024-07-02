@@ -1,0 +1,65 @@
+{
+  "AbilityName": "GamePlayChasing_FollowerSpawnPerform_LongPhase",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Monster_Spawn_CameraAim",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Monster_Spawn_CameraAim": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ActCameraShotAction",
+          "CameraShotKey": "Test_Level_GamePlay_FollowerSpawn_Aim_LongPhase",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Trigger_Skill06",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Trigger_Skill06": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Arlaune_Escape_Boom_SFX",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 6,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Monster_Spawn_CameraAim",
+      "Target": "Self"
+    }
+  ]
+}

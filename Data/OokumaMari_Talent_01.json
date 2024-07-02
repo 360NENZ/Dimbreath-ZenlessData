@@ -1,0 +1,65 @@
+{
+  "AbilityName": "OokumaMari_Talent_01",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio_Talent_01": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "OokumaMari_Attack_Branch_01_Explode_AttackProperty_01",
+              "OokumaMari_Attack_Branch_02_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_Branch_01_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_Branch_02_Explode_AttackProperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimatorStateNormalizedTime",
+                "AnimatorStateName": "Attack_Branch_01_Explode",
+                "LayerIndex": 0,
+                "NormalizedTimeHigh": 1.0,
+                "NormalizedTimeLow": 0.0
+              },
+              {
+                "$type": "ByAnimatorStateNormalizedTime",
+                "AnimatorStateName": "Attack_Branch_02_Explode",
+                "LayerIndex": 0,
+                "NormalizedTimeHigh": 1.0,
+                "NormalizedTimeLow": 0.0
+              },
+              {
+                "$type": "ByAnimatorStateNormalizedTime",
+                "AnimatorStateName": "CoAttack_Branch_01_Explode",
+                "LayerIndex": 0,
+                "NormalizedTimeHigh": 1.0,
+                "NormalizedTimeLow": 0.0
+              },
+              {
+                "$type": "ByAnimatorStateNormalizedTime",
+                "AnimatorStateName": "CoAttack_Branch_02_Explode",
+                "LayerIndex": 0,
+                "NormalizedTimeHigh": 1.0,
+                "NormalizedTimeLow": 0.0
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio_Talent_01",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "AbilityName": "FierySerpent_Teleport__1_LockOnPoint",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "FierySerpent_TeleportPoint_1",
+      "Target": "Self",
+      "TargetPosRot": {
+        "CoordsOption": "Target",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.5
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 2.0,
+            "y": 0.0,
+            "z": 2.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "LocalAvatar"
+        }
+      }
+    }
+  ]
+}

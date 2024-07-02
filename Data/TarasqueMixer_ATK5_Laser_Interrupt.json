@@ -1,0 +1,68 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_5",
+          "FrameCountHigh": 580,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LaserInterruptModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_5_End",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LaserInterruptModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "TarasqueMixer_ATK5_Laser_Interrupt",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LaserInterruptModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_AttackLanded",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 0,
+              "AngleMin": -180
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptLaserAction",
+          "Tag": "TarasqueMixer_ATK5_Laser"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_TarasqueMixer_MA_Attack_05_Mat02_SecondaryEmission_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

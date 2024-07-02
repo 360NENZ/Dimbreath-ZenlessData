@@ -1,0 +1,128 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 59,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CamEndModifier",
+            "QTEEndModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Cryboo_BangbooQTE_AnimEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CamEndModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "Modifierstacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Cryboo_SwitchIn_Attack_CamZoom_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Cryboo_SwitchIn_Attack_CamZoom_02"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Cryboo_SwitchIn_Attack_CamZoom_03"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Cryboo_SwitchIn_Attack_CamStretch_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Cryboo_SwitchIn_Attack_CamStretch_02"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Cryboo_SwitchIn_Attack_CamStretch_03"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Cryboo_SwitchIn_Attack_CameraOverrideTrack_01"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Cryboo_SwitchIn_Attack_CameraOverrideTrack_02"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Cryboo_SwitchIn_Attack_CameraOverrideTrack_03"
+        }
+      ]
+    },
+    "IgnoreQTEHideUIModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AfterBangbooQTE"
+          ],
+          "IsAdd": true,
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AfterBangbooQTE"
+          ],
+          "IsAdd": false,
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "QTEEndModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "Modifierstacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "BangbooQTEEndAction",
+          "AvatarAidAttackBackUpLockTargetID": "Player_Default_LockTarget_01",
+          "AvatarAidAttackLockTargetID": "QTE_Tick_LockTarget_01",
+          "IsCommonAid": true,
+          "OverrideSwitchInIndex": 10,
+          "Predicates": [
+            {
+              "$type": "ByIsInBuddyQTE",
+              "IsInBuddyQTE": true,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IgnoreQTEHideUIModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InBangbooQTE"
+          ],
+          "IsAdd": false,
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

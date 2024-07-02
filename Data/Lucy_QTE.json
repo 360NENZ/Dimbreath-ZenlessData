@@ -1,0 +1,604 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BatHitModifier02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 27,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_QTE_BulletType_10_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BatHitModifier01",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 28,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BatHitModifier03",
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_QTE_BulletType_10_00",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 29,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_QTE_BulletType_10_02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 30,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LockWoodModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_QTE",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BatHitModifier01": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lucy_SwitchIn_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ModifierName": "HitTriggerModifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Lucy_Attack_SwitchIn_Attack_AttackProperty_Ally_01_01",
+          "Attacker": "Self",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "BatHitModifier02": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lucy_SwitchIn_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ModifierName": "HitTriggerModifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Lucy_Attack_SwitchIn_Attack_AttackProperty_Ally_01_02",
+          "Attacker": "Self",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "Target": "Custom"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Encourage",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_Encourage_HighBallTime",
+              "Value": 0,
+              "ValueType": "Float"
+            },
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 4,
+              "ValueType": "Integer"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 2,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BatHitModifier03": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lucy_SwitchIn_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ModifierName": "HitTriggerModifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Lucy_Attack_SwitchIn_Attack_AttackProperty_Ally_01_03",
+          "Attacker": "Self",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "ControllerModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_ShowandHide",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 2,
+              "ValueType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 10,
+          "ParamName": "Int_SwitchType_In",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Switch_In",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitTriggerModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_BeHit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "LockWoodModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "Ctr_Pig01_Root",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": false,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "Ctr_Pig02_Root",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": false,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "Ctr_Pig03_Root",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": false,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Custom"
+        }
+      ]
+    },
+    "Wood00Modifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "IntVal": 0,
+          "ParamName": "Int_JumpIndex",
+          "ParamType": 3,
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ModifierName": "ControllerModifier",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "Wood01Modifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "IsAdd": true,
+          "Target": "Custom"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "IsAdd": true,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "IntVal": 1,
+          "ParamName": "Int_JumpIndex",
+          "ParamType": 3,
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ModifierName": "ControllerModifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ParamName": "Bool_WoodShow",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "Wood02Modifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "IsAdd": true,
+          "Target": "Custom"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "IsAdd": true,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "IntVal": 2,
+          "ParamName": "Int_JumpIndex",
+          "ParamType": 3,
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ModifierName": "ControllerModifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ParamName": "Bool_WoodShow",
+          "Target": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Wood00Modifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Wood01Modifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Wood02Modifier",
+      "Target": "Self"
+    }
+  ]
+}

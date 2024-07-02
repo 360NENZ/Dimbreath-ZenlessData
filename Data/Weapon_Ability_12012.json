@@ -1,0 +1,63 @@
+{
+  "AbilityName": "Weapon_Ability_12012",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 12.0
+    },
+    "AS_SpRecover": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SpRecoverModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Electric",
+                "Overload",
+                "Strike",
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "SpRecoverModifier": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

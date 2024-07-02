@@ -1,0 +1,288 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "DestructionMixin",
+      "BeHitFailedActions": [],
+      "BeHitSuccessActions": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "%Destruction_BeHit_FireEffect_EffectPattern_0",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "NotNullOrEmpty",
+              "ParamName": "Destruction_BeHit_FireEffect_EffectPattern_0",
+              "ParamType": "String",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "%Destruction_BeHit_FireEffect_EffectPattern_1",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "NotNullOrEmpty",
+              "ParamName": "Destruction_BeHit_FireEffect_EffectPattern_1",
+              "ParamType": "String",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "%Destruction_BeHit_FireEffect_EffectPattern_2",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "NotNullOrEmpty",
+              "ParamName": "Destruction_BeHit_FireEffect_EffectPattern_2",
+              "ParamType": "String",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "%Destruction_BeHit_FireAudio_AudioPattern",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "NotNullOrEmpty",
+              "ParamName": "Destruction_BeHit_FireAudio_AudioPattern",
+              "ParamType": "String",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": false,
+              "Target": "Other"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Other",
+              "CompareType": "LessEqual",
+              "Distance": "%Destruction_BeHit_MaxDistance_Pattern",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": 0,
+              "ParamName": "Destruction_BeHit_MaxDistance_Pattern",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsSolidProjectile",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Other"
+        },
+        {
+          "$type": "ByTargetGlobalValue",
+          "CompareType": "Equal",
+          "Key": "_Switching_Status",
+          "Target": "Self",
+          "Value": 0.0
+        }
+      ],
+      "SwitchStatusActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Switch_Status",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetGlobalValue",
+          "Key": "_Switching_Status",
+          "Value": 1.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "EhterContainer_Default",
+  "AbilitySpecials": {
+    "Destruction_BeHit_FireAudio_AudioPattern": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_BeHit_FireEffect_EffectPattern_0": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_BeHit_FireEffect_EffectPattern_1": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_BeHit_FireEffect_EffectPattern_2": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_BeHit_MaxDistance_Pattern": {
+      "Value": 10
+    },
+    "Destruction_BeHit_RewardID_Pattern": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_Die_FireAudio_AudioPattern": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_Die_FireEffect_EffectPattern_0": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_Die_FireEffect_EffectPattern_1": {
+      "Value": "",
+      "ValueType": "String"
+    },
+    "Destruction_Die_FireEffect_EffectPattern_2": {
+      "Value": "",
+      "ValueType": "String"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Box_BuffModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetGlobalValue",
+        "Key": "_Switching_Status",
+        "Value": 0.0
+      }
+    ],
+    "OnKilled": [
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "%Destruction_Die_FireEffect_EffectPattern_0",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "NotNullOrEmpty",
+            "ParamName": "Destruction_Die_FireEffect_EffectPattern_0",
+            "ParamType": "String",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "%Destruction_Die_FireEffect_EffectPattern_1",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "NotNullOrEmpty",
+            "ParamName": "Destruction_Die_FireEffect_EffectPattern_1",
+            "ParamType": "String",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "%Destruction_Die_FireEffect_EffectPattern_2",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "NotNullOrEmpty",
+            "ParamName": "Destruction_Die_FireEffect_EffectPattern_2",
+            "ParamType": "String",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "%Destruction_Die_FireAudio_AudioPattern",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "NotNullOrEmpty",
+            "ParamName": "Destruction_Die_FireAudio_AudioPattern",
+            "ParamType": "String",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_Die",
+        "ParamType": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetGlobalValue",
+        "Key": "_Switching_Status",
+        "Value": 1.0
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DelayDieModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Box_BuffModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ]
+        }
+      ]
+    },
+    "DelayDieModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.13,
+          "TimeUpActions": [
+            {
+              "$type": "DropItemAction",
+              "DropStr": "%Destruction_BeHit_RewardID_Pattern",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Switching_Status",
+      "Value": 0.0
+    }
+  ]
+}

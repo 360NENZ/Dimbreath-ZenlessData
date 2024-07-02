@@ -1,0 +1,130 @@
+{
+  "AbilityName": "Card_Froze_2001107",
+  "AbilitySpecials": {
+    "AS_FrozenAddCount": {
+      "Value": 50
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Froze_2001100",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": "AS_FrozenAddCount",
+                  "ParamName": "AS_FrozenBuffCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "ExQTE"
+              ]
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_FrozenAddCount",
+                  "ParamName": "AS_AddFrozenBuffIconCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "ExQTE"
+              ]
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ]
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Froze_2001100",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "ExQTE"
+              ]
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_01",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "ExQTE"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

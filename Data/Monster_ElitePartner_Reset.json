@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Monster_ElitePartner_Reset",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ResetMessageModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "isPartnerAttacking",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Monster_ElitePartner",
+      "ModifierName": "ResetMessageModifier",
+      "Predicates": [
+        {
+          "$type": "ByMonsterStrengthType",
+          "CompareType": "GreaterEqual",
+          "StrengthType": "Elite"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

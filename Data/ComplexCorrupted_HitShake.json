@@ -1,0 +1,150 @@
+{
+  "AbilityName": "ComplexCorrupted_HitShake",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 7,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Int_HitPartIndex",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Chain"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_OnPartHit",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Chain"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 8,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Int_HitPartIndex",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Drill"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_OnPartHit",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Drill"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 10,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Int_HitPartIndex",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Claw"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_OnPartHit",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Claw"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectOwner": "Target",
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Hit_Shake_TailClaw_01",
+        "FireEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Ctr_TailClaw_01",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "MpExecMode": "MpTotallyLocal",
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitColliderList": [
+              "HitCollider_Claw"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

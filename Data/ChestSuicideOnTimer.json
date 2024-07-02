@@ -1,0 +1,33 @@
+{
+  "AbilityName": "ChestSuicideOnTimer",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DieModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DieModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 15,
+          "TimeUpActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Die",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

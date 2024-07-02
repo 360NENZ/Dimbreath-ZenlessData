@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Curse_1101011",
+  "AbilitySpecials": {
+    "AS_AbnormalResistRatio": {
+      "Value": -0.3
+    },
+    "AS_StunDamageTakeRatio": {
+      "Value": -0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AbnormalResistDelta_Elec": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Ether": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Fire": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Ice": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Physics": "%AS_AbnormalResistRatio",
+      "Actor_StunDamageTakeRatio": "%AS_StunDamageTakeRatio"
+    }
+  }
+}

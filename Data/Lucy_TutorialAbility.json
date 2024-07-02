@@ -1,0 +1,75 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest1Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 39,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest2Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Straight",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest2Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Early",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_TutorialAbility",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Quest1Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Lucy_1"
+        }
+      ]
+    },
+    "Quest2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Lucy_2"
+        }
+      ]
+    }
+  }
+}

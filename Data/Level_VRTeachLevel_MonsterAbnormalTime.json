@@ -1,0 +1,55 @@
+{
+  "AbilityName": "Level_VRTeachLevel_MonsterAbnormalTime",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalTimeModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbnormalTimeModifier": {
+      "BuffRevises": [
+        {
+          "FilterType": "ByBuffGroup",
+          "GroupName": "Electric",
+          "Params": [
+            {
+              "Delta": 10,
+              "Name": "Duration"
+            }
+          ]
+        },
+        {
+          "FilterType": "ByBuffGroup",
+          "GroupName": "Overload",
+          "Params": [
+            {
+              "Delta": 10,
+              "Name": "Duration"
+            }
+          ]
+        },
+        {
+          "FilterType": "ByBuffGroup",
+          "GroupName": "Strike",
+          "Params": [
+            {
+              "Delta": 10,
+              "Name": "Duration"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedElementAccumulationRatio": 5.0
+      }
+    }
+  }
+}

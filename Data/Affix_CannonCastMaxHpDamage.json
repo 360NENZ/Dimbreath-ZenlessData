@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Affix_CannonCastMaxHpDamage",
+  "AbilitySpecials": {
+    "HPPercentage": {
+      "Value": 0.01
+    },
+    "PercentageMaxHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "PercentageMaxHP",
+        "Percentage": "%HPPercentage",
+        "PropertyType": "MaxHP",
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AttackProperty": {
+          "AddedDamageValue": "%PercentageMaxHP"
+        },
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "LessEqual",
+            "StrengthType": "Boss",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Cannon"
+            ]
+          }
+        ],
+        "Target": "SelfAttackTarget"
+      }
+    ]
+  }
+}

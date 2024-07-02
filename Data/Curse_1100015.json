@@ -1,0 +1,102 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "IllusionMixin",
+      "AddLimit": 3,
+      "AddTime": 1,
+      "Block": 1.5,
+      "BreakActions": [
+        {
+          "$type": "InterruptScreenEffectAction",
+          "ScreenEffectType": "ScreenEffects",
+          "TargetKey": "Effects_Curse_001_ScreenEffects_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_Glitch_01",
+          "EffectType": "Glitch"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "InterruptSetupUIAction",
+          "IgnoreFadeAnimation": false,
+          "SetupTag": "Curse_1100015_SetupTag"
+        }
+      ],
+      "Duration": 5,
+      "EndActions": [
+        {
+          "$type": "InterruptScreenEffectAction",
+          "ScreenEffectType": "ScreenEffects",
+          "TargetKey": "Effects_Curse_001_ScreenEffects_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_Glitch_01",
+          "EffectType": "Glitch"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "InterruptSetupUIAction",
+          "IgnoreFadeAnimation": false,
+          "SetupTag": "Curse_1100015_SetupTag"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Curse_1100015",
+          "IsOpenBlock": true,
+          "ModifierName": "StunUp"
+        }
+      ],
+      "Predicates": [],
+      "StartActions": [
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_ScreenEffects_01",
+          "EffectType": "ScreenEffects"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_Glitch_01",
+          "EffectType": "Glitch"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Effects_Curse_001_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "SetupUIAction",
+          "HideUITags": [
+            "UpToolbar",
+            "InLevelMonsterHudItem",
+            "InLevelMonsterHudWidget"
+          ],
+          "IgnoreFadeAnimation": false,
+          "Priority": 0,
+          "SetupTag": "Curse_1100015_SetupTag"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Curse_1100015",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_DamageTakeRatio": "%DamageTakeRatio"
+    }
+  }
+}

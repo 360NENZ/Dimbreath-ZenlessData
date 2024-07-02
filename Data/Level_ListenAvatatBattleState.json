@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Level_ListenAvatatBattleState",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": -1,
+    "IgnoreTimeScale": true,
+    "ModifierStacking": "Unique",
+    "OnBattleEnter": [
+      {
+        "$type": "LDListenEntityAction",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "TargetKey": "5010311_AvatarEnterBattle"
+      },
+      {
+        "$type": "LogStringAction",
+        "LogStr": "123",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "LDListenEntityAction",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "TargetKey": "5010311_AvatarExitBattle"
+      },
+      {
+        "$type": "LogStringAction",
+        "LogStr": "321",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

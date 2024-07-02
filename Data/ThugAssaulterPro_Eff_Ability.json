@@ -1,0 +1,46 @@
+{
+  "AbilityName": "ThugAssaulterPro_Eff_Ability",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "ThugAssaulter_Weapon",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "EffectPattern": "Eff_Monster_ThugAssaulter_Attack_03_GlowMod_01",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Promote"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

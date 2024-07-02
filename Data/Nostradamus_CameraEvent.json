@@ -1,0 +1,85 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start_1",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_02_Start"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_02_Start"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Cancel",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_02_Start"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_02_Start"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Fire",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_02_Start"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nostradamus_CameraEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CameraEventModifier_Attack_Branch_02_Start": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Nostradamus_Attack_Branch_02_Start_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Nostradamus_Attack_Branch_02_Start_CamStretch_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Nostradamus_Attack_Branch_02_Start_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Nostradamus_Attack_Branch_02_Start_CamStretch_01"
+        }
+      ]
+    }
+  }
+}

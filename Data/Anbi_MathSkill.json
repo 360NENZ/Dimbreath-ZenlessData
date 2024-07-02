@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Anbi_MathSkill",
+  "AbilitySpecials": {
+    "AS_SpRecoverFinal": {
+      "Value": 5.0
+    },
+    "AS_SpRecover_CD": {
+      "Value": 5.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverEnergyModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Counter"
+            ]
+          },
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RecoverEnergyModifier": {
+      "Duration": "%AS_SpRecover_CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecoverFinal",
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Shadow_2001401",
+  "AbilitySpecials": {
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio"
+    }
+  }
+}

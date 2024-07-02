@@ -1,0 +1,151 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 18,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_01_Block",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_02_Block",
+          "FrameCountHigh": 81,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_01_Release",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_02_Release",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ben_SignatureWeapon",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SignatureLightWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyIndicatedLightAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "indicatedLightKey": "Ben_IndicatedLight"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveIndicatedLightAction",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SignatureMaterialWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Ben_Face"
+            }
+          ],
+          "Tag": "Avatar_Male_Size03_Ben_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Male_Size03_Ben_MA_SignatureWeapon_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Male_Size03_Ben_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

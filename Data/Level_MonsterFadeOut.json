@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Level_MonsterFadeOut",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "DelayHandlers": [
+      {
+        "DelayTime": 0.5,
+        "TimeUpActions": [
+          {
+            "$type": "PushEntityVisibleWithTagAction",
+            "Tag": "Level_MonsterFade",
+            "Visible": false
+          },
+          {
+            "$type": "RemoveAbilityAction",
+            "AbilityName": "Level_MonsterFadeOut",
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "Duration": 1.0,
+    "IgnoreTimeScale": false,
+    "ModifierStacking": "MultipleRefresh",
+    "OnAdded": [
+      {
+        "$type": "DitherFadeAction",
+        "DitherFadeKey": "Monster_Default_Dither_Fade",
+        "Tag": "Level_MonsterFade",
+        "Target": "Self"
+      }
+    ]
+  }
+}

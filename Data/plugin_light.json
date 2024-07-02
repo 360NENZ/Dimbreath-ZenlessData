@@ -1,0 +1,45 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "plugin_light",
+  "Plugin": [
+    {
+      "$type": "CHollowLightPluginConfig",
+      "BaseNoise": [
+        "EventIcon_LightBackground"
+      ],
+      "Ghost": [
+        {
+          "$type": "CHollowGhostConfig",
+          "DistanceToLight": {
+            "x": 2,
+            "y": 3
+          },
+          "Frequency": {
+            "x": 3,
+            "y": 8
+          }
+        }
+      ],
+      "GhostTextureKey": "EventIcon_AtmosphereGhost_ForAdd",
+      "LightNoise": [
+        "EventIcon_LightBackground"
+      ],
+      "NPCDefaultLightLevel": -1,
+      "PlayerDefaultLightLevel": 1
+    },
+    {
+      "$type": "CChessboardGhostConfig",
+      "GhostLightRenderConfigKey": "TestGhost"
+    },
+    {
+      "$type": "COverwriteSwitchEffectConfig",
+      "Close": "UI/3D/Hollow/TVEffects/Hollow_TV_Close_Chapter03",
+      "Open": "UI/3D/Hollow/TVEffects/Hollow_TV_Open_Chapter03",
+      "Switch": "UI/3D/Hollow/TVEffects/Hollow_TV_Switch_Chapter03"
+    },
+    {
+      "$type": "CChessboardAtmosphere",
+      "key": "Chapter03_Skyscraper_Common"
+    }
+  ]
+}

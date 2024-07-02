@@ -1,0 +1,42 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Run_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AudioModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Spider_Audio_Move",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AudioModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_Monster_Spider_Run_Loop"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Stop_Monster_Spider_Run_Loop"
+        }
+      ]
+    }
+  }
+}

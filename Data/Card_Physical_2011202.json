@@ -1,0 +1,216 @@
+{
+  "AbilityName": "Card_Physical_2011202",
+  "AbilitySpecials": {
+    "AS_CurHP": {
+      "Value": 0
+    },
+    "AS_CurHPRatio": {
+      "Value": 0
+    },
+    "AS_ExcuteRatio_Boss": {
+      "Value": 0.1
+    },
+    "AS_ExcuteRatio_Elite": {
+      "Value": 0.3
+    },
+    "AS_ExcuteRatio_Normal": {
+      "Value": 0.5
+    },
+    "AS_MaxHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "#Card_Physical_2011202_WhenStrike",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "GreaterEqual",
+            "CountModifierType": "GlobalAbility",
+            "ModifierName": "CanExcuteModifier",
+            "StackCount": 1,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnBuffDamageHitOtherPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TryExcuteModifier",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "GreaterEqual",
+            "CountModifierType": "GlobalAbility",
+            "ModifierName": "CanExcuteModifier",
+            "StackCount": 1,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "#Card_Physical_2011202_WhenStrike"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_Hiisazu",
+        "PropertyValue": 1,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CanExcuteModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique"
+    },
+    "TryExcuteModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_CurHP",
+          "Percentage": 0.01,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_MaxHP",
+          "Percentage": 0.01,
+          "PropertyType": "MaxHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_CurHPRatio",
+          "Percentage": 0.01,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Div",
+          "Param": "%AS_MaxHP",
+          "ParamName": "AS_CurHPRatio",
+          "ParamType": "Float",
+          "Target": "Caster"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CanExcuteModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByExcuteCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByExcuteCondition": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Boss",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "LessEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "Self",
+                  "Val1": "%AS_ExcuteRatio_Boss"
+                }
+              ]
+            },
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Elite",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "LessEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "Self",
+                  "Val1": "%AS_ExcuteRatio_Elite"
+                }
+              ]
+            },
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Normal",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "LessEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "Self",
+                  "Val1": "%AS_ExcuteRatio_Normal"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

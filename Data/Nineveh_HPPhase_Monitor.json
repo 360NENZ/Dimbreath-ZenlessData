@@ -1,0 +1,50 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "RefPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "IntParamValue": 2,
+                  "ParamName": "HPPhase",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.8
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "IntParamValue": 3,
+                  "ParamName": "HPPhase",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.35
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_HPPhase_Monitor",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "WriteAIParamAction",
+        "IntParamValue": 1,
+        "ParamName": "HPPhase",
+        "Target": "Self"
+      }
+    ]
+  }
+}

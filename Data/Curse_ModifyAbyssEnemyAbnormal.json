@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Curse_ModifyAbyssEnemyAbnormal",
+  "AbilitySpecials": {
+    "AS_AbnormalResistRatio": {
+      "Value": 0
+    },
+    "AS_MaxHpRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AbnormalResistDelta_Elec": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Ether": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Fire": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Ice": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Physics": "%AS_AbnormalResistRatio",
+      "Actor_MaxHPRatio": "%AS_MaxHpRatio"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "AbilityName": "Card_Medical_1000608",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 10
+    },
+    "Duration": {
+      "Value": 10
+    },
+    "HpPercentage": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Controller",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvatarLockLifeModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "DeltaLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ],
+          "OnLifeLockedActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Whosyourdaddy",
+              "Target": "Self"
+            }
+          ],
+          "PerformBeHitEffect": true
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "Controller": {
+      "Block": -1,
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AvatarLockLifeModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AvatarLockLifeModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AvatarLockLifeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "PropModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Whosyourdaddy": {
+      "Duration": 0.7,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Player_LowHP_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Player_LowHP_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Player_LowHP_CamStretch_01"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_Glitch_01",
+          "EffectType": "Glitch"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_Medical_1000608",
+          "IsOpenBlock": true,
+          "ModifierName": "Controller"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AvatarLockLifeModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PropModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "Player_LowHP_TimeSlow_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Player_LowHP_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Player_LowHP_CamStretch_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "Player_LowHP_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Player_LowHP_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Glitch",
+          "TargetKey": "Player_LowHP_Glitch_01"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Percentage": "%HpPercentage",
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Whosyourdaddy",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

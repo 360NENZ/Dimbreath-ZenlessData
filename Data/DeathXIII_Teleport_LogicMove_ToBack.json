@@ -1,0 +1,177 @@
+{
+  "AbilityName": "DeathXIII_Teleport_LogicMove_ToBack",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RandomOperator",
+      "Odds": 0.5,
+      "OnFailure": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "DefaultOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -5.0
+            },
+            "Duration": 0.3,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": true,
+              "NeedRayCastGround": true
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "Target",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -5.0
+                },
+                "RandomAngleRange": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "RandomPositionRange": {
+                  "x": 5.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Stop"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnSuccess": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "DefaultOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 4.0
+            },
+            "Duration": 0.3,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": true,
+              "NeedRayCastGround": true
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "Camera",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -4.0
+                },
+                "RandomAngleRange": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "RandomPositionRange": {
+                  "x": 5.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Stop"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

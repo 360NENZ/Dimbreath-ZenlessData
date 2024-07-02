@@ -1,0 +1,1105 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_04_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 117,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_06",
+          "FrameCountHigh": 55,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_Outline_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_SecondaryEmission_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_05",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_03_SecondaryEmission_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 40,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 40,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04",
+            "MaterialPropertyModifier_CoAttack_04_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04",
+            "MaterialPropertyModifier_CoAttack_04_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_04",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04",
+            "MaterialPropertyModifier_CoAttack_04_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_04",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_CoAttack_04",
+            "MaterialPropertyModifier_CoAttack_04_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_01",
+          "FrameCountHigh": 450,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_ReviveLoop"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_02",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_ReviveLoop"
+          ]
+        },
+        {
+          "AnimatorStateName": "BreakDown_Revive",
+          "FrameCountHigh": 190,
+          "FrameCountLow": 150,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Revived"
+          ]
+        },
+        {
+          "AnimatorStateName": "BreakDown_Stay",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_NoDamage"
+          ]
+        },
+        {
+          "AnimatorStateName": "BreakDown_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_NoDamage"
+          ]
+        },
+        {
+          "AnimatorStateName": "BreakDown_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_NoDamage"
+          ]
+        },
+        {
+          "AnimatorStateName": "BreakDown_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_NoDamage"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 21,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_06",
+          "FrameCountHigh": 55,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 21,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_04",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_PostProcessingEffect_CoAttack_03"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_VFX",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LampasBlackVeil_Body_HeadPoint_SFX",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LampasBlackVeil_Body_HeadPoint_SFX": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_Head",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Common_Ether_Demote_HeadPoint_01",
+          "EffectScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_Attack_04": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_03"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Attack_04_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Attack_04_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_02"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Attack_04_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Attack_04_Mat02_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_01"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Attack_04_Mat03_ScreenImage_03",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Attack_04_Mat03_ScreenImage_03"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Attack_04_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Attack_04_Mat02_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Attack_04_Mat03_ScreenImage_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_CoAttack_03_Outline_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_03_A_01_OverrideOutline_01",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_03_A_01_OverrideOutline_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_03_A_01_OverrideOutline_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_CoAttack_03_Outline_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_03_B_01_OverrideOutline_02",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_03_B_01_OverrideOutline_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_03_B_01_OverrideOutline_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_CoAttack_03_SecondaryEmission_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_03"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_03_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_03_Mat01_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_03_Mat01_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_CoAttack_04": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_03"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat01_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_02"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat02_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_01"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_01"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_01"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat03_ScreenImage_03",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat03_ScreenImage_03"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat01_SecondaryEmission_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat02_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat03_ScreenImage_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_CoAttack_04_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat04_OverrideOutline_04",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat04_OverrideOutline_04"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_CoAttack_04_Mat04_OverrideOutline_04",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_ReviveLoop": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_02"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_13",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_13"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_04"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_04"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_SecondaryEmission_14",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_SecondaryEmission_14"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_15",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_15"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_01"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_OverrideOutline_16",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_OverrideOutline_16"
+        },
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Monster_LampasBlackVeil_Revive_03_Loop",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_13",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_SecondaryEmission_14",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_15",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_OverrideOutline_16",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_Revived": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_02"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_13",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_13"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_03"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasBlackVeil_04"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "LampasGrayVeil_04"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_SecondaryEmission_14",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_SecondaryEmission_14"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_15",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_15"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lampas_Share_01"
+            }
+          ],
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_OverrideOutline_16",
+          "Target": "Self",
+          "key": "Monster_LampasBlackVeil_MA_Revived_OverrideOutline_16"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_13",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_SecondaryEmission_14",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_ScreenImage_15",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_LampasBlackVeil_MA_Revived_OverrideOutline_16",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_NoDamage": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoDamage",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoStun",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoElementAccumulation",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_PostProcessingEffect_CoAttack_03": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_LampasBlackVeil_CoAttack_03_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_LampasBlackVeil_CoAttack_03_ChromaticAberration_02",
+          "EffectType": "ChromaticAberration"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_LampasBlackVeil_CoAttack_03_FXFog_03",
+          "EffectType": "FXFog"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "Monster_LampasBlackVeil_CoAttack_03_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "ChromaticAberration",
+          "TargetKey": "Monster_LampasBlackVeil_CoAttack_03_ChromaticAberration_02"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "FXFog",
+          "TargetKey": "Monster_LampasBlackVeil_CoAttack_03_FXFog_03"
+        }
+      ]
+    },
+    "Modifier_ReviveLoop": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ModifierName": "MaterialPropertyModifier_ReviveLoop",
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ModifierName": "MaterialPropertyModifier_ReviveLoop",
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

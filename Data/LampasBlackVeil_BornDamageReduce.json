@@ -1,0 +1,37 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Born",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageTakeRatioModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_BornDamageReduce",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": -0.9,
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

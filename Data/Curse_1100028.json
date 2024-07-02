@@ -1,0 +1,165 @@
+{
+  "AbilityName": "Curse_1100028",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 0.1,
+      "ValueType": "Float"
+    },
+    "AS_FirstUltimateSkillReduceTime": {
+      "Value": 0.95,
+      "ValueType": "Float"
+    },
+    "AS_SubsequentUltimateSkillReduceTime": {
+      "Value": 0.95,
+      "ValueType": "Float"
+    },
+    "AS_SummonBeesCDReduceTime": {
+      "Value": 0.95,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Nineveh_UltimateSkill_Manager",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Mul",
+                "Param": "%AS_FirstUltimateSkillReduceTime",
+                "ParamName": "AS_FirstUltimateSkillCD",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Nineveh_UltimateSkill_Manager",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Mul",
+                "Param": "%AS_SubsequentUltimateSkillReduceTime",
+                "ParamName": "AS_SubsequentUltimateSkillCD",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Nineveh_SummonBees_Manager",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Mul",
+                "Param": "%AS_SummonBeesCDReduceTime",
+                "ParamName": "AS_FirstSummonBeesCD",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Nineveh_SummonBees_Manager",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Mul",
+                "Param": "%AS_SummonBeesCDReduceTime",
+                "ParamName": "AS_SummonBeesCD_Long",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Nineveh_SummonBees_Manager",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Mul",
+                "Param": "%AS_SummonBeesCDReduceTime",
+                "ParamName": "AS_SummonBeesCD_Short",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnCustomEventReceived": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "Nineveh_Initialization_Done"
+          }
+        ],
+        "FailureActions": [],
+        "SuccessActions": [
+          {
+            "$type": "SetTargetAbilitySpecialAction",
+            "Params": [
+              {
+                "AbilityName": "Nineveh_UltimateSkill_Manager",
+                "AbilitySpecials": [
+                  {
+                    "ModifyFunction": "Mul",
+                    "Param": "%AS_FirstUltimateSkillReduceTime",
+                    "ParamName": "AS_FirstUltimateSkillCD",
+                    "ParamType": "Float"
+                  }
+                ]
+              },
+              {
+                "AbilityName": "Nineveh_UltimateSkill_Manager",
+                "AbilitySpecials": [
+                  {
+                    "ModifyFunction": "Mul",
+                    "Param": "%AS_SubsequentUltimateSkillReduceTime",
+                    "ParamName": "AS_SubsequentUltimateSkillCD",
+                    "ParamType": "Float"
+                  }
+                ]
+              },
+              {
+                "AbilityName": "Nineveh_SummonBees_Manager",
+                "AbilitySpecials": [
+                  {
+                    "ModifyFunction": "Mul",
+                    "Param": "%AS_SummonBeesCDReduceTime",
+                    "ParamName": "AS_FirstSummonBeesCD",
+                    "ParamType": "Float"
+                  }
+                ]
+              },
+              {
+                "AbilityName": "Nineveh_SummonBees_Manager",
+                "AbilitySpecials": [
+                  {
+                    "ModifyFunction": "Mul",
+                    "Param": "%AS_SummonBeesCDReduceTime",
+                    "ParamName": "AS_SummonBeesCD_Long",
+                    "ParamType": "Float"
+                  }
+                ]
+              },
+              {
+                "AbilityName": "Nineveh_SummonBees_Manager",
+                "AbilitySpecials": [
+                  {
+                    "ModifyFunction": "Mul",
+                    "Param": "%AS_SummonBeesCDReduceTime",
+                    "ParamName": "AS_SummonBeesCD_Short",
+                    "ParamType": "Float"
+                  }
+                ]
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AS_AddDamageRatio"
+    }
+  }
+}

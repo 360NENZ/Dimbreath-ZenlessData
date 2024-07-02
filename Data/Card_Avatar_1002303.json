@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Avatar_1002303",
+  "AbilitySpecials": {
+    "AS_AbnormalPowerDelta": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Card_1002303_AbnormalUp_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAvatarProfessionType",
+            "ProfessionType": "Anomaly",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card_1002303_AbnormalUp_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_ElementAbnormalPowerDelta": "%AS_AbnormalPowerDelta"
+      }
+    }
+  }
+}

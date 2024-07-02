@@ -1,0 +1,84 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_2",
+          "FrameCountHigh": 277,
+          "FrameCountLow": 115,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaknessModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Arlaune_Attack02Weakness",
+  "AbilitySpecials": {
+    "AS_PartStun": {
+      "Value": 100.0
+    },
+    "AS_PartStunRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxStun)*specials(AS_PartStunRatio)",
+        "ParamName": "AS_PartStun",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  },
+  "Modifiers": {
+    "WeaknessModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeAttackLanded": [
+        {
+          "$type": "RecoverStunAction",
+          "Amount": "%AS_PartStun",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

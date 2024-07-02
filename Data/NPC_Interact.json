@@ -1,0 +1,43 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "TriggerFieldMixin",
+      "CustomCamp": "TeamGood",
+      "FieldType": "Sphere",
+      "Follow": true,
+      "IncludeSelf": false,
+      "OnOtherEnter": [
+        {
+          "$type": "InteractEnableAction",
+          "Enable": true,
+          "Target": "Self"
+        }
+      ],
+      "OnOtherExit": [
+        {
+          "$type": "InteractEnableAction",
+          "Enable": false,
+          "Target": "Self"
+        }
+      ],
+      "Radius": "%InteractRadius",
+      "Targetting": "Allied",
+      "TriggerOnAdded": true,
+      "UseOwnerTeam": false
+    }
+  ],
+  "AbilityName": "NPC_Interact",
+  "AbilitySpecials": {
+    "InteractRadius": {
+      "Value": 5
+    }
+  },
+  "DefaultModifier": {
+    "OnInteractingItem": [
+      {
+        "$type": "DoInteractAction",
+        "Target": "Self"
+      }
+    ]
+  }
+}

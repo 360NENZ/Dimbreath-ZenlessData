@@ -1,0 +1,21 @@
+{
+  "AbilityName": "Device_Military_LaserFence_Remove_LaserBeam_TP01",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "Device_Military_LaserFence_LaserBeam_TP01",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "Device_Military_LaserFence_LaserBeam_TP01_ToMonster",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveAbilityAction",
+      "AbilityName": "Device_Military_LaserFence_LaserBeam_TP01_Perform",
+      "Target": "Self"
+    }
+  ]
+}

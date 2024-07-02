@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Affix_FieldDurationUp_FieldCDUp",
+  "AbilitySpecials": {
+    "FieldRangeDurationRatio": {
+      "Value": 1
+    },
+    "FieldSkillCDRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "FieldRangeDuration_Ratio": "%FieldRangeDurationRatio",
+      "Field_SkillCD_Ratio": "%FieldSkillCDRatio"
+    }
+  }
+}

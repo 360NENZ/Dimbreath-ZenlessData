@@ -1,0 +1,31 @@
+{
+  "AbilityName": "Interact_Box",
+  "DefaultModifier": {
+    "OnInteractMsg": [
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_Treasure_Open",
+        "Predicates": [
+          {
+            "$type": "ByInteractMsgContent",
+            "Content": "OnDone"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_OpenBox",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByInteractMsgContent",
+            "Content": "OnDone"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

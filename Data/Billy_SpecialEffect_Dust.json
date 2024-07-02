@@ -1,0 +1,194 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.391
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.453
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.453
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.293
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.561
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.549
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.549
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.549
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Dust"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_SpecialEffect_Dust",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SepcialEffectModifier_Dust": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Billy_Fire_Normal_Dust_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon02",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Billy_Fire_Normal_Dust_02_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Billy_Fire_Normal_Dust_02_R",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

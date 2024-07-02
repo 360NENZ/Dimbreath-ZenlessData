@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Card_Froze_1001105",
+  "AbilitySpecials": {
+    "GenreNum": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "item(1001101)+item(1001102)+item(1001103)+item(1001104)+item(1001105)+item(1001106)+item(1001107)+item(1001108)",
+        "ParamName": "GenreNum",
+        "ValueType": "Integer"
+      }
+    ],
+    "OnDestroyFrozen": [
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "#Card_Frozen_RangeDMG_Ability_AttackProperty_01",
+        "AttachPoint": "MiddlePoint",
+        "CustomKey": "Card_Frozen_RangeDMG_Ability_Small_AbilityTargetting",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 3,
+            "ParamName": "GenreNum",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Custom"
+      }
+    ]
+  }
+}

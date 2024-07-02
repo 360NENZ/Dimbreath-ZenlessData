@@ -1,0 +1,152 @@
+{
+  "AbilityName": "TestGraph_02",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Position": {
+        "x": -444,
+        "y": -206,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1.520875,
+        "y": 1.520875,
+        "z": 1
+      }
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 0,
+        "ParametersBind": [],
+        "Position": {
+          "x": 521.5831,
+          "y": 240.7176
+        }
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "ForNode",
+        "Count": {
+          "BindId": 1000
+        },
+        "CurIndex": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1001
+          ]
+        },
+        "DefaultOutBind": 3,
+        "Do": 2,
+        "Position": {
+          "x": 699,
+          "y": 240.7561
+        },
+        "PreActionBind": [
+          1
+        ]
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000
+          ]
+        },
+        "Position": {
+          "x": 508.089,
+          "y": 374.8361
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_RepeatTimes"
+      },
+      {
+        "$type": "DelayNode",
+        "Complete": 5,
+        "DefaultOutBind": -1,
+        "DelayTime": {
+          "BindId": 1002
+        },
+        "Position": {
+          "x": 973.1754,
+          "y": 386.5717
+        },
+        "PreActionBind": [
+          4
+        ]
+      },
+      {
+        "$type": "DelayNode",
+        "Complete": 6,
+        "DefaultOutBind": -1,
+        "DelayTime": {
+          "DefaultValue": 2.5
+        },
+        "Position": {
+          "x": 972.7562,
+          "y": 265.9528
+        }
+      },
+      {
+        "$type": "AsFloatNode",
+        "DefaultOutBind": -1,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 1001
+        },
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1002
+          ]
+        },
+        "Position": {
+          "x": 804.4215,
+          "y": 410.9887
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "Position": {
+          "x": 1192.276,
+          "y": 387
+        },
+        "Value": {
+          "DefaultValue": "LoopLog"
+        }
+      },
+      {
+        "$type": "DumpNode",
+        "DefaultOutBind": -1,
+        "PauseGame": true,
+        "Position": {
+          "x": 1189.756,
+          "y": 264.9528
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueInt",
+          "Value": 5
+        },
+        "ElementType": "Integer",
+        "Key": "Int_RepeatTimes",
+        "Scope": "Auto",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "AbilityName": "TestGraph_02",
+      "EventName": "OnStart"
+    }
+  ]
+}

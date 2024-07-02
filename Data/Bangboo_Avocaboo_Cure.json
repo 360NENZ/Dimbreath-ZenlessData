@@ -1,0 +1,91 @@
+{
+  "AbilityName": "Bangboo_Avocaboo_Cure",
+  "AbilitySpecials": {
+    "AS_ExtraRecoverRatio": {
+      "Value": 0.0
+    },
+    "AS_RecoverRatio": {
+      "Value": 0.1
+    },
+    "AS_RecoverValue": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_RecoverRatio)*(1+specials(AS_ExtraRecoverRatio))",
+        "ParamName": "AS_RecoverValue",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AvocabooCureModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Avocaboo_Attackproperty_Attack"
+            ]
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Other"
+          }
+        ],
+        "Target": "Other"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvocabooCureModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%AS_RecoverValue",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Recover",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "HealingLimit",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "MaterialPropertyModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "AvocabooCure",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Recover_RimGlow_01"
+        }
+      ]
+    }
+  }
+}

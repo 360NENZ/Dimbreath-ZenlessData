@@ -1,0 +1,11 @@
+{
+  "AbilityName": "PlatinumBangboo_DeathDrop_Diny",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "DropItemAction",
+      "DropStr": "2002:10000:4",
+      "Target": "Self"
+    }
+  ]
+}

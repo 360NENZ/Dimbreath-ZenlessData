@@ -1,0 +1,104 @@
+{
+  "AbilityName": "LightfootRover_ATK7_ControlUAV",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LightfootRover_ATK7_UAV_Modifier": {
+      "Duration": 2,
+      "MaxStackingNumber": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LightfootRover_ATK7"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LightfootRover_ATK7"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LightfootRover_ExtraUAV"
+          ]
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "Monster_LightfootRover_UAV",
+          "IntVal": 2,
+          "ParamName": "Int_Attack_Index",
+          "ParamType": 3,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "Monster_LightfootRover_UAV",
+          "ParamName": "Trigger_Attack",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Monster_LightfootRover_UAV",
+          "ModifierName": "LightfootRover_ATK7_UAV_Modifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "Monster_LightfootRover_UAV",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "Source": "Self",
+          "Target": "Custom"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "Monster_LightfootRover_UAV_Extra",
+          "IntVal": 2,
+          "ParamName": "Int_Attack_Index",
+          "ParamType": 3,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "Monster_LightfootRover_UAV_Extra",
+          "ParamName": "Trigger_Attack",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Monster_LightfootRover_UAV_Extra",
+          "ModifierName": "LightfootRover_ATK7_UAV_Modifier",
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "Monster_LightfootRover_UAV_Extra",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "Source": "Self",
+          "Target": "Custom"
+        }
+      ]
+    }
+  ]
+}

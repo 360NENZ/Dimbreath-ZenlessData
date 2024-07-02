@@ -1,0 +1,172 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start_1",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start_2",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start_3",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start_4",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start_5",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Cancel",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nostradamus_InputCheck",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ZoneTagModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZoneTag_ManualQTE"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Bool_ByHoldAttackA",
+      "ParamType": 2,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": true,
+          "CompareType": "Equal",
+          "ParamName": "Bool_HoldAttackA",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "ZoneTag_ManualQTE"
+      ],
+      "IsAdd": true,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": true,
+          "CompareType": "Equal",
+          "ParamName": "Bool_HoldAttackA",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": false,
+      "ParamName": "Bool_ByHoldAttackA",
+      "ParamType": 2,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": false,
+          "CompareType": "Equal",
+          "ParamName": "Bool_HoldAttackA",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "ZoneTag_ManualQTE"
+      ],
+      "IsAdd": false,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": false,
+          "CompareType": "Equal",
+          "ParamName": "Bool_HoldAttackA",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

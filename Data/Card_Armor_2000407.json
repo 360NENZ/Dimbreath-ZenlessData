@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Card_Armor_2000407",
+  "AbilitySpecials": {
+    "GenreNum_Shield": {
+      "Value": 0.2
+    },
+    "Ratio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(Ratio)*(item(1000401)+item(1000402)+item(1000403)+item(1000404)+item(1000405)+item(1000406)+item(1000407)+item(1000408)+item(1000409)+item(1000410)+item(1000411)+item(1100401)+item(1100402)+item(1100403)+item(1100404)+item(1100405)+item(1100406)+item(1100407)+item(1100408)+item(1100409)+item(1100410)+item(1100411)+item(1000412))",
+        "ParamName": "GenreNum_Shield",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffUpper"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffUpper": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DefenceRatio": "%GenreNum_Shield"
+      }
+    }
+  }
+}

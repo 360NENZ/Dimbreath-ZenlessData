@@ -1,0 +1,50 @@
+{
+  "AbilityName": "HollowItem_4000400",
+  "AbilitySpecials": {
+    "AddedDamage": {
+      "Value": 0
+    },
+    "AddedDamageRatio": {
+      "Value": 0.15
+    },
+    "AddedMaxHpRatio": {
+      "Value": 0.05
+    },
+    "MaxHpRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(CurMoraleLevel)*0.01*specials(AddedDamageRatio)",
+        "ParamName": "AddedDamage",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(CurMoraleLevel)*0.01*specials(AddedMaxHpRatio)",
+        "ParamName": "MaxHpRatio",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_Addbuff",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_Addbuff": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamage",
+        "Actor_MaxHPRatio": "%MaxHpRatio"
+      }
+    }
+  }
+}

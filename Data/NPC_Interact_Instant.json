@@ -1,0 +1,27 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "TriggerFieldMixin",
+      "CustomCamp": "TeamGood",
+      "FieldType": "Sphere",
+      "Follow": true,
+      "IncludeSelf": false,
+      "OnOtherEnter": [
+        {
+          "$type": "DoInteractAction",
+          "Target": "Self"
+        }
+      ],
+      "Radius": "%InteractRadius",
+      "Targetting": "Allied",
+      "TriggerOnAdded": true,
+      "UseOwnerTeam": false
+    }
+  ],
+  "AbilityName": "NPC_Interact_Instant",
+  "AbilitySpecials": {
+    "InteractRadius": {
+      "Value": 5
+    }
+  }
+}

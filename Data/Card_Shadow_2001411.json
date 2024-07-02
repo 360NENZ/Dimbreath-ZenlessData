@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Shadow_2001411",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "Duration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DodgeModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DodgeModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

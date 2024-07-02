@@ -1,0 +1,242 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletEmitterMixin",
+      "AttackTarget": "SelfAttackTarget",
+      "AttackTargetBackup": "Caster",
+      "AttackTargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 2.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Self",
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "AttackTargetPosRotBackup": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 25.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Self",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "BulletAbilityName": "ZhuYuan_SwitchInAttack_Bullet_01",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "CustomKey": "ZhuYuan_SwitchIn_BulletTargetting_01",
+      "EmmiterEffect": {
+        "EffectPattern": "Eff_ZhuYuan_Attack_QTE_01_04_Curve"
+      },
+      "IgnoreCasterTimeSlow": true
+    },
+    {
+      "$type": "BulletEmitterMixin",
+      "AttackTarget": "SelfAttackTarget",
+      "AttackTargetBackup": "Caster",
+      "AttackTargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 2.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Self",
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "AttackTargetPosRotBackup": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 25.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Self",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "BulletAbilityName": "ZhuYuan_SwitchInAttack_Bullet_01",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "CustomKey": "ZhuYuan_SwitchIn_BulletTargetting_01",
+      "EmmiterEffect": {
+        "EffectPattern": "Eff_ZhuYuan_Attack_QTE_01_13_Curve"
+      },
+      "IgnoreCasterTimeSlow": true
+    }
+  ],
+  "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_FarLeft",
+  "AbilityStacking": "Unique"
+}

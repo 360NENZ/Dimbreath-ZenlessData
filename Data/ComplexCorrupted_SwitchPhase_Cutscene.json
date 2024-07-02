@@ -1,0 +1,210 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SwitchPhaseMixin",
+      "CanSwitchPhase": "%AS_CanSwitchPhase",
+      "ClearStunProperty": true,
+      "DisableAI": false,
+      "ForceRBL": 9999,
+      "HeavyHitEffect": false,
+      "HideUI": true,
+      "Invincible": false,
+      "LockHPRatio": "%AS_LockHPRatio",
+      "LockHPValue": 1,
+      "MuteBeSelected": true,
+      "MuteElementAbnormal": true,
+      "MuteStunProperty": true,
+      "OnSwitchPhaseDone": [
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": 6,
+          "ModifyFunction": "Add"
+        },
+        {
+          "$type": "TriggerBehaviorTreeAction",
+          "Enable": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Body_VFX",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_FL",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_FR",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_BL",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_BR",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_IsPhase2",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_ResetWeight",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_06_Default",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_06_Added",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_09_Default",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_09_Added",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_10_Default",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_10_Added",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 800,
+          "ParamName": "Weight_10_Current",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsPhase2",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_03"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Common_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Common_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_01"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Common_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Common_Mat02_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_05"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_06"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Common_Mat03_SecondaryEmission_03",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Common_Mat03_SecondaryEmission_03"
+        }
+      ],
+      "OnSwitchPhaseStart": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_SwitchPhase_CutsceneMixin",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerBehaviorTreeAction",
+          "Enable": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "soundActionKey": "Play_SoundAction_ComplexCorrupted_Phase1_Trans2"
+        }
+      ],
+      "ProtectTime": 60,
+      "RecoverHPRatio": 1.0,
+      "SourcePhase": 1,
+      "SwitchPhaseTag": "ComplexCorrupted_SwitchPhase",
+      "TargetHPRatio": -1.0,
+      "TargetHPValue": 1,
+      "TargetPhase": 2
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SwitchPhase_Cutscene",
+  "AbilitySpecials": {
+    "AS_CanSwitchPhase": {
+      "Value": true,
+      "ValueType": "Boolean"
+    },
+    "AS_LockHPRatio": {
+      "Value": -1.0
+    },
+    "AS_RecoverHPRatio": {
+      "Value": 1.0
+    },
+    "AS_TargetHPRatio": {
+      "Value": -1.0
+    }
+  },
+  "AbilityStacking": "Unique"
+}

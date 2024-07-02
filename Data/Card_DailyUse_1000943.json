@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_DailyUse_1000943",
+  "AbilitySpecials": {
+    "AS_TemplateID": {
+      "Value": 1011
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_TarotCard_CounterCombo",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": "%AS_TemplateID"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

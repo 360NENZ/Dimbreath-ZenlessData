@@ -1,0 +1,9 @@
+{
+  "AbilityName": "Level_Buff_BreakStun",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_BreakStunRatio": 1
+    }
+  }
+}

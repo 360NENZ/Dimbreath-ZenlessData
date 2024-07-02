@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Card_Gun_2000310",
+  "AbilitySpecials": {
+    "CriticalDamageDelta": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsBackstab"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDamageRatioDelta",
+        "PropertyValue": "%CriticalDamageDelta",
+        "Target": "Self"
+      }
+    ]
+  }
+}

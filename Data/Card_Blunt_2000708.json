@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Card_Blunt_2000708",
+  "AbilitySpecials": {
+    "AddedStunRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Normal"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AddedStunRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

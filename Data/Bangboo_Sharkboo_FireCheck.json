@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Bangboo_Sharkboo_FireCheck",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceCheckModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Sharkboo_Attackproperty_01",
+              "Bangboo_Sharkboo_Attackproperty_02",
+              "Bangboo_Sharkboo_Attackproperty_Move_01",
+              "Bangboo_Sharkboo_Attackproperty_Move_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Other"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IceCheckModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Sharkboo_Fire02",
+          "CustomKey": "AbilityTarget_Bangboo_Sharkboo",
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Stay",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Up",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Down",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Left",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Right",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Up",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Down",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Left",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Right",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Heavy_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Heavy_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Stun"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "PileDriver_Stun",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AbilitySpecials": {
+      "PileDriver_CurPartHP_BLLeg": {
+        "Value": 1
+      },
+      "PileDriver_CurPartHP_BRLeg": {
+        "Value": 1
+      },
+      "PileDriver_CurPartHP_FLLeg": {
+        "Value": 1
+      },
+      "PileDriver_CurPartHP_FRLeg": {
+        "Value": 1
+      }
+    },
+    "PileDriver_PartLockLife_BLLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%PileDriver_CurPartHP_BLLeg"
+          },
+          "SubPartName": "PileDriver_BLLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "PileDriver_PartLockLife_BRLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%PileDriver_CurPartHP_BRLeg"
+          },
+          "SubPartName": "PileDriver_BRLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "PileDriver_PartLockLife_FLLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%PileDriver_CurPartHP_FLLeg"
+          },
+          "SubPartName": "PileDriver_FLLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "PileDriver_PartLockLife_FRLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%PileDriver_CurPartHP_FRLeg"
+          },
+          "SubPartName": "PileDriver_FRLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "PileDriver_Stun": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "ColliderName": [
+            "HullCollider_L"
+          ],
+          "HullColliderEnable": false,
+          "Tag": "HullCollider_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": false,
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR"
+          ],
+          "Tag": "PileDriver_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "PileDriver_CurPartHP_BLLeg",
+          "PartName": "PileDriver_BLLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "PileDriver_CurPartHP_BRLeg",
+          "PartName": "PileDriver_BRLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "PileDriver_CurPartHP_FLLeg",
+          "PartName": "PileDriver_FLLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "PileDriver_CurPartHP_FRLeg",
+          "PartName": "PileDriver_FRLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PileDriver_PartLockLife_BLLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "PileDriver_BLLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PileDriver_PartLockLife_BRLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "PileDriver_BRLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PileDriver_PartLockLife_FLLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "PileDriver_FLLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PileDriver_PartLockLife_FRLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "PileDriver_FRLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "HullCollider_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR"
+          ],
+          "Tag": "PileDriver_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "PileDriver_PartLockLife_BLLeg",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "PileDriver_PartLockLife_BRLeg",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "PileDriver_PartLockLife_FLLeg",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "PileDriver_PartLockLife_FRLeg",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

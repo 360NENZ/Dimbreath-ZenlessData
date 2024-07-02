@@ -1,0 +1,118 @@
+{
+  "1": [
+    {
+      "AreaName": "MainCityStreet_Street",
+      "ID": 1001
+    }
+  ],
+  "101": [
+    {
+      "AreaName": "FortuneSquare_Maincity",
+      "ID": 101001
+    },
+    {
+      "AreaName": "Traffic_Green",
+      "ID": 101002
+    },
+    {
+      "AreaName": "Traffic_Red",
+      "ID": 101003
+    },
+    {
+      "AreaName": "Traffic_Red2",
+      "ID": 101004
+    },
+    {
+      "AreaName": "Traffic_Light01",
+      "ID": 101005
+    }
+  ],
+  "103": [
+    {
+      "AreaName": "MainCity_FortuneHIA",
+      "ID": 103001
+    }
+  ],
+  "151": [
+    {
+      "AreaName": "Maincity_Zero",
+      "ID": 151001
+    }
+  ],
+  "153": [
+    {
+      "AreaName": "Maincity_Subway_Street",
+      "ID": 153001
+    }
+  ],
+  "154": [
+    {
+      "AreaName": "Maincity_Subway",
+      "ID": 154001
+    }
+  ],
+  "2": [
+    {
+      "AreaName": "Workshop_1F",
+      "ID": 2001
+    },
+    {
+      "AreaName": "Workshop_Stairs",
+      "ID": 2002
+    },
+    {
+      "AreaName": "Workshop_2F",
+      "ID": 2003
+    }
+  ],
+  "3": [
+    {
+      "AreaName": "MainCityStreet_Garage",
+      "ID": 3001
+    }
+  ],
+  "4": [
+    {
+      "AreaName": "ConstructionSite_1F",
+      "ID": 4001
+    },
+    {
+      "AreaName": "ConstructionSite_2F",
+      "ID": 4002
+    },
+    {
+      "AreaName": "ConstructionSite_Elevator1",
+      "ID": 4003
+    },
+    {
+      "AreaName": "ConstructionSite_Elevator2",
+      "ID": 4004
+    },
+    {
+      "AreaName": "ConstructionSite_Elevator3",
+      "ID": 4005
+    },
+    {
+      "AreaName": "ConstructionSite_Elevator4",
+      "ID": 4006
+    }
+  ],
+  "5": [
+    {
+      "AreaName": "SkyScraper_1F",
+      "ID": 5001
+    },
+    {
+      "AreaName": "SkyScraper_B1",
+      "ID": 5002
+    },
+    {
+      "AreaName": "SkyScraper_Stairs1",
+      "ID": 5003
+    },
+    {
+      "AreaName": "SkyScraper_Stairs2",
+      "ID": 5004
+    }
+  ]
+}

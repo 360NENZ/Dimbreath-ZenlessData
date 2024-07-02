@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Prologue_ACT2_StunEnemy",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_Prologue_ACT2_StunEnemy",
+        "ParamType": 1
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_IsInStun",
+        "ParamType": 2
+      },
+      {
+        "$type": "ModifyStunStateAction",
+        "Target": "Self",
+        "TargetState": "Break"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunBuffModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunRecoverRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnStunResetMaxActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "StunRecoverRatioModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "StunRecoverRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_StunDestroyRecoverRate_Ratio": -999
+      }
+    }
+  }
+}

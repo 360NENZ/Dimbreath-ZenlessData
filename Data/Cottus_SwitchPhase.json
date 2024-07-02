@@ -1,0 +1,136 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SwitchPhaseMixin",
+      "CanSwitchPhase": "%AS_CanSwitchPhase",
+      "ClearStunProperty": true,
+      "DisableAI": true,
+      "ForceRBL": 6,
+      "HeavyHitEffect": true,
+      "HideUI": true,
+      "Invincible": false,
+      "LockHPRatio": "%AS_LockHPRatio",
+      "LockHPValue": 1,
+      "MuteBeSelected": true,
+      "MuteElementAbnormal": true,
+      "MuteStunProperty": true,
+      "OnSwitchPhaseDone": [
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": 6,
+          "ModifyFunction": "Add"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_CutSceneEnd",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ChangeMonsterAIAction",
+          "MonsterAIId": 112302,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Hard"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ChangeMonsterAIAction",
+          "MonsterAIId": 112305,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Hard"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerBehaviorTreeAction",
+          "Enable": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Cottus_Perception",
+          "Predicates": [
+            {
+              "$type": "ByHasAbility",
+              "AbilityNameList": [
+                "Cottus_Perception"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchPhaseStart": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_HasCutScene",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DelayModifier",
+          "Target": "Self"
+        }
+      ],
+      "ProtectTime": 60,
+      "RecoverHPRatio": 1.0,
+      "SourcePhase": 1,
+      "SwitchPhaseTag": "Cottus_SwitchPhase",
+      "TargetHPRatio": -1.0,
+      "TargetHPValue": 1,
+      "TargetPhase": 2
+    }
+  ],
+  "AbilityName": "Cottus_SwitchPhase",
+  "AbilitySpecials": {
+    "AS_CanSwitchPhase": {
+      "Value": true,
+      "ValueType": "Boolean"
+    },
+    "AS_LockHPRatio": {
+      "Value": -1.0
+    },
+    "AS_RecoverHPRatio": {
+      "Value": 1.0
+    },
+    "AS_TargetHPRatio": {
+      "Value": -1.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DelayModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Cottus_SwitchPhase_CutScene",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

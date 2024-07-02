@@ -1,0 +1,323 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_ParryAid_L",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AllFrameHaltModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AllFrameHaltModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SingleFrameHaltModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 50,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WoodBulletModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenHitModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_FrameHaltSync",
+  "AbilitySpecials": {
+    "AS_AttackIndex": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AllFrameHaltModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FrameHaltSyncMixin",
+          "CustomTargetKey": "LucyWood_AbilityTargetting_00",
+          "SyncTargetting": "Custom"
+        },
+        {
+          "$type": "FrameHaltSyncMixin",
+          "CustomTargetKey": "LucyWood_AbilityTargetting_01",
+          "SyncTargetting": "Custom"
+        },
+        {
+          "$type": "FrameHaltSyncMixin",
+          "CustomTargetKey": "LucyWood_AbilityTargetting_02",
+          "SyncTargetting": "Custom"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ListenHitModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnPatternAttackLanded": []
+    },
+    "SingleFrameHaltModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FrameHaltSyncMixin",
+          "CustomTargetKey": "LucyWood_AbilityTargetting_00",
+          "SyncTargetting": "Custom"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "WoodBulletModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Attack_Normal_04_Bullet_01",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_AttackIndex",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Attack_Normal_04_AttackProperty_Ally_01",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "GamepadRumbleAction",
+      "GamepadRumbleKey": "Lucy_GamepadRumble_E_Normal_04_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "ParamName": "Trigger_BeHit",
+      "ParamType": 1,
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "AttackCameraShakeAction",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "ShakeConfigKey": "Lucy_Attack_Normal_04_CamShake_E_Ally",
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerSoundAction",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "soundActionKey": "Play_SFX_Char_Skill_Lucy_Attack_Normal_04_3_Shot"
+    },
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Attack_Normal_04_AttackProperty_Ally_02",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 2,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Attack_Normal_04_AttackProperty_Ally_01",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 3,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Attack_Normal_04_AttackProperty_Ally_01",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Wood_Switch_Attack_Ex_AttackProperty_01_Ally",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 5,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Wood_Switch_Attack_Ex_AttackProperty_01_Ally",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 6,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Lucy_Wood_Switch_Attack_Ex_AttackProperty_01_Ally",
+      "Attacker": "Self",
+      "CustomKey": "LucyWood_AbilityTargetting_02",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 7,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

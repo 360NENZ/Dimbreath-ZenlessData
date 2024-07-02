@@ -1,0 +1,9 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenSelfShieldValueNotifyLevelLogicMixin"
+    }
+  ],
+  "AbilityName": "Monster_ListenSelfShield",
+  "AbilityStacking": "Unique"
+}

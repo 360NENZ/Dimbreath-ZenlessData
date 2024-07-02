@@ -1,0 +1,83 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "BtoAModifier"
+          ],
+          "ZoneTag": "YanagiStanceA"
+        },
+        {
+          "ModifierNameList": [
+            "AtoBModifier"
+          ],
+          "ZoneTag": "YanagiStanceB"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Yanagi_StanceManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AtoBModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_Stance",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MuteStanceModifer",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BtoAModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_Stance",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MuteStanceModifer",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MuteStanceModifer": {
+      "Duration": 0.8,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_MuteStanceChange",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_MuteStanceChange",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

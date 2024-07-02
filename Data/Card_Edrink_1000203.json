@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Card_Edrink_1000203",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "Equal",
+            "Denominator": "MaxSP",
+            "IsUsePercent": true,
+            "Numerator": "CurSP",
+            "Target": "Self",
+            "Val1": 1,
+            "Val2": 0
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

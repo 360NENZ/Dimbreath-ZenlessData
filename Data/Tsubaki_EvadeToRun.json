@@ -1,0 +1,48 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Evade_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeToRunModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Tsubaki_EvadeToRun",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EvadeToRunModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_Evade_Front",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Run_Loop",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": true,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

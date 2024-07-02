@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Card_Physical_2001208",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    },
+    "Duration": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PhyDamageUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PhyDamageUpModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio_Physics": "%AddedDamageRatio"
+      }
+    }
+  }
+}

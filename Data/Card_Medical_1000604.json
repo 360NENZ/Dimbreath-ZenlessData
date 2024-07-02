@@ -1,0 +1,68 @@
+{
+  "AbilityName": "Card_Medical_1000604",
+  "AbilitySpecials": {
+    "DamageDelta_Ratio": {
+      "Value": 0
+    },
+    "DamageDelta_Raw": {
+      "Value": 0
+    },
+    "Hp_OnBeingHitPre": {
+      "Value": 0
+    },
+    "Hp_OnBeingHitResolved": {
+      "Value": 0
+    },
+    "Ratio": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBeAttackLanded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(CurHP)/property(MaxHP)",
+        "ParamName": "Hp_OnBeingHitResolved",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(Hp_OnBeingHitPre)-specials(Hp_OnBeingHitResolved)",
+        "ParamName": "DamageDelta_Raw",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(DamageDelta_Raw)*specials(Ratio)*100",
+        "ParamName": "DamageDelta_Ratio",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "DamageDelta_Raw",
+            "ParamType": "Float"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%DamageDelta_Ratio",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHitPre": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(CurHP)/property(MaxHP)",
+        "ParamName": "Hp_OnBeingHitPre",
+        "ValueType": "Float"
+      }
+    ]
+  }
+}

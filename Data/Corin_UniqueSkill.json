@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Corin_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Corin_Attack_Normal_03_AttackProperty_01_01",
+            "Corin_Attack_Normal_03_AttackProperty_01_02",
+            "Corin_Attack_Normal_05_AttackProperty_01_01",
+            "Corin_Attack_Normal_05_AttackProperty_01_02",
+            "Corin_Attack_Normal_05_AttackProperty_02",
+            "Corin_Attack_Normal_05_AttackProperty_04_01",
+            "Corin_Attack_Normal_05_AttackProperty_04_02",
+            "Corin_Attack_Rush_AttackProperty_01_01",
+            "Corin_Attack_Rush_AttackProperty_01_02",
+            "Corin_Attack_Counter_AttackProperty_01_01",
+            "Corin_Attack_Counter_AttackProperty_01_02",
+            "Corin_Attack_Counter_AttackProperty_02",
+            "Corin_Attack_BeHitAid_AttackProperty_01_01",
+            "Corin_Attack_BeHitAid_AttackProperty_01_02",
+            "Corin_Attack_BeHitAid_AttackProperty_02",
+            "Corin_Attack_SwitchIn_Attack_AttackProperty_04_01",
+            "Corin_Attack_SwitchIn_Attack_AttackProperty_04_02",
+            "Corin_Attack_SwitchIn_Attack_AttackProperty_04_03",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_01",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_02",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_03",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_04",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_01",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_01",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_02",
+            "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_03",
+            "Corin_Attack_Branch_01_AttackProperty_02_01",
+            "Corin_Attack_Branch_01_AttackProperty_02_02_01",
+            "Corin_Attack_Branch_01_AttackProperty_02_02_02",
+            "Corin_Attack_Branch_01_AttackProperty_03",
+            "Corin_Attack_Branch_02_AttackProperty_02_01",
+            "Corin_Attack_Branch_02_AttackProperty_02_02_01",
+            "Corin_Attack_Branch_02_AttackProperty_02_02_02",
+            "Corin_Attack_AssaultAid_AttackProperty_05_01",
+            "Corin_Attack_AssaultAid_AttackProperty_05_02_01",
+            "Corin_Attack_AssaultAid_AttackProperty_05_02_02",
+            "Corin_Attack_AssaultAid_AttackProperty_05_02_03"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

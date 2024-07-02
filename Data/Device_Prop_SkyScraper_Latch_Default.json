@@ -1,0 +1,129 @@
+{
+  "AbilityName": "Device_Prop_SkyScraper_Latch_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SkyScraper_Latch_Idle",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SkyScraper_Latch_Close": {
+      "Duration": 1,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsOpen",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SkyScraper_Latch_Idle",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SkyScraper_Latch_Idle": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "BoxColliderDistance": 8,
+            "BoxColliderHeight": 2,
+            "BoxColliderWidth": 3,
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -4.0
+            },
+            "ColliderType": "Box"
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SkyScraper_Latch_Open",
+              "Predicates": [
+                {
+                  "$type": "ByIsLocalAvatar",
+                  "IsLocalAvatar": "true",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": false,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SkyScraper_Latch_Open": {
+      "Duration": 2,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsOpen",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_IdentifyResult",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SkyScraper_Latch_Idle",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SkyScraper_Latch_Close",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

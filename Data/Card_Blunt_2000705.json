@@ -1,0 +1,83 @@
+{
+  "AbilityName": "Card_Blunt_2000705",
+  "AbilitySpecials": {
+    "StunRecoverPercent": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalToStunUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike",
+              "Frozen",
+              "Frostbite",
+              "Electric",
+              "Overload",
+              "Erosion",
+              "Chaos",
+              "Burn",
+              "Ignite"
+            ]
+          },
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": false,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike",
+              "Frozen",
+              "Frostbite",
+              "Electric",
+              "Overload",
+              "Erosion",
+              "Chaos",
+              "Burn",
+              "Ignite"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbnormalToStunUpModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RecoverStunAction",
+          "Amount": 0,
+          "Percentage": "%StunRecoverPercent",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

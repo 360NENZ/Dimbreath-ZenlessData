@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Bangboo_Booressure_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": true,
+        "ParamName": "Bool_Skill01Ready",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Booressure_Attackproperty_Attack01_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "ParamName": "Trigger_SkillFinish",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Booressure_Attackproperty_Attack01_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "CCard_Shadow_2001406",
+  "AbilitySpecials": {
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio"
+    }
+  }
+}

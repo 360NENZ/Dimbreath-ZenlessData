@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Affix_General_CriticalDamageRatioDelta_Lv3",
+  "AbilitySpecials": {
+    "CriticalDamageRatioDelta": {
+      "Value": 0.18
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDamageRatioDelta",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalDamageRatioDelta": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%CriticalDamageRatioDelta"
+      }
+    }
+  }
+}

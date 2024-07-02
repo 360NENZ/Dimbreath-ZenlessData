@@ -1,0 +1,51 @@
+{
+  "AbilityName": "Card_Exchange_2001613",
+  "AbilitySpecials": {
+    "RecoverOdds": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "RandomOperator",
+        "Odds": "%RecoverOdds",
+        "OnSuccess": [
+          {
+            "$type": "ModifyPerfectSwitchPointAction",
+            "Amount": 1,
+            "ModifyFunction": "Add"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "EvadeAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AssaultAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ParryAid"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

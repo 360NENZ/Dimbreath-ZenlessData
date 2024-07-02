@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Card_Sports_1000802",
+  "AbilitySpecials": {
+    "EvadeTimes": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ModifySkillMaxEP",
+        "DeltaValue": "%EvadeTimes",
+        "SkillType": "Evade",
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

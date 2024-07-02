@@ -1,0 +1,79 @@
+{
+  "AbilityName": "Rina_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddedDamageDuration": {
+      "Value": 12.0
+    },
+    "AS_AddedDamageRatio_Talent02": {
+      "Value": 0.5
+    },
+    "AS_CDDuration": {
+      "Value": 24.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RinaTalent02Modifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "CDModifier"
+            ],
+            "OperatorType": "Not"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RinaTalent02Modifier",
+        "Predicates": [
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "CDModifier"
+            ],
+            "OperatorType": "Not"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDModifier": {
+      "Duration": "%AS_CDDuration",
+      "ModifierStacking": "Unique"
+    },
+    "RinaTalent02Modifier": {
+      "Duration": "%AS_AddedDamageDuration",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDModifier",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_Talent02"
+      }
+    }
+  }
+}

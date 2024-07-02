@@ -1,0 +1,244 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_Weapon_L01"
+      ],
+      "CanHitAfterDestroyed": false,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxHP": "%AS_PartHP",
+      "OnPartDestroy": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ChangePhaseModifer",
+          "Target": "Self"
+        },
+        {
+          "$type": "ChangeMonsterAIAction",
+          "MonsterAIId": 110101,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PartDestroyed",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%AS_PartHP",
+      "PartName": "HeavySoldier_Weapon_L01"
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Hit_BreakShield_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshRenderModifer_Delay"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Hit_BreakShield_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshRenderModifer_Delay"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "HeavySoldier_Ability_Part_Weapon_L01",
+  "AbilitySpecials": {
+    "AS_PartHP": {
+      "Value": 100
+    },
+    "AS_ShieldHPRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChangePhaseModifer",
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "Melee"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HideMeshRenderModifer_Instant",
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "Melee"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_ShieldHPRatio)",
+        "ParamName": "AS_PartHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChangePhaseModifer": {
+      "Duration": 0.1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Int_PhaseIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetBlendMoveTagAction",
+          "MpExecMode": "MpTotallyLocal",
+          "Tag": "Melee",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_Weapon_L01"
+          ],
+          "HitColliderEnable": false,
+          "Tag": "HeavySoldier_HitCollider_Weapon_L01",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHullColliderEnable",
+          "ColliderName": [
+            "HullCollider_Weapon_L01"
+          ],
+          "HullColliderEnable": false,
+          "Tag": "HeavySoldier_HitCollider_Weapon_L01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMuteHitSkyAction",
+          "MuteHitSky": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMuteAirHitMovementAction",
+          "MuteAirHitMovement": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "HideMeshRenderModifer_Delay": {
+      "Duration": 0.1,
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Weapon01"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Soldier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "HeavySoldier_Weapon_L01",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "MeleeJaeger_Weaopn_01"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Jaeger"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "HeavyJaeger_Weapon_L01",
+          "Visible": false
+        }
+      ]
+    },
+    "HideMeshRenderModifer_Instant": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Weapon01"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Soldier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "HeavySoldier_Weapon_L01",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "MeleeJaeger_Weaopn_01"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Jaeger"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "HeavyJaeger_Weapon_L01",
+          "Visible": false
+        }
+      ]
+    }
+  }
+}

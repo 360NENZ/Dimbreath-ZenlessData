@@ -1,0 +1,183 @@
+{
+  "AbilityName": "Device_CargoCart_HitPlayer",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseEffect"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseEffect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_EndType",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsRotating",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Target"
+            }
+          ],
+          "TargetKey": "CargoCartHitPlayer"
+        }
+      ],
+      "OnHitOtherPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LockLifeModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Target"
+            }
+          ],
+          "Target": "LocalAvatar"
+        }
+      ]
+    },
+    "HitEffectModifier": {
+      "Duration": 0.7,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CauseEffect",
+          "Target": "Self"
+        },
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Player_LowHP_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Player_LowHP_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Player_LowHP_CamStretch_01"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_Glitch_01",
+          "EffectType": "Glitch"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_Medical_1000608",
+          "IsOpenBlock": true,
+          "ModifierName": "Controller"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "Player_LowHP_TimeSlow_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Player_LowHP_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Player_LowHP_CamStretch_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "Player_LowHP_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Player_LowHP_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Glitch",
+          "TargetKey": "Player_LowHP_Glitch_01"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HitEffectModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LockLifeModifier": {
+      "Duration": 1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.1
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Refresh"
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "HitEffectModifier",
+      "Target": "LocalAvatar"
+    }
+  ]
+}

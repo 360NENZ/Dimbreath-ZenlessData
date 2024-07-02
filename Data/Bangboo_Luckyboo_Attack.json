@@ -1,0 +1,90 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_SkillLoop_Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttackStateModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_IdletoMove",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttackStateModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_Move",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttackStateModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_MovetoIdle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttackStateModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Luckyboo_Attack",
+  "AbilitySpecials": {
+    "AS_AttackDuration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AttackStateModifer": {
+      "Duration": "%AS_AttackDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Luckyboo_BulletEmitter",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimEvent",
+          "AnimEventID": "Bangboo_Luckyboo_Attackproperty_HitCheck"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_TimeUpInterrupt",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

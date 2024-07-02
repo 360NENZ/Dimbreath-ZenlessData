@@ -1,0 +1,11 @@
+{
+  "AbilityName": "Gaint_Attack_MaxStunPoint",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "DamageByAttackPropertyAction",
+      "AnimEventID": "Monster_Gaint_ATK03_StunMax",
+      "Target": "Self"
+    }
+  ]
+}

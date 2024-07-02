@@ -1,0 +1,926 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_AttachPointFollow",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 225,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_01",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 230,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_11",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 230,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 236,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_12",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 236,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_03",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 242,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_13",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 242,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_04",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 248,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_14",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 248,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_05",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 254,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_15",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 254,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_06",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 260,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_16",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 260,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_07",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 266,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_17",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 266,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_08",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 272,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_18",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 272,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_09",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 278,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_19",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 278,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_10",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 284,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_20",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 284,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_01",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 290,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_11",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 290,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 296,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_12",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 296,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_03",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 302,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_13",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 302,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_04",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 308,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_14",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 308,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_05",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 314,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_15",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 314,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_06",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 320,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_16",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 320,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_07",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 326,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_17",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 326,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_08",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 332,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_18",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 332,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_09",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 338,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_19",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 338,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_10",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 344,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_20",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 344,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_01",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 350,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_11",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 350,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 356,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_12",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 356,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_03",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 362,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_13",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 362,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_04",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 368,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_14",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 368,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_05",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 374,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_15",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 374,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_06",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 380,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_16",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 380,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_07",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 386,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_17",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 386,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_08",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 392,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_18",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 392,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_09",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 398,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_19",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 398,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_10",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 404,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_20",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 404,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletControl",
+  "AbilityStacking": "Unique"
+}

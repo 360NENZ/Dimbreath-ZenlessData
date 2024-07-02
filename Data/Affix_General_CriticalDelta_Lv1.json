@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Affix_General_CriticalDelta_Lv1",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.03
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDelta",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalDelta": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDelta": "%CriticalDelta"
+      }
+    }
+  }
+}

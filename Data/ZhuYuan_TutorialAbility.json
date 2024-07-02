@@ -1,0 +1,194 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest2Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "WeaponTransform_Shotgun_Back",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest2Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "WeaponTransform_Shotgun_Back_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest4Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Right",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest4Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Left",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest4Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Back",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest4Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Left_Shotgun",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest4Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Right_Shotgun",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Quest4Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Shotgun_04",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "ZhuYuan_BulletManager",
+      "OnListenAbilityStarted": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Quest3Modifier",
+          "Target": "Self"
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "ZhuYuan_TutorialAbility",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest1Modifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 3,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Quest1Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_ZhuYuan_1"
+        }
+      ]
+    },
+    "Quest2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_ZhuYuan_2"
+        }
+      ]
+    },
+    "Quest3Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_ZhuYuan_3"
+        }
+      ]
+    },
+    "Quest4Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_ZhuYuan_4"
+        }
+      ]
+    }
+  }
+}

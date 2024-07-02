@@ -1,0 +1,227 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 0,
+              "ParamName": "AS_RaiseTurnCount",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "IntParamValue": "%AS_RaiseTurnCount",
+              "ParamName": "Int_RaiseTurnCount",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Raise_Start",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_F_B",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_F_L",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_F_R",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_B_F",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_B_L",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_B_R",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_L_F",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_L_B",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_L_R",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_R_F",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_R_B",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RaiseTurnCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "RaiseTurn_R_L",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 3
+        }
+      ]
+    }
+  ],
+  "AbilityName": "BoringMachine_RaiseTurnCount",
+  "AbilitySpecials": {
+    "AS_RaiseTurnCount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RaiseTurnCountModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_RaiseTurnCount",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": "%AS_RaiseTurnCount",
+          "ParamName": "Int_RaiseTurnCount",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "AbilityName": "Hati_Armored_Part",
+  "AbilitySpecials": {
+    "AS_BreakStunTakeRatio": {
+      "Value": -0.5
+    },
+    "AS_DamageTakeRatio": {
+      "Value": -0.5
+    },
+    "AS_ParryDestroyPartHP": {
+      "Value": 100.0
+    },
+    "AS_ParryDestroyPartHPRatio": {
+      "Value": -0.34
+    },
+    "AS_PartHP": {
+      "Value": 100.0
+    },
+    "AS_PartHPRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_PartHPRatio)",
+        "ParamName": "AS_PartHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_PartHPRatio)*specials(AS_ParryDestroyPartHPRatio)",
+        "ParamName": "AS_ParryDestroyPartHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ArmoredStartModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "Armored"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "UnArmoredStartModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "UnArmored"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ArmoredStartModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierMixins": [
+        {
+          "$type": "MultiPartMixin",
+          "BindHitColliderList": [
+            "HitCollider"
+          ],
+          "IsUseHitFlowOnDestroyed": true,
+          "MaxHP": "%AS_PartHP",
+          "OnPartDestroy": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_PhaseIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PartDestroyedModifier",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_PartDestroyed",
+              "ParamType": 1,
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "DamageTakeRatioModifier"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "StunTakeRatioModifier"
+            }
+          ],
+          "OwnerDamagetakeRatio": 0,
+          "PartDamageTakeRatio": 0,
+          "PartHP": "%AS_PartHP",
+          "PartName": "Hati_Armor"
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_Hati"
+          ],
+          "Tag": "Monster_HatiArmored_UnArmor",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_HatiGrey"
+          ],
+          "Tag": "Monster_HatiArmored_UnArmor",
+          "Visible": false
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_PhaseIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageTakeRatioModifier"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunTakeRatioModifier"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%AS_ParryDestroyPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "Hati_Armor",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "ParryAid"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Bone029",
+          "EffectPattern": "Eff_Monster_Hati_Ani_Hit_Parry_01_Dust",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "ParryAid"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    },
+    "PartDestroyedModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_HatiArmored"
+          ],
+          "Tag": "Monster_HatiArmored_ArmorBreak",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_HatiArmoredBoss"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Boss"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Monster_HatiArmored_ArmorBreak",
+          "Visible": false
+        },
+        {
+          "$type": "PopRenderVisibleAction",
+          "Tag": "Monster_HatiArmored_UnArmor"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Bip001 Pelvis",
+          "EffectPattern": "Eff_Monster_Hati_Broken_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Bone029",
+          "EffectPattern": "Eff_Monster_Hati_Broken_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "Play_SoundAction_HatiArmored_Trans_Hati"
+        },
+        {
+          "$type": "ChangeMonsterAIAction",
+          "MonsterAIId": 111201,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Boss"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ChangeMonsterAIAction",
+          "MonsterAIId": 111204,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Boss"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_Hati"
+            }
+          ],
+          "Tag": "Monster_HatiArmoredBoss_MA_P1_Perform_Roar_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_HatiArmoredBoss_MA_P1_Perform_Roar_SecondaryEmission_02"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "CustomKey": "Monster_HatiArmoredBoss_MA_P1_Perform_Roar_SecondaryEmission_01",
+          "Tag": "Monster_HatiArmoredBoss_MA_P1_Perform_Roar_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StunTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BreakStunTakeRatio": "%AS_BreakStunTakeRatio"
+      }
+    },
+    "UnArmoredStartModifier": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_PhaseIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

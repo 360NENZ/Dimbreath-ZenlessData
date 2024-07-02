@@ -1,0 +1,66 @@
+{
+  "AbilityName": "Card_Froze_2001102",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.5
+    },
+    "AS_AddedElementRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_BuffDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceAccumulationTakeUpModifier_Card_Froze_2001102",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IceAccumulationTakeUpModifier_Card_Froze_2001102": {
+      "Duration": 5,
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%AS_AddedElementRatio",
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

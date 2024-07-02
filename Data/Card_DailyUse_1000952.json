@@ -1,0 +1,73 @@
+{
+  "AbilityName": "Card_DailyUse_1000952",
+  "AbilitySpecials": {
+    "AS_SPGetRatio": {
+      "Value": 0.2
+    },
+    "AS_TemplateID": {
+      "Value": 1191
+    },
+    "BattleCount_Card1100952": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_TarotCard_CounterCombo",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": "%AS_TemplateID"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(BattleCount_Card1100952)",
+        "ParamName": "BattleCount_Card1100952",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpGetRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "LessEqual",
+            "Param": 3,
+            "ParamName": "BattleCount_Card1100952",
+            "ParamType": "Float",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "BattleCount_Card1100952",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpGetRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_SPGetRatio": "%AS_SPGetRatio"
+      }
+    }
+  }
+}

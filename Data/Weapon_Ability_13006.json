@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Weapon_Ability_13006",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio_01": {
+      "Value": 0.15
+    },
+    "AS_AddedBreakStunRatio_02": {
+      "Value": 0.15
+    },
+    "AS_HpPercentage_01": {
+      "Value": 0.5
+    },
+    "AS_HpPercentage_02": {
+      "Value": 0.75
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "GreaterEqual",
+            "Denominator": "MaxHP",
+            "IsUsePercent": true,
+            "Numerator": "CurHP",
+            "Target": "Target",
+            "Val1": "%AS_HpPercentage_01",
+            "Val2": 0
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "GreaterEqual",
+            "Denominator": "MaxHP",
+            "IsUsePercent": true,
+            "Numerator": "CurHP",
+            "Target": "Target",
+            "Val1": "%AS_HpPercentage_02",
+            "Val2": 0
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio_02",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Suit_Ability_50430700",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 12.0
+    },
+    "AS_ElementMysteryDelta": {
+      "Value": 30.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ElementMysteryDeltaModifier_Suit_Ability_50430700": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_ElementMysteryDelta": "%AS_ElementMysteryDelta"
+      }
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ElementMysteryDeltaModifier_Suit_Ability_50430700",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Electric",
+                "Overload",
+                "Strike",
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

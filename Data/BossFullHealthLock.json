@@ -1,0 +1,39 @@
+{
+  "AbilityName": "BossFullHealthLock",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BossLockLifeModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "BossLockLifeModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BossLockLifeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.95
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

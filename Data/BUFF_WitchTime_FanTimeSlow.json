@@ -1,0 +1,51 @@
+{
+  "AbilityName": "BUFF_WitchTime_FanTimeSlow",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnCustomEventReceived": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "BUFF_WitchTime_Dodge_EventSend"
+          }
+        ],
+        "FailureActions": [],
+        "SuccessActions": [
+          {
+            "$type": "TimeSlowByConfigKeyAction",
+            "ConfigKey": "SceneObject_Fan_WitchTimeSlow",
+            "IsGlobal": false,
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "BUFF_WitchTime_Dodge_EventEnd"
+          }
+        ],
+        "FailureActions": [],
+        "SuccessActions": [
+          {
+            "$type": "InterruptTimeSlowAction",
+            "Target": "Self",
+            "TargetKey": "SceneObject_Fan_WitchTimeSlow"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "SlowDownModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [],
+      "OnRemoved": []
+    }
+  }
+}

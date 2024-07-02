@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_DailyUse_1000923",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IncreaseDamage",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Normal",
+            "Target": "Target"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "IncreaseDamage": {
+      "ModifierStacking": "Unique",
+      "OnBattleExit": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "IncreaseDamage"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

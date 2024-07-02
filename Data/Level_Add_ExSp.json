@@ -1,0 +1,52 @@
+{
+  "AbilityName": "Level_Add_ExSp",
+  "AbilitySpecials": {
+    "SPRatio": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ACT1SPRecoverDelta",
+        "Target": "LocalAvatar"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ACT1SPRecoverDelta": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%SPRatio",
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverTimeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverTimeModifier": {
+      "Duration": 0.9,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ACT1SPRecoverDelta",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

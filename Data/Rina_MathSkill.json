@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Rina_MathSkill",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio": {
+      "Value": 0.25
+    },
+    "AS_BuffAddDuration": {
+      "Value": 2.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ElecBuffReviseModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecBuffReviseModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ElecBuffReviseModifier": {
+      "BuffRevises": [
+        {
+          "FilterType": "ByBuffGroup",
+          "GroupName": "Electric",
+          "Params": [
+            {
+              "Delta": "%AS_BuffAddDuration",
+              "Name": "Duration"
+            }
+          ]
+        },
+        {
+          "FilterType": "ByBuffGroup",
+          "GroupName": "Overload",
+          "Params": [
+            {
+              "Delta": "%AS_BuffAddDuration",
+              "Name": "Duration"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

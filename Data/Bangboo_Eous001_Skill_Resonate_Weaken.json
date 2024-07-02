@@ -1,0 +1,160 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Resonate_Weaken",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenDodgeModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier",
+        "Odds": 1.0,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Eous001_Skill_Resonate_Weaken_Attackproperty_01"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier": {
+      "Buff": {
+        "BuffID": 123003,
+        "IsOverrideDuration": true
+      },
+      "Duration": 5,
+      "IgnoreTimeScale": false
+    },
+    "ListenDodgeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnDodgeSuccess": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Resonate_Weaken",
+          "Predicates": [
+            {
+              "$type": "BySkillReady",
+              "SkillName": "Bangboo_Eous001_Skill_Resonate_Weaken",
+              "Target": "Caster"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Disabled"
+                  ],
+                  "Target": "Caster"
+                }
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "DitherFadeAction",
+      "DitherFadeKey": "Bangboo_Teleport_Dither_Fade",
+      "Tag": "Bangboo_Teleport_Dither_Fade",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyLogicMoveAction",
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 5.0
+        },
+        "Duration": 0.1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeInstant"
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Camera",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "PositionOffset": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 1.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "LocalAvatar"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Stop"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 0.1,
+        "ReachTargetStop": false,
+        "RotateSpeed": 1,
+        "RotateType": "Instant",
+        "TargetPosRot": {
+          "CoordsOption": "Camera",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 32,
+      "ParamName": "Int_AttackIndex",
+      "ParamType": 3,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Trigger_PressAttackB",
+      "ParamType": 1,
+      "Target": "Self"
+    }
+  ]
+}

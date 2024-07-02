@@ -1,0 +1,155 @@
+{
+  "AbilityName": "Lucy_Wood_HandleAnimEvent",
+  "AbilitySpecials": {
+    "AS_AttackIndex": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "LucyWoodAttackPoint",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WoodBall",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Attack_Branch_01_AttackProperty_01_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 11,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Attack_Branch_01_AttackProperty_02_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 12,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Attack_Branch_01_AttackProperty_03_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 13,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Attack_Branch_02_AttackProperty_01_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 21,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Attack_Branch_02_AttackProperty_02_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 22,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Attack_Branch_02_AttackProperty_03_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 23,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimEvent",
+      "AnimEventID": "Lucy_Wood_Switch_Attack_Ex_AttackProperty_01_Explosion",
+      "CustomKey": "Lucy_Self_AbilityTargetting_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 31,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

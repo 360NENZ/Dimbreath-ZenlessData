@@ -1,0 +1,16 @@
+{
+  "AbilityName": "DEBUFF_IgnoreWitchSlowDown",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "IgnoreWitchSlowDown"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  }
+}

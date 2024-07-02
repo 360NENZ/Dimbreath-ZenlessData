@@ -1,0 +1,22 @@
+{
+  "AbilityName": "RuthlessFiend_Ability_Attack_4_Hit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_RuthlessFiend_ATK04_Attackproperty_Check"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

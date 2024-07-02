@@ -1,0 +1,47 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Hit_Counter",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "TriggerAchievementsModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry_Counter",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "TriggerAchievementsModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_P2_Achievements",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TriggerAchievementsModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerLevelCustomConditions",
+          "LevelConditionsID": 1061
+        }
+      ]
+    }
+  }
+}

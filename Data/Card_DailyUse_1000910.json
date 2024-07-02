@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Card_DailyUse_1000910",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "Properties": {
+      "Actor_IsBanCritical": 1
+    }
+  }
+}

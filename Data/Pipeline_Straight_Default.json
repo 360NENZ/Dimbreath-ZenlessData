@@ -1,0 +1,97 @@
+{
+  "AbilityName": "Pipeline_Straight_Default",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FieldRangeModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "BoxColliderDistance": 4,
+            "BoxColliderHeight": 2,
+            "BoxColliderWidth": 4,
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -2.5
+            },
+            "ColliderType": "Box"
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "ParamName": "Bool_IsInRange",
+              "Predicates": [
+                {
+                  "$type": "ByIsLocalAvatar",
+                  "IsLocalAvatar": "true",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByLevelEnd",
+                  "LevelEnd": "false"
+                }
+              ]
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "FieldRangeModifier",
+              "Predicates": [
+                {
+                  "$type": "ByIsLocalAvatar",
+                  "IsLocalAvatar": "true",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByLevelEnd",
+                  "LevelEnd": "false"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FieldExitActions": [],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": false,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

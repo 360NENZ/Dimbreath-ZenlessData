@@ -1,0 +1,38 @@
+{
+  "AbilityName": "BUFF_HitDropSP",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_HitDropSPModifier": {
+      "Duration": 6,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1004:10000:1",
+          "Target": "Target"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "HitDropSPActiveEvent"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BUFF_HitDropSPModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "BUFF_HitDropSP",
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_HitDropSPModifier",
+      "Target": "Self"
+    }
+  ]
+}

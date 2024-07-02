@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Card_DailyUse_1000916",
+  "AbilitySpecials": {
+    "AddedDamageRatio_All": {
+      "Value": 0.25
+    },
+    "AddedDamageRatio_Boss": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio_All",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio_Boss",
+        "Target": "Self"
+      }
+    ]
+  }
+}

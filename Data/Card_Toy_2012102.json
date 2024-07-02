@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Card_Toy_2012102",
+  "AbilitySpecials": {
+    "AS_CriticalDMGDelta": {
+      "Value": 0.48
+    },
+    "AS_CriticalDelta": {
+      "Value": 0.24
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyCritUpModifier_Card_2012102",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyCritUpModifier_Card_2012102": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDMGDelta",
+        "Actor_CriticalDelta": "%AS_CriticalDelta"
+      }
+    }
+  }
+}

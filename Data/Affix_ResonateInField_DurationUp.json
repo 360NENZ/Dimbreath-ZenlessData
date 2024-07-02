@@ -1,0 +1,21 @@
+{
+  "AbilityName": "Affix_ResonateInField_DurationUp",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ModifyArcanaCommonPropertyAction",
+        "ArcanaProperty": "FieldRangeDuration",
+        "Delta": 5,
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Buddy"
+      }
+    ]
+  }
+}

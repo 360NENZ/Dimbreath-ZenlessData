@@ -1,0 +1,10 @@
+{
+  "AbilityName": "Bangboo_Eous001_GuideStart",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "LDListenEntityAction",
+      "TargetKey": "EousGuide_GuideStart"
+    }
+  ]
+}

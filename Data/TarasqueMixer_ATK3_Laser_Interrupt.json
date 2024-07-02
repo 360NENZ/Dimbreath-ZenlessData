@@ -1,0 +1,10 @@
+{
+  "AbilityName": "TarasqueMixer_ATK3_Laser_Interrupt",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "InterruptLaserAction",
+      "Tag": "TarasqueMixer_ATK3_Laser"
+    }
+  ]
+}

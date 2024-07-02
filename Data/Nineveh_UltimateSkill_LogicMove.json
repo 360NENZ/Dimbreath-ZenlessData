@@ -1,0 +1,388 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Ultimate_Start",
+          "FrameCountHigh": 80,
+          "FrameCountLow": 20,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_Invert_LogicMovement_1st"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_Start",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 80,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_Invert_LogicMovement_2nd"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_Invert_LogicMovement_3rd"
+          ]
+        },
+        {
+          "AnimatorStateName": "Death_Ground_Stay",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 100,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_Death_LogicMovement_1st"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_UltimateSkill_CameraTrackOverrideModifier",
+            "Nineveh_UltimateSkill_ZoneModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_UltimateSkill_CameraTrackOverrideModifier",
+            "Nineveh_UltimateSkill_ZoneModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "FrameCountHigh": 170,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Nineveh_UltimateSkill_CameraTrackOverrideModifier",
+            "Nineveh_UltimateSkill_ZoneModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "MuteNinevehBeeAttackModifier"
+          ],
+          "ZoneTag": "UltimateSkill"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_UltimateSkill_LogicMove",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MuteNinevehBeeAttackModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Disarm"
+          ],
+          "CustomKey": "Monster_Nineveh_Bee_01",
+          "Target": "Custom"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Disarm"
+          ],
+          "CustomKey": "Monster_Nineveh_Bee_02",
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Disarm"
+          ],
+          "CustomKey": "Monster_Nineveh_Bee_01",
+          "Target": "Custom"
+        },
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Disarm"
+          ],
+          "CustomKey": "Monster_Nineveh_Bee_02",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "Nineveh_Death_LogicMovement_1st": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": 2.0,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 3.5
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "MonsterPos_A1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_Invert_LogicMovement_1st": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": 1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 4.5
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "MonsterPos_A1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_Invert_LogicMovement_2nd": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": 2,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 4
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "MonsterPos_A1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_Invert_LogicMovement_3rd": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": 2,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 3.5
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "MonsterPos_A1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_UltimateSkill_CameraTrackOverrideModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "Nineveh_Attack_Ultimate_CameraOverrideTrack_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Nineveh_Attack_Ultimate_CameraOverrideTrack_01"
+        }
+      ]
+    },
+    "Nineveh_UltimateSkill_ZoneModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "UltimateSkill"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "UltimateSkillReady"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "TokushuDankai"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "UltimateSkill"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "TokushuDankai"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

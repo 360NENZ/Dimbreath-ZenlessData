@@ -1,0 +1,20 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "FloatParamSmoothMixin",
+      "CurrentParam": "Float_AIBlendDir_Param_Smooth",
+      "DampDuration": 0.3,
+      "SmoothType": "Damper",
+      "TargetParam": "Float_AIBlendDir_Param_02"
+    }
+  ],
+  "AbilityName": "Specter_SmoothParam",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_04_Explode_01",
+      "Target": "Self"
+    }
+  ]
+}

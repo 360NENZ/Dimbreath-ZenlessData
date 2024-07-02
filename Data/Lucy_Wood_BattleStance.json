@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Lucy_Wood_BattleStance",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "WriteAIParamAction",
+      "FloatParamValue": 20,
+      "ParamName": "Float_BattleStance_Time",
+      "Target": "Self"
+    },
+    {
+      "$type": "WriteAIParamAction",
+      "BoolParamValue": true,
+      "ParamName": "Bool_BattleStance",
+      "Target": "Self"
+    },
+    {
+      "$type": "WriteAIParamAction",
+      "FloatParamValue": -1,
+      "ParamName": "Float_AttackCD_Current",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Level_NoviceGuide_03",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetupUIAction",
+        "HideUITags": [
+          "SwitchBtnPanel"
+        ],
+        "IgnoreFadeAnimation": true,
+        "Priority": 0,
+        "SetupTag": "Level_NoviceGuide_SetupTag_02"
+      },
+      {
+        "$type": "InputMuteAction",
+        "CharacterSwitchMute": false,
+        "Tag": "Level_NoviceGuide_InputMute_02"
+      }
+    ]
+  }
+}

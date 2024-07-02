@@ -1,0 +1,384 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_UniqueSkill",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "UnlockUniqueSkill",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_RedLightManager",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "RedLight",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Flag",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 110,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_UniqueSkill",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "UnlockUniqueSkill",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_RedLightManager",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "RedLight",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Flag_01",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 43,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_UniqueSkill",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "UnlockUniqueSkill",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_RedLightManager",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "RedLight",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Flag_02",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 43,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_UniqueSkill",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "UnlockUniqueSkill",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_RedLightManager",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "RedLight",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 124,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_UniqueSkill",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "UnlockUniqueSkill",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_RedLightManager",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "RedLight",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 124,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_UniqueSkill",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "Equal",
+                  "CustomNumerator": "UnlockUniqueSkill",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_RedLightManager",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "RedLight",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid_Flag",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 61,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_FlagManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnPatternHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_AidAttackTag",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "FlagAidAttack"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AokakuAidFlagWindowModifier": {
+      "Duration": 1.5,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AokakuAidFlag"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AokakuAidFlag"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BangbooQTEModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "InBangbooQTE",
+                "AfterBangbooQTE"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BangbooQTEModifier": {
+      "Duration": 10,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AokakuAidFlag"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AokakuAidFlag"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BangbooQTEModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_AidAttackTag": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Common"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AokakuAidFlag"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Common"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AokakuAidFlagWindowModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "AbilityName": "NPC_TreasureBox_01",
+  "DefaultModifier": {
+    "OnOpenBox": [
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_Treasure_Open",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_OpenBox",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_MoveFront",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_MoveLeft",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_MoveRight",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_MoveLeft",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_MoveRight",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ChargePointReduceModifier",
+            "SPGetRatioModifierController"
+          ]
+        }
+      ],
+      "IsSeam": true
+    }
+  ],
+  "AbilityName": "Lisa_Talent_03",
+  "AbilitySpecials": {
+    "AS_SPGetRatio_Lisa_Talent_03": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 6,
+        "CustomPropertyType": "CurChargePoint",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChargePointReduceModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOtherPre": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ChargePointReduceModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lisa_Attack_Normal_01_AttackProperty_01",
+                "Lisa_Attack_Normal_01_AttackProperty_02",
+                "Lisa_Attack_Normal_02_AttackProperty_01",
+                "Lisa_Attack_Normal_02_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_01",
+                "Lisa_Attack_Normal_03_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_03",
+                "Lisa_Attack_Normal_04_AttackProperty_01",
+                "Lisa_Attack_Normal_04_AttackProperty_02",
+                "Lisa_Attack_Rush_AttackProperty_01",
+                "Lisa_Attack_Rush_AttackProperty_02",
+                "Lisa_Attack_Normal_Move_AttackProperty_01",
+                "Lisa_Attack_Normal_Move_AttackProperty_02"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SPGetRatioModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lisa_Attack_Normal_01_AttackProperty_01",
+                "Lisa_Attack_Normal_01_AttackProperty_02",
+                "Lisa_Attack_Normal_02_AttackProperty_01",
+                "Lisa_Attack_Normal_02_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_01",
+                "Lisa_Attack_Normal_03_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_03",
+                "Lisa_Attack_Normal_04_AttackProperty_01",
+                "Lisa_Attack_Normal_04_AttackProperty_02",
+                "Lisa_Attack_Rush_AttackProperty_01",
+                "Lisa_Attack_Rush_AttackProperty_02",
+                "Lisa_Attack_Normal_Move_AttackProperty_01",
+                "Lisa_Attack_Normal_Move_AttackProperty_02"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "CustomNumerator": "CurChargePoint",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 1
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": -1,
+          "CustomPropertyType": "CurChargePoint",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lisa_Attack_Normal_01_AttackProperty_01",
+                "Lisa_Attack_Normal_01_AttackProperty_02",
+                "Lisa_Attack_Normal_02_AttackProperty_01",
+                "Lisa_Attack_Normal_02_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_01",
+                "Lisa_Attack_Normal_03_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_03",
+                "Lisa_Attack_Normal_04_AttackProperty_01",
+                "Lisa_Attack_Normal_04_AttackProperty_02",
+                "Lisa_Attack_Rush_AttackProperty_01",
+                "Lisa_Attack_Rush_AttackProperty_02",
+                "Lisa_Attack_Normal_Move_AttackProperty_01",
+                "Lisa_Attack_Normal_Move_AttackProperty_02"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "CustomNumerator": "CurChargePoint",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 1
+            }
+          ],
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "SPGetRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lisa_Attack_Normal_01_AttackProperty_01",
+                "Lisa_Attack_Normal_01_AttackProperty_02",
+                "Lisa_Attack_Normal_02_AttackProperty_01",
+                "Lisa_Attack_Normal_02_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_01",
+                "Lisa_Attack_Normal_03_AttackProperty_02",
+                "Lisa_Attack_Normal_03_AttackProperty_03",
+                "Lisa_Attack_Normal_04_AttackProperty_01",
+                "Lisa_Attack_Normal_04_AttackProperty_02",
+                "Lisa_Attack_Rush_AttackProperty_01",
+                "Lisa_Attack_Rush_AttackProperty_02",
+                "Lisa_Attack_Normal_Move_AttackProperty_01",
+                "Lisa_Attack_Normal_Move_AttackProperty_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_SPGetRatio",
+          "PropertyValue": "%AS_SPGetRatio_Lisa_Talent_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SPGetRatioModifierController": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SPGetRatioModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

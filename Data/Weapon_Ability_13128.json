@@ -1,0 +1,100 @@
+{
+  "AbilityName": "Weapon_Ability_13128",
+  "AbilitySpecials": {
+    "AS_AttackRatio": {
+      "Value": 0.1
+    },
+    "AS_BuffDuration": {
+      "Value": 5
+    },
+    "AS_ElementAccumulationRatio": {
+      "Value": 20
+    },
+    "AS_ElementMysteryDelta": {
+      "Value": 20
+    },
+    "AS_RandomBuffCD": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RandomOperatorModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackRatioModifier": {
+      "Duration": "%AS_BuffDuration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_AttackRatio"
+      }
+    },
+    "ElementAccumulationModifier": {
+      "Duration": "%AS_BuffDuration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedElementAccumulationRatio": "%AS_ElementAccumulationRatio"
+      }
+    },
+    "ElementMysteryRatioModifier": {
+      "Duration": "%AS_BuffDuration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_ElementMysteryDelta": "%AS_ElementMysteryDelta"
+      }
+    },
+    "RandomOperatorModifier": {
+      "Duration": "%AS_RandomBuffCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.3333333,
+          "OnFailure": [
+            {
+              "$type": "RandomOperator",
+              "Odds": 0.5,
+              "OnFailure": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ElementAccumulationModifier",
+                  "Target": "Self"
+                }
+              ],
+              "OnSuccess": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ElementMysteryRatioModifier",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AttackRatioModifier",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

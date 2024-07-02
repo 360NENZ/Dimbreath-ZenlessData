@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Card_Ashes_1000101",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    },
+    "Odds": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "Properties": {
+      "AnimEventBuffOddsDelta_Burn": "%Odds"
+    }
+  }
+}

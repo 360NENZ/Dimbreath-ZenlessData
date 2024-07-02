@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Follower_BeHit_IncreaseAttack",
+  "AbilitySpecials": {
+    "Dynamic_Actor_AddedAttackRatio": {
+      "Value": 0
+    },
+    "Dynamic_Duration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IncreaseAttackModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IncreaseAttackModifier": {
+      "Duration": "%Dynamic_Duration",
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%Dynamic_Actor_AddedAttackRatio"
+        }
+      ]
+    }
+  }
+}

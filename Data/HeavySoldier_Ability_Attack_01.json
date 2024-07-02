@@ -1,0 +1,22 @@
+{
+  "AbilityName": "HeavySoldier_Ability_Attack_01",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_HeavySoldier_ATK01_AttackProperty_01"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

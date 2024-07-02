@@ -1,0 +1,66 @@
+{
+  "AbilityName": "LampasBlackVeil_CoAttack_01_Trigger",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Trigger_PressAttackA",
+      "ParamType": 1,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Trigger_CoAttack",
+      "ParamType": 1,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 1,
+      "ParamName": "Int_CoAttackIndex",
+      "ParamType": 3,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_CoAttackRole",
+      "ParamType": 3,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "ParamName": "Trigger_PressAttackA",
+      "ParamType": 1,
+      "Target": "Custom"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "ParamName": "Trigger_CoAttack",
+      "ParamType": 1,
+      "Target": "Custom"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "IntVal": 1,
+      "ParamName": "Int_CoAttackIndex",
+      "ParamType": 3,
+      "Target": "Custom"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "IntVal": 1,
+      "ParamName": "Int_CoAttackRole",
+      "ParamType": 3,
+      "Target": "Custom"
+    }
+  ]
+}

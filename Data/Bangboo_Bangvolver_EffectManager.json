@@ -1,0 +1,96 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Success",
+          "FrameCountLow": 79,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DiceEffectModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Bangvolver_EffectManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DiceEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.5,
+          "OnFailure": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Bangvolver_Attack_Success_14_Dice",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Ctr_Dice",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Bangvolver_Attack_Success_13_Dice",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Ctr_Dice",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Suit_Ability_50431100",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.2
+    },
+    "AS_BaseAttackRatio": {
+      "Value": 0.2
+    },
+    "AS_Duration": {
+      "Value": 12
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackQTE",
+              "ExQTE"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    }
+  }
+}

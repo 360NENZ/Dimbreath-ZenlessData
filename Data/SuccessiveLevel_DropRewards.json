@@ -1,0 +1,99 @@
+{
+  "AbilityName": "SuccessiveLevel_DropRewards",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "DropItemAction",
+        "DropStr": "1004:10000:10",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 0,
+        "ParamName": "Int_LevelActionIndex",
+        "ParamType": 3,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_InLevelAction",
+        "ParamType": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DropHealthModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DropEXQTEModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DropEXQTEModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 2,
+          "TimeUpActions": [
+            {
+              "$type": "ModifyTeamFeverAction",
+              "ModifyFunction": "Add",
+              "Percent": 1
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 0,
+              "ParamName": "Int_LevelActionIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_InLevelAction",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "DropHealthModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 1,
+          "TimeUpActions": [
+            {
+              "$type": "DropItemAction",
+              "DropStr": "1222:10000:25",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 0,
+              "ParamName": "Int_LevelActionIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_InLevelAction",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

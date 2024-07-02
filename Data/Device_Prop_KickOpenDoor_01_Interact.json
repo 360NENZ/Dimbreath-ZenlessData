@@ -1,0 +1,114 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "Object_KickOpenDoor",
+      "InteractTag": "Object_KickOpenDoor",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "Object_KickOpenDoor"
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Kick_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveInteractModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Kick_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveInteractModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Kick_03_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveInteractModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Kick_04_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveInteractModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Kick_01_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveInteractModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Kick_02_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveInteractModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Prop_KickOpenDoor_01_Interact",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RemoveInteractModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InteractEnableAction",
+          "Enable": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "LogStringAction",
+          "LogStr": "Template_Common启动!!!"
+        }
+      ]
+    }
+  }
+}

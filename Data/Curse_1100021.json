@@ -1,0 +1,99 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurStun",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Curse_1100021_ActorNoStun",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Curse_1100021",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 0.3
+    },
+    "AS_NoStun": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Curse_1100021_AddDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Curse_1100021_ActorNoStun",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Curse_1100021_ActorNoStun": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "Bool_IsCurseNoStun",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_NoStun",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoStun",
+          "PropertyValue": "%AS_NoStun",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Curse_1100021_AddDamageRatio": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddDamageRatio"
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Curse_1100021_ActorNoStun",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "AbilityName": "Lucy_Wood_MuteBeSelected",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushMuteBeSelectedAction",
+        "MuteValue": true,
+        "Tag": "Lucy_Wood_MuteBeSelected",
+        "Target": "Self"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "PopMuteBeSelectedAction",
+        "Tag": "Lucy_Wood_MuteBeSelected",
+        "Target": "Self"
+      }
+    ]
+  }
+}

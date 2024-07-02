@@ -1,0 +1,22 @@
+{
+  "AbilityName": "LevelZero_Teleport_Buddy",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Tag": "Common_MA_EtherMechanism_ScreenImage_02",
+        "Target": "Self",
+        "key": "Common_MA_EtherMechanism_ScreenImage_02"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "Tag": "Common_MA_EtherMechanism_ScreenImage_02",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Dungeon_Buff_Elec",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    },
+    "BreakStunRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Elec"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Elec"
+          }
+        ],
+        "PropertyKey": "Actor_BreakStunRatio",
+        "PropertyValue": "%BreakStunRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

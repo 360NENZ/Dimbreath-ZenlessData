@@ -1,0 +1,103 @@
+{
+  "AbilityName": "BUFF_MissleTower_RevetPlayerInjure",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_LPG_RevertPlayerInjure": {
+      "Duration": 30,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MissleProofShield_Modifier",
+          "Target": "Self"
+        }
+      ],
+      "OnBeDamageCalculated": [
+        {
+          "$type": "ReplaceDamageByHpAction",
+          "HpProperty": "MaxHP",
+          "Percentage": "%HpPercentage",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Device_MissileWall_Level_Attackproperty_1"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Shield_Hit_LD_Test",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Device_MissileWall_Level_Attackproperty_1"
+              ]
+            }
+          ],
+          "Target": "LocalAvatar"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "GamePlayTest_LPG_RevertDamage",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Buff_DefenseUp_End",
+          "Target": "LocalAvatar"
+        }
+      ]
+    },
+    "MissleProofShield_Modifier": {
+      "Duration": 30,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": 6,
+          "Tag": "MissleProofShield",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "MissleProofShield",
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_LPG_RevertPlayerInjure",
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Buff_DefenseUpLarge_Start",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ShowTipAction",
+      "ShowPage": 0,
+      "Target": "Self",
+      "TipID": 301109
+    }
+  ]
+}

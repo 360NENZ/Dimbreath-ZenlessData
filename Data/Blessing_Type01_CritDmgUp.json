@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Blessing_Type01_CritDmgUp",
+  "AbilitySpecials": {
+    "AddedCriticalDamage": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_CriticalDamageRatioRatio": "%AddedCriticalDamage"
+    }
+  }
+}

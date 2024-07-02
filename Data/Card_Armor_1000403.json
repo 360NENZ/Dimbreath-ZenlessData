@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Card_Armor_1000403",
+  "AbilitySpecials": {
+    "DurationRatio": {
+      "Value": -0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "BuffType": "Debuff",
+        "FilterType": "ByBuffType",
+        "Params": [
+          {
+            "Name": "Duration",
+            "Ratio": "%DurationRatio"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Goblin_ATK05_Hit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Goblin_ATK05_Attackproperty_Detect"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

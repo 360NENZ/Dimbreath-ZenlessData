@@ -1,0 +1,25 @@
+{
+  "AbilityName": "ListenMonsterDie",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenMonsterDieModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenMonsterDieModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnKilledPre": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "MonsterDieEvent"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Card_Ashes_2000105",
+  "AbilitySpecials": {
+    "AS_AddedAccumulationRatio": {
+      "Value": 0.35
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          }
+        ],
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": "%AS_AddedAccumulationRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

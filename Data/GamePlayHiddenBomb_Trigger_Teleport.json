@@ -1,0 +1,52 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_Trigger_Teleport",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_Teleport",
+        "ParamType": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Teleport_Modifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Teleport_Modifier": {
+      "Duration": 3.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TriggerDisappear_Modifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Show",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

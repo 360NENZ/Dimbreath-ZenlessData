@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Talent_10101_BigPoint_DamageTakeRatio01",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.02
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_DamageTakeRatio": "%DamageTakeRatio"
+    }
+  }
+}

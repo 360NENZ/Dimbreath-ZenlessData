@@ -1,0 +1,123 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Press",
+              "PressTime": 0,
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "HoldingModifier"
+                }
+              ]
+            },
+            {
+              "ListenerType": "PointUp",
+              "PressTime": 0.0,
+              "TriggerActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "HoldingModifier"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 5
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_ChargeAttack_01",
+          "FrameCountHigh": 133,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "EnterChargeModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_ChargeAttack_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "EnterChargeModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Clara_HoldingControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EnterChargeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HoldReleaseBuffer"
+        }
+      ]
+    },
+    "HoldReleaseBuffer": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "NotIgnoreList": [
+        "World",
+        "Owner"
+      ],
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_HoldReleaseBuffer",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_HoldReleaseBuffer",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "HoldingModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsHoldingAttackB",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsHoldingAttackB",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

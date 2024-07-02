@@ -1,0 +1,63 @@
+{
+  "AbilityName": "Suit_Ability_50432600",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.3
+    },
+    "AS_Duration": {
+      "Value": 12
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "DebuffModifier"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DebuffModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace"
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DebuffModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Strike"
+              ]
+            }
+          ],
+          "Target": "Other"
+        }
+      ]
+    }
+  }
+}

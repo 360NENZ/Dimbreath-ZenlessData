@@ -1,0 +1,114 @@
+{
+  "AbilityName": "Card_Armor_2000406",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 20
+    },
+    "Duration": {
+      "Value": 10
+    },
+    "RecoverPercentage": {
+      "Value": 0
+    },
+    "ShieldAmount": {
+      "Value": 0.08
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GetShieldModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddShieldCD_Card_2000406": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique"
+    },
+    "BloodhandModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "CommonDefenseMaterial",
+              "Target": "Self",
+              "key": "Common_MA_Buff_Defence_RimGlow_01"
+            }
+          ],
+          "Duration": "%Duration",
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 1,
+          "RecoverAmount": 0,
+          "RecoverPercentage": "%RecoverPercentage",
+          "Tag": "BloodHand",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%ShieldAmount",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    },
+    "GetShieldModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnKillOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BloodhandModifier",
+          "Predicates": [
+            {
+              "$type": "ByMonsterFunctionType",
+              "CompareType": "Equal",
+              "MonsterFunctionType": "Monster",
+              "Target": "Target"
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "CountModifierType": "SameNameAbility",
+              "ModifierName": "AddShieldCD_Card_2000406",
+              "StackCount": 0,
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddShieldCD_Card_2000406",
+          "Predicates": [
+            {
+              "$type": "ByMonsterFunctionType",
+              "CompareType": "Equal",
+              "MonsterFunctionType": "Monster",
+              "Target": "Target"
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "CountModifierType": "SameNameAbility",
+              "ModifierName": "AddShieldCD_Card_2000406",
+              "StackCount": 0,
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

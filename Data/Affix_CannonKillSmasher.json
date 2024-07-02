@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Affix_CannonKillSmasher",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_Die",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "LessEqual",
+            "StrengthType": "Normal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Cannon"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  }
+}

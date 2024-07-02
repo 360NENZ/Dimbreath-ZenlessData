@@ -1,0 +1,325 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_06",
+          "FrameCountHigh": 49,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_07",
+          "FrameCountHigh": 59,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 45,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 45,
+          "FrameCountLow": 10,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Special_01",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ExSpecial_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ExSpecial_01_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ExSpecial_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ExSpecial_02_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_Attack_Weapon_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SwitchIn_Attack"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_End",
+          "FrameCountHigh": 29,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SwitchIn_Attack"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SwitchIn_Attack_Ex"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_End",
+          "FrameCountHigh": 42,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SwitchIn_Attack_Ex"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "QingYi_VFX",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertyModifier_Attack_Weapon_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_OverrideRimGlow_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_OverrideRimGlow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_OverrideRimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_Attack_Weapon_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_SecondaryEmission_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_OverrideRimGlow_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_OverrideRimGlow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_OverrideRimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_Normal_05_SecondaryEmission_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_SwitchIn_Attack": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_QTE_OverrideOutline_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_QTE_OverrideOutline_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_QTE_OverrideOutline_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_SwitchIn_Attack_Ex": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_SignatureWeapon_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Talent_10101_MaxHPDelta02",
+  "AbilitySpecials": {
+    "MaxHPDelta": {
+      "Value": 50
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_MaxHPDelta": "%MaxHPDelta"
+    }
+  }
+}

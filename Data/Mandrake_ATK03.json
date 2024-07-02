@@ -1,0 +1,239 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_3",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Mandrake_DefenceArmEffect"
+          ],
+          "NormalizedTimeHigh": 0.4,
+          "NormalizedTimeLow": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Mandrake_ATK03",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Mandrake_ATK03_HitListener",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 1,
+        "ParamName": "Int_BornType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Mandrake_ATK"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 2,
+        "ParamName": "Int_BornType",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Mandrake_DEF"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Bn_Mandrake_Core",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "EffectPattern": "Eff_Monster_Common_Ether_Demote_HeadPoint_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "Bn_Mandrake_Body_1",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "EffectPattern": "Eff_Monster_Mandrake_Body_Body_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Mandrake_ATK03_CounterAttack": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Mandrake_ATK03_HitListener": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Mandrake_ATK03_CounterAttack",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Target",
+              "CompareType": "LessEqual",
+              "Distance": 5,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Mandrake_CounterReady"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "BySkillReady",
+              "SkillName": "Monster_Mandrake_ATK03",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Mandrake_DefenceArmEffect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bn_Mandrake_Arm_L",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Mandrake_Attack_03_Hit_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bn_Mandrake_Arm_R",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Mandrake_Attack_03_Hit_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": []
+}

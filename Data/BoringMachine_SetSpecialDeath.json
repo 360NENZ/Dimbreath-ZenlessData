@@ -1,0 +1,16 @@
+{
+  "AbilityName": "BoringMachine_SetSpecialDeath",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_SpecialDeath",
+        "ParamType": 2,
+        "Target": "Self"
+      }
+    ]
+  }
+}

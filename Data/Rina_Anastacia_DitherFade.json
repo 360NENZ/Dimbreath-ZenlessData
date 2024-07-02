@@ -1,0 +1,560 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 48,
+          "FrameCountLow": 14,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Attack",
+          "FrameCountHigh": 136,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 22,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Dash",
+          "FrameCountHigh": 100,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Dash",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Dash",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt_02",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Teleport",
+          "FrameCountHigh": 48,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "DitherFadeAction",
+              "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeIn",
+              "Tag": "Avatar_Rina_Anastacia_Dither",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DitherFadeAction",
+              "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeIn",
+              "Tag": "Avatar_Rina_Anastacia_Dither",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DitherFadeAction",
+              "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeIn",
+              "Tag": "Avatar_Rina_Anastacia_Dither",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_EvadeAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DitherFadeAction",
+              "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeIn",
+              "Tag": "Avatar_Rina_Anastacia_Dither",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_03_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Revive_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Revive_Multiplayer",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "QuestStart",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_EvadeAid_Follow",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeInModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Death",
+          "Frame": 240,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Normal",
+          "Frame": 12,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Attack",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DitherFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Outing",
+          "Frame": 75,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_DitherFade",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushEntityVisibleWithTagAction",
+        "MpExecMode": "NotExecuted",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByLocalAvatarCondition"
+          }
+        ],
+        "Tag": "Rina_Anastacia",
+        "Target": "Self",
+        "Visible": false
+      },
+      {
+        "$type": "PushHullColliderEnable",
+        "HullColliderEnable": false,
+        "MpExecMode": "NotExecuted",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByLocalAvatarCondition"
+          }
+        ],
+        "Tag": "Rina_Anastacia",
+        "Target": "Self"
+      },
+      {
+        "$type": "PushWallColliderEnable",
+        "MpExecMode": "NotExecuted",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByLocalAvatarCondition"
+          }
+        ],
+        "Tag": "Rina_Anastacia",
+        "Target": "Self",
+        "WallColliderEnable": false
+      }
+    ]
+  },
+  "Modifiers": {
+    "DitherFadeInModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DitherFadeOutModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "Rina_Anastacia",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Avatar_Rina_Anastacia_Dither",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "Rina_Anastacia",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopWallColliderEnable",
+          "Tag": "Rina_Anastacia",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DitherFadeOutModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.5,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "Rina_Anastacia",
+              "Target": "Self",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DitherFadeInModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeOut_01",
+          "Tag": "Avatar_Rina_Anastacia_Dither",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHullColliderEnable",
+          "HullColliderEnable": false,
+          "Tag": "Rina_Anastacia",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushWallColliderEnable",
+          "Tag": "Rina_Anastacia",
+          "Target": "Self",
+          "WallColliderEnable": false
+        }
+      ]
+    },
+    "InvisibleModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeOut_02",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_04_Dash",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Avatar_Rina_Anastacia_Dither",
+          "Target": "Self"
+        },
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeOut_03",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Normal_04_Dash",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false
+            }
+          ],
+          "Tag": "Avatar_Rina_Anastacia_Dither",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Avatar_Rina_Anastacia_Dither",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByLocalAvatarCondition": {
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByEntityTemplateID",
+              "EntityType": "Avatar",
+              "Target": "LocalAvatar",
+              "TemplateID": 1211
+            }
+          ],
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  }
+}

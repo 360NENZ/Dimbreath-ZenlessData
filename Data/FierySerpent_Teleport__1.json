@@ -1,0 +1,49 @@
+{
+  "AbilityName": "FierySerpent_Teleport__1",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyLogicMoveAction",
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Duration": 0.1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeInstant"
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "SavePoint",
+            "PointName": "FierySerpent_TeleportPoint_1"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Stop"
+      },
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "AbilityName": "Card_Electro_2000505",
+  "AbilitySpecials": {
+    "AS_ElectroAddCount": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": "AS_ElectroAddCount",
+                  "ParamName": "AS_ElectroCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_IsAddBuffIcon",
+              "Value": 1
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_ElectroAddCount",
+                  "ParamName": "AS_AddElectroCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_01",
+          "ModifierTargetType": "SameNameAbility",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

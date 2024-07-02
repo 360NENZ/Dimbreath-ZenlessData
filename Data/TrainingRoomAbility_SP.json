@@ -1,0 +1,17 @@
+{
+  "AbilityName": "TrainingRoomAbility_SP",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierMixins": [
+      {
+        "$type": "SmoothRecoverSPMixin",
+        "IgnoreRatio": false,
+        "PropertyItem": {
+          "Amount": 30,
+          "Percentage": 20,
+          "PropertyModifyFunction": "Add"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "AbilityName": "Mandrake_ATK01_ATK",
+  "AbilitySpecials": {
+    "AS_AtkBuffRatio": {
+      "Value": 0.5
+    },
+    "AS_BuffDuration": {
+      "Value": 20
+    },
+    "AtkIncreaseValue": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AttackBuffModifier": {
+      "Duration": "%AS_BuffDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_BaseAttackDelta": "%AtkIncreaseValue"
+      }
+    },
+    "MaterialModifier": {
+      "Duration": "%AS_BuffDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_SecondaryEmission"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Buff_Hit"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(Attack)*specials(AS_AtkBuffRatio)",
+      "ParamName": "AtkIncreaseValue",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "AttackBuffModifier",
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Mandrake_ATK01",
+      "ModifierName": "MaterialModifier",
+      "Target": "Custom"
+    }
+  ]
+}

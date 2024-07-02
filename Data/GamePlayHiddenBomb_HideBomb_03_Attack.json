@@ -1,0 +1,91 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_HideBomb_03_Attack",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SkillTrigger_Delay",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SkillTrigger_Delay": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Trigger_Skill63",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SkillTrigger_Delay_1": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Trigger_Skill12",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Trigger_Skill12": {
+      "Duration": 6.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 12,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SkillTrigger_Delay",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Trigger_Skill63": {
+      "Duration": 3.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 63,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SkillTrigger_Delay_1",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

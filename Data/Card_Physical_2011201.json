@@ -1,0 +1,69 @@
+{
+  "AbilityName": "Card_Physical_2011201",
+  "AbilitySpecials": {
+    "AS_AtkTransRatio": {
+      "Value": 150
+    },
+    "AS_DamageLimitValue": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(Attack)*specials(AS_AtkTransRatio)",
+        "ParamName": "AS_DamageLimitValue",
+        "ValueType": "Float"
+      }
+    ],
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Physical_2011201_HPModifier",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Physical_2011201_HPModifier",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_DamageLimitValue",
+                "ParamName": "HpReduceLimitValue",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "#Card_Physical_2011201_AtkEvent",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  }
+}

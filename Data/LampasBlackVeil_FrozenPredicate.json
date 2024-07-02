@@ -1,0 +1,44 @@
+{
+  "AbilityName": "LampasBlackVeil_FrozenPredicate",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "InAction"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnBuffRemoved": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "InAction"
+        ],
+        "IsAdd": false,
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

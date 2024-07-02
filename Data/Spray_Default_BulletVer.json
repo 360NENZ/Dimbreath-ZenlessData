@@ -1,0 +1,149 @@
+{
+  "AbilityName": "Spray_Default_BulletVer",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Searchlight_Idle",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbilitySpecials": {
+      "IsActive": {
+        "value": 0
+      },
+      "IsEnter": {
+        "value": 0
+      }
+    },
+    "SearchLight_Active": {
+      "Duration": 100,
+      "ModifierStacking": "Unique",
+      "OnAdded": [],
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp",
+          "Target": "Self"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Searchlight_Bullet",
+          "IsAutoTrigger": true
+        }
+      ],
+      "ThinkInterval": 0.25
+    },
+    "SearchLight_UnactiveCountDown": {
+      "Duration": 10,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SearchLight_Active",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "IsEnter",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Searchlight_Idle": {
+      "Duration": 1000,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "Sphere",
+            "SphereColliderRadius": 5
+          },
+          "EndEffectPattern": "Eff_Buddy_Field_Electric_End",
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SearchLight_Active",
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "SearchLight_UnactiveCountDown",
+              "Target": "Self"
+            },
+            {
+              "$type": "LogStringAction",
+              "LogStr": "fuck!!!!"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "SearchLight_Active",
+              "Target": "Self"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "FieldStopActions": [
+            {
+              "$type": "LogStringAction",
+              "LogStr": "END!!!!"
+            }
+          ],
+          "IsFollow": false,
+          "LoopEffectPattern": "Eff_Buddy_Field_Electric_Start",
+          "TotalDuration": 1000
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "LogStringAction",
+          "LogStr": "ability测试启动!!!!"
+        }
+      ]
+    }
+  }
+}

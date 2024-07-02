@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Weapon_Ability_12002",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.4
+    },
+    "AS_Duration": {
+      "Value": 6.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    }
+  }
+}

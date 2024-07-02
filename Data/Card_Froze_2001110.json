@@ -1,0 +1,88 @@
+{
+  "AbilityName": "Card_Froze_2001110",
+  "AbilitySpecials": {
+    "AS_FrozenAddCount": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Froze_2001100",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ExSPToFrozenCountModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ExSPToFrozenCountModifier": {
+      "OnSkillStart": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_FrozenAddCount",
+                  "ParamName": "AS_AddFrozenBuffIconCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Froze_2001100",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": "AS_FrozenAddCount",
+                  "ParamName": "AS_FrozenBuffCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

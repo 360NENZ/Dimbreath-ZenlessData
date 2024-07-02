@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Ashes_2000100",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Ashes_2000100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_NewPenRatio",
+                  "ParamName": "AS_PenRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Ashes_2000100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_NewAddedDamageRatio",
+                  "ParamName": "AS_AddedDamageRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Ashes_2010102",
+  "AbilitySpecials": {
+    "AS_NewAddedDamageRatio": {
+      "Value": 0.2
+    },
+    "AS_NewPenRatio": {
+      "Value": 0.04
+    }
+  },
+  "AbilityStacking": "Unique"
+}

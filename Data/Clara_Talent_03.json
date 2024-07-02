@@ -1,0 +1,61 @@
+{
+  "AbilityName": "Clara_Talent_03",
+  "AbilitySpecials": {
+    "AS_SpRecoverAmount": {
+      "Value": 20
+    },
+    "AS_SpRecoverCD": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StrikeListenModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Clara_Talent04_SpRecoverModifier": {
+      "Duration": "%AS_SpRecoverCD",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecoverAmount",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StrikeListenModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Clara_Talent04_SpRecoverModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Electric",
+                "Overload",
+                "Strike",
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}

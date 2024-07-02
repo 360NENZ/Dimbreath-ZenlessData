@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Blessing_Type01_ExtraSP",
+  "AbilitySpecials": {
+    "AddedPlayerSPDelta": {
+      "Value": 200
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%AddedPlayerSPDelta",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Target": "Self"
+      }
+    ]
+  }
+}

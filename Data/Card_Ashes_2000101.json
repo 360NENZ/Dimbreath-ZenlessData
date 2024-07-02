@@ -1,0 +1,60 @@
+{
+  "AbilityName": "Card_Ashes_2000101",
+  "AbilitySpecials": {
+    "IntervalCDDelta": {
+      "Value": -0.25
+    },
+    "StackCount": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BurnBuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Burn",
+              "Ignite"
+            ]
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "GreaterEqual",
+            "CountModifierType": "GlobalAbility",
+            "ModifierName": "AshesModifier_01",
+            "StackCount": "%StackCount",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BurnBuffModifier": {
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyBuffIntervalParam",
+          "BuffGroupName": "Ignite",
+          "IntervalModifyFunction": "Add",
+          "IntervalValue": "%IntervalCDDelta",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyBuffIntervalParam",
+          "BuffGroupName": "Burn",
+          "IntervalModifyFunction": "Add",
+          "IntervalValue": "%IntervalCDDelta",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

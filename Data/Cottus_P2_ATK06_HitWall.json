@@ -1,0 +1,44 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Attack_06_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 105,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_P2_ATK06_HitWall",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ListernHitWallModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "CollideGroundWallMixin",
+          "EnterWallActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_IsOnWall",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

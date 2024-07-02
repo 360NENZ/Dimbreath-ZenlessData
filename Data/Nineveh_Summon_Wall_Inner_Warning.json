@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Nineveh_Summon_Wall_Inner_Warning",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "AttachEffect",
+      "AttachEffectPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "SavePoint",
+          "PointName": "InnerWallPoint"
+        }
+      },
+      "EffectPattern": "Eff_Device_Wall_EtherWall_01_Born_01_02_Warning",
+      "Target": "Self"
+    }
+  ]
+}

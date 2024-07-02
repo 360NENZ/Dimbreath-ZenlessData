@@ -1,0 +1,30 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "EousMassRatioModifier"
+          ],
+          "ZoneTag": "EousGuide"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Eous001_GuideMassRatioEndwithTag",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EousMassRatioModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ModifyMassRatioEndAction",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

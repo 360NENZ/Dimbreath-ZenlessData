@@ -1,0 +1,321 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011651,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_01",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_BornType",
+          "ParamType": 3,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011651,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_02",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011651,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_03",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011651,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_04",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_BornType",
+          "ParamType": 3,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011661,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "BigNinevehVinePoint_01",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011661,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "BigNinevehVinePoint_02",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_BornType",
+          "ParamType": 3,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011661,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "BigNinevehVinePoint_03",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011661,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "BigNinevehVinePoint_04",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "SummonTag": [
+        "NinevehVine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Nineveh_Summon_Vine_Spawn",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,10 @@
+{
+  "AbilityName": "LevelItem_ItemVisable",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "PopRenderVisibleAction",
+      "Tag": "LevelItem_ItemInvisable"
+    }
+  ]
+}

@@ -1,0 +1,706 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_03_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Prepare",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+              "Target": "Self",
+              "key": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Teleport",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchOut_Outing",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03_Follow",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Prepare",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveMaterialPropertyModifier_OverrideOutline"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Dash",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Dash",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03_Follow",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Attack",
+          "FrameCountHigh": 215,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Dash",
+          "FrameCountHigh": 136,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "FrameCountHigh": 126,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Dash",
+          "FrameCountHigh": 126,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Dash",
+          "FrameCountHigh": 204,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "FrameCountHigh": 254,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Dash",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier_SecondaryEmission"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_MaterialProperty",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SepcialEffectModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MaterialPropertyModifier_SecondaryEmission": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size03_Rina_MA_Body_01_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size03_Rina_MA_Body_01_Mat01_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size03_Rina_MA_Body_01_Mat01_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RemoveMaterialPropertyModifier_OverrideOutline": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size03_Rina_MA_Common_01_Mat01_OverrideOutline_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Rina_Attack_Common_02_Lightning_Anastacia",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

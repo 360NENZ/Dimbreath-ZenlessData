@@ -1,0 +1,154 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Luckyboo_bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.25,
+            "y": 1.35,
+            "z": 0.2
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Bangboo_Luckyboo_Attackproperty_QTE_02",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 1,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Counter_Explosive"
+      },
+      "HitStageScenePropExplodeEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Counter_Explosive"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Counter_Explosive"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Counter_Explosive"
+      },
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 20
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletCreateAction": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Hit_Smash_Small",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.25,
+                "y": 1.35,
+                "z": 0.2
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "ReachTargetStop": true,
+        "RotateSpeed": 360,
+        "RotateType": "Fixed",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "None",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Counter_Explosive"
+      }
+    }
+  ],
+  "AbilityName": "Bangboo_Luckyboo_Bullet_QTE",
+  "AbilityStacking": "Unique"
+}

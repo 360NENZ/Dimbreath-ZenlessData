@@ -1,0 +1,50 @@
+{
+  "AbilityName": "Ability_Card_Leangle_6",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Op": "Add",
+      "OpValue": 0.1,
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DamageUpModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "ModifyDamageMixin",
+          "Actions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "TimeCountModifier"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "DamageUpModifier"
+            }
+          ],
+          "Properties": {
+            "Actor_AddedDamageRatio": "%AddedDamageRatio"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "TimeCountModifier": {
+      "Duration": 5.0,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageUpModifier"
+        }
+      ]
+    }
+  },
+  "OnAdded": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TimeCountModifier"
+    }
+  ]
+}

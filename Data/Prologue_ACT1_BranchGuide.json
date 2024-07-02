@@ -1,0 +1,96 @@
+{
+  "AbilityName": "Prologue_ACT1_BranchGuide",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SPListenerModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HighLightModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "Prologue_ACT1_BranchGuide"
+        }
+      ],
+      "OnRemoved": []
+    },
+    "SPListenerModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "IsUsePercentage": false,
+              "PropertyType": "CurSP",
+              "ReferMaxPropertyType": "MaxSP",
+              "ValueRangeActions": [
+                {
+                  "LowToValueActions": [
+                    {
+                      "$type": "ApplyModifier",
+                      "ModifierName": "HighLightModifier",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Val": 61
+                },
+                {
+                  "Val": 61,
+                  "ValueToLowActions": [
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "HighLightModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SkillBtnListenerModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SkillBtnListenerMixin",
+          "BtnListeners": [
+            {
+              "BtnOperations": [
+                {
+                  "ListenerType": "PointDown",
+                  "PressTime": 0.1,
+                  "TriggerActions": [
+                    {
+                      "$type": "InterruptSetupUIAction",
+                      "IgnoreFadeAnimation": true,
+                      "SetupTag": "HighLight_BranchGuide_SetupTag"
+                    },
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "HighLightModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "SkillBtnIndex": 5
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

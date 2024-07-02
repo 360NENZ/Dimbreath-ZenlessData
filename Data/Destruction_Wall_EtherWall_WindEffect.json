@@ -1,0 +1,139 @@
+{
+  "AbilityName": "Destruction_Wall_EtherWall_WindEffect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WallWindEffectModifier_Small",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nineveh_Ultimate_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "NinevehWallSmall"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WallWindEffectModifier_Big",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nineveh_Ultimate_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "NinevehWallBig"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nineveh_Ultimate_Attackproperty_01",
+              "Monster_Nineveh_Ultimate_Attackproperty_02",
+              "Monster_Nineveh_Ultimate_Attackproperty_03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_NoHitEffect",
+        "PropertyValue": 1,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "WallWindEffectModifier_Big": {
+      "Duration": 4.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_In_Smoke_01",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "WallWindEffectModifier_Small": {
+      "Duration": 4.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_In_Smoke_02",
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}

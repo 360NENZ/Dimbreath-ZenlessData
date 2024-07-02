@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Card_Gun_2000305",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Gun_2000300",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01_Card_2000305",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01_Card_2000305": {
+      "Duration": "%Duration",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Gun_2000300",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

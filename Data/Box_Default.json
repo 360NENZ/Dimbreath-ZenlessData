@@ -1,0 +1,326 @@
+{
+  "AbilityName": "Box_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Box_BeHit",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Box_BuffModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BoxExLarge01Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_06",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxExLarge02Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_07",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxLarge01Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_04",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxLarge02Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_05",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxMiddle01Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Mid"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxMiddle02Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_03",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Mid"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnDeadHandler": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Light"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxTypeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxModifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Box"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxMiddle01Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxMiddle01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxMiddle02Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxMiddle02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxLarge01Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxLarge01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxLarge02Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxLarge02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxExLarge01Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxExLarge01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxExLarge02Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxExLarge02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Box_BeHit": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxTypeModifier",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Box_BuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1
+    }
+  }
+}

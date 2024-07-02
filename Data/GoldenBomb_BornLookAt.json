@@ -1,0 +1,33 @@
+{
+  "AbilityName": "GoldenBomb_BornLookAt",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GoldenBomb_BornLookAtModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GoldenBomb_BornLookAtModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ActCameraShotAction",
+          "CameraShotKey": "Test_Level_MonsterLookAt",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "GoldenBomb_BornLookAtModifier",
+      "Target": "Self"
+    }
+  ]
+}

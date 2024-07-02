@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Claymore_Ability_Attack_03",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Claymore_ATK03_Attackproperty_Check"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "AbilityName": "Level_Buff_DiscBattle01_CounterBuff",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 1
+    },
+    "AS_RecoverSp": {
+      "Value": 5
+    },
+    "AS_RecoverSpCD": {
+      "Value": 8
+    },
+    "AddedDamageRatio": {
+      "Value": 0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverSPModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Counter"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Counter"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_BreakStunRatio",
+        "PropertyValue": "%AS_BreakStunRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RecoverSPModifier": {
+      "Duration": "%AS_RecoverSpCD",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

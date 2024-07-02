@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Curse_DamageTakenUp",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_DamageTakeRatio": "%DamageTakeRatio"
+    }
+  }
+}

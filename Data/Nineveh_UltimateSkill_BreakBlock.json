@@ -1,0 +1,144 @@
+{
+  "AbilityName": "Nineveh_UltimateSkill_BreakBlock",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nineveh_Ultimate_Attackproperty_01",
+              "Monster_Nineveh_Ultimate_Attackproperty_02",
+              "Monster_Nineveh_Ultimate_Attackproperty_03"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "InvincibleField"
+                ],
+                "Target": "Target"
+              }
+            ],
+            "Target": "Target"
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Other"
+          }
+        ],
+        "PropertyKey": "Actor_NoHitEffect",
+        "PropertyValue": -1
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nineveh_Ultimate_Attackproperty_01",
+              "Monster_Nineveh_Ultimate_Attackproperty_02",
+              "Monster_Nineveh_Ultimate_Attackproperty_03"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "InvincibleField"
+                ],
+                "Target": "Target"
+              }
+            ],
+            "Target": "Target"
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Other"
+          }
+        ],
+        "PropertyKey": "Actor_NoDamage",
+        "PropertyValue": -1
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakBlockModify": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Monster_Nineveh_Ultimate_Attackproperty_01",
+                "Monster_Nineveh_Ultimate_Attackproperty_02",
+                "Monster_Nineveh_Ultimate_Attackproperty_03"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "InvincibleField"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": -1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Monster_Nineveh_Ultimate_Attackproperty_01",
+                "Monster_Nineveh_Ultimate_Attackproperty_02",
+                "Monster_Nineveh_Ultimate_Attackproperty_03"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "InvincibleField"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_NoDamage",
+          "PropertyValue": -1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

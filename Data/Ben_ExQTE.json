@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Ben_ExQTE",
+  "AbilitySpecials": {
+    "AS_RecoverSwitchPoint": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ModifyPerfectSwitchPointAction",
+        "Amount": "%AS_RecoverSwitchPoint",
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

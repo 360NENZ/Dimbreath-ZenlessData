@@ -1,0 +1,57 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_03",
+          "FrameCountHigh": 160,
+          "FrameCountLow": 70,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Attack03_DitherModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Level",
+          "FrameCountHigh": 160,
+          "FrameCountLow": 70,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PileDriver_Attack03_DitherModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "PileDriver_Ability_Attack_03_Dither",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "PileDriver_Attack03_DitherModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_PileDriver_Attack_03_Dither_Fade",
+          "Tag": "Monster_PileDriver_Attack_03_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_PileDriver_Attack_03_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

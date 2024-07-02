@@ -1,0 +1,79 @@
+{
+  "AbilityName": "ComplexCorrupted_HitCount_Attack_01",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_Attack_01_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Circle_01",
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Square_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_ComplexCorrupted_Attack_01_Attackproperty_HeavyHit",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_Attack_01_HitCount",
+            "StackCount": 10,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Circle_01",
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Square_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_Attack_01_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_Attack_01_HitCount",
+            "StackCount": 10,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Circle_01",
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Square_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 10,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_ComplexCorrupted_Attack_01_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 10,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "StaminaPunish_MonsterDmgUp",
+  "AbilitySpecials": {
+    "AddedAtkRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedAtkRatio"
+    }
+  }
+}

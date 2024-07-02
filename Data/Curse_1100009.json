@@ -1,0 +1,44 @@
+{
+  "AbilityName": "Curse_1100009",
+  "AbilitySpecials": {
+    "DMGIncrease": {
+      "Value": 0.1
+    },
+    "DMGIncreaseAvatar": {
+      "Value": 0.05
+    },
+    "DMGIncreaseRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "DoRefresh": true,
+        "Expression": "specials(DMGIncrease)*itemtype(32)",
+        "ParamName": "DMGIncreaseRatio",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "DoRefresh": true,
+        "Expression": "specials(DMGIncreaseAvatar)*itemtype(32)",
+        "ParamName": "DMGIncreaseRatio",
+        "Predicates": [
+          {
+            "$type": "ByCampType",
+            "Camp": "TeamGood",
+            "IsNot": false
+          }
+        ],
+        "ValueType": "Float"
+      }
+    ],
+    "Properties": {
+      "Actor_AddedDamageRatio": "%DMGIncreaseRatio"
+    }
+  }
+}

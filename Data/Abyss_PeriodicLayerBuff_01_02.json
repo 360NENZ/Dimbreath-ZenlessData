@@ -1,0 +1,65 @@
+{
+  "AbilityName": "Abyss_PeriodicLayerBuff_01_02",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_01": {
+      "Value": 0.4
+    },
+    "AS_AddedDamageRatio_02": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByDamageElementType",
+                "DamageElement": "Ice"
+              },
+              {
+                "$type": "ByDamageElementType",
+                "DamageElement": "Ether"
+              }
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Normal"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Rush"
+                ]
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_02",
+        "Target": "Self"
+      }
+    ]
+  }
+}

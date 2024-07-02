@@ -1,0 +1,48 @@
+{
+  "AbilityName": "Affix_ShieldNotActive_DamageUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "ShieldEmptyActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "ShieldStartActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "ShieldTimesUpActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUp": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

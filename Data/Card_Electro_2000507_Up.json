@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Card_Electro_2000507_Up",
+  "AbilitySpecials": {
+    "AS_AccumulationRatio": {
+      "Value": 0.03
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Electro_2000500",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": 1,
+                "ParamName": "AS_GetCard_2000507",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Electro_2000500",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AccumulationRatio",
+                "ParamName": "AS_AddedAccumulationRatio",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "Target": "Self"
+      }
+    ]
+  }
+}

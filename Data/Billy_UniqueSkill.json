@@ -1,0 +1,310 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Walk_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Walk_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Run_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Run_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Idle",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_L_F",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_L_B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_H_F",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_H_B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "HitFly_F",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "HitFly_B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Normal",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Attack",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Death",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "InstantOut",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    }
+  }
+}

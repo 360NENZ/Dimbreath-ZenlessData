@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Card_DailyUse_1000926",
+  "AbilitySpecials": {
+    "HPPercentage": {
+      "Value": 0.5
+    },
+    "PercentageMaxHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "PercentageMaxHP",
+        "Percentage": "%HPPercentage",
+        "PropertyType": "MaxHP",
+        "Target": "Target"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAtkHitIsOwnAbility",
+            "IsOwnAbility": false
+          }
+        ],
+        "PropertyKey": "Actor_AddedAttackDelta",
+        "PropertyValue": "%PercentageMaxHP",
+        "Target": "Self"
+      }
+    ]
+  }
+}

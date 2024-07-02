@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "EffectModifier"
+          ],
+          "ZoneTag": "Lucy_Encourage"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Wood_Encourage",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lucy_Wood_Weapon01"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lucy_Wood_Weapon02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lucy_Wood_Weapon03"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Encourage_OverrideRimGlow_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_Lucy_Wood_MA_Encourage_OverrideRimGlow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Encourage_OverrideRimGlow_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

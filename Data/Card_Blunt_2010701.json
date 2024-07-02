@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Card_Blunt_2010701",
+  "AbilitySpecials": {
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    },
+    "StunResetCountDelta": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LastQTESoundModifer_Card_2010701",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "Properties": {
+      "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio",
+      "BreakStunResetCount_Delta": "%StunResetCountDelta"
+    }
+  },
+  "Modifiers": {
+    "LastQTESoundModifer_Card_2010701": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh",
+      "OnStunResetOtherMaxActions": [
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "Play_SFX_Char_QTE_TarotCard_Blunt_2010701"
+        }
+      ]
+    }
+  }
+}

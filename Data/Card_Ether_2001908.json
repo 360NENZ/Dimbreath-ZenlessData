@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Card_Ether_2001908",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_AddedDamageRatio_Ether": "%AS_AddedDamageRatio"
+    }
+  }
+}

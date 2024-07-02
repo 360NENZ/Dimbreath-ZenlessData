@@ -1,0 +1,45 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "TriggerFieldMixin",
+      "CustomCamp": "TeamGood",
+      "FieldType": "Sphere",
+      "Follow": true,
+      "IncludeSelf": false,
+      "OnOtherEnter": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Card_Recover",
+          "Target": "Self"
+        },
+        {
+          "$type": "InteractEnableAction",
+          "Enable": true,
+          "Target": "Self"
+        }
+      ],
+      "OnOtherExit": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Card_Recover",
+          "Target": "Self"
+        },
+        {
+          "$type": "InteractEnableAction",
+          "Enable": false,
+          "Target": "Self"
+        }
+      ],
+      "Radius": "%InteractRadius",
+      "Targetting": "Allied",
+      "TriggerOnAdded": true,
+      "UseOwnerTeam": false
+    }
+  ],
+  "AbilityName": "NPC_TreasureBox_02",
+  "AbilitySpecials": {
+    "InteractRadius": {
+      "Value": 5
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "WatchEntityMixin",
+      "EntityTypes": [
+        "Avatar",
+        "Monster",
+        "Buddy"
+      ],
+      "OnEntityAwaked": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Ellen_ListenFrozenBuffModifier",
+          "Target": "TeamAllied"
+        }
+      ],
+      "OnSummonedCreate": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Ellen_ListenFrozenBuffModifier",
+          "Target": "TeamAllied"
+        }
+      ],
+      "Relationships": [
+        "Allied"
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_Talent_03",
+  "AbilitySpecials": {
+    "AS_IntervalCD_Talent_03": {
+      "Value": 5.0
+    },
+    "AS_RecoverEnhenceCount_Talent_03": {
+      "Value": 6
+    },
+    "AS_RecoverSp_Talent_03": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Ellen_ListenFrozenBuffModifier",
+        "Target": "TeamAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddEnhanceCountModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_RecoverEnhenceCount_Talent_03",
+          "CustomPropertyType": "EnhanceCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "Ellen_ListenFrozenBuffModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Ellen_Talent_03",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite"
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ],
+      "OnStunDestroyOtherActionsPre": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Ellen_Talent_03",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "RecoverSpModifier": {
+      "Duration": "%AS_IntervalCD_Talent_03",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Talent_03",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AddEnhanceCountModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "RecoverSpModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Ellen_PerfectEvade",
+      "Target": "Self"
+    }
+  ]
+}

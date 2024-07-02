@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Card_Toy_2002101",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.5
+    },
+    "AS_Duration": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyQTETBuff_Card_2002101",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyDMGUpModifier_Card_2002101": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BuddyQTETBuff_Card_2002101": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuddyDMGUpModifier_Card_2002101",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooQTE"
+              ]
+            }
+          ],
+          "Target": "BuddyAllied"
+        }
+      ]
+    }
+  }
+}

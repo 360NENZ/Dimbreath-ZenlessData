@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Ability_Card_AfterimageNew_Upgrade_Damage",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_AfterImage": {
+      "Value": 0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnIndirectHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Afterimage"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_AfterImage",
+        "Target": "Self"
+      }
+    ]
+  }
+}

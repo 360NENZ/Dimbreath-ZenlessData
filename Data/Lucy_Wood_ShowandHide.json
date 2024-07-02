@@ -1,0 +1,661 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "DisableColliderModifier"
+          ],
+          "ZoneTag": "DisableCollider"
+        },
+        {
+          "ModifierNameList": [
+            "DisableHitColliderModifier"
+          ],
+          "ZoneTag": "DisableHitCollider"
+        },
+        {
+          "ModifierNameList": [
+            "DisableAIModifier"
+          ],
+          "ZoneTag": "DisableAI"
+        },
+        {
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ],
+          "ZoneTag": "Invisible"
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Normal",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FadeInModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchOut_Normal",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Pre",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExQTEFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_05_Pre",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SyncAttackFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "ParryAid_L_01_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "ParryAid_L_02_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "ParryAid_L_03_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "ParryAid_H_02_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "ParryAid_H_03_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Taunt_01_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Taunt_02_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Taunt_03_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "AssaultAid_02_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "AssaultAid_03_Hide",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "QTEFadeInModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "QTEFadeInModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "QTEFadeInModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 154,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExQTEStartFadeOutModifier"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Wood_ShowandHide",
+  "AbilitySpecials": {
+    "AS_AttackIndex": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BranchFadeInModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_FadeIn",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InAction"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 99,
+          "ParamName": "Int_ActionMode",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DisableAIModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_ForceTick",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DisableColliderModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "HullColliderEnable": false,
+          "Tag": "Wood_Collider",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "Wood_Collider",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DisableHitColliderModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHitColliderEnable",
+          "HitColliderEnable": false,
+          "Tag": "Wood_Collider",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "Wood_Collider",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ExQTEFadeOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_FadeOut_Fast",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ExQTEStartFadeOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Eff_Lucy_Attack_ExQTE_MAT_04_Dither_04",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_Lucy_Wood_MA_Eff_Lucy_Attack_ExQTE_MAT_04_Dither_04"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Eff_Lucy_Attack_ExQTE_MAT_04_Dither_04",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeInModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_FadeIn",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_Fade",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ForceTickAIModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_ForceTick",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_ForceTick",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HideFadeOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_FadeOut_Hide",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvisibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushEntityVisibleWithTagAction",
+          "Tag": "LucyWoodHide",
+          "Target": "Self",
+          "Visible": false
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "LucyWoodHide"
+        }
+      ]
+    },
+    "QTEFadeInModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InAction"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 99,
+          "ParamName": "Int_ActionMode",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_FadeIn",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SyncAttackFadeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_Fade",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Lucy_Wood_Dither_FadeIn",
+          "Tag": "Avatar_Lucy_Wood_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BranchFadeInModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "QTEFadeInModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 2,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

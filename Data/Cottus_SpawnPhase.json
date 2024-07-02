@@ -1,0 +1,170 @@
+{
+  "AbilityName": "Cottus_SpawnPhase",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "CottusP2"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "FailureActions": [
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "CutScene"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "BranchOperator",
+                "Conditions": [
+                  {
+                    "$type": "ByIsInZoneTags",
+                    "Tags": [
+                      "P1Only"
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "FailureActions": [
+                  {
+                    "$type": "ApplyModifier",
+                    "ModifierName": "SwitchPhaseModifer",
+                    "Target": "Self"
+                  }
+                ],
+                "SuccessActions": []
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "ApplyModifier",
+                "ModifierName": "SwitchPhaseCutSceneModifer",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "ChangePhaseModifer",
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChangePhaseModifer": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_CurrentPhase",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Cottus_Wing"
+          ],
+          "Tag": "WingVisible",
+          "Visible": true
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Cottus_Weapon"
+          ],
+          "Tag": "WeaponVisible",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Cottus_Weapon"
+          ],
+          "Tag": "WeaponVisible",
+          "Visible": false
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Cottus_SwitchPhase",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Cottus_SwitchPhase_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_L_WingArm",
+            "HitCollider_R_WingArm"
+          ],
+          "HitColliderEnable": true,
+          "Tag": "HitCollider_WingArm_Default",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SwitchPhaseCutSceneModifer": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Cottus_SwitchPhase",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Cottus_SwitchPhase_CutScene",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_BornType",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_SpecialDeath",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SwitchPhaseModifer": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Cottus_SwitchPhase_02",
+          "IsAutoTrigger": false
+        }
+      ]
+    }
+  }
+}

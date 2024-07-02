@@ -1,0 +1,320 @@
+{
+  "AbilityName": "HeavyStriker_Attack_6_Boss",
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_1",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 6.4
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_2",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 4.24,
+            "y": 0.0,
+            "z": 4.64
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_3",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 6.0,
+            "y": 0.0,
+            "z": 0.4
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_4",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 4.24,
+            "y": 0.0,
+            "z": -3.84
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_5",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 5.6
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_6",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": -4.24,
+            "y": 0.0,
+            "z": -3.84
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_7",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": -6,
+            "y": 0.0,
+            "z": 0.4
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK6_BurstPoint_8",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": -4.24,
+            "y": 0.0,
+            "z": 4.64
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_1",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_2",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_3",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_4",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_5",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_6",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_7",
+          "ValueType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+      "InitAbilitySpecialList": [
+        {
+          "SpecialName": "AS_BurstPoint",
+          "Value": "ATK6_BurstPoint_8",
+          "ValueType": "String"
+        }
+      ]
+    }
+  ],
+  "OnAdded": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_1",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_2",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_3",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_4",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_5",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_6",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_7",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "ATK6_BurstPoint_8",
+      "PosRot": {
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      }
+    }
+  ]
+}

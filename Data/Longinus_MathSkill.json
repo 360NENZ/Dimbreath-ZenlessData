@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Longinus_MathSkill",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio": {
+      "Value": 0.3
+    },
+    "AS_Actor_AddedDamageRatio_Stun": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FireDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FireDamageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Stun"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_Actor_AddedDamageRatio_Stun",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio_Fire": "%AS_Actor_AddedDamageRatio"
+      }
+    }
+  }
+}

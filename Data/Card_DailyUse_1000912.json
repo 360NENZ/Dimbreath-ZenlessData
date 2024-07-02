@@ -1,0 +1,90 @@
+{
+  "AbilityName": "Card_DailyUse_1000912",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.9
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Controller"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Controller": {
+      "Block": -1,
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ImmuneModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ImmuneModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ImmuneModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ImmuneModifier": {
+      "Block": -1,
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByHitDataType",
+              "TheHitDataType": "Melee"
+            }
+          ],
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%DamageTakeRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_DailyUse_1000912",
+          "IsOpenBlock": true,
+          "ModifierName": "Controller"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_DailyUse_1000912",
+          "IsOpenBlock": true,
+          "ModifierName": "ImmuneModifier"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ImmuneModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

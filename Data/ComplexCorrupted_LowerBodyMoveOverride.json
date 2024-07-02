@@ -1,0 +1,94 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_01_SlowPre",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_MoveOverride"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_Pre",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_MoveOverride"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_MoveOverride"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04",
+          "FrameCountHigh": 230,
+          "FrameCountLow": 180,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_MoveOverride"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05_SlowPre",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_MoveOverride"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_LowerBodyMoveOverride",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ComplexCorrupted_MoveOverride": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_EnableMoveOverride",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_InterruptMoveOverride",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

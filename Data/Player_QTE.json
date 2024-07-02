@@ -1,0 +1,630 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AvatarQTEMixin",
+      "ExQTEOverridePosRot": {
+        "CoordsOption": "Relative",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -2.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -2.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Self",
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "ExSwitchInIndex": 20,
+      "NeedOverridePosRot": true,
+      "OverridePosRot": {
+        "CoordsOption": "Relative",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -2.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": -2.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Self",
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "QTEEnterRange": 7,
+      "QTEExitRange": 10,
+      "QTELockTargetID": "QTE_Tick_LockTarget_01",
+      "SwitchInIndex": 10,
+      "SwitchOutIndex": -1,
+      "TriggerConditionGroup": {
+        "$type": "QTEConditionGroup",
+        "QTEConditionList": [
+          {
+            "$type": "QTEConditionStunReset"
+          }
+        ]
+      }
+    },
+    {
+      "$type": "ListenQTEMixin",
+      "ListenQTESwitchInTriggered": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_SwitchIn_Attack_Count_01",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTECount",
+              "QTECount": 1
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_SwitchIn_Attack_Count_02",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTECount",
+              "QTECount": 2
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_SwitchIn_Attack_Count_03",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTECount",
+              "QTECount": 3
+            }
+          ]
+        }
+      ],
+      "ListenQTEWindowCanceled": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "QTECloseModifier",
+          "Target": "Self"
+        }
+      ],
+      "ListenQTEWindowClosed": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "QTECloseModifier",
+          "Target": "Self"
+        }
+      ],
+      "ListenQTEWindowOpened": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "QTECloseModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "QTEOpenModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTEConditionType",
+              "Target": "Self",
+              "Type": "Trigger"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "SFX_Char_QTE_Count_01",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTEConditionType",
+              "Type": "Trigger"
+            },
+            {
+              "$type": "ByQTECount",
+              "QTECount": 1
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "SFX_Char_QTE_Count_02",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTEConditionType",
+              "Type": "Trigger"
+            },
+            {
+              "$type": "ByQTECount",
+              "QTECount": 2
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "SFX_Char_QTE_Count_03",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByQTEConditionType",
+              "Type": "Trigger"
+            },
+            {
+              "$type": "ByQTECount",
+              "QTECount": 3
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "QTE_Begin_Normal",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByMonsterStrengthType",
+              "CompareType": "Equal",
+              "StrengthType": "Normal",
+              "Target": "Target"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "QTE_Begin_Elite",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByMonsterStrengthType",
+              "CompareType": "Equal",
+              "StrengthType": "Elite",
+              "Target": "Target"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "QTE_Begin_Boss",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByMonsterStrengthType",
+              "CompareType": "Equal",
+              "StrengthType": "Boss",
+              "Target": "Target"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "QTE_Begin",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByMonsterStrengthType",
+                      "CompareType": "Equal",
+                      "StrengthType": "Normal",
+                      "Target": "Target"
+                    },
+                    {
+                      "$type": "ByMonsterStrengthType",
+                      "CompareType": "Equal",
+                      "StrengthType": "Elite",
+                      "Target": "Target"
+                    },
+                    {
+                      "$type": "ByMonsterStrengthType",
+                      "CompareType": "Equal",
+                      "StrengthType": "Boss",
+                      "Target": "Target"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_QTE",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "InvincibleBuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "QTECloseModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Player_IsInQTEWindow"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "QTE_Stop",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_050"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_100"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_200"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_300"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_375"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_400"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_500"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_600"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_700"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_725"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_750"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_775"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "QTE_Trigger_TimeSlow_800"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "QTE_Trigger_CamZoom_Additive_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "QTE_Trigger_CamStretch_Additive_01"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "MpExecMode": "AuthorityOnly",
+          "OverrideKey": "QTE_Trigger_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "RadialBlur",
+          "TargetKey": "QTE_Trigger_RadialBlur_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "QTE_Trigger_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "QTE_Trigger_ColorAdjustments_01",
+          "EffectType": "ColorAdjustments"
+        },
+        {
+          "$type": "ActSingleShakeDataModeAction",
+          "SingleMode": false
+        },
+        {
+          "$type": "CameraOverrideScreenDampingEndAction",
+          "DisableHorizontalDamping": true,
+          "DisableVerticalDamping": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "PopMuteManullyCameraLockAction",
+          "Tag": "Player_QTE_ManullyCameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopMuteCameraLockOnTargetAction",
+          "Tag": "Player_QTE_CameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopCameraLockRotateAction",
+          "Tag": "Player_QTE_CameraLockRotate",
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Switch_UI"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptSetupUIAction",
+          "IgnoreFadeAnimation": false,
+          "SetupTag": "Player_QTE_SetupTag"
+        },
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_QTE_InputMute"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "InvincibleBuffModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "QTEOpenModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Player_IsInQTEWindow"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "QTE_Trigger_CamZoom_Additive_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "QTE_Trigger_CamStretch_Additive_01"
+        },
+        {
+          "$type": "CameraOverrideTrackAction",
+          "MpExecMode": "AuthorityOnly",
+          "OverrideKey": "QTE_Trigger_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "QTE_Trigger_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "QTE_Trigger_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "QTE_Trigger_ColorAdjustments_01",
+          "EffectType": "ColorAdjustments"
+        },
+        {
+          "$type": "ActSingleShakeDataModeAction",
+          "SingleMode": true
+        },
+        {
+          "$type": "CameraOverrideScreenDampingAction",
+          "EnableHorizontalDamping": true,
+          "EnableVerticalDamping": true,
+          "HorizontalDampingValue": 0.0,
+          "Target": "Self",
+          "VerticalDampingValue": 0.0
+        },
+        {
+          "$type": "PushMuteManullyCameraLockAction",
+          "Tag": "Player_QTE_ManullyCameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushMuteCameraLockOnTargetAction",
+          "Tag": "Player_QTE_CameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "CancelCameraLockOnAction",
+          "ExitBossLockTime": 0.3,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushCameraLockRotateAction",
+          "Enable": false,
+          "Tag": "Player_QTE_CameraLockRotate",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Switch_UI",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": false,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomAngleRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomPositionRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Camera"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "SetupUIAction",
+          "HideUITags": [
+            "InLevelMainPage"
+          ],
+          "IgnoreFadeAnimation": true,
+          "Priority": 1,
+          "SetupTag": "Player_QTE_SetupTag",
+          "ShowUITags": [
+            "QTEBtnPanel"
+          ]
+        },
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": false,
+          "CharacterBagMute": false,
+          "CharacterMoveMute": false,
+          "CharacterSkillMute": false,
+          "CharacterSwitchMute": false,
+          "Tag": "Player_QTE_InputMute"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "InvincibleBuffModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Affix_ResonateActive_ReduceShieldCD",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ModifySkillTypeCDAction",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ],
+        "Ratio": -1,
+        "SkillType": "Shield"
+      }
+    ]
+  }
+}

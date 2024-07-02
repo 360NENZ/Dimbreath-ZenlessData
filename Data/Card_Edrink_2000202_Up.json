@@ -1,0 +1,249 @@
+{
+  "AbilityName": "Card_Edrink_2000202_Up",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.35
+    },
+    "RandomOdds": {
+      "Value": 0
+    },
+    "SPRecover": {
+      "Value": 100
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "UniqueRandomModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RandomRecoverSP1": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 1,
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RecoverSP1",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RandomRecoverSP2": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.5,
+          "OnFailure": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RecoverSP2",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RecoverSP1",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RandomRecoverSP3": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.33,
+          "OnFailure": [
+            {
+              "$type": "RandomOperator",
+              "Odds": 0.5,
+              "OnFailure": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "RecoverSP3",
+                  "Target": "TeamAvatars"
+                }
+              ],
+              "OnSuccess": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "RecoverSP2",
+                  "Target": "TeamAvatars"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RecoverSP1",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverSP1": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%SPRecover",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 1
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverSP2": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%SPRecover",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 2
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverSP3": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%SPRecover",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 3
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "UniqueRandomModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RandomRecoverSP3",
+          "Predicates": [
+            {
+              "$type": "ByAvatarCount",
+              "CompareType": "Equal",
+              "CompareValue": 3
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RandomRecoverSP2",
+          "Predicates": [
+            {
+              "$type": "ByAvatarCount",
+              "CompareType": "Equal",
+              "CompareValue": 2
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RandomRecoverSP1",
+          "Predicates": [
+            {
+              "$type": "ByAvatarCount",
+              "CompareType": "Equal",
+              "CompareValue": 1
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

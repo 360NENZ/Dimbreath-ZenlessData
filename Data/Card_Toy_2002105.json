@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Card_Toy_2002105",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 10
+    },
+    "AddedDamageRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyWeakenMonsterModifier_Card_2105",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyWeakenMonsterModifier_Card_2105": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TakeDamageUpModifier_Card_Toy_2002105",
+          "Predicates": [
+            {
+              "$type": "ByCampType",
+              "Camp": "TeamEvil",
+              "Target": "Other"
+            }
+          ],
+          "Target": "Other"
+        }
+      ]
+    },
+    "TakeDamageUpModifier_Card_Toy_2002105": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

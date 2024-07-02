@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Level_SkyScraper_PowerCut",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "AddSceneTagAction",
+        "SceneTagList": [
+          "PowerCut"
+        ]
+      }
+    ]
+  }
+}

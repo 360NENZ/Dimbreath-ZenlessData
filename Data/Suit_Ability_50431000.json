@@ -1,0 +1,93 @@
+{
+  "AbilityName": "Suit_Ability_50431000",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.16
+    },
+    "AS_Duration": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier_01",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Normal"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier_02",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier_03",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Counter"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier_01": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    },
+    "BaseAttackRatioModifier_02": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    },
+    "BaseAttackRatioModifier_03": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "AbilityName": "DeathXIII_Attack02_Teleport_LogicMove",
+  "AbilitySpecials": {
+    "AS_FlipFlopSign": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ATK2TeleportModifier01": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "DefaultOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 5.0
+            },
+            "Duration": 0.01,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": true,
+              "NeedRayCastGround": true
+            },
+            "ReachTargetStop": true,
+            "RotationConfig": {
+              "$type": "ConfigRotationToTarget",
+              "Duration": 0.01,
+              "ReachTargetStop": true,
+              "RotateSpeed": 1,
+              "RotateType": "Instant",
+              "TargetPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 1.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "LocalAvatar"
+                }
+              },
+              "TargetUpdateMode": "Always"
+            },
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SavePoint",
+                "PointName": "DeathXIII_Attack02_SavePoint_01"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_FlipFlopSign",
+          "ParamType": "Integer"
+        }
+      ]
+    },
+    "ATK2TeleportModifier02": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "DefaultOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 5.0
+            },
+            "Duration": 0.01,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": true,
+              "NeedRayCastGround": true
+            },
+            "ReachTargetStop": true,
+            "RotationConfig": {
+              "$type": "ConfigRotationToTarget",
+              "Duration": 0.01,
+              "ReachTargetStop": true,
+              "RotateSpeed": 1,
+              "RotateType": "Instant",
+              "TargetPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 1.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "LocalAvatar"
+                }
+              },
+              "TargetUpdateMode": "Always"
+            },
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SavePoint",
+                "PointName": "DeathXIII_Attack02_SavePoint_02"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_FlipFlopSign",
+          "ParamType": "Integer"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ATK2TeleportModifier01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_FlipFlopSign",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ATK2TeleportModifier02",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_FlipFlopSign",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

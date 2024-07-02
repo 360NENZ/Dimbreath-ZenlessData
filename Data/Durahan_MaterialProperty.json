@@ -1,0 +1,434 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_01_Attack",
+          "FrameCountHigh": 48,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_01_Attack_02",
+          "FrameCountHigh": 48,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_01_Counter",
+          "FrameCountHigh": 42,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_01_Break",
+          "FrameCountHigh": 20,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_MaterialProperty",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier_Boss",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Boss"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier_Black",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier_Black",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier_Energy",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Energy"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialPropertyModifier_Boss",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Boss"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialPropertyModifier_Black",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialPropertyModifier_Black",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialPropertyModifier_Energy",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Energy"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_Black": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                1
+              ],
+              "RenderPath": "Monster_Durahan"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Skill_01_Charge_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_Durahan"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Skill_01_Charge_Mat02_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanGrey"
+            }
+          ],
+          "Tag": "Monster_DurahanGrey_MA_Skill_01_Charge_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_DurahanGrey_MA_Skill_01_Charge_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_Durahan_Break_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanGrey_Break_02"
+            },
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_DurahanEnergy_Break_02"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat03_ScreenImage_03",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Skill_01_Charge_Mat03_ScreenImage_03"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat02_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_DurahanGrey_MA_Skill_01_Charge_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat03_ScreenImage_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_Boss": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanBoss01"
+            }
+          ],
+          "Tag": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanBoss02"
+            }
+          ],
+          "Tag": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanBoss_Weapon01"
+            }
+          ],
+          "Tag": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_03",
+          "Target": "Self",
+          "key": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_03"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_DurahanBoss_MA_Skill_01_Charge_ScreenImage_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier_Energy": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_DurahanEnergy"
+            }
+          ],
+          "Tag": "Monster_DurahanEnergy_MA_Skill_01_Charge_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_DurahanEnergy_MA_Skill_01_Charge_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_Durahan_Break_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanGrey_Break_02"
+            },
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_DurahanEnergy_Break_02"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat03_ScreenImage_03",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Skill_01_Charge_Mat03_ScreenImage_03"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_DurahanEnergy_MA_Skill_01_Charge_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Durahan_MA_Skill_01_Charge_Mat03_ScreenImage_03",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

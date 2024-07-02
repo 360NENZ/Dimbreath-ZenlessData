@@ -1,0 +1,1153 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point01_Move_Pre"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point02_Move_Pre"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point03_Move_Pre"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point04_Move_Pre"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 40,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point01_WindEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 40,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point02_WindEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 70,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point03_WindEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 70,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point04_WindEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 150,
+          "FrameCountLow": 90,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point01_Move_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 150,
+          "FrameCountLow": 90,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point02_Move_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 120,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point03_Move_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 120,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point04_Move_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 370,
+          "FrameCountLow": 90,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point01_SmokeEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 370,
+          "FrameCountLow": 90,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point02_SmokeEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 414,
+          "FrameCountLow": 120,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point03_SmokeEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 414,
+          "FrameCountLow": 120,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point04_SmokeEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 365,
+          "FrameCountLow": 150,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point01_Move_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 365,
+          "FrameCountLow": 150,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point02_Move_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 410,
+          "FrameCountLow": 180,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point03_Move_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "FrameCountHigh": 410,
+          "FrameCountLow": 180,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialAttack_01_Point04_Move_02"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point01_01",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 5.5,
+                    "y": 0.0,
+                    "z": 1.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point02_01",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -5.5,
+                    "y": 0.0,
+                    "z": 1.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point03_01",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 12.5,
+                    "y": 0.0,
+                    "z": 1.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point04_01",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -12.5,
+                    "y": 0.0,
+                    "z": 1.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point01_02",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 6.5,
+                    "y": 0.0,
+                    "z": 3.5
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point02_02",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -6.5,
+                    "y": 0.0,
+                    "z": 3.5
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point03_02",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 14.5,
+                    "y": 0.0,
+                    "z": 3.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "SpecialAttack_01_Point04_02",
+              "Target": "Self",
+              "TargetPosRot": {
+                "CoordsOption": "Target",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -14.5,
+                    "y": 0.0,
+                    "z": 3.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            }
+          ],
+          "AnimatorStateName": "Special_Attack01_01_Left",
+          "Frame": 29,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_SpecialAttack01_Left_AttachPoint_01",
+  "Modifiers": {
+    "SpecialAttack_01_Point01_Move_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_01",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point01_02"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 4.5,
+          "PosType": "Fixed",
+          "RotRatio": 2.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point01_Move_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_01",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SelfAttackTarget"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 7.0,
+          "PosType": "Fixed",
+          "RotRatio": 2.5,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_Special_Attack01_02_Smoke"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point01_Move_Pre": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_01",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point01_01"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant",
+          "TransitionDuration": 0.16
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point01_SmokeEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_01",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_02_Smoke"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_03_Burst",
+          "FireEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_01",
+              "OffsetReferTarget": "Self"
+            }
+          }
+        }
+      ]
+    },
+    "SpecialAttack_01_Point01_WindEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_01",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_01_Wind"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point02_Move_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_02",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point02_02"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 4.5,
+          "PosType": "Fixed",
+          "RotRatio": 2.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point02_Move_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_02",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SelfAttackTarget"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 7.0,
+          "PosType": "Fixed",
+          "RotRatio": 2.5,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_Special_Attack01_02_Smoke"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point02_Move_Pre": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_02",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point02_01"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant",
+          "TransitionDuration": 0.16
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point02_SmokeEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_02",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_02_Smoke"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_03_Burst",
+          "FireEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_02",
+              "OffsetReferTarget": "Self"
+            }
+          }
+        }
+      ]
+    },
+    "SpecialAttack_01_Point02_WindEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_02",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_01_Wind"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point03_Move_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_03",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point03_02"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 4.5,
+          "PosType": "Fixed",
+          "RotRatio": 2.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point03_Move_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_03",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SelfAttackTarget"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 4.0,
+          "PosType": "Fixed",
+          "RotRatio": 1.5,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_Special_Attack01_05_Smoke"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point03_Move_Pre": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_03",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point03_01"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant",
+          "TransitionDuration": 0.16
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point03_SmokeEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_03",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_05_Smoke"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_06_Burst",
+          "FireEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_03",
+              "OffsetReferTarget": "Self"
+            }
+          }
+        }
+      ]
+    },
+    "SpecialAttack_01_Point03_WindEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_03",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_04_Wind"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point04_Move_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_04",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point04_02"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 4.5,
+          "PosType": "Fixed",
+          "RotRatio": 2.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point04_Move_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_04",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SelfAttackTarget"
+            }
+          },
+          "PolarAngleRatio": 0,
+          "PosSpeed": 4.0,
+          "PosType": "Fixed",
+          "RotRatio": 1.5,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_Special_Attack01_05_Smoke"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpecialAttack_01_Point04_Move_Pre": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "SpecialAttack01_Point_04",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_01_Point04_01"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant",
+          "TransitionDuration": 0.16
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SpecialAttack_01_Point04_SmokeEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_04",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_05_Smoke"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_06_Burst",
+          "FireEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_04",
+              "OffsetReferTarget": "Self"
+            }
+          }
+        }
+      ]
+    },
+    "SpecialAttack_01_Point04_WindEffect": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "SpecialAttack01_Point_04",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Nineveh_Special_Attack01_04_Wind"
+        }
+      ]
+    }
+  }
+}

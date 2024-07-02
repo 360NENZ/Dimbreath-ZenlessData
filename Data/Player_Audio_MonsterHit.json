@@ -1,0 +1,306 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenQTEMixin",
+      "ListenQTEWindowTimesUp": [
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true
+            }
+          ],
+          "soundActionKey": "Play_SoundAction_QTEWindow_Close"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_Audio_MonsterHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "NormalQTE"
+            ]
+          },
+          {
+            "$type": "ByHeavyAttack",
+            "IsHeavyAttack": true
+          },
+          {
+            "$type": "ByCauseStun",
+            "IsCauseStun": true
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "TriggerSoundAction",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierCaster": "Self",
+                "ModifierNameList": [
+                  "QTE_MutiTrigger_Protect_Modifier"
+                ],
+                "OperatorType": "Not",
+                "Target": "Other"
+              }
+            ],
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_HitType_QTE"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierCaster": "Self",
+                "ModifierNameList": [
+                  "QTE_MutiTrigger_Protect_Modifier"
+                ],
+                "OperatorType": "Not",
+                "Target": "Other"
+              }
+            ],
+            "Target": "Other",
+            "soundActionKey": "Play_SoundAction_Vo_Monster_Hit"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "QTE_MutiTrigger_Protect_Modifier",
+            "Target": "Other"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExQTE"
+            ]
+          },
+          {
+            "$type": "ByHeavyAttack",
+            "IsHeavyAttack": true
+          },
+          {
+            "$type": "ByCauseStun",
+            "IsCauseStun": true
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_HitType_EXQTE"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "Play_SoundAction_Vo_Monster_Hit"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE"
+                ]
+              }
+            ]
+          },
+          {
+            "$type": "ByTargetHitEffect",
+            "HitEffectKind": "FinalHitEffect",
+            "TargetHitEffects": [
+              "HitGround",
+              "HitSky"
+            ],
+            "TargetSubHitEffectAirs": [
+              "InAir"
+            ],
+            "TargetSubHitEffectGrounds": [
+              "Stay",
+              "Light"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_HitType_Normal"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_NormalHit_Light"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "Play_SoundAction_Vo_Monster_Hit"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE"
+                ]
+              }
+            ]
+          },
+          {
+            "$type": "ByTargetHitEffect",
+            "HitEffectKind": "FinalHitEffect",
+            "TargetHitEffects": [
+              "HitGround",
+              "HitSky"
+            ],
+            "TargetSubHitEffectAirs": [
+              "ThrowLow",
+              "ThrowHigh",
+              "Fly",
+              "Knock"
+            ],
+            "TargetSubHitEffectGrounds": [
+              "Heavy",
+              "Knock"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_HitType_Normal"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_NormalHit_Heavy"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "Play_SoundAction_Vo_Monster_Hit"
+          }
+        ]
+      }
+    ],
+    "OnBuffDamageHitOtherPre": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByTargetHitEffect",
+            "HitEffectKind": "FinalHitEffect",
+            "TargetHitEffects": [
+              "HitGround",
+              "HitSky"
+            ],
+            "TargetSubHitEffectAirs": [
+              "InAir"
+            ],
+            "TargetSubHitEffectGrounds": [
+              "Stay",
+              "Light"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_HitType_Normal"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_NormalHit_Light"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "Play_SoundAction_Vo_Monster_Hit"
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByTargetHitEffect",
+            "HitEffectKind": "FinalHitEffect",
+            "TargetHitEffects": [
+              "HitGround",
+              "HitSky"
+            ],
+            "TargetSubHitEffectAirs": [
+              "ThrowLow",
+              "ThrowHigh",
+              "Fly",
+              "Knock"
+            ],
+            "TargetSubHitEffectGrounds": [
+              "Heavy",
+              "Knock"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_HitType_Normal"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "SetScope_SoundAction_Vo_Monster_NormalHit_Heavy"
+          },
+          {
+            "$type": "TriggerSoundAction",
+            "Target": "Other",
+            "soundActionKey": "Play_SoundAction_Vo_Monster_Hit"
+          }
+        ]
+      }
+    ],
+    "OnStunResetOtherActions": [
+      {
+        "$type": "TriggerSoundAction",
+        "Target": "Other",
+        "soundActionKey": "Play_SoundAction_QTEWindow_Open"
+      }
+    ]
+  },
+  "Modifiers": {
+    "QTE_MutiTrigger_Protect_Modifier": {
+      "Duration": 0.5,
+      "IsUnique": false,
+      "ModifierStacking": "Refresh"
+    }
+  }
+}

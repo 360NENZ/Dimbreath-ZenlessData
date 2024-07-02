@@ -1,0 +1,149 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Front",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Back",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Attack",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Attack_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Counter",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Break",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Revenge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_ChargeAttack_CD",
+  "AbilitySpecials": {
+    "AS_SkillCD_Counter": {
+      "Value": 12
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SkillStartAction",
+        "StartedSkillName": "Monster_Durahan_Skill_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SkillCDModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Monster_Durahan_Skill_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": true,
+          "SkillNames": [
+            "Monster_Durahan_Skill_01"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": false,
+          "SkillNames": [
+            "Monster_Durahan_Skill_01"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ModifySkillCDAction",
+      "Delta": "%AS_SkillCD_Counter",
+      "ModifyType": "ByZero",
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Skill_01_Counter",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Ratio": 0,
+      "SkillName": "Monster_Durahan_Skill_01",
+      "Target": "Self"
+    }
+  ]
+}

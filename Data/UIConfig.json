@@ -1,0 +1,4688 @@
+{
+  "datas": [
+    {
+      "name": "UI3DChessboardPageController",
+      "resource_path": "Assets/NapResources/UI/UI3DChessboardPage.prefab"
+    },
+    {
+      "name": "UIAbyssChallengeReviewPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/AbyssChallengeReviewPage.prefab"
+    },
+    {
+      "name": "UIAbyssChallengeReviewRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/AbyssChallengeReviewRow.prefab"
+    },
+    {
+      "name": "UIAbyssEntrancePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/AbyssEntrancePage.prefab"
+    },
+    {
+      "name": "UIAbyssLayerProgressIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/AbyssLayerProgressIcon.prefab"
+    },
+    {
+      "name": "UIAbyssRewardPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Abyss/AbyssRewardDialog.prefab"
+    },
+    {
+      "name": "UIAbyssRewardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/AbyssRewardRow.prefab"
+    },
+    {
+      "name": "UIAbyssRewardTimeLineAndTaskPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Abyss/AbyssRewardTimeLineDialog.prefab"
+    },
+    {
+      "name": "UIAbyssRewardTimeLinePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Abyss/AbyssRewardTimeLineDialog.prefab"
+    },
+    {
+      "name": "UIAbyssRewardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/AbyssRewardWidget.prefab"
+    },
+    {
+      "name": "UIAbyssTalentPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Abyss/AbyssTalentPage.prefab"
+    },
+    {
+      "name": "UIAbyssTalentPointWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/TalentModel/TalentModel_10101.prefab"
+    },
+    {
+      "name": "UIAbyssTaskCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/AbyssTaskCardWidget.prefab"
+    },
+    {
+      "name": "UIAbyssTaskPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Abyss/AbyssTaskPage.prefab"
+    },
+    {
+      "name": "UIAbyssTaskWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/AbyssTaskWidget.prefab"
+    },
+    {
+      "name": "UIAchievementItemIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/AchievementItemIconWidget.prefab"
+    },
+    {
+      "name": "UIAchievementItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Achievement/AchievementItemRow.prefab"
+    },
+    {
+      "name": "UIAchievementPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Achievement/AchievementPage.prefab"
+    },
+    {
+      "name": "UIAchievementTabWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Achievement/AchievementTabBtnRow.prefab"
+    },
+    {
+      "name": "UIActivePropsBangbooWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/ActivePropsBangbooWidget.prefab"
+    },
+    {
+      "name": "UIActivePropsItemIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/ActivePropsItemIconWidget.prefab"
+    },
+    {
+      "name": "UIActivePropsItemIconWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/ActivePropsItemIconWidget.prefab"
+    },
+    {
+      "name": "UIActivePropsManufacturePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Props/ActivePropsManufactureDialog.prefab"
+    },
+    {
+      "name": "UIActivePropsPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/ActiveProps/ActivePropsPage.prefab"
+    },
+    {
+      "name": "UIActivePropsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Props/ActivePropsDialog.prefab"
+    },
+    {
+      "name": "UIActivityCafeBgRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityCafeBgRow.prefab"
+    },
+    {
+      "name": "UIActivityCafeScrollViewWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityCafeScrollView.prefab"
+    },
+    {
+      "name": "UIActivityChainRowV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityChainRowV2.prefab"
+    },
+    {
+      "name": "UIActivityChainRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityChainRow.prefab"
+    },
+    {
+      "name": "UIActivityChainV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityChainWidgetV2.prefab"
+    },
+    {
+      "name": "UIActivityChainWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityChainWidget.prefab"
+    },
+    {
+      "name": "UIActivityCommonMissionRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityTaskRow.prefab"
+    },
+    {
+      "name": "UIActivityCommonMissionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityTaskWidget.prefab"
+    },
+    {
+      "name": "UIActivityCompListBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/ActivityModuleRewardListBtn.prefab"
+    },
+    {
+      "name": "UIActivityCoreAwardComponentPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Activity/Ver_1.0/ActivityCoreAwardDialog.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRowPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoInfoBgRow.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoInfoBgRow.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRow_AntonWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_Anton.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRow_BenWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_Ben.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRow_EllenWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_Ellen.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRow_NicoleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_Nicole.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRow_SoukakuWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_Soukaku.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoBgRow_ZhuYuanWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_ZhuYuan.prefab"
+    },
+    {
+      "name": "UIActivityDemoInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoInfoWidget.prefab"
+    },
+    {
+      "name": "UIActivityDemoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoRow.prefab"
+    },
+    {
+      "name": "UIActivityDemoTrialBGEffectWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/ActivityDemoInfoBgRow_Ellen.prefab"
+    },
+    {
+      "name": "UIActivityDemoTrialPreviewBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralRoleNameplate.prefab"
+    },
+    {
+      "name": "UIActivityDemoTrial_EllenWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoInfoBgRow_Ellen.prefab"
+    },
+    {
+      "name": "UIActivityDirectAwardReceivingWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDirectAwardReceivingWidget.prefab"
+    },
+    {
+      "name": "UIActivityDirectAwardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDirectAwardSmallIconRow.prefab"
+    },
+    {
+      "name": "UIActivityExchangeDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Activity/Ver_1.0/ActivityExchangeDialog.prefab"
+    },
+    {
+      "name": "UIActivityExchangeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityExchangeRow.prefab"
+    },
+    {
+      "name": "UIActivityExchangeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityExchangeWidget.prefab"
+    },
+    {
+      "name": "UIActivityGameplayRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/ActivityGameplay/CollapseHollowActivityRow.prefab"
+    },
+    {
+      "name": "UIActivityGameplayWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/ActivityGameplayPage.prefab"
+    },
+    {
+      "name": "UIActivityGoldenWeekPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/ActivityGoldenWeekPage.prefab"
+    },
+    {
+      "name": "UIActivityGoldenWeekRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityGoldenWeekRow.prefab"
+    },
+    {
+      "name": "UIActivityGoldenWeekRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityGoldenWeekRow.prefab"
+    },
+    {
+      "name": "UIActivityGoldenWeekWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityGoldenWeekWidget.prefab"
+    },
+    {
+      "name": "UIActivityGuideInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityGuideInfoWidget.prefab"
+    },
+    {
+      "name": "UIActivityGuideInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityGuideInfoWidget.prefab"
+    },
+    {
+      "name": "UIActivityLambGiftItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityLambGiftItem.prefab"
+    },
+    {
+      "name": "UIActivityLambGiftRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityLambGiftRow.prefab"
+    },
+    {
+      "name": "UIActivityLambGiftSpecialRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityLambGiftSpecialRow.prefab"
+    },
+    {
+      "name": "UIActivityLambGiftWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityLambGiftWidget.prefab"
+    },
+    {
+      "name": "UIActivityMasterMakeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/ActivityMasterMakeWidget.prefab"
+    },
+    {
+      "name": "UIActivityNewplayerInfoV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityNewplayerInfoWidgetV2.prefab"
+    },
+    {
+      "name": "UIActivityNewplayerInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityNewplayerInfoWidget.prefab"
+    },
+    {
+      "name": "UIActivityNewsplayerRewardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityNewsplayerRewardRow.prefab"
+    },
+    {
+      "name": "UIActivityNormalPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/ActivityNormalPage.prefab"
+    },
+    {
+      "name": "UIActivityOBGiftPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Activity/Ver_1.0/ActivityOBGentleHouseGiftDialog.prefab"
+    },
+    {
+      "name": "UIActivityOperationalPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/ActivityOperationalPage.prefab"
+    },
+    {
+      "name": "UIActivitySchedulePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/ActivitySchedulePage.prefab"
+    },
+    {
+      "name": "UIActivitySchedulePagePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/ActivitySchedulePage.prefab"
+    },
+    {
+      "name": "UIActivitySchedulePlanPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Activity/ActivitySchedulePlanDialog.prefab"
+    },
+    {
+      "name": "UIActivitySignInInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivitySignInInfoWidget.prefab"
+    },
+    {
+      "name": "UIActivitySignInInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivitySignInInfoWidget.prefab"
+    },
+    {
+      "name": "UIActivitySignInPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Activity/Ver_1.0/ActivitySignInDialog.prefab"
+    },
+    {
+      "name": "UIActivitySignPopWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivitySignPopWidget.prefab"
+    },
+    {
+      "name": "UIActivitySigninWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivitySigninwidget.prefab"
+    },
+    {
+      "name": "UIActivityWeaponBangbooGiftRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/ActivityWeaponBangbooGiftRow.prefab"
+    },
+    {
+      "name": "UIActivityWeaponBangbooGiftWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/ActivityWeaponBangbooGiftWidget.prefab"
+    },
+    {
+      "name": "UIActivityWeekRewardCompRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityGoldenWeekRewardlRow.prefab"
+    },
+    {
+      "name": "UIActivityWeekRewardComponentPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Activity/Ver_1.0/ActivityGoldenWeekRewardDialog.prefab"
+    },
+    {
+      "name": "UIAllroundGeneralTutorialPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/AllroundGeneralTutorialDialog.prefab"
+    },
+    {
+      "name": "UIAnnouncePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralLoopTips.prefab"
+    },
+    {
+      "name": "UIArcadeAchievementGeneralBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GenetalBtn02Small.prefab"
+    },
+    {
+      "name": "UIArcadeAchievementListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeAchievementRow.prefab"
+    },
+    {
+      "name": "UIArcadeAchievementPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Arcade/ArcadeAchievementDialog.prefab"
+    },
+    {
+      "name": "UIArcadeCompanionPlayBtnAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/PlayCompanionBtnA.prefab"
+    },
+    {
+      "name": "UIArcadeCompanionPlayBtnBChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/PlayCompanionBtnB.prefab"
+    },
+    {
+      "name": "UIArcadeCompanionPlayChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/CompanionPlayWidget.prefab"
+    },
+    {
+      "name": "UIArcadeExchangeChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeExchangeWidget.prefab"
+    },
+    {
+      "name": "UIArcadeFriendInvitePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/FriendsInviteDialog.prefab"
+    },
+    {
+      "name": "UIArcadeGamingChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeGamingWidget.prefab"
+    },
+    {
+      "name": "UIArcadeGamingSelectRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeGamingSelectRow.prefab"
+    },
+    {
+      "name": "UIArcadeMachineUnit3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Arcadeshop/ArcadeMachineUnit3D.prefab"
+    },
+    {
+      "name": "UIArcadeMainRankListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeMainRankListRow.prefab"
+    },
+    {
+      "name": "UIArcadeMainRankPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Arcade/ArcadeMainRankDialog.prefab"
+    },
+    {
+      "name": "UIArcadeMenuChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeMenuWidget.prefab"
+    },
+    {
+      "name": "UIArcadeMenuExchangeChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeMenuExchangeWidget.prefab"
+    },
+    {
+      "name": "UIArcadeMenuSelectRow02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeMenuSelectRow02.prefab"
+    },
+    {
+      "name": "UIArcadeMenuSelectRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeMenuSelectRow.prefab"
+    },
+    {
+      "name": "UIArcadeMenuShopChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeMenuShopWidget.prefab"
+    },
+    {
+      "name": "UIArcadePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/ArcadePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_ARCADE"
+    },
+    {
+      "name": "UIArcadePlayBtnAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadePlayBtnA.prefab"
+    },
+    {
+      "name": "UIArcadePlayBtnBChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadePlayBtnB.prefab"
+    },
+    {
+      "name": "UIArcadePlayChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadePlayWidget.prefab"
+    },
+    {
+      "name": "UIArcadePlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadePlayerMove.prefab"
+    },
+    {
+      "name": "UIArcadePrizeChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadePrizeWidget.prefab"
+    },
+    {
+      "name": "UIArcadePrizeListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadePrizeListRow.prefab"
+    },
+    {
+      "name": "UIArcadeRankListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeRankListRow.prefab"
+    },
+    {
+      "name": "UIArcadeRankPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Arcade/ArcadeRankDialog.prefab"
+    },
+    {
+      "name": "UIArcadeRunnerPlayChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Runner/RunnerPlayWidget.prefab"
+    },
+    {
+      "name": "UIArcadeShop3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Arcadeshop/Arcadeshop3D.prefab"
+    },
+    {
+      "name": "UIArcadeSinglePlayerChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeGamingIndividuelWidget.prefab",
+      "system_operation": "CLIENT_SYSTEM_ARCADE_GAME"
+    },
+    {
+      "name": "UIArcadeSnakesPlayBtnAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Snakes/PlaySnakesPlayBtnA.prefab"
+    },
+    {
+      "name": "UIArcadeSnakesPlayChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Snakes/SnakesPlayWidget.prefab"
+    },
+    {
+      "name": "UIArcadeSnakesPlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Snakes/PlaySnakesPlayerMove.prefab"
+    },
+    {
+      "name": "UIArcadeSoulHoundsPlayBtnAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/SoulHoundsIII/PlaySoulHoundsIIIPlayBtnA.prefab"
+    },
+    {
+      "name": "UIArcadeSoulHoundsPlayBtnBChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/SoulHoundsIII/PlaySoulHoundsIIIPlayBtnB.prefab"
+    },
+    {
+      "name": "UIArcadeSoulHoundsPlayChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/SoulHoundsIII/SoulHoundsIIIPlayWidget.prefab"
+    },
+    {
+      "name": "UIArcadeSoulHoundsPlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/SoulHoundsIII/PlaySoulHoundsIIIPlayerMove.prefab"
+    },
+    {
+      "name": "UIArcadeTeamChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/ArcadeTeamWidget.prefab",
+      "system_operation": "CLIENT_SYSTEM_ARCADE_ROOM"
+    },
+    {
+      "name": "UIBPCoreRewardDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/BP/BPCoreRewardDialog.prefab"
+    },
+    {
+      "name": "UIBPCoreRewardShowWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPCoreRewardShowWidget.prefab"
+    },
+    {
+      "name": "UIBPCoreRewardWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPCoreRewardWidget.prefab"
+    },
+    {
+      "name": "UIBPItemIconRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPItemIconRow.prefab"
+    },
+    {
+      "name": "UIBPLevelRewardRowItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPLevelRewardRowItem.prefab"
+    },
+    {
+      "name": "UIBPLevelRewardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPLevelRewardRow.prefab"
+    },
+    {
+      "name": "UIBPLevelRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPLevelRow.prefab"
+    },
+    {
+      "name": "UIBPPagePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/BP/BPPage.prefab"
+    },
+    {
+      "name": "UIBPPopupDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/BP/BPPopupDialog.prefab"
+    },
+    {
+      "name": "UIBPPurchaseDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/BP/BPPurchaseDialog.prefab"
+    },
+    {
+      "name": "UIBPPurchasePagePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/BP/BPPurchasePage.prefab"
+    },
+    {
+      "name": "UIBPRewardInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPRewardInfoWidget.prefab"
+    },
+    {
+      "name": "UIBPTaskRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPTaskRow.prefab"
+    },
+    {
+      "name": "UIBPTaskTabBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPTaskTabBtn.prefab"
+    },
+    {
+      "name": "UIBPTaskWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPTaskWidget.prefab"
+    },
+    {
+      "name": "UIBPWeaponListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BP/BPWeaponListRow.prefab"
+    },
+    {
+      "name": "UIBadgeItemIconWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/BadgeItemIconWidget.prefab"
+    },
+    {
+      "name": "UIBagEquipItemController",
+      "resource_path": "Assets/NapResources/UI/Role/UIBagEquipItem.prefab"
+    },
+    {
+      "name": "UIBagSlotItemController",
+      "resource_path": "Assets/NapResources/UI/Role/UIBagSlotItem.prefab"
+    },
+    {
+      "name": "UIBangbooCardBGWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/BangbooBgCard01.prefab"
+    },
+    {
+      "name": "UIBangbooCountGamePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/Ver1_0/BangbooCountGamePage.prefab"
+    },
+    {
+      "name": "UIBangbooDIYWidgetPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooDIYWidget.prefab"
+    },
+    {
+      "name": "UIBangbooDIYWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooDIYWidget.prefab"
+    },
+    {
+      "name": "UIBangbooDevelopPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/BangbooModGarage/BangbooDevelopDialog.prefab"
+    },
+    {
+      "name": "UIBangbooFesActivityRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/ActivityGameplay/BangbooFesActivityRow.prefab"
+    },
+    {
+      "name": "UIBangbooGroupPhotoPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/Ver1_0/BangbooGroupPhotoPage.prefab"
+    },
+    {
+      "name": "UIBangbooGroupPhotoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/Ver1_0/BangbooGroupPhotoPage.prefab"
+    },
+    {
+      "name": "UIBangbooGroupPhotoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/BangbooGroupPhotoRow.prefab"
+    },
+    {
+      "name": "UIBangbooItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooItem.prefab"
+    },
+    {
+      "name": "UIBangbooModGarageDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/BangbooModGarage/BangbooModGarageDialog.prefab"
+    },
+    {
+      "name": "UIBangbooModGaragePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/BangbooModGarage/BangbooModGaragePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_BUDDY"
+    },
+    {
+      "name": "UIBangbooSelectPagePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Bangboo/BangbooSelectPage.prefab"
+    },
+    {
+      "name": "UIBangbooSkillDataRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooSkillDataRow.prefab"
+    },
+    {
+      "name": "UIBangbooStarUpAttributeRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooStarUpAttributeRow.prefab"
+    },
+    {
+      "name": "UIBangbooStarUpAttributeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooStarUpAttributeRow.prefab"
+    },
+    {
+      "name": "UIBangbooTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/BangbooModGarage/BangbooSkillTipsDialog.prefab"
+    },
+    {
+      "name": "UIBangbooTopLimitAttributeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooStarUpAttributeRow.prefab"
+    },
+    {
+      "name": "UIBangbooTransformWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooTransformWidget.prefab"
+    },
+    {
+      "name": "UIBangbooUpgradeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BangbooUpgradeWidget.prefab"
+    },
+    {
+      "name": "UIBattlePortal_HadalZonePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MusicPlayer/MusicPlayerPage.prefab"
+    },
+    {
+      "name": "UIBattlePortal_HadalZoneV2PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/HadalZonePage/HadalZoneSelectPageV2.prefab",
+      "system_operation": "CLIENT_SYSTEM_HADAL"
+    },
+    {
+      "name": "UIBirthEditDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/BirthEditDialog.prefab"
+    },
+    {
+      "name": "UIBirthEditRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/BirthEditRow.prefab"
+    },
+    {
+      "name": "UIBlackEdgeInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/BlackEdgeInfo.prefab"
+    },
+    {
+      "name": "UIBlackListPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/BlackListDialog.prefab"
+    },
+    {
+      "name": "UIBossIllustratedBookCardWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/BossIllustratedBook/BossIllustratedBookCardWidget.prefab"
+    },
+    {
+      "name": "UIBossIllustratedBookDetailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/BossIllustratedBook/BossIllustratedBookDetailWidget.prefab"
+    },
+    {
+      "name": "UIBossIllustratedBookTabBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/BossIllustratedBook/BossIllustratedBookTabBtn.prefab"
+    },
+    {
+      "name": "UIBuddyBagDragWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BuddyBagDrag.prefab"
+    },
+    {
+      "name": "UIBuddyDIYBagItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BuddyDIYBagItem.prefab"
+    },
+    {
+      "name": "UIBuddyDIYComponentWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/BuddyDIYComponent.prefab"
+    },
+    {
+      "name": "UIBusinessCardDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/BusinessCardDialog.prefab"
+    },
+    {
+      "name": "UIBusinessCardInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/BusinessCardInfoDialog.prefab"
+    },
+    {
+      "name": "UIBusinessCardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/BusinessCardRow.prefab"
+    },
+    {
+      "name": "UICafeCurrentBuffPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Cafe/CafeCurrentBuff.prefab"
+    },
+    {
+      "name": "UICafeCurrentBuffWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Cafe/CafeCurrentBuff.prefab"
+    },
+    {
+      "name": "UICafeItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Cafe/CafeItem.prefab"
+    },
+    {
+      "name": "UICafePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Cafe/CafeMainPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_CAFE"
+    },
+    {
+      "name": "UICardItemRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/CardItemRow.prefab"
+    },
+    {
+      "name": "UIChatBubbleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/ChatBubbleWidget.prefab"
+    },
+    {
+      "name": "UIChatEmojiCollectionPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/EmojiCollectionDialog.prefab"
+    },
+    {
+      "name": "UIChatEmojiGroupItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/EmojiGroupRow.prefab"
+    },
+    {
+      "name": "UIChatEmojiItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/EmojiRow.prefab"
+    },
+    {
+      "name": "UIChatWindowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatPanel.prefab"
+    },
+    {
+      "name": "UICoffeeshop3D3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Coffeeshop/Coffeeshop3D.prefab"
+    },
+    {
+      "name": "UICombatReadinessDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainStory/CombatReadinessDialog.prefab"
+    },
+    {
+      "name": "UIComicBubbleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ComicPage/ComicBubbleWidgetV2.prefab"
+    },
+    {
+      "name": "UIComicBubbleWidgetControllerWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ComicPage/ComicBubbleWidgetV2.prefab"
+    },
+    {
+      "name": "UIComicPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/ComicPage/ComicPage.prefab"
+    },
+    {
+      "name": "UIComicPictureDecorationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ComicPage/ComicPictureDecorateWidget.prefab"
+    },
+    {
+      "name": "UIComicVoiceDecorationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ComicPage/ComicVoiceDecorateWidget.prefab"
+    },
+    {
+      "name": "UICommonRewardListDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Common/CommonRewardListDialog.prefab"
+    },
+    {
+      "name": "UICommonRewardListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Common/CommonRewardListRow.prefab"
+    },
+    {
+      "name": "UICompanionGamePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/Companion/CompanionGamePage.prefab"
+    },
+    {
+      "name": "UICompanionPlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/PlayCompanionPlayerMove.prefab"
+    },
+    {
+      "name": "UICompanionTipsChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/CompanionTips.prefab"
+    },
+    {
+      "name": "UICompanionTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/CompanionTips.prefab"
+    },
+    {
+      "name": "UIComposeItemPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Depository/DisjointItemDialog.prefab"
+    },
+    {
+      "name": "UIControlChoosePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HDR/ControlChooseDialog.prefab"
+    },
+    {
+      "name": "UICpEndingChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/Companion/CompanionEndingPage.prefab"
+    },
+    {
+      "name": "UICpEntityInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/ItemWidget.prefab"
+    },
+    {
+      "name": "UICpIconItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/TeamBtnSmall.prefab"
+    },
+    {
+      "name": "UICpInfoChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/Companion/CompanionInfoPage.prefab"
+    },
+    {
+      "name": "UICpInlevelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/Companion/CompanionInLevelPage.prefab"
+    },
+    {
+      "name": "UICpItemInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/RewardBtnSmall.prefab"
+    },
+    {
+      "name": "UICpPropDataRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/InfoRow.prefab"
+    },
+    {
+      "name": "UICpRoleSelectChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/Companion/CompanionSelectPageV2.prefab"
+    },
+    {
+      "name": "UICpSelectItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/RoleItem.prefab"
+    },
+    {
+      "name": "UICpTagInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/EffectRow.prefab"
+    },
+    {
+      "name": "UICreateRoleNameDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/CreateRole/CreateRoleNameDialog.prefab"
+    },
+    {
+      "name": "UICreateRolePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/CreateRole/CreateRolePage.prefab"
+    },
+    {
+      "name": "UICreateSignaturePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/CreateSignDialog.prefab"
+    },
+    {
+      "name": "UIDailyChallengeBattleInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/LineupInGameWidget.prefab"
+    },
+    {
+      "name": "UIDailyChallengeCardMiniWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChangeCardMini.prefab"
+    },
+    {
+      "name": "UIDailyChallengeCardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChangeCardRow.prefab"
+    },
+    {
+      "name": "UIDailyChallengeCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChallengeCard.prefab"
+    },
+    {
+      "name": "UIDailyChallengePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/DailyChallenge/DailyChallengePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_BATTLE_DAILY"
+    },
+    {
+      "name": "UIDailyChallengeRewardDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/DailyChallenge/DailyChallengeUpDialog.prefab"
+    },
+    {
+      "name": "UIDailyChallengeSelectionDeckMiniWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChangeDeckMini.prefab"
+    },
+    {
+      "name": "UIDailyChallengeSelectionRewardChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChallengeReward.prefab"
+    },
+    {
+      "name": "UIDailyChallengeSelectionRewardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChallengeReward.prefab"
+    },
+    {
+      "name": "UIDailyLineupSelectionPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/DailyChallenge/LineupSelectionPageV2.prefab"
+    },
+    {
+      "name": "UIDailyQuestNormalRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ActivitySchedule/ActivityScheduleSingleRow.prefab"
+    },
+    {
+      "name": "UIDailyQuestSchedulePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Activity/ActivitySchedulePage.prefab"
+    },
+    {
+      "name": "UIDailyQuestSchedulePlanListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ActivitySchedule/ActivitySchedulePlanListRow.prefab"
+    },
+    {
+      "name": "UIDailyQuestSchedulePlanPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/ActivitySchedule/ActivitySchedulePlanDialog.prefab"
+    },
+    {
+      "name": "UIDailyQuestSchedulePlanRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ActivitySchedule/ActivitySchedulePlanRow.prefab"
+    },
+    {
+      "name": "UIDailyQuestSchedulePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/ActivitySchedule/ActivityScheduleDialog.prefab",
+      "system_operation": "CLIENT_SYSTEM_DAILY_QUEST"
+    },
+    {
+      "name": "UIDailyQuestScheduleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivitySchedulePlanRow.prefab"
+    },
+    {
+      "name": "UIDataAdjustCircleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/Ring.prefab"
+    },
+    {
+      "name": "UIDataAdjustGameWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/Ver1_0/MusicMiniGameWidget.prefab"
+    },
+    {
+      "name": "UIDataFixGameWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityMiniGame/Pipe/PipeMiniGameRootWidget.prefab"
+    },
+    {
+      "name": "UIDataFixNodeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityMiniGame/Pipe/PipeMiniGamePoint.prefab"
+    },
+    {
+      "name": "UIDataFixOuterRenderWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityMiniGame/Pipe/PipeMiniGameWidget.prefab"
+    },
+    {
+      "name": "UIDataFixRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityMiniGame/Pipe/PipeMiniGameMapRow.prefab"
+    },
+    {
+      "name": "UIDebugLoginWidgetController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/DebugLoginWidget.prefab"
+    },
+    {
+      "name": "UIDebugMapPage",
+      "resource_path": "Assets/NapResources/UI/UIDebugMap.prefab"
+    },
+    {
+      "name": "UIDeckRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DeckRow.prefab"
+    },
+    {
+      "name": "UIDepositoryGachaPreviewPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Depository/DepositoryPageV2.prefab"
+    },
+    {
+      "name": "UIDepositoryJumpBtnTextItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralClickToProceedWithJump.prefab"
+    },
+    {
+      "name": "UIDepositoryJumpTextItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralClickToProceedNoJump.prefab"
+    },
+    {
+      "name": "UIDepositoryPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Depository/DepositoryPage.prefab"
+    },
+    {
+      "name": "UIDialogAvatarController",
+      "resource_path": "Assets/NapResources/UI/Dialog/UIDialogAvatar.prefab"
+    },
+    {
+      "name": "UIDialogController",
+      "resource_path": "Assets/NapResources/UI/Dialog/UIDialog.prefab"
+    },
+    {
+      "name": "UIDoubleEliteExhibitionPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VR/DoubleElite/DoubleEliteDetailDialog.prefab"
+    },
+    {
+      "name": "UIDoubleEliteMonsterWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VR/DoubleElite/DoubleElitePage.prefab"
+    },
+    {
+      "name": "UIDoubleElitePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VR/DoubleElite/DoubleElitePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_DOUBLE_ELITE"
+    },
+    {
+      "name": "UIDoubleEliteSelectRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/DoubleElite/DoubleEliteRowV2.prefab"
+    },
+    {
+      "name": "UIDungeonBuffIcon02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/DungeonBuffIconWidget02.prefab"
+    },
+    {
+      "name": "UIDungeonBuffIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/DungeonBuffIconWidget.prefab"
+    },
+    {
+      "name": "UIEditBtnSmallWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/EditBtnSmall.prefab"
+    },
+    {
+      "name": "UIEnterMainCityPage",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/EnterMainCityPage.prefab"
+    },
+    {
+      "name": "UIEquipDetailPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Depository/EquipDetailPage.prefab"
+    },
+    {
+      "name": "UIEquipDetailStoryDetailWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Depository/EquipDetailStoryDetailWidget.prefab"
+    },
+    {
+      "name": "UIEquipDevelopPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/EquipDevelopDialog.prefab"
+    },
+    {
+      "name": "UIEquipment_ReplaceController",
+      "resource_path": "Assets/NapResources/UI/Role/UIEquipment_Replace.prefab"
+    },
+    {
+      "name": "UIExpProgressWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/ExpProgressWidget.prefab"
+    },
+    {
+      "name": "UIForgeUPDetailItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Forge/ForgeUPDetailItemWidget.prefab"
+    },
+    {
+      "name": "UIForgeUPDetailPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Forge/ForgeUPDetailDialog.prefab"
+    },
+    {
+      "name": "UIFormalVersionTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/FormalVersionTips.prefab"
+    },
+    {
+      "name": "UIFortuneSquareCoffeeshop3D3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/FortuneSquareCoffeeshop/FortuneSquareCoffeeshop3D.prefab"
+    },
+    {
+      "name": "UIFreshMainPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Fresh/FreshMain.prefab"
+    },
+    {
+      "name": "UIFriendCardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/FriendCardRow.prefab"
+    },
+    {
+      "name": "UIFriendChatConversationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatConversionWidget.prefab"
+    },
+    {
+      "name": "UIFriendChatEmojiWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatPanel.prefab"
+    },
+    {
+      "name": "UIFriendChatItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatWidget.prefab"
+    },
+    {
+      "name": "UIFriendChatPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatPanel.prefab"
+    },
+    {
+      "name": "UIFriendChatReplyWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatReplyWidget.prefab"
+    },
+    {
+      "name": "UIFriendChatRoleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatWidget.prefab"
+    },
+    {
+      "name": "UIFriendChatWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatPanel.prefab"
+    },
+    {
+      "name": "UIFriendDetailDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/FriendCardDialog.prefab"
+    },
+    {
+      "name": "UIFriendInviteRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/FriendInviteRow.prefab"
+    },
+    {
+      "name": "UIFriendMiniCardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/FriendMiniCardRow.prefab"
+    },
+    {
+      "name": "UIFriendSystemPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Friend/FriendSystemPage.prefab"
+    },
+    {
+      "name": "UIFriendSystemPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Friend/FriendSystemPage.prefab"
+    },
+    {
+      "name": "UIFullScreenVideoController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/FullScreenVideo/FullScreenVideo.prefab"
+    },
+    {
+      "name": "UIFullScreenVideoV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/FullScreenVideoV2.prefab"
+    },
+    {
+      "name": "UIGMAHIItemsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/GMAHItems/GMAHIItemsDialog.prefab"
+    },
+    {
+      "name": "UIGMAHItemsIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GMAHItems/GMAHItemsIconWidget.prefab"
+    },
+    {
+      "name": "UIGMMainCityDebugInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/GMMainCityDebugInfo/GMMainCityDebugInfo.prefab"
+    },
+    {
+      "name": "UIGMServerTimePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/GMServerTime/GMServerTimeDialog.prefab"
+    },
+    {
+      "name": "UIGaChaDemoInfoBgRow_EllenWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/GaChaDemoInfoBgRow_Ellen.prefab"
+    },
+    {
+      "name": "UIGaChaDemoInfoBgRow_ZhuYuanWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/GaChaDemoInfoBgRow_ZhuYuan.prefab"
+    },
+    {
+      "name": "UIGachaArmsBgList01WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/ArmsBg/ArmsBgList01.prefab"
+    },
+    {
+      "name": "UIGachaArmsBgList02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/ArmsBg/ArmsBgList02.prefab"
+    },
+    {
+      "name": "UIGachaAvatarPanelWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaRoleAPanel.prefab"
+    },
+    {
+      "name": "UIGachaAvatarWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaRoleWidget.prefab"
+    },
+    {
+      "name": "UIGachaBangbooBgRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/GaChaBBBgRow.prefab"
+    },
+    {
+      "name": "UIGachaBangbooPanelWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaBBAPanel.prefab"
+    },
+    {
+      "name": "UIGachaBangbooWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaBBWidget.prefab"
+    },
+    {
+      "name": "UIGachaBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GachaBtn.prefab"
+    },
+    {
+      "name": "UIGachaCommonBgRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/GaChaCurrencyBgRow.prefab"
+    },
+    {
+      "name": "UIGachaCommonBgWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/RoleBg/RoleBgList01.prefab"
+    },
+    {
+      "name": "UIGachaCommonWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaCurrencyWidget.prefab"
+    },
+    {
+      "name": "UIGachaFateDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/GaCha/GaChaSwitchDialog.prefab"
+    },
+    {
+      "name": "UIGachaItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaItem.prefab"
+    },
+    {
+      "name": "UIGachaPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GaCha/GaChaPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_GACHA"
+    },
+    {
+      "name": "UIGachaPerformance3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Gacha/GachaStage.prefab"
+    },
+    {
+      "name": "UIGachaPerformancePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GachaPerform/GachaPerformPage.prefab"
+    },
+    {
+      "name": "UIGachaRewardListDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/GaCha/GaChaLuckDrawDialog.prefab"
+    },
+    {
+      "name": "UIGachaRoleBgList01WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/RoleBg/RoleBgList01.prefab"
+    },
+    {
+      "name": "UIGachaRoleBgList02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/RoleBg/RoleBgList02.prefab"
+    },
+    {
+      "name": "UIGachaRolePoolDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/GaCha/GachaRolePoolDialog.prefab"
+    },
+    {
+      "name": "UIGachaRoleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaRoleWidget.prefab"
+    },
+    {
+      "name": "UIGachaStageAvatar3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Gacha/GachaStage_Avatar.prefab"
+    },
+    {
+      "name": "UIGachaStageBangboo3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Gacha/GachaStage_Bangboo.prefab"
+    },
+    {
+      "name": "UIGachaStageTv3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Gacha/GachaStage_Televison.prefab"
+    },
+    {
+      "name": "UIGachaStageWeapon3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Gacha/GachaStage_Weapon.prefab"
+    },
+    {
+      "name": "UIGachaV2PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GaCha/GaChaPageV2.prefab",
+      "system_operation": "CLIENT_SYSTEM_GACHA"
+    },
+    {
+      "name": "UIGachaWeaponBgRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Activity/ActivityDemoTrial/GaChaArmsBgRow.prefab"
+    },
+    {
+      "name": "UIGachaWeaponPanelWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaArmsAPanel.prefab"
+    },
+    {
+      "name": "UIGachaWeaponWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GaChaPage/GaChaArmsWidget.prefab"
+    },
+    {
+      "name": "UIGalgamePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Galgame/GalgamePage.prefab"
+    },
+    {
+      "name": "UIGalgameReviewDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Galgame/GalgameReviewDialog.prefab"
+    },
+    {
+      "name": "UIGalgameReviewRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Galgame/GalgameReviewRow.prefab"
+    },
+    {
+      "name": "UIGalgameTextRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Galgame/TextInfoRow.prefab"
+    },
+    {
+      "name": "UIGameTestInputFieldViewPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Test/GameTestInputField.prefab"
+    },
+    {
+      "name": "UIGamepadInputTestPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Test/GamepadInputTestDialog.prefab"
+    },
+    {
+      "name": "UIGeneral3DModelDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/General3DModelDialog.prefab"
+    },
+    {
+      "name": "UIGeneralAchievementTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralAchievementTips.prefab"
+    },
+    {
+      "name": "UIGeneralAchievementTipsRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralAchievementTipsRow.prefab"
+    },
+    {
+      "name": "UIGeneralActivityTagWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralActivityTag.prefab"
+    },
+    {
+      "name": "UIGeneralBlackMaskController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralBlackMask.prefab"
+    },
+    {
+      "name": "UIGeneralBottomRewardInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/RewardTotalInfo.prefab"
+    },
+    {
+      "name": "UIGeneralBtn03WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralBtn03.prefab"
+    },
+    {
+      "name": "UIGeneralBubbleChatChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralBubbleChat.prefab"
+    },
+    {
+      "name": "UIGeneralBuffDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralBuffDialog.prefab"
+    },
+    {
+      "name": "UIGeneralBuffDialogRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralBuffRow02.prefab"
+    },
+    {
+      "name": "UIGeneralBuffPanelWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralBuffPanel.prefab"
+    },
+    {
+      "name": "UIGeneralBuffRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralBuffRow.prefab"
+    },
+    {
+      "name": "UIGeneralChallengeInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralChallengeInfoDialog.prefab"
+    },
+    {
+      "name": "UIGeneralChallengeInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralChallengeInfoRow.prefab"
+    },
+    {
+      "name": "UIGeneralChapterFinishWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralChapterFinish.prefab"
+    },
+    {
+      "name": "UIGeneralClickToProceed02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralClickToProceed02.prefab"
+    },
+    {
+      "name": "UIGeneralDescriptConfrimDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralDescriptConfrimDialog.prefab"
+    },
+    {
+      "name": "UIGeneralDetailDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralDetailDialog.prefab"
+    },
+    {
+      "name": "UIGeneralDetailLoginDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralDetailLoginDialog.prefab"
+    },
+    {
+      "name": "UIGeneralDialogBlurDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDialogBlurDialog.prefab"
+    },
+    {
+      "name": "UIGeneralDialogController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralDialog.prefab"
+    },
+    {
+      "name": "UIGeneralDialogStaticBlurDialogChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDialogStaticBlurDialog.prefab"
+    },
+    {
+      "name": "UIGeneralDialogStaticBlurWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDialogStaticBlurWidget.prefab"
+    },
+    {
+      "name": "UIGeneralDialogStaticBlurWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDialogStaticBlurWidget.prefab"
+    },
+    {
+      "name": "UIGeneralDropDownActionBoxRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralConsoleBtnsPopupBtnRow.prefab"
+    },
+    {
+      "name": "UIGeneralDropDownActionsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralConsoleBtnsPopup.prefab"
+    },
+    {
+      "name": "UIGeneralDropDownTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralItemDropDownDetailScrollView.prefab"
+    },
+    {
+      "name": "UIGeneralDynamicTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDynamicTipsWidget.prefab"
+    },
+    {
+      "name": "UIGeneralEquipDetailV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralEquipDetail.prefab"
+    },
+    {
+      "name": "UIGeneralFairyDetailNoteWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityNyakichi/MeowjiNoteRow.prefab"
+    },
+    {
+      "name": "UIGeneralFairyDetailTitleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityNyakichi/GeneralFairyDetailTitle.prefab"
+    },
+    {
+      "name": "UIGeneralFilterGroupRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Depository/ItemTypeWidget.prefab"
+    },
+    {
+      "name": "UIGeneralFilterItemRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Depository/ItemTypeRow.prefab"
+    },
+    {
+      "name": "UIGeneralFilterPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Depository/ScreenPanel.prefab"
+    },
+    {
+      "name": "UIGeneralFriendInviteGamePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralFriendInvite.prefab"
+    },
+    {
+      "name": "UIGeneralGoogleLoginDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralGoogleLoginDialog.prefab"
+    },
+    {
+      "name": "UIGeneralHeadInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralHeadInfoWidget.prefab"
+    },
+    {
+      "name": "UIGeneralHeadRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralHeadRow.prefab"
+    },
+    {
+      "name": "UIGeneralIconCardRarityWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralIconCardRarity.prefab"
+    },
+    {
+      "name": "UIGeneralInteractingBtnController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/GenetalInteractingBtn.prefab"
+    },
+    {
+      "name": "UIGeneralInteractingBtnControllerChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/GeneralInteractingBtn.prefab"
+    },
+    {
+      "name": "UIGeneralInteractingBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/GeneralInteractingBtn.prefab"
+    },
+    {
+      "name": "UIGeneralInteractingContainerChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/GeneralInteractingContainer.prefab"
+    },
+    {
+      "name": "UIGeneralInteractingContainerController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/GeneralInteractingContainer.prefab"
+    },
+    {
+      "name": "UIGeneralIntimacyUpPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralIntimacyUp.prefab"
+    },
+    {
+      "name": "UIGeneralItemDetailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralItemDetailWidget.prefab"
+    },
+    {
+      "name": "UIGeneralItemDropDownBoxRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralItemDropDownBoxRow.prefab"
+    },
+    {
+      "name": "UIGeneralItemTips2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralItemTipsDialog2.prefab"
+    },
+    {
+      "name": "UIGeneralItemTipsChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralItemTipsDialog.prefab"
+    },
+    {
+      "name": "UIGeneralKeyBindingsTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralKeyBindingsTips.prefab"
+    },
+    {
+      "name": "UIGeneralKeyPanelWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralKeyPanelWidget.prefab"
+    },
+    {
+      "name": "UIGeneralLevelUp02PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralLevelUp02.prefab"
+    },
+    {
+      "name": "UIGeneralLevelUp02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralLevelUp02.prefab"
+    },
+    {
+      "name": "UIGeneralLoginCheckDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralLoginCheckDialog.prefab"
+    },
+    {
+      "name": "UIGeneralLoginDialogController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralLoginDialog.prefab"
+    },
+    {
+      "name": "UIGeneralLoginDropDownBoxRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/GeneralLoginDropDownBoxRow.prefab"
+    },
+    {
+      "name": "UIGeneralLoginQRCodeDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/LoginQRCodeDialog.prefab"
+    },
+    {
+      "name": "UIGeneralLoginTipsDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralLoginTipsDialog.prefab"
+    },
+    {
+      "name": "UIGeneralLoginTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/GeneralLoginTips.prefab"
+    },
+    {
+      "name": "UIGeneralLoginTopTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/GeneralLoginTopTips.prefab"
+    },
+    {
+      "name": "UIGeneralLoginTopTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/GeneralLoginTopTips.prefab"
+    },
+    {
+      "name": "UIGeneralMissionGetPointWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralMissionGetPointWidget.prefab"
+    },
+    {
+      "name": "UIGeneralMobileLoginPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralMobileLoginDialog.prefab"
+    },
+    {
+      "name": "UIGeneralNewHintWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralNewHint.prefab"
+    },
+    {
+      "name": "UIGeneralNewsBubbleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralNewsBubbleRow.prefab"
+    },
+    {
+      "name": "UIGeneralNewsBubbleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralNewsBubbleWidget.prefab"
+    },
+    {
+      "name": "UIGeneralNextBtnsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralConsoleNextBtns.prefab"
+    },
+    {
+      "name": "UIGeneralNumTabBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralNumTabBtn.prefab"
+    },
+    {
+      "name": "UIGeneralOptionListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralOptionListRow.prefab"
+    },
+    {
+      "name": "UIGeneralOptionTitleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralOptionTitleRow.prefab"
+    },
+    {
+      "name": "UIGeneralOptionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralOptionWidget.prefab"
+    },
+    {
+      "name": "UIGeneralPackageDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralPackageDialog.prefab"
+    },
+    {
+      "name": "UIGeneralPhaseProgress02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/PhaseProgressWidget02.prefab"
+    },
+    {
+      "name": "UIGeneralPhaseProgressWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralPhaseProgress.prefab"
+    },
+    {
+      "name": "UIGeneralPopUpHintWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralPopUpHint.prefab"
+    },
+    {
+      "name": "UIGeneralPurchasePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralPurchaseDialog.prefab"
+    },
+    {
+      "name": "UIGeneralRealAuthenticationDialogController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralRealAuthenticationDialog.prefab"
+    },
+    {
+      "name": "UIGeneralRealAuthenticationDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralRealAuthenticationDialog.prefab"
+    },
+    {
+      "name": "UIGeneralRechargePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralRechargeDialog.prefab"
+    },
+    {
+      "name": "UIGeneralReportItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/GeneralReportWidget.prefab"
+    },
+    {
+      "name": "UIGeneralRewardBagPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GenetalRewardBagDialog.prefab"
+    },
+    {
+      "name": "UIGeneralRewardListBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/RewardBtnRow.prefab"
+    },
+    {
+      "name": "UIGeneralRewardListDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralRewardListDialog.prefab"
+    },
+    {
+      "name": "UIGeneralRewardListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralRewardListRow.prefab"
+    },
+    {
+      "name": "UIGeneralSDKLoginDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralLoginDialog.prefab"
+    },
+    {
+      "name": "UIGeneralScrollViewTestItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/ScrollViewTest/ScrollViewTest_ScrollViewItemWidget.prefab"
+    },
+    {
+      "name": "UIGeneralSelectProtocolPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralSelectTextDialog.prefab"
+    },
+    {
+      "name": "UIGeneralSelectProtocolTextRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSelectTextWidget.prefab"
+    },
+    {
+      "name": "UIGeneralSelectServerPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralSelectServerDialog.prefab"
+    },
+    {
+      "name": "UIGeneralSelectServerWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSelectServerWidget.prefab"
+    },
+    {
+      "name": "UIGeneralSelectVoicePackDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralSelectVoicePackDialog.prefab"
+    },
+    {
+      "name": "UIGeneralSelectVoicePackWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSelectVoicePackWidget.prefab"
+    },
+    {
+      "name": "UIGeneralSettingsDoubleTitleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSettingsDoubleTitleRow.prefab"
+    },
+    {
+      "name": "UIGeneralSettingsListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSettingsListRow.prefab"
+    },
+    {
+      "name": "UIGeneralSettingsTitleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSettingsTitleRow.prefab"
+    },
+    {
+      "name": "UIGeneralSettingsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSettings.prefab"
+    },
+    {
+      "name": "UIGeneralSmallTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSmallTipsWidget.prefab"
+    },
+    {
+      "name": "UIGeneralSort2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/SortGroup02.prefab"
+    },
+    {
+      "name": "UIGeneralSortWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/SortGroup.prefab"
+    },
+    {
+      "name": "UIGeneralStaminaDropDownBoxRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralStaminaDropDownBoxRow.prefab"
+    },
+    {
+      "name": "UIGeneralSubtitlePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSubtitleWidget.prefab"
+    },
+    {
+      "name": "UIGeneralTabBtnChildRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtn04ChildRow.prefab"
+    },
+    {
+      "name": "UIGeneralTabBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtn04Row.prefab"
+    },
+    {
+      "name": "UIGeneralTextItemDetailPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralFairyDetailDialog.prefab"
+    },
+    {
+      "name": "UIGeneralTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralTipsDialog.prefab"
+    },
+    {
+      "name": "UIGeneralTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/GeneralLoginTipsWidget.prefab"
+    },
+    {
+      "name": "UIGeneralToggleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralToggle.prefab"
+    },
+    {
+      "name": "UIGeneralTokenRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralTokenRow.prefab"
+    },
+    {
+      "name": "UIGeneralTokenWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralTokenPanel.prefab"
+    },
+    {
+      "name": "UIGeneralTopCafeBuffDetailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/CafeBuffWidget.prefab"
+    },
+    {
+      "name": "UIGeneralTopRewardBuffWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/CafeBuffWidget.prefab"
+    },
+    {
+      "name": "UIGeneralTutorialBgChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralTutorialBgWidget.prefab"
+    },
+    {
+      "name": "UIGeneralTutorialTipsRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralTutorialTipsRow.prefab"
+    },
+    {
+      "name": "UIGeneralUpDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralUpDialog.prefab"
+    },
+    {
+      "name": "UIGeneralUserAgreementDialogController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralUserAgreementDialog.prefab"
+    },
+    {
+      "name": "UIGeneralUserAgreementDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralUserAgreementDialog.prefab"
+    },
+    {
+      "name": "UIGeneralUserAgreementDialogV2Controller",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralUserAgreementDialogV2.prefab"
+    },
+    {
+      "name": "UIGeneralUserAgreementDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/GeneralUserAgreementDialogV2.prefab"
+    },
+    {
+      "name": "UIGiftItemRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GiftItemRow.prefab"
+    },
+    {
+      "name": "UIGiftPackItemIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/GiftPackItemIconWidget.prefab"
+    },
+    {
+      "name": "UIGiftPackItemIconWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/GiftPackItemIconWidget.prefab"
+    },
+    {
+      "name": "UIGroceryActivityIconCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GroceryActivity/GroceryActivityIconCard.prefab"
+    },
+    {
+      "name": "UIGroceryActivityPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GroceryActivity/GroceryActivityPage.prefab"
+    },
+    {
+      "name": "UIGroceryActivitySelectBtnPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GroceryActivity/GroceryActivitySelectBtn.prefab"
+    },
+    {
+      "name": "UIGroceryActivitySelectBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/GroceryActivity/GroceryActivitySelectBtn.prefab"
+    },
+    {
+      "name": "UIGroceryChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/GroceryWidget.prefab"
+    },
+    {
+      "name": "UIGroceryItemIconV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/GroceryItemIconWidgetV2.prefab"
+    },
+    {
+      "name": "UIGroceryItemIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/GroceryItemIconWidget.prefab"
+    },
+    {
+      "name": "UIGroceryItemShelvesWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/GroceryItemShelvesWidget.prefab"
+    },
+    {
+      "name": "UIGroceryPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Grocery/GroceryPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_GROCERY"
+    },
+    {
+      "name": "UIGroceryPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Grocery/GroceryDialog.prefab"
+    },
+    {
+      "name": "UIHDRSettingPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HDR/HDRSettingDialog.prefab"
+    },
+    {
+      "name": "UIHUDContainersController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelHUDContainers.prefab"
+    },
+    {
+      "name": "UIHadalLineUp_LayerClipWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/FilmInfoRow.prefab"
+    },
+    {
+      "name": "UIHadalLineUp_RoomSelectWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/HadalZonePage/HadalZoneLineupPage_RoomSelect.prefab"
+    },
+    {
+      "name": "UIHadalZoneItemInfoV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneItemRow.prefab"
+    },
+    {
+      "name": "UIHadalZone_LIneUpPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/HadalZonePage/HadalZoneLineupPage.prefab"
+    },
+    {
+      "name": "UIHadalZone_LastDyanmicRecordV2_PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HadalZone/HadalZoneRecordDialog.prefab"
+    },
+    {
+      "name": "UIHadalZone_LayerItemRowV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZonelayersSpotRow.prefab"
+    },
+    {
+      "name": "UIHadalZone_LayerV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneLevelsWidget.prefab"
+    },
+    {
+      "name": "UIHadalZone_LevelInfo_BossCard_ItemV2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZone_LevelInfo_BossCard_Item.prefab"
+    },
+    {
+      "name": "UIHadalZone_LevelInfo_BossCard_V2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneBossListRow.prefab"
+    },
+    {
+      "name": "UIHadalZone_LevelInfo_PopV2_PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HadalZone/HadalZonefightingInfoDialog.prefab"
+    },
+    {
+      "name": "UIHadalZone_LineupV2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneFightingInfoWidget.prefab"
+    },
+    {
+      "name": "UIHadalZone_MonsterCardInfo_Row_V2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneMonsterCardWidget.prefab"
+    },
+    {
+      "name": "UIHadalZone_MonsterCardInfo_V2_PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HadalZone/HadalZoneMonsterCardInfoDialog.prefab"
+    },
+    {
+      "name": "UIHadalZone_RewardRowTitleV2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneRewardTitleRow.prefab"
+    },
+    {
+      "name": "UIHadalZone_RewardRowV2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneRewardListRow.prefab"
+    },
+    {
+      "name": "UIHadalZone_RewardV2_PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HadalZone/HadalZoneRewardListDialog.prefab"
+    },
+    {
+      "name": "UIHadalZone_RoomV2_WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneTeamRow.prefab"
+    },
+    {
+      "name": "UIHadalZone_WinResult_ChangeTeamV2_PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HadalZone/HadalZoneTeamInfoDialog.prefab"
+    },
+    {
+      "name": "UIHadal_InPauseRatingInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalInPauseRatingInfoRow.prefab"
+    },
+    {
+      "name": "UIHandBookBossWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookBossWidget.prefab"
+    },
+    {
+      "name": "UIHandBookDailyWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookDailyWidget.prefab"
+    },
+    {
+      "name": "UIHandBookHadalItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookHadalItemRow.prefab"
+    },
+    {
+      "name": "UIHandBookHadalWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookHadalWidget.prefab"
+    },
+    {
+      "name": "UIHandBookItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookLevelItemRow.prefab"
+    },
+    {
+      "name": "UIHandBookNormalMaterialWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookNormalWidget.prefab"
+    },
+    {
+      "name": "UIHandBookPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/ScheduleHandBook/ScheduleHandBookDialog.prefab"
+    },
+    {
+      "name": "UIHandBookProxyQuestItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookRopemakerItemRow.prefab"
+    },
+    {
+      "name": "UIHandBookTabWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookTabBtnRow.prefab"
+    },
+    {
+      "name": "UIHandBookZeroThemeItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookZeroThemeItemRow.prefab"
+    },
+    {
+      "name": "UIHandBookZeroWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HandBook/HandBookZeroWidget.prefab"
+    },
+    {
+      "name": "UIHazalZoneLayer_PhotoItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneWidget01.prefab"
+    },
+    {
+      "name": "UIHazalZoneLayer_RankingRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HadalZone/HadalZoneResultInfoRow.prefab"
+    },
+    {
+      "name": "UIHollowAchievementCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowAchievementCardWidget.prefab"
+    },
+    {
+      "name": "UIHollowAchievementCardWidgetV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowAchievementCardWidgetV2.prefab"
+    },
+    {
+      "name": "UIHollowAchievementDialogWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowAchievementDialog.prefab"
+    },
+    {
+      "name": "UIHollowArcanaScelectDialogController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowArcanaScelectDialog.prefab"
+    },
+    {
+      "name": "UIHollowCardCommonItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/HollowCardCommonItem.prefab"
+    },
+    {
+      "name": "UIHollowCardItemBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowCardItemBtn.prefab"
+    },
+    {
+      "name": "UIHollowCardItemCollectPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Abyss/HollowCardItemCollectPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_ABYSS_COLLECT"
+    },
+    {
+      "name": "UIHollowCardItemRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/ZeroHollowEnclave/HollowCardItemRow.prefab"
+    },
+    {
+      "name": "UIHollowCardItemSmallWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowCardItemSmall.prefab"
+    },
+    {
+      "name": "UIHollowCardOptionItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/HollowCardOptionItem.prefab"
+    },
+    {
+      "name": "UIHollowCardOptionsDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowCardOptionsDialog.prefab"
+    },
+    {
+      "name": "UIHollowCardOptionsDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowCardOptionsDialogV2.prefab"
+    },
+    {
+      "name": "UIHollowCardOptionsPagePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowCardOptionsDialog.prefab"
+    },
+    {
+      "name": "UIHollowCardOptionsUpGradePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowCardOptionsUpGrade.prefab"
+    },
+    {
+      "name": "UIHollowChessPiece3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowChessPiece3D.prefab"
+    },
+    {
+      "name": "UIHollowChessPieceResult3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowChessPieceResult3D.prefab"
+    },
+    {
+      "name": "UIHollowChessPieceWidget3DController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowChessPieceWidget3D.prefab"
+    },
+    {
+      "name": "UIHollowChessboard3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowChessboard3D.prefab"
+    },
+    {
+      "name": "UIHollowChessboard3DView3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowChessboard3D.prefab"
+    },
+    {
+      "name": "UIHollowChessboardResult3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowChessboardResult3D.prefab"
+    },
+    {
+      "name": "UIHollowChessboardV23DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowChessboard3D.prefab"
+    },
+    {
+      "name": "UIHollowChessboardWidget3DController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowChessboardWidget3D.prefab"
+    },
+    {
+      "name": "UIHollowClueCollectItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/ZeroHollowEnclave/HollowClueCollectItem.prefab"
+    },
+    {
+      "name": "UIHollowCluePicItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/ZeroHollowEnclave/ZeroHollowClueItemRow.prefab"
+    },
+    {
+      "name": "UIHollowCollectRewardDialogPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Abyss/HollowCollectRewardDialog.prefab"
+    },
+    {
+      "name": "UIHollowCollectRewardDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Abyss/HollowCollectRewardDialog.prefab"
+    },
+    {
+      "name": "UIHollowCollectRewardDialogRewardItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Abyss/HollowCollectRewardDialogRewardItem.prefab"
+    },
+    {
+      "name": "UIHollowCombatResultWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowCombatResultWidget.prefab"
+    },
+    {
+      "name": "UIHollowCurseWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowCurseWidget.prefab"
+    },
+    {
+      "name": "UIHollowDamnationEliminateDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowDamnationEliminateDialog.prefab"
+    },
+    {
+      "name": "UIHollowDamnationEliminateWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowDamnationEliminateWidget.prefab"
+    },
+    {
+      "name": "UIHollowDamnationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Props/HollowDamnationWidget.prefab"
+    },
+    {
+      "name": "UIHollowDefenceLargeTVGameChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/LargeTVGame/HollowLargeTVGame_DefenseScreen01.prefab"
+    },
+    {
+      "name": "UIHollowDefenceSceneLargeTVChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/LargeTVGame/HollowLargeTVGame02.prefab"
+    },
+    {
+      "name": "UIHollowDevelopBagDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowDevelopBagDialog.prefab"
+    },
+    {
+      "name": "UIHollowEliminateDamnationPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowEliminateDamnationDialog.prefab"
+    },
+    {
+      "name": "UIHollowEliminateDamnationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowEliminateDamnationItem.prefab"
+    },
+    {
+      "name": "UIHollowErosionRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/ZeroHollowEnclave/HollowErosionRow.prefab"
+    },
+    {
+      "name": "UIHollowEventKillDialogController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowEventKillDialog.prefab"
+    },
+    {
+      "name": "UIHollowEventOptionsDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowEventOptionsDialog.prefab"
+    },
+    {
+      "name": "UIHollowEventWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowEventWidget.prefab"
+    },
+    {
+      "name": "UIHollowGuideItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowGuideItem.prefab"
+    },
+    {
+      "name": "UIHollowHotEffectInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowHotEffectInfoWidget.prefab"
+    },
+    {
+      "name": "UIHollowInfoBattleReportWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoBattleReportWidget.prefab"
+    },
+    {
+      "name": "UIHollowInfoDialog02Controller",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowInfoDialog02.prefab"
+    },
+    {
+      "name": "UIHollowInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowInfoDialog.prefab"
+    },
+    {
+      "name": "UIHollowInfoDialogV2Controller",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowInfoDialogV2.prefab"
+    },
+    {
+      "name": "UIHollowInfoEventAtlasWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InlevelEventInfoWidget.prefab"
+    },
+    {
+      "name": "UIHollowInfoEventiconItemV2ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoEventiconItemV2.prefab"
+    },
+    {
+      "name": "UIHollowInfoEventiconItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoEventiconItem.prefab"
+    },
+    {
+      "name": "UIHollowInfoProgress02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoProgress02Widget.prefab"
+    },
+    {
+      "name": "UIHollowInfoProgressWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoProgressWidget.prefab"
+    },
+    {
+      "name": "UIHollowInfoReportRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoReportRow.prefab"
+    },
+    {
+      "name": "UIHollowInfoReportWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowInfoReportWidget.prefab"
+    },
+    {
+      "name": "UIHollowItemCollectEffectWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowItemCollectEffect.prefab"
+    },
+    {
+      "name": "UIHollowItemCollectWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowItemCollectWidget.prefab"
+    },
+    {
+      "name": "UIHollowItemDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowItemDialog.prefab"
+    },
+    {
+      "name": "UIHollowItemRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowItemRow.prefab"
+    },
+    {
+      "name": "UIHollowLargeTVNumWidgetControllerChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowLargeTVNumWidget.prefab"
+    },
+    {
+      "name": "UIHollowLayerResultDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowLayerResultDialog.prefab"
+    },
+    {
+      "name": "UIHollowLayerResultPageNewPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowLayerResultPage02.prefab"
+    },
+    {
+      "name": "UIHollowLayerResultPageV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/LevelResult/HollowLayerResultPageV2.prefab"
+    },
+    {
+      "name": "UIHollowMainBottomWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowMainBottomWidget.prefab"
+    },
+    {
+      "name": "UIHollowMainPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowMainPage.prefab"
+    },
+    {
+      "name": "UIHollowMiniGameContinuousPlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/MiniGame/MiniGamePlayerMove01.prefab"
+    },
+    {
+      "name": "UIHollowMiniGameDiscretePlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/MiniGame/MiniGamePlayerMove02.prefab"
+    },
+    {
+      "name": "UIHollowMiniGamePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowMiniGamePage.prefab"
+    },
+    {
+      "name": "UIHollowMiniGamePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowMiniGamePage.prefab"
+    },
+    {
+      "name": "UIHollowMiniGameSkillBtnAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/MiniGame/PushBoxSkillButtonA.prefab"
+    },
+    {
+      "name": "UIHollowMissionInfoWidget03WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowMissionInfoWidget03.prefab"
+    },
+    {
+      "name": "UIHollowMissionRow03WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowMissionRow03.prefab"
+    },
+    {
+      "name": "UIHollowPage",
+      "resource_path": "Assets/NapResources/UI/UIHollow.prefab"
+    },
+    {
+      "name": "UIHollowProgressCircleBgRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowProgressCircleBgRow.prefab"
+    },
+    {
+      "name": "UIHollowProgressCircleRow02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowProgressCircleRow02.prefab"
+    },
+    {
+      "name": "UIHollowProgressCircleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowProgressCircleRow.prefab"
+    },
+    {
+      "name": "UIHollowPushBoxGame3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowPushBoxGame3D.prefab"
+    },
+    {
+      "name": "UIHollowResearchProgressRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/ZeroHollowEnclave/HollowResearchProgressRow.prefab"
+    },
+    {
+      "name": "UIHollowResultBossInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowResultBossInfoRow.prefab"
+    },
+    {
+      "name": "UIHollowResultInfoRowNewWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowResultInfoRowNew.prefab"
+    },
+    {
+      "name": "UIHollowResultInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowResultInfoRow.prefab"
+    },
+    {
+      "name": "UIHollowResultPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowResultPage.prefab"
+    },
+    {
+      "name": "UIHollowResultRoleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowResultRoleRow.prefab"
+    },
+    {
+      "name": "UIHollowRewardBagDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowRewardBagDialog.prefab"
+    },
+    {
+      "name": "UIHollowRewardInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowRewardInfoDialog.prefab"
+    },
+    {
+      "name": "UIHollowRhythmMoveLargeTVChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/LargeTVGame/HollowLargeTVGame01.prefab"
+    },
+    {
+      "name": "UIHollowRoleDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowRoleDialog.prefab"
+    },
+    {
+      "name": "UIHollowShopWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowShopWidget.prefab"
+    },
+    {
+      "name": "UIHollowSpecialAreaItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Abyss/ZeroHollowEnclave/HollowSpecialAreaItem.prefab"
+    },
+    {
+      "name": "UIHollowTaskDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowTaskDialog.prefab"
+    },
+    {
+      "name": "UIHollowTestPage",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowTestPage.prefab"
+    },
+    {
+      "name": "UIHollowTestPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Hollow/HollowTestPage.prefab"
+    },
+    {
+      "name": "UIHollowTextLinkWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowTextLinkWidget.prefab"
+    },
+    {
+      "name": "UIHollowTimeRewindFillWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowTimeRewindFillWidget.prefab"
+    },
+    {
+      "name": "UIHollowTimeRewindWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowTimeRewindWidget.prefab"
+    },
+    {
+      "name": "UIHollowTipsDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowTipsDialog.prefab"
+    },
+    {
+      "name": "UIHollowTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowTipsWidget.prefab"
+    },
+    {
+      "name": "UIHollowTvDangerSelect3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowTvDangerWidget.prefab"
+    },
+    {
+      "name": "UIHollowTvSelect3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowTvSelectWidget.prefab"
+    },
+    {
+      "name": "UIHollowTvSelect3d3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Hollow/HollowTvSelectWidget.prefab"
+    },
+    {
+      "name": "UIHollowTvSelectWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/HollowTvSelectWidget.prefab"
+    },
+    {
+      "name": "UIHollowUltimateActivateDialogController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Hollow/HollowUltimateActivateDialog.prefab"
+    },
+    {
+      "name": "UIHoundGame3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MiniGame/HoundGame3D.prefab"
+    },
+    {
+      "name": "UIHoundGameEndPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SoulHoundsIII/HoundGameEndPage.prefab"
+    },
+    {
+      "name": "UIHoundGamePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SoulHoundsIII/HoundGamePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_TARTARUS_HOUNDS"
+    },
+    {
+      "name": "UIHoundGameStartPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SoulHoundsIII/HoundGameStartPage.prefab"
+    },
+    {
+      "name": "UIInLevelAidAttackBtnChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelAidAttackBtn.prefab"
+    },
+    {
+      "name": "UIInLevelAokakuRedLightPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelAokakuRedLightPanel.prefab"
+    },
+    {
+      "name": "UIInLevelAokakuRedLightWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelAokakuRedLightWidget.prefab"
+    },
+    {
+      "name": "UIInLevelAokakuRedLightWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelAokakuRedLightWidget.prefab"
+    },
+    {
+      "name": "UIInLevelAvatarHudItemChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelAvatarHudItem.prefab"
+    },
+    {
+      "name": "UIInLevelBagDialogController",
+      "resource_path": "Assets/NapResources/UI/InLevelBagDialog.prefab"
+    },
+    {
+      "name": "UIInLevelCountDownUIChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelCountDownUI.prefab"
+    },
+    {
+      "name": "UIInLevelDamageTextChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelDamageText.prefab"
+    },
+    {
+      "name": "UIInLevelDamageTextContainerChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelDamageTextContainer.prefab"
+    },
+    {
+      "name": "UIInLevelDamageTextTMPChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelDamageTextTMP.prefab"
+    },
+    {
+      "name": "UIInLevelDomainNpcToolbarChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelDomainNpcToolbar.prefab"
+    },
+    {
+      "name": "UIInLevelEllenBulletPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelEllenBulletPanel.prefab"
+    },
+    {
+      "name": "UIInLevelEllenBulletWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelEllenBulletWidget.prefab"
+    },
+    {
+      "name": "UIInLevelEllenBulletWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelEllenBulletWidget.prefab"
+    },
+    {
+      "name": "UIInLevelEventInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InlevelEventInfoWidget.prefab"
+    },
+    {
+      "name": "UIInLevelExQteFeverV2ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelExQteFeverV2.prefab"
+    },
+    {
+      "name": "UIInLevelExQteFeverV3ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelExQteFeverV3.prefab"
+    },
+    {
+      "name": "UIInLevelGuideChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelGuide.prefab"
+    },
+    {
+      "name": "UIInLevelGuideItemChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelGuideItem.prefab"
+    },
+    {
+      "name": "UIInLevelInspireZoneChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelInspireZone.prefab"
+    },
+    {
+      "name": "UIInLevelLisaPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelLisaPanel.prefab"
+    },
+    {
+      "name": "UIInLevelMainPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/InLevel/InLevelMainPage.prefab"
+    },
+    {
+      "name": "UIInLevelMonsterBossHudWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelMonsterBossHudWidget.prefab"
+    },
+    {
+      "name": "UIInLevelMonsterHudItemChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelMonsterHudItem.prefab"
+    },
+    {
+      "name": "UIInLevelMonsterHudTagChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelMonsterHudTagWidget.prefab"
+    },
+    {
+      "name": "UIInLevelMonsterHudWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelMonsterHudWidget.prefab"
+    },
+    {
+      "name": "UIInLevelNorchardBulletPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelNorchardBulletPanel.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBangbooSkillRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBangbooSkillRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBangbooSkillWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBangbooSkillWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBattleInfoLevelMissionRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/BattleInfoLevelMissionRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBattleInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBattleInfo.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBuffDetailRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBuffDetailRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBuffRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBuffRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseBuffWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBuffWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseCommandItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseCommandItem.prefab"
+    },
+    {
+      "name": "UIInLevelPauseCommandListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseCommandListRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseCommandWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseCommandWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InLevel/InLevelPauseDialog.prefab"
+    },
+    {
+      "name": "UIInLevelPauseLongFightBattleInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBattleInfoV2.prefab"
+    },
+    {
+      "name": "UIInLevelPauseLongFightCardRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseIconMRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseLongFightLevelInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseLevelInfo.prefab"
+    },
+    {
+      "name": "UIInLevelPauseLongProcedureBattleInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseBattleInfoV2.prefab"
+    },
+    {
+      "name": "UIInLevelPauseRoleAttributeInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseRoleAttributeInfoWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseSettingsController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseSettings.prefab"
+    },
+    {
+      "name": "UIInLevelPauseSkillDetailRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseSkillDetailRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseSkillRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseSkillRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseSkillWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseSkillWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseTalentRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseTalentRow.prefab"
+    },
+    {
+      "name": "UIInLevelPauseTalentlWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseTalentlWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseTrainingRoomWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseTrainingRoomWidget.prefab"
+    },
+    {
+      "name": "UIInLevelPauseTutorialWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPauseTutorial.prefab"
+    },
+    {
+      "name": "UIInLevelPause_Hadal_BattleInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelHadalZonePauseBattleInfo.prefab"
+    },
+    {
+      "name": "UIInLevelPlayerCameraChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPlayerCamera.prefab"
+    },
+    {
+      "name": "UIInLevelPlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelPlayerMove.prefab"
+    },
+    {
+      "name": "UIInLevelQTEBtnPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelQTEBtnPanel.prefab"
+    },
+    {
+      "name": "UIInLevelQingYiPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelQingYiPanel.prefab"
+    },
+    {
+      "name": "UIInLevelRankingSABInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/InLevelHollowSABEvaluateTipsRow.prefab"
+    },
+    {
+      "name": "UIInLevelRoleHudSmallStandByChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelRoleHudSmallWidget02.prefab"
+    },
+    {
+      "name": "UIInLevelRoleHudSmallWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelRoleHudSmallWidget.prefab"
+    },
+    {
+      "name": "UIInLevelRoleHudWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelRoleHudWidget.prefab"
+    },
+    {
+      "name": "UIInLevelShotgunBulletPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelZhuYuanBulletPanel.prefab"
+    },
+    {
+      "name": "UIInLevelShotgunBulletWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelShotgunBulletWidget.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonA.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonBranchChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonBranch.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonDChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonD.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonFunctionChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonFunction.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonInteractChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonInteract.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonSoloAidChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonSoloAid.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonSoloQTEChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonSoloQTE.prefab"
+    },
+    {
+      "name": "UIInLevelSkillButtonUltChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSkillButtonUlt.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextAssaultChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextAssault.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextBlazeChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextBlaze.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextBurnChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextBurn.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextCorruptedChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextCorrupted.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextDisorderChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextDisorder.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextExiledChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextExiled.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextFreezeChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextFreeze.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextImpairedChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextImpaired.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextJoltChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextJolt.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextShatterChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextShatter.prefab"
+    },
+    {
+      "name": "UIInLevelSpecialDamageTextShockChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/SpecialDamageText/InLevelSpecialDamageTextShock.prefab"
+    },
+    {
+      "name": "UIInLevelSwitchBtnPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelSwitchBtnPanel.prefab"
+    },
+    {
+      "name": "UIInLevelUnagiBulletPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelUnagiBulletPanel.prefab"
+    },
+    {
+      "name": "UIInLevelUnagiBulletWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelUnagiBulletWidget.prefab"
+    },
+    {
+      "name": "UIInLevelUpToolBarBossWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelUpToolbarBOSS.prefab"
+    },
+    {
+      "name": "UIInLevelZhuYuanBulletPanelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelZhuYuanBulletPanel.prefab"
+    },
+    {
+      "name": "UIInLevelZhuYuanBulletWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/RoleBullet/InLevelZhuYuanBulletWidget.prefab"
+    },
+    {
+      "name": "UIInterKnotClientInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotClientInfoDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotClientTitleInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotClientTitleInfoRow.prefab"
+    },
+    {
+      "name": "UIInterKnotHeadInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotHeadInfoDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotHeadRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotHeadRow.prefab"
+    },
+    {
+      "name": "UIInterKnotMessageRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotMessageRow.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotNewsDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsMissionRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNewsMissionRow.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsPanelLevelRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNewsPanelLevelRow.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsPanelStageDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotNewsPanelStageDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsPanelStageRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNewsPanelStageRow.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNewsRow.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsTaskRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNewsTaskRow.prefab"
+    },
+    {
+      "name": "UIInterKnotNewsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNewsWidget.prefab"
+    },
+    {
+      "name": "UIInterKnotNoMoreMessageRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotNoMoreMessageRow.prefab"
+    },
+    {
+      "name": "UIInterKnotOverNightChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityOverNightWidget.prefab"
+    },
+    {
+      "name": "UIInterKnotOverNightPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/InterKnot/InterKnotOverNightPage.prefab"
+    },
+    {
+      "name": "UIInterKnotOverNightPostWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotOverNightWidget.prefab"
+    },
+    {
+      "name": "UIInterKnotPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/InterKnot/InterKnotPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_INTERKNOT"
+    },
+    {
+      "name": "UIInterKnotPlayerInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotPlayerInfoDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotPostDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotPostDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotPostRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotPostRow.prefab"
+    },
+    {
+      "name": "UIInterKnotQuestRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotQuestRow.prefab"
+    },
+    {
+      "name": "UIInterKnotQuestWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotQuestWidget.prefab"
+    },
+    {
+      "name": "UIInterKnotRopeMakerPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotRopemakerDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotRopemakerAdvanceRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotRopemakerAdvanceRow.prefab"
+    },
+    {
+      "name": "UIInterKnotRopemakerDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotRopemakerDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotRopemakerLevelUpPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/InterKnotRopemakerLevelUpDialog.prefab"
+    },
+    {
+      "name": "UIInterKnotRopemakerSelfRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotRopemakerSelfPostRow.prefab"
+    },
+    {
+      "name": "UIInterKnotV2PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/InterKnot/InterKnotPageV2.prefab"
+    },
+    {
+      "name": "UIInterKnotV3PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/InterKnot/InterKnotPage.prefab"
+    },
+    {
+      "name": "UIInterKnowledgeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnowledgeRow.prefab"
+    },
+    {
+      "name": "UIInterKnowledgeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnowledgeWidget.prefab"
+    },
+    {
+      "name": "UIItemIconBtnSmallWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/ItemIconBtnSmall.prefab"
+    },
+    {
+      "name": "UIItemIconBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/ItemIconBtn.prefab"
+    },
+    {
+      "name": "UIItemInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/DailyChallengeInfoRow.prefab"
+    },
+    {
+      "name": "UIJumpButtonItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/DetailsInfoRow.prefab"
+    },
+    {
+      "name": "UIJumpTextItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TextInfoRow.prefab"
+    },
+    {
+      "name": "UILaunchPage",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Page/UILaunch.prefab"
+    },
+    {
+      "name": "UILaunchPageController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Page/UILaunch.prefab"
+    },
+    {
+      "name": "UILevelGeneralWinResultDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/LevelResult/LevelGeneralWinResultPage.prefab"
+    },
+    {
+      "name": "UILevelLongFightResultDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/LevelResult/LevelLongFightResultPage.prefab"
+    },
+    {
+      "name": "UILevelLoseResultPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/LevelResult/LevelResultLosePage.prefab"
+    },
+    {
+      "name": "UILevelResultChallengeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/LevelResult/LevelResultChallengeRow.prefab"
+    },
+    {
+      "name": "UILevelResultCombatRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/LevelResult/LevelResultCombatRow.prefab"
+    },
+    {
+      "name": "UILevelResultDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/LevelResult/LevelResultDialog.prefab"
+    },
+    {
+      "name": "UILevelResultPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/LevelResult/LevelResultPage.prefab"
+    },
+    {
+      "name": "UILevelResultProgressRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/LevelResult/LevelResultProgressRow.prefab"
+    },
+    {
+      "name": "UILevelResultV2_PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/LevelResult/LevelResultPageV2.prefab"
+    },
+    {
+      "name": "UILevelUpDetailsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/LevelUpDetailsDialog.prefab"
+    },
+    {
+      "name": "UILevelUpDetailsRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/LevelUpDetailsRow.prefab"
+    },
+    {
+      "name": "UILineupCardChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/BossLineupSuperCardRow.prefab"
+    },
+    {
+      "name": "UILineupEmptyCardChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/MonsterCard.prefab"
+    },
+    {
+      "name": "UILineupListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/LineupListRow.prefab"
+    },
+    {
+      "name": "UILineupMonsterCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/MonsterCardWidget.prefab"
+    },
+    {
+      "name": "UILineupRoleSelectMiniWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/LineupSelectPage/LineupRoleSelectWidget02.prefab"
+    },
+    {
+      "name": "UILineupRoleSelectWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/LineupSelectPage/LineupRoleSelectWidget01.prefab"
+    },
+    {
+      "name": "UILineupSelectPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GameModeMap/LineupSelectPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_LINEUP_SELECT"
+    },
+    {
+      "name": "UILineupSelectTestRolePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GameModeMap/LineupSelectTestRolePage.prefab"
+    },
+    {
+      "name": "UILoadingPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/UILoading.prefab"
+    },
+    {
+      "name": "UILoadingTransferPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/UILoadingTransfer.prefab"
+    },
+    {
+      "name": "UILoadingTransitionPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralTransition.prefab"
+    },
+    {
+      "name": "UILoginAgeEjectDialogController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/LoginAgeEjectDialog.prefab"
+    },
+    {
+      "name": "UILoginAgeEjectDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/LoginAgeEjectDialog.prefab"
+    },
+    {
+      "name": "UILoginLanguageSetPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/LanguageSet/LoginLanguageSetDialog.prefab"
+    },
+    {
+      "name": "UILoginMessageBoxPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/UILoginMessageBox.prefab"
+    },
+    {
+      "name": "UILoginPageController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Page/UILogin.prefab"
+    },
+    {
+      "name": "UILoginSettingPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/LanguageSet/LoginSettingDialog.prefab"
+    },
+    {
+      "name": "UILoginVagueBgDialogController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Dialog/LoginVagueBgDialog.prefab"
+    },
+    {
+      "name": "UIMailDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Mail/MailDialog.prefab"
+    },
+    {
+      "name": "UIMailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Mail/MailWidget.prefab"
+    },
+    {
+      "name": "UIMainCityActionTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityInActionTips.prefab"
+    },
+    {
+      "name": "UIMainCityActivityRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityActivityRow.prefab"
+    },
+    {
+      "name": "UIMainCityCameraControlChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityCameraControlWidget.prefab"
+    },
+    {
+      "name": "UIMainCityCameraControlWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityCameraControlWidget.prefab"
+    },
+    {
+      "name": "UIMainCityCameraPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityCameraPage.prefab"
+    },
+    {
+      "name": "UIMainCityCameraV2PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityCameraPageV2.prefab"
+    },
+    {
+      "name": "UIMainCityChatMessageChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotMessageWidget.prefab"
+    },
+    {
+      "name": "UIMainCityChatMessageWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotMessageWidget.prefab"
+    },
+    {
+      "name": "UIMainCityChatPlayChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityChatPlayWidget.prefab"
+    },
+    {
+      "name": "UIMainCityChatPlayPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCityChatPlay/MainCityChatPlayPage.prefab"
+    },
+    {
+      "name": "UIMainCityChatPlayWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityChatPlayWidget.prefab"
+    },
+    {
+      "name": "UIMainCityChatWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityChatPlayWidget.prefab"
+    },
+    {
+      "name": "UIMainCityClockWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GenetalTime03.prefab"
+    },
+    {
+      "name": "UIMainCityControllerSettingsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/SettingPage/MainCityControllerSettings.prefab"
+    },
+    {
+      "name": "UIMainCityFriendInviteDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/MainCityFriendsInviteDialog.prefab"
+    },
+    {
+      "name": "UIMainCityGeneralTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityMission.prefab"
+    },
+    {
+      "name": "UIMainCityInteractButtonChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySkillButton01.prefab"
+    },
+    {
+      "name": "UIMainCityInteractWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityInteractWidget.prefab"
+    },
+    {
+      "name": "UIMainCityMenuPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityMenusPage.prefab"
+    },
+    {
+      "name": "UIMainCityMenusNavigationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityMenusNavigationWidget.prefab"
+    },
+    {
+      "name": "UIMainCityMenusOptionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityMenusOptionWidget.prefab"
+    },
+    {
+      "name": "UIMainCityMenusPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainCity/MainCityMenusDialog.prefab"
+    },
+    {
+      "name": "UIMainCityMiniMenuWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityPage.prefab"
+    },
+    {
+      "name": "UIMainCityMissionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityMission.prefab"
+    },
+    {
+      "name": "UIMainCityNavigationAreaDetailPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Navigation/NavigationAreaDetailDialog.prefab"
+    },
+    {
+      "name": "UIMainCityNavigationAreaRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Navigation/NavigationMapRow.prefab"
+    },
+    {
+      "name": "UIMainCityNavigationPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/NavigationPage/NavigationPage.prefab"
+    },
+    {
+      "name": "UIMainCityNavigationTeleportRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Navigation/NavigationShopRow.prefab"
+    },
+    {
+      "name": "UIMainCityPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityPage.prefab"
+    },
+    {
+      "name": "UIMainCityPersonalOutWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityPersonalOutWidget.prefab"
+    },
+    {
+      "name": "UIMainCityPhotoPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityPhotoPage.prefab"
+    },
+    {
+      "name": "UIMainCityPhotoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityPhotoPage.prefab"
+    },
+    {
+      "name": "UIMainCityQuicFuncBtn04ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySkillButton04.prefab"
+    },
+    {
+      "name": "UIMainCityQuicFuncBtn05ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySkillButton05.prefab"
+    },
+    {
+      "name": "UIMainCityQuicFuncBtnChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySkillButton02.prefab"
+    },
+    {
+      "name": "UIMainCityQuicFuncBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySkillButton02.prefab"
+    },
+    {
+      "name": "UIMainCityRevivalPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCityRevival/MainCityRevivalPage.prefab"
+    },
+    {
+      "name": "UIMainCityRevivalRewardDetailsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainCityRevival/MainCityRewardDetailsDialog.prefab"
+    },
+    {
+      "name": "UIMainCityRevivalRewardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityRevival/RewardDetailsRow.prefab"
+    },
+    {
+      "name": "UIMainCityRewardTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityRewardTipsWidget.prefab"
+    },
+    {
+      "name": "UIMainCityRightTopChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityRightTop.prefab"
+    },
+    {
+      "name": "UIMainCityRoulettOptionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityRoulett/MainCityRoulettOptionWidget.prefab"
+    },
+    {
+      "name": "UIMainCityRoulettSettingPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainCityRoulett/MainCityRoulettSettingDialog.prefab"
+    },
+    {
+      "name": "UIMainCityRoulettWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityRoulettWidget.prefab"
+    },
+    {
+      "name": "UIMainCityRunSkillButtonChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySkillButton03.prefab"
+    },
+    {
+      "name": "UIMainCityTelescopePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityTelescopePage.prefab"
+    },
+    {
+      "name": "UIMainCityTimeTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Time/MainTimeTipsDialog.prefab"
+    },
+    {
+      "name": "UIMainCityTrackInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainCity/MainCityTrackInfoDialog.prefab"
+    },
+    {
+      "name": "UIMainPage",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainPage/MainPage.prefab"
+    },
+    {
+      "name": "UIMainPageBG3D3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MainPage/MainPageBG3D.prefab"
+    },
+    {
+      "name": "UIMainPageBG3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MainPage/MainPageBG3D.prefab"
+    },
+    {
+      "name": "UIMainPageBG3DModelController3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MainPage/MainPageBG3D.prefab"
+    },
+    {
+      "name": "UIMainStoryBuffRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryBuffRow.prefab"
+    },
+    {
+      "name": "UIMainStoryChallengeListRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryChallengeListRow.prefab"
+    },
+    {
+      "name": "UIMainStoryDifficultyPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainStory/MainStoryDifficultyDialog.prefab"
+    },
+    {
+      "name": "UIMainStoryPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainStory/MainStoryPageV3.prefab",
+      "system_operation": "CLIENT_SYSTEM_VHS"
+    },
+    {
+      "name": "UIMainStoryPersonalRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryPersonalRow.prefab"
+    },
+    {
+      "name": "UIMainStoryRewardDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainStory/MainStoryRewardDialog.prefab"
+    },
+    {
+      "name": "UIMainStoryRewardRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryRewardRow.prefab"
+    },
+    {
+      "name": "UIMainStoryRow02Controller",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryRow02.prefab"
+    },
+    {
+      "name": "UIMainStoryRow03ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryRow03.prefab"
+    },
+    {
+      "name": "UIMainStoryRowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryRow.prefab"
+    },
+    {
+      "name": "UIMainStorySubitemRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStorySubitemRow.prefab"
+    },
+    {
+      "name": "UIMainStoryTapeDummyWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainStory/MainStoryTapeDummyWidget.prefab"
+    },
+    {
+      "name": "UIMainStoryTaskOnDialogPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainStory/MainStoryTaskOnDialog.prefab"
+    },
+    {
+      "name": "UIMainStoryTaskOnDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainStory/MainStoryTaskOnDialog.prefab"
+    },
+    {
+      "name": "UIMaincityGameFindBangbooPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MaincityGame/MaincityGameFindBangbooPop.prefab"
+    },
+    {
+      "name": "UIMaincityMiniGameChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityMiniGame/Pipe/MainCityMiniGameWidget.prefab"
+    },
+    {
+      "name": "UIMallDateRow10WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow10.prefab"
+    },
+    {
+      "name": "UIMallDateRow11WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow11.prefab"
+    },
+    {
+      "name": "UIMallDateRow12WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow12.prefab"
+    },
+    {
+      "name": "UIMallDateRow1WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow01.prefab"
+    },
+    {
+      "name": "UIMallDateRow2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow02.prefab"
+    },
+    {
+      "name": "UIMallDateRow3WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow03.prefab"
+    },
+    {
+      "name": "UIMallDateRow4WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow04.prefab"
+    },
+    {
+      "name": "UIMallDateRow5WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow05.prefab"
+    },
+    {
+      "name": "UIMallDateRow6WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow06.prefab"
+    },
+    {
+      "name": "UIMallDateRow7WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow07.prefab"
+    },
+    {
+      "name": "UIMallDateRow8WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow08.prefab"
+    },
+    {
+      "name": "UIMallDateRow9WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow09.prefab"
+    },
+    {
+      "name": "UIMallDateRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/MallDateRow.prefab"
+    },
+    {
+      "name": "UIManualQTEPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/ManualQTE/ManualQTEDialog.prefab"
+    },
+    {
+      "name": "UIMaskController",
+      "resource_path": "Assets/NapResources/UI/Prefabs/UIMask.prefab"
+    },
+    {
+      "name": "UIMessageChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Message/MessagePop.prefab"
+    },
+    {
+      "name": "UIMindscapeDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Mindscape/MindscapeDialog.prefab"
+    },
+    {
+      "name": "UIMindscapeLevelRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Mindscape/MindscapeLevelRow.prefab"
+    },
+    {
+      "name": "UIMindscapeSwitchBtnRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Mindscape/MindscapeSwitchBtnRow.prefab"
+    },
+    {
+      "name": "UIMindscapeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Mindscape/MindscapeBgInfo/MindscapeWidget.prefab"
+    },
+    {
+      "name": "UIMiniUIGame3DModelController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCityMiniGame/MainCityMiniGame3D.prefab"
+    },
+    {
+      "name": "UIMiniUIGamePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCityMiniGame/MainCityMiniGamePage.prefab"
+    },
+    {
+      "name": "UIMissionSelectPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GameModeMap/MissionSelectPage.prefab"
+    },
+    {
+      "name": "UIMissionTipsRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityMissionTipsRow.prefab"
+    },
+    {
+      "name": "UIModelController",
+      "resource_path": "Assets/NapResources/UI/Prefabs/UIModel.prefab"
+    },
+    {
+      "name": "UIModificationShop3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/ModificationShop/ModificationShop.prefab"
+    },
+    {
+      "name": "UIMonsterCardDeckWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/MonsterCardDeck.prefab"
+    },
+    {
+      "name": "UIMonsterCardDeliverPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/DailyChallenge/DailyChallengeMonsterCardDeliverDialog.prefab"
+    },
+    {
+      "name": "UIMonsterCardInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HadalZone/MonsterCardInfoDialog.prefab"
+    },
+    {
+      "name": "UIMonsterCardSelectionPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/DailyChallenge/MonsterCardSelectionDialog.prefab"
+    },
+    {
+      "name": "UIMonthlyCardDailyRewardTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralMonthlyCardRewardGain.prefab"
+    },
+    {
+      "name": "UIMoreOptionPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/AddFriendDialog.prefab"
+    },
+    {
+      "name": "UIMusicPlayerListRowItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MusicPlayer/MusicPlayerListRow.prefab"
+    },
+    {
+      "name": "UIMusicPlayerNewListDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MusicPlayer/MusicPlayerNewListDialog.prefab"
+    },
+    {
+      "name": "UIMusicPlayerNewListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MusicPlayer/MusicPlayerNewListRow.prefab"
+    },
+    {
+      "name": "UIMusicPlayerPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MusicPlayer/MusicPlayerPage.prefab"
+    },
+    {
+      "name": "UINPCFriendWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/NPCFriendWidget.prefab"
+    },
+    {
+      "name": "UINPCNameChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/NPCNameWidget.prefab"
+    },
+    {
+      "name": "UINPCNameWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/NPCNameWidget.prefab"
+    },
+    {
+      "name": "UINavigationAreaDetailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Navigation/NavigationAreaDetailRoleRow.prefab"
+    },
+    {
+      "name": "UINewbiePopPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/NewbiePop.prefab"
+    },
+    {
+      "name": "UINewbiePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/NewbiePage.prefab"
+    },
+    {
+      "name": "UINewsStandActivityWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/NewsStandActivityWidget.prefab"
+    },
+    {
+      "name": "UINewsStandChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/CityNewsInfoWidget.prefab"
+    },
+    {
+      "name": "UINewsStandPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/NewsStand/NewsStandPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_NEWSSTAND"
+    },
+    {
+      "name": "UINewsStandScratchCardPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/NewsStand/NewsStandScratchCardDialog.prefab"
+    },
+    {
+      "name": "UINewsStandSupplementWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/NewsStandSupplementRow01.prefab"
+    },
+    {
+      "name": "UINewsStyle1WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/TemplateGroup01.prefab"
+    },
+    {
+      "name": "UINewsStyle2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/TemplateGroup02.prefab"
+    },
+    {
+      "name": "UINewsStyle3WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/TemplateGroup03.prefab"
+    },
+    {
+      "name": "UINewsStyle4WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/TemplateGroup04.prefab"
+    },
+    {
+      "name": "UINewsStyle5WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/TemplateGroup05.prefab"
+    },
+    {
+      "name": "UINewsStyle6WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/NewsStand/TemplateGroup06.prefab"
+    },
+    {
+      "name": "UINightPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/NightPage.prefab"
+    },
+    {
+      "name": "UINightPostWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/InterKnot/NightPost.prefab"
+    },
+    {
+      "name": "UINyakichiAchievementItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/NyakichiAchievementItem.prefab"
+    },
+    {
+      "name": "UINyakichiAchievementRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/NyakichiAchievementRow.prefab"
+    },
+    {
+      "name": "UINyakichiGroupTabWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityNyakichi/PhaseItemWidget.prefab"
+    },
+    {
+      "name": "UINyakichiMedalItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCityNyakichi/StickerItemWidget.prefab"
+    },
+    {
+      "name": "UINyakichiPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCityNyakichiPage.prefab"
+    },
+    {
+      "name": "UIPerformPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/FullScreenVideo/PerformPage.prefab"
+    },
+    {
+      "name": "UIPersonalInfoEditPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Friend/FunctionLinkDialog.prefab"
+    },
+    {
+      "name": "UIPhotoGamePadDpadChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MoveBtn.prefab"
+    },
+    {
+      "name": "UIPhotoModePlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/PhotoModePlayerMove.prefab"
+    },
+    {
+      "name": "UIPhotoWall3D3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Workshop/Workshop2F3D.prefab"
+    },
+    {
+      "name": "UIPhotoWallItemTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/DIYBoard/DIYBoardTipsDialog.prefab"
+    },
+    {
+      "name": "UIPhotoWallItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DIYBoard/DIYBoardItemIconWidget.prefab"
+    },
+    {
+      "name": "UIPhotoWallObjectControlWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DIYBoard/DIYPhotoControlWidgetV2.prefab"
+    },
+    {
+      "name": "UIPhotoWallPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/DIYBoard/DIYBoardPageV2.prefab",
+      "system_operation": "CLIENT_SYSTEM_PHOTOWALL"
+    },
+    {
+      "name": "UIPhotoWallSwitchItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DIYBoard/SwitchItem.prefab"
+    },
+    {
+      "name": "UIPhotoWallSwitchPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/DIYBoard/DIYBoardSwitchDialog.prefab"
+    },
+    {
+      "name": "UIPhotoWallThemeItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DIYBoard/ThemeItem.prefab"
+    },
+    {
+      "name": "UIPostGirlItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/ChangeRoleListRow.prefab"
+    },
+    {
+      "name": "UIPrivateMessageConversionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Message/MessageConversionItem.prefab"
+    },
+    {
+      "name": "UIPrivateMessagePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Message/MessageDialog.prefab"
+    },
+    {
+      "name": "UIPrivateMessageReplyWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Message/MessageReplyItem.prefab"
+    },
+    {
+      "name": "UIPrivateMessageRoleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Message/MessageWidget.prefab"
+    },
+    {
+      "name": "UIPropDataRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/InfoRow.prefab"
+    },
+    {
+      "name": "UIPropDataRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Arcade/Companion/InfoRow.prefab"
+    },
+    {
+      "name": "UIPushBoxPlayBtnAChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/MiniGame/PushBox/PushBoxPlayBtnA.prefab"
+    },
+    {
+      "name": "UIPushBoxPlayWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/MiniGame/PushBox/PushBoxPlayWidget.prefab"
+    },
+    {
+      "name": "UIPushBoxPlayerMoveChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Hollow/MiniGame/PushBox/PushBoxPlayerMove.prefab"
+    },
+    {
+      "name": "UIPuzzleItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/BangbooModGarage/PuzzleItem.prefab"
+    },
+    {
+      "name": "UIQuestSelectPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/GameModeMap/QuestSelectPage.prefab"
+    },
+    {
+      "name": "UIQuickSetButtonWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCitySetButtonWidget.prefab"
+    },
+    {
+      "name": "UIRallyMissionInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaEntrustInfoRow.prefab"
+    },
+    {
+      "name": "UIRamenCurrentBuffChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/RamenStore/RamenCurrentBuff.prefab"
+    },
+    {
+      "name": "UIRamenStoreItemWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/RamenStore/RamenStoreItemWidget.prefab"
+    },
+    {
+      "name": "UIRamenStorePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/RamenStore/RamenStorePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_RAMEN_STORE"
+    },
+    {
+      "name": "UIRamenStorePageController3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/RamenStore/RamenStore3D.prefab"
+    },
+    {
+      "name": "UIRamenStoreWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/RamenStore/RamenStoreWidget.prefab"
+    },
+    {
+      "name": "UIReceiveQuestDialogImageItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralMissionGetDialogImageItem.prefab"
+    },
+    {
+      "name": "UIReceiveQuestDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralMissionGetDialog.prefab"
+    },
+    {
+      "name": "UIReconnectingPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Reconnecting/ReconnectingDialog.prefab"
+    },
+    {
+      "name": "UIRecycleDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Depository/RecycleDialog.prefab"
+    },
+    {
+      "name": "UIRedeemRewardDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/RedeemRewardDialog.prefab"
+    },
+    {
+      "name": "UIReportChatConversationWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/ChatReportWidget.prefab"
+    },
+    {
+      "name": "UIReportChatPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Report/ChatReportDialog.prefab"
+    },
+    {
+      "name": "UIReportDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Report/ReportDialog.prefab"
+    },
+    {
+      "name": "UIResourceLoadWidgetController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Widget/ResourceLoadWidget.prefab"
+    },
+    {
+      "name": "UIRewardPreviewPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/DailyChallenge/DailyChallengeInfoDialog.prefab"
+    },
+    {
+      "name": "UIRewardTipWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/MainCityRewardTipsWidget.prefab"
+    },
+    {
+      "name": "UIRewardTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/RewardTipsWidget.prefab"
+    },
+    {
+      "name": "UIRewardTipsWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/RewardTipsWidget.prefab"
+    },
+    {
+      "name": "UIRoleAttributeInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/RoleAttributeInfoDialog.prefab"
+    },
+    {
+      "name": "UIRoleAttributeInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleAttributeInfoRow.prefab"
+    },
+    {
+      "name": "UIRoleBasicPage",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Role/RoleBasicPage.prefab"
+    },
+    {
+      "name": "UIRoleCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Friend/RoleCardRow.prefab"
+    },
+    {
+      "name": "UIRoleDevelopPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/RoleDevelopDialog.prefab"
+    },
+    {
+      "name": "UIRoleEffectDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/RoleEffectDialog.prefab"
+    },
+    {
+      "name": "UIRoleEffectRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleEffectRow.prefab"
+    },
+    {
+      "name": "UIRoleEquipChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleEquipWidget.prefab"
+    },
+    {
+      "name": "UIRoleEquipReplaceWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/RoleEquipReplaceDialog.prefab"
+    },
+    {
+      "name": "UIRoleInfoBasicAttributeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleInfoBasicAttributeRow.prefab"
+    },
+    {
+      "name": "UIRoleInfoBasicChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleInfoBasicWidget.prefab",
+      "system_operation": "CLIENT_SYSTEM_AVATAR_BASE"
+    },
+    {
+      "name": "UIRoleInfoEquipV2ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleInfoEquipWidgetV2.prefab",
+      "system_operation": "CLIENT_SYSTEM_AVATAR_EQUIP"
+    },
+    {
+      "name": "UIRoleInfoPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Role/RoleInfoPage.prefab"
+    },
+    {
+      "name": "UIRoleInfoSkillChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleInfoSkillWidget.prefab"
+    },
+    {
+      "name": "UIRoleJoinTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/General/GeneralRoleJoinTipsDialog.prefab"
+    },
+    {
+      "name": "UIRoleListPage",
+      "resource_path": "Assets/NapResources/UI/Role/UIRoleList.prefab"
+    },
+    {
+      "name": "UIRolePropertyWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/RolePropertyWidget.prefab"
+    },
+    {
+      "name": "UIRoleRankUpController",
+      "resource_path": "Assets/NapResources/UI/Role/UIRoleRankUp.prefab"
+    },
+    {
+      "name": "UIRoleSelectFadeInChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSelectFadeIn.prefab"
+    },
+    {
+      "name": "UIRoleSelectPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Role/RoleSelectPageV2.prefab",
+      "system_operation": "CLIENT_SYSTEM_ROLE"
+    },
+    {
+      "name": "UIRoleSelectRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSelectRow.prefab"
+    },
+    {
+      "name": "UIRoleSkillAttributeRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSkillAttributeRow.prefab"
+    },
+    {
+      "name": "UIRoleSkillDataRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSkillDataRow.prefab"
+    },
+    {
+      "name": "UIRoleSkillInfoRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSkillInfoRow.prefab"
+    },
+    {
+      "name": "UIRoleSkillLevelUpAttributeRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSkillLevelUpAttributeRow.prefab"
+    },
+    {
+      "name": "UIRoleSkillLevelUpDataRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleSkillLevelUpDataRow.prefab"
+    },
+    {
+      "name": "UIRoleSkillLevelUpPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/RoleLevelUpDialog.prefab"
+    },
+    {
+      "name": "UIRoleTeamRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Role/RoleTeamRow.prefab"
+    },
+    {
+      "name": "UIRoleTrustTaskRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/RoleTrustTaskRow.prefab"
+    },
+    {
+      "name": "UIRuntimeInspectorController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/RuntimeInspector.prefab"
+    },
+    {
+      "name": "UIRuntimeInspectorPopWindowController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/RuntimeInspector.prefab"
+    },
+    {
+      "name": "UISDKLoginWidgetController",
+      "resource_path": "Assets/NapResources/UI/Login/UI/Menus/Page/UILogin.prefab"
+    },
+    {
+      "name": "UIScreenInfoController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/ScreenInfo.prefab"
+    },
+    {
+      "name": "UIScreenInfoPageController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/ScreenInfo.prefab"
+    },
+    {
+      "name": "UIScreenInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/ScreenInfo.prefab"
+    },
+    {
+      "name": "UIScrollViewTestPopWindowController",
+      "resource_path": "Assets/NapResources/UI/UIToolKits/ScrollViewTest/ScrollViewTest.prefab"
+    },
+    {
+      "name": "UISelectMonsterCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/DailyChallenge/SelecteMonsterCardWidget.prefab"
+    },
+    {
+      "name": "UISetButtonDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/MainCity/MainCitySetButtonDialog.prefab"
+    },
+    {
+      "name": "UISettingDropdownTipsWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDropDownDetailScrollView.prefab"
+    },
+    {
+      "name": "UISettingEnumOptionItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDropDownBoxRow.prefab"
+    },
+    {
+      "name": "UISettingEnumWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDropDownBox.prefab"
+    },
+    {
+      "name": "UISettingJumpWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralClickToProceed.prefab"
+    },
+    {
+      "name": "UISettingKeyBindWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralKeyBindings.prefab"
+    },
+    {
+      "name": "UISettingNumberWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralSettingSlider.prefab"
+    },
+    {
+      "name": "UISettingPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/SettingPage/SettingPage.prefab"
+    },
+    {
+      "name": "UIShareBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/ShareBtn.prefab"
+    },
+    {
+      "name": "UIShoppingMallCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallCardWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallCasperPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/ShoppingCasper/ShoppingCasperPage.prefab"
+    },
+    {
+      "name": "UIShoppingMallCurrencyWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/ShoppingMallCurrencyWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallGiftPackWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Grocery/ShoppingMallGiftPackWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard10WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget10.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard11WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget11.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard12WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget12.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard1WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget01.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget02.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard3WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget03.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard4WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget04.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard5WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget05.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard6WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget06.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard7WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget07.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard8WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget08.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCard9WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget09.prefab"
+    },
+    {
+      "name": "UIShoppingMallMonthlyCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallMonthlyCardWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/ShoppingMallPage/ShoppingMallPage.prefab"
+    },
+    {
+      "name": "UIShoppingMallRechargeRowV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallRechargeRowV2.prefab"
+    },
+    {
+      "name": "UIShoppingMallRechargeRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallRechargeRow.prefab"
+    },
+    {
+      "name": "UIShoppingMallRechargeV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallRechargeWidgetV2.prefab"
+    },
+    {
+      "name": "UIShoppingMallRechargeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallRechargeWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallRecommendationWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallRecommendationWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallRoleSkinWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/ShoppingMall/ShoppingMallRoleWidget.prefab"
+    },
+    {
+      "name": "UIShoppingMallV2PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/ShoppingMallPage/ShoppingMallPageV2.prefab"
+    },
+    {
+      "name": "UISignboardPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/MainCity/MainCitySignboardPage.prefab"
+    },
+    {
+      "name": "UISlotItemController",
+      "resource_path": "Assets/NapResources/UI/Role/UISlotItem.prefab"
+    },
+    {
+      "name": "UISnakeDuelEndingChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeDuelEndingPage.prefab"
+    },
+    {
+      "name": "UISnakeDuelInLevelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeDuelInLevelPage.prefab"
+    },
+    {
+      "name": "UISnakeDuelOnlineEndingChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeDuelEndingOnlinePage.prefab"
+    },
+    {
+      "name": "UISnakeDuelStartChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeDuelStartPage.prefab"
+    },
+    {
+      "name": "UISnakeGame3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MiniGame/SnakeGame3D.prefab"
+    },
+    {
+      "name": "UISnakeGameEndPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeGameEndPage.prefab"
+    },
+    {
+      "name": "UISnakeGamePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeGamePage.prefab"
+    },
+    {
+      "name": "UISnakeGameStartPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SnakeDuel/SnakeGameStartPage.prefab"
+    },
+    {
+      "name": "UISoulHoundsIIIEndingChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SoulHoundsIII/SoulHoundsIIIEndingPage.prefab"
+    },
+    {
+      "name": "UISoulHoundsIIIInLevelChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SoulHoundsIII/SoulHoundsIIIInLevelPage.prefab"
+    },
+    {
+      "name": "UISoulHoundsIIIStartChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Arcade/SoulHoundsIII/SoulHoundsIIIStartPage.prefab"
+    },
+    {
+      "name": "UISuitIconBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/SuitIconBtn.prefab"
+    },
+    {
+      "name": "UISuitSetRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/SuitSetRow.prefab"
+    },
+    {
+      "name": "UITabBtn01RowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtn01Row.prefab"
+    },
+    {
+      "name": "UITabBtn03RowAllRoundWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtn03Row_Allround.prefab"
+    },
+    {
+      "name": "UITabBtn03RowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtn03Row.prefab"
+    },
+    {
+      "name": "UITabBtn03Row_IconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtn03Row_Icon.prefab"
+    },
+    {
+      "name": "UITabBtnRoleListRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtnRoleListRow.prefab"
+    },
+    {
+      "name": "UITabBtnRoleRowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtnRoleRow.prefab"
+    },
+    {
+      "name": "UITabBtnRoleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/TabBtnRoleRow.prefab"
+    },
+    {
+      "name": "UITape3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MainStory/Model/Tape3D.prefab"
+    },
+    {
+      "name": "UITapesGroup3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/MainStory/Model/TapesGroup3D.prefab"
+    },
+    {
+      "name": "UITestTipsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/FormalVersionTips.prefab"
+    },
+    {
+      "name": "UITrainingCoursePagePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/TrainingCourse/TrainingCoursePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_TRAIN"
+    },
+    {
+      "name": "UITrainingSpecialRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/TrainingCourse/TrainingSpecialRow.prefab"
+    },
+    {
+      "name": "UITransitionPanelController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/UITransitionPanel.prefab"
+    },
+    {
+      "name": "UITransitionPanelPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/UITransitionPanel.prefab"
+    },
+    {
+      "name": "UITrashbinHermitDrawCardResultPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/HIABangBoo/HIABangBooDrawCardResultPage.prefab"
+    },
+    {
+      "name": "UITrashbinHermitDrawCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HIABangBoo/HIABangBooDrawCardWidget.prefab"
+    },
+    {
+      "name": "UITrashbinHermitIntelligenceDetailsPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/HIABangBoo/HIABangBooIntelligenceDetailsDialog.prefab"
+    },
+    {
+      "name": "UITrashbinHermitIntelligenceWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HIABangBoo/HIABangBooIntelligenceWidget.prefab"
+    },
+    {
+      "name": "UITrashbinHermitPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/HIABangBoo/HIABangBooDrawCardPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_TRASH"
+    },
+    {
+      "name": "UITrashbinHermitRecyclePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/HIABangBoo/HIABangBooItemRecyclePage.prefab"
+    },
+    {
+      "name": "UITrashbinHermitRecycleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HIABangBoo/HIABangBooItemRecycleWidget.prefab"
+    },
+    {
+      "name": "UITrashbinHermitRecycleWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/HIABangBoo/HIABangBooItemRecycleWidget.prefab"
+    },
+    {
+      "name": "UITrendyStorePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/TrendyStore/TrendyStorePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_TOY"
+    },
+    {
+      "name": "UITrendyStoreWeaponItemIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/TrendyStore/TrendyStoreWeaponIconWidget.prefab"
+    },
+    {
+      "name": "UITrendyStoreWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/TrendyStore/TrendyStoreWidget.prefab"
+    },
+    {
+      "name": "UITrendyStrore3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/TrendyStore/TrendyStore3D.prefab"
+    },
+    {
+      "name": "UITrustDegreeDetailTabRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/RoleTrustTabBtn.prefab"
+    },
+    {
+      "name": "UIVHSPlayerRoleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSPromoterWidget.prefab"
+    },
+    {
+      "name": "UIVHSPromoterWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSPromoterWidget.prefab"
+    },
+    {
+      "name": "UIVHSRoleRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSRoleRow.prefab"
+    },
+    {
+      "name": "UIVHSStoreAccountBookDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VHSStore/VHSStoreAccountBookDialogV2.prefab"
+    },
+    {
+      "name": "UIVHSStoreDialog02Controller",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VHSStore/VHSStoreDialog02.prefab"
+    },
+    {
+      "name": "UIVHSStoreDialogDropDownBoxRowPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/ScreenDropDownBoxRow.prefab"
+    },
+    {
+      "name": "UIVHSStoreDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VHSStore/VHSStoreDialog.prefab"
+    },
+    {
+      "name": "UIVHSStoreDropDownBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/GeneralDropDownBox.prefab"
+    },
+    {
+      "name": "UIVHSStoreGeneralInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreRewardInfoWidget.prefab"
+    },
+    {
+      "name": "UIVHSStoreLevelInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VHSStore/VHSStoreLevelInfoDialog.prefab"
+    },
+    {
+      "name": "UIVHSStoreLevelInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreLevelInfoWidget.prefab"
+    },
+    {
+      "name": "UIVHSStorePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VHSStore/VHSStorePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_VHS_STORE"
+    },
+    {
+      "name": "UIVHSStorePageTest3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/VHSStore/VHSStorePageTest3D.prefab"
+    },
+    {
+      "name": "UIVHSStorePicBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStorePicBtn.prefab"
+    },
+    {
+      "name": "UIVHSStorePromoterInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStorePromoterInfoWidget.prefab"
+    },
+    {
+      "name": "UIVHSStorePromoterPreferItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStorePromoterPreferItem.prefab"
+    },
+    {
+      "name": "UIVHSStorePromoterSelectPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VHSStore/VHSStorePromoterSelectDialog.prefab"
+    },
+    {
+      "name": "UIVHSStoreRecommandWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/RecommandWidget.prefab"
+    },
+    {
+      "name": "UIVHSStoreTagWiderWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreTagWidgetWider.prefab"
+    },
+    {
+      "name": "UIVHSStoreTagWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreTagWidget.prefab"
+    },
+    {
+      "name": "UIVHSStoreType02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreType02.prefab"
+    },
+    {
+      "name": "UIVHSStoreTypeV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreTypeV2.prefab"
+    },
+    {
+      "name": "UIVHSStoreVHSDetailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreVHSDetailWidget.prefab"
+    },
+    {
+      "name": "UIVHSStoreWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreWidget.prefab"
+    },
+    {
+      "name": "UIVHSStoreWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VHSStore/VHSStoreWidget.prefab"
+    },
+    {
+      "name": "UIVRBossBattleInfoPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VR/FaceToBoss/VRBossInfoPage.prefab"
+    },
+    {
+      "name": "UIVRBossBattlePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VR/FaceToBoss/VRLittleBossPage.prefab"
+    },
+    {
+      "name": "UIVRBossCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/BossIllustratedBook/VRBossLevelWidget.prefab"
+    },
+    {
+      "name": "UIVRBossIllustratedBookDetailPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/VR/BossIllustratedBook/VRBossIllustratedBookDetailDialog.prefab"
+    },
+    {
+      "name": "UIVRBossIllustratedBookPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VR/BossIllustratedBook/VRBossIllustratedBookPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_MONSTER_CARD"
+    },
+    {
+      "name": "UIVREntranceBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/VR/VRMain/VREntranceBtn.prefab"
+    },
+    {
+      "name": "UIVRMainPagePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/VR/VRMain/VRMainPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_HIA"
+    },
+    {
+      "name": "UIVideoAttributeSetPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Videoshop/VideoSetDialog.prefab"
+    },
+    {
+      "name": "UIVideoDetailRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoDetailRow.prefab"
+    },
+    {
+      "name": "UIVideoSetDetailWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoSetDetail.prefab"
+    },
+    {
+      "name": "UIVideoShopUpgradePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Videoshop/VideoshopUpgradeDialog.prefab"
+    },
+    {
+      "name": "UIVideoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/General/VideoWidget.prefab"
+    },
+    {
+      "name": "UIVideoshop3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Videoshop/Videoshop3D.prefab"
+    },
+    {
+      "name": "UIVideoshopForgeWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoshopForgeWidget.prefab"
+    },
+    {
+      "name": "UIVideoshopLevelInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Videoshop/VideoshopLevelInfoDialog.prefab"
+    },
+    {
+      "name": "UIVideoshopLevelInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoshopLevelInfoWidget.prefab"
+    },
+    {
+      "name": "UIVideoshopLevelInfoWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoshopLevelInfoWidget.prefab"
+    },
+    {
+      "name": "UIVideoshopPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Videoshop/VideoshopPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_VIEDO_SHOP"
+    },
+    {
+      "name": "UIVideoshopScreenDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Videoshop/VideoshopScreenDialog.prefab"
+    },
+    {
+      "name": "UIVideoshopShowPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Videoshop/VideoshopShowPage.prefab"
+    },
+    {
+      "name": "UIVideoshopStoreWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoshopStoreWidget.prefab"
+    },
+    {
+      "name": "UIVideoshopSuitItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoshopSetIconInfo.prefab"
+    },
+    {
+      "name": "UIVideoshopUpSetPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Videoshop/VideoshopUpSetDialog.prefab"
+    },
+    {
+      "name": "UIWeakPanelWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/InLevelMonsterHudWidget.prefab"
+    },
+    {
+      "name": "UIWeaponRefinePopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Role/WeaponReplaceDialog.prefab"
+    },
+    {
+      "name": "UIWholeEffectWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InLevel/WholeEffect.prefab"
+    },
+    {
+      "name": "UIWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/RoleTrustTabBtn.prefab"
+    },
+    {
+      "name": "UIWorkBenchAppBgForTransitionWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchAppBgForTransitionWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchAppBgWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchAppBgWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchAppIconWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchAppIconWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchInformation02PageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchInformationPage02.prefab"
+    },
+    {
+      "name": "UIWorkBenchInformationDetailDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchInformationDetailDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchInformationDetailPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchInformationDetailDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchInformationItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchInformationListWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchInformationPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchInformationPage.prefab"
+    },
+    {
+      "name": "UIWorkBenchInformationRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchInformationRow.prefab"
+    },
+    {
+      "name": "UIWorkBenchInterKnotNoteTutorialWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchInterKnotNoteTutorialWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchInterknotNotePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchInterknotNotePage.prefab"
+    },
+    {
+      "name": "UIWorkBenchMainPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchMainPageV3.prefab",
+      "system_operation": "CLIENT_SYSTEM_WORKBENCH"
+    },
+    {
+      "name": "UIWorkBenchMainPageTransitionDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchMainPageTransitionDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchMemoryDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchMemoryDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchMemoryDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchMemoryDialogV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchMemoryItemV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchMemoryListWidgetV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchMemoryItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchMemoryListWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchMemoryPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchMemoryDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchRoleInfoDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchRoleInfoDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchRoleInfoDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchRoleInfoDialogV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchRoleInfoPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/WorkBench/WorkBenchRoleInfoDialog.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreeDetailsCardBaseInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchTrustDegreePageV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreeDetailsCardButtonWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchTrustDegreePageV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreeDetailsCardDetailInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchTrustDegreePageV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreeDetailsCardMemorylInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchTrustDegreePageV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreeDetailsCardWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchTrustDegreePageV2.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreeItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchNPCListWidget.prefab"
+    },
+    {
+      "name": "UIWorkBenchTrustDegreePageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/WorkBench/WorkBenchTrustDegreePageV2.prefab"
+    },
+    {
+      "name": "UIWorkbenchMainPageBigBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchBtn01.prefab"
+    },
+    {
+      "name": "UIWorkbenchMainPageSmallBtnWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/WorkBenchBtn02.prefab"
+    },
+    {
+      "name": "UIWorkbenchTrustDegreeDetailsCardDetailInfoDetailTextWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/WorkBench/RoleTrustLockTextInfo.prefab"
+    },
+    {
+      "name": "UIWorkshop3D3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Workshop/Workshop3D.prefab"
+    },
+    {
+      "name": "UIWorkshop3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Workshop/Workshop3D.prefab"
+    },
+    {
+      "name": "UIWorkshopBlacksmithWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Videoshop/VideoshopBlacksmithWidget.prefab"
+    },
+    {
+      "name": "UIWorkshopForgeWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Workshop/WorkshopForgeWidget.prefab"
+    },
+    {
+      "name": "UIWorkshopPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Workshop/WorkshopPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_SMITHY"
+    },
+    {
+      "name": "UIWorldContainerController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/MainCity/WorldContainer.prefab"
+    },
+    {
+      "name": "UIWorldLevelUpWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotRopemakerLevelUp.prefab"
+    },
+    {
+      "name": "UIWorldLevelWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/InterKnot/InterKnotRopemakerLevelUp.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssBangbooRowV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaAbyssBangbooRowV2.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssBattleWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaAbyssBattlePage.prefab",
+      "system_operation": "CLIENT_SYSTEM_ABYSS_HEAT"
+    },
+    {
+      "name": "UIYorozuyaAbyssChallengeRecordPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaAbyssChallengePage.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssChallengeReviewPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaAbyssChallengeReviewPage.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssChallengeReviewRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaAbyssChallengeReviewRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssDifficultyDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Yorozuya/YorozuyaDifficultyDialog.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssHeadRowV2WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaAbyssHeadRowV2.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssHeadRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaAbyssHeadRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssRecordPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaAbyssRecordPage.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaAbyssRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssTaskRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaAbyssTaskRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaAbyssWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaAbyssPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_ABYSS"
+    },
+    {
+      "name": "UIYorozuyaBigWorldCenterRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaBigWorldCenterRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaBigWorldRowChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaBigWorldRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaBigWorldWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaBigWorldPage.prefab"
+    },
+    {
+      "name": "UIYorozuyaChapterMap3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Yorozuya/YorozuyaMap3D.prefab"
+    },
+    {
+      "name": "UIYorozuyaCombatReadinessDialogPopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Yorozuya/YorozuyaCombatReadinessDialog.prefab"
+    },
+    {
+      "name": "UIYorozuyaCombatReadinessDialogV2PopWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Dialog/Yorozuya/YorozuyaCombatReadinessDialog02.prefab"
+    },
+    {
+      "name": "UIYorozuyaDifficultWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaDifficultPage.prefab"
+    },
+    {
+      "name": "UIYorozuyaDifficultyInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaAbyssPage.prefab"
+    },
+    {
+      "name": "UIYorozuyaDifficultyListWidgetWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaDifficultyListWidget.prefab"
+    },
+    {
+      "name": "UIYorozuyaEntrustInfoRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaEntrustInfoRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaMap3DModelController",
+      "resource_path": "Assets/NapResources/UI/3D/Yorozuya/YorozuyaMap3D.prefab"
+    },
+    {
+      "name": "UIYorozuyaMapInfoChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaMapsInfoRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaMapInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaMapsInfoRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaMapTipsChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaMapTips.prefab"
+    },
+    {
+      "name": "UIYorozuyaMissionInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaMissionInfoRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_HOLLOW_QUEST"
+    },
+    {
+      "name": "UIYorozuyaPageTestPageController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaPageTest.prefab"
+    },
+    {
+      "name": "UIYorozuyaQuestRow02ChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaQuestRow02.prefab"
+    },
+    {
+      "name": "UIYorozuyaQuestRow02WidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaQuestRow02.prefab"
+    },
+    {
+      "name": "UIYorozuyaRallyQuestItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaRallyEntrustLevelSubitemRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaRallyRowWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaRallyEntrustRow.prefab"
+    },
+    {
+      "name": "UIYorozuyaRallyWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/RallyEntrustPage.prefab",
+      "system_operation": "CLIENT_SYSTEM_RALLY"
+    },
+    {
+      "name": "UIYorozuyaSphereItemWidgetController",
+      "resource_path": "Assets/NapResources/UI/3D/Yorozuya/YorozuyaSphereItem.prefab"
+    },
+    {
+      "name": "UIYorozuyaTransferWidgetChildWindowController",
+      "resource_path": "Assets/NapResources/UI/Menus/Widget/Yorozuya/YorozuyaTransferWidget.prefab"
+    },
+    {
+      "name": "UIYorozuyaVideoInfoWidgetController",
+      "resource_path": "Assets/NapResources/UI/Menus/Page/Yorozuya/YorozuyaVideoInfo.prefab"
+    }
+  ]
+}

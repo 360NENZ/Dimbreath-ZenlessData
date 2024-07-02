@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Avatar_1002302",
+  "AbilitySpecials": {
+    "AS_AddedStunRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Card_1002302_BreakStunUp_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAvatarProfessionType",
+            "ProfessionType": "Stun",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card_1002302_BreakStunUp_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_AddedBreakStunRatio": "%AS_AddedStunRatio"
+      }
+    }
+  }
+}

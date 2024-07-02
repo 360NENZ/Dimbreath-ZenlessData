@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Card_Ashes_1000105",
+  "AbilitySpecials": {
+    "GenreNum_Burn": {
+      "Value": 0
+    },
+    "Ratio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(Ratio)*(item(1000101)+item(1000102)+item(1000103)+item(1000104)+item(1000105)+item(1000106)+item(1000107)+item(1000108))",
+        "ParamName": "GenreNum_Burn",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffUpper"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffUpper": {
+      "BuffRevises": [
+        {
+          "FilterType": "ByBuffGroup",
+          "GroupName": "Burn",
+          "Params": [
+            {
+              "Name": "DamagePercentage",
+              "Ratio": "%GenreNum_Burn"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

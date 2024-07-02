@@ -1,0 +1,79 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Aokaku_Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Aokaku_Attack_AssaultAid_Flag",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_AssaultAidCamera",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CameraModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Aokaku_Attack_AssaultAid_CamZoom_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Aokaku_Attack_AssaultAid_CamZoom_02"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Aokaku_Attack_AssaultAid_CamZoom_03"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Aokaku_Attack_AssaultAid_CamStretch_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Aokaku_Attack_AssaultAid_CamStretch_02"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Aokaku_Attack_AssaultAid_CamStretch_03"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Aokaku_Attack_AssaultAid_CameraOverrideTrack_01"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Aokaku_Attack_AssaultAid_CameraOverrideTrack_02"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Aokaku_Attack_AssaultAid_CameraOverrideTrack_03"
+        }
+      ]
+    }
+  }
+}

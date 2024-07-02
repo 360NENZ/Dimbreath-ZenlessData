@@ -1,0 +1,60 @@
+{
+  "AbilityName": "GamePlay_EliteShield",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddEffect_Modifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddEffect_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "EffectScale": {
+              "x": 5.0,
+              "y": 5.0,
+              "z": 5.0
+            },
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "RootPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_RandomSkill_ElectricShield_Hit",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Card_Blunt_2000712",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazu",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE"
+              ]
+            },
+            {
+              "$type": "ByAliveState",
+              "AliveState": "Alive",
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_Hiisazu",
+          "PropertyValue": 1,
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Curse_ReduceSP_Evade",
+  "AbilitySpecials": {
+    "SPReduce": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "DecreaseSPAction",
+        "Amount": "%SPReduce",
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

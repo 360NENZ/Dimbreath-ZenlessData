@@ -1,0 +1,127 @@
+{
+  "AbilityName": "Lycaon_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio": {
+      "Value": 0.25
+    },
+    "AS_Duration": {
+      "Value": 15
+    },
+    "AS_IceDamageResist": {
+      "Value": -0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LycaonUniqueModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "BuffCondition"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LycaonUniqueIconModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "BuffCondition"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LycaonUniqueIconModifier": {
+      "Buff": {
+        "BuffID": 3000071,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace"
+    },
+    "LycaonUniqueModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_IceDamageResist": "%AS_IceDamageResist"
+      }
+    }
+  },
+  "Predicates": {
+    "BuffCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Lycaon_Attack_Branch_02_AttackProperty_01",
+            "Lycaon_Attack_Branch_02_AttackProperty_02",
+            "Lycaon_Attack_Branch_02_AttackProperty_03",
+            "Lycaon_Attack_Branch_02_Enhance_01_AttackProperty_01_01",
+            "Lycaon_Attack_Branch_02_Enhance_01_AttackProperty_01_02",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_01",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_02",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_03",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_01",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_02",
+            "Lycaon_Attack_AssaultAid_AttackProperty_01_01",
+            "Lycaon_Attack_AssaultAid_AttackProperty_01_02",
+            "Lycaon_Attack_AssaultAid_AttackProperty_01_03",
+            "Lycaon_Attack_AssaultAid_AttackProperty_01_04",
+            "Lycaon_Attack_AssaultAid_AttackProperty_02_01",
+            "Lycaon_Attack_AssaultAid_AttackProperty_02_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Lycaon_Attack_Normal_01_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_02_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_03_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_03_Enhance_AttackProperty_02",
+            "Lycaon_Attack_Normal_04_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_04_Enhance_AttackProperty_02",
+            "Lycaon_Attack_Normal_04_Enhance_AttackProperty_03",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_01_01",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_01_02",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_02_01",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_02_02",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_02_03",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_01",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_02",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_03",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_04",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_02_01",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_02_02",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_02_03"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

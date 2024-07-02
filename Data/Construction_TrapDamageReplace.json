@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Construction_TrapDamageReplace",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageReplace",
+        "PropertyValue": 1,
+        "Target": "Target"
+      }
+    ]
+  }
+}

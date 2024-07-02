@@ -1,0 +1,33 @@
+{
+  "AbilityName": "Curse_AbyssBossAtkUpByTime",
+  "AbilitySpecials": {
+    "AS_AtkRatio": {
+      "Value": 0.05
+    },
+    "AS_ThinkInterval": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnThinkInterval": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeUpModifier",
+        "Target": "Self"
+      }
+    ],
+    "ThinkInterval": "%AS_ThinkInterval"
+  },
+  "Modifiers": {
+    "DamageTakeUpModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 20,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_AtkRatio"
+      }
+    }
+  }
+}

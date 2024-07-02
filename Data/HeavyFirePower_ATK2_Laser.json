@@ -1,0 +1,84 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 0.2,
+      "BlockColliderRadius": 0,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_02_Hit_01"
+      },
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 1.0
+      },
+      "EffectName": "Eff_Monster_HeavyFirepower_Attack_02_Beam",
+      "FirstHitDelayTime": 0.01,
+      "HitAnimEventID": "Monster_HeavyFirePower_ATK02_Attackproperty",
+      "HitColliderRadius": 0.5,
+      "HitEffect": {},
+      "HitInterval": 1.0,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "None"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WeaponPoint_R",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 50,
+      "StartEffect": {
+        "EffectPattern": ""
+      }
+    }
+  ],
+  "AbilityName": "HeavyFirePower_ATK2_Laser",
+  "AbilityStacking": "Unique"
+}

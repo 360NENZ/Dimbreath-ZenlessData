@@ -1,0 +1,108 @@
+{
+  "AbilityName": "Card_Gun_1000305",
+  "AbilitySpecials": {
+    "ByOddsNormal": {
+      "Value": 0.5
+    },
+    "CD": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazu",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnDamageCalculatedPre": [
+        {
+          "$type": "RandomOperator",
+          "Odds": "%ByOddsNormal",
+          "OnSuccess": [
+            {
+              "$type": "ModifyAttackDataAction",
+              "Predicates": [
+                {
+                  "$type": "ByHitResult",
+                  "HitResult": "Critical"
+                },
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Normal",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByMonsterFunctionType",
+                  "CompareType": "Equal",
+                  "MonsterFunctionType": "Monster",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByHeavyAttack",
+                  "IsHeavyAttack": true
+                }
+              ],
+              "PropertyKey": "Actor_Hiisazu",
+              "PropertyValue": 1,
+              "Target": "Target"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "CauseHiisazu",
+              "Predicates": [
+                {
+                  "$type": "ByHitResult",
+                  "HitResult": "Critical"
+                },
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Normal",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByMonsterFunctionType",
+                  "CompareType": "Equal",
+                  "MonsterFunctionType": "Monster",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByHeavyAttack",
+                  "IsHeavyAttack": true
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HiisazuCD"
+        }
+      ]
+    },
+    "HiisazuCD": {
+      "Duration": "%CD",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CauseHiisazu"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "AbilityName": "Card_Toy_2002104",
+  "AbilitySpecials": {
+    "AS_RecoverSp": {
+      "Value": 40
+    },
+    "CD": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyRecoverSpModifier_Card_2104",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddSpEffectModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_AddSp",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "CommonAddSpMaterial",
+          "Target": "Self",
+          "key": "Common_MA_Buff_AddSp_RimGlow_01"
+        }
+      ]
+    },
+    "BuddyRecoverSpModifier_Card_2104": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnSkillStart": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverSpModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Card2104CDController",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Card2104CDController": {
+      "Duration": "%CD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuddyRecoverSpModifier_Card_2104",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "BuddyAllied"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuddyRecoverSpModifier_Card_2104",
+          "Target": "BuddyAllied"
+        }
+      ]
+    },
+    "RecoverSpModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "LocalAvatar"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddSpEffectModifier",
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  }
+}

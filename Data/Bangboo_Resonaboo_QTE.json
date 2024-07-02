@@ -1,0 +1,200 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Resonaboo_SwitchIn_Attack_02_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Ctr_Antenna_02",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": true,
+      "CanHitStage": true,
+      "CanPickInvincible": true,
+      "DestroyExplode": false,
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": true,
+      "HitSelfWhenExplode": false,
+      "HitStageExplode": true,
+      "IsCanReflect": false,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": -1,
+      "MovementConfig": {
+        "$type": "ConfigMovementAutoParabola",
+        "Accelerated": -200,
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 5.0
+        },
+        "DefaultRotAngle": 0,
+        "Duration": -1,
+        "ExpectAngle": 0,
+        "ExpectTime": 0.1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.4,
+        "HitTangentialRatio": 0.5,
+        "MaxAngle": 20,
+        "MaxSpeed": 60,
+        "MinAngle": 0,
+        "MinSpeed": 20,
+        "TargetPosRot": {
+          "BackupCoordsOption": "ReferTarget",
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupPositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 5.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "Caster",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetRotLimitAngleLeft": 15,
+        "TargetRotLimitAngleRight": 15,
+        "TimesUpMoveOption": "Remain"
+      },
+      "NeedWarningHUD": false,
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Resonaboo_QTE_Explosion",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Boollseye_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Resonaboo_GamepadRumble_E_QTE_02"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Resonaboo_QTE_Explosion",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Boollseye_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Resonaboo_GamepadRumble_E_QTE_02"
+        }
+      ],
+      "OnBulletHitTargetDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Resonaboo_QTE_Explosion",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Boollseye_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Resonaboo_GamepadRumble_E_QTE_02"
+        }
+      ],
+      "OnBulletTimeUpDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Resonaboo_QTE_Explosion",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Boollseye_Attack_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Resonaboo_GamepadRumble_E_QTE_02"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ShowWarningHUDInScreen": false,
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Bangboo_Resonaboo_QTE",
+  "AbilityStacking": "Unique"
+}

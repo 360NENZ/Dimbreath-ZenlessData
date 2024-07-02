@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Level_LockMonsterHp",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LockHp",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LockHp": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "AbilityName": "GamePlayChasing_Remove_FollowerHyperShield",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.15
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ModifyHpShieldAction",
+        "MaxValueDelta": "%ShieldAmount",
+        "Tag": "FollowerHyperShield"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyStunStateAction",
+          "Target": "Self",
+          "TargetState": "Break"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunBuffModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Arlaune_Stun_Start_GasOff_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BreakStunModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

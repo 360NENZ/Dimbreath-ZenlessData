@@ -1,0 +1,41 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "DoInitialCheck": false,
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "ChargingLimits",
+          "CustomReferMaxPropertyType": "MaxChargingLimits",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "HandleAnimatorZoneTagsAction",
+                  "AnimatorStateTags": [
+                    "ReadytoDie"
+                  ],
+                  "IsAdd": true,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_Die",
+                  "ParamType": 1,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Harumasa_Trap_TriggerDie",
+  "AbilityStacking": "Unique"
+}

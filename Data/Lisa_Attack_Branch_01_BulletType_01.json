@@ -1,0 +1,170 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Lisa_Attack_Special_01_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": -0.1,
+            "y": 1.09,
+            "z": 0.9
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": false,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementAutoParabola",
+        "Accelerated": -200,
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 12.0
+        },
+        "DefaultRotAngle": 0,
+        "Duration": -1,
+        "ExpectAngle": 15,
+        "ExpectTime": 0.1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.4,
+        "HitTangentialRatio": 0.5,
+        "MaxAngle": 20,
+        "MaxSpeed": 60,
+        "MinAngle": 0,
+        "MinSpeed": 20,
+        "TargetPosRot": {
+          "BackupCoordsOption": "ReferTarget",
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupPositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 12.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "Caster",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetRotLimitAngleLeft": 15,
+        "TargetRotLimitAngleRight": 15,
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lisa_GamepadRumble_E_Branch_01_Explode"
+        }
+      ],
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lisa_Attack_Branch_01_BulletType_03_Blow_Ground",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lisa_Attack_Branch_01_CamShake_E_02",
+          "Target": "Other"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lisa_Attack_Branch_01_BulletType_03_Blow_Target",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lisa_Attack_Branch_01_CamShake_E_02",
+          "Target": "Other"
+        }
+      ],
+      "OnBulletHitTargetDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lisa_Attack_Branch_01_BulletType_03_Blow_Target",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lisa_Attack_Branch_01_CamShake_E_02",
+          "Target": "Other"
+        }
+      ],
+      "OnBulletTimeUpDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lisa_Attack_Branch_01_BulletType_03_Blow_Target",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lisa_Attack_Branch_01_CamShake_E_02",
+          "Target": "Other"
+        }
+      ],
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Lisa_Attack_Branch_01_BulletType_01",
+  "AbilityStacking": "Unique"
+}

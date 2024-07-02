@@ -1,0 +1,86 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_BoringMachine_BlockDamage",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "BoringMachine_DamageBlock",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_BoringMachine_BlockDamage",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_02_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_BoringMachine_BlockDamage",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_02_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_BoringMachine_BlockDamage": {
+      "Duration": 5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "BoringMachine_BlockDamage"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "BoringMachine_BlockDamage"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

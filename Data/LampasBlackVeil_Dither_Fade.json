@@ -1,0 +1,251 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Teleport_FadeOut",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 59,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Back",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Left",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Right",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 118,
+          "FrameCountLow": 93,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 58,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 94,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "FrameCountHigh": 58,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier_02"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_Dither_Fade",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FadeInModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "LampasBlackVeil"
+        },
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeInModifier_02": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "LampasBlackVeil"
+        },
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeOutModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.28,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "LampasBlackVeil",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_LampasBlackVeil_Dither_Fade",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeOutModifier_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "LampasBlackVeil",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_LampasBlackVeil_Dither_Fade_02",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvisibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FadeOutModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FadeOutModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FadeInModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvisibleModifier_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FadeOutModifier_02",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FadeOutModifier_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FadeInModifier_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

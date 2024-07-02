@@ -1,0 +1,34 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Froze_2001100",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Froze_2001100",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_NewDecreasePerHit",
+                  "ParamName": "AS_DecreasePerHit",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Froze_2011102",
+  "AbilitySpecials": {
+    "AS_NewDecreasePerHit": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Card_Sports_2000802_Up",
+  "AbilitySpecials": {
+    "AddDuration": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "SetModifierDurationAction",
+        "ModifierName": "BlockManagementModifier_Card_1000808",
+        "ModifyType": "Add",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars",
+        "Value": 3
+      },
+      {
+        "$type": "SetModifierDurationAction",
+        "ModifierName": "Sub_BlockManagementModifier_Card_1000808",
+        "ModifyType": "Add",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars",
+        "Value": 3
+      }
+    ]
+  }
+}

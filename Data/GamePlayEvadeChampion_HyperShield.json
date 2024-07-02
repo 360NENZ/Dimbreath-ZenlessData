@@ -1,0 +1,40 @@
+{
+  "AbilityName": "GamePlayEvadeChampion_HyperShield",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HPShieldModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HPShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0.0,
+          "Tag": "FollowerHyperShield",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh"
+    }
+  }
+}

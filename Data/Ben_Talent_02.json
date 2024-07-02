@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Ben_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddedAttackDelta_Talent_02": {
+      "Value": 0.15
+    },
+    "AS_Magnification_Talent_02": {
+      "Value": 3.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(Def_Battle)*specials(AS_Magnification_Talent_02)*0.5",
+        "ParamName": "AS_AddedAttackDelta_Talent_02",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Ben_Attack_Branch_01_Attack_Block_AttackProperty_01",
+              "Ben_Attack_Branch_01_Attack_Block_AttackProperty_02",
+              "Ben_Attack_Branch_02_Attack_01_Block_AttackProperty_01",
+              "Ben_Attack_Branch_02_Attack_01_Block_AttackProperty_02",
+              "Ben_Attack_Branch_02_Attack_01_Block_AttackProperty_03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedAttackDelta",
+        "PropertyValue": "%AS_AddedAttackDelta_Talent_02",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "DoInitialCheck": true,
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 10
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 20
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 30
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 40
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 50
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 60
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 70
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "specials(AS_StackCount)+1",
+                  "ParamName": "AS_StackCount",
+                  "Target": "Self",
+                  "ValueType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialByExpression",
+                  "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+                  "ParamName": "AS_BreakStunRatio_Total",
+                  "Target": "Self",
+                  "ValueType": "Float"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Effect",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "DoInitialCheck": false,
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "Val": 10,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 20,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 30,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 40,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 50,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 60,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 70,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 80,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BreakStunModifier_01_Controller",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Weapon_Ability_13005",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.025
+    },
+    "AS_BreakStunRatio_Total": {
+      "Value": 0.0
+    },
+    "AS_Duration": {
+      "Value": 5.0
+    },
+    "AS_StackCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BreakStunModifier_01_Controller": {
+      "DelayHandlers": [
+        {
+          "DelayTime": "%AS_Duration",
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "BreakStunModifier_01_Controller",
+              "StackCount": 1,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 10,
+      "ModifierStacking": "MultipleRefresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_StackCount)-1",
+          "ParamName": "AS_StackCount",
+          "Target": "Self",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "min(8,specials(AS_StackCount))*specials(AS_BreakStunRatio)",
+          "ParamName": "AS_BreakStunRatio_Total",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BreakStunModifier_01_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BreakStunModifier_01_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BreakStunRatio": "%AS_BreakStunRatio_Total"
+      }
+    }
+  }
+}

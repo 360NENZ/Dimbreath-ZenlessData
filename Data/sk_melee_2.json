@@ -1,0 +1,51 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "cpAnimRotationType": 0,
+      "curve": {
+        "keys": [],
+        "length": 0,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 2,
+      "endFrame": 6,
+      "idx": 1049134848,
+      "speedEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "speedParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 30,
+  "frameRate": 20,
+  "loop": false,
+  "modelPath": "",
+  "partLoop": false,
+  "seqName": "sk_melee_2",
+  "speedParams": {
+    "param1": 0,
+    "param2": 0
+  },
+  "topSpeed": 99.0,
+  "totalTime": 1.5,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Rotation",
+      "trackType": 2
+    }
+  ]
+}

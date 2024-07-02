@@ -1,0 +1,55 @@
+{
+  "AbilityName": "Card_Edrink_1000208",
+  "AbilitySpecials": {
+    "ByOdds": {
+      "Value": 0.5
+    },
+    "SPRecoveryRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "RandomOperator",
+        "Odds": "%ByOdds",
+        "OnSuccess": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "SpReturn"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpReturn": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%SPRecoveryRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SpReturn",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

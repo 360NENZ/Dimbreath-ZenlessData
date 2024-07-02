@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Card_Trick_2001803_Purified",
+  "AbilitySpecials": {
+    "AS_CriticalDamageDelta": {
+      "Value": 0.6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageDelta"
+    }
+  }
+}

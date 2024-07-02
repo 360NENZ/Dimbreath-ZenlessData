@@ -1,0 +1,184 @@
+{
+  "AbilityName": "Nineveh_SummonBees_Manager",
+  "AbilitySpecials": {
+    "AS_FirstSummonBeesCD": {
+      "Value": 40,
+      "ValueType": "Float"
+    },
+    "AS_SummonBeesCD_Long": {
+      "Value": 60,
+      "ValueType": "Float"
+    },
+    "AS_SummonBeesCD_Short": {
+      "Value": 40,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SummonBeesTimerModifier_1st",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SummonBeesTimerModifier_1st": {
+      "Duration": "%AS_FirstSummonBeesCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_SummonBee_Left_Ready",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_SummonBee_Right_Ready",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_SummonBee_Left_Ready",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_SummonBee_Right_Ready",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SummonBeesTimerSubsequentCDModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SummonBeesTimerModifier_Left_Long": {
+      "Duration": "%AS_SummonBeesCD_Long",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_SummonBee_Left_Ready",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SummonBeesTimerModifier_Left_Short": {
+      "Duration": "%AS_SummonBeesCD_Short",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_SummonBee_Left_Ready",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SummonBeesTimerModifier_Right_Long": {
+      "Duration": "%AS_SummonBeesCD_Long",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_SummonBee_Right_Ready",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SummonBeesTimerModifier_Right_Short": {
+      "Duration": "%AS_SummonBeesCD_Short",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_SummonBee_Right_Ready",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SummonBeesTimerSubsequentCDModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnCustomEventReceived": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "SummonBeesCD_Left_Long"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SummonBeesTimerModifier_Left_Long",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "SummonBeesCD_Left_Short"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SummonBeesTimerModifier_Left_Short",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "SummonBeesCD_Right_Long"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SummonBeesTimerModifier_Right_Long",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByCustomEvent",
+              "EventKey": "SummonBeesCD_Right_Short"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SummonBeesTimerModifier_Right_Short",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "AbilityName": "BUFF_WitchTime_Item",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_WitchTime_Cutdown": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "BUFF_WitchTime_Dodge",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyAbilityAction",
+      "AbilityName": "BUFF_WitchTime_Dodge",
+      "IsAutoTrigger": false,
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_WitchTime_Cutdown",
+      "Target": "TeamAvatars"
+    }
+  ]
+}

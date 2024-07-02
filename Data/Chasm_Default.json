@@ -1,0 +1,181 @@
+{
+  "AbilityName": "Chasm_Default",
+  "AbilitySpecials": {
+    "DetectionDistance": {
+      "Value": 25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DistanceModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DistanceModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Self",
+              "CompareType": "LessEqual",
+              "Distance": "%DetectionDistance",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "EffectModifier",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "EffectModifier",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Self",
+              "CompareType": "Less",
+              "Distance": "%DetectionDistance",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 2
+    },
+    "EffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "EffPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Zero_Door_Loop_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DistanceModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DistanceModifier",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Self",
+              "CompareType": "Greater",
+              "Distance": "%DetectionDistance",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 2
+    },
+    "SpecialEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "EffPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Zero_Door_Loop_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DistanceModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SpecialEffectModifier",
+      "Target": "Self"
+    }
+  ]
+}

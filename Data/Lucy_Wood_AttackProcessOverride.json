@@ -1,0 +1,82 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenMuteNormalHitProcessMixin",
+      "OnMuteNormalBeingHit": [],
+      "OnlySummonMasterHit": false
+    }
+  ],
+  "AbilityName": "Lucy_Wood_AttackProcessOverride",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ExitBattleModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarsBattleEnter": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ExitBattleModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "EnterBattleModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarsBattleExit": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "EnterBattleModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ExitBattleModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "EnterBattleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttackeeProcessOverrideMixin",
+          "MuteAttackEffect": true,
+          "MuteBeHitProcess": false,
+          "MuteDamageProcess": true,
+          "OverrideAttackPropertyRelationShip": [
+            "Enemy",
+            "Allied"
+          ],
+          "OverrideAttackerRelationShip": "Allied"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ExitBattleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttackeeProcessOverrideMixin",
+          "MuteAttackEffect": false,
+          "MuteBeHitProcess": false,
+          "MuteDamageProcess": true,
+          "OverrideAttackPropertyRelationShip": [
+            "Enemy",
+            "Allied"
+          ],
+          "OverrideAttackerRelationShip": "Allied"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

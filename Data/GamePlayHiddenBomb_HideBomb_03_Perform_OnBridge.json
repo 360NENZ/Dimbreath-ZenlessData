@@ -1,0 +1,22 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_HideBomb_03_Perform_OnBridge",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 43,
+        "ParamName": "Int_AttackIndex",
+        "ParamType": 3,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_PressAttackA",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

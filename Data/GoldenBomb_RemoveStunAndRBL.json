@@ -1,0 +1,12 @@
+{
+  "AbilityName": "GoldenBomb_RemoveStunAndRBL",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GoldenBomb_SetStunAndRBL"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1492 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "RedLight",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "Modifier_RedLightSpecialEffect_01",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "Modifier_RedLightSpecialEffect_02",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 2
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "Modifier_RedLightSpecialEffect_03",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 3
+            },
+            {
+              "Val": 1,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Modifier_RedLightSpecialEffect_01",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Modifier_RedLightSpecialEffect_02",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Modifier_RedLightSpecialEffect_03",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "CustomPropertyType": "EnhanceAttackCount",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "Val": 1,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Modifier_Enhance",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Flag",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 91,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Flag_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Flag_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Flag_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Finish_01",
+          "FrameCountHigh": 47,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Finish_02",
+          "FrameCountHigh": 47,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Flag",
+          "FrameCountHigh": 80,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 10,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 10,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_End",
+          "FrameCountHigh": 5,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_CheckEnhanceSFX"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_AddRedLight",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_AddRedLight",
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_AddRedLight",
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_AddRedLight",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_AddRedLight",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Loop_01",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 12,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Aokaku_AddRedLight",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Loop_02",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 12,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": -1,
+              "CustomPropertyType": "EnhanceAttackCount",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "Modifier_Enhance"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_Enhance",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 15,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": -1,
+              "CustomPropertyType": "EnhanceAttackCount",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "Modifier_Enhance"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02_Enhance",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 17,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": -1,
+              "CustomPropertyType": "EnhanceAttackCount",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "Modifier_Enhance"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03_Enhance",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 26,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": -1,
+              "CustomPropertyType": "EnhanceAttackCount",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "Modifier_Enhance"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03_01_Enhance",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 22,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": -1,
+              "CustomPropertyType": "EnhanceAttackCount",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "Modifier_Enhance"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Enhance",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 20,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_Mask_On",
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_Mask_Fade",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Modifier_Mask_On",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_RedLightManager",
+  "AbilitySpecials": {
+    "AS_ExQTE_Actor_CriticalDelta": {
+      "Value": 0.25
+    },
+    "AS_ExQTE_Actor_CriticalDelta_Duration": {
+      "Value": 15
+    },
+    "AS_MaxEnhanceAttackCount": {
+      "Value": 6
+    },
+    "AS_MaxEnhanceAttackCount_Talent_04": {
+      "Value": 12
+    },
+    "Duration": {
+      "Value": 45
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Modifier_CheckEnhanceSFX": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_EnhanceSFX_Skill",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "Modifier_Enhance"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Modifier_EnhanceSFX_Skill",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_Enhance": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_MaxEnhanceAttackCount",
+          "CustomPropertyType": "EnhanceAttackCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Equal",
+              "CustomNumerator": "UnlockTalent_04",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 0
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_MaxEnhanceAttackCount_Talent_04",
+          "CustomPropertyType": "EnhanceAttackCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Equal",
+              "CustomNumerator": "UnlockTalent_04",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 1
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Aokaku_Weapon_Enhance_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_EnhanceSFX_Buff",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_aokaku_attack_redblade_open"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Modifier_EnhanceSFX_Buff",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_aokaku_attack_redblade_close"
+        }
+      ]
+    },
+    "Modifier_EnhanceSFX_Buff": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_L_Loop"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_R_Loop"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Enhance_01_Weapon_L_Loop",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_R_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Enhance_01_Weapon_R_Loop",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_Enhance_01_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_R_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_Enhance_01_R",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_EnhanceSFX_Skill": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_L_Loop"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Aokaku_Enhance_01_Weapon_R_Loop"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Enhance_01_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_R_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Enhance_01_Weapon_R",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_Mask_Fade": {
+      "Duration": 1.62,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Aokaku_Mask_End_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MaskPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                }
+              ]
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Aokaku_Mask"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_Aokaku_MA_Attack_ExQTE_Transition_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_Aokaku_MA_Attack_ExQTE_Transition_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_MaskOn",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Aokaku_Mask_Start_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ext_Mask",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                }
+              ]
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Aokaku_Mask"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_Aokaku_MA_Attack_ExQTE_Transition_02",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_Aokaku_MA_Attack_ExQTE_Transition_02"
+        }
+      ]
+    },
+    "Modifier_Mask_On": {
+      "Duration": "%AS_ExQTE_Actor_CriticalDelta_Duration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_MaskOn",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "PT_L_Eye",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Attack_ExQTE_19_Mask_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "PT_R_Eye",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Attack_ExQTE_19_Mask_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MaskPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Mask_Ice_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_Mask_Fade",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_ExQTE_Actor_CriticalDelta"
+      }
+    },
+    "Modifier_RedLightSpecialEffect_01": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_RedLight_01_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_R_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_RedLight_01_R",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "IsFlag",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "Modifier_RedLightSpecialEffect_02": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_RedLight_02_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_R_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_RedLight_02_R",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_RedLightSpecialEffect_03": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_L_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_RedLight_03_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Wpn_R_Side",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Aokaku_Weapon_RedLight_03_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "Play_SFX_Char_Skill_Aokaku_Special_Ready"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_Enhance",
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "RedLight",
+      "IsUsePercentage": false,
+      "Percentage": 0,
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "TriggerSoundAction",
+      "Target": "Self",
+      "soundActionKey": "Play_SFX_Char_Skill_Aokaku_Special_Start"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Aokaku_Attack_Common_01_RedLight",
+      "FireEffectPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Wpn_Body_Rot",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Target": "Self"
+    }
+  ]
+}

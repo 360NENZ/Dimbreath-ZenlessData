@@ -1,0 +1,663 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlockingStateModifier",
+            "AddedDamageRatioModifier_Ben_Talent_03_Manager"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlockingStateModifier",
+            "AddedDamageRatioModifier_Ben_Talent_03_Manager"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlockingStateModifier",
+            "AddedDamageRatioModifier_Ben_Talent_03_Manager"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlockingStateModifier",
+            "AddedDamageRatioModifier_Ben_Talent_03_Manager"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack_Block",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AddedDamageRatioModifier_Ben_Talent_03_Manager"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_01_Block",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AddedDamageRatioModifier_Ben_Talent_03_Manager"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "NoDamageModifier_Branch_01",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "NoDamageModifier_Branch_02",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ben_BlockManager",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Talent_01": {
+      "Value": -0.3
+    },
+    "AS_AddedDamageRatio_Talent_03": {
+      "Value": 0.3
+    },
+    "AS_Duration_Talent_01": {
+      "Value": 15.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AddedDamageRatioModifier_Ben_Talent_03": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ben_Attack_Branch_01_Attack_Block_AttackProperty_01",
+                "Ben_Attack_Branch_01_Attack_Block_AttackProperty_02",
+                "Ben_Attack_Branch_02_Attack_01_Block_AttackProperty_01",
+                "Ben_Attack_Branch_02_Attack_01_Block_AttackProperty_02",
+                "Ben_Attack_Branch_02_Attack_01_Block_AttackProperty_03"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Talent_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Ben_Talent_03_Manager": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Ben_Talent_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BlockSuccessModifier_Logic": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_BlockSuccess",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_BlockSuccess",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "BlockSuccessModifier_Perform": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.15,
+          "TimeUpActions": [
+            {
+              "$type": "CameraStretchAction",
+              "StretchConfigKey": "Ben_BlockState_CamStretch_01"
+            },
+            {
+              "$type": "CameraZoomAction",
+              "ZoomConfigKey": "Ben_BlockState_CamZoom_01"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Ben_Attack_Branch_01_Block",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Male_Size03_Ben_MA_Attack_Branch_01_OverrideRimGlow_01",
+          "Target": "Self",
+          "key": "Avatar_Male_Size03_Ben_MA_Attack_Branch_01_OverrideRimGlow_01"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_Skill_Ben_Attack_Branch_01_Parry_Defend"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Ben_BlockSuccess_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Ben_BlockSuccess_CamZoom_01"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Ben_BlockSuccess_CamShake_E_01"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Ben_GamepadRumble_E_BlockSuccess"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Avatar_Ben_Block_Correct_RadialBlur_01",
+          "EffectType": "RadialBlur",
+          "MpExecMode": "AuthorityOnly"
+        },
+        {
+          "$type": "ShaderCustomAction",
+          "CustomType": "Fog",
+          "Key": "Avatar_Male_Size03_Ben_PerfectBlock_ShaderCustomFog_01"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_Skill_Ben_Attack_Branch_01_Parry_Perfect_Defend",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Start",
+              "FrameCountHigh": 18,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": false,
+              "MaxFrameCountLow": false
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_Skill_Ben_Attack_Branch_01_Parry_Defend",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_01_Start",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 18,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_01_Loop",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "IsLoop": true,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_Skill_Ben_Attack_Branch_02_Parry_Perfect_Defend",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Start",
+              "FrameCountHigh": 18,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": false,
+              "MaxFrameCountLow": false
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Char_Skill_Ben_Attack_Branch_02_Parry_Defend",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02_Start",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 18,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02_Loop",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "IsLoop": true,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ben_Attack_PerfectBlock_AttackProperty_01",
+          "Target": "Target"
+        }
+      ]
+    },
+    "BlockingStateModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsBlocking",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_BlockSuccess",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_BlockSuccess_Auto_Talent_03",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHullColliderEnable",
+          "ColliderName": [
+            "HullCollider_Weapon"
+          ],
+          "HullColliderEnable": true,
+          "Tag": "Ben_Blocking_HullCollider_Weapon",
+          "Target": "Self"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Ben_BlockState_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Ben_BlockState_CamZoom_01"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BlockSuccessModifier_Logic",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "Unblockable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BlockSuccessModifier_Perform",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimTagList",
+                      "TagList": [
+                        "Unblockable"
+                      ]
+                    },
+                    {
+                      "$type": "ByAnimTagList",
+                      "TagList": [
+                        "Stray"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageDownModifier_Ben_Talent_01",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 1,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "Unblockable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Target"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsBlocking",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "Ben_Blocking_HullCollider_Weapon",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "NoDamageModifier_Branch_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "NoDamageModifier_Branch_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BlockSuccessModifier_Logic",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BlockSuccessModifier_Perform",
+          "Target": "Self"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Ben_BlockState_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Ben_BlockState_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Ben_BlockSuccess_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Ben_BlockSuccess_CamZoom_01"
+        },
+        {
+          "$type": "InterruptShaderCustomAction",
+          "CustomType": "Fog",
+          "Key": "Avatar_Male_Size03_Ben_PerfectBlock_ShaderCustomFog_01"
+        }
+      ]
+    },
+    "DamageDownModifier_Ben_Talent_01": {
+      "Duration": "%AS_Duration_Talent_01",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_Talent_01"
+      }
+    },
+    "NoDamageModifier_Branch_01": {
+      "Duration": 0.3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "PushBlockStateAction"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "NoDamageModifier_Branch_01",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "Unblockable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier_Ben_Talent_03",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 4,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "Unblockable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopBlockStateAction"
+        }
+      ]
+    },
+    "NoDamageModifier_Branch_02": {
+      "Duration": 0.3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "PushBlockStateAction"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "NoDamageModifier_Branch_02",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "Unblockable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier_Ben_Talent_03",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 4,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "Unblockable"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopBlockStateAction"
+        }
+      ]
+    }
+  }
+}

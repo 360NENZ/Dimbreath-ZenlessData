@@ -1,0 +1,505 @@
+{
+  "AbilityName": "TestGraph_04",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Position": {
+        "x": 1713,
+        "y": -440,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1.3225,
+        "y": 1.3225,
+        "z": 1
+      }
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 0,
+        "ParametersBind": [],
+        "Position": {
+          "x": -946.08,
+          "y": 354
+        }
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 1,
+        "Position": {
+          "x": -819.08,
+          "y": 354
+        },
+        "PreActionBind": [
+          10,
+          7
+        ],
+        "Value": {
+          "BindId": 1004
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 2,
+        "Position": {
+          "x": -667.5718,
+          "y": 354.1436
+        },
+        "PreActionBind": [
+          7,
+          10
+        ],
+        "Value": {
+          "BindId": 1005
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 3,
+        "Position": {
+          "x": -509.8565,
+          "y": 353.713
+        },
+        "PreActionBind": [
+          8
+        ],
+        "Value": {
+          "BindId": 1010
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 14,
+        "Position": {
+          "x": -344.8565,
+          "y": 353.713
+        },
+        "PreActionBind": [
+          9
+        ],
+        "Value": {
+          "BindId": 1011
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1006,
+            1007
+          ]
+        },
+        "Position": {
+          "x": -732.0071,
+          "y": 504.4419
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1001
+          ]
+        },
+        "Position": {
+          "x": -1131.287,
+          "y": 506.7426
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1002,
+            1003
+          ]
+        },
+        "Position": {
+          "x": -1130.852,
+          "y": 603.7131
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_2"
+      },
+      {
+        "$type": "IntAddNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1000
+        },
+        "ParamTwo": {
+          "BindId": 1002
+        },
+        "Position": {
+          "x": -960.7107,
+          "y": 478.5809
+        },
+        "PreActionBind": [
+          5,
+          6
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1004
+          ]
+        }
+      },
+      {
+        "$type": "IntMulNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1006
+        },
+        "ParamTwo": {
+          "BindId": 1008
+        },
+        "Position": {
+          "x": -580.1345,
+          "y": 475.5513
+        },
+        "PreActionBind": [
+          4,
+          11
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1010
+          ]
+        }
+      },
+      {
+        "$type": "IntDivNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1007
+        },
+        "ParamTwo": {
+          "BindId": 1009
+        },
+        "Position": {
+          "x": -578.4852,
+          "y": 602.9909
+        },
+        "PreActionBind": [
+          11,
+          4
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1011
+          ]
+        }
+      },
+      {
+        "$type": "IntSubNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1003
+        },
+        "ParamTwo": {
+          "BindId": 1001
+        },
+        "Position": {
+          "x": -961.8565,
+          "y": 604.8566
+        },
+        "PreActionBind": [
+          5,
+          6
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1005
+          ]
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1008,
+            1009
+          ]
+        },
+        "Position": {
+          "x": -733.5124,
+          "y": 599.707
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_2"
+      },
+      {
+        "$type": "IntMaxNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1012
+        },
+        "ParamTwo": {
+          "BindId": 1014
+        },
+        "Position": {
+          "x": -246.0431,
+          "y": 476.3974
+        },
+        "PreActionBind": [
+          17,
+          16
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1016
+          ]
+        }
+      },
+      {
+        "$type": "IntMinNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1013
+        },
+        "ParamTwo": {
+          "BindId": 1015
+        },
+        "Position": {
+          "x": -246,
+          "y": 598
+        },
+        "PreActionBind": [
+          16,
+          17
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1017
+          ]
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 15,
+        "Position": {
+          "x": -183.5,
+          "y": 354
+        },
+        "PreActionBind": [
+          12
+        ],
+        "Value": {
+          "BindId": 1016
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 20,
+        "Position": {
+          "x": -22.5,
+          "y": 354
+        },
+        "PreActionBind": [
+          13
+        ],
+        "Value": {
+          "BindId": 1017
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1012,
+            1013
+          ]
+        },
+        "Position": {
+          "x": -395,
+          "y": 495.5
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1014,
+            1015
+          ]
+        },
+        "Position": {
+          "x": -394,
+          "y": 600
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_2"
+      },
+      {
+        "$type": "IntCompareNode",
+        "CompareType": "GreaterEqual",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1018
+        },
+        "ParamTwo": {
+          "BindId": 1020
+        },
+        "Position": {
+          "x": 92.15164,
+          "y": 476.685
+        },
+        "PreActionBind": [
+          19,
+          21
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1022
+          ]
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1018,
+            1019
+          ]
+        },
+        "Position": {
+          "x": -56.84834,
+          "y": 506.685
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_1"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 23,
+        "Position": {
+          "x": 158.2601,
+          "y": 353.685
+        },
+        "PreActionBind": [
+          18
+        ],
+        "Value": {
+          "BindId": 1022
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1020,
+            1021
+          ]
+        },
+        "Position": {
+          "x": -57.84834,
+          "y": 605.685
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Int_2"
+      },
+      {
+        "$type": "IntCompareNode",
+        "CompareType": "Less",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1019
+        },
+        "ParamTwo": {
+          "BindId": 1021
+        },
+        "Position": {
+          "x": 95.15164,
+          "y": 604.685
+        },
+        "PreActionBind": [
+          19,
+          21
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1023
+          ]
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "Position": {
+          "x": 324.6026,
+          "y": 354.0275
+        },
+        "PreActionBind": [
+          22
+        ],
+        "Value": {
+          "BindId": 1023
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueInt",
+          "Value": 3
+        },
+        "ElementType": "Integer",
+        "Key": "Int_1",
+        "Scope": "Auto",
+        "Type": "Integer"
+      },
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueInt",
+          "Value": 2
+        },
+        "ElementType": "Integer",
+        "Key": "Int_2",
+        "Scope": "Auto",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "AbilityName": "TestGraph_04",
+      "EventName": "OnStart"
+    }
+  ]
+}

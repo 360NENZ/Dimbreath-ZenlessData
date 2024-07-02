@@ -1,0 +1,30 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "KillTargetMixin",
+      "Actions": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": 0,
+          "Percentage": "%AddedPlayerCurHpPercent",
+          "Predicates": [
+            {
+              "$type": "ByMonsterFunctionType",
+              "CompareType": "Equal",
+              "MonsterFunctionType": "Monster",
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Follower_CurHP_Increase_KillEnemy",
+  "AbilitySpecials": {
+    "AddedPlayerCurHpPercent": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique"
+}

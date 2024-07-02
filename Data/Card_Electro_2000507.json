@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Card_Electro_2000507",
+  "AbilitySpecials": {},
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Electro_2000500",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": 1,
+                "ParamName": "AS_GetCard_2000507",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "Target": "Self"
+      }
+    ]
+  }
+}

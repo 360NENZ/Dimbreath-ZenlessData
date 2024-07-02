@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Device_Prop_SpawnBasiceSetting",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WarmUp"
+      }
+    ]
+  },
+  "Modifiers": {
+    "WarmUp": {
+      "Duration": 12,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_InOutBattle_Message_Immediately",
+          "IsAutoTrigger": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Device_Prop_AreaRelateStateChange",
+          "IsAutoTrigger": true,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "AbilityName": "Lucy_Encourage",
+  "AbilitySpecials": {
+    "AS_AddedCritDmgRatioDelta": {
+      "Value": 0,
+      "ValueType": "Float"
+    },
+    "AS_AtkDelta_Base": {
+      "Value": 5,
+      "ValueType": "Float"
+    },
+    "AS_AtkDelta_PerLevel": {
+      "Value": 5,
+      "ValueType": "Float"
+    },
+    "AS_AtkRatio_Base": {
+      "Value": 0.1,
+      "ValueType": "Float"
+    },
+    "AS_AtkRatio_PerLevel": {
+      "Value": 0.03,
+      "ValueType": "Float"
+    },
+    "AS_AttackIndex": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_Encourage_ExtraTime": {
+      "Value": 0,
+      "ValueType": "Float"
+    },
+    "AS_Encourage_HighBallTime": {
+      "Value": 0,
+      "ValueType": "Float"
+    },
+    "AS_Encourage_Time": {
+      "Value": 10,
+      "ValueType": "Float"
+    },
+    "AS_Encourage_TimeFinal": {
+      "Value": 0,
+      "ValueType": "Float"
+    },
+    "AS_ExtendTimes": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_FinialAtkDelta": {
+      "Value": 0,
+      "ValueType": "Float"
+    },
+    "AS_FinialAtkDeltaWood": {
+      "Value": 0,
+      "ValueType": "Float"
+    },
+    "AS_MaxAtkDelta": {
+      "Value": 700,
+      "ValueType": "Float"
+    },
+    "AS_WoodBuffRatio": {
+      "Value": 1.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CritDmgUpModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_AddedCritDmgRatioDelta"
+      }
+    },
+    "EncourageModifier": {
+      "Duration": "%AS_Encourage_TimeFinal",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "ReplaceByLongTime",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Lucy_Encourage",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Wood_Encourage_02_Flare",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Lucy_Encourage"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CritDmgUpModifier",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 4,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Lucy_Encourage"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CritDmgUpModifier",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_BaseAttackDelta": "%AS_FinialAtkDelta"
+      }
+    },
+    "EncourageWoodModifier": {
+      "Duration": "%AS_Encourage_TimeFinal",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "ReplaceByLongTime",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": "%AS_Encourage_TimeFinal",
+          "ParamName": "Float_Encourage_Time",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_Encourage",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": -1,
+          "ParamName": "Float_AttackCD_Current",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ModifyFunction": "Add",
+          "ParamName": "Int_SyncAttack",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Lucy_Encourage",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Wood_Encourage_02_Flare",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Lucy_Encourage"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CritDmgUpModifier",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 4,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Lucy_Encourage"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CritDmgUpModifier",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_BaseAttackDelta": "%AS_FinialAtkDeltaWood"
+      }
+    },
+    "Modifier_Encourage_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000041,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Encourage_TimeFinal",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "ReplaceByLongTime"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "min((property(Attack)*(specials(AS_AtkRatio_Base)+specials(AS_AtkRatio_PerLevel)*avatarskilllevel(1))+(specials(AS_AtkDelta_Base)+(specials(AS_AtkDelta_PerLevel)*avatarskilllevel(1)))),specials(AS_MaxAtkDelta))",
+      "ParamName": "AS_FinialAtkDelta",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_FinialAtkDelta)*specials(AS_WoodBuffRatio)",
+      "ParamName": "AS_FinialAtkDeltaWood",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_Encourage_Time)+specials(AS_Encourage_ExtraTime)+specials(AS_Encourage_HighBallTime)",
+      "ParamName": "AS_Encourage_TimeFinal",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "ModifierName": "EncourageWoodModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_01",
+      "ModifierName": "EncourageWoodModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 2,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_02",
+      "ModifierName": "EncourageWoodModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 3,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "ModifierName": "EncourageWoodModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_01",
+      "ModifierName": "EncourageWoodModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_02",
+      "ModifierName": "EncourageWoodModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "EncourageModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifier_Encourage_BuffIcon",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "EncourageModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "BuddyAllied"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": 0,
+      "ParamName": "AS_ExtendTimes",
+      "ParamType": "Integer",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 4,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByModifierDuration",
+          "CompareType": "GreaterEqual",
+          "CompareValue": 25.0,
+          "ModifierTargetType": "CurTargetAbility",
+          "Target": "Self",
+          "TargetModifier": "EncourageModifier"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "EncourageModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "TeamAvatars",
+          "Value": 5
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "EncourageModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "BuddyAllied",
+          "Value": 5
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ModifierName": "EncourageWoodModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "Custom",
+          "Value": 5
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ModifierName": "EncourageWoodModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "Custom",
+          "Value": 5
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ModifierName": "EncourageWoodModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "Custom",
+          "Value": 5
+        }
+      ],
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 5,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Less",
+          "Param": 3,
+          "ParamName": "AS_ExtendTimes",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "EncourageModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "TeamAvatars",
+          "Value": 30
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "EncourageModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "BuddyAllied",
+          "Value": 30
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ModifierName": "EncourageWoodModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "Custom",
+          "Value": 30
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ModifierName": "EncourageWoodModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "Custom",
+          "Value": 30
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ModifierName": "EncourageWoodModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "Custom",
+          "Value": 30
+        }
+      ]
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByModifierDuration",
+          "CompareType": "GreaterEqual",
+          "CompareValue": 25.0,
+          "ModifierTargetType": "CurTargetAbility",
+          "Target": "Self",
+          "TargetModifier": "Modifier_Encourage_BuffIcon"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "Modifier_Encourage_BuffIcon",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "TeamAvatars",
+          "Value": 5
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "Modifier_Encourage_BuffIcon",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Add",
+          "Target": "BuddyAllied",
+          "Value": 5
+        }
+      ],
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 5,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Less",
+          "Param": 3,
+          "ParamName": "AS_ExtendTimes",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "Modifier_Encourage_BuffIcon",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "TeamAvatars",
+          "Value": 30
+        },
+        {
+          "$type": "SetModifierDurationAction",
+          "ModifierName": "Modifier_Encourage_BuffIcon",
+          "ModifierTargetType": "CurTargetAbility",
+          "ModifyType": "Replace",
+          "Target": "BuddyAllied",
+          "Value": 30
+        }
+      ]
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Add",
+      "Param": 1,
+      "ParamName": "AS_ExtendTimes",
+      "ParamType": "Integer",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 5,
+          "ParamName": "AS_AttackIndex",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,810 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DelayActionList": [
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.12,
+                    "y": 0.0,
+                    "z": 0.16
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.0
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.12,
+                    "y": 0.0,
+                    "z": -0.3
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.067
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.38,
+                    "y": 0.0,
+                    "z": -0.16
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.133
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.85,
+                    "y": 0.0,
+                    "z": 0.32
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.2
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.6,
+                    "y": 0.0,
+                    "z": 0.16
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.267
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.86,
+                    "y": 0.0,
+                    "z": 0.16
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.333
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.4,
+                    "y": 0.0,
+                    "z": 0.56
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.4
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 1.11,
+                    "y": 0.0,
+                    "z": 0.4
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.467
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.31,
+                    "y": 0.0,
+                    "z": 0.51
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.533
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.62,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.6
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.34,
+                    "y": 0.0,
+                    "z": 0.31
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.667
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -0.46,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.733
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.14
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.8
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_10_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -1.0,
+                    "y": 0.0,
+                    "z": -0.28
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 0.867
+        },
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Bullet",
+              "EffectPattern": "Eff_Rina_Attack_ExSpecial_01_11_Trail",
+              "Target": "Self"
+            }
+          ],
+          "DelayTime": 1.017
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.15,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.217,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.283,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.35,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.417,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.483,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.55,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.617,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.683,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.75,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.817,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.883,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            }
+          ],
+          "DelayTime": 0.95,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_01"
+            },
+            {
+              "$type": "TriggerSoundAction",
+              "Target": "Other",
+              "soundActionKey": "Play_SFX_Char_Impact_Rina_Attack_Branch_02_02_01"
+            }
+          ],
+          "DelayTime": 1.167,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_02_01"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_01",
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 1.217,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_02_02"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Rina_Attack_Branch_02_CamShake_E_02",
+              "Target": "Other"
+            },
+            {
+              "$type": "GamepadRumbleAction",
+              "GamepadRumbleKey": "Rina_GamepadRumble_E_Branch_02_02"
+            }
+          ],
+          "DelayTime": 1.267,
+          "HitAnimEventID": "Rina_Anastacia_Attack_Branch_02_AttackProperty_02_03"
+        }
+      ],
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": -1,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 0.875,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeFixedSpeed",
+          "Speed": 20.0
+        },
+        "ReachTargetStop": false,
+        "TargetPosRot": {
+          "BackupCoordsOption": "Self",
+          "CoordsOption": "Relative",
+          "NeedRaycastGround": true,
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupPositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 10.0
+            },
+            "IsClampOffsetDistance": false,
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1.0
+            }
+          },
+          "RaycastGroundOffset": 0.0,
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "Self",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Stop"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_Attack_Branch_02_BulletType_01",
+  "AbilityStacking": "Unique"
+}

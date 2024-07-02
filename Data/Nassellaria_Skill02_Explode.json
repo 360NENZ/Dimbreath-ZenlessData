@@ -1,0 +1,158 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_2_Start",
+          "FrameCountLow": 105,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExplodeModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_2_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExplodeModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_2_End",
+          "FrameCountHigh": 87,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExplodeModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Skill02TimeModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_2_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nassellaria_Skill02_Explode",
+  "AbilitySpecials": {
+    "AS_LoopTime": {
+      "Value": 3
+    },
+    "AS_Ratio": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ExplodeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ether"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio_Ether",
+          "PropertyValue": "%AS_Ratio"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Nassellaria_Skill02_Explode_Bullet",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_2_End",
+                  "FrameCountLow": 87,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "Skill02TimeModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": "%AS_LoopTime",
+          "TimeUpActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Skill02TimeModifier",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Ether_Core",
+          "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_Loop_01_Aure",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Ether_Core",
+          "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_Loop_02_Trail",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "AbilityName": "Ability_WitchTime",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0
+    },
+    "DurationTime": {
+      "Value": 4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SignBuffModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnDodgeSuccess": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Ability_WitchTime"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    },
+    "BlockManagementModifier": {
+      "Block": 0,
+      "Duration": "%DurationTime",
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "WitchModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "WitchTime_Dodge",
+          "IsOpenBlock": true,
+          "ModifierName": "WitchModifier"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "WitchTime_Dodge",
+          "IsOpenBlock": true,
+          "ModifierName": "TeamEntityModifier"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "WitchTime_Dodge",
+          "IsOpenBlock": false,
+          "ModifierName": "TeamEntityModifier"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "WitchTime_Dodge",
+          "IsOpenBlock": false,
+          "ModifierName": "WitchModifier"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "WitchModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "WitchTime_Dodge",
+          "IsOpenBlock": true,
+          "ModifierName": "BlockManagementModifier"
+        }
+      ]
+    },
+    "InvincibleBuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Refresh"
+    },
+    "SignBuffModifier": {
+      "Buff": {
+        "BuffID": 2000001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "TeamEntityModifier": {
+      "Block": -1,
+      "Duration": 30,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BlockManagementModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "TargetKey": "DodgeWitchTimeEvent"
+        }
+      ]
+    },
+    "WitchModifier": {
+      "Block": -1,
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "WitchSlowDownMixin",
+          "CustomKey": "Avatar_Common_WitchSlowDown_AbilityTargetting_01",
+          "ExcludeTargets": "Custom",
+          "OnEnd": [
+            {
+              "$type": "ModifyMassRatioEndAction",
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerSoundAction",
+              "Target": "Self",
+              "soundActionKey": "Play_SFX_Char_Evade_Success_Hold_End"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "WithInWitchSlowDown_Monster"
+              ],
+              "IsAdd": false,
+              "Target": "EnemyAllied"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "WitchModifier",
+              "Target": "Self"
+            }
+          ],
+          "OnStart": [
+            {
+              "$type": "ModifyMassRatioAction",
+              "Ratio": -0.99,
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerSoundAction",
+              "Target": "Self",
+              "soundActionKey": "Play_SFX_Char_Evade_Success_Hold_Start"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "WithInWitchSlowDown_Monster"
+              ],
+              "IsAdd": true,
+              "Target": "EnemyAllied"
+            }
+          ],
+          "SlowDownKey": "HoldEvade_TimeSlow_01",
+          "TotalDuration": -1,
+          "WitchSlowDownRBLOffset": 0
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "SendCustomEvent",
+          "EventKey": "BUFF_WitchTime_Dodge_EventSend",
+          "IsGlobal": true,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "AttachModifier",
+          "ModifierName": "InvincibleBuffModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "WitchSlowDown_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "WitchSlowDown_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "WitchSlowDown_VREffects_01",
+          "EffectType": "VREffects"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "WitchSlowDown_ScreenEffects_01",
+          "EffectType": "ScreenEffects"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "WitchSlowDown_FXFog_01",
+          "EffectType": "FXFog"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "WitchSlowDown_ColorAdjustments_01",
+          "EffectType": "ColorAdjustments"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "SendCustomEvent",
+          "EventKey": "BUFF_WitchTime_Dodge_EventEnd",
+          "IsGlobal": true,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "WitchSlowDown_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "RadialBlur",
+          "TargetKey": "WitchSlowDown_RadialBlur_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "VREffects",
+          "TargetKey": "WitchSlowDown_VREffects_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "ScreenEffects",
+          "TargetKey": "WitchSlowDown_ScreenEffects_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "FXFog",
+          "TargetKey": "WitchSlowDown_FXFog_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "ColorAdjustments",
+          "TargetKey": "WitchSlowDown_ColorAdjustments_01"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TeamEntityModifier",
+      "Target": "TeamAvatars"
+    }
+  ]
+}

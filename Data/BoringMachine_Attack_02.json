@@ -1,0 +1,24 @@
+{
+  "AbilityName": "BoringMachine_Attack_02",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": true,
+        "ParamName": "Bool_AttackLanded",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_02_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

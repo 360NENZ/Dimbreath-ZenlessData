@@ -1,0 +1,185 @@
+{
+  "AbilityName": "Card_LimboGrowUp_1002201",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_AidAttack": {
+      "Value": 0.3
+    },
+    "AS_AddedDamageRatio_Current": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_PerCount": {
+      "Value": 0.05
+    },
+    "AS_AddedDamageRatio_UpLimit": {
+      "Value": 0.5
+    },
+    "AS_Duration_AidAttack": {
+      "Value": 10
+    },
+    "AS_HpRecoverCount": {
+      "Value": 0
+    },
+    "AS_RecoverHpRatio": {
+      "Value": 0.05
+    },
+    "BOOSTOn": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(StressOverloadCount)*specials(AS_AddedDamageRatio_PerCount)",
+        "ParamName": "AS_AddedDamageRatio_Current",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "AS_AddedDamageRatio_UpLimit",
+        "ParamName": "AS_AddedDamageRatio_Current",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": "AS_AddedDamageRatio_UpLimit",
+            "ParamName": "AS_AddedDamageRatio_Current",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_ChessBoard",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpRecoverModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnd",
+            "Predicates": [
+              {
+                "$type": "ByOr",
+                "Predicates": [
+                  {
+                    "$type": "ByFromSkillType",
+                    "SkillType": "EvadeAid",
+                    "Target": "Self"
+                  },
+                  {
+                    "$type": "ByFromSkillType",
+                    "SkillType": "ParryAid",
+                    "Target": "Self"
+                  }
+                ]
+              },
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 1,
+                "ParamName": "BOOSTOn",
+                "ParamType": "Integer",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByPlayerPropertyValue",
+                "CompareType": "Less",
+                "Denominator": "MaxHP",
+                "IsUsePercent": true,
+                "Numerator": "CurHP",
+                "Target": "Self",
+                "Val1": 1
+              },
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Less",
+                "Param": 6,
+                "ParamName": "AS_HpRecoverCount",
+                "ParamType": "Integer",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_AidAttack",
+        "Predicates": [
+          {
+            "$type": "ByAnd",
+            "Predicates": [
+              {
+                "$type": "ByOr",
+                "Predicates": [
+                  {
+                    "$type": "ByFromSkillType",
+                    "SkillType": "EvadeAid",
+                    "Target": "Self"
+                  },
+                  {
+                    "$type": "ByFromSkillType",
+                    "SkillType": "ParryAid",
+                    "Target": "Self"
+                  }
+                ]
+              },
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 1,
+                "ParamName": "BOOSTOn",
+                "ParamType": "Integer",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_AidAttack": {
+      "Duration": "%AS_Duration_AidAttack",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_AidAttack"
+      }
+    },
+    "AddedDamageRatioModifier_ChessBoard": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_Current"
+      }
+    },
+    "HpRecoverModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Percentage": "%AS_RecoverHpRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_HpRecoverCount)+1",
+          "ParamName": "AS_HpRecoverCount",
+          "ValueType": "Integer"
+        }
+      ]
+    }
+  }
+}

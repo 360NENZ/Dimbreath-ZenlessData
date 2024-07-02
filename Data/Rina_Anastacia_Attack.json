@@ -1,0 +1,1546 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "GhostModifier_NeedMove"
+          ],
+          "ZoneTag": "Command_NeedMove"
+        },
+        {
+          "ModifierNameList": [
+            "GhostModifier_FastMove"
+          ],
+          "ZoneTag": "Command_FastMove"
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle_AFK_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Idle_AFK_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Taunt"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Taunt_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "QuestStart",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_QuestStart"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Evade"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Evade"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front_Hold",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Evade"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Evade"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Back_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Evade"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Rush"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Rush"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Counter"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_BeHitAid"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_EvadeAid"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid_NotSuccess",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_EvadeAid"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_EvadeAid"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_AssaultAid"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 6,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Branch_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 6,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Branch_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Branch_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Attack_Branch_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Normal",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_SwitchIn_Normal"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Revive"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Idle_AFK",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Idle_AFK_01",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Taunt",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_TauntIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Taunt",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Taunt",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 2,
+              "ParamName": "Int_TauntIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Taunt_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_QuestStart",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "QuestStart",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PerformModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01",
+          "Frame": 6,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PerformModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02",
+          "Frame": 6,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PerformModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "Frame": 6,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_AttackIndex_Sub",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01",
+          "Frame": 6,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 2,
+              "ParamName": "Int_AttackIndex_Sub",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01",
+          "Frame": 38,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_Branch_02",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_AttackIndex_Sub",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02",
+          "Frame": 6,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_Branch_02",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 2,
+              "ParamName": "Int_AttackIndex_Sub",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02",
+          "Frame": 42,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_Branch_03",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_03",
+          "Frame": 14,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 3,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "Frame": 6,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 4,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04",
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_Rush",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 11,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush",
+          "Frame": 26,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 11,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_02",
+          "Frame": 26,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_Counter",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 21,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter",
+          "Frame": 16,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_BeHitAid",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 30,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid",
+          "Frame": 26,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_EvadeAid",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_EvadeAid",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_EvadeAid",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_EvadeAid_NotSuccess",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Attack_AssaultAid",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 52,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid",
+          "Frame": 20,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchOut",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchIn_Attack",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 51,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack",
+          "Frame": 36,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SelfAttackTargetModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchOut",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchIn_Attack_Ex",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 61,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "Frame": 1,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Evade_Front_02",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Evade_Front_02",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Evade_Back",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Evade_Back",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Evade_Back",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Evade_Back_02",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Die",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Death",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Die",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Dying",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Revive",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Bool_IsMultiplayer",
+              "ParamType": 2,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Revive_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_Revive",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Bool_IsMultiplayer",
+              "ParamType": 2,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Revive_Multiplayer",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchOut",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchIn",
+              "ParamType": 1,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Normal",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchOut",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 0,
+              "ParamName": "Int_SwitchType_Out",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Normal",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "ParamName": "Trigger_SwitchOut",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_SwitchType_Out",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Attack",
+          "Frame": 0,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_Attack",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSwitchInBegin": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+        "ParamName": "Trigger_SwitchOut",
+        "ParamType": 1,
+        "Target": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GhostModifier_FastMove": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Bool_FastMoving",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Bool_FastMoving",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_AssaultAid": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_BeHitAid": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_Branch_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_Branch_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_Branch_03": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_Counter": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_EvadeAid": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Attack_Rush": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Evade": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Idle_AFK_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_QuestStart": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Revive": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_SwitchIn_Normal": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Taunt": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_Interrupted_Taunt_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GhostModifier_NeedMove": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Bool_NeedMoving",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Bool_NeedMoving",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "PerformModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ParamName": "Trigger_Perform",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.5,
+          "OnFailure": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 2,
+              "ParamName": "Int_PerformIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_PerformIndex",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SelfAttackTargetModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Attack_Target"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Attack_Target"
+          ],
+          "IsAdd": true,
+          "Target": "SelfAttackTarget"
+        },
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "OnlySetOnNull": false,
+          "Source": "Self",
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

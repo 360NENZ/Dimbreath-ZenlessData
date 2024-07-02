@@ -1,0 +1,21 @@
+{
+  "AbilityName": "GamePlayDestructionTest_MonsterInvincible",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": -1,
+    "IgnoreTimeScale": true,
+    "ModifierStacking": "Refresh",
+    "OnAdded": [
+      {
+        "$type": "PushInvincibleAction",
+        "Tag": "Player_Default_PerfectEvade_Invincible"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "PopInvincibleAction",
+        "Tag": "Player_Default_PerfectEvade_Invincible"
+      }
+    ]
+  }
+}

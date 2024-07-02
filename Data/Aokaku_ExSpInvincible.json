@@ -1,0 +1,110 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "InvincibleModifier",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Equal",
+                  "IntVal": 1,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSp_Invincible"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop_01",
+          "FrameCountHigh": 17,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSp_Invincible"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_ExSpInvincible",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ExSp_Invincible": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "InvincibleModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvincibleModifier": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Aokaku_ExSpInvincible",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsBlockEvade",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Aokaku_ExSpInvincible",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsBlockEvade",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

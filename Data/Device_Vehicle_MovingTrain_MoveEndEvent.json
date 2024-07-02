@@ -1,0 +1,60 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Move_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MoveEndEventModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Move_End_Reverse",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MoveEndEventModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Move_End_Crash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MoveEndEventModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Vehicle_MovingTrain_MoveEndEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MoveEndEventModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [],
+      "OnRemoved": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "MovingTrain_MoveEnd"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "InheritPropertyMap": {
+        "Attack": {
+          "InheritType": "MasterTemplate",
+          "Percentage": 1.0
+        }
+      },
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_EnterAlertState",
+          "ParamType": 1,
+          "Target": "Target"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_WarningLength",
+          "ParamType": 3,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199140811,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "MinePoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "SummonTag": [
+        "HeavyFirePower_ATK6_Mine"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "HeavyFirePower_ATK6_Mine",
+  "AbilityStacking": "Unique"
+}

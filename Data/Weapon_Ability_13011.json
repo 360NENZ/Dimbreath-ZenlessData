@@ -1,0 +1,70 @@
+{
+  "AbilityName": "Weapon_Ability_13011",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.15
+    },
+    "AS_Duration": {
+      "Value": 12.0
+    },
+    "AS_SPGetRatio": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpGetRatioModifier_Weapon_Ability_13011",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutBegin": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpGetRatioModifier_Weapon_Ability_13011",
+        "Predicates": [
+          {
+            "$type": "ByHasModifier",
+            "ModifierCaster": "Caster",
+            "ModifierNameList": [
+              "SpGetRatioModifier_Weapon_Ability_13011"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "LocalAvatar"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "SpGetRatioModifier_Weapon_Ability_13011",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    },
+    "SpGetRatioModifier_Weapon_Ability_13011": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_SPGetRatio": "%AS_SPGetRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 3,
+      "AudioEffect": "",
+      "BeamEffectEndClip": "Eff_Monster_Cottus_P2_Attack_09_Beam_End",
+      "BeamEffectLoopClip": "Eff_Monster_Cottus_P2_Attack_09_Beam",
+      "BlockCameraShake": "Monster_Cottus_ATK09_CamShake_E_02",
+      "BlockColliderRadius": 0,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Monster_Cottus_P2_Attack_09_Burst"
+      },
+      "BlockEffectEndClip": "Eff_Monster_Cottus_P2_Attack_09_Burst_End",
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.85
+      },
+      "EffectName": "Eff_Monster_Cottus_P2_Attack_09_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Monster_Cottus_P2_Attack_09_Burst"
+      },
+      "FadeRatio": 0.3,
+      "FirstHitDelayTime": 0.2,
+      "HitAnimEventID": "Monster_Cottus_P2_ATK09_Attackproperty_01",
+      "HitColliderRadius": 0.5,
+      "HitEffect": {
+        "EffectPattern": ""
+      },
+      "HitInterval": 1.0,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "InterruptAnimationSpeed": 1.5,
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "HeadPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 100,
+      "OnLaserInterruptAction": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Cottus_P2_Attack_09_Burst"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.2,
+          "Target": "Self"
+        }
+      ],
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      },
+      "Tag": "Cottus_P2_ATK09_Laser"
+    }
+  ],
+  "AbilityName": "Cottus_P2_ATK09_Laser",
+  "AbilityStacking": "Unique"
+}

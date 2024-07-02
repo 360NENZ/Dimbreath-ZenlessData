@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Card_DailyUse_11009480",
+  "AbilitySpecials": {
+    "AddedEnemyHPRatio_01": {
+      "Value": 0.3
+    },
+    "BattleCount_Card1100948": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(BattleCount_Card1100948)",
+        "ParamName": "BattleCount_Card1100948",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "DecreaseHPAction",
+        "Amount": 0,
+        "Percentage": "%AddedEnemyHPRatio_01",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "LessEqual",
+            "Param": 3,
+            "ParamName": "BattleCount_Card1100948",
+            "ParamType": "Float",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "BattleCount_Card1100948",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

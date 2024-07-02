@@ -1,0 +1,169 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "RefPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ModifyProperty",
+                  "Amount": 1,
+                  "CustomPropertyType": "AllowCounterAttack",
+                  "IsUsePercentage": false,
+                  "PropertyModifyFunction": "Replace",
+                  "PropertyType": "Custom"
+                }
+              ],
+              "Val": 0.6
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ModifyProperty",
+                  "Amount": 1,
+                  "CustomPropertyType": "AllowCounterAttack",
+                  "IsUsePercentage": false,
+                  "PropertyModifyFunction": "Replace",
+                  "PropertyType": "Custom"
+                }
+              ],
+              "Val": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "AllowCounterAttack",
+          "CustomReferMaxPropertyType": "MaxAllowCounterAttack",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "AttachModifier",
+                  "ModifierName": "CounterAttackModifier",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "Val": 1,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "CounterAttackModifier",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ThugBulkyAbuser_Ability_Attack_04",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CounterAttackModifier": {
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_CounterAttack",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "CounterAttackPredicates"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyProperty",
+      "Amount": 1,
+      "CustomPropertyType": "AllowCounterAttack",
+      "IsUsePercentage": false,
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    }
+  ],
+  "Predicates": {
+    "CounterAttackPredicates": {
+      "Predicates": [
+        {
+          "$type": "ByHeavyAttack",
+          "IsHeavyAttack": true
+        },
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Idle"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Move"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "Normal"
+              ]
+            },
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "Branch"
+              ]
+            },
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "Rush"
+              ]
+            },
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "NormalSp"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "BySkillReady",
+          "SkillName": "Monster_ThugBulkyAbuser_ATK4",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

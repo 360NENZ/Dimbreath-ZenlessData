@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Abyss_FixedLayerBuff_08",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.2
+    },
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbyssLayer08_BreakStunUpModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbyssLayer08_StunDmgTakeModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbyssLayer08_StunDmgTakeModifier",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbyssLayer08_BreakStunUpModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BreakStunRatio": "%AS_BreakStunRatio"
+      }
+    },
+    "AbyssLayer08_StunDmgTakeModifier": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": 1,
+              "CustomPropertyType": "OokChargePoint",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_06",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": 1,
+              "CustomPropertyType": "OokChargePoint",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_Normal_06",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "OokumaMari_Talent_03",
+  "AbilitySpecials": {
+    "AS_DamagRatioUpFinal_Talent_03": {
+      "Value": 0
+    },
+    "AS_DamagRatioUp_Talent_03": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "PredicateAddDamage"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_DamagRatioUpFinal_Talent_03",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": 0,
+        "CustomPropertyType": "OokChargePoint",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "PredicateAddDamage"
+          }
+        ],
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(OokChargePoint)*specials(AS_DamagRatioUp_Talent_03)",
+        "ParamName": "AS_DamagRatioUpFinal_Talent_03",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  },
+  "Predicates": {
+    "PredicateAddDamage": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "OokumaMari_Attack_QTE_AttackProperty_01",
+            "OokumaMari_Attack_QTE_AttackProperty_02",
+            "OokumaMari_Attack_QTE_AttackProperty_03",
+            "OokumaMari_Attack_QTE_AttackProperty_04",
+            "OokumaMari_Attack_ExQTE_AttackProperty_01",
+            "OokumaMari_Attack_ExQTE_AttackProperty_02",
+            "OokumaMari_Attack_ExQTE_AttackProperty_03",
+            "OokumaMari_Attack_ExQTE_AttackProperty_04",
+            "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_01",
+            "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_02",
+            "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_03",
+            "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_04",
+            "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_05",
+            "OokumaMari_CoAttack_SwitchIn_Attack_Ex_AttackProperty_06"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

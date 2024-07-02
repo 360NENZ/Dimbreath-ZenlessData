@@ -1,0 +1,106 @@
+{
+  "AbilityName": "Weapon_Ability_13001",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_PerCount": {
+      "Value": 0.15
+    },
+    "AS_AddedDamageRatio_Total": {
+      "Value": 0
+    },
+    "AS_CurrentCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackQTE",
+              "ExQTE"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_Total",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_CurrentCount)+1",
+          "ParamName": "AS_CurrentCount",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_AddedDamageRatio_PerCount)*min(specials(AS_CurrentCount),3)",
+          "ParamName": "AS_AddedDamageRatio_Total",
+          "Predicates": [
+            {
+              "$type": "ByIsModifierCaster",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "0",
+          "ParamName": "AS_CurrentCount",
+          "Predicates": [
+            {
+              "$type": "ByIsModifierCaster",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Integer"
+        }
+      ]
+    }
+  }
+}

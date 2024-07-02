@@ -1,0 +1,74 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_7",
+          "FrameCountHigh": 92,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaknessWindowModifer_Controller"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Goblin_ATK07_WeaknessWindow",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": 1
+    },
+    "WeaknessWindowModifer_Controller": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "WeaknessWindowModifer_Effect",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial"
+              ]
+            }
+          ],
+          "Target": "Target"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "WeaknessWindowModifer_Effect",
+          "Target": "Target"
+        }
+      ]
+    },
+    "WeaknessWindowModifer_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunBuffModifier",
+          "Target": "Caster"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

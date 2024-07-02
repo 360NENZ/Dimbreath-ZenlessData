@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_Toy_2002111",
+  "AbilitySpecials": {
+    "AS_PenRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyAbnormalModifier_Card_2111",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyAbnormalModifier_Card_2111": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_PenRatio": "%AS_PenRatio"
+      }
+    }
+  }
+}

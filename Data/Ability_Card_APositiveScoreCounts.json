@@ -1,0 +1,203 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Hit_L_F",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitLightModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "TeamAvatars"
+        },
+        {
+          "AnimatorStateName": "Hit_L_B",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitLightModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "TeamAvatars"
+        },
+        {
+          "AnimatorStateName": "Hit_H_F",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitHeavyModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "TeamAvatars"
+        },
+        {
+          "AnimatorStateName": "Hit_H_B",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitHeavyModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "TeamAvatars"
+        },
+        {
+          "AnimatorStateName": "HitFly_F",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitFlyModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "TeamAvatars"
+        },
+        {
+          "AnimatorStateName": "HitFly_B",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitFlyModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ability_Card_APositiveScoreCounts",
+  "AbilitySpecials": {
+    "AS_CounterHitScore": {
+      "Value": 10.0
+    },
+    "AS_HitFlyScore": {
+      "Value": -30.0
+    },
+    "AS_HitHeavyScore": {
+      "Value": -15.0
+    },
+    "AS_HitLightScore": {
+      "Value": -5.0
+    },
+    "AS_HitScore": {
+      "Value": 3.0
+    },
+    "AS_PositiveScore": {
+      "Value": 0
+    },
+    "AS_ThinkIntervalScore": {
+      "Value": -1.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnCounterHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CounterHitModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HitOtherModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnThinkInterval": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ThinkIntervalModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CounterHitModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_CounterHitScore",
+          "ParamName": "AS_PositiveScore",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "HitFlyModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_HitFlyScore",
+          "ParamName": "AS_PositiveScore",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "HitHeavyModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_HitHeavyScore",
+          "ParamName": "AS_PositiveScore",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "HitLightModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_HitLightScore",
+          "ParamName": "AS_PositiveScore",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "HitOtherModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_HitScore",
+          "ParamName": "AS_PositiveScore",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "ThinkIntervalModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_ThinkIntervalScore",
+          "ParamName": "AS_PositiveScore",
+          "ParamType": "Float"
+        }
+      ]
+    }
+  }
+}

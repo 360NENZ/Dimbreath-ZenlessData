@@ -1,0 +1,60 @@
+{
+  "AbilityName": "LevelItem_ItemInvisable",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "InLevelItem_Prop_TimeItem_01"
+      ],
+      "Tag": "LevelItem_ItemInvisable",
+      "Target": "Self",
+      "Visible": false
+    },
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "InLevelItem_Prop_SwitchItem_01"
+      ],
+      "Tag": "LevelItem_ItemInvisable",
+      "Target": "Self",
+      "Visible": false
+    },
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "InLevelItem_Prop_ResourceItem_01"
+      ],
+      "Tag": "LevelItem_ItemInvisable",
+      "Target": "Self",
+      "Visible": false
+    },
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "InLevelItem_Prop_ResourceItem_02"
+      ],
+      "Tag": "LevelItem_ItemInvisable",
+      "Target": "Self",
+      "Visible": false
+    },
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "InLevelItem_Prop_ResourceItem_03"
+      ],
+      "Tag": "LevelItem_ItemInvisable",
+      "Target": "Self",
+      "Visible": false
+    },
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "InLevelItem_Prop_ReviveItem_01"
+      ],
+      "Tag": "LevelItem_ItemInvisable",
+      "Target": "Self",
+      "Visible": false
+    }
+  ]
+}

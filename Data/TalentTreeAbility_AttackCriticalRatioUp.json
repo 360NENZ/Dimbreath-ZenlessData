@@ -1,0 +1,19 @@
+{
+  "AbilityName": "TalentTreeAbility_AttackCriticalDmgUp",
+  "AbilitySpecials": {
+    "AddedCriticalDamageRatio": {
+      "Value": 0.025
+    },
+    "AddedPlayerAttackRatio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedPlayerAttackRatio",
+      "Actor_CriticalDamageRatioRatio": "%AddedCriticalDamageRatio"
+    }
+  }
+}

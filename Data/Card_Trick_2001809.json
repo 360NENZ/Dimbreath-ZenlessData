@@ -1,0 +1,237 @@
+{
+  "AbilityName": "Card_Trick_2001809",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazuPlayer",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByMonsterFunctionType",
+                "CompareType": "Equal",
+                "MonsterFunctionType": "Monster",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazuMonster",
+        "Predicates": [
+          {
+            "$type": "ByMonsterFunctionType",
+            "CompareType": "Equal",
+            "MonsterFunctionType": "Monster",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvatarLockLifeModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "DeltaLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ],
+          "OnLifeLockedActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Whosyourdaddy",
+              "Target": "Self"
+            }
+          ],
+          "PerformBeHitEffect": true
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "CauseHiisazuMonster": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAliveState",
+              "AliveState": "Alive",
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_Hiisazu",
+          "PropertyValue": 2,
+          "Target": "Target"
+        }
+      ]
+    },
+    "CauseHiisazuPlayer": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Controller",
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE"
+              ]
+            },
+            {
+              "$type": "ByAliveState",
+              "AliveState": "Alive",
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_Hiisazu",
+          "PropertyValue": 1,
+          "Target": "Target"
+        }
+      ]
+    },
+    "Controller": {
+      "Block": -1,
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AvatarLockLifeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Invincible": {
+      "Duration": 1.5,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Refresh",
+      "OnAttackLanded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Player_Default_PerfectEvade_Invincible"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Player_Default_PerfectEvade_Invincible"
+        }
+      ]
+    },
+    "Whosyourdaddy": {
+      "Duration": 0.7,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Player_LowHP_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Player_LowHP_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Player_LowHP_CamStretch_01"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Player_LowHP_Glitch_01",
+          "EffectType": "Glitch"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_Medical_1000608",
+          "IsOpenBlock": true,
+          "ModifierName": "Controller"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Invincible",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AvatarLockLifeModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "TargetKey": "Player_LowHP_TimeSlow_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Player_LowHP_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Player_LowHP_CamStretch_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "Player_LowHP_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "Player_LowHP_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Glitch",
+          "TargetKey": "Player_LowHP_Glitch_01"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Percentage": 0.05,
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Whosyourdaddy",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

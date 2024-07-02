@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Affix_ShieldValueUp",
+  "AbilitySpecials": {
+    "ShieldValueRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "ShieldValue_Ratio": "%ShieldValueRatio"
+    }
+  }
+}

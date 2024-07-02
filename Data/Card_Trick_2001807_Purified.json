@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Card_Trick_2001807_Purified",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_BuffDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "AbilityName": "GamePlay_HpReduceRecover",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.1
+    },
+    "HpRecoverPercentage": {
+      "Value": 0.04
+    },
+    "HpReduceAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpReduceModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HPRecoverModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HPRecoverModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": 0,
+          "Percentage": "%HpRecoverPercentage",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HpReduceModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(HpPercentage)*property(MaxHP)",
+          "ParamName": "HpReduceAmount",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "ValueType": "Float"
+        },
+        {
+          "$type": "DecreaseHPAction",
+          "Amount": "%HpReduceAmount",
+          "IgnoreInvincible": "true",
+          "IgnoreLifeLock": "true",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 1
+    }
+  }
+}

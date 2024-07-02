@@ -1,0 +1,134 @@
+{
+  "AbilityName": "GamePlaySUMO_OutRangeDie",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OutRangeDie_Modifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OutRangeDie_Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 10,
+            "FanCylinderColliderRadius": 6,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "EndEffectPattern": "Eff_Bangboo_Field_Death_End_02",
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "OutRangeDie_Trigger_Mark",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "OutRangeDie_Trigger_Mark",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": true,
+          "LoopEffectPattern": "Eff_Bangboo_Field_Death_Start_02",
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "OutRangeDie_Trigger_Mark": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_LivingState",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

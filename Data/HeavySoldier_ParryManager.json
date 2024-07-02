@@ -1,0 +1,199 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Up",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Down",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Left",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P1_Hit_Ground_Light_Front_Right",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P1_Hit_Ground_Stay_Front",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitCountModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P1_Hit_Ground_Heavy_Front",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "HeavySoldier_ParryManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHitPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HeavyParryModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByHeavyParry"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HeavyParryModifier": {
+      "Duration": 10,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HitCountModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_CounterReady",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitCountModifier": {
+      "Duration": 5.0,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  },
+  "Predicates": {
+    "ByHeavyParry": {
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "CounterReady"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByIsStunDestroyed",
+          "IsStunDestroyed": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "ByHitAngleRange",
+          "AngleMax": 135.0,
+          "AngleMin": 45.0
+        },
+        {
+          "$type": "ByDistance",
+          "CompareTarget": "Self",
+          "CompareType": "Less",
+          "Distance": 4,
+          "Target": "Target"
+        },
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Promote"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByModifierStackCount",
+          "CompareType": "GreaterEqual",
+          "CountModifierType": "CurTargetAbility",
+          "ModifierName": "HitCountModifier",
+          "StackCount": 5,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

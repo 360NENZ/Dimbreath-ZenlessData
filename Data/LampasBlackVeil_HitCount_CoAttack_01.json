@@ -1,0 +1,79 @@
+{
+  "AbilityName": "LampasBlackVeil_HitCount_CoAttack_01",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_LampasBlackVeil_CoAttack_01_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_01",
+              "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_HeavyHit",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_LampasBlackVeil_CoAttack_01_HitCount",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_01",
+              "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_LampasBlackVeil_CoAttack_01_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_LampasBlackVeil_CoAttack_01_HitCount",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_01",
+              "Monster_LampasBlackVeil_CoAttack_01_A_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 5,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_LampasBlackVeil_CoAttack_01_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

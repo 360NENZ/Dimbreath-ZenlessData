@@ -1,0 +1,148 @@
+{
+  "AbilityName": "Weapon_Ability_14124",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.45
+    },
+    "AS_ChargePoint": {
+      "Value": 0
+    },
+    "AS_CriticalDelta": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDeltaModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Normal"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Rush"
+                ]
+              }
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "AS_ChargePoint",
+            "ParamType": "Integer",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierName": "AddedDamageRatioModifier",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "8",
+        "ParamName": "AS_ChargePoint",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self",
+        "ValueType": "Integer"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ChargePoint)-1",
+          "ParamName": "AS_ChargePoint",
+          "Target": "Self",
+          "ValueType": "Integer"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Normal"
+                  ]
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Rush"
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CriticalDeltaModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CriticalDelta"
+      }
+    }
+  }
+}

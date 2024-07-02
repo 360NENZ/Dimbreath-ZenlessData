@@ -1,0 +1,63 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "InheritPropertyMap": {
+        "Attack": {
+          "InheritType": "MasterTemplate",
+          "Percentage": 10.0
+        }
+      },
+      "OnSummonTimesUpActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 5,
+      "SummonID": 101110111,
+      "SummonPosRot": {
+        "CoordsOption": "Self",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 4.0,
+            "y": 0.0,
+            "z": 4.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "SummonTag": [
+        "Test"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 5
+    }
+  ],
+  "AbilityName": "Core_Summon",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,44 @@
+{
+  "AbilityName": "MaterialHandler_PartDamage",
+  "AbilitySpecials": {
+    "AS_PartDestroy_Leg_HPPercentage": {
+      "Value": 0
+    },
+    "HpReduceAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_PartDestroy_Leg_HPPercentage)*property(MaxHP)",
+        "ParamName": "HpReduceAmount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_MaterialHandler_PartDestroyed_Leg_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ReplaceDamageAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_MaterialHandler_PartDestroyed_Leg_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "TargetDamage": "%HpReduceAmount"
+      }
+    ]
+  }
+}

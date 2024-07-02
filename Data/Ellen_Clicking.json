@@ -1,0 +1,126 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 0.1,
+              "Target": "Self",
+              "TriggerActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_Dash",
+                  "ParamType": 1,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 1
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 0.1,
+              "Target": "Self",
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ClickingModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_03",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_03",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_AssaultAid",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 0
+        }
+      ],
+      "Target": "Self"
+    }
+  ],
+  "AbilityName": "Ellen_Clicking",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ClickingModifier": {
+      "Duration": 0.25,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Bool_IsClicking",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Bool_IsClicking",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ClickingModifier",
+      "Target": "Self"
+    }
+  ]
+}

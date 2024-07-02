@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Bangboo_Bangvolver_QTE_Random",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RandomOperator",
+      "Odds": 0.333,
+      "OnFailure": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.5,
+          "OnFailure": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_QTEType",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_QTEType",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSuccess": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_QTEType",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

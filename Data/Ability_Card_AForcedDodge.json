@@ -1,0 +1,323 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Hit_L_F",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HitLModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Hit_L_B",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HitLModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Hit_H_F",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HitHModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Hit_H_B",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HitHModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "HitFly_F",
+          "FrameCountHigh": 12,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HitFlyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "HitFly_B",
+          "FrameCountHigh": 12,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HitFlyModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ability_Card_AForcedDodge",
+  "AbilitySpecials": {
+    "AS_AfterDamageHp": {
+      "Value": 0
+    },
+    "AS_BeforeDamageHp": {
+      "Value": 0
+    },
+    "AS_ForcedDodgeCD": {
+      "Value": 0.8
+    },
+    "AS_LostHP": {
+      "Value": 0
+    },
+    "AS_RecoverHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_BeforeDamageHp",
+        "Percentage": 1.0,
+        "PropertyType": "CurHP",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ForcedDodgeActionsModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "DodgeEffectModifier"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AllowForcedDodgeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ForcedDodge",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_ForcedDodge",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DodgeEffectModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DodgeEffectModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "ForcedDodgeActionsModifier": {
+      "Duration": "%AS_ForcedDodgeCD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DodgeEffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_PerfectEvade_AForcedDodge_01_Cube",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "ForcedDodge_Outline",
+          "Target": "Self",
+          "key": "Eff_PerfectEvade_AForcedDodge_OutLine_01"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_AfterDamageHp",
+          "Percentage": 1.0,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BeforeDamageHp)-specials(AS_AfterDamageHp)",
+          "ParamName": "AS_LostHP",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_LostHP)*0.5",
+          "ParamName": "AS_RecoverHP",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%AS_RecoverHP",
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "ForcedDodge_Outline",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitFlyModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AllowForcedDodgeModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "ForcedDodgeActionsModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AllowForcedDodgeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitHModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AllowForcedDodgeModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "ForcedDodgeActionsModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AllowForcedDodgeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitLModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AllowForcedDodgeModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "ForcedDodgeActionsModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AllowForcedDodgeModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

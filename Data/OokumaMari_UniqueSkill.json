@@ -1,0 +1,59 @@
+{
+  "AbilityName": "OokumaMari_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "OokumaMari_Attack_Normal_05_AttackProperty_01",
+            "OokumaMari_Attack_Normal_06_AttackProperty_01",
+            "OokumaMari_Attack_Normal_06_AttackProperty_02",
+            "OokumaMari_Attack_Normal_06_AttackProperty_03",
+            "OokumaMari_CoAttack_Normal_06_AttackProperty_01",
+            "OokumaMari_CoAttack_Normal_06_AttackProperty_02",
+            "OokumaMari_CoAttack_Normal_06_AttackProperty_03"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

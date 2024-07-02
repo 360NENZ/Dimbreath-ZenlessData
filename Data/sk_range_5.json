@@ -1,0 +1,108 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "axisInfos": [
+        {
+          "axis": 2,
+          "baseValue": 0.4,
+          "curve": {
+            "keys": [
+              {
+                "inTangent": -7.278987,
+                "inWeight": 0.0,
+                "outTangent": -7.278987,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": 0.0,
+                "value": 0.0,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -0.0270697586,
+                "inWeight": 0.333333343,
+                "outTangent": -0.0270697586,
+                "outWeight": 0.157570884,
+                "tangentMode": 0,
+                "time": 0.06936169,
+                "value": -0.5048828,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 0.542512357,
+                "inWeight": 0.333333343,
+                "outTangent": 0.542512357,
+                "outWeight": 0.0,
+                "tangentMode": 34,
+                "time": 1.0,
+                "value": 0.0,
+                "weightedMode": 0
+              }
+            ],
+            "length": 3,
+            "postWrapMode": 8,
+            "preWrapMode": 8
+          },
+          "param": {
+            "param1": 0,
+            "param2": 0
+          }
+        }
+      ],
+      "brakeDestroy": false,
+      "effectType": 1,
+      "endFrame": 9,
+      "idx": -1750591232,
+      "moveType": 1,
+      "pos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "bullet": 0,
+      "effectType": 5,
+      "endFrame": 2,
+      "idx": 1102534272,
+      "startFrame": 1,
+      "trackOrder": 1
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 10,
+  "frameRate": 40,
+  "loop": false,
+  "modelPath": "Assets/Scenes/Stage_SkyScraper/DemoMesh/Cube_059_Cube_028.fbx",
+  "partLoop": false,
+  "seqName": "sk_range_5",
+  "speedParams": {
+    "param1": 0,
+    "param2": 100000
+  },
+  "topSpeed": 99.0,
+  "totalTime": 0.25,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Position",
+      "trackType": 1
+    },
+    {
+      "order": 1,
+      "trackID": 2,
+      "trackName": "子弹",
+      "trackType": 5
+    }
+  ]
+}

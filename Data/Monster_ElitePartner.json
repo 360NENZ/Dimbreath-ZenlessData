@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Monster_ElitePartner",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AttackMessageModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isPartnerAttacking",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "isPartnerAttacking",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Monster_ElitePartner",
+      "ModifierName": "AttackMessageModifier",
+      "Predicates": [
+        {
+          "$type": "ByMonsterStrengthType",
+          "CompareType": "GreaterEqual",
+          "StrengthType": "Elite"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

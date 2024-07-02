@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Card_DailyUse_1000901",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.4
+    },
+    "DamageTakeRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedDamageRatio",
+      "Actor_DamageTakeRatio": "%DamageTakeRatio"
+    }
+  }
+}

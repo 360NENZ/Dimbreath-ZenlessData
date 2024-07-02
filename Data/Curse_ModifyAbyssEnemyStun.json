@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Curse_ModifyAbyssEnemyStun",
+  "AbilitySpecials": {
+    "AddStunMaxRatio": {
+      "Value": 0
+    },
+    "StunDestroyRecoverRate_Ratio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_StunDestroyRecoverRate_Ratio": "%StunDestroyRecoverRate_Ratio",
+      "Actor_StunMaxRatio": "%AddStunMaxRatio"
+    }
+  }
+}

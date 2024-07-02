@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Aokaku_PreHitDetect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Aokaku_Attack_Counter_AttackProperty_Pre_01",
+              "Aokaku_Attack_BeHitAid_AttackProperty_Pre_01"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

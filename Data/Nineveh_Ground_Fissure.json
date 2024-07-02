@@ -1,0 +1,178 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Ultimate_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Invert",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Invert_ATK_1",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Invert_Idle",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Upright",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "AttachGroundFissureModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_Ground_Fissure",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ProcessAttachPointAction",
+        "AttachPointName": "NinevehGroundFissureZeroPoint",
+        "HierarchyType": "World",
+        "PosRot": {
+          "CoordsOption": "ReferTarget",
+          "NeedRaycastGround": false,
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "RandomAngleRange": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "RandomPositionRange": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "NodePoint": "Eff_Zero_Decal_Glow_01",
+            "OffsetReferTarget": "NodePoint"
+          }
+        },
+        "Predicates": [
+          {
+            "$type": "ByStageName",
+            "CompareType": "Equal",
+            "StageName": "Stage_Zero_Boss_Nineveh"
+          }
+        ],
+        "ProcessType": "Create",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttachGroundFissureModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "NinevehGroundFissureZeroPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true
+            }
+          },
+          "EffectPattern": "Eff_Zero_Decal_Glow_01",
+          "Predicates": [
+            {
+              "$type": "ByStageName",
+              "CompareType": "Equal",
+              "StageName": "Stage_Zero_Boss_Nineveh"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

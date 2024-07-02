@@ -1,0 +1,12 @@
+{
+  "AbilityName": "Device_Prop_Elevator_01_FinishedAudio",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_sfx_interaction_Prop_Elevator_01_open"
+      }
+    ]
+  }
+}

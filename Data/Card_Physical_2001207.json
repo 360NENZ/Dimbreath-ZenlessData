@@ -1,0 +1,67 @@
+{
+  "AbilityName": "Card_Physical_2001207",
+  "AbilitySpecials": {
+    "GenreNum_Physical": {
+      "Value": 0.1
+    },
+    "GenreNum_Physical_Max": {
+      "Value": 0.8
+    },
+    "Ratio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(Ratio)*(item(1001401)+item(1001402)+item(1001403)+item(1001404)+item(1001405)+item(1001406)+item(1001407)+item(1001408)+item(1001409)+item(1001410)+item(1001411)+item(1101401)+item(1101402)+item(1101403)+item(1101404)+item(1101405)+item(1101406)+item(1101407)+item(1101408)+item(1101409)+item(1101410)+item(1101411)+item(1001412))",
+        "ParamName": "GenreNum_Physical",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%GenreNum_Physical_Max",
+        "ParamName": "GenreNum_Physical",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": "%GenreNum_Physical_Max",
+            "ParamName": "GenreNum_Physical",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffUpper"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffUpper": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Physics"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%GenreNum_Physical",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

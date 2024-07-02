@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_Toy_2002110",
+  "AbilitySpecials": {
+    "AS_AccumulationRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyAbnormalModifier_Card_2110",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyAbnormalModifier_Card_2110": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_AddedElementAccumulationRatio": "%AS_AccumulationRatio"
+      }
+    }
+  }
+}

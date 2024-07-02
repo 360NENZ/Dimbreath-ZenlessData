@@ -1,0 +1,27 @@
+{
+  "AbilityName": "RamenStore_Buff_30022013",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio"
+      }
+    ]
+  }
+}

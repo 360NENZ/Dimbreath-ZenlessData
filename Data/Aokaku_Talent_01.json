@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Aokaku_Talent_01",
+  "AbilitySpecials": {
+    "AS_FlagBuffDuration_Added_Talent01": {
+      "Value": 8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Aokaku_UniqueSkill",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "%AS_FlagBuffDuration_Added_Talent01",
+                "ParamName": "FlagBuffDuration_Added_Talent01",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

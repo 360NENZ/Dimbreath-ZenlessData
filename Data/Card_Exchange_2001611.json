@@ -1,0 +1,75 @@
+{
+  "AbilityName": "Card_Exchange_2001611",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 10
+    },
+    "RecoverPercentage": {
+      "Value": 0
+    },
+    "ShieldAmount": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ExchangeToShieldModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "EvadeAid",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ParryAid",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ExchangeToShieldModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "CommonDefenseMaterial",
+              "Target": "Self",
+              "key": "Common_MA_Buff_Defence_RimGlow_01"
+            }
+          ],
+          "Duration": "%Duration",
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": "%RecoverPercentage",
+          "Tag": "BloodHand",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%ShieldAmount",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  }
+}

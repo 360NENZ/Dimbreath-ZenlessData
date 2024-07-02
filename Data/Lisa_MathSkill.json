@@ -1,0 +1,62 @@
+{
+  "AbilityName": "Lisa_MathSkill",
+  "AbilitySpecials": {
+    "AS_PairACount": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecDebuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ElecDebuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp"
+          }
+        ],
+        "Target": "EnemyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ElecDebuffModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityID": 11181306,
+          "IsAutoTrigger": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lisa_Elec_MathSkill",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

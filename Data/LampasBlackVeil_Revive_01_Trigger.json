@@ -1,0 +1,60 @@
+{
+  "AbilityName": "LampasBlackVeil_Revive_01_Trigger",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Trigger_PressAttackA",
+      "ParamType": 1,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": true,
+          "CompareType": "Equal",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ParamName": "Bool_IsBreakDown",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 13,
+      "ParamName": "Int_AttackIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": true,
+          "CompareType": "Equal",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ParamName": "Bool_IsBreakDown",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_ReviveType",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": true,
+          "CompareType": "Equal",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ParamName": "Bool_IsBreakDown",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

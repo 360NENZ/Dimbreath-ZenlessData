@@ -1,0 +1,268 @@
+{
+  "AbilityName": "Card_Froze_2001100",
+  "AbilitySpecials": {
+    "AS_AddFrozenBuffIconCount": {
+      "Value": 0
+    },
+    "AS_CriticalDMGRatio": {
+      "Value": 0.5
+    },
+    "AS_DecreasePerHit": {
+      "Value": -1
+    },
+    "AS_FrozenBuffCount": {
+      "Value": 0
+    },
+    "AS_HasCard2001105": {
+      "Value": 0
+    },
+    "AS_IceAccumulationRatio": {
+      "Value": 0
+    },
+    "AS_IceDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": []
+  },
+  "Modifiers": {
+    "Card_Froze_2001100_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3100051,
+        "IsOverrideDuration": false
+      },
+      "Duration": 10,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleAllRefresh"
+    },
+    "Card_Froze_2001100_BuffIcon_02": {
+      "Buff": {
+        "BuffID": 3100051,
+        "IsOverrideDuration": false
+      },
+      "Duration": 10,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleAllRefresh"
+    },
+    "FrozeDamageUpBuff": {
+      "Duration": 10,
+      "ModifierStacking": "Refresh",
+      "OnHitOtherPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_FrozenBuffCount",
+              "ParamType": "Float"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_IceDamageRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_FrozenBuffCount",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ],
+          "PropertyKey": "Actor_CriticalDamageRatioDelta",
+          "PropertyValue": "%AS_CriticalDMGRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_DecreasePerHit",
+          "ParamName": "AS_FrozenBuffCount",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_FrozenBuffCount",
+              "ParamType": "Float"
+            }
+          ]
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Card_Froze_2001100_BuffIcon_01",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": -1,
+              "ParamName": "AS_DecreasePerHit",
+              "ParamType": "Float"
+            }
+          ],
+          "StackCount": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Card_Froze_2001100_BuffIcon_02",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": -1,
+              "ParamName": "AS_DecreasePerHit",
+              "ParamType": "Float"
+            }
+          ],
+          "StackCount": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2001105",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_FrozenBuffCount",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ice"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%AS_IceAccumulationRatio",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_FrozenBuffCount",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "FrozeDamageUpBuff_Icon": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Card_Froze_2001100_BuffIcon_01",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HasCard2001105",
+              "ParamType": "Float"
+            }
+          ],
+          "StackCount": "%AS_AddFrozenBuffIconCount",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Card_Froze_2001100_BuffIcon_02",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2001105",
+              "ParamType": "Float"
+            }
+          ],
+          "StackCount": "%AS_AddFrozenBuffIconCount",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Card_Froze_2001100_BuffIcon_01",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_FrozenBuffCount",
+              "ParamType": "Float"
+            }
+          ],
+          "StackCount": 99,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Card_Froze_2001100_BuffIcon_02",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_FrozenBuffCount",
+              "ParamType": "Float"
+            }
+          ],
+          "StackCount": 99,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FrozeDamageUpBuff",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FrozeDamageUpBuff_Icon",
+      "Target": "Self"
+    }
+  ]
+}

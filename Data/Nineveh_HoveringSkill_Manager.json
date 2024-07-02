@@ -1,0 +1,262 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "RefPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": 1,
+                  "ParamName": "AS_FirstSkillDPSCheck",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.85
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "PopAnimatorZoneTagsAction",
+                  "AnimatorStateTags": [
+                    "ThirdHoveringHovering"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_HoveringSkill_Manager",
+  "AbilitySpecials": {
+    "AS_FirstHoveringPhaseSkillCD": {
+      "Value": 45,
+      "ValueType": "Float"
+    },
+    "AS_FirstSkillDPSCheck": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_SecondHoveringPhaseSkillCD": {
+      "Value": 45,
+      "ValueType": "Float"
+    },
+    "AS_ThirdHoveringPhaseSkillCD": {
+      "Value": 30,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FirstHoveringSKillPhaseModifier": {
+      "Duration": "%AS_FirstHoveringPhaseSkillCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_FirstHoveringSkill_Ready",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_FirstHoveringSkill_Ready",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SecondHoveringSKillPhaseModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FirstHoveringSkillBeingAttackedModifier": {
+      "Duration": 44.99,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_FirstSkillDPSCheck",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            }
+          ],
+          "PropertyKey": "Actor_ResistBreakLevel_Delta",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_FirstSkillDPSCheck",
+          "ParamType": "Integer",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_FirstSkillDPSCheck",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "SecondHoveringSKillPhaseModifier": {
+      "Duration": "%AS_SecondHoveringPhaseSkillCD",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_HoveringSkill_Ready",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "ThirdHoveringHovering"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SecondHoveringSKillPhase_MiddleWare_Modifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "ThirdHoveringHovering"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ThirdHoveringSKillPhaseModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "ThirdHoveringHovering"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "SecondHoveringSKillPhase_MiddleWare_Modifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SecondHoveringSKillPhaseModifier"
+        }
+      ]
+    },
+    "ThirdHoveringSKillPhaseModifier": {
+      "Duration": "%AS_ThirdHoveringPhaseSkillCD",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_HoveringSkill_Ready",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ThirdHoveringSKillPhase_MiddleWare_Modifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ThirdHoveringSKillPhase_MiddleWare_Modifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ThirdHoveringSKillPhaseModifier"
+        }
+      ]
+    }
+  },
+  "OnAdded": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FirstHoveringSKillPhaseModifier",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FirstHoveringSkillBeingAttackedModifier",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "WriteAIParamAction",
+      "BoolParamValue": false,
+      "ParamName": "Bool_FirstHoveringSkill_Ready",
+      "Target": "Self"
+    }
+  ]
+}

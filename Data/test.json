@@ -1,0 +1,11 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "test",
+  "Plugin": [
+    {
+      "$type": "CHollowLightPluginConfig",
+      "NPCDefaultLightLevel": 0,
+      "PlayerDefaultLightLevel": 2
+    }
+  ]
+}

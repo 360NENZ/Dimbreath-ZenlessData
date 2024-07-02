@@ -1,0 +1,31 @@
+{
+  "AbilityName": "Follower_Attack_Increase_FullHP",
+  "AbilitySpecials": {
+    "AddedPlayerAttackRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "Equal",
+            "Denominator": "MaxHP",
+            "IsUsePercent": true,
+            "Numerator": "CurHP",
+            "Target": "Self",
+            "Val1": 0.9,
+            "Val2": 0
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedPlayerAttackRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

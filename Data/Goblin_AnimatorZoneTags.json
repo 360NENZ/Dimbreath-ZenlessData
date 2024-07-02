@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Goblin_AnimatorZoneTags",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Goblin"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Goblin"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "GoblinMetro"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "GoblinMetro"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

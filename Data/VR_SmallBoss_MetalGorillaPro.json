@@ -1,0 +1,28 @@
+{
+  "AbilityName": "VR_SmallBoss_MetalGorillaPro",
+  "AbilitySpecials": {
+    "AS_AddBreakStunRatio": {
+      "Value": -0.8
+    },
+    "AS_AddedElementAccumulationRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": "%AS_AddedElementAccumulationRatio",
+        "Target": "Target"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddBreakStunRatio",
+        "Target": "Target"
+      }
+    ]
+  }
+}

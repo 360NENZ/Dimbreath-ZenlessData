@@ -1,0 +1,14 @@
+{
+  "AbilityName": "NPC_Teleport",
+  "DefaultModifier": {
+    "OnTeleportActive": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_Open",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

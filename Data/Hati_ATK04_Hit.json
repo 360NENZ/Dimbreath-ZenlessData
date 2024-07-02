@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Hati_ATK04_Hit",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Hati_ATK04_Attackproperty_01"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

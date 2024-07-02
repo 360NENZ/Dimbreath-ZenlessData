@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Level_VRTeachLevel_MonsterLockLife",
+  "AbilitySpecials": {
+    "HpRatio": {
+      "Value": 99999
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AvatarLockLifeModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverHpModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvatarLockLifeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.98
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "RecoverHpModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%HpRatio",
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverTimeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverTimeModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverHpModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

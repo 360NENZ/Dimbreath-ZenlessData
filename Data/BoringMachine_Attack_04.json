@@ -1,0 +1,92 @@
+{
+  "AbilityName": "BoringMachine_Attack_04",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_BoringMachine_Attack_04_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_04_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_BoringMachine_Attack_04_Attackproperty_02",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_BoringMachine_Attack_04_HitCount",
+            "StackCount": 6,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_04_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_BoringMachine_Attack_04_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_BoringMachine_Attack_04_HitCount",
+            "StackCount": 6,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_04_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 6,
+        "Target": "Target"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_04_Attackproperty_Check"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_BoringMachine_Attack_04_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 6,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "AbilityName": "Card_Blunt_2000706",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 10
+    },
+    "AS_RecoverFever": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunToBuildModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDController_Card_0706": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "StunToBuildModifier",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunToBuildModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StunToBuildModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnStunDestroyOtherActions": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Blunt_2000700",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Blunt_2000700",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%AS_RecoverFever",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDController_Card_0706",
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

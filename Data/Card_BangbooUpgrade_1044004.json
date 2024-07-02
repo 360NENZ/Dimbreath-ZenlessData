@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Bangboo_Butler_Skill",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Butler_Skill",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_SpRecoverValueBase",
+                  "ParamName": "AS_SpRecoverValueBase",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Butler_Skill",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_SpRecoverValuePreLevel",
+                  "ParamName": "AS_SpRecoverValuePreLevel",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_BangbooUpgrade_1044004",
+  "AbilitySpecials": {
+    "AS_SpRecoverValueBase": {
+      "Value": 15
+    },
+    "AS_SpRecoverValuePreLevel": {
+      "Value": 0.6
+    }
+  },
+  "AbilityStacking": "Unique"
+}

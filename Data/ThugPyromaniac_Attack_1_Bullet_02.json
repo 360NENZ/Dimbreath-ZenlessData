@@ -1,0 +1,66 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10.0,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 1.0
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_ThugPyromaniac_Attack_1_Fire_01"
+      },
+      "BulletHitTypeName": "Penetrate",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DestroyExplode": false,
+      "ExplodePosType": "Bullet",
+      "HitAnimEventID": "Monster_ThugPyromaniac_ATK01_Attackproperty_2",
+      "HitExplodeRadius": 1.0,
+      "HitInterval": 0.3,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "ThugPyromaniac_Attack_1_Bullet_02",
+  "AbilityStacking": "Unique"
+}

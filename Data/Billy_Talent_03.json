@@ -1,0 +1,101 @@
+{
+  "AbilityName": "Billy_Talent_03",
+  "AbilitySpecials": {
+    "AS_CriticalDelta_Talent_03": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDistance",
+            "CompareTarget": "Self",
+            "CompareType": "Less",
+            "Distance": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDelta",
+        "PropertyValue": "%AS_CriticalDelta_Talent_03",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDistance",
+            "CompareTarget": "Self",
+            "CompareType": "Less",
+            "Distance": 10,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDelta",
+        "PropertyValue": "%AS_CriticalDelta_Talent_03",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDistance",
+            "CompareTarget": "Self",
+            "CompareType": "Less",
+            "Distance": 15,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDelta",
+        "PropertyValue": "%AS_CriticalDelta_Talent_03",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDistance",
+            "CompareTarget": "Self",
+            "CompareType": "Less",
+            "Distance": 20,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_CriticalDelta",
+        "PropertyValue": "%AS_CriticalDelta_Talent_03",
+        "Target": "Self"
+      }
+    ]
+  }
+}

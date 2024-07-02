@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Card_Chessboard_1001018",
+  "AbilitySpecials": {
+    "AddedDamageTake": {
+      "Value": 0
+    },
+    "AddedDamageTakeRatio": {
+      "Value": -30
+    },
+    "CurseItem": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "sceneproperty(Stamina)*specials(AddedDamageTakeRatio)",
+        "ParamName": "AddedDamageTake",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "itemtype(32)",
+        "ParamName": "CurseItem",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "sceneproperty(Stamina_Max)*specials(AddedDamageTakeRatio)",
+        "ParamName": "AddedDamageTake",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 5,
+            "ParamName": "CurseItem",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_DamageTakeRatio",
+        "PropertyValue": "%AddedDamageTake",
+        "Target": "Self"
+      }
+    ]
+  }
+}

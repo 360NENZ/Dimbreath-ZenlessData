@@ -1,0 +1,1201 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Slash_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 31,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ApplyEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Cut_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ApplyEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 57,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ApplyEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ApplyEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Cut_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 20,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ApplyEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Cut_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ApplyEffectModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 51,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Branch02HitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Short",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Branch02HitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04",
+          "FrameCountHigh": 55,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Branch04HitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Cut_01",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalCutHitModifier"
+          ]
+        }
+      ],
+      "IsSeam": true
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenIceFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenIceFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenIceFadeOutModifier"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Ellen_Attack_Enhance",
+  "AbilitySpecials": {
+    "AS_BranchHit": {
+      "Value": false,
+      "ValueType": "Boolean"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "EnhanceListenrModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ApplyEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "WaitForRemoveEffectModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "EnhanceModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Branch02HitModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnPatternAttackLanded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "EnhanceCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "Branch02HitCondition"
+            }
+          ],
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Branch02HitModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "Branch02HitCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Branch04HitModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnPatternAttackLanded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "EnhanceCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "Branch04HitCondition"
+            }
+          ],
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Branch04HitModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "Branch04HitCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "EffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FastFadeEffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Ellen_Enhance_01_Weapon"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Ellen_Enhance_01_Weapon_002"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_Wpn_A1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Ellen_Enhance_01_Weapon",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_Wpn_B1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Ellen_Enhance_01_Weapon_002",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "IceFadeModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "FastFadeEffectModifier",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "InstantFadeEffectModifier",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "EnhanceListenrModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "CustomPropertyType": "EnhanceCount",
+              "CustomReferMaxPropertyType": "MaxEnhanceCount",
+              "IsUsePercentage": false,
+              "PropertyType": "Custom",
+              "ReferMaxPropertyType": "Custom",
+              "ValueRangeActions": [
+                {
+                  "HighToValueActions": [
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "EnhanceModifier",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Val": 0
+                },
+                {
+                  "Val": 0,
+                  "ValueToHighActions": [
+                    {
+                      "$type": "ApplyModifier",
+                      "ModifierName": "EnhanceModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "EnhanceModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ApplyEffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ApplyEffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "EnhanceMode",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "WaitForRemoveEffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "EnhanceMode",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "EnhanceSkillStartModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": -1,
+          "CustomPropertyType": "EnhanceCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Greater",
+              "CustomNumerator": "EnhanceCount",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 0
+            }
+          ],
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Ellen_Talent_01",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 1,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FastFadeEffectModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnSkillStart": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Ellen_Enhance_01_Weapon"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.15,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByFadeEffectCondition"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Ellen_Enhance_01_Weapon_002"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.15,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByFadeEffectCondition"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FastFadeEffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByFadeEffectCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "IceFadeModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ApplyEffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "EnhanceModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ApplyEffectModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InstantFadeEffectModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Ellen_Enhance_01_Weapon"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Ellen_Enhance_01_Weapon_002"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenIceFadeOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IceFadeModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "IceFadeCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "NormalCutHitModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnPatternAttackLanded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "EnhanceCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Cut_01_AttackProperty_01",
+                "Ellen_Attack_Normal_Cut_01_AttackProperty_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "NormalCutHitModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Cut_01_AttackProperty_01",
+                "Ellen_Attack_Normal_Cut_01_AttackProperty_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RemoveEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "EnhanceModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "WaitForRemoveEffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "EnhanceModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "WaitForRemoveEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_01",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_01_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_02_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_03",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Branch_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Branch_02_Short",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Branch_04",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Rush_Enhance",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "RemoveEffectModifier"
+              ]
+            }
+          ],
+          "IsSeam": false
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByNotEnhanceAttackCondition"
+            },
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByNotAttachEffectAttackCondition"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "RemoveEffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByNotEnhanceAttackCondition"
+            },
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByNotAttachEffectAttackCondition"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "WaitForRemoveEffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByNotEnhanceAttackCondition"
+            },
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByNotAttachEffectAttackCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "EnhanceSkillStartModifier",
+      "Target": "Self"
+    }
+  ],
+  "Predicates": {
+    "Branch02HitCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Ellen_Attack_Branch_02_AttackProperty_01_01",
+            "Ellen_Attack_Branch_02_AttackProperty_01_02",
+            "Ellen_Attack_Branch_02_AttackProperty_02_01",
+            "Ellen_Attack_Branch_02_AttackProperty_02_02",
+            "Ellen_Attack_Branch_02_AttackProperty_03_01",
+            "Ellen_Attack_Branch_02_AttackProperty_03_02",
+            "Ellen_Attack_Branch_02_AttackProperty_04_01",
+            "Ellen_Attack_Branch_02_AttackProperty_04_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Branch04HitCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Ellen_Attack_Branch_04_AttackProperty_01",
+            "Ellen_Attack_Branch_04_AttackProperty_02",
+            "Ellen_Attack_Branch_04_AttackProperty_03",
+            "Ellen_Attack_Branch_04_AttackProperty_04",
+            "Ellen_Attack_Branch_04_AttackProperty_05",
+            "Ellen_Attack_Branch_04_AttackProperty_06",
+            "Ellen_Attack_Branch_04_AttackProperty_07",
+            "Ellen_Attack_Branch_04_AttackProperty_08",
+            "Ellen_Attack_Branch_04_AttackProperty_09"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByFadeEffectCondition": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillID",
+              "SkillID": "Ellen_Normal"
+            },
+            {
+              "$type": "ByFromSkillID",
+              "SkillID": "Ellen_Rush"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByNotAttachEffectAttackCondition": {
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Dash_Slash_01",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Cut_01_Start",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Cut_01",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Dash_Cut_01",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "SwitchIn_Attack",
+                  "FrameCountHigh": 180,
+                  "FrameCountLow": 0,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "SwitchIn_Attack_Ex",
+                  "FrameCountHigh": 120,
+                  "FrameCountLow": 0,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByNotEnhanceAttackCondition": {
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_01",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_01_02",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_02",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_02_02",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_03",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Rush_Enhance",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02_Short",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_04",
+                  "LayerIndex": 0,
+                  "NormalizedTimeHigh": 1.0,
+                  "NormalizedTimeLow": 0.0
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "IceFadeCondition": {
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_03",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_AssaultAid_Back",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

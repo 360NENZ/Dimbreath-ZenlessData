@@ -1,0 +1,92 @@
+{
+  "AbilityName": "Player_Passive_ExQTE",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "ExQTE"
+                ]
+              },
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "Damage"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AllDamageResist",
+        "PropertyValue": -0.1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "ExQTE"
+                ]
+              },
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "BreakStun"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": 0.1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "ExQTE"
+                ]
+              },
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "Element"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": 0.1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

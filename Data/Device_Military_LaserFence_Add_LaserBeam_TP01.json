@@ -1,0 +1,11 @@
+{
+  "AbilityName": "Device_Military_LaserFence_Add_LaserBeam_TP01",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyAbilityAction",
+      "AbilityName": "Device_Military_LaserFence_LaserBeam_TP01",
+      "Target": "Self"
+    }
+  ]
+}

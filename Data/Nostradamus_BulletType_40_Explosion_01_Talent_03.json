@@ -1,0 +1,82 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 2.0,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 6.0
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Nostradamus_Attack_Branch_01_Core_02"
+      },
+      "BulletHitTypeName": "Penetrate",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DestroyEffect": {
+        "EffectPattern": "Eff_Nostradamus_Attack_Branch_01_Core_End_02"
+      },
+      "DestroyExplode": false,
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "Nostradamus_Attack_QTE_Explosion_AttackProperty_01",
+      "HitExplodeRadius": 2,
+      "HitInterval": 0.1,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "OnBulletCreateAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Nostradamus_Bullet_Core_CamShake_E",
+          "Target": "Other"
+        }
+      ],
+      "OnBulletDestroyAction": [
+        {
+          "$type": "InterruptCameraShakeAction",
+          "ShakeConfigKey": "Nostradamus_Bullet_Core_CamShake_E",
+          "Target": "Other"
+        }
+      ],
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Nostradamus_BulletType_40_Explosion_01_Talent_03",
+  "AbilityStacking": "Unique"
+}

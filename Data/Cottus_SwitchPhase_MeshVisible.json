@@ -1,0 +1,254 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchPhase",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WingsVisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Born",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WingsVisibleModifier",
+            "WingsHitColliderModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Born_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WingsVisibleModifier",
+            "WingsHitColliderModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Born_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WingsHitColliderModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P1_ChangePhase_HeavyHit",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 30,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponVisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_SwitchPhase_FallDown",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponVisibleModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P1_SwitchPhase_FallDown",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponPointModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P1_SwitchPhase_FallDown",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponLockModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_SwitchPhase_MeshVisible",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {},
+  "Modifiers": {
+    "WeaponLockModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "Weapon_1",
+          "FollowPosRot": {
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon_DisapperPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "PosSpeed": 1.0,
+          "PosType": "Instant",
+          "RotRatio": 8.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "WeaponPointModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "Cottus_WeaponPoint",
+          "HierarchyType": "World",
+          "MpRecoverOnRemote": true,
+          "PosRot": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon_DisapperPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "ProcessType": "Create",
+          "Target": "Self"
+        }
+      ]
+    },
+    "WeaponVisibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "MpRecoverOnRemote": true,
+          "Paths": [
+            "Cottus_Weapon"
+          ],
+          "Tag": "WeaponVisible",
+          "Visible": false
+        }
+      ]
+    },
+    "WingsHitColliderModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_L_WingArm",
+            "HitCollider_R_WingArm"
+          ],
+          "HitColliderEnable": true,
+          "MpRecoverOnRemote": true,
+          "Tag": "HitCollider_WingArm_Default",
+          "Target": "Self"
+        }
+      ]
+    },
+    "WingsVisibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "MpRecoverOnRemote": true,
+          "Paths": [
+            "Cottus_Wing"
+          ],
+          "Tag": "WingVisible",
+          "Visible": true
+        }
+      ]
+    }
+  }
+}

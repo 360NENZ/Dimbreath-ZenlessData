@@ -1,0 +1,120 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "AntonTalent02Modifier"
+          ],
+          "ZoneTag": "Anton_ExMode"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Anton_Talent_02",
+  "AbilitySpecials": {
+    "AS_InternalCD": {
+      "Value": 15
+    },
+    "AS_ShieldPercentage": {
+      "Value": 0.06
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AntonTalent02Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HpShieldModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnBattleEnter": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HpShieldModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "AntonTalent02TimerModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AntonTalent02TimerModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HpShieldModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HpShieldModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "AntonTalent02TimerModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AntonTalent02TimerModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AntonTalent02TimerModifier": {
+      "Duration": "%AS_InternalCD",
+      "ModifierStacking": "Unique"
+    },
+    "HpShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "Priority": -1,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0.0,
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%AS_ShieldPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  }
+}

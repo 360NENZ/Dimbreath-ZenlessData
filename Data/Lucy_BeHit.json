@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Lucy_BeHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKilled": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Lucy_Encourage",
+        "InitAbilitySpecialList": [
+          {
+            "SpecialName": "AS_Encourage_HighBallTime",
+            "Value": 0,
+            "ValueType": "Float"
+          },
+          {
+            "SpecialName": "AS_AttackIndex",
+            "Value": 4,
+            "ValueType": "Integer"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": false,
+        "CustomKey": "LucyWood_AbilityTargetting_00",
+        "ParamName": "Bool_LucyShow",
+        "Target": "Custom"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Lucy_Wood_CallOut",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "Target": "Custom"
+    }
+  ]
+}

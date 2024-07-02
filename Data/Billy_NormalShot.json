@@ -1,0 +1,1290 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "ShotCount_01",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_IsEnhanced",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_ShotCount_01_High"
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_IsEnhanced",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_ShotCount_01_Low"
+            }
+          ]
+        },
+        {
+          "CustomPropertyType": "ShotCount_02",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_IsEnhanced",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_ShotCount_02_High"
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_IsEnhanced",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_ShotCount_02_Low"
+            }
+          ]
+        },
+        {
+          "CustomPropertyType": "ShotCount_03",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_IsEnhanced",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_ShotCount_03_High"
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_IsEnhanced",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_ShotCount_03_Low"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReEnterModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.206,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.322,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.32,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.409,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Evade_Front",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.22,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Evade_Front_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.215,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Evade_Back",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.198,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.8,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AttackIndexModifier"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.8,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.15,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GapShotModifier"
+          ],
+          "NormalizedTimeHigh": 0.16,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_NormalShot",
+  "AbilitySpecials": {
+    "AS_ShotCount_01_High": {
+      "Value": 4
+    },
+    "AS_ShotCount_01_Low": {
+      "Value": 3
+    },
+    "AS_ShotCount_01_ReEnter": {
+      "Value": 0
+    },
+    "AS_ShotCount_02_High": {
+      "Value": 2
+    },
+    "AS_ShotCount_02_Low": {
+      "Value": 1
+    },
+    "AS_ShotCount_02_ReEnter": {
+      "Value": 0
+    },
+    "AS_ShotCount_03_High": {
+      "Value": 1
+    },
+    "AS_ShotCount_03_Low": {
+      "Value": 0
+    },
+    "AS_ShotCount_03_ReEnter": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AttackIndexModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_NormalIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_BranchIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "ShotCount_01",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "ShotCount_02",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "ShotCount_03",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "GapShotModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsGapShot",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsGapShot",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReEnterModifier_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_ShotCount_01_ReEnter",
+          "CustomPropertyType": "ShotCount_01",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "CustomNumerator": "ShotCount_01",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": "%AS_ShotCount_01_ReEnter"
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReEnterModifier_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_ShotCount_02_ReEnter",
+          "CustomPropertyType": "ShotCount_02",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "CustomNumerator": "ShotCount_02",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": "%AS_ShotCount_02_ReEnter"
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReEnterModifier_03": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_ShotCount_03_ReEnter",
+          "CustomPropertyType": "ShotCount_03",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "CustomNumerator": "ShotCount_03",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": "%AS_ShotCount_03_ReEnter"
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsEnhanced",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 1,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 1,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_NormalIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_End_02",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 1,
+      "ParamName": "Int_BranchIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Branch_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_BranchIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_BranchIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Branch_03",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_BranchIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Branch_04",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_01",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_01",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_02",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_02",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_02",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_02",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 0,
+      "CustomPropertyType": "ShotCount_03",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Attack_Normal_03_End_02",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "Custom"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "AbilityName": "Nineveh_Summon_Vine_Spawn_Inner_03",
+  "AbilitySpecials": {
+    "KilledRemainCounting_Inner_03": {
+      "Value": 2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ConfirmAllKilledModifier_Inner_03": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 17.0,
+          "IgnoreTimeScale": false,
+          "TimeUpActions": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "CustomKey": "Monster_Nineveh",
+              "Params": [
+                {
+                  "AbilityName": "Nineveh_SummonVines_Manager",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Add",
+                      "Param": 1,
+                      "ParamName": "ClusterKilledNumber",
+                      "ParamType": "Integer"
+                    }
+                  ]
+                }
+              ],
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "KilledRemainCounting_Inner_03",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "Vine_Spawn_Inner_03": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.9,
+          "IgnoreTimeScale": false,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Nineveh_Summon_Vine_Spawn_Inner_03_Vine_01"
+            }
+          ]
+        },
+        {
+          "DelayTime": 1.3,
+          "IgnoreTimeScale": false,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Nineveh_Summon_Vine_Spawn_Inner_03_Vine_02"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Vine_Spawn_Inner_03",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ConfirmAllKilledModifier_Inner_03",
+      "Target": "Self"
+    }
+  ],
+  "OnAdded": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "InnerVineSpawnPoint_03_01",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": false,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_03_01",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ],
+      "ProcessType": "Create",
+      "Target": "Self"
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "InnerVineSpawnPoint_03_02",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": false,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_03_02",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ],
+      "ProcessType": "Create",
+      "Target": "Self"
+    },
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "InnerVineSpawnPoint_03_03",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": false,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_03_03",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ],
+      "ProcessType": "Create",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Teleport",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillTrigger_Delay"
+          ],
+          "NormalizedTimeHigh": 0.17,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GamePlayGDRun_FierySerpent_BeatBackSting",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SkillTrigger_Delay": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Trigger_Skill02",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Trigger_Skill02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Trigger_Skill02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

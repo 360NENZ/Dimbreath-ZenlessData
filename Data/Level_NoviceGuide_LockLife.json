@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Level_NoviceGuide_LockLife",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AvatarLockLifeModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvatarLockLifeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.01
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BreakStunRatio": 0.25
+      }
+    }
+  }
+}

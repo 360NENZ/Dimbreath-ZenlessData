@@ -1,0 +1,86 @@
+{
+  "AbilityName": "Lucy_Wood_FollowPoint",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ProcessAttachPointAction",
+        "AttachPointName": "WoodFollowPoint_02",
+        "HierarchyType": "World",
+        "PosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "WoodFollowPoint",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FollowModifier_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FollowModifier_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "WoodFollowPoint_02",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "WoodFollowPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Caster"
+            }
+          },
+          "PolarAngleRatio": 5.0,
+          "PolarHeightRatio": 8.0,
+          "PolarRadiusRatio": 15.0,
+          "PosType": "PolarLerp",
+          "RotRatio": 8.0,
+          "RotType": "Lerp"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

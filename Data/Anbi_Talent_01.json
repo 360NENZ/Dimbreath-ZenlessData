@@ -1,0 +1,44 @@
+{
+  "AbilityName": "Anbi_Talent_01",
+  "AbilitySpecials": {
+    "AS_SPGetBuffTime_Talent_01": {
+      "Value": 30.0
+    },
+    "AS_SPGetRatio_Talent_01": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpGetRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Anbi_Attack_Normal_04_AttackProperty_01",
+              "Anbi_Attack_Normal_04_AttackProperty_02",
+              "Anbi_Attack_Normal_04_AttackProperty_03_01",
+              "Anbi_Attack_Normal_04_AttackProperty_03_02",
+              "Anbi_Attack_Normal_04_AttackProperty_03_03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpGetRatioModifier": {
+      "Duration": "%AS_SPGetBuffTime_Talent_01",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_SPGetRatio": "%AS_SPGetRatio_Talent_01"
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "AbilityName": "Harumasa_Trap_Charging",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Reflected"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Other",
+            "TemplateID": 1201
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ReflectArrow"
+                ]
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChargingBulletModifier",
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Other",
+            "TemplateID": 1201
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ReflectArrow"
+                ]
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Other"
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": -1,
+        "CustomPropertyType": "ChargingLimits",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Other",
+            "TemplateID": 1201
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ReflectArrow"
+                ]
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChargingBulletModifier": {
+      "Duration": 2,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Harumasa_Attack_AimMode_BulletType_05",
+          "Predicates": [
+            {
+              "$type": "ByAbilityTargetCount",
+              "AbilityTargetKey": "Harumasa_AttackTarget_AimMode_Bullet05",
+              "CompareType": "GreaterEqual",
+              "CompareValue": 1,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Harumasa_Trap_Attack_AimMode_BulletType_02",
+          "Predicates": [
+            {
+              "$type": "ByAbilityTargetCount",
+              "AbilityTargetKey": "Harumasa_Trap_AttackTarget_NearestEnemy",
+              "CompareType": "GreaterEqual",
+              "CompareValue": 1,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

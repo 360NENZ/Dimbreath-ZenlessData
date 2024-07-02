@@ -1,0 +1,71 @@
+{
+  "AbilityName": "Suit_Ability_50432300",
+  "AbilitySpecials": {
+    "AS_CriticalDamageRatioDelta_Default": {
+      "Value": 0.3
+    },
+    "AS_CriticalDamageRatioDelta_Stack": {
+      "Value": 0.1
+    },
+    "AS_Duration": {
+      "Value": 12.0
+    },
+    "AS_MaxStackNum": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PropModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_Suit_Ability_50432300": {
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 6,
+      "ModifierStacking": "MultipleAllRefresh",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageRatioDelta_Stack"
+      }
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffDamageHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier_Suit_Ability_50432300",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "PropModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageRatioDelta_Default"
+      }
+    }
+  }
+}

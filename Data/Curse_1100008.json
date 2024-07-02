@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Curse_1100008",
+  "AbilitySpecials": {
+    "ClearTimes": {
+      "Value": -10
+    },
+    "EvadeTimes": {
+      "Value": -1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ModifySkillMaxEP",
+        "DeltaValue": "%EvadeTimes",
+        "SkillType": "Evade",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_03",
+          "FrameCountHigh": 53,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_05",
+          "FrameCountHigh": 53,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 28,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 20,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Anton_SignatureWeapon",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SignatureLightWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyIndicatedLightAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "indicatedLightKey": "Anton_IndicatedLight"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveIndicatedLightAction",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SignatureMaterialWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Anton_Hair"
+            }
+          ],
+          "Tag": "Avatar_Male_Size03_Anton_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Male_Size03_Anton_MA_SignatureWeapon_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Male_Size03_Anton_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

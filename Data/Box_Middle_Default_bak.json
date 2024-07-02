@@ -1,0 +1,92 @@
+{
+  "AbilityName": "Box_Middle_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Box_BeHit",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Box_BeHit": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_02",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxMiddle01"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_03",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxMiddle02"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Mid",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "AbilityName": "GasTank_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GasTankBeHitModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GasTankBeHitModifier": {
+      "Duration": -1,
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_SpecialDie",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "GasTank"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

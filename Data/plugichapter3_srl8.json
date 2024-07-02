@@ -1,0 +1,35 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "chapter3_srl8",
+  "Plugin": [
+    {
+      "$type": "CHollowLightPluginConfig",
+      "BaseNoise": [
+        "EventIcon_LightBackground"
+      ],
+      "Ghost": [
+        {
+          "$type": "CHollowGhostConfig",
+          "DistanceToLight": {
+            "x": 2,
+            "y": 3
+          },
+          "Frequency": {
+            "x": 3,
+            "y": 8
+          }
+        }
+      ],
+      "GhostTextureKey": "EventIcon_AtmosphereGhost_ForAdd",
+      "LightNoise": [
+        "EventIcon_LightBackground"
+      ],
+      "NPCDefaultLightLevel": -1,
+      "PlayerDefaultLightLevel": 5
+    },
+    {
+      "$type": "CChessboardGhostConfig",
+      "GhostLightRenderConfigKey": "TestGhost"
+    }
+  ]
+}

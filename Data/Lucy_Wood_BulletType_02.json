@@ -1,0 +1,126 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.1
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": -3.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Bullet_Hit"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "Lucy_Wood_Attack_03_AttackProperty_02",
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 50
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_S"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_S_Ground"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 0.01,
+        "FreezeRotateXZ": false,
+        "FreezeRotateY": false,
+        "ReachLimitStop": true,
+        "ReachTargetStop": true,
+        "RotateSpeed": 360,
+        "RotateType": "Fixed",
+        "RotationAngleLimit": 30.0,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.75,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "None",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Lucy_Wood_BulletType_02",
+  "AbilityStacking": "Unique"
+}

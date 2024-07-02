@@ -1,0 +1,128 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Rush_Enhance",
+          "FrameCountHigh": 33,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RBLModifier",
+            "DamageTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_01",
+          "FrameCountHigh": 17,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RBLModifier",
+            "DamageTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_02",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RBLModifier",
+            "DamageTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RBLModifier",
+            "DamageTakeRatioModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_04",
+          "FrameCountHigh": 59,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RBLModifier",
+            "DamageTakeRatioModifier",
+            "InvincibleModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Longinus_Talent_03",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio_Talent_03": {
+      "Value": -0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio_Talent_03"
+      }
+    },
+    "InvincibleModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Longinus_Talent_03_Invincible",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Longinus_Talent_03_Invincible",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RBLModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": 2,
+          "Tag": "Longinus_Talent_03_RBLOffset",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Longinus_Talent_03_RBLOffset",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

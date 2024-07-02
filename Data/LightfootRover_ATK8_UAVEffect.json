@@ -1,0 +1,35 @@
+{
+  "AbilityName": "LightfootRover_ATK8_UAVEffect",
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LightfootRover_ExtraUAV"
+          ]
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LaserPoint",
+          "CustomKey": "Monster_LightfootRover_UAV",
+          "EffectPattern": "Eff_Monster_UAVRaven_Attack_02_10_Flare",
+          "Target": "Custom"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LaserPoint",
+          "CustomKey": "Monster_LightfootRover_UAV_Extra",
+          "EffectPattern": "Eff_Monster_UAVRaven_Attack_02_10_Flare",
+          "Target": "Custom"
+        }
+      ]
+    }
+  ]
+}

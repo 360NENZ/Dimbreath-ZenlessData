@@ -1,0 +1,141 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "FastMove_Start_F",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Loop_F",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_End_F",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Start_B",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Loop_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_End_B",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Start_L",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Loop_L",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_End_L",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Start_R",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_Loop_R",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "FastMove_End_R",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.25,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Guardian_Audio",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AudioModifier_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_Guardian_Ani_Rolling"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Stop_Guardian_Ani_Rolling_Loop"
+        }
+      ]
+    }
+  }
+}

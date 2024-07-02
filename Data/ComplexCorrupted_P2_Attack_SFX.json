@@ -1,0 +1,680 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_01_Smoke_02",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_IsPhase2",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnd",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_IsPhase2",
+                          "ParamType": 2
+                        },
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_PartDestroyed_Leg_FL",
+                          "ParamType": 2
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_FL",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_01_Smoke_02",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_IsPhase2",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnd",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_IsPhase2",
+                          "ParamType": 2
+                        },
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_PartDestroyed_Leg_L",
+                          "ParamType": 2
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_L",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_01_Smoke_02",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_IsPhase2",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnd",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_IsPhase2",
+                          "ParamType": 2
+                        },
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_PartDestroyed_Leg_BL",
+                          "ParamType": 2
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_BL",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_01_Smoke_02",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_IsPhase2",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnd",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_IsPhase2",
+                          "ParamType": 2
+                        },
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_PartDestroyed_Leg_FR",
+                          "ParamType": 2
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_FR",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_01_Smoke_02",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_IsPhase2",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnd",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_IsPhase2",
+                          "ParamType": 2
+                        },
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_PartDestroyed_Leg_R",
+                          "ParamType": 2
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_R",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_01_Smoke_02",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_IsPhase2",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnd",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_IsPhase2",
+                          "ParamType": 2
+                        },
+                        {
+                          "$type": "ByAnimCtrlerParam",
+                          "BoolVal": true,
+                          "CompareType": "Equal",
+                          "ParamName": "Bool_PartDestroyed_Leg_BR",
+                          "ParamType": 2
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_BR",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Jump",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 79,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_FL",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_L",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_BL",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_FR",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_R",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_BR",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Jump_Weak_L",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 79,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_FL",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_L",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_L_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_BL",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_A05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_FR",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_B05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_R",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Skn_R_Leg_C05",
+              "EffectPattern": "Eff_Monster_ComplexCorrupted_Jump_02_Lightning",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_IsPhase2",
+                  "ParamType": 2
+                },
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": false,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_PartDestroyed_Leg_BR",
+                  "ParamType": 2
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Jump_Weak_R",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 79,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_P2_Attack_SFX",
+  "AbilityStacking": "Unique"
+}

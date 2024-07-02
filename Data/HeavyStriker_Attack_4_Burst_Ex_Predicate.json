@@ -1,0 +1,34 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 0.2,
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Self",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": false,
+      "DestroyExplode": false,
+      "DodgeColliderConfig": {
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 3.5
+      },
+      "ExplodeAnimEventID": "HeavyStriker_Attack04_Attackproperty_Burst_Predicate",
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": -1,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": -1,
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "HeavyStriker_Attack_4_Burst_Ex_Predicate",
+  "AbilityStacking": "Unique"
+}

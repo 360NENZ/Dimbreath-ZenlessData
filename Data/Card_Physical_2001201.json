@@ -1,0 +1,55 @@
+{
+  "AbilityName": "Card_Physical_2001201",
+  "AbilitySpecials": {
+    "AS_StunDelta": {
+      "Value": 500
+    },
+    "AS_StunPercentage": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StrikeStunModifier_Card_2001201",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StrikeStunModifier_Card_2001201": {
+      "Duration": 5,
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunUpModifier",
+          "Target": "Target"
+        }
+      ]
+    },
+    "StunUpModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "RecoverStunAction",
+          "Amount": "%AS_StunDelta",
+          "Percentage": "%AS_StunPercentage",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

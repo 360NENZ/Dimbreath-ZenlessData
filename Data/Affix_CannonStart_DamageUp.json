@@ -1,0 +1,65 @@
+{
+  "AbilityName": "Affix_CannonStart_DamageUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.1
+    },
+    "MultipleCannonDamageAdded": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBattleEnter": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleCannonDamageAdded",
+        "ParamType": "Float"
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleCannonDamageAdded",
+        "ParamType": "Float"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Cannon"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%MultipleCannonDamageAdded",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": 0.1,
+        "ParamName": "MultipleCannonDamageAdded",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Cannon",
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

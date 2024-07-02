@@ -1,0 +1,299 @@
+{
+  "AbilityName": "LightfootRover_UAV_LogicMoveManager",
+  "AbilitySpecials": {
+    "LogicMoveFunc": {
+      "Value": "",
+      "ValueType": "String"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LightfootRover_UAV_LogicMoveModifier_ATK3": {
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 20.0
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": -1.0,
+                  "y": 0.5,
+                  "z": -1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "LightfootRover_UAV_L"
+              ]
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToVelocity",
+            "AllowRootMotionRotation": true,
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 20.0
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 1.0,
+                  "y": 0.8,
+                  "z": -1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "LightfootRover_UAV_R"
+              ]
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToVelocity",
+            "AllowRootMotionRotation": true,
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightfootRover_UAV_LogicMoveModifier_ATK3_Start": {
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedTime",
+              "Time": 2.5
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": -1.0,
+                  "y": 0.5,
+                  "z": -1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "LightfootRover_UAV_L"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedTime",
+              "Time": 2.5
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 1.0,
+                  "y": 0.8,
+                  "z": -1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "LightfootRover_UAV_R"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightfootRover_UAV_LogicMoveModifier_Die": {
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementSimple",
+            "Duration": -1,
+            "Gravity": -10,
+            "InitVelocity": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "LightfootRover_UAV_LogicMoveModifier_ATK3_Start"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "LightfootRover_UAV_LogicMoveModifier_ATK3"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "LightfootRover_UAV_LogicMoveModifier_Die"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "LightfootRover_UAV_LogicMoveModifier_ATK3_Start",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": "ATK3_Start",
+          "ParamName": "LogicMoveFunc",
+          "ParamType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "LightfootRover_UAV_LogicMoveModifier_ATK3",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": "ATK3",
+          "ParamName": "LogicMoveFunc",
+          "ParamType": "String"
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "LightfootRover_UAV_LogicMoveModifier_Die",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": "Die",
+          "ParamName": "LogicMoveFunc",
+          "ParamType": "String"
+        }
+      ]
+    }
+  ]
+}

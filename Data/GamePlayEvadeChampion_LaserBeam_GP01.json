@@ -1,0 +1,77 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 5.0,
+      "AudioEffect": "",
+      "BlockEffect": {
+        "EffectPattern": "Buff_Electric_EMP_01"
+      },
+      "BlockInterval": 1.0,
+      "BlockLayers": [
+        "StageCollider",
+        "HitCollider"
+      ],
+      "ColliderRadius": 0.1,
+      "EffectName": "Eff_SkillEffect_Laser_LaserBeam_Test",
+      "EndEffect": {
+        "EffectPattern": "Buff_Electric_EMP_01"
+      },
+      "FirstHitDelayTime": 0.2,
+      "HitAnimEventID": "#SkillEffect_Test_LaserBeam",
+      "HitEffect": {
+        "EffectPattern": "Buff_Electric_EMP_01"
+      },
+      "HitInterval": 0.2,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 10.6
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Root",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "None"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 25,
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      }
+    }
+  ],
+  "AbilityName": "GamePlayEvadeChampion_LaserBeam_GP01",
+  "AbilityStacking": "Unique"
+}

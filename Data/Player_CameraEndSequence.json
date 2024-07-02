@@ -1,0 +1,12 @@
+{
+  "AbilityName": "Player_CameraEndSequence",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushInvincibleAction",
+        "Tag": "Player_CameraEndSequence_Invincible"
+      }
+    ]
+  }
+}

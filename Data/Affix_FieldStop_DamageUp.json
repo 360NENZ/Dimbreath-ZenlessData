@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Affix_FieldStop_DamageUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "FieldStopActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "ModifierStacking": "Unique"
+  },
+  "Modifiers": {
+    "DamageUp": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

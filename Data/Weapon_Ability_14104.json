@@ -1,0 +1,73 @@
+{
+  "AbilityName": "Weapon_Ability_14104",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.05
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    },
+    "AS_IntervalCD": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Normal"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Rush"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Counter"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BaseAttackRatioModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BaseAttackRatioModifier_Effect": {
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 8,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    }
+  }
+}

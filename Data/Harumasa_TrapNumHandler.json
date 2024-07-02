@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Harumasa_TrapNumHandler",
+  "AbilitySpecials": {
+    "AS_HarumasaTrap_MaxNum": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "ReadytoDie"
+      ],
+      "CustomKey": "Harumasa_AttackTarget_OldestTrap",
+      "IsAdd": true,
+      "Predicates": [
+        {
+          "$type": "ByAbilityTargetCount",
+          "AbilityTargetKey": "Harumasa_AttackTarget_NearestTrap",
+          "CompareType": "Greater",
+          "CompareValue": "%AS_HarumasaTrap_MaxNum",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "CustomKey": "Harumasa_AttackTarget_OldestTrap",
+      "ParamName": "Trigger_Die",
+      "ParamType": 1,
+      "Predicates": [
+        {
+          "$type": "ByAbilityTargetCount",
+          "AbilityTargetKey": "Harumasa_AttackTarget_NearestTrap",
+          "CompareType": "Greater",
+          "CompareValue": "%AS_HarumasaTrap_MaxNum",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

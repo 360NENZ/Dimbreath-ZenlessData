@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Curse_1100020",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 0.1
+    },
+    "AS_DecreaseStunPercent": {
+      "Value": 0.1
+    },
+    "AS_HitInternalCD": {
+      "Value": 7.5
+    },
+    "AS_RecoverHPRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDamageCalculated": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HitModifier",
+        "Predicates": [
+          {
+            "$type": "ByTeamGoodRoleType",
+            "RoleType": "TeamAvatars",
+            "Target": "Target"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AS_AddDamageRatio"
+    }
+  },
+  "Modifiers": {
+    "HitModifier": {
+      "Duration": "%AS_HitInternalCD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DecreaseStunAction",
+          "Amount": 0,
+          "Percentage": "%AS_DecreaseStunPercent",
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Amount": 0,
+          "Percentage": "%AS_RecoverHPRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

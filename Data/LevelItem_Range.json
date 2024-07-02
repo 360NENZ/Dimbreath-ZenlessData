@@ -1,0 +1,66 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "FieldRangeMixin",
+      "ColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "FanCylinder",
+        "FanCylinderColliderAngle": 360,
+        "FanCylinderColliderHeight": 1,
+        "FanCylinderColliderRadius": 1,
+        "FanCylinderColliderVertexNum": 24
+      },
+      "FieldEnterActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "FieldInitPosRot": {
+        "CoordsOption": "Self",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "IsFollow": true,
+      "TotalDuration": -1
+    }
+  ],
+  "AbilityName": "LevelItem_Range",
+  "AbilityStacking": "Unique"
+}

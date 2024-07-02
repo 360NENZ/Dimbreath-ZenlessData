@@ -1,0 +1,45 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_ChargeAttack_01",
+          "FrameCountHigh": 133,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "DamageDeduceModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_ChargeAttack_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "DamageDeduceModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Clara_DamageReduce",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DamageDeduceModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Weapon_Ability_13007",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.15
+    },
+    "AS_Duration": {
+      "Value": 12.0
+    },
+    "AS_MaxHPRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MaxHPRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BreakStunRatio": "%AS_BreakStunRatio"
+      }
+    },
+    "MaxHPRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_MaxHPRatio": "%AS_MaxHPRatio"
+      }
+    }
+  }
+}

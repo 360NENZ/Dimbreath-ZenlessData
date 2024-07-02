@@ -1,0 +1,43 @@
+{
+  "AbilityName": "Card_Gun_1000303",
+  "AbilitySpecials": {
+    "SPRecoverDelta": {
+      "Value": 100
+    },
+    "TimeOfDuration": {
+      "Value": 0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalSpUp",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalSpUp": {
+      "Duration": "%TimeOfDuration",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%SPRecoverDelta",
+          "IgnoreRatio": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

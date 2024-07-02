@@ -1,0 +1,251 @@
+{
+  "AbilityName": "TreasureCar_Reward",
+  "AbilitySpecials": {
+    "IsShowModel": {
+      "Value": 2
+    },
+    "OnceRewardID": {
+      "Value": 0
+    },
+    "RewardID": {
+      "Value": 0
+    },
+    "isOnceReward": {
+      "Value": 2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RewardConditionModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AddRewardAction",
+          "IsShowDropModel": true,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "IsShowModel",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "RewardCount": 1,
+          "RewardID": "%RewardID"
+        },
+        {
+          "$type": "AddRewardAction",
+          "IsShowDropModel": false,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "IsShowModel",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "RewardCount": 1,
+          "RewardID": "%RewardID"
+        },
+        {
+          "$type": "AddOnceRewardAction",
+          "IsShowDropModel": true,
+          "OnceRewardID": "%OnceRewardID",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "IsShowModel",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "AddOnceRewardAction",
+          "IsShowDropModel": false,
+          "OnceRewardID": "%OnceRewardID",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "IsShowModel",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1008:10000:5",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "OnceRewardID",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "RareS"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1007:10000:5",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "OnceRewardID",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "RareA"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1006:10000:5",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "OnceRewardID",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "RareB"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1005:10000:5",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2,
+              "ParamName": "isOnceReward",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "OnceRewardID",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "RareC"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "TreasureCar_GetReward"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "RewardConditionModifier",
+      "Target": "Self"
+    }
+  ]
+}

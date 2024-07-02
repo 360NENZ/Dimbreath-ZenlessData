@@ -1,0 +1,173 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_04_Perfect",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PerfectComboModifier_Reset"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Perfect",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PerfectComboModifier_Reset"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_Perfect",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PerfectComboModifier_Reset"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PerfectComboModifier_Count",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_Perfect",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PerfectComboModifier_Count",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Perfect",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "PerfectComboModifier_Count",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_04_Perfect",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Anbi_PerfectCombo",
+  "AbilitySpecials": {
+    "AS_PerfectComboIndex": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PerfectComboModifier_Reset",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PerfectComboModifier_Count": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_PerfectComboIndex)+1",
+          "ParamName": "AS_PerfectComboIndex",
+          "Target": "Self",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_PerfectCombo",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Less",
+              "Param": 2,
+              "ParamName": "AS_PerfectComboIndex",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_PerfectCombo",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 2,
+              "ParamName": "AS_PerfectComboIndex",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "PerfectComboModifier_Reset": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "0",
+          "ParamName": "AS_PerfectComboIndex",
+          "Target": "Self",
+          "ValueType": "Integer"
+        }
+      ]
+    }
+  }
+}

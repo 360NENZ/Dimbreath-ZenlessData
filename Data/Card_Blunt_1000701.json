@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Blunt_1000701",
+  "AbilitySpecials": {
+    "StunDamageTakeRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio"
+    }
+  }
+}

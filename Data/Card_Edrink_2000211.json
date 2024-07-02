@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Card_Edrink_2000211",
+  "AbilitySpecials": {
+    "AS_CriticalDamage": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Card_2000211_CritDMGUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card_2000211_CritDMGUpModifier": {
+      "Duration": 15,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamage"
+      }
+    }
+  }
+}

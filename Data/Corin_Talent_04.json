@@ -1,0 +1,155 @@
+{
+  "AbilityName": "Corin_Talent_04",
+  "AbilitySpecials": {
+    "AS_AddDmgPerHit_Talent_04": {
+      "Value": 0.1
+    },
+    "AS_AddedAttackDelta": {
+      "Value": 0
+    },
+    "AS_Talent04Hits": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 1,
+        "CustomPropertyType": "Talent04Hits",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Normal_03_AttackProperty_01_01",
+              "Corin_Attack_Normal_03_AttackProperty_01_02",
+              "Corin_Attack_Normal_05_AttackProperty_01_01",
+              "Corin_Attack_Normal_05_AttackProperty_01_02",
+              "Corin_Attack_Normal_05_AttackProperty_02",
+              "Corin_Attack_Normal_05_AttackProperty_04_01",
+              "Corin_Attack_Normal_05_AttackProperty_04_02",
+              "Corin_Attack_Rush_AttackProperty_01_01",
+              "Corin_Attack_Rush_AttackProperty_01_02",
+              "Corin_Attack_Counter_AttackProperty_01_01",
+              "Corin_Attack_Counter_AttackProperty_01_02",
+              "Corin_Attack_Counter_AttackProperty_02",
+              "Corin_Attack_BeHitAid_AttackProperty_01_01",
+              "Corin_Attack_BeHitAid_AttackProperty_01_02",
+              "Corin_Attack_BeHitAid_AttackProperty_02",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_01",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_02",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_03",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_01",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_02",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_03",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_04_04",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_01",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_01",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_02",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_03",
+              "Corin_Attack_Branch_01_AttackProperty_02_01",
+              "Corin_Attack_Branch_01_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_01_AttackProperty_02_02_02",
+              "Corin_Attack_Branch_01_AttackProperty_03",
+              "Corin_Attack_Branch_02_AttackProperty_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_02",
+              "Corin_Attack_AssaultAid_AttackProperty_05_01",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_01",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_02",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "Custom"
+      },
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "CustomPropertyType": "Talent04Hits",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_Talent04Hits",
+        "Percentage": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Counter_AttackProperty_03",
+              "Corin_Attack_Branch_01_AttackProperty_04",
+              "Corin_Attack_Branch_02_AttackProperty_03",
+              "Corin_Attack_BeHitAid_AttackProperty_03",
+              "Corin_Attack_AssaultAid_AttackProperty_06"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyType": "Custom",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(Atk_Battle)*specials(AS_Talent04Hits)*specials(AS_AddDmgPerHit_Talent_04)",
+        "ParamName": "AS_AddedAttackDelta",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Counter_AttackProperty_03",
+              "Corin_Attack_Branch_01_AttackProperty_04",
+              "Corin_Attack_Branch_02_AttackProperty_03",
+              "Corin_Attack_BeHitAid_AttackProperty_03",
+              "Corin_Attack_AssaultAid_AttackProperty_06"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": 0,
+        "CustomPropertyType": "Talent04Hits",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Counter_AttackProperty_03",
+              "Corin_Attack_Branch_01_AttackProperty_04",
+              "Corin_Attack_Branch_02_AttackProperty_03",
+              "Corin_Attack_BeHitAid_AttackProperty_03",
+              "Corin_Attack_AssaultAid_AttackProperty_06"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Counter_AttackProperty_03",
+              "Corin_Attack_Branch_01_AttackProperty_04",
+              "Corin_Attack_Branch_02_AttackProperty_03",
+              "Corin_Attack_BeHitAid_AttackProperty_03",
+              "Corin_Attack_AssaultAid_AttackProperty_06"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedAttackDelta",
+        "PropertyValue": "%AS_AddedAttackDelta",
+        "Target": "Self"
+      }
+    ]
+  }
+}

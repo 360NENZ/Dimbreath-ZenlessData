@@ -1,0 +1,17 @@
+{
+  "AbilityName": "Prologue_ACT1_AttackGuide_Interrupt",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "InterruptSetupUIAction",
+        "IgnoreFadeAnimation": true,
+        "SetupTag": "HighLight_AttackGuide_SetupTag"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "Prologue_ACT1_AttackGuide"
+      }
+    ]
+  }
+}

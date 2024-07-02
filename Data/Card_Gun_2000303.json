@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Card_Gun_2000303",
+  "AbilitySpecials": {
+    "GenreNum_Gun": {
+      "Value": 0
+    },
+    "GenreNum_Gun_Max": {
+      "Value": 0.8
+    },
+    "Ratio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(Ratio)*(item(1000301)+item(1000302)+item(1000303)+item(1000304)+item(1000305)+item(1000306)+item(1000307)+item(1000308)+item(1000309)+item(1000310)+item(1000311)+item(1100301)+item(1100302)+item(1100303)+item(1100304)+item(1100305)+item(1100306)+item(1100307)+item(1100308)+item(1100309)+item(1100310)+item(1100311)+item(1000312))",
+        "ParamName": "GenreNum_Gun",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%GenreNum_Gun_Max",
+        "ParamName": "GenreNum_Gun",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": "%GenreNum_Gun_Max",
+            "ParamName": "GenreNum_Gun",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffUpper"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffUpper": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%GenreNum_Gun"
+      }
+    }
+  }
+}

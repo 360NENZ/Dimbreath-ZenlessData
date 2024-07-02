@@ -1,0 +1,123 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "WickedWrath_ShotGun_HitCount_Modifier",
+              "StackCount": 5,
+              "Target": "EnemyAllied"
+            }
+          ],
+          "AnimatorStateName": "Attack_3",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "WickedWrath_ShotGun_HitCount_Modifier",
+              "StackCount": 5,
+              "Target": "EnemyAllied"
+            }
+          ],
+          "AnimatorStateName": "Attack_4",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "WickedWrath_ShotGun_HitCount_Modifier",
+              "StackCount": 5,
+              "Target": "EnemyAllied"
+            }
+          ],
+          "AnimatorStateName": "Attack_6_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "WickedWrath_ShotGun_HitCount",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WickedWrath_ShotGun_HitCount_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_WickedWrath_ATK03_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_WickedWrath_ATK03_Attackproperty_HitEffect",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "WickedWrath_ShotGun_HitCount_Modifier",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_WickedWrath_ATK03_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "WickedWrath_ShotGun_HitCount_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_WickedWrath_ATK03_Attackproperty_HitEffect"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 5,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "WickedWrath_ShotGun_HitCount_Modifier": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

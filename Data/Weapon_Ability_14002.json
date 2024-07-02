@@ -1,0 +1,61 @@
+{
+  "AbilityName": "Weapon_Ability_14002",
+  "AbilitySpecials": {
+    "AS_CriticalDelta": {
+      "Value": 0.12
+    },
+    "AS_Duration": {
+      "Value": 12.0
+    },
+    "AS_IntervalCD": {
+      "Value": 30.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDeltaModifier_Weapon_Ability_14002",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementResistType",
+            "ResistType": "Effective"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IntervalCDModifier_Weapon_Ability_14002",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementResistType",
+            "ResistType": "Effective"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalDeltaModifier_Weapon_Ability_14002": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_CriticalDelta",
+          "PropertyValue": "%AS_CriticalDelta",
+          "Target": "Self"
+        }
+      ]
+    },
+    "IntervalCDModifier_Weapon_Ability_14002": {
+      "Duration": "%AS_IntervalCD",
+      "IsUnique": true,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

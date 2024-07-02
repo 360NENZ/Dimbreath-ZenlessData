@@ -1,0 +1,81 @@
+{
+  "AbilityName": "GamePlaySUMO_Player_OutRange_ContinueHurt_FC_Test",
+  "AbilitySpecials": {
+    "AS_AttackBonus": {
+      "Value": 0.5
+    },
+    "AS_SelfAttack": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OuterHit_Modifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlaySUMO_Player_OutRange_ContinueHurt_FC_Test_1",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OuterHit_Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "EffectPattern": "Buff_Electric_EMP_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(Attack)*specials(AS_AttackBonus)",
+          "ParamName": "AS_SelfAttack",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AttachPoint": "MiddlePoint",
+          "AttackProperty": {
+            "AddedDamageValue": "%AS_SelfAttack"
+          },
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 1
+    }
+  }
+}

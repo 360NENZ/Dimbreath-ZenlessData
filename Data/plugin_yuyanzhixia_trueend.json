@@ -1,0 +1,10 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "plugin_yuyanzhixia_trueend",
+  "Plugin": [
+    {
+      "$type": "CChessboardAtmosphere",
+      "key": "YuYanZhiXia_TrueEnd"
+    }
+  ]
+}

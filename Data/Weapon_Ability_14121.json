@@ -1,0 +1,380 @@
+{
+  "AbilityName": "Weapon_Ability_14121",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Default": {
+      "Value": 0.15
+    },
+    "AS_AddedDamageRatio_Final_01": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Final_02": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Final_03": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Final_04": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Final_05": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Final_06": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Final_07": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_Tick": {
+      "Value": 0.025
+    },
+    "AS_Duration": {
+      "Value": 3.0
+    },
+    "AS_SpRecoverDelta": {
+      "Value": 0.45
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": false,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*0",
+        "ParamName": "AS_AddedDamageRatio_Final_01",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*1",
+        "ParamName": "AS_AddedDamageRatio_Final_02",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*2",
+        "ParamName": "AS_AddedDamageRatio_Final_03",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*3",
+        "ParamName": "AS_AddedDamageRatio_Final_04",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*4",
+        "ParamName": "AS_AddedDamageRatio_Final_05",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*5",
+        "ParamName": "AS_AddedDamageRatio_Final_06",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_Default)+specials(AS_AddedDamageRatio_Tick)*6",
+        "ParamName": "AS_AddedDamageRatio_Final_07",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ],
+    "OnBattleEnter": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Controller",
+        "Target": "Target"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutFinish": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Controller": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.5,
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_02",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 1.0,
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_02",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_03",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 1.5,
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_03",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_04",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 2.0,
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_04",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_05",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 2.5,
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_05",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_06",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 3.0,
+          "TimeUpActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_06",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_07",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_03",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_04",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_05",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_06",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_07",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_01": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_02": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_03": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_03",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_04": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_04",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_05": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_05",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_06": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_06",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Weapon_Ability_14121_Effect_07": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Final_07",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpRecoverDeltaModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_SpRecoverDelta": "%AS_SpRecoverDelta"
+      }
+    }
+  }
+}

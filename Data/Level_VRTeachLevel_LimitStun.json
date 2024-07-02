@@ -1,0 +1,43 @@
+{
+  "AbilityName": "Level_VRTeachLevel_LimitStun",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MonsterStunModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MonsterStunModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackAid"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_BreakStunRatio",
+          "PropertyValue": -5,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

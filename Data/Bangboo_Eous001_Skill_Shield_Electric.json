@@ -1,0 +1,302 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Shield_Electric",
+  "AbilitySpecials": {
+    "AS_CDIndicate": {
+      "Value": 0
+    },
+    "AS_InternalCD": {
+      "Value": 1.5
+    },
+    "AS_InternalCD_SpecialEffect": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Bangboo_Eous001_Skill_Shield_Electric_Attack",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDModifier": {
+      "Duration": "%AS_InternalCD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_CDIndicate",
+          "ParamType": "Integer",
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_CDIndicate",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CounterAttackModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Shield_Electric_Attack",
+          "Target": "Caster"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDModifier",
+          "Target": "Caster"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CounterAttackModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ReduceDamageModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterAttackModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_CDIndicate",
+              "ParamType": "Integer",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "IndicatorBuffModifier": {
+      "Buff": {
+        "BuffID": 500003,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IgnoreTimeScale": false
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": -10,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ResistBreakLevelModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SpecialEffectModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ResistBreakLevelModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ReduceDamageModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ResistBreakLevelModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 3,
+          "Tag": "Shield_Electric",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Shield_Electric",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShieldModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "CountProtectShieldMixin",
+          "ClosePropectTime": 0,
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "ColliderType": "Sphere",
+            "SphereColliderRadius": 0.8
+          },
+          "CostCountPropectTime": "%AS_InternalCD",
+          "DestroyRecoverTime": 99999,
+          "EffectTarget": "TeamAvatars",
+          "ProtectHitTypes": [
+            0,
+            1
+          ],
+          "RecoverCountSec": 99999,
+          "ShieldCloseActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HitListenerModifier",
+              "Target": "Target"
+            }
+          ],
+          "ShieldEmptyActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Shield_Electric_End",
+              "Target": "LocalAvatar"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ShieldModifier",
+              "Target": "Self"
+            }
+          ],
+          "ShieldOpenActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitListenerModifier",
+              "Target": "Target"
+            }
+          ],
+          "ShieldStartActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Shield_Electric_Start",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "ShieldTimesUpActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Shield_Electric_End",
+              "Target": "LocalAvatar"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ShieldModifier",
+              "Target": "Self"
+            }
+          ],
+          "TotalCount": 3,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Bangboo_Eous001_Skill_Shield_Electric",
+          "Target": "Self"
+        },
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": true,
+          "SkillNames": [
+            "Bangboo_Eous001_Skill_Shield_Electric"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IndicatorBuffModifier",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": false,
+          "SkillNames": [
+            "Bangboo_Eous001_Skill_Shield_Electric"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CDModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "IndicatorBuffModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "SpecialEffectModifier": {
+      "Duration": "%AS_InternalCD_SpecialEffect",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Shield_Electric_End",
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ShieldModifier",
+      "Target": "Self"
+    }
+  ]
+}

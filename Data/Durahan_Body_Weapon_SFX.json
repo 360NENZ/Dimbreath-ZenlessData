@@ -1,0 +1,350 @@
+{
+  "AbilityName": "Durahan_Body_Weapon_SFX",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpecialEffectModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Promote"
+                ],
+                "Target": "Self"
+              },
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "BornTransform"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpecialEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Durahan_Body_SFX",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ether_Core",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Common_Ether_Demote_HeadPoint_02",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Demote"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Prologue"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ether_Core",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Common_Ether_Promote_HeadPoint_02",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Promote"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Boss"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByTags",
+                  "TagList": [
+                    "Prologue"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon_03",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Durahan_Body_Sword",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bip001 Prop1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Durahan_Body_Shield",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                1
+              ],
+              "RenderPath": "Monster_Durahan"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Transform_ToSwordShield_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Transform_ToSwordShield_Mat01_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_Durahan"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Transform_ToSwordShield_Mat02_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Transform_ToSwordShield_Mat02_SecondaryEmission_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanGrey"
+            }
+          ],
+          "Tag": "Monster_DurahanGrey_MA_Transform_ToSwordShield_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_DurahanGrey_MA_Transform_ToSwordShield_Mat01_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_Durahan_Break_02"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanGrey_Break_02"
+            },
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_DurahanEnergy_Break_02"
+            }
+          ],
+          "Tag": "Monster_Durahan_MA_Transform_ToSwordShield_Mat03_SecondaryEmission_03",
+          "Target": "Self",
+          "key": "Monster_Durahan_MA_Transform_ToSwordShield_Mat03_SecondaryEmission_03"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanBoss01"
+            }
+          ],
+          "Tag": "Monster_DurahanBoss_MA_Transform_ToSword_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_DurahanBoss_MA_Transform_ToSword_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanBoss02"
+            }
+          ],
+          "Tag": "Monster_DurahanBoss_MA_Transform_ToSword_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_DurahanBoss_MA_Transform_ToSword_SecondaryEmission_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Monster_DurahanBoss_Weapon01"
+            }
+          ],
+          "Tag": "Monster_DurahanBoss_MA_Transform_ToSword_SecondaryEmission_03",
+          "Target": "Self",
+          "key": "Monster_DurahanBoss_MA_Transform_ToSword_SecondaryEmission_03"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": false,
+              "MaterialIndexList": [
+                0
+              ],
+              "RenderPath": "Monster_DurahanEnergy"
+            }
+          ],
+          "Tag": "Monster_DurahanEnergy_MA_Transform_ToSword_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_DurahanEnergy_MA_Transform_ToSword_SecondaryEmission_02"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SpecialEffectModifier",
+      "Target": "Self"
+    }
+  ]
+}

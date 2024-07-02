@@ -1,0 +1,122 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BecomeInvincibleModifier",
+            "PlayInvincibleMaterialModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BecomeInvincibleModifier",
+            "PlayInvincibleMaterialModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BecomeInvincibleModifier",
+            "PlayInvincibleMaterialModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BecomeInvincibleModifier",
+            "PlayInvincibleMaterialModifier"
+          ]
+        }
+      ],
+      "IsSeam": true
+    }
+  ],
+  "AbilityName": "Common_Ability_OnBeingHit_Unbreakable",
+  "AbilitySpecials": {
+    "AS_MaxHPRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BecomeInvincibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 99,
+          "Tag": "Test_RBL",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Test_RBL",
+          "Target": "Self"
+        }
+      ]
+    },
+    "PlayInvincibleMaterialModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TurePlayInvincibleMaterialModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TurePlayInvincibleMaterialModifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Common_MA_SpecialBeHit_Unbreakable_OverrideRimGlow_01",
+          "Target": "Self",
+          "key": "Common_MA_SpecialBeHit_Unbreakable_OverrideRimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Common_MA_SpecialBeHit_Unbreakable_ScreenImage_01",
+          "Target": "Self",
+          "key": "Common_MA_SpecialBeHit_Unbreakable_ScreenImage_01"
+        }
+      ]
+    }
+  }
+}

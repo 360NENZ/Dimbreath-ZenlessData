@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Level_NoviceGuide_08",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetupUIAction",
+        "HideUITags": [
+          "SkillButtonA",
+          "SkillButtonD",
+          "SkillButtonBranch",
+          "SkillButtonExQTE",
+          "SwitchBtnPanel",
+          "InLevelFever",
+          "UIInLevelPlayerMove",
+          "UpToolbar"
+        ],
+        "IgnoreFadeAnimation": true,
+        "Priority": 0,
+        "SetupTag": "Level_NoviceGuide_SetupTag_01"
+      },
+      {
+        "$type": "InputMuteAction",
+        "CameraMoveMute": false,
+        "CharacterBagMute": false,
+        "CharacterMoveMute": false,
+        "CharacterQTEMute": false,
+        "CharacterSkillMute": false,
+        "CharacterSwitchMute": false,
+        "Tag": "Level_NoviceGuide_InputMute_01"
+      }
+    ]
+  }
+}

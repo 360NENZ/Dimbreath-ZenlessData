@@ -1,0 +1,197 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LycaonTalent04Modifier_ListenAttackLanded"
+          ]
+        }
+      ],
+      "IsSeam": true
+    }
+  ],
+  "AbilityName": "Lycaon_Talent_04",
+  "AbilitySpecials": {
+    "AS_DamageUpDuration_Talent_04": {
+      "Value": 12
+    },
+    "Actor_AddedDamageRatio_Talent_04": {
+      "Value": 0.06
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LycaonTalent04Modifier_DamageUp": {
+      "Duration": "%AS_DamageUpDuration_Talent_04",
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsModifierCaster",
+              "Target": "Other"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%Actor_AddedDamageRatio_Talent_04"
+        }
+      ]
+    },
+    "LycaonTalent04Modifier_ListenAttackLanded": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LycaonTalent04Modifier_DamageUp",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "PredicateAddStunRatio"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LycaonTalent04Modifier_ListenAttackLanded",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "PredicateAddStunRatio": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Lycaon_Attack_Branch_01_Enhance_02_AttackProperty_01",
+            "Lycaon_Attack_Branch_01_Enhance_02_AttackProperty_02_01",
+            "Lycaon_Attack_Branch_01_Enhance_02_AttackProperty_02_02",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_01",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_02",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_03",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_01",
+            "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_02",
+            "Lycaon_Attack_Normal_01_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_02_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_03_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_03_Enhance_AttackProperty_02",
+            "Lycaon_Attack_Normal_04_Enhance_AttackProperty_01",
+            "Lycaon_Attack_Normal_04_Enhance_AttackProperty_02",
+            "Lycaon_Attack_Normal_04_Enhance_AttackProperty_03",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_01_01",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_01_02",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_02_01",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_02_02",
+            "Lycaon_Attack_Normal_05_Enhance_01_AttackProperty_02_03",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_01",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_02",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_03",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_01_04",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_02_01",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_02_02",
+            "Lycaon_Attack_Normal_05_Enhance_02_AttackProperty_02_03"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

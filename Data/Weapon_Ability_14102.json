@@ -1,0 +1,43 @@
+{
+  "AbilityName": "Weapon_Ability_14102",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_01": {
+      "Value": 0.25
+    },
+    "AS_AddedDamageRatio_02": {
+      "Value": 0.35
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsBackstab"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_02",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio_Physics": "%AS_AddedDamageRatio_01"
+      }
+    }
+  }
+}

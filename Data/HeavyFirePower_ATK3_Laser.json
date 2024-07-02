@@ -1,0 +1,125 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_3",
+          "FrameCountHigh": 312,
+          "FrameCountLow": 132,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyFirePower_ATK3_LaserModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": -1,
+      "AudioEffect": "",
+      "BlockColliderRadius": 0.3,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_03_Burst"
+      },
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 1.5
+      },
+      "EffectName": "Eff_Monster_HeavyFirepower_Attack_03_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_03_Burst"
+      },
+      "FirstHitDelayTime": 0.01,
+      "HitAnimEventID": "Monster_HeavyFirePower_ATK03_Attackproperty",
+      "HitColliderRadius": 0.3,
+      "HitEffect": {},
+      "HitInterval": 0.1,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WeaponPoint_R",
+          "IsUseAttachPointPos": false,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 50,
+      "StartEffect": {
+        "EffectPattern": ""
+      },
+      "Tag": "HeavyFirePower_ATK3_Laser"
+    }
+  ],
+  "AbilityName": "HeavyFirePower_ATK3_Laser",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HeavyFirePower_ATK3_LaserModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyFirePower_ATK3_Laser"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptLaserAction",
+          "Tag": "HeavyFirePower_ATK3_Laser"
+        }
+      ]
+    }
+  }
+}

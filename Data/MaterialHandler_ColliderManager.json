@@ -1,0 +1,217 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_01_Start",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 32,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02",
+          "FrameCountHigh": 143,
+          "FrameCountLow": 68,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_01",
+          "FrameCountHigh": 17,
+          "FrameCountLow": 7,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_02",
+          "FrameCountHigh": 51,
+          "FrameCountLow": 37,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 49,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Loop_01",
+          "FrameCountHigh": 92,
+          "FrameCountLow": 73,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Loop_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Loop_02",
+          "FrameCountHigh": 82,
+          "FrameCountLow": 66,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 46,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab",
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 46,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab",
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab",
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_EnableHitCollider_Grab",
+            "MaterialHandler_EnableHitCollider_Shovel"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "MaterialHandler_ColliderManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialHandler_EnableHitCollider_Grab": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_Grab"
+          ],
+          "HitColliderEnable": true,
+          "Tag": "HitCollider_Grab",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "HitCollider_Grab",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialHandler_EnableHitCollider_Shovel": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_Shovel"
+          ],
+          "HitColliderEnable": true,
+          "Tag": "HitCollider_Shovel",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "HitCollider_Shovel",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

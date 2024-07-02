@@ -1,0 +1,76 @@
+{
+  "AbilityName": "GreedyGunner_Atk04_HitCount",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_GreedyGunner_Attack_04_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_GreedyGunner_ATK04_AttackProperty_2"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_GreedyGunner_ATK04_AttackProperty_3",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_GreedyGunner_Attack_04_HitCount",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_GreedyGunner_ATK04_AttackProperty_2"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_GreedyGunner_Attack_04_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_GreedyGunner_Attack_04_HitCount",
+            "StackCount": 5,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_GreedyGunner_ATK04_AttackProperty_2"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 5,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_GreedyGunner_Attack_04_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

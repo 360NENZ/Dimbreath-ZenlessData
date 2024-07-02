@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Corin_Talent_03",
+  "AbilitySpecials": {
+    "SpRecoverCD_Talent_03": {
+      "Value": 10
+    },
+    "SpRecoverNum_Talent_03": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "BeHitAid"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ParryAid"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpRecoverModifier": {
+      "Duration": "%SpRecoverCD_Talent_03",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%SpRecoverNum_Talent_03",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

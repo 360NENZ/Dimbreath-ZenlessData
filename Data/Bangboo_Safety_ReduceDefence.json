@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Bangboo_Safety_ReduceDefence",
+  "AbilitySpecials": {
+    "AS_DefenceRatio": {
+      "Value": -0.15
+    },
+    "AS_ReduceDefenceTime": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ReduceDefenceModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Safety_Attackproperty_Attack03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ReduceDefenceModifier": {
+      "Duration": "%AS_ReduceDefenceTime",
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DefenceRatio": "%AS_DefenceRatio"
+      }
+    }
+  }
+}

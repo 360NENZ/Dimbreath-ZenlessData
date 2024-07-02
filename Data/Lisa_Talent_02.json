@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Lisa_Talent_02",
+  "AbilitySpecials": {
+    "AS_AbnormalResistRatio_Elec": {
+      "Value": -0.15
+    },
+    "AS_Duration": {
+      "Value": 8
+    },
+    "AS_ElecDamageResist": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DecreaseElecResist",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Lisa_Grenade"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DecreaseElecResist": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AbnormalResistDelta_Elec": "%AS_AbnormalResistRatio_Elec",
+        "Actor_ElecDamageResist": "%AS_ElecDamageResist"
+      }
+    }
+  }
+}

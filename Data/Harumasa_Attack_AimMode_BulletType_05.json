@@ -1,0 +1,142 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Harumasa_Attack_Trap_02_Flare"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "MiddlePoint",
+          "CustomKey": "Harumasa_Trap_AbilityTargetting",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Custom"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Harumasa_Attack_Aimmode_Bullet_AttackProperty_05",
+      "ExplodePosType": "HitPoint",
+      "ExtraTarggeting": "Custom",
+      "ExtraTarggetingCustomKey": "Harumasa_AttackTarget_AimMode_Bullet05",
+      "HitExplodeRadius": 0.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundEffect": {
+        "EffectPattern": "Eff_Harumasa_Attack_Ani_Start_08_HitGround"
+      },
+      "HitStageWallEffect": {
+        "EffectPattern": "Eff_Harumasa_Attack_Ani_Start_07_HitWall"
+      },
+      "HitTargetEffect": {
+        "EffectPattern": "Eff_Harumasa_Attack_Ani_Start_06_HitTarget"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0,
+        "HitTangentialRatio": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 60
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "FreezeRotateXZ": false,
+        "FreezeRotateY": false,
+        "ReachLimitStop": false,
+        "ReachTargetStop": true,
+        "RotateSpeed": 30,
+        "RotateType": "Instant",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "CustomKey": "Harumasa_AttackTarget_AimMode_Bullet05",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Custom"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "None",
+      "UseScenePropCollider": true
+    }
+  ],
+  "AbilityName": "Harumasa_Attack_AimMode_BulletType_05",
+  "AbilityStacking": "Unique"
+}

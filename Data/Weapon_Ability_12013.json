@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Weapon_Ability_12013",
+  "AbilitySpecials": {
+    "AS_DefenceRatio": {
+      "Value": 0.2
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DefenceModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DefenceModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_DefenceRatio": "%AS_DefenceRatio"
+      }
+    }
+  }
+}

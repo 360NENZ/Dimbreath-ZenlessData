@@ -1,0 +1,89 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Move_F",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CounterTriggerControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Move_B",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CounterTriggerControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_Start",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CounterTriggerControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_F",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CounterTriggerControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P1_Move_B",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CounterTriggerControlModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Hati_CounterTriggerControl",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {},
+  "Modifiers": {
+    "CounterTriggerControlModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_CounterTrigger",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_CounterTrigger",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

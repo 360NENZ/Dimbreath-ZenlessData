@@ -1,0 +1,70 @@
+{
+  "AbilityName": "Rally_PlayCameraShake02",
+  "AbilitySpecials": {
+    "ShakeKey": {
+      "Value": "Monster_InLevelPileDriver_Walk_CamShake_E_02"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ShakeModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 1.5,
+          "TimeUpActions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_InLevelPileDriver_Walk_CamShake_E_02",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 3,
+          "TimeUpActions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_InLevelPileDriver_Walk_CamShake_E_02",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 4.5,
+          "TimeUpActions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_InLevelPileDriver_Walk_CamShake_E_02",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 6,
+          "TimeUpActions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_InLevelPileDriver_Walk_CamShake_E_02",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 7,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_InLevelPileDriver_Walk_CamShake_E_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ShakeModifier"
+    }
+  ]
+}

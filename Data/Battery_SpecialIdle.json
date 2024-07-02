@@ -1,0 +1,69 @@
+{
+  "AbilityName": "Battery_SpecialIdle",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Battery_SpecialBeHit",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DelayHandle",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Battery_SpecialBeHit": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Battery_OnHit",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Target",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit_Battery_03",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Target",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DelayHandle": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_SpecialOpen",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

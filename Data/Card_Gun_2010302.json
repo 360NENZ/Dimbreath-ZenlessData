@@ -1,0 +1,34 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Gun_2000300",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Gun_2000300",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%UseNewMaxStack",
+                  "ParamName": "AS_UseNewMaxStack",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Gun_2010302",
+  "AbilitySpecials": {
+    "UseNewMaxStack": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique"
+}

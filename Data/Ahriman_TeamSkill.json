@@ -1,0 +1,121 @@
+{
+  "AbilityName": "Ahriman_TeamSkill",
+  "AbilitySpecials": {
+    "AS_ModifierDuration": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Monster_Ahriman"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ATK03ControllerModifier": {
+      "Duration": "%AS_ModifierDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 0.2,
+          "ParamName": "AS_ModifierDuration",
+          "ParamType": "Float",
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_TeamSkill",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "ActionMode",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RBLModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 4,
+          "Tag": "Ahriman_RBL",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RBLModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Attack"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "UnsetRBLAction",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Attack"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Tag": "Ahriman_RBL",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": 0.1,
+      "ParamName": "AS_ModifierDuration",
+      "ParamType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Monster_Ahriman",
+      "ModifierName": "RBLModifier",
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Monster_Ahriman",
+      "ModifierName": "ATK03ControllerModifier",
+      "Target": "Custom"
+    }
+  ]
+}

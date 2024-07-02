@@ -1,0 +1,54 @@
+{
+  "AbilityName": "HpContainer_Material",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "ApplyAllRenderers": true,
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Small"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Device_HealContainer_S_Glitch_01",
+      "Target": "Self",
+      "key": "Device_HealContainer_S_Glitch_01"
+    },
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "ApplyAllRenderers": true,
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Middle"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Device_HealContainer_S_Glitch_01",
+      "Target": "Self",
+      "key": "Device_HealContainer_S_Glitch_01"
+    },
+    {
+      "$type": "ModifyMaterialPropertyAction",
+      "ApplyAllRenderers": true,
+      "Predicates": [
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Big"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Tag": "Device_HealContainer_S_Glitch_01",
+      "Target": "Self",
+      "key": "Device_HealContainer_S_Glitch_01"
+    }
+  ]
+}

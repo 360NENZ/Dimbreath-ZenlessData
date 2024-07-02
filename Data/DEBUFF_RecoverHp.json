@@ -1,0 +1,32 @@
+{
+  "AbilityName": "DEBUFF_RecoverHp",
+  "AbilitySpecials": {
+    "HealRatio": {
+      "Value": 0.0025
+    }
+  },
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DEBUFF_RecoverHpModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DEBUFF_RecoverHpModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnThinkInterval": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": 0,
+          "Percentage": "%HealRatio",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.1
+    }
+  }
+}

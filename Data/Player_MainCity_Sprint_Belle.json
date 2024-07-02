@@ -1,0 +1,37 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Sprint",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifier_Controller"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Player_MainCity_Sprint_Belle",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SpecialEffectModifier_Controller": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Belle_MainCity_Sprint_01_Dust",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

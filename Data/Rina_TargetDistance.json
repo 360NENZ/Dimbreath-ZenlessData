@@ -1,0 +1,597 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01_Stay",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01_Stay",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01_Front",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01_Front",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01_Back",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_01_Back",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "SetCtrlerParamModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 2,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_TargetDistance",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ResetCtrlerParamModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsCloseTarget_Rina",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsRangeTarget_Rina",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsCloseTarget_Drusilla",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsRangeTarget_Drusilla",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_NeedDeployment_Drusilla",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsCloseTarget_Anastacia",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsRangeTarget_Anastacia",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_NeedDeployment_Anastacia",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SetCtrlerParamModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsCloseTarget_Rina",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "Less",
+              "Distance": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsRangeTarget_Rina",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "GreaterEqual",
+              "Distance": 5,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsCloseTarget_Drusilla",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "Less",
+              "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+              "Distance": 3,
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsRangeTarget_Drusilla",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "GreaterEqual",
+              "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+              "Distance": 5,
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsCloseTarget_Anastacia",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "Less",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "Distance": 3,
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsRangeTarget_Anastacia",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "GreaterEqual",
+              "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+              "Distance": 5,
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_NeedDeployment_Drusilla",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnd",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsSelfAttackTarget",
+                      "IsSelfAttackTarget": true,
+                      "Target": "SelfAttackTarget"
+                    },
+                    {
+                      "$type": "ByDistance",
+                      "CompareTarget": "SelfAttackTarget",
+                      "CompareType": "GreaterEqual",
+                      "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+                      "Distance": 4,
+                      "Target": "Custom"
+                    }
+                  ]
+                },
+                {
+                  "$type": "ByAnd",
+                  "Predicates": [
+                    {
+                      "$type": "ByNot",
+                      "Predicates": [
+                        {
+                          "$type": "ByIsSelfAttackTarget",
+                          "IsSelfAttackTarget": true,
+                          "Target": "SelfAttackTarget"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "ByDistance",
+                      "CompareTarget": "Custom",
+                      "CompareTargetCustomKey": "Rina_Drusilla_AbilityTargetting_01",
+                      "CompareType": "GreaterEqual",
+                      "Distance": 4,
+                      "TargetPosRot": {
+                        "CoordsOption": "ReferTarget",
+                        "Offset": {
+                          "AngleOffset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          },
+                          "PositionOffset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          }
+                        },
+                        "TargetOption": {
+                          "$type": "ConfigPosRotReferTarget",
+                          "AttachPoint": "DeployPoint_Drusilla_01",
+                          "BackupOffsetReferTarget": "None",
+                          "IsUseAttachPointPos": true,
+                          "IsUseAttachPointRotation": true,
+                          "OffsetReferTarget": "Self"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_NeedDeployment_Anastacia",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnd",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsSelfAttackTarget",
+                      "IsSelfAttackTarget": true,
+                      "Target": "SelfAttackTarget"
+                    },
+                    {
+                      "$type": "ByDistance",
+                      "CompareTarget": "SelfAttackTarget",
+                      "CompareType": "GreaterEqual",
+                      "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+                      "Distance": 4,
+                      "Target": "Custom"
+                    }
+                  ]
+                },
+                {
+                  "$type": "ByAnd",
+                  "Predicates": [
+                    {
+                      "$type": "ByNot",
+                      "Predicates": [
+                        {
+                          "$type": "ByIsSelfAttackTarget",
+                          "IsSelfAttackTarget": true,
+                          "Target": "SelfAttackTarget"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "ByDistance",
+                      "CompareTarget": "Custom",
+                      "CompareTargetCustomKey": "Rina_Anastacia_AbilityTargetting_01",
+                      "CompareType": "GreaterEqual",
+                      "Distance": 4,
+                      "TargetPosRot": {
+                        "CoordsOption": "ReferTarget",
+                        "Offset": {
+                          "AngleOffset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          },
+                          "PositionOffset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          }
+                        },
+                        "TargetOption": {
+                          "$type": "ConfigPosRotReferTarget",
+                          "AttachPoint": "DeployPoint_Anastacia_01",
+                          "BackupOffsetReferTarget": "None",
+                          "IsUseAttachPointPos": true,
+                          "IsUseAttachPointRotation": true,
+                          "OffsetReferTarget": "Self"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

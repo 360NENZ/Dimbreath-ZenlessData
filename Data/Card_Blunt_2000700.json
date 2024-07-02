@@ -1,0 +1,235 @@
+{
+  "AbilityName": "Card_Blunt_2000700",
+  "AbilitySpecials": {
+    "AS_AddedAccumulationRatio": {
+      "Value": 0
+    },
+    "AS_GetCard_2000701": {
+      "Value": 0
+    },
+    "AS_MaxStack": {
+      "Value": 4
+    },
+    "AS_StunRatio": {
+      "Value": 0.06
+    },
+    "AS_UseNewMaxStack": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TarotCard_BluntModifier_01": {
+      "Duration": 30,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_AddedBreakStunRatio": "%AS_StunRatio"
+      }
+    },
+    "TarotCard_BluntModifier_02": {
+      "Duration": 30,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsStunDestroyed",
+              "IsStunDestroyed": true,
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%AS_AddedAccumulationRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TarotCard_Blunt_2000700_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3100031,
+        "IsOverrideDuration": false
+      },
+      "Duration": 30,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "TarotCard_Blunt_2000700_BuffIcon_02": {
+      "Buff": {
+        "BuffID": 3100032,
+        "IsOverrideDuration": false
+      },
+      "Duration": 30,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "TarotCard_Blunt_2000700_BuffIcon_03": {
+      "Buff": {
+        "BuffID": 3100031,
+        "IsOverrideDuration": false
+      },
+      "Duration": 30,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "TarotCard_Blunt_2000700_BuffIcon_04": {
+      "Buff": {
+        "BuffID": 3100032,
+        "IsOverrideDuration": false
+      },
+      "Duration": 30,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_BluntModifier_01",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_BluntModifier_02",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_GetCard_2000701",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetModifierMaxStackingNum",
+      "MaxStackingNum": 8,
+      "ModifierName": "TarotCard_BluntModifier_01",
+      "ModifierTargetType": "CurTargetAbility",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetModifierMaxStackingNum",
+      "MaxStackingNum": 8,
+      "ModifierName": "TarotCard_BluntModifier_02",
+      "ModifierTargetType": "CurTargetAbility",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Blunt_2000700_BuffIcon_01",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_GetCard_2000701",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Blunt_2000700_BuffIcon_02",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_GetCard_2000701",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Blunt_2000700_BuffIcon_03",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_GetCard_2000701",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TarotCard_Blunt_2000700_BuffIcon_04",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_GetCard_2000701",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": 0,
+          "ParamName": "AS_UseNewMaxStack",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

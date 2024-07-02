@@ -1,0 +1,82 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_SkillLoop_Idle",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitTimesCountsModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_IdletoMove",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitTimesCountsModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_Move",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitTimesCountsModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_MovetoIdle",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitTimesCountsModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Luckyboo_HitTimesManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HitTimesCountsModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "HitTimes",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "HitTimes",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    }
+  }
+}

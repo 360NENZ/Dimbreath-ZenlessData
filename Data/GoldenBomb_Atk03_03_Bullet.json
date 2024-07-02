@@ -1,0 +1,135 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.2
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.5
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Bullet_03"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.1,
+            "y": 0.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 3.5,
+        "CapsuleColliderRadius": 0.45,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.75
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_GoldenBomb_ATK03_03_Attackproperty",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_GoldenBomb_Explosive_03"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "Monster_GoldenBomb_ATK03_03_Attackproperty",
+      "HitExplodeRadius": 1,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "IsCanReflect": false,
+      "MaxHitNum": 99,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 1,
+      "MovementConfig": {
+        "$type": "ConfigMovementParabola",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0
+        },
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.75,
+        "HitTangentialRatio": 0,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TimesUpMoveOption": "Remain",
+        "h1": 0.5,
+        "h2": 3,
+        "s1": 0.1,
+        "s2": 25,
+        "t1": 0.5,
+        "t2": 1.25
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Nostradamus_Bullet_Explosion_CamShake_01",
+          "Target": "Other"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "Explode",
+      "ReflectEffect": {
+        "EffectPattern": "Eff_Monster_Cyclops_Attack_01_Bullet_01_Reflect"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "GoldenBomb_Atk03_03_Bullet",
+  "AbilityStacking": "Unique"
+}

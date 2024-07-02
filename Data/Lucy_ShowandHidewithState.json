@@ -1,0 +1,151 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchOut_Normal",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "LucySwitchOutModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.1
+        },
+        {
+          "AnimatorStateName": "SwitchOut_Attack",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "LucySwitchOutModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Death",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "LucySwitchOutModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Normal",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LucySwitchInModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LucySwitchInModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LucySwitchInModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_L_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LucySwitchInModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LucySwitchInModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LucySwitchInModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_ShowandHidewithState",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LucySwitchInModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ParamName": "Bool_LucyShow",
+          "Target": "Custom"
+        },
+        {
+          "$type": "TriggerBehaviorTreeAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "Enable": true,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "LucySwitchOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ParamName": "Bool_LucyShow",
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

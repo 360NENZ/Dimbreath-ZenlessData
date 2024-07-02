@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Golem_Attack_Hit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushHitColliderEnable",
+        "ColliderName": [
+          "HitCollider_Weapon_L"
+        ],
+        "HitColliderEnable": false,
+        "Tag": "HitCollider_Weapon_L",
+        "Target": "Self"
+      },
+      {
+        "$type": "PushHitColliderEnable",
+        "ColliderName": [
+          "HitCollider_Weapon_R"
+        ],
+        "HitColliderEnable": false,
+        "Tag": "HitCollider_Weapon_R",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Golem_ATK02_Attackproperty_01",
+              "Monster_Golem_ATK03_Attackproperty_01",
+              "Monster_Golem_ATK04_Attackproperty_01"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

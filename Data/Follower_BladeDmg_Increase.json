@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Follower_BladeDmg_Increase",
+  "AbilitySpecials": {
+    "BladeDamageRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "BladeDamageRatio": "%BladeDamageRatio"
+    }
+  }
+}

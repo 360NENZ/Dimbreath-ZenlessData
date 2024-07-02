@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Curse_ModifyAbyssEnemyProperty",
+  "AbilitySpecials": {
+    "AS_AbnormalResistRatio": {
+      "Value": 0
+    },
+    "AddStunMaxRatio": {
+      "Value": 0
+    },
+    "AddedAttackRatio": {
+      "Value": 0
+    },
+    "HpPercentage": {
+      "Value": 0
+    },
+    "StunDestroyRecoverRate_Ratio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AbnormalResistDelta_Elec": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Ether": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Fire": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Ice": "%AS_AbnormalResistRatio",
+      "Actor_AbnormalResistDelta_Physics": "%AS_AbnormalResistRatio",
+      "Actor_BaseAttackRatio": "%AddedAttackRatio",
+      "Actor_MaxHPRatio": "%HpPercentage",
+      "Actor_StunDestroyRecoverRate_Ratio": "%StunDestroyRecoverRate_Ratio",
+      "Actor_StunMaxRatio": "%AddStunMaxRatio"
+    }
+  }
+}

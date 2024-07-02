@@ -1,0 +1,135 @@
+{
+  "AbilityName": "Bangboo_Booressure_MathSkill",
+  "AbilitySpecials": {
+    "AS_ExSpRecoverRadio": {
+      "Value": 0.5
+    },
+    "AS_PairACount": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0.0,
+        "ParamName": "AS_PairACount",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "PairCheckModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PairCheckModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MathSkillModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "MathSkillBooressure"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Booressure_Skill",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_ExSpRecoverRadio",
+                  "ParamName": "AS_ExtraSpRecoverRadio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "PairAModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1.0,
+          "ParamName": "AS_PairACount",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MathSkillModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 1.0,
+              "ParamName": "AS_PairACount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByBuddyTeamType",
+              "CheckBuddyTeam": "Fighting",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "PairCheckModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PairAModifier",
+          "Predicates": [
+            {
+              "$type": "ByAvatarProfessionType",
+              "ProfessionType": "Support",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "RecoverHPAction",
+      "Amount": "%AS_ExRecoverValue",
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByHasModifier",
+          "ModifierNameList": [
+            "MathSkillModifier"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

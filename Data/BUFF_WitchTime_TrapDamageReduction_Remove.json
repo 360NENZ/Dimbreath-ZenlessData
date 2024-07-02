@@ -1,0 +1,18 @@
+{
+  "AbilityName": "BUFF_WitchTime_TrapDamageReduction_Remove",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_TrapDamageReduction",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_TrapDamageReduction_Remove",
+        "Target": "Self"
+      }
+    ]
+  }
+}

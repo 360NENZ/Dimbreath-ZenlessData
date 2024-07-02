@@ -1,0 +1,47 @@
+{
+  "AbilityName": "BUFF_EXQTE",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BUFF_EXQTEModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BUFF_EXQTEModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyTeamFeverAction",
+          "ModifyFunction": "Add",
+          "Percent": 1
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_InLevelItem_Prop_ResourceItem_01_AddExQTE",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "BUFF_EXQTE"
+        }
+      ]
+    }
+  }
+}

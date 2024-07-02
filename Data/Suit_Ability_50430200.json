@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Suit_Ability_50430200",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.15
+    },
+    "AS_Duration": {
+      "Value": 6.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    }
+  }
+}

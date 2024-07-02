@@ -1,0 +1,195 @@
+{
+  "AbilityName": "Card_Froze_1001108",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "ExSkill": {
+      "Value": 0
+    },
+    "TimeOfDuration": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "item(1001104)",
+        "ParamName": "ExSkill",
+        "ValueType": "Integer"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceBurst_Modifiers",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FrozenBuffModifier": {
+      "Buff": {
+        "BuffID": 2,
+        "IsOverrideDuration": false
+      },
+      "Duration": 1,
+      "ModifierStacking": "Replace"
+    },
+    "IceBurst_Modifiers": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnDestroyFrozen": [
+        {
+          "$type": "RandomOperator",
+          "Odds": "%ExSkill",
+          "OnFailure": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_FrozenBurst",
+              "FireEffectPosRot": {
+                "CoordsOption": "Target",
+                "NeedRaycastGround": false,
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "MiddlePoint",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": false,
+                  "OffsetReferTarget": "Target"
+                }
+              },
+              "Target": "Target"
+            },
+            {
+              "$type": "ApplyModifier",
+              "CustomKey": "Card_Frozen_RangeDMG_Ability_Middle_AbilityTargetting",
+              "ModifierName": "FrozenBuffModifier",
+              "Target": "Custom"
+            },
+            {
+              "$type": "DamageByAttackPropertyAction",
+              "AnimEventID": "#Card_Froze_1001108_AttackProperty_01",
+              "AttachPoint": "MiddlePoint",
+              "AttackProperty": {
+                "DamageElement": "Ice",
+                "DamagePercentage": "%AddedDamageRatio"
+              },
+              "CustomKey": "Card_Frozen_RangeDMG_Ability_Middle_AbilityTargetting",
+              "Target": "Custom"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_FrozenBurst_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Self",
+                "NeedRaycastGround": false,
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "MiddlePoint",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": false,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Target"
+            },
+            {
+              "$type": "ApplyModifier",
+              "CustomKey": "Card_Frozen_RangeDMG_Ability_Large_AbilityTargetting",
+              "ModifierName": "FrozenBuffModifier",
+              "Target": "Custom"
+            },
+            {
+              "$type": "DamageByAttackPropertyAction",
+              "AnimEventID": "#Card_Froze_1001108_AttackProperty_01",
+              "AttachPoint": "MiddlePoint",
+              "AttackProperty": {
+                "DamageElement": "Ice",
+                "DamagePercentage": "%AddedDamageRatio"
+              },
+              "CustomKey": "Card_Frozen_RangeDMG_Ability_Large_AbilityTargetting",
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Other"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Interval",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Interval": {
+      "Duration": "%TimeOfDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "IceBurst_Modifiers",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IceBurst_Modifiers",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "AbilityName": "Card_Ether_2001901",
+  "AbilitySpecials": {
+    "AS_AddedDamageByElementMystery": {
+      "Value": 0
+    },
+    "AS_ElementMysteryAddedLimit": {
+      "Value": 0.6
+    },
+    "AS_ElementMysteryDelta": {
+      "Value": 200
+    },
+    "AS_ElementMysteryTransRatio": {
+      "Value": 0.005
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(ElementMystery_Battle)*specials(AS_ElementMysteryTransRatio)",
+        "ParamName": "AS_AddedDamageByElementMystery",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "AS_ElementMysteryAddedLimit",
+        "ParamName": "AS_AddedDamageByElementMystery",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": "AS_ElementMysteryAddedLimit",
+            "ParamName": "AS_AddedDamageByElementMystery",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageByElementMystery",
+        "Target": "Self"
+      }
+    ]
+  }
+}

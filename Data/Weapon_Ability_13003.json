@@ -1,0 +1,151 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsSaveToSpecial": true,
+          "IsUsePercentage": false,
+          "NameSaveToSpecial": "AS_ConsumeSp_Delta",
+          "PropertyChangeActions": [
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(AS_ConsumeSp_Delta)*(-1)",
+              "ParamName": "AS_ConsumeSp_Delta",
+              "Target": "Self",
+              "ValueType": "Float"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(AS_ConsumeSp_Total)+specials(AS_ConsumeSp_Delta)",
+              "ParamName": "AS_ConsumeSp_Total",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 0,
+                  "ParamName": "AS_ConsumeSp_Delta",
+                  "ParamType": "Float",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self",
+              "ValueType": "Float"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BuffModifier_Controller",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 0,
+                  "ParamName": "AS_ConsumeSp_Delta",
+                  "ParamType": "Float",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Weapon_Ability_13003",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.05
+    },
+    "AS_ConsumeSp_Delta": {
+      "Value": 0.0
+    },
+    "AS_ConsumeSp_Total": {
+      "Value": 0.0
+    },
+    "AS_Duration": {
+      "Value": 10.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BuffModifier_Controller": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 10,
+              "ParamName": "AS_ConsumeSp_Total",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ConsumeSp_Total)-10",
+          "ParamName": "AS_ConsumeSp_Total",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 10,
+              "ParamName": "AS_ConsumeSp_Total",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Controller",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 10,
+              "ParamName": "AS_ConsumeSp_Total",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_Controller",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Less",
+              "Param": 10,
+              "ParamName": "AS_ConsumeSp_Total",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BuffModifier_Effect": {
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 10,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    }
+  }
+}

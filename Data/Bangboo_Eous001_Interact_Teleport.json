@@ -1,0 +1,12 @@
+{
+  "AbilityName": "Bangboo_Eous001_Interact_Teleport",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "DitherFadeAction",
+      "DitherFadeKey": "Bangboo_Teleport_Dither_Fade",
+      "Tag": "Bangboo_Teleport_Dither_Fade",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 8,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 1.0
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Avocaboo_Bullet_Ground_Exploded"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.1,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "ExplodeAnimEventID": "Bangboo_Avocaboo_Attackproperty_Attack_QTE",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Avocaboo_Bullet_Exploded"
+      },
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 3,
+      "HitInterval": 0.0,
+      "HitOtherExplode": true,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "OnBulletHitTargetExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Avocaboo_BulletExplode_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Skill_Avocaboo_Eff_Bullet_Explo"
+        }
+      ],
+      "OnBulletTimeUpExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Avocaboo_BulletExplode_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Skill_Avocaboo_Eff_Bullet_Explo_02"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Bangboo_Avocaboo_Explode_QTE",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,13 @@
+{
+  "AbilityName": "TalentTreeAbility_ExtraRecover",
+  "AbilitySpecials": {
+    "AdditionalDropRate": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnOpenBox": []
+  }
+}

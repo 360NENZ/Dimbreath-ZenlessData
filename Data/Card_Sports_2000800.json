@@ -1,0 +1,333 @@
+{
+  "AbilityName": "Card_Sports_2000800",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.45
+    },
+    "AS_AddedDamageRatio_Total": {
+      "Value": 0
+    },
+    "AS_AddedElementAccumulationRatio": {
+      "Value": 0
+    },
+    "AS_AddedExtraDamageRatio": {
+      "Value": 0
+    },
+    "AS_CriticalDmgDelta": {
+      "Value": 0
+    },
+    "AS_Duration": {
+      "Value": 10
+    },
+    "AS_HasCard2000802": {
+      "Value": 0
+    },
+    "AS_HasCard2010802": {
+      "Value": 0
+    },
+    "AS_SPAmount": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Card_Sports_2000800_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3100071,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "CounterBuff_Card_2000800_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3100072,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique"
+    },
+    "CounterBuff_Card_2000800_BuffIcon_02": {
+      "Buff": {
+        "BuffID": 3100073,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique"
+    },
+    "CounterBuff_Card_2000800_BuffIcon_03": {
+      "Buff": {
+        "BuffID": 3100074,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique"
+    },
+    "CounterBuff_Card_2000800_BuffIcon_04": {
+      "Buff": {
+        "BuffID": 3100075,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique"
+    },
+    "CounterBuff_Damage_Card_2000800": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_Element_Card_2000800",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2000802",
+              "ParamType": "Float"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_RBL_Card_2000800",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2010802",
+              "ParamType": "Float"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SportsModifier_Base",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Card_Sports_2000800_BuffIcon_01",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    },
+    "CounterBuff_Element_Card_2000800": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedElementAccumulationRatio": "%AS_AddedElementAccumulationRatio",
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDmgDelta"
+      }
+    },
+    "CounterBuff_RBL_Card_2000800": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackNormal",
+                "Counter"
+              ]
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "PropertyKey": "BreakLevel_Delta",
+          "PropertyValue": 2,
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedExtraDamageRatio"
+      }
+    },
+    "SportsModifier_Base": {
+      "Duration": -1,
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SPAmount",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_Damage_Card_2000800",
+          "Predicates": [
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "ModifierName": "SportsModifier_Base",
+              "StackCount": 5
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_Card_2000800_BuffIcon_01",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HasCard2000802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HasCard2010802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "ModifierName": "SportsModifier_Base",
+              "StackCount": 5
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_Card_2000800_BuffIcon_02",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2000802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HasCard2010802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "ModifierName": "SportsModifier_Base",
+              "StackCount": 5
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_Card_2000800_BuffIcon_03",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HasCard2000802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2010802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "ModifierName": "SportsModifier_Base",
+              "StackCount": 5
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterBuff_Card_2000800_BuffIcon_04",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2000802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HasCard2010802",
+              "ParamType": "Float"
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Equal",
+              "ModifierName": "SportsModifier_Base",
+              "StackCount": 5
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SportsModifier_Base",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Card_Sports_2000800_BuffIcon_01",
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_AddedDamageRatio)+specials(AS_AddedExtraDamageRatio)",
+      "ParamName": "AS_AddedDamageRatio_Total",
+      "ValueType": "Float"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "FieldRangeMixin",
+      "ColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "FanCylinder",
+        "FanCylinderColliderAngle": 360,
+        "FanCylinderColliderHeight": 2,
+        "FanCylinderColliderRadius": 2,
+        "FanCylinderColliderVertexNum": 24
+      },
+      "FieldEnterActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Active",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByRelativeCampType",
+              "Relationship": "Enemy",
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier",
+          "Predicates": [
+            {
+              "$type": "ByRelativeCampType",
+              "Relationship": "Enemy",
+              "Target": "Target"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ],
+      "FieldInitPosRot": {
+        "CoordsOption": "Self",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "IsFollow": true,
+      "TotalDuration": -1
+    }
+  ],
+  "AbilityName": "HeavyFirePower_Mine_DetectEnemy",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EffectModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_Alert_Circle_07",
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}

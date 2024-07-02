@@ -1,0 +1,269 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HPShieldModifier_Controller"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HPShieldModifier_Controller"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HPShieldModifier_Controller"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HPShieldModifier_Controller"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ben_ShieldManager",
+  "AbilitySpecials": {
+    "AS_HpShieldComsumeAmount": {
+      "Value": 0.1
+    },
+    "AS_HpShieldComsumePercentage": {
+      "Value": 0.1
+    },
+    "AS_HpShieldRatioCur": {
+      "Value": 0.0
+    },
+    "AS_HpShieldRatioMax": {
+      "Value": 0.5
+    },
+    "AS_HpShieldRecoverPercentage": {
+      "Value": 0.1
+    },
+    "AS_HpShieldRemainAmount": {
+      "Value": 0.0
+    },
+    "AS_HpShieldRemainPercentage": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": "%AS_HpShieldRatioMax",
+        "CustomPropertyType": "HpShieldRatioCur",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": "%AS_HpShieldRatioMax",
+        "CustomPropertyType": "HpShieldRatioMax",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpShieldModifier_Recover",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HPShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Greater",
+                  "Param": 0,
+                  "ParamName": "AS_HpShieldRatioCur",
+                  "ParamType": "Float"
+                }
+              ],
+              "Tag": "Avatar_Male_Size03_Ben_MA_BlockState_Mat01_OverrideRimGlow_01",
+              "Target": "Self",
+              "key": "Avatar_Male_Size03_Ben_MA_BlockState_Mat01_OverrideRimGlow_01"
+            }
+          ],
+          "Duration": -1,
+          "EmptyActions": [
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Tag": "Avatar_Male_Size03_Ben_MA_BlockState_Mat01_OverrideRimGlow_01",
+              "Target": "Self"
+            }
+          ],
+          "Priority": 0,
+          "RecoverAmount": "%AS_HpShieldComsumeAmount",
+          "RecoverPercentage": 0,
+          "RemovedActions": [
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Tag": "Avatar_Male_Size03_Ben_MA_BlockState_Mat01_OverrideRimGlow_01",
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Ben_Block_HpShield",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%AS_HpShieldRatioCur",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "HPShieldModifier_Controller": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "HpShieldRatioCur",
+          "IsUsePercentage": false,
+          "Percentage": 1.0,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Start",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false
+            }
+          ],
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "CustomPropertyType": "HpShieldRatioCur",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HpShieldRatioCur",
+          "Percentage": 1.0,
+          "PropertyType": "Custom",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(MaxHP)*property(HpShieldRatioMax)*specials(AS_HpShieldComsumePercentage)*(-1)",
+          "ParamName": "AS_HpShieldComsumeAmount",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HPShieldModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HpShieldModifier_Recover",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialsByHpShiledValueAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HpShieldRemainAmount",
+          "ParamType": "Float",
+          "Tag": "Ben_Block_HpShield",
+          "Target": "Self",
+          "ValueType": "CurValue"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_HpShieldRemainAmount)/property(MaxHP)",
+          "ParamName": "AS_HpShieldRemainPercentage",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_HpShieldRemainPercentage",
+          "CustomPropertyType": "HpShieldRatioCur",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HPShieldModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HpShieldModifier_Recover",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HpShieldModifier_Recover": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothChangePropertyMixin",
+          "PropertyItems": [
+            {
+              "Amount": 0,
+              "CustomPropertyType": "HpShieldRatioCur",
+              "Percentage": "%AS_HpShieldRecoverPercentage",
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

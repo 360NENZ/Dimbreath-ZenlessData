@@ -1,0 +1,131 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ModifyProperty",
+                  "Amount": 0,
+                  "Percentage": 1,
+                  "PropertyModifyFunction": "Replace",
+                  "PropertyType": "CurSP",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 20
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Level_VRTeachLevel_LimitSwitch",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AvatarLockLifeModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": 0,
+        "Percentage": 1,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "CurSP",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AvatarLockLifeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": 3,
+          "ModifyFunction": "Replace"
+        }
+      ],
+      "OnSkillStart": [
+        {
+          "$type": "LDListenEntityAction",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "AssaultAid",
+              "Target": "Self"
+            }
+          ],
+          "TargetKey": "TeachLevel_ActiveLimitSwitch_AssaultAid"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "LDListenEntityAction",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByAvatarSwitchType",
+                  "SwitchType": "AidAttack",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAidAttackType",
+                  "AidAttackType": "ParryAid"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "TargetKey": "TeachLevel_ActiveLimitSwitch"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByAvatarSwitchType",
+                  "SwitchType": "AidAttack",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAidAttackType",
+                  "AidAttackType": "EvadeAid"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "TargetKey": "TeachLevel_ActiveLimitSwitch"
+        }
+      ]
+    }
+  }
+}

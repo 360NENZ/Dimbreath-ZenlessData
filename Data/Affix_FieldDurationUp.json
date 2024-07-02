@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Affix_FieldDurationUp",
+  "AbilitySpecials": {
+    "FieldRangeDurationRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "FieldRangeDuration_Ratio": "%FieldRangeDurationRatio"
+    }
+  }
+}

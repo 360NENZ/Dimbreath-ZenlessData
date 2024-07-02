@@ -1,0 +1,99 @@
+{
+  "AbilityName": "Ability_HealSp_SingleAvatar",
+  "AbilitySpecials": {
+    "HealRatio_01": {
+      "Value": 0
+    }
+  },
+  "Modifiers": {
+    "HealSpEffectModifier": {
+      "Duration": 2.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_AddSp",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Common_MA_Buff_AddSp_RimGlow_01",
+          "Target": "Self",
+          "key": "Common_MA_Buff_AddSp_RimGlow_01"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "HealSpModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%HealNum_01",
+          "IgnoreRatio": false,
+          "Percentage": "%HealRatio_01",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 1
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "HealSpModifier",
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "HealSpEffectModifier",
+      "Target": "LocalAvatar"
+    }
+  ]
+}

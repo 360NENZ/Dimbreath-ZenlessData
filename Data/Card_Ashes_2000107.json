@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Card_Ashes_2000107",
+  "AbilitySpecials": {},
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Ashes_2000100",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAddToOther": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Ashes_2000100",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Burn",
+              "Ignite"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

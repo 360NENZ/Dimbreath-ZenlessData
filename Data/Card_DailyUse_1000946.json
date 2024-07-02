@@ -1,0 +1,78 @@
+{
+  "AbilityName": "Card_DailyUse_1000946",
+  "AbilitySpecials": {
+    "AS_DamageRatio2": {
+      "Value": 0.1
+    },
+    "AS_TemplateID": {
+      "Value": 1041
+    },
+    "BattleCount_Card1100946": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_TarotCard_CounterCombo",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": "%AS_TemplateID"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "scenevar(BattleCount_Card1100946)",
+        "ParamName": "BattleCount_Card1100946",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUpModifier2",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "LessEqual",
+            "Param": 5,
+            "ParamName": "BattleCount_Card1100946",
+            "ParamType": "Float",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": 0,
+            "ParamName": "BattleCount_Card1100946",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUpModifier2": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_DamageRatio2",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

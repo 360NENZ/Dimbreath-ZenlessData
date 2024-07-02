@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Affix_ResonateActive_DamageUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUp": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

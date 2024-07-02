@@ -1,0 +1,226 @@
+{
+  "AbilityName": "Monster_Common_Death_Sky_Onground",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BiosDeathOngroundModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.05,
+          "TimeUpActions": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "ChestPoint",
+              "EffectPattern": "Eff_Monster_Common_Death_Explosion_Red_S",
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Monster_Common_Death_Dust_Red_S",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_4",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Transition_End_01"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_HitGround",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DeathEndOngroundModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BiosDeathOngroundModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Mech"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BiosDeathOngroundModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Bios"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EtherDeathOngroundModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Ether"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "EtherDeathOngroundModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.05,
+          "TimeUpActions": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "ChestPoint",
+              "EffectPattern": "Eff_Monster_Common_Death_Explosion_Ether_S",
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Monster_Common_Death_Dust_Ether_S",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_4",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Transition_End_01"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_HitGround",
+          "Target": "Self"
+        }
+      ]
+    },
+    "VRDeathEndOngroundModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.05,
+          "TimeUpActions": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "ChestPoint",
+              "EffectPattern": "Eff_Monster_Common_VR_Death_Explosion_S",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Small",
+                  "CompareType": "LessEqual",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Monster_Common_VR_Death_Dust_S",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Small",
+                  "CompareType": "LessEqual",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_4",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Transition_End_01"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_HitGround",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "DeathEndOngroundModifier",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "IsVR"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "VRDeathEndOngroundModifier",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "IsVR"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

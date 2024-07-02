@@ -1,0 +1,1671 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "ResponseCommandModifier_Attack"
+          ],
+          "ZoneTag": "Attack"
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Dash",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "FrameCountHigh": 36,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Dash",
+          "FrameCountHigh": 36,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Dash",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Dash",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RejectCommandModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Dash",
+          "FrameCountHigh": 112,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Dash",
+          "FrameCountHigh": 112,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RejectCommandModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMoveModifier_LerpToDrusillaPosition_Remove"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RejectCommandModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Perform_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IsPerformingModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Perform_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IsPerformingModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "TriggerAbilityModifier_Rina_Anastacia_Default"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Attack",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "TriggerAbilityModifier_Rina_Anastacia_Default"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_TeleportToAttackPosition_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "StartedSkillName": "Rina_Normal",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "LogicMoveModifier_TeleportToFollowPoint",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "StartedSkillName": "Rina_Sp",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "LogicMoveModifier_TeleportToFollowPoint",
+              "Target": "Self"
+            },
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 60,
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "Percentage": 0,
+              "Target": "Custom"
+            },
+            {
+              "$type": "SkillStartAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "StartedSkillName": "Rina_ExSp",
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_03_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_EvadeAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_AssaultAid_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Evade_Front",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Evade_Back",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Evade_Front_02",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Evade_Back_02",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Death",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Dying",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SwitchOut_Outing",
+          "Frame": 93,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Idle_AFK",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Taunt",
+          "Frame": 10,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Taunt_02",
+          "Frame": 10,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "QuestStart",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Revive_Multiplayer",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ResponseCommandModifier_Return",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Teleport",
+          "Frame": 30,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_Default",
+  "AbilitySpecials": {
+    "AS_ReturnDelayTime": {
+      "Value": 3.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 8.5,
+        "ParamName": "AS_ReturnDelayTime",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAvatarTalentIndex",
+            "CustomKey": "Rina_Self_AbilityTargetting_01",
+            "TalentIndex": 1,
+            "Target": "Custom"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "DelayReturnModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": "%AS_ReturnDelayTime",
+          "TimeUpActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_CanSwitchOut",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Teleport",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByIsLocalAvatar",
+                  "CustomKey": "Rina_Self_AbilityTargetting_01",
+                  "IsLocalAvatar": true,
+                  "Target": "Custom"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Taunt",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Taunt_02",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Encore",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Taunt",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Taunt_02",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "IsPerformingModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsPerforming",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsPerforming",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMoveModifier_LerpToAttackPosition_01": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 6.0
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "BackupCoordsOption": "ReferTarget",
+              "CoordsOption": "Relative",
+              "NeedRaycastGround": true,
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 2.5
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": -1.0
+                }
+              },
+              "RaycastGroundOffset": 1.0,
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupCustomKey": "Rina_Self_AbilityTargetting_01",
+                "BackupOffsetReferTarget": "Custom",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 24.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "BackupCoordsOption": "ReferTarget",
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 2.5
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupCustomKey": "Rina_Self_AbilityTargetting_01",
+                "BackupOffsetReferTarget": "Custom",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMoveModifier_LerpToAttackPosition_01_Remove": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LogicMoveModifier_LerpToAttackPosition_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMoveModifier_LerpToDrusillaPosition": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "BackupCoordsOption": "ReferTarget",
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": -1.0,
+                  "y": 1.0,
+                  "z": 2.5
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupCustomKey": "Rina_Self_AbilityTargetting_01",
+                "BackupOffsetReferTarget": "Custom",
+                "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 24.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "BackupCoordsOption": "ReferTarget",
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupCustomKey": "Rina_Self_AbilityTargetting_01",
+                "BackupOffsetReferTarget": "Custom",
+                "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMoveModifier_LerpToDrusillaPosition_Remove": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMoveModifier_TeleportToAttackPosition_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": true,
+              "NeedRayCastGround": false
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "BackupCoordsOption": "ReferTarget",
+              "CoordsOption": "Relative",
+              "NeedRaycastGround": true,
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 2.5
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": -1.0
+                }
+              },
+              "RaycastGroundOffset": 1.0,
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupCustomKey": "Rina_Self_AbilityTargetting_01",
+                "BackupOffsetReferTarget": "Custom",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 24.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "BackupCoordsOption": "ReferTarget",
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupCustomKey": "Rina_Self_AbilityTargetting_01",
+                "BackupOffsetReferTarget": "Custom",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMoveModifier_TeleportToFollowPoint": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "FollowPoint_Anastacia_02",
+                "CustomKey": "Rina_Self_AbilityTargetting_01",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "FollowPoint_Anastacia_02",
+                "CustomKey": "Rina_Self_AbilityTargetting_01",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "FollowPoint_Anastacia_02",
+                "CustomKey": "Rina_Self_AbilityTargetting_01",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Lerp",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "FollowPoint_Anastacia_02",
+                "CustomKey": "Rina_Self_AbilityTargetting_01",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "RejectCommandModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_RejectCommand",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "ParamName": "Bool_RejectCommand",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_RejectCommand",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "ParamName": "Bool_RejectCommand",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "ResponseCommandModifier_Attack": {
+      "Duration": -1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "ParamName": "Bool_IsAttacking_Anastacia",
+          "ParamType": 2,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsAttacking",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_CanSwitchOut",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Anastacia_IsAttacking"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Anastacia_IsAttacking"
+          ],
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "IsAdd": true,
+          "Target": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DelayReturnModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DelayReturnModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Rina_Anastacia_IsAttacking"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ResponseCommandModifier_Return": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "ParamName": "Bool_IsAttacking_Anastacia",
+          "ParamType": 2,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsAttacking",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Interrupted",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Teleport",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Revive",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Idle_AFK",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Taunt",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_QuestStart",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Perform",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Encore",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_Branch_02",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_Branch_03",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Evade_Front",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Evade_Front_02",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Evade_Back",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Evade_Back_02",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_Rush",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_Counter",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_BeHidAid",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_EvadeAid",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Attack_AssaultAid",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_SwitchIn_Attack",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_SwitchIn_Attack_Ex",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DelayReturnModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LogicMoveModifier_LerpToAttackPosition_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LogicMoveModifier_TeleportToFollowPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Rina_Anastacia_Dither_FadeIn",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Rina_Anastacia_IsAttacking"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+                      "LayerIndex": 0,
+                      "NormalizedTimeHigh": 1.0,
+                      "NormalizedTimeLow": 0.0
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "SwitchOut_Outing",
+                      "LayerIndex": 0,
+                      "NormalizedTimeHigh": 1.0,
+                      "NormalizedTimeLow": 0.0
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Tag": "Avatar_Rina_Anastacia_Dither",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Anastacia_IsAttacking"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Anastacia_IsAttacking"
+          ],
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "IsAdd": false,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "TriggerAbilityModifier_Rina_Anastacia_Default": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Rina_Anastacia_Default",
+          "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+          "Target": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "LogicMoveModifier_LerpToDrusillaPosition",
+      "Target": "Self"
+    }
+  ]
+}

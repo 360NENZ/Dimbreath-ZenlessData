@@ -1,0 +1,45 @@
+{
+  "AbilityName": "GoldenBomb_SetStunAndRBL",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MuteStunModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SetRBLModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MuteStunModifier": {
+      "Properties": {
+        "Actor_BreakStunTakeRatio": -999
+      }
+    },
+    "SetRBLModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 10,
+          "Tag": "GoldenBomb_SetRBL",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "GoldenBomb_SetRBL",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

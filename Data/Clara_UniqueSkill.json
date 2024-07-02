@@ -1,0 +1,266 @@
+{
+  "AbilityName": "Clara_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedElementAccumulationRatio": {
+      "Value": 0.02
+    },
+    "AS_InpireDuration": {
+      "Value": 12
+    },
+    "AS_InpireDuration_Talent04": {
+      "Value": 24
+    },
+    "AS_Probability": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 30,
+        "CustomPropertyType": "MaxInspireCount",
+        "Predicates": [
+          {
+            "$type": "ByAvatarTalentIndex",
+            "TalentIndex": 1,
+            "Target": "Self"
+          }
+        ],
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%AS_InpireDuration_Talent04",
+        "ParamName": "AS_InpireDuration",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAvatarTalentIndex",
+            "TalentIndex": 6,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnPatternHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Clara_InspireModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_02",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_02"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Clara_UniqueSkill_BuffIcon_01",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_02",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_02"
+            ]
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByAvatarTalentIndex",
+                "TalentIndex": 1,
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Clara_UniqueSkill_BuffIcon_02",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_02",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_02"
+            ]
+          },
+          {
+            "$type": "ByAvatarTalentIndex",
+            "TalentIndex": 1,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "RandomOperator",
+        "Odds": "%AS_Probability",
+        "OnSuccess": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Clara_InspireModifier",
+            "Target": "Self"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Clara_UniqueSkill_BuffIcon_02",
+            "StackCount": 1,
+            "Target": "Self"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_01_01",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_01_02",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_02_01",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_02_02",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_02_03",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_02_04",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_02_05",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_03_01",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_03_02",
+              "Clara_Attack_Branch_ChargeAttack_01_AttackProperty_03_03",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_01_02",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_01",
+              "Clara_Attack_Branch_ChargeAttack_Loop_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_01_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_02_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_03_02",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_01",
+              "Clara_Attack_SwitchIn_Attack_Ex_AttackProperty_04_02"
+            ]
+          },
+          {
+            "$type": "ByAvatarTalentIndex",
+            "TalentIndex": 1,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Clara_InspireModifier": {
+      "Duration": "%AS_InpireDuration",
+      "MaxStackingNumber": 20,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetModifierMaxStackingNum",
+          "MaxStackingNum": 30,
+          "ModifierName": "Clara_InspireModifier",
+          "ModifierTargetType": "CurTargetAbility",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "TalentIndex": 1,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "InspireCount",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "InspireCount",
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Clara_UniqueSkill_BuffIcon_01",
+          "StackCount": 99,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Clara_UniqueSkill_BuffIcon_02",
+          "StackCount": 99,
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedElementAccumulationRatio": "%AS_AddedElementAccumulationRatio"
+      }
+    },
+    "Clara_UniqueSkill_BuffIcon_01": {
+      "Buff": {
+        "BuffID": 3000051,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_InpireDuration",
+      "MaxStackingNumber": 20,
+      "ModifierStacking": "MultipleAllRefresh"
+    },
+    "Clara_UniqueSkill_BuffIcon_02": {
+      "Buff": {
+        "BuffID": 3000053,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_InpireDuration",
+      "MaxStackingNumber": 30,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

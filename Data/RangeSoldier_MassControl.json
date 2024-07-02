@@ -1,0 +1,133 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle_Alert01_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle_Alert01_Loop",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Idle_Alert01_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Idle_MainCity_01_LightJaeger",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Idle_MainCity_02_LightJaeger",
+          "FrameCountHigh": 41,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle_MainCity_03_LightJaeger",
+          "FrameCountHigh": 3,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle_MainCity_StrikeJaeger_Alert01",
+          "FrameCountHigh": 41,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle_MainCity_StrikeJaeger_SitComa01",
+          "FrameCountHigh": 3,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle_MainCity_StrikeJaeger_SitComa02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MassControlModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "RangeSoldier_MassControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MassControlModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMassRatioAction",
+          "Ratio": 101,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyMassRatioEndAction",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

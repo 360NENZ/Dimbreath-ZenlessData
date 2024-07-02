@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Ability_Card_Blade_3",
+  "AbilitySpecials": {
+    "HPRecoverPercent": {
+      "Op": "Add",
+      "OpValue": 0.012,
+      "Value": 0.012
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAreaEnter": []
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "AbilityName": "ThugBulkyEnforcer_BossManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBehaviorTreeDisabled": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Bool_ChainAttack",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "Boss"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "OnAdded": [
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "Boss"
+          ]
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "ThugBulkyEnforcer_AttackLanded"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "ThugBulkyEnforcer_AttackCDUpdateRatio"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsBoss",
+          "ParamType": 2
+        }
+      ]
+    }
+  ]
+}

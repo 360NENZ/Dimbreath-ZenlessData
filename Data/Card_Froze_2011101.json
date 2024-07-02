@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Card_Froze_2011101",
+  "AbilitySpecials": {
+    "AS_ReplaceCriticalDMGRatio": {
+      "Value": 0.5
+    },
+    "AS_ReplaceIcemistCoolDownTime": {
+      "Value": 10.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_HighElement_Icemist",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_HighElement_Icemist",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_ReplaceIcemistCoolDownTime",
+                "ParamName": "AS_IcemistDuration",
+                "ParamType": "Float"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_HighElement_Icemist",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_ReplaceCriticalDMGRatio",
+                "ParamName": "AS_CriticalDMGRatio",
+                "ParamType": "Float"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

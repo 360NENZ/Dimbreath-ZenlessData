@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Aokaku_AddRedLight",
+  "AbilitySpecials": {
+    "AS_RecoverSp_Talent_02": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RecoverSPAction",
+      "Amount": "%AS_RecoverSp_Talent_02",
+      "IgnoreRatio": false,
+      "Percentage": 0,
+      "Predicates": [
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "GreaterEqual",
+          "CustomNumerator": "RedLight",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 3
+        },
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "Equal",
+          "CustomNumerator": "UnlockTalent_02",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 1
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Amount": 1,
+      "CustomPropertyType": "RedLight",
+      "IsUsePercentage": false,
+      "Percentage": 0,
+      "PropertyModifyFunction": "Add",
+      "PropertyType": "Custom"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "AbilityName": "Card_Blunt_2000703",
+  "AbilitySpecials": {
+    "AS_StunDamageTakeRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "2000703QTECheckModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "EnemyAllied"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "QTEToStunDmgRatio",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "2000703QTECheckModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": []
+    },
+    "QTEToStunDmgRatio": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Blunt_2000703_Sub",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "NormalQTE"
+              ]
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "2000703QTECheckModifier"
+                  ],
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "2000703QTECheckModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "NormalQTE"
+              ]
+            }
+          ],
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

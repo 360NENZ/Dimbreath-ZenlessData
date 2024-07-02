@@ -1,0 +1,76 @@
+{
+  "AbilityName": "Curse_1100019",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": -0.015
+    },
+    "HpReduceAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpReduceModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "HpReduceModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HpReduceModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(HpPercentage)*property(CurHP)",
+          "ParamName": "HpReduceAmount",
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "ValueType": "Float"
+        },
+        {
+          "$type": "DecreaseHPAction",
+          "Amount": "%HpReduceAmount",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "DecreaseHPAction",
+          "Amount": 1,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 1
+    }
+  }
+}

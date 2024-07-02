@@ -1,0 +1,15 @@
+{
+  "AbilityName": "RamenStore_Buff_30022001",
+  "AbilitySpecials": {
+    "AS_BaseAttackDelta": {
+      "Value": 100
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_BaseAttackDelta": "%AS_BaseAttackDelta"
+    }
+  }
+}

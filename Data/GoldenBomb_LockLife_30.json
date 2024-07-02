@@ -1,0 +1,36 @@
+{
+  "AbilityName": "GoldenBomb_LockLife_30",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GoldenBomb_LockLife_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GoldenBomb_LockLife_01": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "GoldenBomb_LockLife_01"
+    }
+  ]
+}

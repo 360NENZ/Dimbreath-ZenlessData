@@ -1,0 +1,80 @@
+{
+  "AbilityName": "Abyss_ElementShield_Physical",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 1
+    },
+    "HpPercentage": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HPShieldModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Physics"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "HPShieldModifier"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddDamageRatio",
+        "Target": "Target"
+      }
+    ],
+    "OnBuffAdded": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "HPShieldModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HPShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0.0,
+          "Tag": "FollowerHyperShield",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

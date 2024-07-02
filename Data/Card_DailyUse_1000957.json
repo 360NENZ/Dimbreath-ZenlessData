@@ -1,0 +1,12 @@
+{
+  "AbilityName": "Card_DailyUse_1000957",
+  "AbilitySpecials": {
+    "AS_DamageRatio": {
+      "Value": 0.5
+    },
+    "AS_TemplateID": {
+      "Value": 1241
+    }
+  },
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,181 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "RopeMixin",
+      "EndTargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Ctr_Weapon2",
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Custom"
+        }
+      },
+      "RopeEffectPattern": "Eff_Avatar_Female_Size03_Rina_Ani_Attack_Normal_03_01_Rope",
+      "StartTargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Bip001 L Finger22",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Custom"
+        }
+      },
+      "Tag": "Rina_Anastacia_Rope"
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Dash",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid_Dash",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Dash",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Dash",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RopeControllerModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_Rope_01",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RopeControllerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ChangeRopeWithTag",
+          "Enable": true,
+          "Tag": "Rina_Anastacia_Rope",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ChangeRopeWithTag",
+          "Enable": false,
+          "Tag": "Rina_Anastacia_Rope",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

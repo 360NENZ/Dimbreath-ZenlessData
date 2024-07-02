@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Card_DailyUse_1000922",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "TimeOfDuration": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AttackModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnDamageCalculatedPre": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "#Card_DailyUse_1000922_AttackProperty_01",
+          "AttachPoint": "MiddlePoint",
+          "Predicates": [
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHitResult",
+                  "HitResult": "Critical"
+                }
+              ]
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Interval",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Interval": {
+      "Duration": "%TimeOfDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AttackModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AttackModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

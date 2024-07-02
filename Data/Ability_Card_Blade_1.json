@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Ability_Card_Blade_1",
+  "AbilitySpecials": {
+    "HPRecoverPercent": {
+      "Op": "Add",
+      "OpValue": 0.012,
+      "Value": 0.012
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAreaEnter": [
+      {
+        "$type": "RecoverHPAction",
+        "Amount": 0,
+        "Percentage": "%HPRecoverPercent",
+        "Predicates": [
+          {
+            "$type": "ByLevelAreaExploreState",
+            "LevelAreaState": "UnExplored",
+            "LevelAreaType": "Room",
+            "Target": "Caster"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

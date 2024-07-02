@@ -1,0 +1,55 @@
+{
+  "AbilityName": "Card_Froze_2001106",
+  "AbilitySpecials": {
+    "AS_BreakStunTransRatio": {
+      "Value": 3.5
+    },
+    "AS_RecoverBreakStunValue": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(BreakStun)*specials(AS_BreakStunTransRatio)",
+        "ParamName": "AS_RecoverBreakStunValue",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverStunModifier",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          },
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": false,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RecoverStunModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverStunAction",
+          "Amount": "%AS_RecoverBreakStunValue",
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "AbilityName": "Card_Ashes_2000104",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Ashes_2000100",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Ashes_2000100",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDController",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "CDController": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_01",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Card_Ashes_1000103",
+  "AbilitySpecials": {
+    "Duration_Delta": {
+      "Value": 4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Burn",
+        "Params": [
+          {
+            "Delta": "%Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

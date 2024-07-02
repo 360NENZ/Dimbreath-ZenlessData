@@ -1,0 +1,11 @@
+{
+  "AbilityName": "Billy_Dither_FadeIn",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "InterruptDitherFadeAction",
+      "Tag": "Avatar_Billy_QTE_Dither_Fade",
+      "Target": "Self"
+    }
+  ]
+}

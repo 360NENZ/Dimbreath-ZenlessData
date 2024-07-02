@@ -1,0 +1,11 @@
+{
+  "AbilityName": "LightfootRover_ShowUAV",
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "PopRenderVisibleAction",
+      "Tag": "LightfootRover_UAV_HideMesh",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "ReferMaxPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "DropItemAction",
+                  "DropStr": "%DropCoinExtract",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.8
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "DropItemAction",
+                  "DropStr": "%DropCoinExtract",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.6
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "DropItemAction",
+                  "DropStr": "%DropCoinExtract",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.4
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "DropItemAction",
+                  "DropStr": "%DropCoinExtract",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GoldenBomb_DropItem_Coin",
+  "AbilitySpecials": {
+    "DropCoinExtract": {
+      "Value": "2000:10000:4",
+      "ValueType": "String"
+    },
+    "DropDinyExtract": {
+      "Value": "2001:10000:4",
+      "ValueType": "String"
+    }
+  },
+  "AbilityStacking": "Unique"
+}

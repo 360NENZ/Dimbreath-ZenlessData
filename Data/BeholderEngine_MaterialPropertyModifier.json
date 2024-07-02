@@ -1,0 +1,57 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_5_1",
+          "FrameCountHigh": 80,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_5_2",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertyModifier"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "BeholderEngine_MaterialPropertyModifier",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_BeholderEngine_MA_Attack_05_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_BeholderEngine_MA_Attack_05_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_BeholderEngine_MA_Attack_05_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

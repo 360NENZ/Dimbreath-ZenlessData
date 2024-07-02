@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Level_Buff_AllResist_ExElec",
+  "AbilitySpecials": {
+    "AS_AbnormalResistDelta": {
+      "Value": 0.4
+    },
+    "AS_DamageResist": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": -1,
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AbnormalResistDelta_Ether": "%AS_AbnormalResistDelta",
+      "Actor_AbnormalResistDelta_Fire": "%AS_AbnormalResistDelta",
+      "Actor_AbnormalResistDelta_Ice": "%AS_AbnormalResistDelta",
+      "Actor_AbnormalResistDelta_Physics": "%AS_AbnormalResistDelta",
+      "Actor_EtherDamageResist": "%AS_DamageResist",
+      "Actor_FireDamageResist": "%AS_DamageResist",
+      "Actor_IceDamageResist": "%AS_DamageResist",
+      "Actor_PhysicsDamageResist": "%AS_DamageResist"
+    }
+  }
+}

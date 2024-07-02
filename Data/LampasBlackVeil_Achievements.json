@@ -1,0 +1,76 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "BreakDown_Revive",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MuteAchievementsModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_Achievements",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKilled": [
+      {
+        "$type": "TriggerLevelCustomConditions",
+        "LevelConditionsID": 1075,
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByIsInZoneTags",
+                "Tags": [
+                  "MuteAchievements"
+                ]
+              }
+            ]
+          },
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Lampas_CoAttack"
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "MuteAchievementsModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "MuteAchievements"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "MuteAchievements"
+          ],
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "IsAdd": true,
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

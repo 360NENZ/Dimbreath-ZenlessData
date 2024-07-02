@@ -1,0 +1,103 @@
+{
+  "AbilityName": "GoldenBomb_BeHitEffect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GoldenBomb_BeHitEffect",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DropCoin_Middle": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DropItemAction",
+          "DropStr": "2010:10000:3",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DropCoin_Small": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DropItemAction",
+          "DropStr": "2010:10000:1",
+          "Target": "Self"
+        }
+      ]
+    },
+    "GoldenBomb_BeHitEffect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_GoldenBomb_BeHit_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DropCoin_Small",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimTagList",
+                      "TagList": [
+                        "AttackQTE",
+                        "ExSp",
+                        "Counter"
+                      ]
+                    },
+                    {
+                      "$type": "ByCauseStun",
+                      "IsCauseStun": true
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DropCoin_Middle",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackQTE",
+                    "ExSp",
+                    "Counter"
+                  ]
+                },
+                {
+                  "$type": "ByCauseStun",
+                  "IsCauseStun": true
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

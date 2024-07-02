@@ -1,0 +1,91 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 1.18,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Sharkboo_Fire_Warning"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Relative",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 1.5,
+            "y": 0.0,
+            "z": 4.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SavePoint",
+          "PointName": "Sharkboo_TrapPoint"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "ExplodeAnimEventID": "Bangboo_Sharkboo_Fire_Attackproperty_01",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Sharkboo_Fire_BulletExplosion"
+      },
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "OnBulletDestroyAction": [
+        {
+          "$type": "RemoveSavePointAction",
+          "PointName": "Sharkboo_TrapPoint",
+          "Target": "Self"
+        }
+      ],
+      "OnBulletTimeUpExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Sharkboo_Attack_CamShake_E_04"
+        }
+      ],
+      "Targetting": "Stage",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_Fire02",
+  "AbilityStacking": "Unique"
+}

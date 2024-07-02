@@ -1,0 +1,465 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Right",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Left",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "WeaponTransform_Pistol_Front",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_01",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_02",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_03",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Right_Shotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Left_Shotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier",
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier",
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_End",
+          "FrameCountLow": 50,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier",
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02ToShotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunIndexResetModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_1",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "IndexResetModifier",
+            "ShotgunIndexResetModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_ZhuYuanAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_ZhuYuanAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_ZhuYuanAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 5,
+              "ParamName": "Int_ZhuYuanAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_ZhuYuanAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_05",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Shotgun_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Shotgun_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Shotgun_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Less",
+                  "IntVal": 2,
+                  "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+                  "ParamType": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Right_Shotgun",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Less",
+                  "IntVal": 2,
+                  "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+                  "ParamType": 3
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Left_Shotgun",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ZhuYuan_AttackIndexManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "IndexResetModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_ZhuYuanAttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShotgunIndexResetModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_ZhuYuanShotgunAttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

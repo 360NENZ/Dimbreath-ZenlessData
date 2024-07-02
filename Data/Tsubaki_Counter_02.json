@@ -1,0 +1,97 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CounterPointModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_02",
+          "Frame": 25,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "CounterPointModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_02",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 33,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CounterPointModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_02",
+          "Frame": 25,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "CounterPointModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_02",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 33,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Tsubaki_Counter_02",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CounterPointModifier": {
+      "Duration": 1,
+      "OnAdded": [
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "Tsubaki_CounterPoint",
+          "HierarchyType": "World",
+          "PosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

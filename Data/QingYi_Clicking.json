@@ -1,0 +1,91 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 0.1,
+              "Target": "Self",
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ClickingModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_03",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_05",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        }
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 0
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ClickingModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "QingYi_Clicking",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ClickingModifier": {
+      "Duration": 0.25,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsClicking",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsClicking",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "AbilityName": "Weapon_Ability_14110",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.1
+    },
+    "AS_Duration": {
+      "Value": 10.0
+    },
+    "AS_SpRecoverDelta": {
+      "Value": 0.6
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": false,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnBattleEnter": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedBreakStunRatioModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutFinish": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedBreakStunRatioModifier": {
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_BreakStunRatio": "%AS_BreakStunRatio"
+      }
+    },
+    "SpRecoverDeltaModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_SpRecoverDelta": "%AS_SpRecoverDelta"
+      }
+    }
+  }
+}

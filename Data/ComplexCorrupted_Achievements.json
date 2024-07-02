@@ -1,0 +1,40 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "Int_PartDestroyed",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "TriggerAchievementsModifier",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Achievements",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TriggerAchievementsModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerLevelCustomConditions",
+          "LevelConditionsID": 1087
+        }
+      ]
+    }
+  }
+}

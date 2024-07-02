@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Lucy_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_WoodBuffRatio": {
+      "Value": 2.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Lucy_Encourage",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "%AS_WoodBuffRatio",
+                "ParamName": "AS_WoodBuffRatio",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

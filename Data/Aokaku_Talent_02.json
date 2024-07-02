@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Aokaku_Talent_02",
+  "AbilitySpecials": {
+    "AS_NormalAtkOdds": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 1,
+        "CustomPropertyType": "UnlockTalent_02",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "PropertyModifyFunction": "Replace",
+        "PropertyType": "Custom"
+      }
+    ],
+    "OnPatternHitOther": [
+      {
+        "$type": "RandomOperator",
+        "Odds": "%AS_NormalAtkOdds",
+        "OnSuccess": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "Modifier_AddRedLight",
+            "Target": "Self"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "RedLightOdds_01"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_AddRedLight": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Aokaku_AddRedLight",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

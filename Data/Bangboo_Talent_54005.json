@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Bangboo_Talent_54005",
+  "AbilitySpecials": {
+    "AS_CriticalDamageRatioDelta_01": {
+      "Value": 0
+    },
+    "AS_CriticalDamageRatioDelta_02": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AtkBuff_01",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddBuffToTeam",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddBuffToTeam": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AtkBuff_02",
+          "Predicates": [
+            {
+              "$type": "ByAvatarCamp",
+              "Camp": 1
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "AtkBuff_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageRatioDelta_01"
+      }
+    },
+    "AtkBuff_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageRatioDelta_02"
+      }
+    }
+  }
+}

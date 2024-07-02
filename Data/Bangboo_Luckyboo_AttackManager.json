@@ -1,0 +1,44 @@
+{
+  "AbilityName": "Bangboo_Luckyboo_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "InRangeModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Luckyboo_Attackproperty_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "InRangeModifier": {
+      "Duration": 0.2,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_InRange",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_InRange",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

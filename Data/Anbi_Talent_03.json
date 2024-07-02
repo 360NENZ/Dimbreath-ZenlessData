@@ -1,0 +1,124 @@
+{
+  "AbilityName": "Anbi_Talent_03",
+  "AbilitySpecials": {
+    "AS_SpGetRatio_Threshold": {
+      "Value": 0.12
+    },
+    "AS_SpRecoverAddTime": {
+      "Value": 0
+    },
+    "AS_SpRecoverAdd_Talent_03": {
+      "Value": 2
+    },
+    "AS_SpRecoverBase_Talent_03": {
+      "Value": 3
+    },
+    "AS_SpRecoverFinal": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverCalModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RecoverCalModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(SpGetRatio_Battle)/specials(AS_SpGetRatio_Threshold)",
+          "ParamName": "AS_SpRecoverAddTime",
+          "Target": "Self",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_SpRecoverBase_Talent_03)+specials(AS_SpRecoverAdd_Talent_03)*specials(AS_SpRecoverAddTime)",
+          "ParamName": "AS_SpRecoverFinal",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Less",
+              "Param": 3,
+              "ParamName": "AS_SpRecoverAddTime",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_SpRecoverBase_Talent_03)+specials(AS_SpRecoverAdd_Talent_03)*3",
+          "ParamName": "AS_SpRecoverFinal",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 3,
+              "ParamName": "AS_SpRecoverAddTime",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SpRecoverModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "SpRecoverModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecoverFinal",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": false
+            },
+            {
+              "$type": "ByAvatarElementType",
+              "ElementType": 203
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

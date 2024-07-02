@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Card_Ether_2001911",
+  "AbilitySpecials": {
+    "AS_AddedDMGRatio": {
+      "Value": -0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Erosion",
+              "Chaos"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDMGRatio",
+        "Target": "Target"
+      }
+    ]
+  }
+}

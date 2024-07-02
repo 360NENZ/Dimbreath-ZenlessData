@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Interact_Camera",
+  "AbilitySpecials": {
+    "BindStageTriggerName": {
+      "Value": "RightCornerCamTrigger"
+    },
+    "InteractRadius": {
+      "Value": 1
+    },
+    "StageVirtualCameraName": {
+      "Value": "RightCornerStageCam"
+    }
+  },
+  "AbilityStacking": "Unique"
+}

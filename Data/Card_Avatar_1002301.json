@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Avatar_1002301",
+  "AbilitySpecials": {
+    "AS_CritDMGRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Card_1002301_CritDMGUp_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAvatarProfessionType",
+            "ProfessionType": "Attack",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card_1002301_CritDMGUp_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CritDMGRatio"
+      }
+    }
+  }
+}

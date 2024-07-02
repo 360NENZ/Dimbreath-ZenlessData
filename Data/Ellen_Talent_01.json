@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Ellen_Talent_01",
+  "AbilitySpecials": {
+    "AS_AddedCriticalDelta": {
+      "Value": 0.05
+    },
+    "AS_CritUpBuff_Duration_Talent_01": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "IceDamgeUpModifier": {
+      "Duration": "%AS_CritUpBuff_Duration_Talent_01",
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 6,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_AddedCriticalDelta"
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "IceDamgeUpModifier",
+      "Target": "Self"
+    }
+  ]
+}

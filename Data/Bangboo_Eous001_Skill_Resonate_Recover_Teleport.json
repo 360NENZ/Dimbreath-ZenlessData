@@ -1,0 +1,68 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Resonate_Recover_Teleport",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TeleportModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Bangboo_Teleport_Dither_Fade",
+          "Tag": "Bangboo_Teleport_Dither_Fade",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "DefaultOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 5.0
+            },
+            "Duration": 0.1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant"
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "Camera",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 1.0,
+                  "y": 0.0,
+                  "z": 1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "TeleportModifier",
+      "Target": "Self"
+    }
+  ]
+}

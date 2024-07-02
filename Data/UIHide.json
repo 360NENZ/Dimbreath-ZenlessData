@@ -1,0 +1,27 @@
+{
+  "AbilityName": "UIHide",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetupUIAction",
+        "HideUITags": [
+          "InLevelMainPage"
+        ],
+        "IgnoreFadeAnimation": true,
+        "Priority": 1,
+        "SetupTag": "UIHideTag",
+        "ShowUITags": [
+          "QTEBtnPanel"
+        ]
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "InterruptSetupUIAction",
+        "IgnoreFadeAnimation": false,
+        "SetupTag": "UIHideTag"
+      }
+    ]
+  }
+}

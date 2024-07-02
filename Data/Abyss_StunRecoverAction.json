@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Abyss_StunRecoverAction",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenStunRecover",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenStunRecover": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnStunCreateActions": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "StunRecover"
+        }
+      ]
+    }
+  }
+}

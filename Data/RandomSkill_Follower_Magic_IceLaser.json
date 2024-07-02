@@ -1,0 +1,33 @@
+{
+  "AbilityName": "RandomSkill_Follower_Magic_IceLaser",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier",
+        "Odds": 0.1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "#RandomSkill_Follower_Magic_IceLaser_AttackProperty_1",
+              "#RandomSkill_Follower_Magic_IceLaser_AttackProperty_2",
+              "#RandomSkill_Follower_Magic_IceLaser_AttackProperty_3",
+              "#RandomSkill_Follower_Magic_IceLaser_AttackProperty_4",
+              "#RandomSkill_Follower_Magic_IceLaser_AttackProperty_5"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier": {
+      "Buff": {
+        "BuffID": 103001
+      }
+    }
+  }
+}

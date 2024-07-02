@@ -1,0 +1,66 @@
+{
+  "AbilityName": "Card_Ether_2001907",
+  "AbilitySpecials": {
+    "GenreNum_Ether": {
+      "Value": 0
+    },
+    "GenreNum_Ether_Max": {
+      "Value": 0.4
+    },
+    "Ratio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(Ratio)*(item(1001901)+item(1001902)+item(1001903)+item(1001904)+item(1001905)+item(1001906)+item(1001907)+item(1001908)+item(1001909)+item(1001910)+item(1001911)+item(1101901)+item(1101902)+item(1101903)+item(1101904)+item(1101905)+item(1101906)+item(1101907)+item(1101908)+item(1101909)+item(1101910)+item(1101911)+item(1001912))",
+        "ParamName": "GenreNum_Ether",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%GenreNum_Ether_Max",
+        "ParamName": "GenreNum_Ether",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": "%GenreNum_Ether_Max",
+            "ParamName": "GenreNum_Ether",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffUpper"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffUpper": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ether"
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%GenreNum_Ether",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

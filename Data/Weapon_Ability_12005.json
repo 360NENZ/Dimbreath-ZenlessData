@@ -1,0 +1,66 @@
+{
+  "AbilityName": "Weapon_Ability_12005",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 10.0
+    },
+    "AS_ElementAbnormalPowerDelta": {
+      "Value": 10.0
+    },
+    "AS_ElementMysteryDelta": {
+      "Value": 10.0
+    },
+    "AS_IntervalCD": {
+      "Value": 20.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElementModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExSp",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ElementModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ElementModifier_Effect_Weapon_Ability_12005",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "ElementModifier_Effect_Weapon_Ability_12005": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_ElementAbnormalPowerDelta": "%AS_ElementAbnormalPowerDelta",
+        "Actor_ElementMysteryDelta": "%AS_ElementMysteryDelta"
+      }
+    }
+  }
+}

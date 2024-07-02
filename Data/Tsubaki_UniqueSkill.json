@@ -1,0 +1,49 @@
+{
+  "AbilityName": "Tsubaki_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.1
+    },
+    "AS_AddedDamageTime": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TsubakiUniqueModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "Counter"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "BeHitAid"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "TsubakiUniqueModifier": {
+      "Duration": "%AS_AddedDamageTime",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    }
+  }
+}

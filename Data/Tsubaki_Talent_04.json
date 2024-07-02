@@ -1,0 +1,63 @@
+{
+  "AbilityName": "Tsubaki_Talent_04",
+  "AbilitySpecials": {
+    "AS_CriticalDamageDelta_Talent_04": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleExit": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "CriticalDamageModifier",
+        "StackCount": 3,
+        "Target": "Self"
+      }
+    ],
+    "OnKillOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDamageModifier",
+        "StackCount": 3,
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalDamageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageDelta_Talent_04"
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "BoxColliderDistance": 0.2,
+        "BoxColliderHeight": 0.7,
+        "BoxColliderWidth": 3.0,
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.2
+        },
+        "ColliderType": "Box"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_Death_Attack_06_09_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1,
+            "z": 2
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "BoxColliderDistance": 6.0,
+        "BoxColliderHeight": 0.7,
+        "BoxColliderWidth": 3.35,
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Box"
+      },
+      "ExplodeAnimEventID": "Monster_DeathXIII_ATK06_Attackproperty_2",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Ether_Explode"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Ether_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Ether_Explode"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0,
+        "HitNormalRatio": 0,
+        "HitTangentialRatio": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 30
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_DeathXIII_ATK6_CamShake_Explode_E_01",
+          "Target": "Other"
+        }
+      ],
+      "Targetting": "Enemy",
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Ether_Explode"
+      }
+    }
+  ],
+  "AbilityName": "DeathXIII_Attack06_Bullet_2",
+  "AbilityStacking": "Unique"
+}

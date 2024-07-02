@@ -1,0 +1,853 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 10,
+        "MoveType": {
+          "$type": "MovementTypeFixedTime",
+          "Time": 0.4
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "TargetPoint_1",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": 10,
+        "RotateType": "Instant"
+      },
+      "Targetting": "Enemy"
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 10,
+        "MoveType": {
+          "$type": "MovementTypeFixedTime",
+          "Time": 0.4
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "TargetPoint_2",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": 10,
+        "RotateType": "Instant"
+      },
+      "Targetting": "Enemy"
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 10,
+        "MoveType": {
+          "$type": "MovementTypeFixedTime",
+          "Time": 0.4
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "TargetPoint_3",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": 10,
+        "RotateType": "Instant"
+      },
+      "Targetting": "Enemy"
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 10,
+        "MoveType": {
+          "$type": "MovementTypeFixedTime",
+          "Time": 0.4
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "TargetPoint_4",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": 10,
+        "RotateType": "Instant"
+      },
+      "Targetting": "Enemy"
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 10,
+        "MoveType": {
+          "$type": "MovementTypeFixedTime",
+          "Time": 0.4
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "TargetPoint_5",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": 10,
+        "RotateType": "Instant"
+      },
+      "Targetting": "Enemy"
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 5,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_07_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": 10,
+        "MoveType": {
+          "$type": "MovementTypeFixedTime",
+          "Time": 0.4
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Self",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "TargetPoint_6",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_HitGround",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": 10,
+        "RotateType": "Instant"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "HeavyStriker_Attack_7_Bullet_Ex_2_BackUp",
+  "AbilitySpecials": {
+    "AS_Count": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_CountMod2": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_TempInt": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": "%AS_Count",
+      "ParamName": "AS_TempInt",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Div",
+      "Param": 2,
+      "ParamName": "AS_TempInt",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Mul",
+      "Param": -2,
+      "ParamName": "AS_TempInt",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": "%AS_Count",
+      "ParamName": "AS_CountMod2",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Add",
+      "Param": "%AS_TempInt",
+      "ParamName": "AS_CountMod2",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "AS_CountMod2",
+          "ParamType": "Integer"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_1",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_1",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_2",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_2",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_3",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_3",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_4",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_4",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_5",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_5",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_6",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": -60.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_6",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_1",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_1",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_2",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_2",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_3",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_3",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_4",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_4",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_5",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_5",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        },
+        {
+          "$type": "SetAttachPointPosRotAction",
+          "AttachPointName": "TargetPoint_6",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 3.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "TargetPoint_6",
+              "IsUseAttachPointPos": true,
+              "OffsetReferTarget": "Caster"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

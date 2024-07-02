@@ -1,0 +1,92 @@
+{
+  "AbilityName": "RandomSkill_Follower_Shoot_Fire_ChangePos",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FollowTypeModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FollowTypeModifier2",
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 78,
+          "Avatar2CamHeight": 1.0,
+          "Avatar2CamRadius": 0.922,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 10,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 2,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 282,
+          "Avatar2CamHeight": 1.0,
+          "Avatar2CamRadius": 0.922,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 10,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 3,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "FollowTypeModifier2": {
+      "Duration": 4,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 78,
+          "Avatar2CamHeight": 1.0,
+          "Avatar2CamRadius": 0.922,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 2,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 282,
+          "Avatar2CamHeight": 1.0,
+          "Avatar2CamRadius": 0.922,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 3,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FollowTypeModifier",
+      "Target": "Caster"
+    }
+  ]
+}

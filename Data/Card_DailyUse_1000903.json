@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Card_DailyUse_1000903",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.6
+    },
+    "HpPercentage": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "LessEqual",
+            "Denominator": "MaxHP",
+            "IsUsePercent": true,
+            "Numerator": "CurHP",
+            "Target": "Target",
+            "Val1": "%HpPercentage",
+            "Val2": 0
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

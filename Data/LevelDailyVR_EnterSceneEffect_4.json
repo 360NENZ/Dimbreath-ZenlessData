@@ -1,0 +1,34 @@
+{
+  "AbilityName": "LevelDailyVR_EnterSceneEffect_4",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "AttachEffect",
+        "AttachEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Camera"
+          }
+        },
+        "EffectPattern": "Eff_Scene_TrainingRoom_Cam03_02_Trail",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "AbilityName": "Weapon_Ability_13009",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.15
+    },
+    "AS_BaseAttackRatio": {
+      "Value": 0.15
+    },
+    "AS_BaseAttackRatio_Final": {
+      "Value": 0.0
+    },
+    "AS_ProviderCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "BuffModifier_Provider"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio_Final"
+      }
+    },
+    "BuffModifier_Provider": {
+      "Duration": -1,
+      "MaxStackingNumber": 99,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)+1",
+          "ParamName": "AS_ProviderCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio)*min(specials(AS_ProviderCount),1)",
+          "ParamName": "AS_BaseAttackRatio_Final",
+          "Target": "Caster",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Effect",
+          "Target": "Caster"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_Provider",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Electric",
+                "Overload",
+                "Strike",
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "StackCount": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)-1",
+          "ParamName": "AS_ProviderCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio)*min(specials(AS_ProviderCount),1)",
+          "ParamName": "AS_BaseAttackRatio_Final",
+          "Target": "Caster",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Effect",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Provider",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Electric",
+                "Overload",
+                "Strike",
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "Target": "Other"
+        }
+      ]
+    }
+  }
+}

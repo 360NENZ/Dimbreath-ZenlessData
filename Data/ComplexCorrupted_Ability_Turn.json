@@ -1,0 +1,209 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_IsBack",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "ParamName": "Bool_IsBack",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetControllerLayerWeightAction",
+              "LayerIndex": 2,
+              "Weight": 1
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_FollowPoint_FaceDirection_B",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "UpperBodyTurn_F2B",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 5
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_IsBack",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "ParamName": "Bool_IsBack",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetControllerLayerWeightAction",
+              "LayerIndex": 2,
+              "Weight": 1
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_FollowPoint_FaceDirection_B",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Turn_01_F_Additive",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 5
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_IsBack",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "ParamName": "Bool_IsBack",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetControllerLayerWeightAction",
+              "LayerIndex": 2,
+              "Weight": 1
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_FollowPoint_FaceDirection_B",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Turn_02_F_Additive",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 5
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_IsBack",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": false,
+              "ParamName": "Bool_IsBack",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetControllerLayerWeightAction",
+              "LayerIndex": 2,
+              "Weight": 0
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_FollowPoint_FaceDirection_F",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "UpperBodyTurn_B2F",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 5
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_IsBack",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": false,
+              "ParamName": "Bool_IsBack",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetControllerLayerWeightAction",
+              "LayerIndex": 2,
+              "Weight": 0
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_FollowPoint_FaceDirection_F",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Turn_01_B_Additive",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 5
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_IsBack",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": false,
+              "ParamName": "Bool_IsBack",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetControllerLayerWeightAction",
+              "LayerIndex": 2,
+              "Weight": 0
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "ComplexCorrupted_FollowPoint_FaceDirection_F",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Turn_02_B_Additive",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 5
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Ability_Turn",
+  "AbilityStacking": "Unique"
+}

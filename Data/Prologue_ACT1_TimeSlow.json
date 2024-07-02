@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Prologue_ACT1_TimeSlow",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "TimeSlowByConfigKeyAction",
+        "ConfigKey": "LevelAct1SpGuide_TimeSlow_01",
+        "IsGlobal": true
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "InterruptTimeSlowAction",
+        "Target": "Self",
+        "TargetKey": "LevelAct1SpGuide_TimeSlow_01"
+      }
+    ]
+  }
+}

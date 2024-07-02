@@ -1,0 +1,71 @@
+{
+  "AbilityName": "Specter_Atk02_01_LaunchPoint_01",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "LaunchPoint_02_01_World",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaunchPoint_02_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "ProcessType": "Create",
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Specter_Atk02_01_Generator_01",
+      "Target": "Self"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Monster_Specter_Common_BulletStart",
+      "FireEffectPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaunchPoint_02_01_World",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Card_DailyUse_1000920",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKilledPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TeamHpRecover",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "TeamHpRecover": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Percentage": "%HpPercentage",
+          "Predicates": [
+            {
+              "$type": "ByAliveState",
+              "AliveState": "Alive",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

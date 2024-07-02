@@ -1,0 +1,21 @@
+{
+  "AbilityName": "GamePlaySUMO_OutRange_RemoveAbility",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlaySUMO_OutRangeDie"
+      }
+    ]
+  }
+}

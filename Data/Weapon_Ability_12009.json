@@ -1,0 +1,65 @@
+{
+  "AbilityName": "Weapon_Ability_12009",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.4
+    },
+    "AS_Duration": {
+      "Value": 10.0
+    },
+    "AS_IntervalCD": {
+      "Value": 20.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BreakStunModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BreakStunModifier_Effect": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_BreakStunRatio": "%AS_BreakStunRatio"
+      }
+    }
+  }
+}

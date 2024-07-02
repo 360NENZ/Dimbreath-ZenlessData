@@ -1,0 +1,66 @@
+{
+  "AbilityName": "VR_SmallBoss_HatiArmoredBOSS",
+  "AbilitySpecials": {
+    "AS_AddBreakStunRatio": {
+      "Value": 0.8
+    },
+    "AS_AddedElementAccumulationRatio": {
+      "Value": -0.2
+    },
+    "AS_DestroyRecoverRate_Ratio": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": "%AS_AddedElementAccumulationRatio",
+        "Target": "Target"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AssaultAid"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "ParryAid"
+                ]
+              }
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddBreakStunRatio",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_StunDestroyRecoverRate_Ratio": "%AS_DestroyRecoverRate_Ratio"
+      }
+    }
+  }
+}

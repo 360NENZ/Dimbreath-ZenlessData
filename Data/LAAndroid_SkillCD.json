@@ -1,0 +1,26 @@
+{
+  "AbilityName": "LAAndroid_SkillCD",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifySkillCDAction",
+        "Delta": 4,
+        "ModifyType": "ByZero",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Aide"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Ratio": 0,
+        "SkillName": "Monster_LAAndroid_Evade",
+        "Target": "Self",
+        "ValueType": "DefaultValue"
+      }
+    ]
+  }
+}

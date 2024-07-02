@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Curse_1101009",
+  "AbilitySpecials": {
+    "AS_AllStunResist": {
+      "Value": 0
+    },
+    "AS_DefenceRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AllStunResist": "%AS_AllStunResist",
+      "Actor_DefenceRatio": "%AS_DefenceRatio"
+    }
+  }
+}

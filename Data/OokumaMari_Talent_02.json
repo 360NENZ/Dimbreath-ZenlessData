@@ -1,0 +1,49 @@
+{
+  "AbilityName": "OokumaMari_Talent_02",
+  "AbilitySpecials": {
+    "AS_RecoverSpCD_Talent_02": {
+      "Value": 40
+    },
+    "AS_RecoverSp_Talent_02": {
+      "Value": 60
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OokTalent01Modifier_RecoverSP",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "OokumaMari_Attack_Branch_02_AttackProperty_01",
+              "OokumaMari_Attack_Branch_02_AttackProperty_02",
+              "OokumaMari_Attack_Branch_02_AttackProperty_03",
+              "OokumaMari_Attack_Branch_02_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_Branch_02_Explode_AttackProperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OokTalent01Modifier_RecoverSP": {
+      "Duration": "%AS_RecoverSpCD_Talent_02",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Talent_02",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

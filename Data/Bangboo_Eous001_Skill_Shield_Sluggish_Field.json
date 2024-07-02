@@ -1,0 +1,217 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Shield_Sluggish_Field",
+  "AbilitySpecials": {
+    "AS_FieldDuration": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "Sphere",
+            "SphereColliderRadius": 3
+          },
+          "EndEffectPattern": "Eff_Bangboo_Shield_Sluggish_Field_End",
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "TimeSlowModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ReduceDamageModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "TimeSlowModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ReduceDamageModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "LocalAvatar",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "FieldStopActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "FieldRangeModifier",
+              "Target": "Self"
+            }
+          ],
+          "IsFollow": false,
+          "TotalDuration": "%AS_FieldDuration"
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "LocalAvatar",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "LocalAvatar"
+            }
+          },
+          "EffectPattern": "Eff_Bangboo_Shield_Sluggish_Field_Start",
+          "Target": "LocalAvatar"
+        }
+      ]
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": -10,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ResistBreakLevelModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ResistBreakLevelModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ResistBreakLevelModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 3,
+          "Tag": "Shield_Sluggish_Field",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Shield_Sluggish_Field",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TimeSlowModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Bangboo_Field_Sluggish_TimeSlow_01",
+          "IsGlobal": false,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptTimeSlowAction",
+          "IsGlobal": false,
+          "TargetPriority": 1
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FieldRangeModifier",
+      "Target": "Self"
+    }
+  ]
+}

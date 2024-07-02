@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Card_DailyUse_1000911",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1.0
+    },
+    "DurationTime": {
+      "Value": 10.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TimerModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "TimerModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    },
+    "TimerModifier": {
+      "Duration": "%DurationTime",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

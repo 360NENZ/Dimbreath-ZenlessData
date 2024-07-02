@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Armor_1000402",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_DamageTakeRatio": "%DamageTakeRatio"
+    }
+  }
+}

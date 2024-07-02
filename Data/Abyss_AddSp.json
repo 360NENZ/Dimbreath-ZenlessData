@@ -1,0 +1,21 @@
+{
+  "AbilityName": "Abyss_AddSp",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 0,
+        "Percentage": 0.6,
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "CurSP",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyPerfectSwitchPointAction",
+        "Amount": 6,
+        "ModifyFunction": "Add"
+      }
+    ]
+  }
+}

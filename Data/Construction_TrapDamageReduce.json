@@ -1,0 +1,16 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttackeeProcessOverrideMixin",
+      "MuteBeHitProcess": true,
+      "MuteDamageProcess": true,
+      "OverrideAttackPropertyRelationShip": [
+        "Enemy",
+        "Allied"
+      ],
+      "OverrideAttackerRelationShip": "Allied"
+    }
+  ],
+  "AbilityName": "Construction_TrapDamageReduce",
+  "AbilityStacking": "Unique"
+}

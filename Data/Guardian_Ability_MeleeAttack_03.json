@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Guardian_Ability_MeleeAttack_03",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Guardian_MeleeAttack03_Attackproperty_1"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

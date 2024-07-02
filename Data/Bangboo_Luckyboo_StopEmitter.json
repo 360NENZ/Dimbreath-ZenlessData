@@ -1,0 +1,73 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_SkillLoop_Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EmitterModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_IdletoMove",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EmitterModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_Move",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EmitterModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillLoop_MovetoIdle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EmitterModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Luckyboo_StopEmitter",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EmitterModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "InterruptEmitterAction",
+          "IsGlobal": false,
+          "Tag": "Luckyboo_Emitter"
+        }
+      ]
+    }
+  }
+}

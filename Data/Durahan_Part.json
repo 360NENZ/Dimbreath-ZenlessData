@@ -1,0 +1,83 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_Weapon"
+      ],
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxHP": "%AS_PartHP",
+      "OnPartDestroy": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PartDestroyedModifier",
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%AS_PartHP",
+      "PartName": "Golem_Part"
+    }
+  ],
+  "AbilityName": "Durahan_Part",
+  "AbilitySpecials": {
+    "AS_PartHP": {
+      "Value": 50.0
+    },
+    "AS_PartHPRatio": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_PartHPRatio)",
+        "ParamName": "AS_PartHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "HasPart"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PartDestroyedModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_Durahan_Break_01"
+          ],
+          "Tag": "Monster_Durahan_Break_01",
+          "Visible": false
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "HasPart"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Bip001 Prop1",
+          "EffectPattern": "Eff_Monster_Durahan_Broken_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

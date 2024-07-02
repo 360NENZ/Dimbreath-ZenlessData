@@ -1,0 +1,33 @@
+{
+  "AbilityName": "DeathXIII_Attack02_Selector",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByEnemyCount",
+          "CompareType": "Equal",
+          "CompareValue": 1,
+          "Target": "SelfAttackTarget"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_IsAlone",
+          "Target": "Self"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_IsAlone",
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

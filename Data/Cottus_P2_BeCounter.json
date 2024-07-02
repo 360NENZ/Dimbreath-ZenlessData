@@ -1,0 +1,59 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Attack_04_03",
+          "FrameCountHigh": 357,
+          "FrameCountLow": 297,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeCounterModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_08",
+          "FrameCountHigh": 320,
+          "FrameCountLow": 287,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeCounterModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_P2_BeCounter",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BeCounterModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_CanBeCounter",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_CanBeCounter",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

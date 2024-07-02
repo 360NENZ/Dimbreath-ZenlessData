@@ -1,0 +1,146 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Open",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "OpenModifier",
+            "ActiveTextureModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Idle_Undomain",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "IdleUndomainModifier",
+            "IdleTextureModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Domaining",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "DomainingModifier",
+            "ActiveTextureModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Idle_Domained",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "IdleDomainedModifier",
+            "IdleTextureModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "NPC_Domain_Effect",
+  "Modifiers": {
+    "AbilitySpecials": {
+      "EffStartSize": {
+        "Value": 1
+      }
+    },
+    "ActiveTextureModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PlayTextureSheetSequenceAction",
+          "InterruptType": "Interrupt",
+          "IsKeepLastFrame": false,
+          "MeshPath": "Device_Prop_Teleport_01",
+          "Target": "Self",
+          "TextureSheetKey": "Device_Teleport_Scr_Hack"
+        }
+      ]
+    },
+    "DomainingModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domaining_Loop",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectAutoDynamic": {
+            "EffStartSizeX": "%EffStartSize",
+            "EffStartSizeY": "%EffStartSize"
+          },
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domaining_Scale_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "IdleDomainedModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domained_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "IdleTextureModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PlayTextureSheetSequenceAction",
+          "InterruptType": "Interrupt",
+          "IsKeepLastFrame": false,
+          "MeshPath": "Device_Prop_Teleport_01",
+          "Target": "Self",
+          "TextureSheetKey": "Device_Teleport_Scr_Idle"
+        }
+      ]
+    },
+    "IdleUndomainModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Undomain_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "OpenModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectAutoDynamic": {
+            "EffStartSizeX": "%EffStartSize",
+            "EffStartSizeY": "%EffStartSize"
+          },
+          "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Scale_Start",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

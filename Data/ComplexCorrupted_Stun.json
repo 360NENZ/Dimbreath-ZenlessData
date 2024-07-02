@@ -1,0 +1,723 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Stun_Start_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Loop_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Loop_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Loop_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Loop_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Stay_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Stay_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Heavy_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Heavy_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Hit_Break_Core_F",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Hit_Break_Core_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_CoreEnable",
+            "ComplexCorrupted_LegDisable",
+            "ComplexCorrupted_StunEffect"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Stun",
+  "AbilitySpecials": {
+    "ComplexCorrupted_CurPartHP_Leg_BL": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_BR": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_FL": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_FR": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_L": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_R": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ComplexCorrupted_CoreEnable": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": true,
+          "FeatureTargetName": [
+            "LockPoint_Core"
+          ],
+          "Tag": "ComplexCorrupted_CoreEnable",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_Core"
+          ],
+          "HitColliderEnable": true,
+          "Tag": "HitCollider_Core",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "LockPoint_Core"
+          ],
+          "Tag": "ComplexCorrupted_CoreEnable",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "HitCollider_Core",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Core",
+          "Predicates": [
+            {
+              "$type": "ByPartDestroy",
+              "PartName": "ComplexCorrupted_Core"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ComplexCorrupted_LegDisable": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": false,
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR",
+            "LockPoint_Foot_L",
+            "LockPoint_Foot_R"
+          ],
+          "Tag": "ComplexCorrupted_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_FL",
+          "PartName": "ComplexCorrupted_Leg_FL",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_FR",
+          "PartName": "ComplexCorrupted_Leg_FR",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_BL",
+          "PartName": "ComplexCorrupted_Leg_BL",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_BR",
+          "PartName": "ComplexCorrupted_Leg_BR",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_L",
+          "PartName": "ComplexCorrupted_Leg_L",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_R",
+          "PartName": "ComplexCorrupted_Leg_R",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FL",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_FL"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FR",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_FR"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BL",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_BL"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BR",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_BR"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_L",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_L"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_R",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_R"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR",
+            "LockPoint_Foot_L",
+            "LockPoint_Foot_R"
+          ],
+          "Tag": "ComplexCorrupted_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FL",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FR",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BL",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BR",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_R",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ComplexCorrupted_PartLockLife_Leg_BL": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_BL"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_BL"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_BR": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_BR"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_BR"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_FL": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_FL"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_FL"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_FR": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_FR"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_FR"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_L": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_L"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_L"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_R": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_R"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_R"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_StunEffect": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_Stun_Start_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_Body_Spine",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_ComplexCorrupted_Stun_Loop_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Curse_1100021",
+          "Predicates": [
+            {
+              "$type": "ByHasAbility",
+              "AbilityNameList": [
+                "Curse_1100021"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

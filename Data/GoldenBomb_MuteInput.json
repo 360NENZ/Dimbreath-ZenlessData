@@ -1,0 +1,38 @@
+{
+  "AbilityName": "GoldenBomb_MuteInput",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MuteInputModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MuteInputModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": false,
+          "CharacterBagMute": false,
+          "CharacterMoveMute": false,
+          "CharacterQTEMute": false,
+          "CharacterSkillMute": false,
+          "CharacterSwitchMute": false,
+          "Tag": "GoldenBomb_Born_MuteInput"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "GoldenBomb_Born_MuteInput"
+        }
+      ]
+    }
+  }
+}

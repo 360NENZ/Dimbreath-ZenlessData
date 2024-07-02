@@ -1,0 +1,1395 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 80
+            },
+            {
+              "Val": 80,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_SawExplode",
+                  "ParamType": 1,
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Branch_02_Loop",
+                          "IsLoop": true,
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0,
+                          "Target": "Self"
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Branch_02_Walk",
+                          "IsLoop": true,
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0,
+                          "Target": "Self"
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Walk",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.15
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_End_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.3,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "SepcialEffectModifier_Attack_Rush_01",
+            "AudioModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.05
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01"
+          ],
+          "NormalizedTimeHigh": 0.236,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Attack_Rush_01"
+          ],
+          "NormalizedTimeHigh": 0.436,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AudioModifier_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_01",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_02",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.1
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_02",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.1
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_02_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.566
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_02",
+            "SepcialEffectModifier_02_02",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Walk",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_01_02",
+            "SepcialEffectModifier_02_02",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_QTE",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.72,
+          "NormalizedTimeLow": 0.1
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Landed",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_QTE",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_QTE",
+            "AudioModifier_01"
+          ],
+          "NormalizedTimeHigh": 0.53,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_LoopDust_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.505
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_LoopDust_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.515
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_LoopDust_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Walk",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_LoopDust_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.15
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_End_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 0.31,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.05
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 0.436,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.05
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.05
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 0.81,
+          "NormalizedTimeLow": 0.057
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Landed",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 0.71,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.095
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.097
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Walk",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Explode",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Sawtooth_Loop_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Walk",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Explode",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SkillStartAction",
+              "StartedSkillName": "Corin_ExSp",
+              "Target": "Self"
+            },
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 20,
+              "Percentage": 0
+            },
+            {
+              "$type": "SetUIArrowAction",
+              "IsVisible": true,
+              "position": 20
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 43,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 20,
+              "Percentage": 0
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Explode",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 7,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Corin_SpecialSkill",
+  "AbilitySpecials": {
+    "Duration_MAX": {
+      "Value": 6
+    },
+    "HitNum_MAX_Attack_AssaultAid": {
+      "Value": 11
+    },
+    "HitNum_MAX_Attack_BeHitAid": {
+      "Value": 7
+    },
+    "HitNum_MAX_Attack_Branch_01": {
+      "Value": 11
+    },
+    "HitNum_MAX_Attack_Branch_02": {
+      "Value": 40
+    },
+    "HitNum_MAX_Attack_Counter": {
+      "Value": 7
+    },
+    "HitNum_MAX_Attack_Normal_03": {
+      "Value": 7
+    },
+    "HitNum_MAX_Attack_Normal_05": {
+      "Value": 15
+    },
+    "HitNum_MAX_Attack_Rush": {
+      "Value": 9
+    },
+    "HitNum_MAX_SwitchIn_Attack": {
+      "Value": 11
+    },
+    "HitNum_MAX_SwitchIn_Attack_Ex": {
+      "Value": 13
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetUIArrowAction",
+        "position": 80
+      }
+    ],
+    "OnKillOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_SawExplode",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Normal_05_AttackProperty_01_01",
+              "Corin_Attack_Normal_05_AttackProperty_01_02",
+              "Corin_Attack_Counter_AttackProperty_01_01",
+              "Corin_Attack_Counter_AttackProperty_01_02",
+              "Corin_Attack_BeHitAid_AttackProperty_01_01",
+              "Corin_Attack_BeHitAid_AttackProperty_01_02"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAliveState",
+                "AliveState": "ExecuteCore",
+                "Target": "Target"
+              },
+              {
+                "$type": "ByAliveState",
+                "AliveState": "Dead",
+                "Target": "Target"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnPatternHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Normal_05_AttackProperty_02",
+              "Corin_Attack_Counter_AttackProperty_02",
+              "Corin_Attack_BeHitAid_AttackProperty_02",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_03",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_03",
+              "Corin_Attack_Branch_01_AttackProperty_03",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_03"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_Normal_03",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Normal_03_AttackProperty_01_01",
+              "Corin_Attack_Normal_03_AttackProperty_01_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "HitNumModifier_Attack_Normal_05",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Normal_05_AttackProperty_01_01",
+              "Corin_Attack_Normal_05_AttackProperty_01_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_Rush",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Rush_AttackProperty_01_01",
+              "Corin_Attack_Rush_AttackProperty_01_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_Counter",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Counter_AttackProperty_01_01",
+              "Corin_Attack_Counter_AttackProperty_01_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_BeHitAid",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_BeHitAid_AttackProperty_01_01",
+              "Corin_Attack_BeHitAid_AttackProperty_01_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_AssaultAid",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_AssaultAid_AttackProperty_05_01",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_01",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_02",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_03"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_SwitchIn_Attack",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_01",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_02",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_03"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_SwitchIn_Attack_Ex",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_01",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_01",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_02",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_03"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_Branch_01",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Branch_01_AttackProperty_02_01",
+              "Corin_Attack_Branch_01_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_01_AttackProperty_02_02_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "AddGlobalValue",
+        "Key": "_Global_HitNum_Attack_Branch_02",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Branch_02_AttackProperty_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_02"
+            ]
+          }
+        ],
+        "Value": 1.0
+      },
+      {
+        "$type": "DecreaseSPAction",
+        "Amount": 1,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Branch_02_AttackProperty_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_02"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_SawExplode",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Corin_Attack_Normal_03_AttackProperty_01_01",
+              "Corin_Attack_Normal_03_AttackProperty_01_02",
+              "Corin_Attack_Normal_05_AttackProperty_01_01",
+              "Corin_Attack_Normal_05_AttackProperty_01_02",
+              "Corin_Attack_Rush_AttackProperty_01_01",
+              "Corin_Attack_Rush_AttackProperty_01_02",
+              "Corin_Attack_Counter_AttackProperty_01_01",
+              "Corin_Attack_Counter_AttackProperty_01_02",
+              "Corin_Attack_BeHitAid_AttackProperty_01_01",
+              "Corin_Attack_BeHitAid_AttackProperty_01_02",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_01",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_02",
+              "Corin_Attack_AssaultAid_AttackProperty_05_02_03",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_01",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_02",
+              "Corin_Attack_SwitchIn_Attack_AttackProperty_04_03",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_01",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_02",
+              "Corin_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02_03",
+              "Corin_Attack_Branch_01_AttackProperty_02_01",
+              "Corin_Attack_Branch_01_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_01_AttackProperty_02_02_02",
+              "Corin_Attack_Branch_01_AttackProperty_03",
+              "Corin_Attack_Branch_02_AttackProperty_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_01",
+              "Corin_Attack_Branch_02_AttackProperty_02_02_02"
+            ]
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_Normal_03",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_Normal_03"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_Normal_05",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_Normal_05"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_Rush",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_Rush"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_Counter",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_Counter"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_BeHitAid",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_BeHitAid"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_AssaultAid",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_AssaultAid"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_SwitchIn_Attack",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_SwitchIn_Attack"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_SwitchIn_Attack_Ex",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_SwitchIn_Attack_Ex"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_Branch_01",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_Branch_01"
+              },
+              {
+                "$type": "ByTargetGlobalValue",
+                "CompareType": "Equal",
+                "Key": "_Global_HitNum_Attack_Branch_02",
+                "Target": "Self",
+                "Value": "%HitNum_MAX_Attack_Branch_02"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ArrowModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetUIArrowAction",
+          "IsVisible": true,
+          "position": 80
+        }
+      ]
+    },
+    "AudioModifier_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_corin_attack_saw_loop_start"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_corin_attack_saw_loop_end"
+        }
+      ]
+    },
+    "AudioModifier_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_corin_attack_rush_saw_start"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_corin_attack_rush_saw_end"
+        }
+      ]
+    },
+    "AudioModifier_03": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_char_corin_attack_rush_saw_end"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Stop_sfx_char_corin_attack_rush_saw_end"
+        }
+      ]
+    },
+    "CountDownModifier": {
+      "Duration": "%Duration_MAX",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_SawExplode",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_01_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Corin_Attack_Saw_Loop_01_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_01_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Corin_Attack_Saw_Loop_01_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_02_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Corin_Attack_Saw_Loop_02_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_02_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Corin_Attack_Saw_Loop_02_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_Attack_Rush_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Corin_Attack_Counter_Trail_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_LoopDust_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Corin_Attack_Branch_01_LoopDust_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_LoopDust_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Corin_Attack_Branch_02_LoopDust_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_QTE": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Corin_Attack_QTE_Weapon_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_Sawtooth_Loop_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Weapon_saw",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Corin_Attack_Sawtooth_Loop_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_Normal_03",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_Normal_05",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_Rush",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_Counter",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_BeHitAid",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_AssaultAid",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_SwitchIn_Attack",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_SwitchIn_Attack",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_SwitchIn_Attack_Ex",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_Branch_01",
+      "Value": 0
+    },
+    {
+      "$type": "SetGlobalValue",
+      "Key": "_Global_HitNum_Attack_Branch_02",
+      "Value": 0
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "AbilityName": "Ability_Card_Blade_7",
+  "AbilitySpecials": {
+    "BladeDamageRatio": {
+      "Op": "Add",
+      "OpValue": 0.04,
+      "Value": 0.04
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "BladeDamageRatio": "%BladeDamageRatio"
+    }
+  }
+}

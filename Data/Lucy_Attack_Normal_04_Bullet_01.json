@@ -1,0 +1,290 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Lucy_Attack_Normal_04_Bullet_05"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 30.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Attack_Normal_03_BulletPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Lucy_Attack_Normal_04_AttackProperty_03",
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 30
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletCreateAction": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "IsAdd": true,
+          "Target": "Custom"
+        }
+      ],
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lucy_Attack_Normal_04_CamShake_E_03",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Normal_04_Explosion_01"
+        },
+        {
+          "$type": "CreateSavePointAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "PointName": "Lucy_WoodATK04Point",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "EffectPattern": "Eff_Lucy_Attack_Normal_04_Explode_06",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "Lucy_WoodATK04Point"
+            }
+          },
+          "Target": "Custom"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Lucy_Attack_Normal_04_Hide",
+              "CustomKey": "LucyWood_AbilityTargetting_00",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "Target": "Custom"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyLogicMoveAction",
+              "CustomKey": "LucyWood_AbilityTargetting_00",
+              "MovementConfig": {
+                "$type": "ConfigMovementTarget",
+                "Duration": 0.01,
+                "Gravity": 0.0,
+                "HitNormalRatio": 1,
+                "HitTangentialRatio": 1,
+                "MoveType": {
+                  "$type": "MovementTypeInstant",
+                  "CorrectionReferTarget": "LocalAvatar",
+                  "NeedRayCastCheck": false,
+                  "NeedTargetPositionCorrection": true
+                },
+                "ReachTargetStop": true,
+                "TargetPosRot": {
+                  "CoordsOption": "Relative",
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "PositionOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": -0.25
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SavePoint",
+                    "PointName": "Lucy_WoodATK04Point"
+                  }
+                },
+                "TargetUpdateMode": "Always",
+                "TimesUpMoveOption": "Stop"
+              },
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "LucyWood_AbilityTargetting_00",
+              "ParamName": "Trigger_Launch",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_FrameHaltSync",
+              "CustomKey": "Lucy_Self_AbilityTargetting_01",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_AttackIndex",
+                  "Value": 2,
+                  "ValueType": "Integer"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ]
+        }
+      ],
+      "OnBulletExplodeAction": [],
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "IntVal": 0,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Target": "Custom"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "IntVal": 1,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Target": "Custom"
+        }
+      ],
+      "OnBulletHitTargetDestroyAction": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "IntVal": 1,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Target": "Custom"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "FreezeRotateXZ": false,
+        "FreezeRotateY": false,
+        "ReachLimitStop": false,
+        "ReachTargetStop": false,
+        "RotateSpeed": 360,
+        "RotateType": "Instant",
+        "RotationAngleLimit": 360.0,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "NeedRaycastGround": true,
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "RaycastGroundOffset": 0.5,
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Lucy_Attack_Normal_04_Bullet_01",
+  "AbilityStacking": "Unique"
+}

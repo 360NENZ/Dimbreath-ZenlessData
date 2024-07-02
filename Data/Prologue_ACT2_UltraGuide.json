@@ -1,0 +1,17 @@
+{
+  "AbilityName": "Prologue_ACT2_UltraGuide",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "InterruptInputEnableAction",
+        "Tag": "InputMuteAction_Ultra"
+      },
+      {
+        "$type": "ModifyTeamFeverAction",
+        "ModifyFunction": "Add",
+        "Percent": 100
+      }
+    ]
+  }
+}

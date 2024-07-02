@@ -1,0 +1,122 @@
+{
+  "AbilityName": "Lucy_SyncAttack_Launch",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SyncAttackLaunchModifier01": {
+      "Duration": 0.01,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "OnlySetOnNull": false,
+          "Source": "Self",
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ParamName": "Bool_SyncAttack_Launch",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "SyncAttackLaunchModifier02": {
+      "Duration": 0.01,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "OnlySetOnNull": false,
+          "Source": "Self",
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ParamName": "Bool_SyncAttack_Launch",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "SyncAttackLaunchModifier03": {
+      "Duration": 0.01,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "OnlySetOnNull": false,
+          "Source": "Self",
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ParamName": "Bool_SyncAttack_Launch",
+          "Target": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SyncAttackLaunchModifier01",
+      "Predicates": [
+        {
+          "$type": "ByAIParam",
+          "BoolParamValue": true,
+          "CompareType": "Equal",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "ParamName": "Bool_BattleStance",
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SyncAttackLaunchModifier02",
+      "Predicates": [
+        {
+          "$type": "ByAIParam",
+          "BoolParamValue": true,
+          "CompareType": "Equal",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "ParamName": "Bool_BattleStance",
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SyncAttackLaunchModifier03",
+      "Predicates": [
+        {
+          "$type": "ByAIParam",
+          "BoolParamValue": true,
+          "CompareType": "Equal",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "ParamName": "Bool_BattleStance",
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

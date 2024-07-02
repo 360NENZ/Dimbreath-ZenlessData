@@ -1,0 +1,119 @@
+{
+  "AbilityName": "Prologue_ACT1_AttackGuide",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "InterruptSetupUIAction",
+        "IgnoreFadeAnimation": true,
+        "SetupTag": "HighLight_MoveGuide_SetupTag"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "Prologue_ACT1_MoveGuide"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SkillBtnListenerModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HighLightModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "MuteJoyStickUICollapseAction",
+        "IsMute": false
+      }
+    ]
+  },
+  "Modifiers": {
+    "DelayModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 10,
+          "TimeUpActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HighLightModifier",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Refresh"
+    },
+    "HighLightModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetupUIAction",
+          "HighLightTags": [
+            "SkillButtonA"
+          ],
+          "IgnoreFadeAnimation": true,
+          "Priority": 0,
+          "SetupTag": "HighLight_AttackGuide_SetupTag"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptSetupUIAction",
+          "IgnoreFadeAnimation": true,
+          "SetupTag": "HighLight_AttackGuide_SetupTag"
+        }
+      ]
+    },
+    "SkillBtnListenerModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SkillBtnListenerMixin",
+          "BtnListeners": [
+            {
+              "BtnOperations": [
+                {
+                  "ListenerType": "PointDown",
+                  "PressTime": 0.1,
+                  "TriggerActions": [
+                    {
+                      "$type": "InterruptSetupUIAction",
+                      "IgnoreFadeAnimation": true,
+                      "SetupTag": "HighLight_AttackGuide_SetupTag"
+                    },
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "HighLightModifier",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "DelayModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                },
+                {
+                  "ListenerType": "PointUp",
+                  "PressTime": 0.1,
+                  "TriggerActions": [
+                    {
+                      "$type": "ApplyModifier",
+                      "ModifierName": "DelayModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "SkillBtnIndex": 0
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

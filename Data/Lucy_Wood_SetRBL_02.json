@@ -1,0 +1,33 @@
+{
+  "AbilityName": "Lucy_Wood_SetRBL_02",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RBL6Modifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 6,
+          "Tag": "Lucy_Wood_RBL",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Lucy_Wood_RBL",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "RBL6Modifier",
+      "Target": "Self"
+    }
+  ]
+}

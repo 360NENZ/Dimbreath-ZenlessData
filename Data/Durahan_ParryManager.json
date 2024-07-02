@@ -1,0 +1,433 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_01_Parry",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReduceDamageModifier",
+            "CDControlModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ChargeTagModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_ParryManager",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio_Parry": {
+      "Value": -0.95
+    },
+    "ParryCD": {
+      "Value": 2.0
+    },
+    "ParryCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 10,
+        "ParamName": "ParryCD",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Boss"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 20,
+        "ParamName": "ParryCD",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "MuteTransform"
+                ],
+                "Target": "Self"
+              },
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "BornTransform"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnBeingHitPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PrepareParryModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByHeavyParry"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "CDModifier"
+            ],
+            "OperatorType": "Not"
+          },
+          {
+            "$type": "ByHasModifier",
+            "ModifierNameList": [
+              "CountMaxCDModifier"
+            ],
+            "OperatorType": "Not"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDControlModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDStackModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CanAddTagModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CDModifier": {
+      "Duration": "%ParryCD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "CDStackModifier": {
+      "Duration": 5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "ParryCount",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CountMaxCDModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 2,
+              "ParamName": "ParryCount"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "ParryCount",
+          "ParamType": "Integer"
+        }
+      ]
+    },
+    "CanAddTagModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "ChargeTagModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DurahanSkill01_Short"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "CanAddTagModifier"
+              ]
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DurahanSkill01_Short"
+          ],
+          "IsAdd": false
+        }
+      ]
+    },
+    "CountMaxCDModifier": {
+      "Duration": 5.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "HeavyParryModifier": {
+      "Duration": 2.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "SelfAttackTarget"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_DurahanParry",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Hit_Shake",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isDurahanCounter",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_DurahanParry",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "PrepareParryModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HeavyParryModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RBLOffsetRemainModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": 2,
+          "Tag": "Durahan_RBL_ParryAid",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Durahan_RBL_ParryAid",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%AS_DamageTakeRatio_Parry",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RBLOffsetRemainModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByHeavyParry": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByCauseStun",
+              "IsCauseStun": true
+            },
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackAid"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "InAction_S"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DurahanCanParry"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByHitAngleRange",
+          "AngleMax": 180.0,
+          "AngleMin": 0.0
+        },
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAIParam",
+              "CompareType": "Equal",
+              "IntParamValue": 2,
+              "ParamName": "Int_BossType_Cur",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Promote"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ByIsStunDestroyed",
+          "IsStunDestroyed": false
+        }
+      ]
+    }
+  }
+}

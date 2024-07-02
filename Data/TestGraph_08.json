@@ -1,0 +1,157 @@
+{
+  "AbilityName": "TestGraph_08",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Event": {
+        "OnStart": {
+          "x": 641.913,
+          "y": 256.4783
+        }
+      },
+      "Graph": {
+        "Position": {
+          "x": -838,
+          "y": -183,
+          "z": 0
+        },
+        "Scale": {
+          "x": 1.520875,
+          "y": 1.520875,
+          "z": 1
+        }
+      },
+      "Node": [
+        {
+          "x": 640.1304,
+          "y": 408.4348
+        },
+        {
+          "x": 1270.13,
+          "y": 276.8696
+        },
+        {
+          "x": 810.9565,
+          "y": 255.4348
+        },
+        {
+          "x": 1098.783,
+          "y": 278.3913
+        },
+        {
+          "x": 1105.391,
+          "y": 123.9826
+        },
+        {
+          "x": 1093.522,
+          "y": 399.4783
+        }
+      ]
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 2,
+        "ParametersBind": []
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1003
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "New Float"
+      },
+      {
+        "$type": "SetVariable",
+        "ConstValue": {
+          "$type": "ConfigDynamicValue"
+        },
+        "DefaultOutBind": -1,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 1002
+        },
+        "PreActionBind": [
+          5
+        ],
+        "VarScope": "Auto",
+        "VariableKey": "New Float"
+      },
+      {
+        "$type": "TimerNode",
+        "Complete": 4,
+        "Count": {
+          "DefaultValue": 5
+        },
+        "CurCount": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1001
+          ]
+        },
+        "DefaultOutBind": -1,
+        "IntervalTime": {
+          "BindId": 1003
+        },
+        "OnInterval": 3,
+        "PreActionBind": [
+          0
+        ]
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 1,
+        "Value": {
+          "BindId": 1000
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "Value": {
+          "DefaultValue": "complete"
+        }
+      },
+      {
+        "$type": "AsFloatNode",
+        "DefaultOutBind": -1,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 1001
+        },
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1002
+          ]
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueFloat",
+          "Value": 1
+        },
+        "ElementType": "Integer",
+        "Key": "New Float",
+        "Scope": "Auto",
+        "Type": "Float"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "EventName": "OnStart"
+    }
+  ]
+}

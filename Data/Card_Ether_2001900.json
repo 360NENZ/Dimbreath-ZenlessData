@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Card_Ether_2001900",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.15
+    },
+    "AS_ElementMysteryDelta": {
+      "Value": 10.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Card_Ether_2001900_BuffIcon": {
+      "Buff": {
+        "BuffID": 3100061,
+        "IsOverrideDuration": false
+      },
+      "Duration": 30,
+      "IsUnique": true,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "Card_Ether_Modifier_01": {
+      "Duration": 30,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_ElementMysteryDelta": "%AS_ElementMysteryDelta"
+      }
+    },
+    "Card_Ether_Modifier_02": {
+      "Duration": 30,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_AddedDamageRatio_Ether": "%AS_AddedDamageRatio"
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Card_Ether_Modifier_01",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Card_Ether_Modifier_02",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Card_Ether_2001900_BuffIcon",
+      "Target": "Self"
+    }
+  ]
+}

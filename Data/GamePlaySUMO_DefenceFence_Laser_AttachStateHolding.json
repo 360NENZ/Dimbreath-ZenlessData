@@ -1,0 +1,144 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Holding",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 50,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LaserModifiers"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GamePlaySUMO_DefenceFence_Laser_AttachStateHolding",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlaySUMO_DefenceFence_Laser_01",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlaySUMO_DefenceFence_Laser_02",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlaySUMO_DefenceFence_Laser_03",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlaySUMO_DefenceFence_Laser_04",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlaySUMO_DefenceFence_Laser_05",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "GamePlaySUMO_DefenceFence_Laser_06",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FadeInModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "DeathXIII"
+        },
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_DeathXIII_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeOutModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.28,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "DeathXIII",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_DeathXIII_Dither_Fade",
+          "Tag": "Monster_DeathXIII_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LaserModifiers": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlaySUMO_DefenceFence_Laser_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlaySUMO_DefenceFence_Laser_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlaySUMO_DefenceFence_Laser_03",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlaySUMO_DefenceFence_Laser_04",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlaySUMO_DefenceFence_Laser_05",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlaySUMO_DefenceFence_Laser_06",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": []
+    }
+  }
+}

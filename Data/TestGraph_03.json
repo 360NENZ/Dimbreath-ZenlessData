@@ -1,0 +1,952 @@
+{
+  "AbilityName": "TestGraph_03",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Event": {
+        "OnStart": {
+          "x": -946.0251,
+          "y": 355.4146
+        }
+      },
+      "Graph": {
+        "Position": {
+          "x": -608,
+          "y": -372,
+          "z": 0
+        },
+        "Scale": {
+          "x": 1.15,
+          "y": 1.15,
+          "z": 1
+        }
+      },
+      "Node": [
+        {
+          "x": -970,
+          "y": 652
+        },
+        {
+          "x": -793.0094,
+          "y": 355.5123
+        },
+        {
+          "x": -1119,
+          "y": 497
+        },
+        {
+          "x": -959,
+          "y": 497
+        },
+        {
+          "x": -1146,
+          "y": 677
+        },
+        {
+          "x": -627.5633,
+          "y": 356
+        },
+        {
+          "x": -471.7335,
+          "y": 356.0227
+        },
+        {
+          "x": -635,
+          "y": 514
+        },
+        {
+          "x": -157.1966,
+          "y": 355.5823
+        },
+        {
+          "x": -320.2193,
+          "y": 356
+        },
+        {
+          "x": -628,
+          "y": 655
+        },
+        {
+          "x": -285,
+          "y": 515
+        },
+        {
+          "x": -285,
+          "y": 650
+        },
+        {
+          "x": 7.999957,
+          "y": 355.7391
+        },
+        {
+          "x": 44.82617,
+          "y": 513.1304
+        },
+        {
+          "x": 48.34784,
+          "y": 645.2174
+        },
+        {
+          "x": 180,
+          "y": 356
+        },
+        {
+          "x": 357,
+          "y": 356
+        },
+        {
+          "x": -802,
+          "y": 652.4348
+        },
+        {
+          "x": -800,
+          "y": 543
+        },
+        {
+          "x": -435.2173,
+          "y": 539.8261
+        },
+        {
+          "x": -436.4782,
+          "y": 651.2609
+        },
+        {
+          "x": -102.2174,
+          "y": 538.5652
+        },
+        {
+          "x": -99.39131,
+          "y": 646.7391
+        },
+        {
+          "x": 517.2327,
+          "y": 356.2876
+        },
+        {
+          "x": 683.3425,
+          "y": 356.2876
+        },
+        {
+          "x": 388.5218,
+          "y": 517.5652
+        },
+        {
+          "x": 388.3044,
+          "y": 648.9565
+        },
+        {
+          "x": 228.5652,
+          "y": 573.7826
+        },
+        {
+          "x": 850.7316,
+          "y": 356.2439
+        },
+        {
+          "x": 1013.268,
+          "y": 356.2439
+        },
+        {
+          "x": 1169,
+          "y": 356
+        },
+        {
+          "x": 564.9263,
+          "y": 680.7316
+        },
+        {
+          "x": 584.8771,
+          "y": 572.5142
+        },
+        {
+          "x": 760.3365,
+          "y": 512.1721
+        },
+        {
+          "x": 761.3365,
+          "y": 635.1721
+        },
+        {
+          "x": 762.7316,
+          "y": 769.8053
+        },
+        {
+          "x": 1199,
+          "y": 540.3478
+        },
+        {
+          "x": 1207.522,
+          "y": 734.2609
+        },
+        {
+          "x": 1326,
+          "y": 356.1304
+        },
+        {
+          "x": 1489,
+          "y": 356.6087
+        },
+        {
+          "x": 1023,
+          "y": 591.0435
+        },
+        {
+          "x": 1016.478,
+          "y": 736.1304
+        },
+        {
+          "x": 1446.609,
+          "y": 629.6522
+        },
+        {
+          "x": 1450.261,
+          "y": 535.6522
+        },
+        {
+          "x": 1604.652,
+          "y": 548.7826
+        },
+        {
+          "x": 1682.522,
+          "y": 358.2261
+        }
+      ]
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 1,
+        "ParametersBind": []
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "MakeVector",
+        "DefaultOutBind": -1,
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1004
+          ]
+        },
+        "PreActionBind": [
+          4
+        ],
+        "X": {
+          "BindId": 1013,
+          "DefaultValue": 1
+        },
+        "Y": {
+          "DefaultValue": 1
+        },
+        "Z": {
+          "BindId": 1019,
+          "DefaultValue": 1
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 5,
+        "PreActionBind": [
+          3
+        ],
+        "Value": {
+          "BindId": 1003
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1002
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "SplitVector",
+        "DefaultOutBind": -1,
+        "Input": {
+          "BindId": 1002
+        },
+        "PreActionBind": [
+          2
+        ],
+        "X": {
+          "$type": "ConfigOutputValue"
+        },
+        "Y": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1003
+          ]
+        },
+        "Z": {
+          "$type": "ConfigOutputValue"
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1013,
+            1019
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 6,
+        "PreActionBind": [
+          0
+        ],
+        "Value": {
+          "BindId": 1004
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 9,
+        "PreActionBind": [
+          7
+        ],
+        "Value": {
+          "BindId": 1007
+        }
+      },
+      {
+        "$type": "VectorAdd",
+        "DefaultOutBind": -1,
+        "InOne": {
+          "BindId": 1006
+        },
+        "InTwo": {
+          "BindId": 1009
+        },
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1007
+          ]
+        },
+        "PreActionBind": [
+          19,
+          18
+        ]
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 13,
+        "PreActionBind": [
+          11
+        ],
+        "Value": {
+          "BindId": 1011
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 8,
+        "PreActionBind": [
+          10
+        ],
+        "Value": {
+          "BindId": 1008
+        }
+      },
+      {
+        "$type": "VectorSub",
+        "DefaultOutBind": -1,
+        "InOne": {
+          "BindId": 1005
+        },
+        "InTwo": {
+          "BindId": 1010
+        },
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1008
+          ]
+        },
+        "PreActionBind": [
+          19,
+          18
+        ]
+      },
+      {
+        "$type": "VectorMulNum",
+        "DefaultOutBind": -1,
+        "Num": {
+          "BindId": 1016
+        },
+        "PreActionBind": [
+          20,
+          21
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1011
+          ]
+        },
+        "Vector": {
+          "BindId": 1000
+        }
+      },
+      {
+        "$type": "VectorDivNum",
+        "DefaultOutBind": -1,
+        "Num": {
+          "BindId": 1015
+        },
+        "PreActionBind": [
+          20,
+          21
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1014
+          ]
+        },
+        "Vector": {
+          "BindId": 1012
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 16,
+        "PreActionBind": [
+          12
+        ],
+        "Value": {
+          "BindId": 1014
+        }
+      },
+      {
+        "$type": "VectorDot",
+        "DefaultOutBind": -1,
+        "InOne": {
+          "BindId": 1022
+        },
+        "InTwo": {
+          "BindId": 1021
+        },
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1018
+          ]
+        },
+        "PreActionBind": [
+          23,
+          22
+        ]
+      },
+      {
+        "$type": "VectorCross",
+        "DefaultOutBind": -1,
+        "InOne": {
+          "BindId": 1023
+        },
+        "InTwo": {
+          "BindId": 1020
+        },
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1017
+          ]
+        },
+        "PreActionBind": [
+          23,
+          22
+        ]
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 17,
+        "PreActionBind": [
+          14
+        ],
+        "Value": {
+          "BindId": 1018
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 24,
+        "PreActionBind": [
+          15
+        ],
+        "Value": {
+          "BindId": 1017
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1009,
+            1010
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_2"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1005,
+            1006
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1012
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1015,
+            1016
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1022,
+            1023
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1020,
+            1021
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_2"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 25,
+        "PreActionBind": [
+          26
+        ],
+        "Value": {
+          "BindId": 1024
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 29,
+        "PreActionBind": [
+          27
+        ],
+        "Value": {
+          "BindId": 1025
+        }
+      },
+      {
+        "$type": "VectorLength",
+        "DefaultOutBind": -1,
+        "PreActionBind": [
+          28
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1024
+          ]
+        },
+        "Vector": {
+          "BindId": 1026
+        }
+      },
+      {
+        "$type": "VectorNormalize",
+        "DefaultOutBind": -1,
+        "PreActionBind": [
+          28
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1025
+          ]
+        },
+        "Vector": {
+          "BindId": 1027
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1026,
+            1027
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 30,
+        "PreActionBind": [
+          34
+        ],
+        "Value": {
+          "BindId": 1028
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 31,
+        "PreActionBind": [
+          35
+        ],
+        "Value": {
+          "BindId": 1035
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 39,
+        "PreActionBind": [
+          36
+        ],
+        "Value": {
+          "BindId": 1036
+        }
+      },
+      {
+        "$type": "MakeVector",
+        "DefaultOutBind": -1,
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1029,
+            1033,
+            1034
+          ]
+        },
+        "X": {},
+        "Y": {
+          "DefaultValue": 1
+        },
+        "Z": {}
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1030,
+            1031,
+            1032
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "VectorProject",
+        "DefaultOutBind": -1,
+        "Normal": {
+          "BindId": 1029
+        },
+        "PreActionBind": [
+          32,
+          33
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1028
+          ]
+        },
+        "Vector": {
+          "BindId": 1030
+        }
+      },
+      {
+        "$type": "VectorProjectOnPlane",
+        "DefaultOutBind": -1,
+        "Normal": {
+          "BindId": 1034
+        },
+        "PreActionBind": [
+          33,
+          32
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1035
+          ]
+        },
+        "Vector": {
+          "BindId": 1031
+        }
+      },
+      {
+        "$type": "VectorReflect",
+        "DefaultOutBind": -1,
+        "Normal": {
+          "BindId": 1033
+        },
+        "PreActionBind": [
+          33,
+          32
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1036
+          ]
+        },
+        "Vector": {
+          "BindId": 1032
+        }
+      },
+      {
+        "$type": "VectorDistance",
+        "DefaultOutBind": -1,
+        "Distance": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1042
+          ]
+        },
+        "InOne": {
+          "BindId": 1037
+        },
+        "InTwo": {
+          "BindId": 1040
+        },
+        "PreActionBind": [
+          41,
+          42
+        ]
+      },
+      {
+        "$type": "VectorAngle",
+        "Angle": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1041
+          ]
+        },
+        "DefaultOutBind": -1,
+        "InOne": {
+          "BindId": 1038
+        },
+        "InTwo": {
+          "BindId": 1039
+        },
+        "PreActionBind": [
+          41,
+          42
+        ]
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 40,
+        "PreActionBind": [
+          37
+        ],
+        "Value": {
+          "BindId": 1042
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 46,
+        "PreActionBind": [
+          38
+        ],
+        "Value": {
+          "BindId": 1041
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1037,
+            1038
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1039,
+            1040
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_2"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1043
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_2"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1001
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Vector_1"
+      },
+      {
+        "$type": "VectorLerpNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1001
+        },
+        "ParamTwo": {
+          "BindId": 1043
+        },
+        "PreActionBind": [
+          44,
+          43
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1044
+          ]
+        },
+        "T": {
+          "DefaultValue": 0.5
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "PreActionBind": [
+          45
+        ],
+        "Value": {
+          "BindId": 1044
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueVector",
+          "Value": {
+            "x": 1,
+            "y": 2,
+            "z": 3
+          }
+        },
+        "ElementType": "Integer",
+        "Key": "Vector_1",
+        "Scope": "Auto",
+        "Type": "Vector"
+      },
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueVector",
+          "Value": {
+            "x": 1,
+            "y": 2,
+            "z": 1
+          }
+        },
+        "ElementType": "Integer",
+        "Key": "Vector_2",
+        "Scope": "Auto",
+        "Type": "Vector"
+      },
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueFloat",
+          "Value": 2
+        },
+        "ElementType": "Integer",
+        "Key": "Float_1",
+        "Scope": "Auto",
+        "Type": "Float"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "AbilityName": "TestGraph_03",
+      "EventName": "OnStart"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "AbilityName": "Suit_Ability_50431500",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.4
+    },
+    "AS_Duration": {
+      "Value": 2.5
+    },
+    "AS_IntervalCD": {
+      "Value": 15.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeRatioModifier_Controller",
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeRatioModifier_Effect",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "DamageTakeRatioModifier_Controller"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageTakeRatioModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageTakeRatioModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageTakeRatioModifier_Effect": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  }
+}

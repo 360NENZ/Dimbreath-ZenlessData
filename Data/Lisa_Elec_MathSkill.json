@@ -1,0 +1,211 @@
+{
+  "AbilityName": "Lisa_Elec_MathSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_1": {
+      "Value": 0.225
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "ModifierName": "ElecBuffCount",
+            "StackCount": 1
+          }
+        ],
+        "StackCount": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "ModifierName": "ElecBuffCount",
+            "StackCount": 2
+          }
+        ],
+        "StackCount": 2,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecDamageIconModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "ModifierName": "ElecBuffCount",
+            "StackCount": 1
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "ModifierName": "ElecDamageIconModifier",
+            "StackCount": 0
+          }
+        ],
+        "StackCount": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecDamageIconModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "ModifierName": "ElecBuffCount",
+            "StackCount": 2
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "ModifierName": "ElecDamageIconModifier",
+            "StackCount": 0
+          }
+        ],
+        "StackCount": 2,
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ElecBuffCount",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ElecBuffCount": {
+      "Duration": -1,
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "ElecDamageIconModifier": {
+      "Buff": {
+        "BuffID": 3000081,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "ElecDamageModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBuffDamageBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "GreaterEqual",
+              "CountModifierType": "CurTargetAbility",
+              "ModifierName": "ElecDamageModifier",
+              "StackCount": 1,
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_BuffDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_1",
+          "Target": "Self"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ElecDamageModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ElecDamageIconModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ElecBuffCount",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ElecDamageIconModifier",
+      "Target": "Self"
+    }
+  ]
+}

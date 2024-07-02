@@ -1,0 +1,222 @@
+{
+  "AbilityName": "Nostradamus_TutorialAbility",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnPatternHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest2Modifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByEnhanceBulletAction",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest1Modifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Quest1Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Nostradamus_1"
+        }
+      ]
+    },
+    "Quest2Modifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Attack_Normal_01",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_03",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_01",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Normal_Enhance_03",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Rush",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Rush_Enhance",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ResetQuest2Modifier"
+              ]
+            }
+          ],
+          "IsSeam": true
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Nostradamus_2"
+        }
+      ]
+    },
+    "ResetQuest2Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Quest2Modifier"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByEnhanceBulletAction": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_04",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_04",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_05",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_06",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_07",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_08",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_09",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_10",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_11",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_12",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_13",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_14",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_15",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_16",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_17",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_18",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_19",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_20",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_04",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_05",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_06",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_07",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_08",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_09",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_10",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_11",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_12",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_13"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

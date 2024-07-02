@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Talent_10101_AddedDamageRatio01",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.02
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedDamageRatio"
+    }
+  }
+}

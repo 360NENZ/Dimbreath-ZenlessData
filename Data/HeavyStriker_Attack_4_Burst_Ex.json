@@ -1,0 +1,69 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 1.0,
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_04_06_Store"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": true,
+        "RaycastGroundOffset": 0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "%AS_BurstPoint",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": false,
+      "DelayActionList": [
+        {
+          "Actions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "HeavyStriker_Attack_4_Burst_Ex_Predicate",
+              "PositionArgument": "Bullet"
+            }
+          ],
+          "DelayTime": 0.0
+        }
+      ],
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "HeavyStriker_Attack04_Attackproperty_Burst",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_04_07_Burst"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_HeavyStriker_ATK4_CamShake_E_02",
+          "Target": "Other"
+        }
+      ],
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "HeavyStriker_Attack_4_Burst_Ex",
+  "AbilitySpecials": {
+    "AS_BurstPoint": {
+      "Value": "",
+      "ValueType": "String"
+    }
+  },
+  "AbilityStacking": "Unique"
+}

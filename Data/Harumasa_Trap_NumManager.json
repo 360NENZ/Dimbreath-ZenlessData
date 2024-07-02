@@ -1,0 +1,112 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Born",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaTrapBornModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Death",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HarumasaTrapDeathModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Harumasa_Trap_NumManager",
+  "AbilitySpecials": {
+    "AS_HarumasaTrap_ChargeNum": {
+      "Value": 1
+    },
+    "AS_HarumasaTrap_LifeTime": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HarumasaTrapBornModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomKey": "AbilityTarget_Harumasa",
+          "CustomPropertyType": "HarumasaTrapNum",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom",
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HarumasaTrapLifeTimeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HarumasaTrapDeathModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": -1,
+          "CustomKey": "AbilityTarget_Harumasa",
+          "CustomPropertyType": "HarumasaTrapNum",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "HarumasaTrapLifeTimeModifier": {
+      "Duration": "%AS_HarumasaTrap_LifeTime",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": "%AS_HarumasaTrap_ChargeNum",
+          "CustomPropertyType": "ChargingLimits",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

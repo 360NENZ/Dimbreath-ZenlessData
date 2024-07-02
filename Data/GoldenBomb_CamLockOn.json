@@ -1,0 +1,34 @@
+{
+  "AbilityName": "GoldenBomb_CamLockOn",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GoldenBomb_CamLockOnModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GoldenBomb_CamLockOnModifier": {
+      "Duration": 7,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "CameraLockOnAction",
+          "CameraLockTargetKey": "GoldenBomb_CamLockOn_01",
+          "IsLockPermanently": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "GoldenBomb_CamLockOnModifier",
+      "Target": "Self"
+    }
+  ]
+}

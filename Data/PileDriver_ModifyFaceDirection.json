@@ -1,0 +1,13 @@
+{
+  "AbilityName": "PileDriver_ModifyFaceDirection",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyFaceDirectionAction",
+        "AttachPoint": "FaceDirection",
+        "Target": "Self"
+      }
+    ]
+  }
+}

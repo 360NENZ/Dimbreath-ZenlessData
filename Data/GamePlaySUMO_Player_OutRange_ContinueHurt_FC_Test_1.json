@@ -1,0 +1,14 @@
+{
+  "AbilityName": "GamePlaySUMO_Player_OutRange_ContinueHurt_FC_Test_1",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlaySUMO_Player_OutRange_ContinueHurt_FC_Test",
+        "Target": "Self"
+      }
+    ]
+  }
+}

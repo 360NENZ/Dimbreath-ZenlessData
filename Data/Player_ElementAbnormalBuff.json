@@ -1,0 +1,469 @@
+{
+  "AbilityName": "Player_ElementAbnormalBuff",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Elec"
+          }
+        ],
+        "Tag": "ElementAttack_MA",
+        "Target": "Target",
+        "key": "Monster_Common_MA_Overload_10"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          }
+        ],
+        "Tag": "ElementAttack_MA",
+        "Target": "Target",
+        "key": "Monster_Common_MA_Burn_Override_05"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "Tag": "ElementAttack_MA",
+        "Target": "Target",
+        "key": "Monster_Common_MA_Erosion_02"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ice"
+          }
+        ],
+        "Tag": "ElementAttack_MA",
+        "Target": "Target",
+        "key": "Monster_Common_MA_Ice_Hit_01"
+      }
+    ],
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FireAbnormalModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Burn",
+              "Ignite"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecMAModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FrozenMAModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FrostMAModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frost"
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ShowSpecialDamageTextAction",
+        "AttachPoint": "MiddlePoint",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          }
+        ],
+        "Target": "Target",
+        "TextType": "Elec"
+      },
+      {
+        "$type": "ShowSpecialDamageTextAction",
+        "AttachPoint": "MiddlePoint",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion",
+              "Chaos"
+            ]
+          }
+        ],
+        "Target": "Target",
+        "TextType": "Ether"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbnormalBuff_1": {
+      "Buff": {
+        "BuffID": 1,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_12": {
+      "Buff": {
+        "BuffID": 12,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_13": {
+      "Buff": {
+        "BuffID": 13,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_15": {
+      "Buff": {
+        "BuffID": 15,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_16": {
+      "Buff": {
+        "BuffID": 16,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_2": {
+      "Buff": {
+        "BuffID": 2,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_3": {
+      "Buff": {
+        "BuffID": 3,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_4": {
+      "Buff": {
+        "BuffID": 4,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_5": {
+      "Buff": {
+        "BuffID": 5,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_6": {
+      "Buff": {
+        "BuffID": 6,
+        "IsOverrideOdds": false
+      }
+    },
+    "AbnormalBuff_7": {
+      "Buff": {
+        "BuffID": 7,
+        "IsOverrideOdds": false
+      }
+    },
+    "ElecMAModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Elec",
+          "key": "Monster_Common_MA_Electric_S_AbnormalProperty"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "Greater"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Elec",
+          "key": "Monster_Common_MA_Electric_AbnormalProperty"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ElecMAModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Elec"
+        }
+      ]
+    },
+    "FireAbnormalModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ShowSpecialDamageTextAction",
+          "AttachPoint": "MiddlePoint",
+          "Target": "Target",
+          "TextType": "Fire"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Ignite_Hit_L",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Large",
+              "CompareType": "GreaterEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Ignite_Hit_M",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Middle",
+              "CompareType": "Equal",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Ignite_Hit_S",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Ignite",
+          "key": "Monster_Common_MA_Ignite_S_AbnormalProperty"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "Greater"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Ignite",
+          "key": "Monster_Common_MA_Ignite_AbnormalProperty"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FireAbnormalModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Burn",
+                "Ignite"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Ignite"
+        }
+      ]
+    },
+    "FrostMAModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Frost",
+          "key": "Monster_Common_MA_FrozenDuration_S_AbnormalProperty"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "Greater"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Frost",
+          "key": "Monster_Common_MA_FrozenDuration_AbnormalProperty"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FrostMAModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frost"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Frost"
+        }
+      ]
+    },
+    "FrozenMAModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Frozen",
+          "key": "Monster_Common_MA_Frozen_S_AbnormalProperty"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "Greater"
+            }
+          ],
+          "Tag": "Monster_Common_MA_Frozen",
+          "key": "Monster_Common_MA_Frozen_AbnormalProperty"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FrozenMAModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Frozen"
+        }
+      ]
+    }
+  }
+}

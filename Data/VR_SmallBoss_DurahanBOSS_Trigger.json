@@ -1,0 +1,12 @@
+{
+  "AbilityName": "VR_SmallBoss_DurahanBOSS_Trigger",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "VR_SmallBoss_DurahanBOSS"
+      }
+    ]
+  }
+}

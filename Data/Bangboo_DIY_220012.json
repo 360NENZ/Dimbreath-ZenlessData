@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Bangboo_DIY_220012",
+  "AbilitySpecials": {
+    "AS_CritDelta": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AtkBuff",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AtkBuff": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CritDelta"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Metor_DecreaseHPAndStrun",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChangeBreakStunTakeRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChangeDamageTake",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChangeBreakStunTakeRatio": {
+      "Properties": {
+        "Actor_BreakStunTakeRatio": 9
+      }
+    },
+    "ChangeDamageTake": {
+      "Properties": {
+        "Actor_DamageTakeRatio": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Bangboo_Sumoboo_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 2,
+        "ParamName": "Int_AttackIndex",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Sumoboo_Attackproperty_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "ParamName": "Trigger_PressAttackA",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Sumoboo_Attackproperty_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

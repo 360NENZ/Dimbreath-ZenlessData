@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Talent_10101_BaseDefenceDelta02",
+  "AbilitySpecials": {
+    "BaseDefenceDelta": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_DefenceDelta": "%BaseDefenceDelta"
+    }
+  }
+}

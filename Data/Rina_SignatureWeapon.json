@@ -1,0 +1,87 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Rina_SignatureWeapon",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SignatureLightWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyIndicatedLightAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "indicatedLightKey": "Rina_IndicatedLight"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveIndicatedLightAction",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SignatureMaterialWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Rina_Body_2"
+            }
+          ],
+          "Tag": "Avatar_Female_Size03_Rina_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size03_Rina_MA_SignatureWeapon_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size03_Rina_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

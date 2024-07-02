@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Card_Edrink_2000210",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 5
+    },
+    "AS_RecoverSp": {
+      "Value": 60
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnKillOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TeamRecoverSPModifier_Card_2000210",
+        "Predicates": [
+          {
+            "$type": "ByMonsterFunctionType",
+            "CompareType": "Equal",
+            "MonsterFunctionType": "Monster",
+            "Target": "Target"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "TeamRecoverSPModifier_Card_2000210": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

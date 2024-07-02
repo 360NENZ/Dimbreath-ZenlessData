@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Billy_Talent_01",
+  "AbilitySpecials": {
+    "AS_SpRecoverCD_Talent_01": {
+      "Value": 5
+    },
+    "AS_SpRecoverDelta_Talent_01": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Rush"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Counter"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpRecoverModifier": {
+      "Duration": "%AS_SpRecoverCD_Talent_01",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecoverDelta_Talent_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

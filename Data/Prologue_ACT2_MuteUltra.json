@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Prologue_ACT2_MuteUltra",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "InputEnableAction",
+        "Infos": [
+          {
+            "Enabled": false,
+            "InputType": "SkillUltra"
+          }
+        ],
+        "Tag": "InputMuteAction_Ultra"
+      }
+    ]
+  }
+}

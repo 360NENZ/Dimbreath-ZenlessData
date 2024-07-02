@@ -1,0 +1,11 @@
+{
+  "AbilityName": "GoldenBomb_DeathDrop_Coin",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "DropItemAction",
+      "DropStr": "2000:10000:4",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "AbilityName": "GamePlayChasing_DestroyObject_Broken_Die",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.01
+    },
+    "ShieldAmount": {
+      "Value": 0.01
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TriggerHit_Modifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyStunStateAction",
+          "Target": "Self",
+          "TargetState": "Break"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunBuffModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "TriggerHit_Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_GroundHitIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

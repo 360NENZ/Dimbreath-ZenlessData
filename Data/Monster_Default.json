@@ -1,0 +1,311 @@
+{
+  "AbilityName": "Monster_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Abandoned"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_Common_MA_AbandonedDeclaration_MainMaps_01",
+        "Target": "Self",
+        "key": "Monster_Common_MA_AbandonedDeclaration_MainMaps_01"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_Common_VR_In",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_TrainingRoom_30R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_TrainingRoom_50R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_TrainingRoom_30R_01"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_TrainingRoom_30R_02"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_ConstructionSite_30R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_ConstructionSite_50R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_Metro_30R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_Metro_50R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_SkyScraper_30R"
+              },
+              {
+                "$type": "ByStageName",
+                "CompareType": "Equal",
+                "StageName": "Stage_VR_SkyScraper_50R"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_Common_Death_Start",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_Common_Death_Effect_End",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_Common_Death_MA_End",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_Common_Death_Start_Sky",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_Common_Death_Sky_Onground",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_ElitePartner",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Monster_ElitePartner_Reset",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHitPre": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Trigger_Chaos",
+        "ParamType": 1
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Trigger_Ignite",
+        "ParamType": 1
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Trigger_Overload",
+        "ParamType": 1
+      }
+    ],
+    "OnBuffAdded": [
+      {
+        "$type": "SetRBLOffsetAction",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Stun"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "RBLOffset": -2,
+        "Tag": "Monster_Common_Stun_RBLOffset",
+        "Target": "Self"
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Monster_Common_Buff_Erosion_S",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Small",
+            "CompareType": "LessEqual",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion"
+            ],
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Monster_Common_Buff_Erosion_M",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Middle",
+            "CompareType": "Equal",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion"
+            ],
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Monster_Common_Buff_Erosion_L",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Large",
+            "CompareType": "GreaterEqual",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion"
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnBuffRemoved": [
+      {
+        "$type": "UnsetRBLOffsetAction",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Stun"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_Common_Stun_RBLOffset",
+        "Target": "Self"
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Monster_Common_Buff_Erosion_S_Stop",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Small",
+            "CompareType": "LessEqual",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion"
+            ],
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Monster_Common_Buff_Erosion_M_Stop",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Middle",
+            "CompareType": "Equal",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion"
+            ],
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Monster_Common_Buff_Erosion_L_Stop",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Large",
+            "CompareType": "GreaterEqual",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Erosion"
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnLevelEndNodeInvoke": [
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "Predicates": [
+          {
+            "$type": "ByLevelEndPerformType",
+            "PerformType": "DirectKill",
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_Death_Start_3",
+        "Target": "Self"
+      }
+    ]
+  }
+}

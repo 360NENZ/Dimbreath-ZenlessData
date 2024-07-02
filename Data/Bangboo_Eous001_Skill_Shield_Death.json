@@ -1,0 +1,360 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Shield_Death",
+  "AbilitySpecials": {
+    "AS_CDIndicate": {
+      "Value": 0
+    },
+    "AS_InternalCD_Attack": {
+      "Value": 1
+    },
+    "AS_InternalCD_Recover": {
+      "Value": 1.5
+    },
+    "AS_InternalCD_SpecialEffect": {
+      "Value": 0.15
+    },
+    "AS_ShieldValueDelta": {
+      "Value": 0.0
+    },
+    "AS_ShieldValueRatio": {
+      "Value": 2
+    },
+    "AS_ShiledDurationDelta": {
+      "Value": 3.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Bangboo_Eous001_Skill_Shield_Death_Attack_01",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Bangboo_Eous001_Skill_Shield_Death_Attack_02",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialsByPropertyAction",
+        "ModifyFunction": "Replace",
+        "ParamName": "AS_ShieldValueDelta",
+        "Percentage": 0.1,
+        "PropertyType": "MaxEndurance",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDModifier_Attack": {
+      "Duration": "%AS_InternalCD_Attack",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_CDIndicate",
+          "ParamType": "Integer",
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_CDIndicate",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CDModifier_Recover": {
+      "Duration": "%AS_InternalCD_Recover",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyArcanaCommonPropertyAction",
+          "ArcanaProperty": "ShieldDuration",
+          "Delta": "%AS_ShiledDurationDelta",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyArcanaCommonPropertyAction",
+          "ArcanaProperty": "ShieldValue",
+          "Delta": "%AS_ShieldValueDelta",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CounterAttackModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Shield_Death_Attack_01",
+          "Target": "Caster"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Shield_Death_Attack_02",
+          "Target": "Caster"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDModifier_Attack",
+          "Target": "Caster"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CounterAttackModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ReduceDamageModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterAttackModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_CDIndicate",
+              "ParamType": "Integer",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnGetItem": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDModifier_Recover",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "IndicatorBuffModifier": {
+      "Buff": {
+        "BuffID": 500003,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IgnoreTimeScale": false
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": -10,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ResistBreakLevelModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SpecialEffectModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ResistBreakLevelModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ReduceDamageModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ResistBreakLevelModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 3,
+          "Tag": "Shield_Death",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Shield_Death",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShieldModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "ValueProtectShieldMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "ColliderType": "Sphere",
+            "SphereColliderRadius": 0.8
+          },
+          "DestroyRecoverTime": 99999,
+          "EffectTarget": "TeamAvatars",
+          "ProtectHitTypes": [
+            0,
+            1
+          ],
+          "ShieldCloseActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HitListenerModifier",
+              "Target": "Target"
+            }
+          ],
+          "ShieldEmptyActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Shield_Death_End",
+              "Target": "LocalAvatar"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ShieldModifier",
+              "Target": "Self"
+            }
+          ],
+          "ShieldOpenActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HitListenerModifier",
+              "Target": "Target"
+            }
+          ],
+          "ShieldStartActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Shield_Death_Start",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "ShieldTimesUpActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Shield_Death_End",
+              "Target": "LocalAvatar"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ShieldModifier",
+              "Target": "Self"
+            }
+          ],
+          "TotalDuration": -1,
+          "TotalValueConfig": {
+            "Amount": 100,
+            "Percentage": "%AS_ShieldValueRatio",
+            "PropertyType": "MaxEndurance"
+          }
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Bangboo_Eous001_Skill_Shield_Death",
+          "Target": "Self"
+        },
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": true,
+          "SkillNames": [
+            "Bangboo_Eous001_Skill_Shield_Death"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IndicatorBuffModifier",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": false,
+          "SkillNames": [
+            "Bangboo_Eous001_Skill_Shield_Death"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CDModifier_Attack",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "IndicatorBuffModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "SpecialEffectModifier": {
+      "Duration": "%AS_InternalCD_SpecialEffect",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Shield_Death_End",
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ShieldModifier",
+      "Target": "Self"
+    }
+  ]
+}

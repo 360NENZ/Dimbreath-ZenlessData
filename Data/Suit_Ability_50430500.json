@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Suit_Ability_50430500",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.12
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeRatioModifier_Suit_Ability_50430500",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageTakeRatioModifier_Suit_Ability_50430500": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  }
+}

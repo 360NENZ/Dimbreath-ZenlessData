@@ -1,0 +1,15 @@
+{
+  "AbilityName": "TarasqueMixer_DisarmTeam",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "Disarm"
+      ],
+      "CustomKey": "Mandrake_ATK01",
+      "IsAdd": true,
+      "Target": "Custom"
+    }
+  ]
+}

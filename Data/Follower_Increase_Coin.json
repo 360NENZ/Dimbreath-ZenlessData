@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Follower_Increase_Coin",
+  "AbilitySpecials": {
+    "AddedAbilityCoinAddRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "AbilityCoinAddRatio": "%AddedAbilityCoinAddRatio"
+    }
+  }
+}

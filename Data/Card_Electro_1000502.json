@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Card_Electro_1000502",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Electric",
+        "Params": [
+          {
+            "Name": "DamagePercentage",
+            "Ratio": "%AddedDamageRatio"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

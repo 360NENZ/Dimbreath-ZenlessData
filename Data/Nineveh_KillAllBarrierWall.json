@@ -1,0 +1,221 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "FadeOutEffectModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "StopIdleEffectModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "GlichDeathEffectModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "KillBarrierWallModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "Frame": 10,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_KillAllBarrierWall",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FadeOutEffectModifier": {
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_In_Smoke_02"
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_In_Smoke_01"
+          ],
+          "Target": "Custom"
+        }
+      ]
+    },
+    "GlichDeathEffectModifier": {
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_01_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_02_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_03_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_04_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_05_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_06_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_07_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_08_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_09_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_10_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_11_Glitch",
+          "Target": "Custom"
+        },
+        {
+          "$type": "FireEffect",
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "EffectPattern": "Eff_Device_Wall_EtherWall_01_Death_01_12_Glitch",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "KillBarrierWallModifier": {
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "StopIdleEffectModifier": {
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "Paths": [
+            "Device_Wall_EtherWall_01"
+          ],
+          "Tag": "Device_Wall_EtherWall_01",
+          "Target": "Custom",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "Paths": [
+            "Device_Wall_EtherWall_01"
+          ],
+          "Tag": "Device_Wall_EtherWall_01",
+          "Target": "Custom",
+          "Visible": false
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "CustomKey": "Monster_Nineveh_Wall_Inner",
+          "EffectNames": [
+            "Eff_Device_Wall_EtherWall_01_Idel_01_02_GlitchM"
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "CustomKey": "Monster_Nineveh_Wall_Outer",
+          "EffectNames": [
+            "Eff_Device_Wall_EtherWall_01_Idel_01_01_GlitchL"
+          ],
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

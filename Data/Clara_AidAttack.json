@@ -1,0 +1,349 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AidAttackMixin",
+      "AidAttackConditionList": [
+        {
+          "AidAttackTagList": [
+            {
+              "CloseDelayTime": 1.5,
+              "IsOnlyLocalAvatar": true,
+              "Tag": "AidAttack_HitFly"
+            }
+          ],
+          "OverrideParam": {
+            "IsMustOnBackstage": false,
+            "Priority": 10,
+            "SwitchInIndex": 30
+          },
+          "SwitchType": "BeHitAid"
+        },
+        {
+          "AidAttackTagList": [
+            {
+              "CloseDelayTime": 1.5,
+              "IsOnlyLocalAvatar": true,
+              "Tag": "AidAttack_Common"
+            }
+          ],
+          "OverrideParam": {
+            "IsMustOnBackstage": false,
+            "Priority": 1,
+            "SwitchInIndex": 30,
+            "SwitchInPosRot": {
+              "CoordsOption": "Relative",
+              "NeedRaycastGround": true,
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 3.0,
+                  "y": 0.0,
+                  "z": -3.0
+                },
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 3.0,
+                  "y": 0.0,
+                  "z": -3.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "OffsetReferTarget": "Target"
+              }
+            }
+          },
+          "SwitchType": "CommonAid"
+        },
+        {
+          "AidAttackTagList": [
+            {
+              "CheckIsInView": true,
+              "CheckIsInViewOnlyOpenWindow": true,
+              "CheckTargetRangeOnlyOpenWindow": true,
+              "CheckWitchTimeOnlyOpenWindow": false,
+              "CloseDelayTime": 0,
+              "DisableInWitchTime": true,
+              "Tag": "AidAttack_Parry_L",
+              "TagHolder": "EnemyAllied",
+              "TargetRange": 20
+            }
+          ],
+          "OverrideParam": {
+            "CheckOpenWindow": true,
+            "IsMustOnBackstage": true,
+            "LockTargetID": "Player_PerfectSwitchAidAttack_LockTarget_01",
+            "OnAidAttackBegin": [
+              {
+                "$type": "HandleAnimatorZoneTagsAction",
+                "AnimatorStateTags": [
+                  "AidAttack_Parry_L",
+                  "AidAttack_Parry_H",
+                  "AidAttack_Assault",
+                  "AidAttack_Evade",
+                  "AidAttack_Switch"
+                ],
+                "IsAdd": false,
+                "Target": "EnemyAllied"
+              },
+              {
+                "$type": "EnterParrySpecialModeAction",
+                "Target": "Self"
+              }
+            ],
+            "Priority": 3,
+            "SwitchInFadeTime": 0.05,
+            "SwitchInIndex": 50,
+            "SwitchInPosRot": {
+              "CoordsOption": "ReferTarget",
+              "NeedRaycastGround": true,
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 1.5,
+                  "y": 0.0,
+                  "z": -4.0
+                },
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 3
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "OffsetReferTarget": "Target"
+              }
+            },
+            "SwitchOutFadeTime": 0.1,
+            "SwitchOutIndex": 2
+          },
+          "SwitchType": "ParryAid"
+        },
+        {
+          "AidAttackTagList": [
+            {
+              "CheckIsInView": true,
+              "CheckIsInViewOnlyOpenWindow": true,
+              "CheckTargetRangeOnlyOpenWindow": true,
+              "CheckWitchTimeOnlyOpenWindow": false,
+              "CloseDelayTime": 0,
+              "DisableInWitchTime": true,
+              "Tag": "AidAttack_Parry_H",
+              "TagHolder": "EnemyAllied",
+              "TargetRange": 20
+            }
+          ],
+          "OverrideParam": {
+            "CheckOpenWindow": true,
+            "IsMustOnBackstage": true,
+            "LockTargetID": "Player_PerfectSwitchAidAttack_LockTarget_01",
+            "OnAidAttackBegin": [
+              {
+                "$type": "HandleAnimatorZoneTagsAction",
+                "AnimatorStateTags": [
+                  "AidAttack_Parry_L",
+                  "AidAttack_Parry_H",
+                  "AidAttack_Assault",
+                  "AidAttack_Evade",
+                  "AidAttack_Switch"
+                ],
+                "IsAdd": false,
+                "Target": "EnemyAllied"
+              },
+              {
+                "$type": "EnterParrySpecialModeAction",
+                "Target": "Self"
+              }
+            ],
+            "Priority": 3,
+            "SwitchInFadeTime": 0.05,
+            "SwitchInIndex": 51,
+            "SwitchInPosRot": {
+              "CoordsOption": "ReferTarget",
+              "NeedRaycastGround": true,
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 1.5,
+                  "y": 0.0,
+                  "z": -4.0
+                },
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 5
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "OffsetReferTarget": "Target"
+              }
+            },
+            "SwitchOutFadeTime": 0.1,
+            "SwitchOutIndex": 2
+          },
+          "SwitchType": "ParryAid"
+        },
+        {
+          "AidAttackTagList": [
+            {
+              "CheckIsInView": true,
+              "CheckIsInViewOnlyOpenWindow": true,
+              "CheckTargetRangeOnlyOpenWindow": true,
+              "CheckWitchTimeOnlyOpenWindow": false,
+              "CloseDelayTime": 0,
+              "DisableInWitchTime": true,
+              "Tag": "AidAttack_Switch",
+              "TagHolder": "EnemyAllied",
+              "TargetRange": 20
+            }
+          ],
+          "OverrideParam": {
+            "CheckOpenWindow": true,
+            "IsMustOnBackstage": true,
+            "LockTargetID": "Player_PerfectSwitchAidAttack_LockTarget_01",
+            "OnAidAttackBegin": [
+              {
+                "$type": "HandleAnimatorZoneTagsAction",
+                "AnimatorStateTags": [
+                  "AidAttack_Parry_L",
+                  "AidAttack_Parry_H",
+                  "AidAttack_Assault",
+                  "AidAttack_Evade",
+                  "AidAttack_Switch"
+                ],
+                "IsAdd": false,
+                "Target": "EnemyAllied"
+              },
+              {
+                "$type": "HandleAnimatorZoneTagsAction",
+                "AnimatorStateTags": [
+                  "SwitchAid"
+                ],
+                "IsAdd": true,
+                "Target": "Self"
+              }
+            ],
+            "Priority": 0,
+            "SwitchInFadeTime": 0.05,
+            "SwitchInIndex": 54,
+            "SwitchInPosRot": {
+              "CoordsOption": "ReferTarget",
+              "NeedRaycastGround": true,
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "BackupAngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "BackupPositionOffset": {
+                  "x": 1.5,
+                  "y": 0.0,
+                  "z": -4.0
+                },
+                "IsUseRotationXZ": false,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 2
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "OffsetReferTarget": "Target"
+              }
+            },
+            "SwitchOutFadeTime": 0.3,
+            "SwitchOutIndex": 2
+          },
+          "SwitchType": "NoEnergyPerfectSwitchAid"
+        }
+      ],
+      "DefaultParam": {
+        "IsMustOnBackstage": false,
+        "LockTargetID": "Player_Default_LockTarget_02_OnlyMonster",
+        "Priority": 1,
+        "SwitchInIndex": 30,
+        "SwitchInPosRot": {
+          "CoordsOption": "Relative",
+          "NeedRaycastGround": true,
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupPositionOffset": {
+              "x": 1.5,
+              "y": 0.0,
+              "z": -4.0
+            },
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 1.5,
+              "y": 0.0,
+              "z": -4.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "Self",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "SwitchOutIndex": -1
+      }
+    }
+  ],
+  "AbilityName": "Clara_AidAttack",
+  "AbilityStacking": "Unique"
+}

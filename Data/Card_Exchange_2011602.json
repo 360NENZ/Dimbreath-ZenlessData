@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Card_Exchange_2011602",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 0.45
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "ModifyPerfectSwitchPointAction",
+        "Amount": 1,
+        "ModifyFunction": "Add"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PropertyUpModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "RandomOperator",
+        "Odds": 1,
+        "OnSuccess": [
+          {
+            "$type": "ModifyPerfectSwitchPointAction",
+            "Amount": 1,
+            "ModifyFunction": "Add"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "PropertyUpModifier",
+            "Target": "Self"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PropertyUpModifier": {
+      "Duration": 12,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddDamageRatio"
+      }
+    }
+  }
+}

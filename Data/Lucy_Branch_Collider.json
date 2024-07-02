@@ -1,0 +1,79 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ColliderModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ColliderModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start_Short",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ColliderModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Branch_Collider",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushWallColliderEnable",
+        "ColliderName": [
+          "WallColliderBranch"
+        ],
+        "Tag": "WallColliderBranch_Default",
+        "Target": "Self",
+        "WallColliderEnable": false
+      }
+    ]
+  },
+  "Modifiers": {
+    "ColliderModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushWallColliderEnable",
+          "ColliderName": [
+            "WallColliderBranch"
+          ],
+          "Tag": "WallColliderBranch",
+          "Target": "Self",
+          "WallColliderEnable": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopWallColliderEnable",
+          "Tag": "WallColliderBranch",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

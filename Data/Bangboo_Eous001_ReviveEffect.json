@@ -1,0 +1,67 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Revive_SwitchIn",
+          "FrameCountLow": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Bangboo_Eous001_ReviveEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Bangboo_Eous001_ReviveEffect"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Bangboo_Eous001_ReviveEffect",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Bangboo_Eous001_ReviveEffect": {
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Bangboo_Common_MA_Revive_OverrideOutline_01_Revive",
+          "key": "Bangboo_Common_MA_Revive_OverrideOutline_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Bangboo_Common_MA_Revive_OverrideRimGlow_01_Revive",
+          "key": "Bangboo_Common_MA_Revive_OverrideRimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Bangboo_Common_MA_Revive_SecondaryEmission_01_Revive",
+          "key": "Bangboo_Common_MA_Revive_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Bangboo_Common_MA_Revive_OverrideOutline_01_Revive"
+        },
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Bangboo_Common_MA_Revive_OverrideRimGlow_01_Revive"
+        },
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Bangboo_Common_MA_Revive_SecondaryEmission_01_Revive"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Card_Blunt_2000702",
+  "AbilitySpecials": {
+    "AS_RecoverFever": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "RecoverFeverAction",
+        "Amount": 0,
+        "IgnoreRatio": false,
+        "Percentage": "%AS_RecoverFever",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

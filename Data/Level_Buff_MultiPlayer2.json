@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Level_Buff_MultiPlayer2",
+  "AbilitySpecials": {
+    "AS_FeverGetRatio": {
+      "Value": -0.3
+    },
+    "AS_SPGetRatio": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_FeverGetRatio": "%AS_FeverGetRatio",
+      "Actor_SPGetRatio": "%AS_SPGetRatio"
+    }
+  }
+}

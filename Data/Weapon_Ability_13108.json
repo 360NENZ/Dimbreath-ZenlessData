@@ -1,0 +1,71 @@
+{
+  "AbilityName": "Weapon_Ability_13108",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Physics": {
+      "Value": 0.2
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_Mark",
+        "Predicates": [
+          {
+            "$type": "ByDistance",
+            "CompareTarget": "Self",
+            "CompareType": "GreaterEqual",
+            "Distance": 6.0,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Normal"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackNormal",
+                  "Rush"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasModifier",
+            "ModifierCaster": "Caster",
+            "ModifierNameList": [
+              "AddedDamageRatioModifier_Mark"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio_Physics",
+        "PropertyValue": "%AS_AddedDamageRatio_Physics",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_Mark": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace"
+    }
+  }
+}

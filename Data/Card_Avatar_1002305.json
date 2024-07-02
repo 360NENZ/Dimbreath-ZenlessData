@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Avatar_1002305",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Card_1002305_DefenceUp_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAvatarProfessionType",
+            "ProfessionType": "Defense",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card_1002305_DefenceUp_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  }
+}

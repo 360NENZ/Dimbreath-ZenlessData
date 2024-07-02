@@ -1,0 +1,302 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 1,
+      "endFrame": 5,
+      "idx": 887151360,
+      "moveType": 0,
+      "pos": {
+        "x": 1.0,
+        "y": 4.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 1,
+      "endFrame": 11,
+      "idx": 557682176,
+      "moveType": 0,
+      "pos": {
+        "x": 4.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 8,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 1,
+      "endFrame": 23,
+      "idx": -447887232,
+      "moveType": 0,
+      "pos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 20,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 1,
+      "endFrame": 8,
+      "idx": 900512256,
+      "moveType": 0,
+      "pos": {
+        "x": 3.0,
+        "y": 2.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 5,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 1,
+      "endFrame": 14,
+      "idx": -1898356992,
+      "moveType": 0,
+      "pos": {
+        "x": 3.0,
+        "y": -2.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 11,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 1.0,
+            "inWeight": 0.0,
+            "outTangent": 1.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 1,
+      "endFrame": 20,
+      "idx": -152310528,
+      "moveType": 0,
+      "pos": {
+        "x": 1.0,
+        "y": -4.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 14,
+      "trackOrder": 0
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 30,
+  "frameRate": 20,
+  "loop": false,
+  "modelPath": "Assets/Cube.prefab",
+  "partLoop": false,
+  "seqName": "skill_hit",
+  "speedParams": {
+    "param1": 0,
+    "param2": 0
+  },
+  "topSpeed": 99.0,
+  "totalTime": 1.5,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Move",
+      "trackType": 1
+    }
+  ]
+}

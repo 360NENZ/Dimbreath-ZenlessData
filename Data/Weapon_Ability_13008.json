@@ -1,0 +1,123 @@
+{
+  "AbilityName": "Weapon_Ability_13008",
+  "AbilitySpecials": {
+    "AS_ElementMysteryDelta": {
+      "Value": 10.0
+    },
+    "AS_ElementMysteryDelta_Final": {
+      "Value": 0.0
+    },
+    "AS_ProviderCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddBuffModifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_ElementMysteryDelta": "%AS_ElementMysteryDelta_Final"
+      }
+    },
+    "AddBuffModifier_Provider": {
+      "Duration": -1,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)+1",
+          "ParamName": "AS_ProviderCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ElementMysteryDelta)*min(specials(AS_ProviderCount),4)",
+          "ParamName": "AS_ElementMysteryDelta_Final",
+          "Target": "Caster",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddBuffModifier_Effect",
+          "Target": "Caster"
+        }
+      ],
+      "OnKilled": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddBuffModifier_Provider",
+          "StackCount": 99,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)-1",
+          "ParamName": "AS_ProviderCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ElementMysteryDelta)*min(specials(AS_ProviderCount),4)",
+          "ParamName": "AS_ElementMysteryDelta_Final",
+          "Target": "Caster",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddBuffModifier_Effect",
+          "Target": "Caster"
+        }
+      ],
+      "OnStunCreateActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddBuffModifier_Provider",
+          "StackCount": 99,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddBuffModifier_Provider",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Electric",
+                "Overload",
+                "Strike",
+                "Erosion",
+                "Chaos"
+              ]
+            }
+          ],
+          "Target": "Other"
+        }
+      ]
+    }
+  }
+}

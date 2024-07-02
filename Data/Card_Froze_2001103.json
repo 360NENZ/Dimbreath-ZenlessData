@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Card_Froze_2001103",
+  "AbilitySpecials": {
+    "AS_CritDamageRatio": {
+      "Value": 0.6
+    },
+    "AS_Duration": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceToCritDamageUpModifier_Card_2001103",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IceToCritDamageUpModifier_Card_2001103": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CritDamageRatio"
+      }
+    }
+  }
+}

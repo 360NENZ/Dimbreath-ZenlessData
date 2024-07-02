@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Card_Toy_2002106",
+  "AbilitySpecials": {
+    "AS_CriticalDelta": {
+      "Value": 0.2
+    },
+    "AS_Duration": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CritUpModifier_Card_2002106",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CritUpModifier_Card_2002106": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CriticalDelta"
+      }
+    }
+  }
+}

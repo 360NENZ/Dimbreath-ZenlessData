@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Affix_FieldUnbreakable",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "FieldEnterActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Unbreakable",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "LocalAvatar"
+      }
+    ],
+    "FieldExitActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Unbreakable",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "LocalAvatar"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Unbreakable": {
+      "Buff": {
+        "BuffID": 122001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Lucy_Wood_ClearTrigger",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": false,
+      "ParamName": "Trigger_PressAttackA",
+      "ParamType": 1,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": false,
+      "ParamName": "Trigger_PressAttackB",
+      "ParamType": 1,
+      "Target": "Self"
+    }
+  ]
+}

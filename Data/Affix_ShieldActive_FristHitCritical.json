@@ -1,0 +1,33 @@
+{
+  "AbilityName": "Affix_ShieldActive_FristHitCritical",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "ShieldStartActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FirstHit",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FirstHit": {
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FirstHit"
+        }
+      ],
+      "Properties": {
+        "Actor_CriticalDelta": "%CriticalDelta"
+      }
+    }
+  }
+}

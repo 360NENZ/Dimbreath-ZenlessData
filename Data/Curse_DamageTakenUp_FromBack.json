@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Curse_DamageTakenUp_FromBack",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBeingHitPre": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHitAngleRange",
+            "AngleMax": 0,
+            "AngleMin": -180
+          }
+        ],
+        "PropertyKey": "Actor_DamageTakeRatio",
+        "PropertyValue": "%DamageTakeRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

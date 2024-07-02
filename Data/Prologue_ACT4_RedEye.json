@@ -1,0 +1,47 @@
+{
+  "AbilityName": "Prologue_ACT4_RedEye",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Prologue_ACT4_RedEyeModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Prologue_ACT4_RedEyeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Bangboo_Eous001_Eye"
+            }
+          ],
+          "Tag": "Prologue_ACT4_RedEye",
+          "Target": "Self",
+          "key": "Bangboo_Eous001_MA_ACT4_RedEye"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Bangboo_Eous001_Eye"
+            }
+          ],
+          "Tag": "Prologue_ACT4_RedEye_Emission",
+          "Target": "Self",
+          "key": "Bangboo_Eous001_MA_ACT4_RedEye_Emission"
+        }
+      ]
+    }
+  }
+}

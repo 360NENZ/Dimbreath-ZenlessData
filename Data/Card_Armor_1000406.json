@@ -1,0 +1,92 @@
+{
+  "AbilityName": "Card_Armor_1000406",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 5
+    },
+    "HpPercentage": {
+      "Value": 0.2
+    },
+    "RecoverPercentage": {
+      "Value": -0.2
+    },
+    "ShieldAmount": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpListenerModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BloodhandModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "CommonDefenseMaterial",
+              "Target": "Self",
+              "key": "Common_MA_Buff_Defence_RimGlow_01"
+            }
+          ],
+          "Duration": "%Duration",
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": "%RecoverPercentage",
+          "RemovedActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HpListenerModifier"
+            }
+          ],
+          "Tag": "BloodHand",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%ShieldAmount",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "HpListenerModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "IsUsePercentage": true,
+              "PropertyType": "CurHP",
+              "ReferMaxPropertyType": "MaxHP",
+              "ValueRangeActions": [
+                {
+                  "HighToValueActions": [
+                    {
+                      "$type": "ApplyModifier",
+                      "ModifierName": "BloodhandModifier"
+                    }
+                  ],
+                  "Val": "%HpPercentage"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

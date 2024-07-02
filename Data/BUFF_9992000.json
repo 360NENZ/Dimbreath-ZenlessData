@@ -1,0 +1,37 @@
+{
+  "AbilityName": "BUFF_9992000",
+  "AbilitySpecials": {
+    "hpRecoverRatio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "RecoverHPAction",
+        "Amount": 0,
+        "Percentage": "%hpRecoverRatio",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "AbilityName": "BUFF_SecKill_OnHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazu",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Target"
+            },
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_Hiisazu",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

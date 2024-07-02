@@ -1,0 +1,79 @@
+{
+  "AbilityName": "MaterialHandler_Ability_Attack_05",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_MaterialHandler_Attack_05_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_MaterialHandler_Attack_05_Attackproperty_01",
+              "Monster_MaterialHandler_Attack_05_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_MaterialHandler_Attack_05_Attackproperty_03",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_MaterialHandler_Attack_05_HitCount",
+            "StackCount": 4,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_MaterialHandler_Attack_05_Attackproperty_01",
+              "Monster_MaterialHandler_Attack_05_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_MaterialHandler_Attack_05_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_MaterialHandler_Attack_05_HitCount",
+            "StackCount": 4,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_MaterialHandler_Attack_05_Attackproperty_01",
+              "Monster_MaterialHandler_Attack_05_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 4,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_MaterialHandler_Attack_05_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

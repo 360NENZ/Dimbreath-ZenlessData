@@ -1,0 +1,40 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_1",
+          "IsLoop": true,
+          "LayerIndex": 3,
+          "ModifierNameList": [
+            "AudioModifer_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "RangeSoldier_Audio",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AudioModifer_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_RangeSoldier_Shoot_1"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Stop_SFX_Monster_Skill_RangeSoldier_Shoot_1"
+        }
+      ]
+    }
+  }
+}

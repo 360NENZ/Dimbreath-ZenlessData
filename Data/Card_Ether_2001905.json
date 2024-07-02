@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Card_Ether_2001905",
+  "AbilitySpecials": {},
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Ether_2001900",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Ether_2001900",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "AbilityName": "Weapon_Ability_14119",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.25
+    },
+    "AS_CriticalDelta_01": {
+      "Value": 0.1
+    },
+    "AS_CriticalDelta_02": {
+      "Value": 0.1
+    },
+    "AS_Duration_01": {
+      "Value": 8.0
+    },
+    "AS_Duration_02": {
+      "Value": 15.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDeltaModifier01",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Normal"
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDeltaModifier02",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Rush"
+            ]
+          },
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ice"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio_Ice": "%AS_AddedDamageRatio"
+      }
+    },
+    "CriticalDeltaModifier01": {
+      "Duration": "%AS_Duration_01",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CriticalDelta_01"
+      }
+    },
+    "CriticalDeltaModifier02": {
+      "Duration": "%AS_Duration_02",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CriticalDelta_02"
+      }
+    }
+  }
+}

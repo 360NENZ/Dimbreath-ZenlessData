@@ -1,0 +1,133 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_SkillMove",
+          "FrameCountHigh": 36,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MoveEffectModifier",
+            "MaterialPropertiesModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillStart",
+          "FrameCountHigh": 999,
+          "FrameCountLow": 147,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillAttack01",
+          "FrameCountHigh": 233,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_SkillAttack02",
+          "FrameCountHigh": 197,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01",
+            "MaterialPropertiesModifier02"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Bagboo_EffectManger",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertiesModifier01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Bangboo_Bagboo_Weapon1_LOD0"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Bangboo_Bagboo_Weapon_LOD0"
+            }
+          ],
+          "Tag": "Bagboo_Attack01",
+          "Target": "Self",
+          "key": "Bangboo_Bagboo_MA_Eff_Bangboo_Bagboo_Mat_01_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Bagboo_Attack01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertiesModifier02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Bangboo_Eyes_001_LOD0"
+            }
+          ],
+          "Tag": "Bagboo_Attack02",
+          "Target": "Self",
+          "key": "Bangboo_Bagboo_MA_Eff_Bangboo_Bagboo_Mat_02_SecondaryEmission_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Bagboo_Attack02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MoveEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Bagboo_SkillMove",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

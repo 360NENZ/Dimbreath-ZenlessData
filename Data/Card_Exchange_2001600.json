@@ -1,0 +1,115 @@
+{
+  "AbilityName": "Card_Exchange_2001600",
+  "AbilitySpecials": {
+    "AS_ExchageBuffCount": {
+      "Value": 0
+    },
+    "AS_Ratio": {
+      "Value": 0.1
+    },
+    "AS_TakeDamageRatioInStun": {
+      "Value": 0
+    },
+    "AddedIconCount": {
+      "Value": 0
+    },
+    "ExchangeBuffCountLimit": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnStunDestroyOtherActionsPre": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_Ratio)*specials(AS_ExchageBuffCount)",
+        "ParamName": "AS_TakeDamageRatioInStun",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TakeDamageUpModifier_Card_2001600",
+        "Target": "Target"
+      }
+    ],
+    "OnStunResetOtherActions": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_Ratio)*specials(AS_ExchageBuffCount)",
+        "ParamName": "AS_TakeDamageRatioInStun",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TakeDamageUpModifier_Card_2001600",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card_Exchange_2001600_Icon_Modifiers": {
+      "Buff": {
+        "BuffID": 3100081,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Multiple"
+    },
+    "StunDamageTakeRatioModifier_Properties_Card_2001600": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%AS_TakeDamageRatioInStun"
+      }
+    },
+    "TakeDamageUpModifier_Card_2001600": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunDamageTakeRatioModifier_Properties_Card_2001600",
+          "Target": "Self"
+        }
+      ],
+      "OnStunCreateActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "StunDamageTakeRatioModifier_Properties_Card_2001600",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TakeDamageUpModifier_Card_2001600",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": "%ExchangeBuffCountLimit",
+      "ParamName": "AS_ExchageBuffCount",
+      "ParamType": "Float",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Greater",
+          "Param": "%ExchangeBuffCountLimit",
+          "ParamName": "AS_ExchageBuffCount",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Card_Exchange_2001600_Icon_Modifiers",
+      "StackCount": "%AddedIconCount",
+      "Target": "Self"
+    }
+  ]
+}

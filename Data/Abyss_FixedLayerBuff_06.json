@@ -1,0 +1,51 @@
+{
+  "AbilityName": "Abyss_FixedLayerBuff_06",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Abyss_FixedLayerBuff_06_BaseAbility",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackQTE",
+              "NormalQTE"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Abyss_FixedLayerBuff_06_BaseAbility",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

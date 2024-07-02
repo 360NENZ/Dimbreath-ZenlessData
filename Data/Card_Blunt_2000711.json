@@ -1,0 +1,31 @@
+{
+  "AbilityName": "Card_Blunt_2000711",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": -0.5
+    },
+    "TimeOfDuration": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnStunCreateActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AtkDownBuff",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AtkDownBuff": {
+      "Duration": "%TimeOfDuration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    }
+  }
+}

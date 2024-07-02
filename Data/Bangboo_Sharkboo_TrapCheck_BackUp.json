@@ -1,0 +1,85 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 15,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.8
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Self",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": false,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 2,
+      "HitInterval": 0.0,
+      "HitOtherExplode": true,
+      "HitStageExplode": false,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 0,
+      "OnBulletHitTargetExplodeAction": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Attack",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "CreateSavePointAction",
+          "CustomKey": "AbilityTarget_Bangboo_Sharkboo",
+          "PointName": "Sharkboo_TrapPoint",
+          "Target": "Custom"
+        }
+      ],
+      "OnBulletTimeUpExplodeAction": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_TrapCheck_BackUp",
+  "AbilityStacking": "Unique"
+}

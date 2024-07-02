@@ -1,0 +1,284 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "ShotgunBullet",
+          "CustomReferMaxPropertyType": "ShotgunBulletMax",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BulletCountModifier_1",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "BulletCountModifier_1",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ResetBulletCDModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ResetBulletCDModifier"
+          ]
+        }
+      ],
+      "IsSeam": true
+    }
+  ],
+  "AbilityName": "ZhuYuan_BulletManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnPatternHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BulletRecoverModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByRecover1Condition"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 1,
+        "CustomPropertyType": "ShotgunBullet",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "Counter",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "BeHitAid",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "Custom"
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": 3,
+        "CustomPropertyType": "ShotgunBullet",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByRecover3Condition"
+          }
+        ],
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BulletConsumeModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": -1,
+          "CustomPropertyType": "ShotgunBullet",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "ZhuYuanHasBullet"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "BulletCountModifier_1": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuanHasBullet"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ZhuYuanHasBullet",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuanHasBullet"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_ZhuYuanHasBullet",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "BulletRecoverModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "ShotgunBullet",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "ResetBulletCDModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BulletRecoverModifier"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BulletConsumeModifier",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "ZhuYuanHasBullet"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ],
+  "Predicates": {
+    "ByRecover1Condition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "ZhuYuan_Attack_Normal_04_AttackProperty_01",
+            "ZhuYuan_Attack_Normal_04_AttackProperty_02",
+            "ZhuYuan_Attack_Normal_04_AttackProperty_03",
+            "ZhuYuan_Attack_Normal_04_AttackProperty_04",
+            "ZhuYuan_Attack_Normal_04_AttackProperty_05",
+            "ZhuYuan_Attack_Normal_05_AttackProperty_01",
+            "ZhuYuan_Attack_Normal_05_AttackProperty_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByRecover3Condition": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "AssaultAid",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

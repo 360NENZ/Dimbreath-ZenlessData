@@ -1,0 +1,151 @@
+{
+  "AbilityName": "Suit_Ability_50432400",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.15
+    },
+    "AS_BaseAttackRatio_Final": {
+      "Value": 0.0
+    },
+    "AS_ProviderCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio_Final"
+      }
+    },
+    "BuffModifier_Provider": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)+1",
+          "ParamName": "AS_ProviderCount",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio)*min(specials(AS_ProviderCount),1)",
+          "ParamName": "AS_BaseAttackRatio_Final",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Caster",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)-1",
+          "ParamName": "AS_ProviderCount",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Caster",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio)*min(specials(AS_ProviderCount),1)",
+          "ParamName": "AS_BaseAttackRatio_Final",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Caster",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "ListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BuffModifier_Provider",
+          "Target": "Other"
+        }
+      ]
+    }
+  }
+}

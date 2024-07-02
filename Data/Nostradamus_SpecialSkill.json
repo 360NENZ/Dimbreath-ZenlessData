@@ -1,0 +1,349 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": false,
+          "PropertyType": "CurSP",
+          "ReferMaxPropertyType": "MaxSP",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 80
+            },
+            {
+              "Val": 80,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillStartModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Fire",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillStartModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillStartModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Cancel",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillStartModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillStartModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Fire",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillStartModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ConsumeSPModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ConsumeSPModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Fire",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start_1",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start_2",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Cancel",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Fire",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ArrowModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetUIArrowAction",
+              "position": 60
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetUIArrowAction",
+              "position": 40
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 60,
+              "Percentage": 0
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Fire",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 11,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 60,
+              "Percentage": 0
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Cancel",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 8,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "DecreaseSPAction",
+              "Amount": 60,
+              "Percentage": 0
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ArrowModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Fire",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nostradamus_SpecialSkill",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetUIArrowAction",
+        "position": 80
+      }
+    ]
+  },
+  "Modifiers": {
+    "ArrowModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetUIArrowAction",
+          "position": 80
+        }
+      ]
+    },
+    "ConsumeSPModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothDecreaseSPMixin",
+          "PropertyItem": {
+            "Amount": 20,
+            "Percentage": 0
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "SkillStartModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Nostradamus_ExSp"
+        }
+      ]
+    }
+  }
+}

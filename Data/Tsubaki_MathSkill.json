@@ -1,0 +1,134 @@
+{
+  "AbilityName": "Tsubaki_MathSkill",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio_ExSP": {
+      "Value": 0.2
+    },
+    "AS_Actor_AddedDamageRatio_ExSP_Final": {
+      "Value": 0.0
+    },
+    "AS_CountIndex": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ExSPDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ExSp"
+            ]
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "ExSPDamageModifier"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ExSPDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "StrikeListenModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StrikeListenModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ExSPDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_Actor_AddedDamageRatio_ExSP)*min(specials(AS_CountIndex),2)",
+          "ParamName": "AS_Actor_AddedDamageRatio_ExSP_Final",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "0",
+          "ParamName": "AS_CountIndex",
+          "Target": "Self",
+          "ValueType": "Integer"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "ExSp"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_Actor_AddedDamageRatio_ExSP_Final",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StrikeListenModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_CountIndex)+1",
+          "ParamName": "AS_CountIndex",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Strike"
+              ]
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Integer"
+        }
+      ]
+    }
+  }
+}

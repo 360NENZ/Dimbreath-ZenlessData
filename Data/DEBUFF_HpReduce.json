@@ -1,0 +1,27 @@
+{
+  "AbilityName": "DEBUFF_HpReduce",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "DEBUFF_HpReduce_Real",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "DEBUFF_HpReduce",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1
+    }
+  }
+}

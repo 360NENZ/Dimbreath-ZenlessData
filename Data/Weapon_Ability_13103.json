@@ -1,0 +1,115 @@
+{
+  "AbilityName": "Weapon_Ability_13103",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.15
+    },
+    "AS_Duration": {
+      "Value": 2.0
+    },
+    "AS_SpRecoverDelta": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_Weapon_Ability_13103",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackSpecial",
+                  "ExSp"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "NormalQTE"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "ExQTE"
+                ]
+              }
+            ]
+          },
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackSpecial",
+                  "ExSp"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "NormalQTE"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "ExQTE"
+                ]
+              }
+            ]
+          },
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_Weapon_Ability_13103": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpRecoverDeltaModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_SpRecoverDelta": "%AS_SpRecoverDelta"
+      }
+    }
+  }
+}

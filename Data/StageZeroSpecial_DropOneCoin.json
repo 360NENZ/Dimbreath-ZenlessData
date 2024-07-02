@@ -1,0 +1,13 @@
+{
+  "AbilityName": "StageZeroSpecial_DropOneCoin",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "DropItemAction",
+        "DropStr": "2010:10000:1",
+        "Target": "Self"
+      }
+    ]
+  }
+}

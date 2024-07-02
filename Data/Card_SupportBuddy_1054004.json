@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_SupportBuddy_1054004",
+  "AbilitySpecials": {
+    "AS_SpRecoverRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_SpRecoverRatio": "%AS_SpRecoverRatio"
+    }
+  }
+}

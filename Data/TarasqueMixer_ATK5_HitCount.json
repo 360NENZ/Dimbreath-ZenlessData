@@ -1,0 +1,90 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "TarasqueMixer_ATK5_HitCount_Modifier",
+              "StackCount": 3,
+              "Target": "EnemyAllied"
+            }
+          ],
+          "AnimatorStateName": "Attack_5",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "TarasqueMixer_ATK5_HitCount",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TarasqueMixer_ATK5_HitCount_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_TarasqueMixer_ATK05_AttackProperty_Laser_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_TarasqueMixer_ATK05_AttackProperty_Laser_02",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "TarasqueMixer_ATK5_HitCount_Modifier",
+            "StackCount": 3,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_TarasqueMixer_ATK05_AttackProperty_Laser_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "TarasqueMixer_ATK5_HitCount_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_TarasqueMixer_ATK05_AttackProperty_Laser_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 3,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "TarasqueMixer_ATK5_HitCount_Modifier": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

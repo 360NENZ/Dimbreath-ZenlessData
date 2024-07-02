@@ -1,0 +1,145 @@
+{
+  "AbilityName": "Card_HighElement_Thunderbolt",
+  "AbilitySpecials": {
+    "AS_ThunderboltCoolDownTime": {
+      "Value": 10.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAbilityStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ControlModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ControlModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ThunderboltModifier",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "#HighElement_Thunderbolt",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ThunderboltCoolDownModifier",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ThunderboltCoolDownModifier": {
+      "Duration": "%AS_ThunderboltCoolDownTime",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ControlModifier",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ControlModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "ThunderboltModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Thunderbolt_S",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Thunderbolt_M",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Middle",
+              "CompareType": "Equal",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Thunderbolt_L",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Large",
+              "CompareType": "GreaterEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Common_MA_Thunderbolt_03",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Thunderbolt_03"
+        }
+      ]
+    }
+  }
+}

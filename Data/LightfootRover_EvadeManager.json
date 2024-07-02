@@ -1,0 +1,109 @@
+{
+  "AbilityName": "LightfootRover_EvadeManager",
+  "AbilitySpecials": {
+    "AS_EvadeProbability": {
+      "Value": 1.0,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnCustomEventReceived": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 1.0,
+        "ParamName": "AS_EvadeProbability",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "LightfootRover_InitEvadeManager"
+          }
+        ]
+      }
+    ]
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "RandomOperator",
+      "Odds": "%AS_EvadeProbability",
+      "OnSuccess": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "Less",
+              "Distance": 6
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByDistance",
+                  "CompareTarget": "SelfAttackTarget",
+                  "CompareType": "Less",
+                  "Distance": 12
+                }
+              ],
+              "FailureActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 14,
+                  "ParamName": "Int_AttackIndex",
+                  "ParamType": 3
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "RandomOperator",
+                  "Odds": 0.5,
+                  "OnFailure": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 13,
+                      "ParamName": "Int_AttackIndex",
+                      "ParamType": 3
+                    }
+                  ],
+                  "OnSuccess": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 12,
+                      "ParamName": "Int_AttackIndex",
+                      "ParamType": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 11,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3
+            }
+          ]
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": -0.5,
+          "ParamName": "AS_EvadeProbability",
+          "ParamType": "Float"
+        }
+      ]
+    }
+  ]
+}

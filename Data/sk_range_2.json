@@ -1,0 +1,178 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "axisInfos": [
+        {
+          "axis": 2,
+          "baseValue": 0.4,
+          "curve": {
+            "keys": [
+              {
+                "inTangent": -23.1730175,
+                "inWeight": 0.0,
+                "outTangent": -23.1730175,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": 0.0,
+                "value": 0.0,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -0.0270697586,
+                "inWeight": 0.333333343,
+                "outTangent": -0.0270697586,
+                "outWeight": 0.157570884,
+                "tangentMode": 0,
+                "time": 0.02178753,
+                "value": -0.5048828,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 0.0351081379,
+                "inWeight": 0.213685736,
+                "outTangent": 0.0351081379,
+                "outWeight": 1.0,
+                "tangentMode": 0,
+                "time": 0.383607656,
+                "value": -0.1211853,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -1.01109338,
+                "inWeight": 0.333333343,
+                "outTangent": -1.01109338,
+                "outWeight": 0.8101046,
+                "tangentMode": 0,
+                "time": 0.421266884,
+                "value": -0.4954497,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 1.52558,
+                "inWeight": 0.610902369,
+                "outTangent": 1.52558,
+                "outWeight": 0.333333343,
+                "tangentMode": 0,
+                "time": 0.500617,
+                "value": -0.4600731,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 0.307527363,
+                "inWeight": 0.3719376,
+                "outTangent": 0.307527363,
+                "outWeight": 0.333333343,
+                "tangentMode": 0,
+                "time": 0.728667557,
+                "value": -0.124645919,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -2.30316949,
+                "inWeight": 0.333333343,
+                "outTangent": -2.30316949,
+                "outWeight": 0.163078129,
+                "tangentMode": 0,
+                "time": 0.7433069,
+                "value": -0.476962954,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 1.79825366,
+                "inWeight": 0.333333343,
+                "outTangent": 1.79825366,
+                "outWeight": 0.0,
+                "tangentMode": 34,
+                "time": 1.00472569,
+                "value": -0.006865604,
+                "weightedMode": 0
+              }
+            ],
+            "length": 8,
+            "postWrapMode": 8,
+            "preWrapMode": 8
+          },
+          "param": {
+            "param1": 0,
+            "param2": 0
+          }
+        }
+      ],
+      "brakeDestroy": false,
+      "effectType": 1,
+      "endFrame": 15,
+      "idx": -1750591232,
+      "moveType": 1,
+      "pos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "bullet": 0,
+      "effectType": 5,
+      "endFrame": 3,
+      "idx": 1102534272,
+      "startFrame": 1,
+      "trackOrder": 1
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "bullet": 0,
+      "effectType": 5,
+      "endFrame": 9,
+      "idx": 1885087232,
+      "startFrame": 6,
+      "trackOrder": 1
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "bullet": 0,
+      "effectType": 5,
+      "endFrame": 13,
+      "idx": 1765126144,
+      "startFrame": 11,
+      "trackOrder": 1
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 15,
+  "frameRate": 40,
+  "loop": false,
+  "modelPath": "Assets/Scenes/Stage_SkyScraper/DemoMesh/Cube_059_Cube_028.fbx",
+  "partLoop": false,
+  "seqName": "sk_range_2",
+  "speedParams": {
+    "param1": 0,
+    "param2": 100000
+  },
+  "topSpeed": 99.0,
+  "totalTime": 0.375,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Position",
+      "trackType": 1
+    },
+    {
+      "order": 1,
+      "trackID": 2,
+      "trackName": "子弹",
+      "trackType": 5
+    }
+  ]
+}

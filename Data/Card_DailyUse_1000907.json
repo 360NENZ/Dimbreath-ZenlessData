@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Card_DailyUse_1000907",
+  "AbilitySpecials": {
+    "AddedDamageRatio_1": {
+      "Value": 0.04
+    },
+    "AddedDamageRatio_2": {
+      "Value": 0.08
+    },
+    "AddedDamageRatio_3": {
+      "Value": 0.12
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 3
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio_3",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 2
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio_2",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 1
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio_1",
+        "Target": "Self"
+      }
+    ]
+  }
+}

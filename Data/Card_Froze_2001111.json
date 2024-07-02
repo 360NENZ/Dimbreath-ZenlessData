@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Froze_2001111",
+  "AbilitySpecials": {
+    "AS_IceDamageRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio_Ice": "%AS_IceDamageRatio"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "AbilityName": "Card_Chessboard_1001019",
+  "AbilitySpecials": {
+    "AddedDamage": {
+      "Value": 0
+    },
+    "AddedDamageRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AddedDamageRatio)",
+        "ParamName": "AddedDamage",
+        "ValueType": "Float"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamage",
+        "Target": "Self"
+      }
+    ]
+  }
+}

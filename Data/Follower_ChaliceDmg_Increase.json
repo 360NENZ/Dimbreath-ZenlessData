@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Follower_ChaliceDmg_Increase",
+  "AbilitySpecials": {
+    "ChaliceDamageRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "ChaliceDamageRatio": "%ChaliceDamageRatio"
+    }
+  }
+}

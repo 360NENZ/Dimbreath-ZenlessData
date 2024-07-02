@@ -1,0 +1,50 @@
+{
+  "AbilityName": "Follower_TimeSpan_IncreaseAttack",
+  "AbilitySpecials": {
+    "Dynamic_Actor_AddedAttackRatio": {
+      "Value": 2
+    },
+    "Dynamic_Timespan": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IncreaseAttackModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IncreaseAttackModifier": {
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%Dynamic_Actor_AddedAttackRatio"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TimeCheckModifier"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "IncreaseAttackModifier"
+        }
+      ]
+    },
+    "TimeCheckModifier": {
+      "Duration": "%Dynamic_Timespan",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IncreaseAttackModifier"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Card_Electro_2000503",
+  "AbilitySpecials": {
+    "AS_AddedElecDamage": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Electro_2000500",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AddedElecDamage",
+                "ParamName": "AS_ElecDamageUpBy503",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

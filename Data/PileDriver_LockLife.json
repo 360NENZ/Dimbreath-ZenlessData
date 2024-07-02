@@ -1,0 +1,36 @@
+{
+  "AbilityName": "PileDriver_LockLife",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PileDriver_LockLife_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PileDriver_LockLife_01": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "PileDriver_LockLife_01"
+    }
+  ]
+}

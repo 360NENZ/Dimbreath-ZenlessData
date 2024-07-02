@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Card_Electro_1000507",
+  "AbilitySpecials": {
+    "CDTime": {
+      "Value": 1
+    },
+    "SPRecoverDelta": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverSP",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Electric"
+            ],
+            "Target": "Target"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "RecoverSP": {
+      "Duration": "%CDTime",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%SPRecoverDelta",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

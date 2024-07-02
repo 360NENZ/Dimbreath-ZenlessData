@@ -1,0 +1,154 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "RefPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "ParamName": "Bool_UseCoAttack03",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Hard"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                  "ParamName": "Bool_UseCoAttack03",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Hard"
+                      ]
+                    }
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Val": 0.9
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "ParamName": "Bool_UseCoAttack03",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Eazy"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                  "ParamName": "Bool_UseCoAttack03",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Eazy"
+                      ]
+                    }
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Val": 0.8
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "ParamName": "Bool_UseCoAttack04",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Hard"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                  "ParamName": "Bool_UseCoAttack04",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Hard"
+                      ]
+                    }
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Val": 0.6
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "ParamName": "Bool_UseCoAttack04",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Eazy"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                  "ParamName": "Bool_UseCoAttack04",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Eazy"
+                      ]
+                    }
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Val": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_SpecialAttackTrigger",
+  "AbilityStacking": "Unique"
+}

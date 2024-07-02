@@ -1,0 +1,166 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Evade_Front",
+          "FrameCountHigh": 13,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DodgeDummyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Back",
+          "FrameCountHigh": 13,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DodgeDummyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_01",
+          "FrameCountHigh": 21,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DodgeDummyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_02",
+          "FrameCountHigh": 21,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DodgeDummyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_03",
+          "FrameCountHigh": 21,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DodgeDummyModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_DodgeDummy",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AidInvincibleManagerModifier": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Dash_Loop_01",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": true,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "AidInvincibleModifier"
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AidInvincibleModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AidInvincibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Ellen_AidAttack_Dash_Invincible",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Ellen_AidAttack_Dash_Invincible",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DodgeDummyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ActiveDodgeDummyAction",
+          "EnableDodge": true,
+          "IsOverrideDuration": true,
+          "OverrideDuration": 0.4,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "SwitchAid"
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ActiveDodgeDummyAction",
+          "EnableDodge": false,
+          "IsOverrideDuration": false,
+          "OverrideDuration": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AidInvincibleManagerModifier",
+      "Target": "Self"
+    }
+  ]
+}

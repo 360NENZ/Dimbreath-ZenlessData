@@ -1,0 +1,28 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "test_innerworld",
+  "Plugin": [
+    {
+      "$type": "CInnerWorldPluginConfig",
+      "BackgroundBrightnessDiffusion": "Innerworld",
+      "ItemIDCanUse": [
+        400029
+      ],
+      "NoInteractEventEffect": "InteractionDisable_TV",
+      "TarotCardIDCanUse": []
+    },
+    {
+      "$type": "COverwriteGridStateTextureConfig",
+      "FinishTexture": [
+        "EventIcon_InnerPath"
+      ],
+      "PathTexture": [
+        "EventIcon_InnerPath"
+      ]
+    },
+    {
+      "$type": "CHollowFilterPluginConfig",
+      "FilterName": "Innerworld"
+    }
+  ]
+}

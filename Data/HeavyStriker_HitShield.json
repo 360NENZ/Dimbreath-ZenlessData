@@ -1,0 +1,37 @@
+{
+  "AbilityName": "HeavyStriker_HitShield",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": false,
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "ShieldOpen"
+            ]
+          }
+        ],
+        "RendererList": [
+          {
+            "ApplyAllMaterials": true,
+            "RenderPath": "Monster_HeavyStriker_03"
+          },
+          {
+            "ApplyAllMaterials": true,
+            "RenderPath": "Monster_HeavyStriker_03L"
+          },
+          {
+            "ApplyAllMaterials": true,
+            "RenderPath": "Monster_HeavyStriker_03R"
+          }
+        ],
+        "Tag": "Monster_HeavyStriker_MA_Transform_Override2Tone_05",
+        "Target": "Self",
+        "key": "Monster_HeavyStriker_MA_Transform_Override2Tone_05"
+      }
+    ]
+  }
+}

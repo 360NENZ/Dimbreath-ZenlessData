@@ -1,0 +1,99 @@
+{
+  "AbilityName": "Nostradamus_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddSP": {
+      "Value": 5
+    },
+    "AS_CDDuration": {
+      "Value": 15.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NosTalent02RecoverSPModifier",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "NosTalent02RecoverSPModifier": {
+      "Duration": "%AS_CDDuration",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_AddSP",
+          "Percentage": 0
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Nostradamus_Attack_Branch_01_AttackProperty_02",
+            "Nostradamus_Attack_Branch_01_Explosion_AttackProperty_01",
+            "Nostradamus_Attack_Branch_02_AttackProperty_02",
+            "Nostradamus_Attack_Branch_02_Explosion_AttackProperty_01",
+            "Nostradamus_Attack_Branch_02_Explosion_AttackProperty_02",
+            "Nostradamus_Attack_QTE_Explosion_AttackProperty_01",
+            "Nostradamus_Attack_SwitchIn_Attack_Ex_Explosion_AttackProperty_01",
+            "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Normal_01_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Normal_02_Enhance_Bullet_AttackProperty_04",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_04",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_05",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_06",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_07",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_08",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_09",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_10",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_11",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_12",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_13",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_14",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_15",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_16",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_17",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_18",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_19",
+            "Nostradamus_Attack_Normal_03_Enhance_Bullet_AttackProperty_20",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_01",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_02",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_03",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_04",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_05",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_06",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_07",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_08",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_09",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_10",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_11",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_12",
+            "Nostradamus_Attack_Rush_Enhance_Bullet_AttackProperty_13"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

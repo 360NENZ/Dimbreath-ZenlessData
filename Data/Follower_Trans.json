@@ -1,0 +1,86 @@
+{
+  "AbilityName": "Follower_Trans",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ChangeModelModifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TransModelAction",
+          "TransPrefabPath": "%TransPrefabPath"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Follower_Trans_Start",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_SelfDestruction",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ProcessSkillBtnCtrlModifier"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_ShowUp",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ProcessSkillBtnCtrlModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessSkillBtnControlAction",
+          "BtnIndex": "%BtnIndex"
+        },
+        {
+          "$type": "SetFollowerInvisibleAction",
+          "IsInvisible": false
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Follower_Trans_Start",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ProcessSkillBtnCtrlModifier",
+      "Predicates": [
+        {
+          "$type": "ByModelPath",
+          "CompareType": "Equal",
+          "ModelPath": "%TransPrefabPath",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ChangeModelModifier",
+      "Predicates": [
+        {
+          "$type": "ByModelPath",
+          "CompareType": "NotEqual",
+          "ModelPath": "%TransPrefabPath",
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

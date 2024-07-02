@@ -1,0 +1,16 @@
+{
+  "AbilityName": "Ability_Card_Leangle_7",
+  "AbilitySpecials": {
+    "LeangleDamageRatio": {
+      "Op": "Add",
+      "OpValue": 0.04,
+      "Value": 0.04
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "LeangleDamageRatio": "%LeangleDamageRatio"
+    }
+  }
+}

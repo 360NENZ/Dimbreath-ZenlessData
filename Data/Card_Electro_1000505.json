@@ -1,0 +1,174 @@
+{
+  "AbilityName": "Card_Electro_1000505",
+  "AbilitySpecials": {
+    "DELTA": {
+      "Value": 1
+    },
+    "Duration": {
+      "Value": 10
+    },
+    "Duration1": {
+      "Value": 14
+    },
+    "Duration2": {
+      "Value": 10
+    },
+    "Duration3": {
+      "Value": 7
+    },
+    "GenreNum_Electric": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "item(1000501)+item(1000502)+item(1000503)+item(1000504)+item(1000505)+item(1000506)+item(1000507)+item(1000508)",
+        "ParamName": "GenreNum_Electric",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%Duration1",
+        "ParamName": "Duration",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 3,
+            "ParamName": "GenreNum_Electric",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%Duration2",
+        "ParamName": "Duration",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 5,
+            "ParamName": "GenreNum_Electric",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%Duration3",
+        "ParamName": "Duration",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 7,
+            "ParamName": "GenreNum_Electric",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Elc_AddBuff",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 3,
+            "ParamName": "GenreNum_Electric",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "Properties": {
+      "AnimEventBuffOddsDelta_Electric": "%DELTA"
+    }
+  },
+  "Modifiers": {
+    "Elc_AddBuff": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOtherPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Interval",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Elc_AddBuff",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Interval": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Replace",
+      "OnBuffAddToOther": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "DoRefresh": true,
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "DELTA",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric"
+              ],
+              "Target": "Target"
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "DoRefresh": true,
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "DELTA",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Elc_AddBuff",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

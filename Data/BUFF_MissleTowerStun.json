@@ -1,0 +1,67 @@
+{
+  "AbilityName": "BUFF_MissleTowerStun",
+  "AbilitySpecials": {
+    "BreakStunTake_Ratio": {
+      "Value": 2.0
+    },
+    "HpPercentage": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_MissleTowerStun": {
+      "Duration": 5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "LPG_MissileTowerBuff_Search",
+          "ModifierName": "MissleDamage_StunMax",
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "BUFF_MissleTowerStun",
+          "Target": "Self"
+        }
+      ]
+    },
+    "MissleDamage_StunMax": {
+      "Duration": 45,
+      "ModifierStacking": "Unique",
+      "OnDamageCalculated": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_BreakStunDelta",
+          "PropertyValue": 1000,
+          "Target": "Target"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_MissleTowerStun",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Avatar_LevelUp_01",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ShowTipAction",
+      "ShowPage": 0,
+      "Target": "Self",
+      "TipID": 301108
+    }
+  ]
+}

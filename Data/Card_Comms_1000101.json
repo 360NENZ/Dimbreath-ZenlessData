@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Card_Comms_1000101",
+  "AbilitySpecials": {
+    "SPRecover": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%SPRecover",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

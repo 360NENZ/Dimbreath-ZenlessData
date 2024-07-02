@@ -1,0 +1,44 @@
+{
+  "AbilityName": "Affix_CannonReduceCD_ByKillOrStun",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ConnonReduceCD_ByKillOrStun",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ConnonReduceCD_ByKillOrStun": {
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "ModifySkillTypeCDAction",
+          "Predicates": [
+            {
+              "$type": "ByHitResult",
+              "HitResult": "Dead"
+            }
+          ],
+          "Ratio": -0.5,
+          "SkillType": "Cannon",
+          "Target": "Buddy"
+        },
+        {
+          "$type": "ModifySkillTypeCDAction",
+          "Predicates": [
+            {
+              "$type": "ByHitResult",
+              "HitResult": "Stun"
+            }
+          ],
+          "Ratio": -0.5,
+          "SkillType": "Cannon",
+          "Target": "Buddy"
+        }
+      ]
+    }
+  }
+}

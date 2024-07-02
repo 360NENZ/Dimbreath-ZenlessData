@@ -1,0 +1,188 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 0.1,
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ClickingModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_03",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_05",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Rush",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Counter",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_BeHitAid",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "SwitchIn_Attack",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "SwitchIn_Attack_Landed",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "SwitchIn_Attack_Ex",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_AssaultAid",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 0
+        },
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 0.1,
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ClickingModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Branch_01",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Branch_02",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Branch_02_Loop",
+                          "IsLoop": true,
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Branch_02_Walk",
+                          "IsLoop": true,
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_AssaultAid",
+                          "LayerIndex": 0,
+                          "NormalizedTimeHigh": 1.0,
+                          "NormalizedTimeLow": 0.0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 5
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Corin_Clicking",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ClickingModifier": {
+      "Duration": 0.2667,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Bool_IsClicking",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Bool_IsClicking",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ClickingModifier"
+    }
+  ]
+}

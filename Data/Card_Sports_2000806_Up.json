@@ -1,0 +1,102 @@
+{
+  "AbilityName": "Card_Sports_2000806_Up",
+  "AbilitySpecials": {},
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RushAttackToCounterAttack",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Sports_2000800",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CounterAttackToTrigger_2000800Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnSkillStart": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Sports_2000800",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CounterAttackToTrigger_2000800Modifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RushAttackToCounterAttack": {
+      "Block": 3,
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TriggerModifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Evade",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_Sports_2000806_Up",
+          "IsOpenBlock": true,
+          "ModifierName": "RushAttackToCounterAttack",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter",
+              "Target": "LocalAvatar"
+            }
+          ]
+        }
+      ]
+    },
+    "TriggerModifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PerfectEvade",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterAttackToTrigger_2000800Modifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

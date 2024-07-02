@@ -1,0 +1,319 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_01_01",
+          "FrameCountHigh": 47,
+          "FrameCountLow": 17,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LightParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_01",
+          "FrameCountHigh": 81,
+          "FrameCountLow": 51,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LightParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_02",
+          "FrameCountHigh": 62,
+          "FrameCountLow": 32,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LightParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_01_Start",
+          "FrameCountHigh": 153,
+          "FrameCountLow": 62,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LightParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_01",
+          "FrameCountHigh": 12,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LightParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ahriman_AidTriggerControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AssaultPriorityAddModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Assault": 1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Assault": 0
+        }
+      ]
+    },
+    "AssaultTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Assault"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Assault"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "EvadePriorityAddModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Evade": 1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Evade": 0
+        }
+      ]
+    },
+    "EvadeTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Evade"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Evade"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Ether_Core",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Ether_Core",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HeavyParryTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_H",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_H",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightParryTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_L",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_L",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryPriorityAddModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Parry": 1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Parry": 0
+        }
+      ]
+    },
+    "ParryTypeContral_Left": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_ParryType",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryTypeContral_Right": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_ParryType",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SwitchTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Switch"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Switch"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

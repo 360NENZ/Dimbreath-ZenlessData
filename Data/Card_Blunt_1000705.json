@@ -1,0 +1,60 @@
+{
+  "AbilityName": "Card_Blunt_1000705",
+  "AbilitySpecials": {
+    "ExSpAmount": {
+      "Value": 5
+    },
+    "QTEAmount": {
+      "Value": 5
+    },
+    "StunAmount": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ModifyTeamFeverAction",
+        "Amount": "%QTEAmount",
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "ModifyTeamFeverAction",
+        "Amount": "%ExSpAmount",
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExSp",
+                "Target": "Self"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ModifyTeamFeverAction",
+        "Amount": "%StunAmount",
+        "ModifyFunction": "Add"
+      }
+    ]
+  }
+}

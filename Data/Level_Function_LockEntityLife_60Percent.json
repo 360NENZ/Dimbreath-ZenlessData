@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Level_Function_LockEntityLife_60Percent",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Level_Function_LockEntityLife_60Percent",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Level_Function_LockEntityLife_60Percent": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.6
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "Level_Function_LockEntityLife_60Percent"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "ReferMaxPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "Val": 0.5,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "HpController",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "HpController",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Card_Medical_1000601",
+  "AbilitySpecials": {
+    "AddedDamageRatio_1000606": {
+      "Value": 0.45
+    },
+    "AddedDamageRatio_1000607": {
+      "Value": 0.3
+    },
+    "HpPercentage_1000602": {
+      "Value": 0.015
+    },
+    "HpPercentage_1000605": {
+      "Value": 0.375
+    },
+    "Ratio_1000604": {
+      "Value": 0.75
+    },
+    "TakeRatio_1000603": {
+      "Value": -0.018
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HpController": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ListenAbilityMixin",
+          "AbilityName": "Card_Medical_1000602",
+          "OnListenAbilityAdded": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "DoRefresh": true,
+              "Params": [
+                {
+                  "AbilityName": "Card_Medical_1000602",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "HpPercentage_1000602",
+                      "ParamName": "HpPercentage",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Targetting": "Self"
+        },
+        {
+          "$type": "ListenAbilityMixin",
+          "AbilityName": "Card_Medical_1000603",
+          "OnListenAbilityAdded": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "DoRefresh": true,
+              "Params": [
+                {
+                  "AbilityName": "Card_Medical_1000603",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "TakeRatio_1000603",
+                      "ParamName": "TakeRatio",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Targetting": "Self"
+        },
+        {
+          "$type": "ListenAbilityMixin",
+          "AbilityName": "Card_Medical_1000604",
+          "OnListenAbilityAdded": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "DoRefresh": true,
+              "Params": [
+                {
+                  "AbilityName": "Card_Medical_1000604",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "Ratio_1000604",
+                      "ParamName": "Ratio",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Targetting": "Self"
+        },
+        {
+          "$type": "ListenAbilityMixin",
+          "AbilityName": "Card_Medical_1000605",
+          "OnListenAbilityAdded": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "DoRefresh": true,
+              "Params": [
+                {
+                  "AbilityName": "Card_Medical_1000605",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "HpPercentage_1000605",
+                      "ParamName": "HpPercentage",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Targetting": "Self"
+        },
+        {
+          "$type": "ListenAbilityMixin",
+          "AbilityName": "Card_Medical_1000606",
+          "OnListenAbilityAdded": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "DoRefresh": true,
+              "Params": [
+                {
+                  "AbilityName": "Card_Medical_1000606",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "AddedDamageRatio_1000606",
+                      "ParamName": "AddedDamageRatio",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Targetting": "Self"
+        },
+        {
+          "$type": "ListenAbilityMixin",
+          "AbilityName": "Card_Medical_1000607",
+          "OnListenAbilityAdded": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "DoRefresh": true,
+              "Params": [
+                {
+                  "AbilityName": "Card_Medical_1000607",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "AddedDamageRatio_1000607",
+                      "ParamName": "AddedDamageRatio",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Targetting": "Self"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

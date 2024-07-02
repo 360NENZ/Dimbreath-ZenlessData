@@ -1,0 +1,152 @@
+{
+  "AbilityName": "VR_SmallBoss_ThugBulkyEnforcerBOSS",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio": {
+      "Value": 0.05
+    },
+    "AS_BuffMaxStack": {
+      "Value": 5
+    },
+    "AS_MAShowStack": {
+      "Value": 5
+    },
+    "AS_MaxDamageRatio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_BuffMaxStack)/2",
+        "ParamName": "AS_MAShowStack",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WarmUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillID",
+                "SkillID": "Monster_ThugBulkyEnforcer_ATK1"
+              },
+              {
+                "$type": "ByFromSkillID",
+                "SkillID": "Monster_ThugBulkyEnforcer_ATK2"
+              },
+              {
+                "$type": "ByFromSkillID",
+                "SkillID": "Monster_ThugBulkyEnforcer_ATK3"
+              },
+              {
+                "$type": "ByFromSkillID",
+                "SkillID": "Monster_ThugBulkyEnforcer_ATK4"
+              },
+              {
+                "$type": "ByFromSkillID",
+                "SkillID": "Monster_ThugBulkyEnforcer_ATK5"
+              }
+            ]
+          },
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Less",
+            "ModifierName": "WarmUpModifier",
+            "StackCount": "%AS_BuffMaxStack"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnStunDestroyActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "WarmUpModifier",
+        "StackCount": 99
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "MAModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MAModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_SecondaryEmission"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Buff_Hit"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self"
+        }
+      ]
+    },
+    "WarmUpModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 99,
+      "ModifierStacking": "MultipleAllRefresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MAModifier",
+          "Predicates": [
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Greater",
+              "ModifierName": "WarmUpModifier",
+              "StackCount": "%AS_MAShowStack"
+            }
+          ]
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Buff_Hit"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_Actor_AddedDamageRatio"
+      }
+    }
+  }
+}

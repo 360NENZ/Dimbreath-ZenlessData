@@ -1,0 +1,267 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "ParamName": "Bool_IsBreakDown",
+              "ParamType": 2,
+              "Target": "Custom"
+            },
+            {
+              "$type": "RecoverHPAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_RecoverHP_Ratio_01",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "ReviveTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            },
+            {
+              "$type": "RecoverHPAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_RecoverHP_Ratio_02",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "ReviveTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            },
+            {
+              "$type": "RecoverHPAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_RecoverHP_Ratio_03",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 2,
+                  "ParamName": "ReviveTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            },
+            {
+              "$type": "DecreaseStunAction",
+              "Amount": 0,
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_DecreaseStun_Ratio",
+              "Target": "Custom"
+            },
+            {
+              "$type": "RemoveAbilityAction",
+              "AbilityName": "LampasBlackVeil_LockLife",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Target": "Custom"
+            },
+            {
+              "$type": "ApplyAbilityAction",
+              "AbilityName": "LampasBlackVeil_LockLife",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(ReviveTime)+1",
+              "ParamName": "ReviveTime",
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Params": [
+                {
+                  "AbilityName": "LampasBlackVeil_ReviveControl",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "%ReviveTime",
+                      "ParamName": "ReviveTime",
+                      "ParamType": "Integer"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Revive_01",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 420,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "ParamName": "Bool_IsBreakDown",
+              "ParamType": 2,
+              "Target": "Custom"
+            },
+            {
+              "$type": "RecoverHPAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_RecoverHP_Ratio_01",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "ReviveTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            },
+            {
+              "$type": "RecoverHPAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_RecoverHP_Ratio_02",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "ReviveTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            },
+            {
+              "$type": "RecoverHPAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_RecoverHP_Ratio_03",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 2,
+                  "ParamName": "ReviveTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Custom"
+            },
+            {
+              "$type": "DecreaseStunAction",
+              "Amount": 0,
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Percentage": "%AS_DecreaseStun_Ratio",
+              "Target": "Custom"
+            },
+            {
+              "$type": "RemoveAbilityAction",
+              "AbilityName": "LampasBlackVeil_LockLife",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Target": "Custom"
+            },
+            {
+              "$type": "ApplyAbilityAction",
+              "AbilityName": "LampasBlackVeil_LockLife",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(ReviveTime)+1",
+              "ParamName": "ReviveTime",
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "Params": [
+                {
+                  "AbilityName": "LampasBlackVeil_ReviveControl",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": "%ReviveTime",
+                      "ParamName": "ReviveTime",
+                      "ParamType": "Integer"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Revive_02",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 60,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_ReviveControl",
+  "AbilitySpecials": {
+    "AS_DecreaseStun_Ratio": {
+      "Value": 0.5
+    },
+    "AS_RecoverHP_Ratio_01": {
+      "Value": 0.5
+    },
+    "AS_RecoverHP_Ratio_02": {
+      "Value": 0.5
+    },
+    "AS_RecoverHP_Ratio_03": {
+      "Value": 0.5
+    },
+    "ReviveTime": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "LampasBlackVeil_LockLife",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Lampas_CoAttack"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

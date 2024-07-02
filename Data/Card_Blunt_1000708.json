@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Card_Blunt_1000708",
+  "AbilitySpecials": {
+    "FeverRate": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyTeamFeverAction",
+        "ModifyFunction": "Add",
+        "Percent": "%FeverRate",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

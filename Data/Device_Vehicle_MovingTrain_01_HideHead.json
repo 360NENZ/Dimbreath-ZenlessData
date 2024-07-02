@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Device_Vehicle_MovingTrain_01_HideHead",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushRenderVisibleAction",
+        "Paths": [
+          "Train_01_Head"
+        ],
+        "Tag": "MovingTrain_01_HideHead",
+        "Visible": false
+      },
+      {
+        "$type": "PushAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "MovingTrain_HideHead"
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "PushWallColliderEnable",
+        "ColliderName": [
+          "WallCollider_Front"
+        ],
+        "Tag": "MovingTrain_01_HideHead_Collider",
+        "Target": "Self",
+        "WallColliderEnable": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Level_ElementAbnormalAdded_Disorder",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffAddToOtherModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Disorder"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffAddedModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Disorder"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffAddToOtherModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "TeachLevel_ElementAbormal_Disorder"
+        }
+      ]
+    },
+    "BuffAddedModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "TeachLevel_ElementAbormal_Disorder"
+        }
+      ]
+    }
+  }
+}

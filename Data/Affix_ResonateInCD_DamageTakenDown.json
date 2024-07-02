@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Affix_ResonateInCD_DamageTakenDown",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ResonateInCD_DamageTakenDown",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ResonateInCD_DamageTakenDown": {
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "BySkillTypeReady",
+              "IsAnd": true,
+              "SkillType": "Resonate",
+              "Target": "Buddy"
+            }
+          ],
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%DamageTakeRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

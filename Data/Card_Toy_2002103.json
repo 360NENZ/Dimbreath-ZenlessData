@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Card_Toy_2002103",
+  "AbilitySpecials": {
+    "AS_SkillAddDamageRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddySkillDMGupModifier_Card_2002103",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddySkillDMGupModifier_Card_2002103": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooAttack"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_SkillAddDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

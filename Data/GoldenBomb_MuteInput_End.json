@@ -1,0 +1,26 @@
+{
+  "AbilityName": "GoldenBomb_MuteInput_End",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "EndMuteInputModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "EndMuteInputModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "GoldenBomb_MuteInput"
+        }
+      ]
+    }
+  }
+}

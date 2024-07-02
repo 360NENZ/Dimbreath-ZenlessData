@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Froze_1001102",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Frozen",
+        "Params": [
+          {
+            "Name": "DamageValue",
+            "Ratio": "%AddedDamageRatio"
+          }
+        ]
+      },
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Frostbite",
+        "Params": [
+          {
+            "Name": "DamageValue",
+            "Ratio": "%AddedDamageRatio"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

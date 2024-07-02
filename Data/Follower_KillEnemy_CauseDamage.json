@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Follower_KillEnemy_CauseDamage",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKillOther": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Follower_RangeDamage",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAliveState",
+                "AliveState": "ExecuteCore",
+                "Target": "Target"
+              },
+              {
+                "$type": "ByAliveState",
+                "AliveState": "Dead",
+                "Target": "Target"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

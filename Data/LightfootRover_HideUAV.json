@@ -1,0 +1,15 @@
+{
+  "AbilityName": "LightfootRover_HideUAV",
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "PushRenderVisibleAction",
+      "Paths": [
+        "Monster_UVARaven"
+      ],
+      "Tag": "LightfootRover_UAV_HideMesh",
+      "Target": "Self",
+      "Visible": false
+    }
+  ]
+}

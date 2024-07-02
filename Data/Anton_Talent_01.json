@@ -1,0 +1,156 @@
+{
+  "AbilityName": "Anton_Talent_01",
+  "AbilitySpecials": {
+    "AS_Assult_HitCount": {
+      "Value": 9
+    },
+    "AS_Counter_HitCount": {
+      "Value": 23
+    },
+    "AS_Normal_HitCount": {
+      "Value": 30
+    },
+    "AS_RecoverSp": {
+      "Value": 7.5
+    },
+    "AS_RecoverSp_Assult_Single": {
+      "Value": 0.25
+    },
+    "AS_RecoverSp_Counter_Single": {
+      "Value": 0.25
+    },
+    "AS_RecoverSp_Normal_Single": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AntonDrillSPRecoverModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_RecoverSp)/specials(AS_Normal_HitCount)",
+        "ParamName": "AS_RecoverSp_Normal_Single",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_RecoverSp)/specials(AS_Counter_HitCount)",
+        "ParamName": "AS_RecoverSp_Counter_Single",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_RecoverSp)/specials(AS_Assult_HitCount)",
+        "ParamName": "AS_RecoverSp_Assult_Single",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AntonDrillSPRecoverModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnPatternAttackLanded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HudSpChangeModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "DrillAttack"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Normal_Single",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_01",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_02",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_03",
+                "Anton_Attack_Normal_Enhance_03_AttackProperty_02_04"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Assult_Single",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Anton_Attack_AssaultAid_AttackProperty_01",
+                "Anton_Attack_AssaultAid_AttackProperty_02_01",
+                "Anton_Attack_AssaultAid_AttackProperty_02_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Counter_Single",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_01",
+                "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_02",
+                "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_03",
+                "Anton_Attack_BeHitAid_Enhance_AttackProperty_02",
+                "Anton_Attack_Counter_02_AttackProperty_01_01",
+                "Anton_Attack_Counter_02_AttackProperty_01_02",
+                "Anton_Attack_Counter_02_AttackProperty_01_03",
+                "Anton_Attack_Counter_02_AttackProperty_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HudSpChangeModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetHudSpConstantChangeAction",
+          "Priority": 2,
+          "SpChangeType": "Recover",
+          "Tag": "Anton_Talent_SPRecover"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnSetHudSpConstantChangeAction",
+          "Tag": "Anton_Talent_SPRecover"
+        }
+      ]
+    }
+  }
+}

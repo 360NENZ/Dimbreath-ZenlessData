@@ -1,0 +1,267 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageListenerModifier_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DamageListenerModifier_02"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_AssaultAttack_Hit",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AssaultAidDamageModifier01": {
+      "Duration": 0.0667,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_AssaultAid_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AssaultAidDamageModifier02": {
+      "Duration": 0.1333,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_AssaultAid_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AssaultAidDamageModifier03": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_AssaultAid_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AssaultAidDamageModifier04": {
+      "Duration": 0.2667,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_AssaultAid_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageListenerModifier_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AssaultAidDamageModifier01",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_AssaultAid_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AssaultAidDamageModifier02",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_AssaultAid_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AssaultAidDamageModifier03",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_AssaultAid_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AssaultAidDamageModifier04",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_AssaultAid_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        }
+      ]
+    },
+    "DamageListenerModifier_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "NormalDamageModifier01",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "NormalDamageModifier02",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "NormalDamageModifier03",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "NormalDamageModifier04",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        }
+      ]
+    },
+    "NormalDamageModifier01": {
+      "Duration": 0.0667,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "NormalDamageModifier02": {
+      "Duration": 0.1333,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "NormalDamageModifier03": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    },
+    "NormalDamageModifier04": {
+      "Duration": 0.2667,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Ellen_Attack_Normal_Enhance_03_AttackProperty_01_02",
+          "Attacker": "Caster",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

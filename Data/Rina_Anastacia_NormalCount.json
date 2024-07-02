@@ -1,0 +1,26 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 4,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_04_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_NormalCount",
+  "AbilityStacking": "Unique"
+}

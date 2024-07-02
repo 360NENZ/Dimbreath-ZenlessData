@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Guardian_ForceAtk03_Zonetag",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Monster_Guardian_Force_MeleeAtk03"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Monster_Guardian_Force_MeleeAtk03"
+        ],
+        "IsAdd": false,
+        "Target": "Self"
+      }
+    ]
+  }
+}

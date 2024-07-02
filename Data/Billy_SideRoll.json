@@ -1,0 +1,132 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.293
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.561
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.549
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.549
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.549
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CountDownModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_SideRoll",
+  "AbilitySpecials": {
+    "AS_RollInterval": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CountDownModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": "%AS_RollInterval",
+          "TimeUpActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "MpExecMode": "MpTotallyLocal",
+              "ParamName": "Bool_SideRollReady",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Bool_SideRollReady",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "MpExecMode": "MpTotallyLocal",
+          "ParamName": "Bool_SideRollReady",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Follower_Attack_Increase_BossEnemy",
+  "AbilitySpecials": {
+    "AddedPlayerAttackRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedPlayerAttackRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

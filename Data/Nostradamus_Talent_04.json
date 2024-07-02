@@ -1,0 +1,51 @@
+{
+  "AbilityName": "Nostradamus_Talent_04",
+  "AbilitySpecials": {
+    "AS_CriticalDeltaTime_Talent_04": {
+      "Value": 12
+    },
+    "AS_CriticalDelta_Talent_04": {
+      "Value": 0.02
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ReduseDefenceModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Nostradamus_Attack_Branch_01_AttackProperty_02",
+              "Nostradamus_Attack_Branch_01_Explosion_AttackProperty_01",
+              "Nostradamus_Attack_Branch_02_AttackProperty_02",
+              "Nostradamus_Attack_Branch_02_Explosion_AttackProperty_01",
+              "Nostradamus_Attack_Branch_02_Explosion_AttackProperty_02",
+              "Nostradamus_Attack_QTE_Explosion_AttackProperty_01",
+              "Nostradamus_Attack_SwitchIn_Attack_Ex_Explosion_AttackProperty_01"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ReduseDefenceModifier": {
+      "Duration": "%AS_CriticalDeltaTime_Talent_04",
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 10,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_CriticalDelta",
+          "PropertyValue": "%AS_CriticalDelta_Talent_04",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Straight",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Late",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Early",
+          "FrameCountHigh": 92,
+          "FrameCountLow": 62,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Straight",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Late",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Early",
+          "FrameCountHigh": 92,
+          "FrameCountLow": 62,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitWallModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Straight",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Late",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Early",
+          "FrameCountHigh": 92,
+          "FrameCountLow": 62,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Straight",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Late",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Early",
+          "FrameCountHigh": 92,
+          "FrameCountLow": 62,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListernHitModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Wood_Bounce",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ListernHitModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_HitWall",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Bounce_Predicate",
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_02",
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_03",
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_02",
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_03",
+                "Lucy_Wood_Attack_AssaultAid_AttackProperty_01"
+              ]
+            },
+            {
+              "$type": "ByCampType",
+              "Camp": "TeamEvil",
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_RandomAngle",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 1,
+              "ValueType": "Integer"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_01",
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_01",
+                "Lucy_Wood_Switch_Attack_Ex_AttackProperty_01"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_Explosion",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 2,
+              "ValueType": "Integer"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_02"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_02"
+              ]
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Skill_Lucy_Attack_Branch_01_Straight_Explo_Monster"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_Explosion",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 3,
+              "ValueType": "Integer"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_03"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_Explosion",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 5,
+              "ValueType": "Integer"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_02"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_02"
+              ]
+            }
+          ],
+          "soundActionKey": "Play_SFX_Char_Skill_Lucy_Attack_Branch_02_Straight_Explo_Monster"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_Explosion",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_AttackIndex",
+              "Value": 6,
+              "ValueType": "Integer"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_03"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListernHitWallModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "CollideGroundWallMixin",
+          "EnterWallActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Lucy_Wood_Attack_Branch_01_HitWall",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Bn_Wood_Position",
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Attack_Branch_01_Early",
+                      "FrameCountHigh": 92,
+                      "FrameCountLow": 62,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": false,
+                      "MaxFrameCountLow": false
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Attack_Branch_02_Early",
+                      "FrameCountHigh": 92,
+                      "FrameCountLow": 62,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": false,
+                      "MaxFrameCountLow": false
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "SwitchIn_Attack_End",
+                      "FrameCountHigh": 30,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": false,
+                      "MaxFrameCountLow": false
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_Wood_Explosion",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_AttackIndex",
+                  "Value": 2,
+                  "ValueType": "Integer"
+                }
+              ],
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_01_Straight",
+                  "FrameCountHigh": 60,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerSoundAction",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_01_Straight",
+                  "FrameCountHigh": 60,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "soundActionKey": "Play_SFX_Char_Skill_Lucy_Attack_Branch_01_Straight_Explo_Amb"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_Wood_Explosion",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_AttackIndex",
+                  "Value": 5,
+                  "ValueType": "Integer"
+                }
+              ],
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02_Straight",
+                  "FrameCountHigh": 60,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerSoundAction",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02_Straight",
+                  "FrameCountHigh": 60,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "soundActionKey": "Play_SFX_Char_Skill_Lucy_Attack_Branch_02_Straight_Explo_Amb"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_Wood_Explosion",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_AttackIndex",
+                  "Value": 3,
+                  "ValueType": "Integer"
+                }
+              ],
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_01_Late",
+                  "FrameCountHigh": 46,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Lucy_Wood_Explosion",
+              "InitAbilitySpecialList": [
+                {
+                  "SpecialName": "AS_AttackIndex",
+                  "Value": 6,
+                  "ValueType": "Integer"
+                }
+              ],
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Branch_02_Late",
+                  "FrameCountHigh": 46,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": false,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ListernHitModifier",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_HitWall",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

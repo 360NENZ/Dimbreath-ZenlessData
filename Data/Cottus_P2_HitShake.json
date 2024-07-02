@@ -1,0 +1,82 @@
+{
+  "AbilityName": "Cottus_P2_HitShake",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_HitShake_L",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitAllCollider": false,
+            "HitColliderList": [
+              "HitCollider_L_Calf",
+              "HitCollider_L_HorseLink"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_HitShake_R",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitAllCollider": false,
+            "HitColliderList": [
+              "HitCollider_R_Calf",
+              "HitCollider_R_HorseLink"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_HitShake_Arm",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitAllCollider": false,
+            "HitColliderList": [
+              "HitCollider_L_Arm"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "MpTotallyLocal",
+        "ParamName": "Trigger_HitShake_M",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByHitCollider",
+            "HitAllCollider": false,
+            "HitColliderList": [
+              "HitCollider"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

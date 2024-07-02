@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Card_Sports_2000809",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "CreateDodgeDummyAction",
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "Duration": "%Duration",
+        "Height": 1.5,
+        "Radius": 1.5
+      }
+    ]
+  }
+}

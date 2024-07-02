@@ -1,0 +1,160 @@
+{
+  "AbilityName": "Rina_Talent_03",
+  "AbilitySpecials": {
+    "AS_SpRecoverDelta": {
+      "Value": 1.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RecoverSPDeltaModifier_Controller_Anastacia_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachModifier",
+          "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+          "ModifierName": "RecoverSPDeltaModifier_Controller_Drusilla_02",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "RecoverSPDeltaModifier_Controller_Anastacia_02": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "RecoverSPDeltaModifier_Controller_Overall"
+              ],
+              "ZoneTag": "Rina_Anastacia_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "RecoverSPDeltaModifier_Controller_Drusilla_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachModifier",
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ModifierName": "RecoverSPDeltaModifier_Controller_Anastacia_02",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "RecoverSPDeltaModifier_Controller_Drusilla_02": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "RecoverSPDeltaModifier_Controller_Overall"
+              ],
+              "ZoneTag": "Rina_Drusilla_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "RecoverSPDeltaModifier_Controller_Overall": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "ModifierName": "RecoverSPDeltaModifier_Effect",
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "ModifierName": "RecoverSPDeltaModifier_Effect",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "RecoverSPDeltaModifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_SpRecoverDelta": "%AS_SpRecoverDelta"
+      }
+    },
+    "RecoverSPDeltaModifier_Listener_Anastacia": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "RecoverSPDeltaModifier_Controller_Anastacia_01"
+              ],
+              "ZoneTag": "Rina_Anastacia_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "RecoverSPDeltaModifier_Listener_Drusilla": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "RecoverSPDeltaModifier_Controller_Drusilla_01"
+              ],
+              "ZoneTag": "Rina_Drusilla_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+      "ModifierName": "RecoverSPDeltaModifier_Listener_Anastacia",
+      "Predicates": [
+        {
+          "$type": "ByAvatarTalentIndex",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "TalentIndex": 4,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+      "ModifierName": "RecoverSPDeltaModifier_Listener_Drusilla",
+      "Predicates": [
+        {
+          "$type": "ByAvatarTalentIndex",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "TalentIndex": 4,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

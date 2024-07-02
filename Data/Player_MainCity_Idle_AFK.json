@@ -1,0 +1,86 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AFKModifier"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_MainCity_Idle_AFK",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AFKModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnThinkInterval": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.33333,
+          "OnFailure": [
+            {
+              "$type": "RandomOperator",
+              "Odds": 0.5,
+              "OnFailure": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 2,
+                  "ParamName": "Int_Idle_AFK_Index",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "OnSuccess": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_Idle_AFK_Index",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 0,
+              "ParamName": "Int_Idle_AFK_Index",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Idle_AFK",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByIsInPerform",
+              "IsInPerform": "false",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 12.0
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "TalentTreeAbility_AttackUp",
+  "AbilitySpecials": {
+    "AddedPlayerAttackRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedPlayerAttackRatio"
+    }
+  }
+}

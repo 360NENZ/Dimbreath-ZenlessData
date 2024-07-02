@@ -1,0 +1,55 @@
+{
+  "AbilityName": "Aokaku_Talent_03",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 8
+    },
+    "AS_IceDamageResist": {
+      "Value": -0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DecreaseIceResist",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Aokaku_Attack_Branch_01_Flag_AttackProperty_01",
+              "Aokaku_Attack_Branch_01_Flag_AttackProperty_02",
+              "Aokaku_Attack_Branch_01_Flag_AttackProperty_03",
+              "Aokaku_Attack_Branch_02_Flag_AttackProperty_01",
+              "Aokaku_Attack_Branch_02_Flag_AttackProperty_02",
+              "Aokaku_Attack_Branch_02_Flag_AttackProperty_02_Shake",
+              "Aokaku_Attack_Branch_02_Flag_AttackProperty_03",
+              "Aokaku_SwitchIn_Attack_AttackProperty_09",
+              "Aokaku_SwitchIn_Attack_AttackProperty_10",
+              "Aokaku_SwitchIn_Attack_AttackProperty_11",
+              "Aokaku_SwitchIn_Attack_Ex_AttackProperty_15",
+              "Aokaku_SwitchIn_Attack_Ex_AttackProperty_16",
+              "Aokaku_SwitchIn_Attack_Ex_AttackProperty_17",
+              "Aokaku_Attack_AssaultAid_Flag_AttackProperty_01",
+              "Aokaku_Attack_AssaultAid_Flag_AttackProperty_02",
+              "Aokaku_Attack_AssaultAid_Flag_AttackProperty_02_Shake",
+              "Aokaku_Attack_AssaultAid_Flag_AttackProperty_03"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DecreaseIceResist": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_IceDamageResist": "%AS_IceDamageResist"
+      }
+    }
+  }
+}

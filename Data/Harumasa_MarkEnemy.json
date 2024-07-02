@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Harumasa_MarkEnemy",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "MainArrowTarget"
+        ],
+        "CustomKey": "Harumasa_AttackTarget_MainArrowTarget",
+        "IsAdd": false,
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "MainArrow"
+            ]
+          },
+          {
+            "$type": "ByRelativeCampType",
+            "Relationship": "Enemy",
+            "Target": "Other"
+          }
+        ],
+        "Target": "Custom"
+      }
+    ],
+    "OnHitOtherResolved": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "MainArrowTarget"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "MainArrow"
+            ]
+          },
+          {
+            "$type": "ByRelativeCampType",
+            "Relationship": "Enemy",
+            "Target": "Other"
+          }
+        ],
+        "Target": "Other"
+      }
+    ]
+  }
+}

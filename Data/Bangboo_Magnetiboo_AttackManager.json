@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Bangboo_Magnetiboo_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 1,
+        "ParamName": "Int_AttackLaunch",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Magnetiboo_Attackproperty_Attack01_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

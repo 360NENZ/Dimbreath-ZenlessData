@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Card_DailyUse_1000921",
+  "AbilitySpecials": {
+    "HPPercentage": {
+      "Value": 0.005
+    },
+    "PercentageMaxHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WaitForHitOtherModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "WaitForHitOtherModifier": {
+      "Block": 0.1,
+      "Duration": -1,
+      "OnHitOther": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "PercentageMaxHP",
+          "Percentage": "%HPPercentage",
+          "PropertyType": "MaxHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            }
+          ],
+          "PropertyKey": "Actor_AddedAttackDelta",
+          "PropertyValue": "%PercentageMaxHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessModifierBlockAction",
+          "AbilityName": "Card_DailyUse_1000921",
+          "IsOpenBlock": true,
+          "ModifierName": "WaitForHitOtherModifier"
+        }
+      ]
+    }
+  }
+}

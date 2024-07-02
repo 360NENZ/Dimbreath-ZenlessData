@@ -1,0 +1,49 @@
+{
+  "AbilityName": "GamePlayEvadeChampion_MissleLaunch_Auto_Follow_Interval_1",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Delay_3s": {
+      "Duration": 4,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlayEvadeChampion_MissleLaunch_Follow_Down",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 3.0
+    },
+    "OnIntervalThink_LaunchMissle": {
+      "Duration": 3.4,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "GamePlayEvadeChampion_MissleLaunch_Follow_Down",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.5
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "OnIntervalThink_LaunchMissle",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyAbilityAction",
+      "AbilityName": "GamePlayEvadeChampion_MissleLaunch_Follow_Down",
+      "IsAutoTrigger": false,
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyAbilityAction",
+      "AbilityName": "GamePlayEvadeChampion_MissleLaunch_Follow_Explode",
+      "IsAutoTrigger": false,
+      "Target": "Self"
+    }
+  ]
+}

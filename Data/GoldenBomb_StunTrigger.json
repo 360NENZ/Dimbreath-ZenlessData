@@ -1,0 +1,13 @@
+{
+  "AbilityName": "GoldenBomb_StunTrigger",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": false,
+      "ParamName": "Trigger_BreakStun",
+      "ParamType": 1,
+      "Target": "Self"
+    }
+  ]
+}

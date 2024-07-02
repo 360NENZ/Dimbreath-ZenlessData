@@ -1,0 +1,154 @@
+{
+  "AbilityName": "TestGraph_01",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Event": {
+        "OnStart": {
+          "x": 451,
+          "y": 259.3425
+        }
+      },
+      "Graph": {
+        "Position": {
+          "x": -361,
+          "y": -188,
+          "z": 0
+        },
+        "Scale": {
+          "x": 1.520875,
+          "y": 1.520875,
+          "z": 1
+        }
+      },
+      "Node": [
+        {
+          "x": 722.7769,
+          "y": 259.3157
+        },
+        {
+          "x": 404.0026,
+          "y": 393.685
+        },
+        {
+          "x": 927.192,
+          "y": 203.4667
+        },
+        {
+          "x": 929,
+          "y": 345.4536
+        },
+        {
+          "x": 1099.027,
+          "y": 267.4366
+        },
+        {
+          "x": 573,
+          "y": 260.3425
+        }
+      ]
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 5,
+        "ParametersBind": []
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "BranchNode",
+        "Condition": {
+          "BindId": 1000
+        },
+        "DefaultOutBind": -1,
+        "FalseBind": 3,
+        "PreActionBind": [
+          1
+        ],
+        "TrueBind": 2
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1001,
+            1002
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_Condition"
+      },
+      {
+        "$type": "SetVariable",
+        "ConstValue": {
+          "$type": "ConfigDynamicValueBool",
+          "Value": false
+        },
+        "DefaultOutBind": 4,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 0
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_Condition"
+      },
+      {
+        "$type": "SetVariable",
+        "ConstValue": {
+          "$type": "ConfigDynamicValueBool",
+          "Value": true
+        },
+        "DefaultOutBind": 4,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 0
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_Condition"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "PreActionBind": [
+          1
+        ],
+        "Value": {
+          "BindId": 1002
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 0,
+        "PreActionBind": [
+          1
+        ],
+        "Value": {
+          "BindId": 1001
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueBool",
+          "Value": false
+        },
+        "ElementType": "Integer",
+        "Key": "Bool_Condition",
+        "Scope": "Auto",
+        "Type": "Boolean"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "AbilityName": "TestGraph_01",
+      "EventName": "OnStart"
+    }
+  ]
+}

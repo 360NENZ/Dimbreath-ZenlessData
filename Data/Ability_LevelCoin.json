@@ -1,0 +1,98 @@
+{
+  "AbilityName": "Ability_LevelCoin",
+  "AbilitySpecials": {
+    "ItemID": {
+      "Value": 0
+    },
+    "ItemNum": {
+      "Value": 0
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_coin"
+    },
+    {
+      "$type": "AddRewardAction",
+      "IsShowDropModel": false,
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 206001,
+              "ParamName": "ItemID",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 206002,
+              "ParamName": "ItemID",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 206003,
+              "ParamName": "ItemID",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 206004,
+              "ParamName": "ItemID",
+              "ParamType": "Integer"
+            }
+          ]
+        }
+      ],
+      "RewardCount": 1,
+      "RewardID": 203110008,
+      "Target": "Self"
+    },
+    {
+      "$type": "LDListenEntityAction",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 206001,
+          "ParamName": "ItemID",
+          "ParamType": "Integer"
+        }
+      ],
+      "TargetKey": "LevelCoinGetEvent"
+    },
+    {
+      "$type": "LDListenEntityAction",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 206003,
+          "ParamName": "ItemID",
+          "ParamType": "Integer"
+        }
+      ],
+      "TargetKey": "GoldenBangboo_LevelEnd"
+    },
+    {
+      "$type": "LDListenEntityAction",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "ItemID",
+          "ParamType": "Integer"
+        }
+      ],
+      "TargetKey": "LevelCoinGetEventFromDestruction"
+    }
+  ]
+}

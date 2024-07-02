@@ -1,0 +1,111 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 1.0,
+      "AudioEffect": "",
+      "BlockCameraShake": "Monster_Nineveh_ATK08_CamShake_E_02",
+      "BlockColliderRadius": 0,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Monster_Nineveh_Attack_06_01_Burst"
+      },
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.45
+      },
+      "EffectName": "Eff_Monster_Nineveh_Attack_06_01_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Monster_Nineveh_Attack_06_01_Burst"
+      },
+      "FadeRatio": 0.3,
+      "FirstHitDelayTime": 0.02,
+      "HitAnimEventID": "Monster_Nineveh_ATK08_Attackproperty_02",
+      "HitColliderRadius": 0.25,
+      "HitEffect": {
+        "EffectPattern": ""
+      },
+      "HitInterval": 1.0,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "InterruptAnimationSpeed": 1.5,
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "None"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "HeadPoint_Middle_01_2nd",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 999,
+      "OnLaserInterruptAction": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_Nineveh_Attack_06_01_Burst"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.1,
+          "Target": "Self"
+        }
+      ],
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      },
+      "Tag": "Nineveh_ATK08_Laser_02"
+    }
+  ],
+  "AbilityName": "Nineveh_ATK08_Laser_01_2nd",
+  "AbilityStacking": "Unique"
+}

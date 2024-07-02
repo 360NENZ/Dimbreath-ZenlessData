@@ -1,0 +1,11 @@
+{
+  "AbilityName": "FierySerpent_Teleport__1_RemovePoint",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveSavePointAction",
+      "PointName": "FierySerpent_TeleportPoint_1",
+      "Target": "Self"
+    }
+  ]
+}

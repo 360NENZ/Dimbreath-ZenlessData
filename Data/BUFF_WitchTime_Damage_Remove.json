@@ -1,0 +1,18 @@
+{
+  "AbilityName": "BUFF_WitchTime_Damage_Remove",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_Damage",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_Damage_Remove",
+        "Target": "Self"
+      }
+    ]
+  }
+}

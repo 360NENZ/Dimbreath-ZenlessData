@@ -1,0 +1,75 @@
+{
+  "AbilityName": "BUFF_WitchTime_Shield",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_WitchTime_ShieldModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnDodgeSuccess": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ShieldModifier"
+        }
+      ]
+    },
+    "ShieldModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "CommonDefenseMaterial",
+              "Target": "Self",
+              "key": "Common_MA_Buff_Defence_RimGlow_01"
+            }
+          ],
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Card_Armor",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_WitchTime_ShieldModifier",
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Avatar_LevelUp_01",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ShowTipAction",
+      "ShowPage": 0,
+      "Target": "Self",
+      "TipID": 301204
+    }
+  ]
+}

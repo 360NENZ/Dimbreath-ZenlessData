@@ -1,0 +1,275 @@
+{
+  "AbilityName": "TestGraph_07",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Event": {
+        "OnStart": {
+          "x": 56.89999,
+          "y": 241.85
+        }
+      },
+      "Graph": {
+        "Position": {
+          "x": -45,
+          "y": -253,
+          "z": 0
+        },
+        "Scale": {
+          "x": 0.8695652,
+          "y": 0.8695652,
+          "z": 1
+        }
+      },
+      "Node": [
+        {
+          "x": 1013.854,
+          "y": 579.2457
+        },
+        {
+          "x": 227,
+          "y": 386
+        },
+        {
+          "x": 546.1248,
+          "y": 577.8091
+        },
+        {
+          "x": 425.1304,
+          "y": 243.3913
+        },
+        {
+          "x": 840.2001,
+          "y": 350
+        },
+        {
+          "x": 231.7316,
+          "y": 242.7316
+        },
+        {
+          "x": 1055,
+          "y": 247
+        },
+        {
+          "x": 808.8715,
+          "y": 455.121
+        },
+        {
+          "x": 1284.2,
+          "y": 213
+        },
+        {
+          "x": 1513.2,
+          "y": 244
+        },
+        {
+          "x": 639.2307,
+          "y": 243.2439
+        }
+      ]
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 5,
+        "ParametersBind": []
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "AttachEffectNode",
+        "AttachPoint": "",
+        "DefaultOutBind": -1,
+        "EffectID": {
+          "$type": "ConfigOutputValue"
+        },
+        "Key": {
+          "DefaultValue": "Eff_Treasure_Open"
+        },
+        "PositionOffset": {},
+        "PreActionBind": [
+          7
+        ],
+        "RotationOffset": {
+          "$type": "ConfigInputValue",
+          "BindId": 0
+        },
+        "Scale": {
+          "BindId": 1009
+        },
+        "Target": {
+          "$type": "ConfigInputValue",
+          "BindId": 1005
+        }
+      },
+      {
+        "$type": "GetSelfEntity",
+        "DefaultOutBind": -1,
+        "Self": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1001,
+            1002
+          ]
+        }
+      },
+      {
+        "$type": "GetAttackTarget",
+        "AttackTarget": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1005
+          ]
+        },
+        "DefaultOutBind": 0,
+        "PreActionBind": [
+          1
+        ],
+        "Target": {
+          "$type": "ConfigInputValue",
+          "BindId": 1001
+        }
+      },
+      {
+        "$type": "GetEntityPosRot",
+        "DefaultOutBind": 10,
+        "Position": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1004
+          ]
+        },
+        "PreActionBind": [
+          1
+        ],
+        "Rotation": {
+          "$type": "ConfigOutputValue"
+        },
+        "Target": {
+          "$type": "ConfigInputValue",
+          "BindId": 1002
+        }
+      },
+      {
+        "$type": "VectorAdd",
+        "DefaultOutBind": -1,
+        "InOne": {
+          "BindId": 1003
+        },
+        "InTwo": {
+          "BindId": 1004
+        },
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1006
+          ]
+        }
+      },
+      {
+        "$type": "SequenceNode",
+        "DefaultOutBind": -1,
+        "Then": [
+          3,
+          2
+        ]
+      },
+      {
+        "$type": "CreateEffectNode",
+        "DefaultOutBind": 8,
+        "EffectID": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1008
+          ]
+        },
+        "Key": {
+          "DefaultValue": "Eff_Monster_Common_01_Explode_Ground"
+        },
+        "Position": {
+          "BindId": 1006
+        },
+        "PreActionBind": [
+          7,
+          4
+        ],
+        "Rotation": {
+          "$type": "ConfigInputValue",
+          "BindId": 0
+        },
+        "Scale": {
+          "BindId": 1007
+        }
+      },
+      {
+        "$type": "MakeVector",
+        "DefaultOutBind": -1,
+        "OutValue": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1007,
+            1009
+          ]
+        },
+        "X": {
+          "DefaultValue": 1
+        },
+        "Y": {
+          "DefaultValue": 1
+        },
+        "Z": {
+          "DefaultValue": 1
+        }
+      },
+      {
+        "$type": "DelayNode",
+        "Complete": 9,
+        "DefaultOutBind": -1,
+        "DelayTime": {
+          "DefaultValue": 0.1
+        }
+      },
+      {
+        "$type": "DestroyEffectNode",
+        "DefaultOutBind": -1,
+        "EffectID": {
+          "$type": "ConfigInputValue",
+          "BindId": 1008
+        },
+        "Rotation": {
+          "$type": "ConfigInputValue",
+          "BindId": 0
+        }
+      },
+      {
+        "$type": "GetEntityDirection",
+        "DefaultOutBind": 6,
+        "Forward": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1003
+          ]
+        },
+        "PreActionBind": [],
+        "Right": {
+          "$type": "ConfigOutputValue"
+        },
+        "Target": {
+          "$type": "ConfigInputValue",
+          "BindId": 1000
+        },
+        "Up": {
+          "$type": "ConfigOutputValue",
+          "BindId": []
+        }
+      }
+    ],
+    "VariableRegisterList": []
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "EventName": "OnStart"
+    }
+  ]
+}

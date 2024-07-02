@@ -1,0 +1,72 @@
+{
+  "AbilityName": "Allies_Close_Collider",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushDefaultHullColliderLayer",
+        "ColliderEnableLayer": "EntityCollisionMonster",
+        "Predicates": [
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": true,
+            "Target": "LocalAvatar"
+          }
+        ],
+        "Tag": "Test_SS",
+        "Target": "Self"
+      }
+    ],
+    "OnEnterInteract": [
+      {
+        "$type": "PopDefaultHullColliderLayer",
+        "Tag": "Test_SS",
+        "Target": "Self"
+      }
+    ],
+    "OnExitInteract": [
+      {
+        "$type": "PushDefaultHullColliderLayer",
+        "ColliderEnableLayer": "EntityCollisionMonster",
+        "Predicates": [
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": true,
+            "Target": "LocalAvatar"
+          }
+        ],
+        "Tag": "Test_SS",
+        "Target": "Self"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "PopDefaultHullColliderLayer",
+        "Tag": "Test_SS",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarsBattleEnter": [
+      {
+        "$type": "PushDefaultHullColliderLayer",
+        "ColliderEnableLayer": "EntityCollisionMonster",
+        "Predicates": [
+          {
+            "$type": "ByTargetInInteract",
+            "IsInInteract": false,
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Test_SS",
+        "Target": "Self"
+      }
+    ],
+    "OnTeamAvatarsBattleExit": [
+      {
+        "$type": "PopDefaultHullColliderLayer",
+        "Tag": "Test_SS",
+        "Target": "Self"
+      }
+    ]
+  }
+}

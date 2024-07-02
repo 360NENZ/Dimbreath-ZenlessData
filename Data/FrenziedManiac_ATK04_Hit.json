@@ -1,0 +1,123 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Attack4ChargingModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_4",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 40,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "FrenziedManiac_ATK04_Hit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Attack4HitModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_FrenziedManiac_ATK04_Attackproperty_Range"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ParryHModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_FrenziedManiac_Parry_H"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Attack4ChargingModifier": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsAttack4Charging",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsAttack4Charging",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Attack4HitModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_AttackLanded",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Attack4ChargingModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryHModifier": {
+      "Duration": 0.4,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_Counter_Test",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Monster_Counter_Vignette_Test",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Kill_CamZoom_01"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Kill_CamShake_01"
+        }
+      ]
+    }
+  }
+}

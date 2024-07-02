@@ -1,0 +1,406 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 14,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 5,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 5,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 17,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End_02",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 9,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 20,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 20,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 18,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 19,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 14,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 26,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SepcialEffectModifier_Overheat_L",
+            "SepcialEffectModifier_Overheat_R"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_SpecialEffect_Overheat",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SepcialEffectModifier_Overheat_L": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bn_GunBodyF_L",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Billy_Overheat_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SepcialEffectModifier_Overheat_R": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bn_GunBodyF_R",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Billy_Overheat_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddDamageModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Enhance_01",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": false
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddDamageModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Enhance_02",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": false
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddDamageModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": false
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddDamageModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Enhance_04",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": false
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AddDamageModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Enhance",
+          "ForceTriggerOnTransitionIn": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": false
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Longinus_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddDamageDuration_Talent_02": {
+      "Value": 15
+    },
+    "AS_AddedDamageRatio_Talent_02": {
+      "Value": 0.025
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AddDamageModifier": {
+      "Duration": "%AS_AddDamageDuration_Talent_02",
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 12,
+      "ModifierStacking": "MultipleRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Normal"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Rush"
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Counter"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Talent_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

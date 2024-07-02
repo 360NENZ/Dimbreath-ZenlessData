@@ -1,0 +1,74 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 2.75,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.0001
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_02_04_Lighting"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DestroyEffect": {
+        "EffectPattern": "Eff_Monster_HeavyStriker_Attack_02_05_Burst"
+      },
+      "DestroyExplode": false,
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 0.0001,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": -1,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "NeedWarningHUD": false,
+      "OnBulletDestroyAction": [
+        {
+          "$type": "HandleAnimEvent",
+          "AnimEventID": "HeavyStriker_Attack02_Attackproperty_Burst"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ShowWarningHUDInScreen": false,
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "HeavyStriker_Attack_2_Burst",
+  "AbilityStacking": "Unique"
+}

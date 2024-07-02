@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Prologue_ACT4_Lockon",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Prologue_ACT4_LookAtModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Prologue_ACT4_LookAtModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "CameraLockOnAction",
+          "CameraLockTargetKey": "ACT4_Buddy_CamLock",
+          "IsLockPermanently": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Prologue_ACT4_Lockon"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Prologue_ACT4_LookAtModifier",
+      "Target": "Self"
+    }
+  ]
+}

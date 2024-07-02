@@ -1,0 +1,202 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletEmitterMixin",
+      "AttackTarget": "Caster",
+      "AttackTargetPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_ActualTargetPoint_L",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletAbilityName": "LightfootRover_ATK7_Bullet",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_MissileWell_L",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "EmmiterEffect": {
+        "EffectPattern": "Eff_Monster_LightfootRover_Attack_07_09_Trail"
+      },
+      "TargetUpdateMode": "OnlyTrigger"
+    },
+    {
+      "$type": "BulletEmitterMixin",
+      "AttackTarget": "Caster",
+      "AttackTargetPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_ActualTargetPoint_R",
+          "IsUseAttachPointPos": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletAbilityName": "LightfootRover_ATK7_Bullet",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 135.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_MissileWell_R_AttachPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "EmmiterEffect": {
+        "EffectPattern": "Eff_Monster_LightfootRover_Attack_07_09_Trail"
+      },
+      "TargetUpdateMode": "OnlyTrigger"
+    }
+  ],
+  "AbilityName": "LightfootRover_ATK7_BulletEmitter",
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_BaseTargetPoint_L",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 2.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_L",
+          "IsUseAttachPointPos": true
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_BaseTargetPoint_R",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 2.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_R",
+          "IsUseAttachPointPos": true
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_ActualTargetPoint_L",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.2,
+            "y": 0.0,
+            "z": 0.2
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_L",
+          "IsUseAttachPointPos": true
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_ActualTargetPoint_R",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.2,
+            "y": 0.0,
+            "z": 0.2
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_R",
+          "IsUseAttachPointPos": true
+        }
+      }
+    }
+  ]
+}

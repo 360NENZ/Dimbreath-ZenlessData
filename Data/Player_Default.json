@@ -1,0 +1,1139 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ExQTEModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchIn_CoAttack_Ex_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ExQTEModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Walk_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "WalkToRunModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Walk_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "WalkToRunModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Idle",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AFKModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Idle_01",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AFKModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_Default",
+  "AbilitySpecials": {
+    "AS_SpAmount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "AudioNormal"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_ElementAbnormalBuff",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_CounterHit",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_Exhausted",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_PartDestroy",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_PerfectSwitchValue",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_AssaultAid_EnableEffect",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_AidAttackWitchTime",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_Hit_Glitch_01",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_Hit_Glitch_02",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_Hit_Glitch_03",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityID": 19000002,
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_OnlineRevive_Invincible",
+        "MpExecMode": "MpDefault",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_OnlineExQTE_Dither",
+        "MpExecMode": "MpDefault"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_DyingEffect",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_DeathRevive_Singleplayer",
+        "MpExecMode": "NotExecuted",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ParryStrengthLevelModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "ParryStrengthLevel1"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Player_Audio_MonsterHit",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "IsPartnerAvatar"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByIsPartnerAvatar",
+            "IsPartnerAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_IsPartnerAvatar",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByIsPartnerAvatar",
+            "IsPartnerAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "InvincibleModifier_PartnerAvatar",
+        "Predicates": [
+          {
+            "$type": "ByIsPartnerAvatar",
+            "IsPartnerAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NoDamageModifier_PartnerAvatar",
+        "Predicates": [
+          {
+            "$type": "ByIsPartnerAvatar",
+            "IsPartnerAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LockLifeModifier_PartnerAvatar",
+        "Predicates": [
+          {
+            "$type": "ByIsPartnerAvatar",
+            "IsPartnerAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SoundActionModifier_PartnerAvatar",
+        "Predicates": [
+          {
+            "$type": "ByIsPartnerAvatar",
+            "IsPartnerAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BlurShadowModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Tiny",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Tiny",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByPatternTagList",
+                "TagList": [
+                  "Danger"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Small",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Small",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByPatternTagList",
+                "TagList": [
+                  "Danger"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Middle",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Middle",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByPatternTagList",
+                "TagList": [
+                  "Danger"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Large",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Large",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByPatternTagList",
+                "TagList": [
+                  "Danger"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Gigantic",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Gigantic",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByPatternTagList",
+                "TagList": [
+                  "Danger"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Special_Tiny",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Tiny",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByPatternTagList",
+            "TagList": [
+              "Danger"
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Special_Small",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Small",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByPatternTagList",
+            "TagList": [
+              "Danger"
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Special_Middle",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Middle",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByPatternTagList",
+            "TagList": [
+              "Danger"
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Special_Large",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Large",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByPatternTagList",
+            "TagList": [
+              "Danger"
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_SFX_Char_Evade_Success_Special_Gigantic",
+        "Predicates": [
+          {
+            "$type": "ByCharacterSize",
+            "CharacterSize": "Gigantic",
+            "CompareType": "Equal",
+            "Target": "Target"
+          },
+          {
+            "$type": "ByPatternTagList",
+            "TagList": [
+              "Danger"
+            ]
+          }
+        ]
+      },
+      {
+        "$type": "TimeSlowByConfigKeyAction",
+        "ConfigKey": "PerfectEvade_TimeSlow",
+        "IsGlobal": true,
+        "MpExecMode": "NotExecuted"
+      },
+      {
+        "$type": "TimeSlowByConfigKeyAction",
+        "ConfigKey": "PerfectEvade_TimeSlow",
+        "IsGlobal": false,
+        "MpExecMode": "MpDefault",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_PerfectEvade",
+        "ParamType": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "CameraZoomAction",
+        "ZoomConfigKey": "PerfectEvade_CamZoom_01"
+      },
+      {
+        "$type": "CameraStretchAction",
+        "StretchConfigKey": "PerfectEvade_CamStretch_01"
+      },
+      {
+        "$type": "ProcessScreenEffectAction",
+        "EffectKey": "PerfectEvade_Vignette_01",
+        "EffectType": "Vignette",
+        "MpExecMode": "AuthorityOnly"
+      },
+      {
+        "$type": "ProcessScreenEffectAction",
+        "EffectKey": "PerfectEvade_ColorAdjustments_01",
+        "EffectType": "ColorAdjustments",
+        "MpExecMode": "AuthorityOnly"
+      },
+      {
+        "$type": "ProcessScreenEffectAction",
+        "EffectKey": "PerfectEvade_RadialBlur_01",
+        "EffectType": "RadialBlur",
+        "MpExecMode": "AuthorityOnly"
+      },
+      {
+        "$type": "FireEffect",
+        "AttachPointName": "ChestPoint",
+        "EffectPattern": "Eff_PerfectEvade_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_PerfectEvade_01_Cube",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Tag": "Avatar_Common_MA_PerfectEvade_OverrideOutlineColor_01",
+        "Target": "Self",
+        "key": "Avatar_Common_MA_PerfectEvade_OverrideOutlineColor_01"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PerfectEvadeModifier_Invincible",
+        "Target": "Self"
+      }
+    ],
+    "OnInteractingItem": [
+      {
+        "$type": "CameraZoomAction",
+        "Predicates": [
+          {
+            "$type": "ByInteractingItem",
+            "GoodID": 12,
+            "Target": "Self"
+          }
+        ],
+        "ZoomConfigKey": "LevelItem_CamZoom_01"
+      },
+      {
+        "$type": "CameraStretchAction",
+        "Predicates": [
+          {
+            "$type": "ByInteractingItem",
+            "GoodID": 12,
+            "Target": "Self"
+          }
+        ],
+        "StretchConfigKey": "LevelItem_CamStretch_01"
+      }
+    ],
+    "OnLevelUp": [
+      {
+        "$type": "CameraZoomEndAction",
+        "DataClearPriority": "SamePriority",
+        "DataPriority": "Character"
+      },
+      {
+        "$type": "CameraStretchEndAction",
+        "DataClearPriority": "SamePriority",
+        "DataPriority": "Character"
+      },
+      {
+        "$type": "AttackCameraShakeAction",
+        "ShakeConfigKey": "LevelItem_CamShake_01"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ModifyPerfectSwitchPointAction",
+        "Amount": -1,
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "EvadeAid",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "AudioNormal"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "Normal",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "AudioDead"
+        ],
+        "IsAdd": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "Normal",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "AudioNormal"
+        ],
+        "IsAdd": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "Dead",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "AudioDead"
+        ],
+        "IsAdd": true,
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "Dead",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnStageInvincibleModifier",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnd",
+                "Predicates": [
+                  {
+                    "$type": "ByAvatarSwitchType",
+                    "SwitchType": "AidAttack",
+                    "Target": "Self"
+                  },
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByAidAttackType",
+                        "AidAttackType": "ParryAid"
+                      },
+                      {
+                        "$type": "ByAidAttackType",
+                        "AidAttackType": "EvadeAid"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "$type": "ByAvatarSwitchType",
+                "SwitchType": "QTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "OnStageInvincibleModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "AttachPointName": "ChestPoint",
+        "EffectPattern": "Eff_PerfectAid_01",
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "AidAttack",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAidAttackType",
+            "AidAttackType": "ParryAid"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_PerfectAid_01_Cube",
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "AidAttack",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAidAttackType",
+            "AidAttackType": "ParryAid"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByAvatarSwitchType",
+            "SwitchType": "AidAttack",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByAidAttackType",
+            "AidAttackType": "ParryAid"
+          }
+        ],
+        "Tag": "Common_MA_Avatar_PerfectAid_OverrideOutline",
+        "Target": "Self",
+        "key": "Common_MA_Avatar_PerfectAid_OverrideOutline"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AFKModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_AFK",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByIsInPerform",
+              "IsInPerform": "false",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 12.0
+    },
+    "BlurShadowModifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "ConfigGhostEffectKey": "Common_Ghost_01",
+          "EchoTime": 0.05,
+          "IgnoreOwnerTimescale": true,
+          "IgnoreWorldTimescale": true,
+          "IsActive": true,
+          "LifeTime": 0.2,
+          "MaxGhostCount": 10,
+          "Tag": "Avatar_DodgeSuccess_BlurShadow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "IsActive": false,
+          "Tag": "Avatar_DodgeSuccess_BlurShadow_01"
+        }
+      ]
+    },
+    "ExQTEModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": false,
+          "CharacterBagMute": false,
+          "CharacterMoveMute": false,
+          "CharacterSkillMute": false,
+          "CharacterSwitchMute": false,
+          "Tag": "Player_ExQTE_InputMute"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_PerfectEvade_OverrideOutlineColor_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Avatar_Common_ExQTE_Start_TimeSlow_01",
+          "IsGlobal": true,
+          "MpExecMode": "NotExecuted"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_ExQTE_InputMute"
+        },
+        {
+          "$type": "InterruptTimeSlowAction",
+          "Target": "Self",
+          "TargetKey": "Avatar_Common_ExQTE_Start_TimeSlow_01"
+        }
+      ]
+    },
+    "InvincibleModifier_PartnerAvatar": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Player_Default_PartnerAvatar_Invincible"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Player_Default_PartnerAvatar_Invincible"
+        }
+      ]
+    },
+    "LockLifeModifier_PartnerAvatar": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 1
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "NoDamageModifier_PartnerAvatar": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_NoDamage": 1
+      }
+    },
+    "OnStageInvincibleModifier": {
+      "Duration": 5,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAvatarIsOnStage",
+              "IsOnStage": true,
+              "Target": "Self"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "OnStageInvincibleModifier",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "PushInvincibleAction",
+              "Tag": "QTEOnStageInvincible",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "QTEOnStageInvincible",
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "OnStageInvincibleModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutFinish": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "OnStageInvincibleModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryStrengthLevelModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_ParryStrengthLevel": 1
+      }
+    },
+    "PerfectEvadeModifier_Invincible": {
+      "Duration": 0.33333,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Player_Default_PerfectEvade_Invincible"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Player_Default_PerfectEvade_Invincible"
+        }
+      ]
+    },
+    "SoundActionModifier_PartnerAvatar": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ActwithStateFrameMixin",
+          "ConfigList": [
+            {
+              "ActionList": [
+                {
+                  "$type": "TriggerSoundAction",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "IsPartnerAvatar_ExSp"
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "LocalAvatar",
+                  "soundActionKey": "Play_vo_char_{}_coattack_reward_branch_b"
+                },
+                {
+                  "$type": "TriggerSoundAction",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "IsPartnerAvatar_QTE"
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "LocalAvatar",
+                  "soundActionKey": "Play_vo_char_{}_coattack_reward_qte"
+                },
+                {
+                  "$type": "TriggerSoundAction",
+                  "Target": "Self",
+                  "soundActionKey": "Play_SFX_Avatar_CoAttack_Out"
+                }
+              ],
+              "AnimatorStateName": "SwitchOut_Attack",
+              "ForceTriggerOnTransitionIn": false,
+              "ForceTriggerOnTransitionOut": false,
+              "Frame": 0,
+              "IsLoop": false,
+              "LayerIndex": 0
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsPartnerAvatar_ExSp"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsPartnerAvatar_QTE"
+          ],
+          "IsAdd": false,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsPartnerAvatar_ExSp"
+          ],
+          "IsAdd": false,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsPartnerAvatar_QTE"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchInBegin": [
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "Play_SFX_Avatar_CoAttack_In"
+        }
+      ]
+    },
+    "WalkToRunModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 2.0,
+          "TimeUpActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_WalkToRun",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "MpExecMode": "AuthorityOnly",
+          "ParamName": "Bool_WalkToRun",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_Evade_Front",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Run_Loop",
+              "IsLoop": true,
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

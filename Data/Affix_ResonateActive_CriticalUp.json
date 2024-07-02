@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Affix_ResonateActive_CriticalUp",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ResonateActive_StunRatioUp",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ResonateActive_StunRatioUp": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDelta": "%CriticalDelta"
+      }
+    }
+  }
+}

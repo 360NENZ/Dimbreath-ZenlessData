@@ -1,0 +1,191 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "TarotCard_CounterCombo"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "TarotCard_CounterCombo"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Enhance",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "TarotCard_CounterCombo"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Back",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "TarotCard_CounterCombo"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "TarotCard_CounterCombo"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid",
+          "Frame": 0,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ZoneTagModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nostradamus_TarotCard_CounterCombo",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ZoneTagModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "TarotCard_CounterCombo"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "AbilityName": "Card_Edrink_2010202",
+  "AbilitySpecials": {
+    "AS_FirstRecoverFever": {
+      "Value": 100
+    },
+    "AS_RecoverFever": {
+      "Value": 100
+    },
+    "AS_UltraSkillCount": {
+      "Value": 0
+    },
+    "ByOdds": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RecoverFeverAction",
+        "Amount": 0,
+        "IgnoreRatio": false,
+        "Percentage": "%AS_FirstRecoverFever",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "AS_UltraSkillCount",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ControlModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ControlModifier": {
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "RandomOperator",
+          "Odds": "%ByOdds",
+          "OnFailure": [
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "Params": [
+                {
+                  "AbilityName": "Card_Edrink_2010202",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": 0,
+                      "ParamName": "AS_UltraSkillCount",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ],
+              "Target": "TeamAvatars"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RecoverFeverModifier",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "LessEqual",
+                  "Param": 1,
+                  "ParamName": "AS_UltraSkillCount",
+                  "ParamType": "Float",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "Params": [
+                {
+                  "AbilityName": "Card_Edrink_2010202",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Add",
+                      "Param": 1,
+                      "ParamName": "AS_UltraSkillCount",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ],
+              "Target": "TeamAvatars"
+            },
+            {
+              "$type": "SetTargetAbilitySpecialAction",
+              "Params": [
+                {
+                  "AbilityName": "Card_Edrink_2010202",
+                  "AbilitySpecials": [
+                    {
+                      "ModifyFunction": "Replace",
+                      "Param": 0,
+                      "ParamName": "AS_UltraSkillCount",
+                      "ParamType": "Float"
+                    }
+                  ]
+                }
+              ],
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Greater",
+                  "Param": 2,
+                  "ParamName": "AS_UltraSkillCount",
+                  "ParamType": "Float",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "TeamAvatars"
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExQTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverFeverModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%AS_RecoverFever",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "Play_SFX_Char_TarotCard_Edrink_2010202"
+        }
+      ]
+    }
+  }
+}

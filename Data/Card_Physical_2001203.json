@@ -1,0 +1,48 @@
+{
+  "AbilityName": "Card_Physical_2001203",
+  "AbilitySpecials": {
+    "AS_StunRatio": {
+      "Value": 0.3
+    },
+    "Duration": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PhyBreakStunUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PhyBreakStunUpModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Physics"
+            }
+          ],
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AS_StunRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

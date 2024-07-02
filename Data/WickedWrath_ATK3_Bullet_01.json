@@ -1,0 +1,110 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 1,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.15
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_WickedWrath_Attack_03_Bullet_01"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WeaponPoint_L",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 2.0,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_WickedWrath_ATK03_Attackproperty",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_WickedWrath_Attack_03_Explode_01"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 0.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "IsCanReflect": true,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": 1,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_Ether_S"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_Ether_S_Ground"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "WickedWrath_ATK3_Bullet_01",
+  "AbilityStacking": "Unique"
+}

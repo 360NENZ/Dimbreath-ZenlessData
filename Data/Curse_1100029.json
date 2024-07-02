@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Curse_1100029",
+  "AbilitySpecials": {
+    "AS_AddDamageRatio": {
+      "Value": 0.1
+    },
+    "AS_NoElementAccumulation": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AS_AddDamageRatio",
+      "Actor_NoElementAccumulation": "%AS_NoElementAccumulation"
+    }
+  }
+}

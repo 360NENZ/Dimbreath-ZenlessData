@@ -1,0 +1,95 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Loop",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Harumasa_Trap_EffModifier",
+            "Harumasa_Trap_MatModifier"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Harumasa_Trap_EffectManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Harumasa_Trap_EffModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Harumasa_Trap_Loop_01_Flash",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Harumasa_Trap_MatModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Harumasa_Trap_MA_Born_OverrideRimGlow_02",
+          "Target": "Self",
+          "key": "Avatar_Male_Size01_Harumasa_Trap_MA_Born_OverrideRimGlow_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Harumasa_Trap_MA_Born_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Male_Size01_Harumasa_Trap_MA_Born_Mat_01_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Harumasa_Trap_MA_Born_OverrideRimGlow_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Male_Size01_Harumasa_Trap_MA_Born_Mat_01_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

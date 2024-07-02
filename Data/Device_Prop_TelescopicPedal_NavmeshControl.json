@@ -1,0 +1,103 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Close_Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CloseModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Open_Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CloseModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Open",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "OpenModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Close",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "OpenModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Prop_TelescopicPedal_NavmeshControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CloseModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "WallCollider",
+            "WallCollider(1)"
+          ],
+          "IsActive": false,
+          "Tag": "Device_Prop_TelescopicPedal_NavmeshControl_Close"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopPointGameObjectControlAction",
+          "Tag": "Device_Prop_TelescopicPedal_NavmeshControl_Close"
+        }
+      ]
+    },
+    "OpenModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "WallCollider",
+            "WallCollider(1)"
+          ],
+          "IsActive": true,
+          "Tag": "Device_Prop_TelescopicPedal_NavmeshControl_Open"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopPointGameObjectControlAction",
+          "Tag": "Device_Prop_TelescopicPedal_NavmeshControl_Open"
+        }
+      ]
+    }
+  }
+}

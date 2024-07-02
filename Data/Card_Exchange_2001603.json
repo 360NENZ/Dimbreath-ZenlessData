@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Card_Exchange_2001603",
+  "AbilitySpecials": {
+    "AS_RecoverFever": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "RecoverFeverAction",
+        "Amount": 0,
+        "IgnoreRatio": false,
+        "Percentage": "%AS_RecoverFever",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "EvadeAid",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ParryAid",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

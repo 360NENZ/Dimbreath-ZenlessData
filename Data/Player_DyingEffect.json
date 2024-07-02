@@ -1,0 +1,89 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "AttachPointName": "Bip001",
+              "EffectPattern": "Eff_Common_Death_Enter_S",
+              "Tag": "Eff_Common_Death_Enter_S_Dying"
+            },
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Avatar_Death_CamShake_01"
+            }
+          ],
+          "AnimatorStateName": "Dying",
+          "Frame": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Common_Death_Enter_01_01",
+              "Tag": "Eff_Common_Death_Enter_01_01_Dying"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Avatar_Common_MA_Death_ScreenImage_Dying",
+              "key": "Avatar_Common_MA_Death_ScreenImage"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Avatar_Common_MA_Death_OverrideRimGlow_01_Dying",
+              "key": "Avatar_Common_MA_Death_OverrideRimGlow_01"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Avatar_Common_MA_Death_OverrideOutline_01_Dying",
+              "key": "Avatar_Common_MA_Death_OverrideOutline_01"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Avatar_Common_MA_Death_Dither_01_Dying",
+              "key": "Avatar_Common_MA_Death_Dither_01"
+            }
+          ],
+          "AnimatorStateName": "Dying",
+          "Frame": 30
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_DyingEffect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSwitchOutBegin": [
+      {
+        "$type": "SpecialEffectFadeAction",
+        "EffectNames": [
+          "Eff_Common_Death_Enter_S",
+          "Eff_Common_Death_Enter_01_01"
+        ]
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "Tag": "Avatar_Common_MA_Death_Dither_01_Dying"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "Tag": "Avatar_Common_MA_Death_ScreenImage_Dying"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "Tag": "Avatar_Common_MA_Death_OverrideRimGlow_01_Dying"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "Tag": "Avatar_Common_MA_Death_OverrideOutline_01_Dying"
+      }
+    ]
+  }
+}

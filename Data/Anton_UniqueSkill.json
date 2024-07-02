@@ -1,0 +1,44 @@
+{
+  "AbilityName": "Anton_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_DrillAddedDamageRatio": {
+      "Value": 0.2
+    },
+    "AS_DriveAddedDamageRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "DrillAttack"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_DrillAddedDamageRatio",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "DriveAttack"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_DriveAddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

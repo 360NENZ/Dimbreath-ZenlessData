@@ -1,0 +1,72 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Player_AidAttackWitchTime",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Player_AidAttackWitchTime",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "New_DurationTime",
+                  "ParamName": "DurationTime",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Exchange_2001601",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0
+    },
+    "AddedStunRatio": {
+      "Value": 0.8
+    },
+    "New_DurationTime": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ParryAidModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ParryAidModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "ParryAid",
+                "AttackAid"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AddedStunRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

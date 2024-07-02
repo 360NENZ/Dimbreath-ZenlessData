@@ -1,0 +1,256 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 2.1,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_04_Bullet_01"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.14,
+            "y": 2.15,
+            "z": 0.51
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DelayActionList": [
+        {
+          "Actions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "HeavyFirePower_ATK4_Grenade_Explode_Predicate",
+              "PosRotConfig": {
+                "CoordsOption": "Self",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Other"
+                }
+              },
+              "PositionArgument": "Bullet"
+            }
+          ],
+          "DelayTime": 1.9
+        }
+      ],
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Monster_HeavyFirePower_ATK04_Attackproperty_01",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_04_Explode_01"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2.5,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": -1,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 2,
+      "MovementConfig": {
+        "$type": "ConfigMovementParabola",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.4,
+        "HitTangentialRatio": 0.5,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -2.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TimesUpMoveOption": "Remain",
+        "h1": 0.8,
+        "h2": 1.6,
+        "s1": 1.0,
+        "s2": 8.5,
+        "t1": 0.65,
+        "t2": 0.65
+      },
+      "NeedWarningHUD": true,
+      "OnBulletCreateAction": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_04_Trail_01",
+          "Target": "Other"
+        }
+      ],
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_HeavyFirePower_ATK4_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyFirePower_ATK4_Grenade_Bullet_02",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyFirePower_ATK4_Grenade_Bullet_02",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 120.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyFirePower_ATK4_Grenade_Bullet_02",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 240.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "ShowWarningHUDInScreen": true,
+      "Targetting": "Enemy",
+      "TrailEffect": {
+        "EffectPattern": "Eff_Common_Alert_Circle_04"
+      }
+    }
+  ],
+  "AbilityName": "HeavyFirePower_ATK4_1_Grenade_Bullet_01",
+  "AbilityStacking": "Unique"
+}

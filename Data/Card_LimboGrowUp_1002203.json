@@ -1,0 +1,100 @@
+{
+  "AbilityName": "Card_LimboGrowUp_1002203",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Current": {
+      "Value": 0.0
+    },
+    "AS_AddedDamageRatio_PerCount": {
+      "Value": 0.05
+    },
+    "AS_AddedDamageRatio_UpLimit": {
+      "Value": 0.5
+    },
+    "AS_ShieldHpRatio": {
+      "Value": 0.15
+    },
+    "BOOSTOn": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldModifier",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 1,
+            "ParamName": "BOOSTOn",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_AddedDamageRatio_PerCount)*100*(1-property(CurHP)/property(MaxHP))",
+        "ParamName": "AS_AddedDamageRatio_Current",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "AS_AddedDamageRatio_UpLimit",
+        "ParamName": "AS_AddedDamageRatio_Current",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": "AS_AddedDamageRatio_UpLimit",
+            "ParamName": "AS_AddedDamageRatio_Current",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_ChessBoard",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_ChessBoard": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio_Current"
+      }
+    },
+    "ShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": -1,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Card_Armor",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%AS_ShieldHpRatio",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  }
+}

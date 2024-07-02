@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Nostradamus_SwitchIn_Attack_CamStretch_02",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "CameraStretchAction",
+      "Predicates": [
+        {
+          "$type": "ByCamAvatarAngleRange",
+          "AngleMax": 0,
+          "AngleMin": -180
+        }
+      ],
+      "StretchConfigKey": "Nostradamus_SwitchIn_Attack_CamStretch_02_L"
+    },
+    {
+      "$type": "CameraStretchAction",
+      "Predicates": [
+        {
+          "$type": "ByCamAvatarAngleRange",
+          "AngleMax": 180,
+          "AngleMin": 0
+        }
+      ],
+      "StretchConfigKey": "Nostradamus_SwitchIn_Attack_CamStretch_02_R"
+    }
+  ]
+}

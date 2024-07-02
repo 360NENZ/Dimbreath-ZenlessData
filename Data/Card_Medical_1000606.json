@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Card_Medical_1000606",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0
+    },
+    "DamageRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(DamageRatio)*(1-property(CurHP)/property(MaxHP))",
+        "ParamName": "AddedDamageRatio",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

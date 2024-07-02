@@ -1,0 +1,239 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "axisInfos": [
+        {
+          "axis": 1,
+          "baseValue": 2.0,
+          "curve": {
+            "keys": [
+              {
+                "inTangent": 3.918749,
+                "inWeight": 0.0,
+                "outTangent": 3.918749,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": -0.00435638428,
+                "value": 0.004878998,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -0.009728432,
+                "inWeight": 0.333333343,
+                "outTangent": -0.009728432,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": 0.249582052,
+                "value": 1.0,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -3.99421024,
+                "inWeight": 0.333333343,
+                "outTangent": -3.99421024,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": 0.5013428,
+                "value": 0.008514404,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -0.05635953,
+                "inWeight": 0.333333343,
+                "outTangent": -0.05635953,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": 0.75051856,
+                "value": -1.000701,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 3.93749523,
+                "inWeight": 0.333333343,
+                "outTangent": 3.93749523,
+                "outWeight": 0.0,
+                "tangentMode": 34,
+                "time": 1.00068521,
+                "value": -0.0156709552,
+                "weightedMode": 0
+              }
+            ],
+            "length": 5,
+            "postWrapMode": 8,
+            "preWrapMode": 8
+          },
+          "param": {
+            "param1": 11,
+            "param2": 20
+          }
+        },
+        {
+          "axis": 2,
+          "baseValue": 2.0,
+          "curve": {
+            "keys": [
+              {
+                "inTangent": -0.005461779,
+                "inWeight": 0.0,
+                "outTangent": -0.005461779,
+                "outWeight": 0.333333343,
+                "tangentMode": 34,
+                "time": 0.0,
+                "value": 0.00521057844,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -12.9586325,
+                "inWeight": 0.02610311,
+                "outTangent": -12.9586325,
+                "outWeight": 0.044633735,
+                "tangentMode": 0,
+                "time": 0.5042078,
+                "value": 0.002456707,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -0.005461778,
+                "inWeight": 0.333333343,
+                "outTangent": -0.005461778,
+                "outWeight": 0.0,
+                "tangentMode": 34,
+                "time": 1.0,
+                "value": -0.00025120005,
+                "weightedMode": 0
+              }
+            ],
+            "length": 3,
+            "postWrapMode": 8,
+            "preWrapMode": 8
+          },
+          "param": {
+            "param1": 11,
+            "param2": 20
+          }
+        }
+      ],
+      "brakeDestroy": false,
+      "effectType": 1,
+      "endFrame": 20,
+      "idx": 1049783808,
+      "moveType": 1,
+      "pos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    },
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "cpAnimRotationType": 0,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 0.0,
+            "inWeight": 0.0,
+            "outTangent": 0.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 1.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": 0.0,
+            "inWeight": 0.0,
+            "outTangent": 0.0,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 1.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 2,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 2,
+      "endFrame": 20,
+      "idx": -1857971968,
+      "speedEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 90.0
+      },
+      "speedParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 1
+    },
+    {
+      "aoeAreaParam": {
+        "areaParam1": 0.75,
+        "areaParam2": 0.0,
+        "areaType": 1,
+        "param1Param": {
+          "param1": 11,
+          "param2": 75
+        },
+        "param2Param": {
+          "param1": 0,
+          "param2": 0
+        }
+      },
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "cpDamageInternal": 1,
+      "effectType": 4,
+      "endFrame": 20,
+      "idx": 321372672,
+      "selectTargetType": 0,
+      "startFrame": 0,
+      "trackOrder": 2
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 30,
+  "frameRate": 20,
+  "loop": false,
+  "modelPath": "Assets/Editor/OptimizeKits/PerformanceHeatMap/Arrow.fbx",
+  "partLoop": false,
+  "seqName": "sk_65",
+  "speedParams": {
+    "param1": 44,
+    "param2": 1000
+  },
+  "topSpeed": 99.0,
+  "totalTime": 1.5,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Move",
+      "trackType": 1
+    },
+    {
+      "order": 1,
+      "trackID": 2,
+      "trackName": "动画Rotation",
+      "trackType": 2
+    },
+    {
+      "order": 2,
+      "trackID": 3,
+      "trackName": "伤害判定",
+      "trackType": 4
+    }
+  ]
+}

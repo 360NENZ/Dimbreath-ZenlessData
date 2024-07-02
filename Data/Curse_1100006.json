@@ -1,0 +1,82 @@
+{
+  "AbilityName": "Curse_1100006",
+  "AbilitySpecials": {
+    "AutoRecoverRate_Delta": {
+      "Value": 0
+    },
+    "AutoRecoverRate_Percentage_Boss": {
+      "Value": 0.05
+    },
+    "AutoRecoverRate_Percentage_Elite": {
+      "Value": 0.05
+    },
+    "AutoRecoverRate_Percentage_Normal": {
+      "Value": 0.06
+    },
+    "StunDamageTakeRatio": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": -1,
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxStun)*specials(AutoRecoverRate_Percentage_Normal)",
+        "ParamName": "AutoRecoverRate_Delta",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Normal",
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxStun)*specials(AutoRecoverRate_Percentage_Elite)",
+        "ParamName": "AutoRecoverRate_Delta",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Elite",
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxStun)*specials(AutoRecoverRate_Percentage_Boss)",
+        "ParamName": "AutoRecoverRate_Delta",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Self"
+          }
+        ],
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunRecover"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunRecover": {
+      "Duration": -1,
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%StunDamageTakeRatio",
+        "AutoRecoverRate_Delta": "%AutoRecoverRate_Delta"
+      }
+    }
+  }
+}

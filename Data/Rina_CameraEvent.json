@@ -1,0 +1,52 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Rush"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Rush"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_CameraEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CameraEventModifier_Attack_Rush": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Rina_Attack_Rush_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Rina_Attack_Rush_CamStretch_01"
+        }
+      ]
+    }
+  }
+}

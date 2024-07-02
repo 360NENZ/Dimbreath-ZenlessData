@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Weapon_Ability_12007",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

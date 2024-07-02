@@ -1,0 +1,229 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Normal",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AddAttackCheckModifier",
+            "SwitchinModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchOut_Normal",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveAttackCheckModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "SwitchOut_Air",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "RemoveAttackCheckModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Walk",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Run_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Run_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Run_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Idle",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_AirIdle",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_AirMove_Slow",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_AirMove_Fast",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AllowChangeTargetModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_FightingCommon_SelectTarget",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AddAttackCheckModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TeamAttackCheckModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "AllowChangeTargetModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "LockTargetModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "LockTargetAction",
+          "LockTargetID": "AI_FightingBangboo_Double_LockTarget",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "AllowChangeTargetModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RemoveAttackCheckModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TeamAttackCheckModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "SwitchinModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "LockTargetAction",
+          "LockTargetID": "AI_FightingBangboo_Double_BackTarget_01",
+          "Predicates": [
+            {
+              "$type": "ByEnemyCount",
+              "CompareType": "Greater",
+              "CompareValue": 0,
+              "EnemyStrengthType": [
+                "Normal",
+                "Elite",
+                "Boss"
+              ],
+              "FilterType": "ByStrengthType"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "LockTargetAction",
+          "LockTargetID": "AI_FightingBangboo_Double_BackTarget_02",
+          "Predicates": [
+            {
+              "$type": "ByEnemyCount",
+              "CompareType": "Equal",
+              "CompareValue": 0,
+              "EnemyStrengthType": [
+                "Normal",
+                "Elite",
+                "Boss"
+              ],
+              "FilterType": "ByStrengthType"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "TeamAttackCheckModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOtherResolved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LockTargetModifier",
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}

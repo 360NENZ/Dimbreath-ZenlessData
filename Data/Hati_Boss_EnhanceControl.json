@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Hati_Boss_EnhanceControl",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHitPre": []
+  },
+  "Modifiers": {
+    "EnhanceModifier": {
+      "Duration": 30,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsEnhanced"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "IsEnhanced"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "CustomKey": "Monster_HatiArmoredBoss_MA_P1_Perform_Roar_SecondaryEmission_01",
+          "Tag": "Monster_HatiArmoredBoss_MA_P1_Perform_Roar_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "EnhanceModifier",
+      "Target": "Self"
+    }
+  ]
+}

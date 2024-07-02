@@ -1,0 +1,244 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 1.0,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Device_Prop_DefensiveTower_01_Attack_01_07_LaunchWarning"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Device_Military_MissileVerticalLauncher_Attackproperty",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Device_Prop_DefensiveTower_01_Attack_01_08_Explosion"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Military_SplitMine_SplitExplodeUnit_1",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Military_SplitMine_SplitExplodeUnit_2",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 60.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Military_SplitMine_SplitExplodeUnit_3",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 120.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Military_SplitMine_SplitExplodeUnit_4",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 180.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Military_SplitMine_SplitExplodeUnit_5",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 240.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Military_SplitMine_SplitExplodeUnit_6",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 300.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.3,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "Targetting": "Stage"
+    }
+  ],
+  "AbilityName": "Device_Military_SplitMine_MotherBomb",
+  "AbilityStacking": "Unique"
+}

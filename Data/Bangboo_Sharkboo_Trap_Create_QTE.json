@@ -1,0 +1,36 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "QTE",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "TrapBornModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_Trap_Create_QTE",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TrapBornModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimEvent",
+          "AnimEventID": "Bangboo_Sharkboo_Trap_Attackproperty_Attack01_HitCheck",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

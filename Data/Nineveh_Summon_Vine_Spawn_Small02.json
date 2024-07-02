@@ -1,0 +1,275 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "NodePoint": "SmallNinevehVinePoint_01",
+              "OffsetReferTarget": "NodePoint"
+            }
+          },
+          "EffectPattern": "Eff_Monster_NinevehVine_Born_04_Ground",
+          "Target": "Target"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "VineSmall_02_Exist"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "FirstWave"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "FirstWave"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "SecondWave"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "SecondWave"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ThirdWave"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "ThirdWave"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "VineExistModifier_Small_02",
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 900011651,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "SmallVineSpawnPoint_02",
+          "BackupNodePoint": "MonsterPos_A1",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true
+        }
+      },
+      "SummonTag": [
+        "NinevehVine_Small"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Nineveh_Summon_Vine_Spawn_Small02",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "VineExistModifier_Small_02": {
+      "Duration": -1,
+      "IsUnique": true,
+      "OnRemoved": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "CustomKey": "Monster_Nineveh",
+          "Params": [
+            {
+              "AbilityName": "Nineveh_SummonVines_Manager",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": 1,
+                  "ParamName": "FirstWaveKilledCounting",
+                  "ParamType": "Integer"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "FirstWave"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "CustomKey": "Monster_Nineveh",
+          "Params": [
+            {
+              "AbilityName": "Nineveh_SummonVines_Manager",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": 1,
+                  "ParamName": "SecondWaveKilledCounting",
+                  "ParamType": "Integer"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "SecondWave"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "CustomKey": "Monster_Nineveh",
+          "Params": [
+            {
+              "AbilityName": "Nineveh_SummonVines_Manager",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": 1,
+                  "ParamName": "ThirdWaveKilledCounting",
+                  "ParamType": "Integer"
+                }
+              ]
+            }
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "ThirdWave"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAdded": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "SmallVineSpawnPoint_02",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": false,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "NodePoint": "SmallNinevehVinePoint_02",
+          "OffsetReferTarget": "NodePoint"
+        }
+      },
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ],
+      "ProcessType": "Create",
+      "Target": "Self"
+    }
+  ]
+}

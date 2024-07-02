@@ -1,0 +1,85 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_ParryAid_L",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HighLightEXSPModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParryAid_H",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HighLightEXSPModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_EvadeAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HighLightEXSPModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Level_VRTeachLevel_LimitSwitch_EXSPHighLight",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyPerfectSwitchPointAction",
+        "Amount": 3,
+        "ModifyFunction": "Add"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HighLightEXSPModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetupUIAction",
+          "HighLightTags": [
+            "SkillButtonBranch"
+          ],
+          "IgnoreFadeAnimation": true,
+          "Priority": 0,
+          "SetupTag": "Level_VRTeachLevel_LimitSwitch_EXSPHighLight"
+        },
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": 3,
+          "ModifyFunction": "Add"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptSetupUIAction",
+          "IgnoreFadeAnimation": true,
+          "SetupTag": "Level_VRTeachLevel_LimitSwitch_EXSPHighLight"
+        }
+      ]
+    }
+  }
+}

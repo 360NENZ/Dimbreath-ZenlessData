@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Ben_CoAttack",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAwaked": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "NotExecuted",
+        "ParamName": "Bool_CoAttackAllowed_Ben",
+        "ParamType": 2,
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnDying": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "MpExecMode": "NotExecuted",
+        "ParamName": "Bool_CoAttackAllowed_Ben",
+        "ParamType": 2,
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnDyingRecovered": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "MpExecMode": "NotExecuted",
+        "ParamName": "Bool_CoAttackAllowed_Ben",
+        "ParamType": 2,
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnKilled": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "MpExecMode": "NotExecuted",
+        "ParamName": "Bool_CoAttackAllowed_Ben",
+        "ParamType": 2,
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

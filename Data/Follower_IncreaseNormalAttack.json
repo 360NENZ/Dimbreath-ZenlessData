@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Follower_IncreaseNormalAttack",
+  "AbilitySpecials": {
+    "Dynamic_Actor_AddedAttackRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IncreaseAttackModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IncreaseAttackModifier": {
+      "OnHitOther": []
+    }
+  }
+}

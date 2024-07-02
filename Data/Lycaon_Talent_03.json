@@ -1,0 +1,328 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Enhance",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HpShieldModifier_Listener"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lycaon_Talent_03",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 15
+    },
+    "AS_ShieldDuration": {
+      "Value": 3
+    },
+    "AS_ShieldPercentage": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HpShieldModifier_Listener": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HpShieldModifier_Shield",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HpShieldModifier_Shield": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "SetRBLOffsetAction",
+              "RBLOffset": 2,
+              "Tag": "Lycaon_Talent_03_RBLOffset",
+              "Target": "Self"
+            }
+          ],
+          "Duration": "%AS_ShieldDuration",
+          "EmptyActions": [
+            {
+              "$type": "UnsetRBLOffsetAction",
+              "Tag": "Lycaon_Talent_03_RBLOffset",
+              "Target": "Self"
+            }
+          ],
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Lycaon_Talent_03_HPShield",
+          "TimeUpActions": [
+            {
+              "$type": "UnsetRBLOffsetAction",
+              "Tag": "Lycaon_Talent_03_RBLOffset",
+              "Target": "Self"
+            }
+          ],
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%AS_ShieldPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Affix_General_DamageUp_Lv1",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUp": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

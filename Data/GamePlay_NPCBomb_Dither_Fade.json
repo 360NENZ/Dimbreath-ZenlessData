@@ -1,0 +1,102 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Normal",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchOut_Normal",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvisibleModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GamePlay_NPCBomb_Dither_Fade",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FadeInModifier": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "Bomb"
+        },
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Avatar_Default_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "FadeOutModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.49,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "Bomb",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Default_Dither_Fade",
+          "Tag": "Avatar_Default_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvisibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FadeOutModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FadeOutModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FadeInModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

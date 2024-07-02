@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_Electro_2000501",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 1.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_BuffDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

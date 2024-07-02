@@ -1,0 +1,170 @@
+{
+  "AbilityName": "ZhuYuan_Talent_01",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "QTEDelayModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "EXQTEDelayModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "EXQTEDelayModifier": {
+      "Duration": 0.03,
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EXQTERecoverBulletModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EXQTERecoverBulletModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "CustomPropertyType": "ShotgunBullet",
+              "CustomReferMaxPropertyType": "ShotgunBulletMax",
+              "IsUsePercentage": false,
+              "PropertyType": "Custom",
+              "ReferMaxPropertyType": "Custom",
+              "ValueRangeActions": [
+                {
+                  "Val": 1,
+                  "ValueToLowActions": [
+                    {
+                      "$type": "ModifyProperty",
+                      "Amount": 9,
+                      "CustomPropertyType": "ShotgunBullet",
+                      "IsUsePercentage": false,
+                      "Percentage": 0,
+                      "PropertyModifyFunction": "Add",
+                      "PropertyType": "Custom"
+                    },
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "EXQTERecoverBulletModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuan_Talent_01_EXQTEReady"
+          ],
+          "IsAdd": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuan_Talent_01_EXQTEReady"
+          ],
+          "IsAdd": false
+        }
+      ]
+    },
+    "QTEDelayModifier": {
+      "Duration": 0.03,
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "QTERecoverBulletModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "QTERecoverBulletModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "CustomPropertyType": "ShotgunBullet",
+              "CustomReferMaxPropertyType": "ShotgunBulletMax",
+              "IsUsePercentage": false,
+              "PropertyType": "Custom",
+              "ReferMaxPropertyType": "Custom",
+              "ValueRangeActions": [
+                {
+                  "Val": 1,
+                  "ValueToLowActions": [
+                    {
+                      "$type": "ModifyProperty",
+                      "Amount": 6,
+                      "CustomPropertyType": "ShotgunBullet",
+                      "IsUsePercentage": false,
+                      "Percentage": 0,
+                      "PropertyModifyFunction": "Add",
+                      "PropertyType": "Custom"
+                    },
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "QTERecoverBulletModifier",
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuan_Talent_01_QTEReady"
+          ],
+          "IsAdd": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuan_Talent_01_QTEReady"
+          ],
+          "IsAdd": false
+        }
+      ]
+    }
+  }
+}

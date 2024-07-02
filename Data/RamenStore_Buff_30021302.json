@@ -1,0 +1,43 @@
+{
+  "AbilityName": "RamenStore_Buff_30021302",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 10
+    },
+    "BreakStunRatio": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_BreakStunRatio",
+        "PropertyValue": "%BreakStunRatio"
+      }
+    ]
+  }
+}

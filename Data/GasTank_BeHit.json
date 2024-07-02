@@ -1,0 +1,28 @@
+{
+  "AbilityName": "GasTank_BeHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GasTank_BeHit",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GasTank_BeHit": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Open",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

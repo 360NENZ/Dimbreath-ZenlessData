@@ -1,0 +1,211 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "DomainNPCOccupyMixin",
+      "OnFailureActions": [],
+      "OnOccupyStartActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Open",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnSuccessActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Close",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "ResourceRangeActions": [
+        {
+          "HighToValueActions": [],
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.1
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyLayeredEffectAction",
+              "isActive": true,
+              "layersIndex": [
+                0,
+                1,
+                2
+              ]
+            }
+          ],
+          "Val": 0.2
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.3
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.4
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.5
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyLayeredEffectAction",
+              "isActive": true,
+              "layersIndex": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          ],
+          "Val": 0.6
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.7
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.8
+        },
+        {
+          "LowToValueActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_Progress",
+              "Target": "Self"
+            }
+          ],
+          "Val": 0.9
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle_Undomain",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "IdleUndomainModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Domaining",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "DomainingModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Idle_Domained",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "IdleDomainedModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "NPC_DomainOccupy",
+  "DefaultModifier": {
+    "OnNPCActive": []
+  },
+  "Modifiers": {
+    "DomainingModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domaining_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "IdleDomainedModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domained_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "IdleUndomainModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Undomain_Loop",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

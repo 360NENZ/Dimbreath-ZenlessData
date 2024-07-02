@@ -1,0 +1,69 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Evade_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeHoldModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Evade_Front_Hold",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GhostModifier_Interrupted_Taunt"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Evade_Front_Hold",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SelfAttackTargetModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Attack_Target"
+          ],
+          "IsAdd": false,
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Rina_Attack_Target"
+          ],
+          "IsAdd": true,
+          "Target": "SelfAttackTarget"
+        },
+        {
+          "$type": "SetSelfAttackTargetAction",
+          "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+          "ForceOverride": true,
+          "IgnoreSetAttackTargetCD": true,
+          "OnlySetOnNull": false,
+          "Source": "Self",
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

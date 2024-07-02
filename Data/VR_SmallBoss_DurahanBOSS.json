@@ -1,0 +1,196 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "CustomKey": "Mandrake_ATK01",
+              "ModifierName": "DamageUpModifier",
+              "Target": "Custom"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DamageUpModifier",
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "CommandReady"
+              ],
+              "IsAdd": false
+            }
+          ],
+          "AnimatorStateName": "Transform_ToSwordShield",
+          "ForceTriggerOnTransitionIn": false,
+          "Frame": 82,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "VR_SmallBoss_DurahanBOSS",
+  "AbilitySpecials": {
+    "AS_AddBreakStunRatio": {
+      "Value": 0.3
+    },
+    "AS_AddedDamageRatio": {
+      "Value": -0.4
+    },
+    "AS_DestroyRecoverRate_Ratio": {
+      "Value": -0.2
+    },
+    "AS_RecoverStunAmount": {
+      "Value": 0.0
+    },
+    "AS_RecoverStunRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "CommandReady"
+        ],
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "DurahanLeader"
+            ]
+          }
+        ]
+      }
+    ],
+    "OnBehaviorTreeChanged": [
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": true,
+        "ParamName": "Bool_IsSwitchingBossType",
+        "Predicates": [
+          {
+            "$type": "ByAIParam",
+            "BoolParamValue": false,
+            "CompareType": "Equal",
+            "ParamName": "Bool_IsSwitchingBossType"
+          }
+        ]
+      },
+      {
+        "$type": "WriteAIParamAction",
+        "IntParamValue": 2,
+        "ParamName": "Int_BossType_Target",
+        "Predicates": [
+          {
+            "$type": "ByAIParam",
+            "CompareType": "NotEqual",
+            "IntParamValue": 2,
+            "ParamName": "Int_BossType_Target"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUpModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Monster_Skill_Mandrake_Attack_1_Buff_Hit"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Buff_Attack_SecondaryEmission"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PropertyModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsStunDestroyed",
+              "IsStunDestroyed": false,
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Target"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByIsStunDestroyed",
+              "IsStunDestroyed": false,
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AS_AddBreakStunRatio",
+          "Target": "Target"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Common_MA_Buff_Attack_SecondaryEmission",
+          "Target": "Self"
+        }
+      ]
+    },
+    "PropertyModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_StunDestroyRecoverRate_Ratio": "%AS_DestroyRecoverRate_Ratio"
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_RecoverStunRatio)*property(MaxStun)",
+      "ParamName": "AS_RecoverStunAmount",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "RecoverStunAction",
+      "Amount": "%AS_RecoverStunAmount"
+    }
+  ]
+}

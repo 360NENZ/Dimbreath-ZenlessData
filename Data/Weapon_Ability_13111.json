@@ -1,0 +1,91 @@
+{
+  "AbilityName": "Weapon_Ability_13111",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.05
+    },
+    "AS_Duration": {
+      "Value": 10
+    },
+    "AS_IntervalCD": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExSp",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier_Effect": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Normal"
+                  ]
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Rush"
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

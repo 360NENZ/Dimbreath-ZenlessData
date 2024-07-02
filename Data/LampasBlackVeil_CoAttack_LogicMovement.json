@@ -1,0 +1,3956 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_03_HitTarget",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_03_HitTarget",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Target",
+              "EffectPattern": "Eff_Monster_LampasBlackVeil_CoAttack_04_12_Diss",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Bip001 Pelvis",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": false,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 8,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AttachRootModifier",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "CoAttack_03_A_01",
+                  "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "IsLoop": false,
+                  "LayerIndex": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false,
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 8,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectOwner": "Target",
+              "EffectPattern": "Eff_Monster_LampasBlackVeil_CoAttack_03_21_Trail",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 160.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": false,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByHasModifier",
+                      "ModifierNameList": [
+                        "AttachRootModifier"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 37,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AttachRootModifier",
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByHasModifier",
+                      "ModifierNameList": [
+                        "AttachRootModifier"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 38,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HideMeshModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_05",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_03_A_05_IsEnter",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_03_A_05_IsEnter",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_CoAttack_03_A_05_IsEnter",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "ParamName": "Bool_CoAttack_03_A_05_IsEnter",
+              "ParamType": 2,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_05",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CoAttack_03_SpecialLockTarget",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "ParamName": "Bool_CoAttack_03_HitTarget",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "CoAttack_03_SpecialLockTarget",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": true
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "Boss_Inner1",
+              "ParamName": "InitNodePoint",
+              "ParamType": "String"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "Boss_Inner1",
+              "ParamName": "InitNodePoint",
+              "ParamType": "String"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "StartPoint",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "LocalAvatar"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "EndPoint",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              }
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 180.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 10.0
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 70,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": -135.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 7.14,
+                    "y": 0.0,
+                    "z": 7.14
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 108,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "StartPoint",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 3,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 5,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "LocalAvatar"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "EndPoint",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 3,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 5,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              }
+            },
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 180.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 10.0
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 3,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 5,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": -135.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 7.14,
+                    "y": 0.0,
+                    "z": 7.14
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 2,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 4,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 47,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "StartPoint",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "LocalAvatar"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "EndPoint",
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              }
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": -90.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 10.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 70,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 135.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -7.14,
+                    "y": 0.0,
+                    "z": 7.14
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 108,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "StartPoint",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 3,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 5,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "LocalAvatar"
+                }
+              }
+            },
+            {
+              "$type": "CreateSavePointAction",
+              "PointName": "EndPoint",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 3,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 5,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "TargetPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              }
+            },
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": -90.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 10.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 3,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 5,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.3,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 1,
+                "EffStartSizeY": 17
+              },
+              "EffectPattern": "Eff_Common_Alert_Rec_Ether_01",
+              "FireEffectPosRot": {
+                "CoordsOption": "Relative",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 135.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": -7.14,
+                    "y": 0.0,
+                    "z": 7.14
+                  }
+                },
+                "RelativeBaseSavePoint": "StartPoint",
+                "RelativeTargetSavePoint": "EndPoint",
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "NodePoint": "Boss_Inner1",
+                  "OffsetReferTarget": "NodePoint"
+                }
+              },
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 2,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 4,
+                      "ParamName": "CoAttack_04_RepeatTime",
+                      "ParamType": "Integer",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 47,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_CoAttack_03_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_03_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(CoAttack_03_RepeatTime)-1",
+              "ParamName": "CoAttack_03_RepeatTime",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_03_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_03_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "CoAttack_03_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_CoAttack_03_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_03_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(CoAttack_03_RepeatTime)-1",
+              "ParamName": "CoAttack_03_RepeatTime",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_03_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_03_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "CoAttack_03_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_CoAttack_04_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(CoAttack_04_RepeatTime)-1",
+              "ParamName": "CoAttack_04_RepeatTime",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_04_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_CoAttack_04_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "specials(CoAttack_04_RepeatTime)-1",
+              "ParamName": "CoAttack_04_RepeatTime",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "GreaterEqual",
+                  "Param": 1,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_CoAttack_04_Combo",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "CoAttack_01_A",
+          "FrameCountHigh": 290,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_01_B",
+          "FrameCountHigh": 290,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_02_A",
+          "FrameCountHigh": 320,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_02_B",
+          "FrameCountHigh": 320,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_06",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_06",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_Opening_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_Opening_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_01_B",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_01_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttachRootModifier_AtoB"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_02_B",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_02_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttachRootModifier_AtoB"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 12,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_CoAttack_NodePoint",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_01",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttachRootModifier_AtoB"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_Opening_B",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_Opening_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttachRootModifier_AtoB"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 6,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_CoAttack_NodePoint"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InState_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InState_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InState_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InState_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InState_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_06",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InState_CoAttack_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 79,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_CoAttack_04_A_02",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 79,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_CoAttack_04_B_02",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 12,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_CoAttack_04_A_03",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "FrameCountHigh": 12,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_CoAttack_04_B_03",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_04",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_04",
+          "FrameCountHigh": 65,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier_NoVFX_HasLight",
+            "LogicMovementModifier_CoAttack_04_A_04",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_04",
+          "FrameCountHigh": 8,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_04",
+          "FrameCountHigh": 65,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier_NoVFX_HasLight",
+            "LogicMovementModifier_CoAttack_04_B_04",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_01",
+          "FrameCountHigh": 2,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_01",
+          "FrameCountHigh": 3,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_Revive_01",
+            "LogicMovementModifier_VFX"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_02",
+          "FrameCountHigh": 2,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideMeshModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_02",
+          "FrameCountHigh": 3,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "LogicMovementModifier_Revive_02",
+            "LogicMovementModifier_VFX"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_CoAttack_LogicMovement",
+  "AbilitySpecials": {
+    "CoAttack_03_RepeatTime": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "CoAttack_04_RepeatTime": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "InitNodePoint": {
+      "Value": "Boss_Inner1",
+      "ValueType": "String"
+    },
+    "TargetNodePoint": {
+      "Value": "Boss_Inner1",
+      "ValueType": "String"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_CoAttack_03_HitTarget",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LampasBlackVeil_CoAttack_03_B_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByTeamGoodRoleType",
+            "RoleType": "TeamAvatars",
+            "Target": "Target"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+        "ParamName": "Bool_CoAttack_03_HitTarget",
+        "ParamType": 2,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LampasBlackVeil_CoAttack_03_B_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByTeamGoodRoleType",
+            "RoleType": "TeamAvatars",
+            "Target": "Target"
+          }
+        ],
+        "Target": "Custom"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "AttachRootModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LampasBlackVeil_CoAttack_03_B_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByTeamGoodRoleType",
+            "RoleType": "TeamAvatars",
+            "Target": "Target"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttachRootModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "Root_B",
+                "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "Root_B",
+                "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectOwner": "Target",
+          "EffectPattern": "Eff_Monster_LampasBlackVeil_CoAttack_04_11_Dust",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bip001 Pelvis",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "AttachRootModifier_AtoB": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ModifierName": "AttachRootModifier",
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ModifierName": "AttachRootModifier",
+          "Target": "Custom"
+        }
+      ]
+    },
+    "BeHitSyncModifier_CoAttack": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeAttackAnimatorPreResolved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ParamName": "Trigger_Hit",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "IntVal": 0,
+          "ParamName": "Int_GroundHitIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AttachRootModifier_AtoB",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AttachRootModifier",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Shake"
+                      ]
+                    },
+                    {
+                      "$type": "ByTargetHitEffect",
+                      "HitEffectKind": "FinalHitEffect",
+                      "TargetHitEffects": [
+                        "Mute"
+                      ]
+                    }
+                  ],
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "CoAttack_03_SpecialLockTarget": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "CoAttack_03_SpecialLockTarget"
+          ],
+          "IsAdd": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "CoAttack_03_SpecialLockTarget"
+          ],
+          "IsAdd": false
+        }
+      ]
+    },
+    "HideMeshModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectOwner": "Target",
+          "EffectPattern": "Eff_Monster_LampasBlackVeil_CoAttack_04_12_Diss",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bip001 Pelvis",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_LampasBlackVeil_Dither_Fade_Teleport",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade_Teleport",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "LampasBlackVeil_HideMesh_Invincible",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "LampasBlackVeil_LightManager",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "IsOpenLight",
+              "Value": 0
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade_Teleport",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "LampasBlackVeil_HideMesh_Invincible",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "LampasBlackVeil_LightManager",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "IsOpenLight",
+              "Value": 1
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HideMeshModifier_NoVFX_HasLight": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_LampasBlackVeil_Dither_Fade_Teleport",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade_Teleport",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "LampasBlackVeil_HideMesh_Invincible",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_LampasBlackVeil_Dither_Fade_Teleport",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "LampasBlackVeil_HideMesh_Invincible",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InState_CoAttack_03": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AttachRootModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_04_A_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 10.0
+                }
+              },
+              "RelativeBaseSavePoint": "StartPoint",
+              "RelativeTargetSavePoint": "EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_04_A_03": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": -135.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 7.14,
+                  "y": 0.0,
+                  "z": 7.14
+                }
+              },
+              "RelativeBaseSavePoint": "StartPoint",
+              "RelativeTargetSavePoint": "EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 3,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 5,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 10.0
+                }
+              },
+              "RelativeBaseSavePoint": "StartPoint",
+              "RelativeTargetSavePoint": "EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 2,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 4,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_04_A_04": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Self",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 2.0,
+                  "y": 0.0,
+                  "z": -0.5
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": true,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_04_B_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 10.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "RelativeBaseSavePoint": "StartPoint",
+              "RelativeTargetSavePoint": "EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_04_B_03": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 135.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": -7.14,
+                  "y": 0.0,
+                  "z": 7.14
+                }
+              },
+              "RelativeBaseSavePoint": "StartPoint",
+              "RelativeTargetSavePoint": "EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 3,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 5,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": -90,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 10.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "RelativeBaseSavePoint": "StartPoint",
+              "RelativeTargetSavePoint": "EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 0,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 2,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 4,
+                  "ParamName": "CoAttack_04_RepeatTime",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "Boss_Inner1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_04_B_04": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Self",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": -2.0,
+                  "y": 0.0,
+                  "z": 1.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": true,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "LocalAvatar"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_CoAttack_NodePoint": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "%InitNodePoint",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "NodePoint": "%TargetNodePoint",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_Revive_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CreateSavePointAction",
+          "PointName": "Revive_StartPoint",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Custom"
+            }
+          }
+        },
+        {
+          "$type": "CreateSavePointAction",
+          "PointName": "Revive_EndPoint",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "NodePoint": "Boss_Inner1",
+              "OffsetReferTarget": "NodePoint"
+            }
+          }
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 11
+                }
+              },
+              "RelativeBaseSavePoint": "Revive_StartPoint",
+              "RelativeTargetSavePoint": "Revive_EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Caster",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_Revive_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CreateSavePointAction",
+          "PointName": "Revive_StartPoint",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Custom"
+            }
+          }
+        },
+        {
+          "$type": "CreateSavePointAction",
+          "PointName": "Revive_EndPoint",
+          "TargetPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "NodePoint": "Boss_Inner1",
+              "OffsetReferTarget": "NodePoint"
+            }
+          }
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 5
+                }
+              },
+              "RelativeBaseSavePoint": "Revive_StartPoint",
+              "RelativeTargetSavePoint": "Revive_EndPoint",
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Caster",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Custom"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "LogicMovementModifier_VFX": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectOwner": "Target",
+          "EffectPattern": "Eff_Monster_LampasBlackVeil_CoAttack_04_11_Dust",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Bip001 Pelvis",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "ParamName": "Trigger_Hit",
+      "ParamType": 1,
+      "Predicates": [
+        {
+          "$type": "ByHasModifier",
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "IntVal": 0,
+      "ParamName": "Int_GroundHitIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByHasModifier",
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "AttachRootModifier_AtoB",
+      "Predicates": [
+        {
+          "$type": "ByHasModifier",
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "AttachRootModifier",
+      "Predicates": [
+        {
+          "$type": "ByHasModifier",
+          "ModifierNameList": [
+            "BeHitSyncModifier_CoAttack"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

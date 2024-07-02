@@ -1,0 +1,32 @@
+{
+  "AbilityName": "NPC_Sacrifice_01",
+  "DefaultModifier": {
+    "OnNPCTalk": [
+      {
+        "$type": "CameraStretchAction",
+        "StretchConfigKey": "NPC_Talk_CamStretch_01"
+      },
+      {
+        "$type": "CameraZoomAction",
+        "ZoomConfigKey": "NPC_Talk_CamZoom_01"
+      }
+    ],
+    "OnNPCTalkOver": [
+      {
+        "$type": "CameraZoomEndAction"
+      },
+      {
+        "$type": "CameraStretchEndAction"
+      }
+    ],
+    "OnNpcRandomTalkCountZero": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_SelfDestruction",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

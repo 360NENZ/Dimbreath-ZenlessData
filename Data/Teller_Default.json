@@ -1,0 +1,157 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttackEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Teller_Idle"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Teller_Default",
+  "AbilitySpecials": {
+    "ActiveDistance": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "DelayHandlers": [],
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LevelEndModier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Device_Teller_Attack",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LevelEndModier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnLevelEndNodeInvoke": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_End",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Teller_Active": {
+      "Duration": 2,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Active",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "Teller_Idle": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "BoxColliderDistance": "%ActiveDistance",
+            "BoxColliderHeight": 2,
+            "BoxColliderWidth": 3,
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            },
+            "ColliderType": "Box"
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Teller_Active",
+              "Predicates": [
+                {
+                  "$type": "ByIsLocalAvatar",
+                  "IsLocalAvatar": true,
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByLevelEnd",
+                  "LevelEnd": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": false,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

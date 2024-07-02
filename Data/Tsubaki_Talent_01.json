@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Tsubaki_Talent_01",
+  "AbilitySpecials": {
+    "AS_PhysicsDamageResist_Talent_01": {
+      "Value": -0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsBackstab"
+          }
+        ],
+        "PropertyKey": "Actor_PhysicsDamageResist",
+        "PropertyValue": "%AS_PhysicsDamageResist_Talent_01",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOtherPre": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_Backstab",
+        "PropertyValue": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

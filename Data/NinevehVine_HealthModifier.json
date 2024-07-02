@@ -1,0 +1,34 @@
+{
+  "AbilityName": "NinevehVine_HealthModifier",
+  "AbilitySpecials": {
+    "AS_MaxHPRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HealthCorrectionModifier",
+        "Predicates": [
+          {
+            "$type": "ByStageName",
+            "CompareType": "Equal",
+            "StageName": "Stage_Zero_Boss_Nineveh"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HealthCorrectionModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_MaxHPRatio": "%AS_MaxHPRatio"
+      }
+    }
+  }
+}

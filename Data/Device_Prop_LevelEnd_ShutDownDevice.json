@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Device_Prop_LevelEnd_ShutDownDevice",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnLevelEndNodeInvoke": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Bool_IsLevelEnd",
+        "ParamType": 2,
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Lycaon_MathSkill",
+  "AbilitySpecials": {
+    "AS_PairACount": {
+      "Value": 0.0
+    },
+    "AS_StunDamageTakeRatio": {
+      "Value": 0.22
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunDebuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ],
+    "OnStunDestroyOtherActionsPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunDebuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunDebuffModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnStunCreateActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "StunDebuffModifier",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%AS_StunDamageTakeRatio"
+      }
+    }
+  }
+}

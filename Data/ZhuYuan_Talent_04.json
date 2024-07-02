@@ -1,0 +1,386 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "ZhuYuan_BulletManager",
+      "OnListenAbilityStarted": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ZhuYuanTalent04_CountModifier",
+          "Predicates": [
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "Less",
+              "ModifierName": "ZhuYuanTalent04_CountModifier",
+              "StackCount": "%AS_BulletConsumeCount"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "ZhuYuanHasBullet"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "ZhuYuan_Talent_04",
+  "AbilitySpecials": {
+    "AS_BulletConsumeCount": {
+      "Value": 6,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "ZhuYuan_Grenade_Bullet_Exsp_02_Talent",
+        "IsAutoTrigger": false
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "ZhuYuan_Grenade_Bullet_Exsp_03_Talent",
+        "IsAutoTrigger": false
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "ZhuYuan_Grenade_Bullet_ExSP_Blow_Air_Talent",
+        "IsAutoTrigger": false
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "ZhuYuan_Grenade_Bullet_ExSP_Blow_Ground_Talent",
+        "IsAutoTrigger": false
+      }
+    ]
+  },
+  "Modifiers": {
+    "ExtraGrenadeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuanTalent04_ExtraGrenade"
+          ],
+          "IsAdd": false
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ZhuYuanTalent04_EffModifier"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ExtraGrenadeModifier"
+        }
+      ]
+    },
+    "ZhuYuanTalent04_BuffModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ActwithStateFrameMixin",
+          "ConfigList": [
+            {
+              "ActionList": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ZhuYuanTalent04_ReadyModifier"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Predicates": [
+                    {
+                      "$type": "ByPlayerPropertyValue",
+                      "CompareType": "Less",
+                      "Numerator": "CurSP",
+                      "Val1": 60
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ZhuYuanTalent04_BuffModifier"
+                }
+              ],
+              "AnimatorStateName": "Attack_Branch_02_1",
+              "ForceTriggerOnTransitionIn": true,
+              "ForceTriggerOnTransitionOut": false,
+              "Frame": 26,
+              "IsLoop": false,
+              "LayerIndex": 0
+            },
+            {
+              "ActionList": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ZhuYuanTalent04_ReadyModifier"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_BranchIndex",
+                  "ParamType": 3,
+                  "Predicates": [
+                    {
+                      "$type": "ByPlayerPropertyValue",
+                      "CompareType": "Less",
+                      "Numerator": "CurSP",
+                      "Val1": 60
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ZhuYuanTalent04_BuffModifier"
+                }
+              ],
+              "AnimatorStateName": "Attack_Branch_02",
+              "ForceTriggerOnTransitionIn": true,
+              "ForceTriggerOnTransitionOut": false,
+              "Frame": 27,
+              "IsLoop": false,
+              "LayerIndex": 0
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ZhuYuanTalent04_CountModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 99,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ZhuYuanTalent04_ReadyModifier",
+          "Predicates": [
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "GreaterEqual",
+              "ModifierName": "ZhuYuanTalent04_CountModifier",
+              "StackCount": "%AS_BulletConsumeCount"
+            }
+          ]
+        }
+      ]
+    },
+    "ZhuYuanTalent04_EffModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Attack_Branch_02_1",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ExtraGrenadeModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "Attack_Branch_02",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "ExtraGrenadeModifier"
+              ]
+            }
+          ],
+          "IsSeam": true
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ZhuYuanTalent04_ReadyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ZhuYuan_Body_Weapon_3"
+            }
+          ],
+          "Tag": "ZhuYuanTalent04_1",
+          "key": "Avatar_Female_Size03_ZhuYuan_MA_Attack_Common_OverrideOutline_06"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ZhuYuan_Body_Weapon_3"
+            }
+          ],
+          "Tag": "ZhuYuanTalent04_2",
+          "key": "Avatar_Female_Size03_ZhuYuan_MA_Attack_Common_SecondaryEmission_03"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_L_Tuishi_06",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_ZhuYuan_Attack_Common_08_Dust",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_C_Weapon_Sj_02",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_ZhuYuan_Attack_Common_07_Dust",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuanTalent04_Ready"
+          ],
+          "IsAdd": true
+        },
+        {
+          "$type": "SetUIArrowAction",
+          "position": 30
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_BranchIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "GreaterEqual",
+              "Numerator": "CurSP",
+              "Val1": 30
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "ZhuYuanTalent04_1"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "ZhuYuanTalent04_2"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ZhuYuanTalent04_CountModifier"
+        },
+        {
+          "$type": "SetUIArrowAction",
+          "position": 60
+        }
+      ],
+      "OnSkillStart": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ZhuYuanTalent04_BuffModifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ZhuYuanTalent04_ExtraGrenade"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ZhuYuanTalent04_EffModifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Bangboo_Talent_53003",
+  "AbilitySpecials": {
+    "AS_DefenceRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AtkDebuff",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AtkDebuff": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DefenceRatio": "%AS_DefenceRatio"
+      }
+    }
+  }
+}

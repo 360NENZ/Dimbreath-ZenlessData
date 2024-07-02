@@ -1,0 +1,468 @@
+{
+  "AbilityName": "FirmBox_ExLarge_02_Default",
+  "AbilitySpecials": {
+    "BeHitCoolDown": {
+      "Value": 0.0
+    },
+    "BeHitCount": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Box_BeHit",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Box_BuffModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BoxExLarge01Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_13",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxExLarge02Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_14",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxLarge01Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_11",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxLarge02Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_12",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Heavy"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxMiddle01Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_09",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Mid"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxMiddle02Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_10",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Mid"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_08",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_WoodBox_Break_Light"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    "BoxTypeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxModifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "Box"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxMiddle01Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxMiddle01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxMiddle02Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxMiddle02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxLarge01Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxLarge01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxLarge02Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxLarge02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxExLarge01Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxExLarge01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxExLarge02Modifier",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "BoxExLarge02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Box_BeHit": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Box_Explode_Hit_07",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 10,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Box_BeHitOnce",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0.0,
+              "ParamName": "BeHitCount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0.0,
+              "ParamName": "BeHitCoolDown",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 10,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Box_BeHitTwice",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1.0,
+              "ParamName": "BeHitCount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0.0,
+              "ParamName": "BeHitCoolDown",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 10,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoxTypeModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2.0,
+              "ParamName": "BeHitCount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0.0,
+              "ParamName": "BeHitCoolDown",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LocalAvatar",
+              "CompareType": "LessEqual",
+              "Distance": 10,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "Box_BeHitOnce": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1.0,
+          "ParamName": "BeHitCount",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1.0,
+          "ParamName": "BeHitCoolDown",
+          "ParamType": "Float"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0.0,
+          "ParamName": "BeHitCoolDown",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "Box_BeHitTwice": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 2.0,
+          "ParamName": "BeHitCount",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1.0,
+          "ParamName": "BeHitCoolDown",
+          "ParamType": "Float"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0.0,
+          "ParamName": "BeHitCoolDown",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "Box_BuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1
+    }
+  }
+}

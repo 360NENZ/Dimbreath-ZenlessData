@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Curse_AbyssMonsterLevelUp",
+  "AbilitySpecials": {
+    "AS_LevelUpValue": {
+      "Value": 10
+    },
+    "MonsterTypeTag": {
+      "Value": "Ether"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "AddMonsterLevelUpTagToLevelBuff",
+        "Target": "Level",
+        "UpLevelType": 1,
+        "UpLevelValue": "%AS_LevelUpValue"
+      }
+    ]
+  }
+}

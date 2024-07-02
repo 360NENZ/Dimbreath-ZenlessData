@@ -1,0 +1,154 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_02_02",
+          "FrameCountHigh": 217,
+          "FrameCountLow": 160,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BulletModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Specter_Atk02_02_Generator_03",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BulletModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "LaunchPoint_02_01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Specter_Attack_02_02_BulletGather",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Specter_Atk02_02_Bullet_03",
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_AttackDone_01",
+              "ParamType": 2
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Specter_Attack_02_02_BulletStart",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": false,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "LaunchPoint_02_01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_AttackDone_01",
+              "ParamType": 2
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Specter_Attack_02_02_BulletEnd",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": false,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "LaunchPoint_02_01",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": false,
+              "CompareType": "Equal",
+              "ParamName": "Bool_AttackDone_01",
+              "ParamType": 2
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

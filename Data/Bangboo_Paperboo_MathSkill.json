@@ -1,0 +1,201 @@
+{
+  "AbilityName": "Bangboo_Paperboo_MathSkill",
+  "AbilitySpecials": {
+    "AS_HpRatio_01": {
+      "Value": 0.3
+    },
+    "AS_HpRatio_02": {
+      "Value": 0.4
+    },
+    "AS_HpRatio_03": {
+      "Value": 0.5
+    },
+    "AS_PairACount": {
+      "Value": 0.0
+    },
+    "AS_ShieldDelta": {
+      "Value": 0.0
+    },
+    "AS_ShieldDuration": {
+      "Value": 24
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0.0,
+        "ParamName": "AS_PairACount",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "PairCheckModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PairCheckModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DefenceModifier": {
+      "Duration": 24,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": "%AS_ShieldDuration",
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Papaer_MathSkill",
+          "TotalValueConfig": {
+            "Amount": "%AS_ShieldDelta",
+            "Percentage": 0,
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace"
+    },
+    "MathSkillModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnPatternHitOther": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(MaxHP)*specials(AS_HpRatio_01)",
+          "ParamName": "AS_ShieldDelta",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooQTE"
+              ]
+            },
+            {
+              "$type": "ByHitOtherNum",
+              "CompareType": "Equal",
+              "Count": 1,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(MaxHP)*specials(AS_HpRatio_02)",
+          "ParamName": "AS_ShieldDelta",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooQTE"
+              ]
+            },
+            {
+              "$type": "ByHitOtherNum",
+              "CompareType": "Equal",
+              "Count": 2,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "property(MaxHP)*specials(AS_HpRatio_03)",
+          "ParamName": "AS_ShieldDelta",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooQTE"
+              ]
+            },
+            {
+              "$type": "ByHitOtherNum",
+              "CompareType": "GreaterEqual",
+              "Count": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DefenceModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooQTE"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "PairAModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1.0,
+          "ParamName": "AS_PairACount",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MathSkillModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 1.0,
+              "ParamName": "AS_PairACount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByBuddyTeamType",
+              "CheckBuddyTeam": "Fighting",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "PairCheckModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PairAModifier",
+          "Predicates": [
+            {
+              "$type": "ByAvatarProfessionType",
+              "ProfessionType": "Defense",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}

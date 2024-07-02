@@ -1,0 +1,116 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "MaterialHandler_Part_FLLeg",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "MaterialHandler_Part_FLLeg",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartDestroy_ReplacedStunPercentage",
+                  "ParamName": "AS_PartDestroy_StunPercentage",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    },
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "MaterialHandler_Part_FRLeg",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "MaterialHandler_Part_FRLeg",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartDestroy_ReplacedStunPercentage",
+                  "ParamName": "AS_PartDestroy_StunPercentage",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    },
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "MaterialHandler_Part_BLLeg",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "MaterialHandler_Part_BLLeg",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartDestroy_ReplacedStunPercentage",
+                  "ParamName": "AS_PartDestroy_StunPercentage",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    },
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "MaterialHandler_Part_BRLeg",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "MaterialHandler_Part_BRLeg",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "%AS_PartDestroy_ReplacedStunPercentage",
+                  "ParamName": "AS_PartDestroy_StunPercentage",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "VR_SmallBoss_MaterialHandlerRed",
+  "AbilitySpecials": {
+    "AS_AddBreakStunRatio": {
+      "Value": -0.8
+    },
+    "AS_PartDestroy_ReplacedStunPercentage": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddBreakStunRatio",
+        "Target": "Target"
+      }
+    ]
+  }
+}

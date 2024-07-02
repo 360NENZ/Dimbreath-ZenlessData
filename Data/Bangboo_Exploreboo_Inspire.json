@@ -1,0 +1,340 @@
+{
+  "AbilityName": "Bangboo_Exploreboo_Inspire",
+  "AbilitySpecials": {
+    "AS_ExtraHpRatio": {
+      "Value": 0
+    },
+    "AS_ExtraRecoverRatio": {
+      "Value": 0
+    },
+    "AS_HpRatio": {
+      "Value": 0.3
+    },
+    "AS_RecoverRatio": {
+      "Value": 0.3
+    },
+    "AS_RecoverValue": {
+      "Value": 0.0
+    },
+    "AS_ShieldDelta": {
+      "Value": 0.0
+    },
+    "AS_SpRecover_Delta": {
+      "Value": 3.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AssistMaterialPropertyModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "ExplorebooMaterial03",
+          "Target": "Self",
+          "key": "Common_MA_Buff_AddSp_RimGlow_01"
+        }
+      ]
+    },
+    "AssistTypeModifier": {
+      "Duration": 12,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_SpRecoverDelta": "%AS_SpRecover_Delta"
+      }
+    },
+    "DefenceMaterialPropertyModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "ExplorebooMaterial02",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Defence_RimGlow_01"
+        }
+      ]
+    },
+    "DefenceTypeModifier": {
+      "Duration": 12,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": 12,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Exploreboo_Inspire",
+          "TotalValueConfig": {
+            "Amount": "%AS_ShieldDelta",
+            "Percentage": 0,
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Defense",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DefenceMaterialPropertyModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Exploreboo_Show_02",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": false,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skin_Hand_L",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Caster"
+        }
+      ]
+    },
+    "RecoverMaterialPropertyModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "ExplorebooMaterial01",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Recover_RimGlow_01"
+        }
+      ]
+    },
+    "RecovertypeModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%AS_RecoverValue",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Recover",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverMaterialPropertyModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Exploreboo_Show_03",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": false,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skin_Hand_L",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Caster"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "HealingLimit",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom",
+          "Target": "Caster"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_RecoverRatio)*(1+specials(AS_ExtraRecoverRatio))",
+      "ParamName": "AS_RecoverValue",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_HpRatio)*(1+specials(AS_ExtraHpRatio))",
+      "ParamName": "AS_ShieldDelta",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "RandomOperator",
+      "Odds": 0.333,
+      "OnFailure": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.5,
+          "OnFailure": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AssistTypeModifier",
+              "Target": "LocalAvatar"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_AddSp",
+              "Target": "LocalAvatar"
+            },
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Bangboo_Exploreboo_Show_04",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "NeedRaycastGround": false,
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Skin_Hand_L",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AssistMaterialPropertyModifier",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "DefenceTypeModifier",
+              "Target": "LocalAvatar"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSuccess": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecovertypeModifier",
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Less",
+              "CustomNumerator": "HealingLimit",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 10
+            },
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Less",
+              "Denominator": "MaxHP",
+              "IsUsePercent": true,
+              "Numerator": "CurHP",
+              "Target": "LocalAvatar",
+              "Val1": 1
+            }
+          ],
+          "Target": "LocalAvatar"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DefenceTypeModifier",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "CustomNumerator": "HealingLimit",
+                  "IsUsePercent": false,
+                  "Numerator": "Custom",
+                  "Target": "Self",
+                  "Val1": 10
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "GreaterEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "LocalAvatar",
+                  "Val1": 1
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "LocalAvatar"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

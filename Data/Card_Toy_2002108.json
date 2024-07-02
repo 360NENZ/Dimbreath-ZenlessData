@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Card_Toy_2002108",
+  "AbilitySpecials": {
+    "AS_DMGRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuddyAtkUpModifier_Card_2108",
+        "Target": "BuddyAllied"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuddyAtkUpModifier_Card_2108": {
+      "Duration": -1,
+      "ModifierStacking": "GlobalUnique",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_DMGRatio"
+      }
+    }
+  }
+}

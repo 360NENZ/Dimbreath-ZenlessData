@@ -1,0 +1,119 @@
+{
+  "AbilityName": "GamePlayChasing_Remove_FollowerHyperShield_LongPhase_Area_2",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TriggerHit_Modifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlayChasing_FollowerHyperShield"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HyperShield_RecoverTimer",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChangeBreakStunTakeRatio": {
+      "Properties": {
+        "Actor_BreakStunTakeRatio": -999
+      }
+    },
+    "HPShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0.0,
+          "Tag": "FollowerHyperShield",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Goblin_Buff_SuperArmor",
+          "Target": "Self"
+        }
+      ]
+    },
+    "HyperShield_RecoverTimer": {
+      "Duration": 5,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HPShieldModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ChangeBreakStunTakeRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TriggerHit_Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

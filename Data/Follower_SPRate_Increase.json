@@ -1,0 +1,12 @@
+{
+  "AbilityName": "Follower_SPRate_Increase",
+  "AbilitySpecials": {
+    "AddedPlayerSPRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": []
+  }
+}

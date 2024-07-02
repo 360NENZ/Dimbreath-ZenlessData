@@ -1,0 +1,121 @@
+{
+  "AbilityName": "Golem_Attack_Counter",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CounterListenModifier": {
+      "Duration": 3.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsInDefence",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CounterModifier",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 180,
+              "AngleMin": 0
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsInDefence",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 0,
+              "AngleMin": -180
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CounterListenModifier",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 0,
+              "AngleMin": -180
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsInDefence",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "CounterModifier": {
+      "Duration": 0.2,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 21,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "CounterListenModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Golem_Defence_Start_Spark_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "CounterListenModifier",
+      "Target": "Self"
+    }
+  ]
+}

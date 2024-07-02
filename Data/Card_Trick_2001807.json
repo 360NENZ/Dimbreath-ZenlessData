@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Card_Trick_2001807",
+  "AbilitySpecials": {
+    "AccumulationRatio": {
+      "Value": -0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_AddedElementAccumulationRatio": "%AccumulationRatio"
+    }
+  }
+}

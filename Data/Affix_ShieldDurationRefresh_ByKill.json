@@ -1,0 +1,43 @@
+{
+  "AbilityName": "Affix_ShieldDurationRefresh_ByKill",
+  "AbilitySpecials": {
+    "ByOdds": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldDurationRefresh_ByKill",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ShieldDurationRefresh_ByKill": {
+      "ModifierMixins": [
+        {
+          "$type": "KillTargetMixin",
+          "Actions": [
+            {
+              "$type": "RandomOperator",
+              "Odds": "%ByOdds",
+              "OnSuccess": [
+                {
+                  "$type": "ModifyArcanaCommonPropertyAction",
+                  "ArcanaProperty": "ShieldDuration",
+                  "Delta": 60,
+                  "Target": "Buddy"
+                }
+              ],
+              "Target": "Target"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

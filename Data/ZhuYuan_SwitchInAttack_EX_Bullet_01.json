@@ -1,0 +1,229 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.5
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_ZhuYuan_Attack_QTE_01_03_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": -5.0,
+            "y": 60.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WeaponPoint",
+          "BackupOffsetReferTarget": "Caster",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementCurve",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "ScaleRatio": 15,
+        "TimesUpMoveOption": "Remain",
+        "VelocityCurveX": "M_FierySerpent_HitBackX",
+        "VelocityCurveY": "M_FierySerpent_HitBackX",
+        "VelocityCurveZ": "M_Hati_Armored_ATK5_Bullet_Speed_Z"
+      },
+      "OnBulletHitStageGroundDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ZhuYuan_SwitchInAttack_EX_Bullet_Blow_Ground",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ZhuYuan_SwitchInAttack_EX_Bullet_Blow_Air",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitTargetDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ZhuYuan_SwitchInAttack_EX_Bullet_Blow_Air",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletTimeUpDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ZhuYuan_SwitchInAttack_EX_Bullet_Blow_Air",
+          "PosRotConfig": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Other"
+            }
+          },
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "ReachTargetStop": true,
+        "RotateType": "Lerp",
+        "RotationCurve": "M_Hati_Armored_ATK5_Bullet_RotateSpeed_Curve",
+        "ScaleRatio": 5,
+        "TargetPosRot": {
+          "CoordsOption": "Caster",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "ZhuYuan_SwitchInAttack_EX_Bullet_01",
+  "AbilityStacking": "Unique"
+}

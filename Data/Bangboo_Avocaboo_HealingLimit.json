@@ -1,0 +1,136 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Normal",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 1,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ResetHealingLimitModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "HealingLimit",
+          "CustomReferMaxPropertyType": "HealingLimit_Max",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": false,
+                  "ParamName": "Bool_AllowSkill_Times",
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_HealingLimitTimes"
+            },
+            {
+              "Val": "%AS_HealingLimitTimes",
+              "ValueToLowActions": [
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "ParamName": "Bool_AllowSkill_Times",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Avocaboo_HealingLimit",
+  "AbilitySpecials": {
+    "AS_HealingLimitTimes": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnThinkInterval": [
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": false,
+        "ParamName": "Bool_AllowSkill_HpMax",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByPlayerPropertyValue",
+                "CompareType": "Less",
+                "Denominator": "MaxHP",
+                "IsUsePercent": true,
+                "Numerator": "CurHP",
+                "Target": "LocalAvatar",
+                "Val1": 1
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": true,
+        "ParamName": "Bool_AllowSkill_HpMax",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "Less",
+            "Denominator": "MaxHP",
+            "IsUsePercent": true,
+            "Numerator": "CurHP",
+            "Target": "LocalAvatar",
+            "Val1": 1
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "ThinkInterval": 1.0
+  },
+  "Modifiers": {
+    "ResetHealingLimitModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "HealingLimit",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "CustomPropertyType": "HealingLimit_Max",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HealingLimitTimes",
+          "Percentage": 1,
+          "PropertyType": "Custom",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

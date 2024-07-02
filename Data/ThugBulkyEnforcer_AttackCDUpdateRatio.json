@@ -1,0 +1,244 @@
+{
+  "AbilityName": "ThugBulkyEnforcer_AttackCDUpdateRatio",
+  "AbilitySpecials": {
+    "AttackCDUpdateRatio": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    },
+    "AttackLandedRatio": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    },
+    "AttackResolvedRatio": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    },
+    "RapidAttackRatio": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "BySkillTagList",
+            "TagList": [
+              "Attack"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "AttackResolvedWindow_Modifier"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "AttackLandedWindow_Modifier"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "AttackCount_Modifier"
+          }
+        ]
+      }
+    ],
+    "OnThinkInterval": [
+      {
+        "$type": "SetAbilitySpecialByExpressionListAction",
+        "Expressions": [
+          {
+            "AbilitySpecialName": "AttackResolvedRatio",
+            "Expression": "{1}/{0}",
+            "OutputType": "Float"
+          },
+          {
+            "AbilitySpecialName": "AttackLandedRatio",
+            "Expression": "{2}/{0}",
+            "OutputType": "Float"
+          },
+          {
+            "AbilitySpecialName": "AttackCDUpdateRatio",
+            "Expression": "5*{3}*{3}+1",
+            "OutputType": "Float"
+          },
+          {
+            "AbilitySpecialName": "RapidAttackRatio",
+            "Expression": "{3}-{4}",
+            "OutputType": "Float"
+          }
+        ],
+        "Params": [
+          {
+            "$type": "ExpressionParamModifierCount",
+            "ModifierName": "AttackCount_Modifier"
+          },
+          {
+            "$type": "ExpressionParamModifierCount",
+            "ModifierName": "AttackResolvedCount_Modifier"
+          },
+          {
+            "$type": "ExpressionParamModifierCount",
+            "ModifierName": "AttackLandedCount_Modifier"
+          },
+          {
+            "$type": "ExpressionParamAbilitySpecial",
+            "AbilitySpecialKey": "AttackResolvedRatio"
+          },
+          {
+            "$type": "ExpressionParamAbilitySpecial",
+            "AbilitySpecialKey": "AttackLandedRatio"
+          }
+        ]
+      },
+      {
+        "$type": "WriteAIParamAction",
+        "FloatParamValue": "%AttackCDUpdateRatio",
+        "ParamName": "AttackCDUpdateRatio",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "GreaterEqual",
+            "ModifierName": "AttackCount_Modifier",
+            "StackCount": 4
+          }
+        ]
+      },
+      {
+        "$type": "RandomOperator",
+        "Odds": "%RapidAttackRatio",
+        "OnFailure": [
+          {
+            "$type": "SetAnimCtrlerParamAction",
+            "BoolVal": false,
+            "ParamName": "Bool_RapidAttack",
+            "ParamType": 2
+          }
+        ],
+        "OnSuccess": [
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByModifierStackCount",
+                "CompareType": "GreaterEqual",
+                "ModifierName": "AttackCount_Modifier",
+                "StackCount": 4
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "SetAnimCtrlerParamAction",
+                "BoolVal": false,
+                "ParamName": "Bool_RapidAttack",
+                "ParamType": 2
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "SetAnimCtrlerParamAction",
+                "BoolVal": true,
+                "ParamName": "Bool_RapidAttack",
+                "ParamType": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "ThinkInterval": 0.5
+  },
+  "Modifiers": {
+    "AttackCount_Modifier": {
+      "Duration": 30,
+      "MaxStackingNumber": 999,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "AttackLandedCount_Modifier": {
+      "Duration": 30,
+      "MaxStackingNumber": 999,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "AttackLandedWindow_Modifier": {
+      "Duration": 5,
+      "ModifierStacking": "Refresh",
+      "OnAttackLanded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AttackLandedCount_Modifier",
+          "Target": "Caster"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AttackLandedWindow_Modifier",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "AttackResolvedCount_Modifier": {
+      "Duration": 30,
+      "MaxStackingNumber": 999,
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "AttackResolvedWindow_Modifier": {
+      "Duration": 5,
+      "ModifierStacking": "Refresh"
+    },
+    "AvatarResolveManager_Modifier": {
+      "Duration": 9999,
+      "IsUnique": true,
+      "OnSkillStart": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "Counter",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "AssaultAid",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "AttackResolvedWindow_Modifier"
+              ],
+              "Target": "Caster"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "AttackResolvedCount_Modifier",
+              "Target": "Caster"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "AttackResolvedWindow_Modifier",
+              "Target": "Caster"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAdded": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AvatarResolveManager_Modifier",
+      "Target": "TeamAvatars"
+    }
+  ]
+}

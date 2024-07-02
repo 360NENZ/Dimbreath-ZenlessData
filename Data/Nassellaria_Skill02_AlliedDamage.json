@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Nassellaria_Skill02_AlliedDamage",
+  "AbilitySpecials": {
+    "AS_DamageRatio": {
+      "Value": 5
+    },
+    "AS_ExplodeDamageRatio": {
+      "Value": 15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nassellaria_ATK02_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByRelativeCampType",
+            "Relationship": "Allied",
+            "Target": "Other"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_DamageRatio"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nassellaria_ATK02_Attackproperty_01_Explode"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByRelativeCampType",
+            "Relationship": "Allied",
+            "Target": "Other"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_ExplodeDamageRatio"
+      }
+    ]
+  }
+}

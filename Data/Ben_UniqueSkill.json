@@ -1,0 +1,151 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "property(Def_Battle)*specials(AS_HpShieldPercentage_Ben_UniqueSkill)+specials(AS_HpShieldBase_Ben_UniqueSkill)",
+              "ParamName": "AS_ShieldDelta",
+              "Target": "Self",
+              "ValueType": "Float"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HpShieldModifier_Ben_UniqueSkill",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Attack_02_Release",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "property(Def_Battle)*specials(AS_HpShieldPercentage_Ben_UniqueSkill)+specials(AS_HpShieldBase_Ben_UniqueSkill)",
+              "ParamName": "AS_ShieldDelta",
+              "Target": "Self",
+              "ValueType": "Float"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HpShieldModifier_Ben_UniqueSkill",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Attack_02_Block",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ben_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_Actor_CriticalDelta": {
+      "Value": 0.5
+    },
+    "AS_HpShieldBase_Ben_UniqueSkill": {
+      "Value": 300.0
+    },
+    "AS_HpShieldDuration_Ben_UniqueSkill": {
+      "Value": 30.0
+    },
+    "AS_HpShieldPercentage_Ben_UniqueSkill": {
+      "Value": 0.25
+    },
+    "AS_ShieldDelta": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BenPairAShieldIconModifier": {
+      "Buff": {
+        "BuffID": 3000091,
+        "IsOverrideDuration": true
+      },
+      "Duration": "%AS_HpShieldDuration_Ben_UniqueSkill",
+      "ModifierStacking": "Replace"
+    },
+    "BenPairAShieldModifier": {
+      "Duration": "%AS_HpShieldDuration_Ben_UniqueSkill",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_Actor_CriticalDelta"
+      }
+    },
+    "HpShieldModifier_Ben_UniqueSkill": {
+      "Duration": "%AS_HpShieldDuration_Ben_UniqueSkill",
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "EmptyActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HpShieldModifier_Ben_UniqueSkill",
+              "Target": "Self"
+            }
+          ],
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0,
+          "Tag": "Ben_UniqueSkill_HpShield",
+          "TotalValueConfig": {
+            "Amount": "%AS_ShieldDelta",
+            "Percentage": 0,
+            "PropertyType": "Def_Battle"
+          }
+        }
+      ],
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BenPairAShieldModifier",
+          "Predicates": [
+            {
+              "$type": "ByMathSkillSuccess",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BenPairAShieldIconModifier",
+          "Predicates": [
+            {
+              "$type": "ByMathSkillSuccess",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BenPairAShieldModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BenPairAShieldIconModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

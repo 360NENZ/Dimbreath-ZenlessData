@@ -1,0 +1,31 @@
+{
+  "AbilityName": "LampasBlackVeil_CoAttackMark_Remove",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "LampasBlackVeil_IsInCoAttack"
+      ],
+      "IsAdd": false,
+      "Target": "Self"
+    },
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "LampasBlackVeil_IsLeader"
+      ],
+      "IsAdd": false,
+      "Target": "Self"
+    },
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "LampasBlackVeil_IsInCoAttack"
+      ],
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "IsAdd": false,
+      "Target": "Custom"
+    }
+  ]
+}

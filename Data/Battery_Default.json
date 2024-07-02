@@ -1,0 +1,161 @@
+{
+  "AbilityName": "Battery_Default",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BatteryHitListenerModifier_01",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_NoDamage",
+        "PropertyValue": 1,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BatteryBeHitModifier_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.25,
+          "TimeUpActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BatteryHitListenerModifier_02",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Battery_OnHit",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit_Battery_01",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "BatteryBeHitModifier_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.25,
+          "TimeUpActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BatteryHitListenerModifier_03",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Battery_OnHit",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit_Battery_02",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "BatteryBeHitModifier_03": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_Battery_OnHit",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit_Battery_03",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "BatteryHitListenerModifier_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BatteryBeHitModifier_01",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Target",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BatteryHitListenerModifier_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BatteryBeHitModifier_02",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Target",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BatteryHitListenerModifier_03": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BatteryBeHitModifier_03",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Target",
+              "CompareType": "LessEqual",
+              "Distance": 15,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01",
+              "Target": "Self",
+              "key": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01"
+            },
+            {
+              "$type": "SkillStartAction",
+              "Predicates": [
+                {
+                  "$type": "BySkillReady",
+                  "SkillName": "Monster_RuthlessFiend_ClawCD"
+                }
+              ],
+              "StartedSkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifySkillCDAction",
+              "Delta": 99999999,
+              "ModifyType": "ByZero",
+              "SkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "FloatParamValue": 1,
+              "ParamName": "ClawAble",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_BreakHand_Left",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 180
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01",
+              "Target": "Self",
+              "key": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01"
+            },
+            {
+              "$type": "SkillStartAction",
+              "Predicates": [
+                {
+                  "$type": "BySkillReady",
+                  "SkillName": "Monster_RuthlessFiend_ClawCD"
+                }
+              ],
+              "StartedSkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifySkillCDAction",
+              "Delta": 99999999,
+              "ModifyType": "ByZero",
+              "SkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "FloatParamValue": 1,
+              "ParamName": "ClawAble",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_BreakHand_Right",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 180
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveMaterialPropertyAction",
+              "Tag": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "Predicates": [
+                {
+                  "$type": "BySkillReady",
+                  "SkillName": "Monster_RuthlessFiend_ClawCD"
+                }
+              ],
+              "StartedSkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifySkillCDAction",
+              "Delta": 15,
+              "ModifyType": "ByZero",
+              "SkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "FloatParamValue": 0,
+              "ParamName": "ClawAble",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_Special_Left",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveMaterialPropertyAction",
+              "Tag": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01",
+              "Target": "Self"
+            },
+            {
+              "$type": "SkillStartAction",
+              "Predicates": [
+                {
+                  "$type": "BySkillReady",
+                  "SkillName": "Monster_RuthlessFiend_ClawCD"
+                }
+              ],
+              "StartedSkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifySkillCDAction",
+              "Delta": 15,
+              "ModifyType": "ByZero",
+              "SkillName": "Monster_RuthlessFiend_ClawCD",
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "FloatParamValue": 0,
+              "ParamName": "ClawAble",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Hit_Special_Right",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "RuthlessFiend_Ability_ClawCD",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillReady": [
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "BySkillName",
+            "SkillName": "Monster_RuthlessFiend_ClawCD",
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01",
+        "Target": "Self",
+        "key": "Monster_RuthlessFiend_MA_Idle_01_Mat01_SecondaryEmission_01"
+      },
+      {
+        "$type": "WriteAIParamAction",
+        "FloatParamValue": 1,
+        "ParamName": "ClawAble",
+        "Predicates": [
+          {
+            "$type": "BySkillName",
+            "SkillName": "Monster_RuthlessFiend_ClawCD",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SkillStartAction",
+        "Predicates": [
+          {
+            "$type": "BySkillReady",
+            "SkillName": "Monster_RuthlessFiend_ClawCD"
+          }
+        ],
+        "StartedSkillName": "Monster_RuthlessFiend_ClawCD",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifySkillCDAction",
+        "Delta": 99999999,
+        "ModifyType": "ByZero",
+        "Predicates": [
+          {
+            "$type": "BySkillName",
+            "SkillName": "Monster_RuthlessFiend_ClawCD",
+            "Target": "Self"
+          }
+        ],
+        "SkillName": "Monster_RuthlessFiend_ClawCD",
+        "Target": "Self"
+      }
+    ]
+  },
+  "OnAdded": [
+    {
+      "$type": "SkillStartAction",
+      "Predicates": [
+        {
+          "$type": "BySkillReady",
+          "SkillName": "Monster_RuthlessFiend_ClawCD"
+        }
+      ],
+      "StartedSkillName": "Monster_RuthlessFiend_ClawCD",
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifySkillCDAction",
+      "Delta": 99999999,
+      "ModifyType": "ByZero",
+      "SkillName": "Monster_RuthlessFiend_ClawCD",
+      "Target": "Self"
+    }
+  ]
+}

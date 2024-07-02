@@ -1,0 +1,61 @@
+{
+  "AbilityName": "Card_Ashes_1000104",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 10
+    },
+    "TriggerOdds": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BurnBuffTriggerModifier",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffID",
+            "BuffIDList": [
+              1
+            ],
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BurnBuffModifier": {
+      "Buff": {
+        "BuffID": 101,
+        "IsOverrideDuration": false,
+        "IsOverrideOdds": false
+      },
+      "Duration": -1
+    },
+    "BurnBuffTriggerModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "RandomOperator",
+          "Odds": "%TriggerOdds",
+          "OnSuccess": [
+            {
+              "$type": "ApplyModifier",
+              "CustomKey": "Card_Ashes_1000104_AbilityTargetting",
+              "ModifierName": "BurnBuffModifier",
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 1
+    }
+  }
+}

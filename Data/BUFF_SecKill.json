@@ -1,0 +1,28 @@
+{
+  "AbilityName": "BUFF_SecKill",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazu",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageReplace",
+          "PropertyValue": 99999,
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

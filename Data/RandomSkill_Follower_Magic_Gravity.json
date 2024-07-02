@@ -1,0 +1,81 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 7.5
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_RandomSkill_Magic_Gravity"
+      },
+      "BulletEffectDelayTime": 0.15,
+      "BulletHitTypeName": "Penetrate",
+      "BulletInitPosRot": {
+        "CoordsOption": "Target",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 5.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": false,
+      "DestroyEffect": {
+        "EffectPattern": "Eff_RandomSkill_Magic_Gravity_End"
+      },
+      "DestroyExplode": false,
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "#RandomSkill_Follower_Magic_Gravity_AttackProperty",
+      "HitExplodeRadius": 2,
+      "HitInterval": 0.25,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "StartEffect": {
+        "EffectPattern": "Eff_RandomSkill_Magic_Gravity_Start"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "RandomSkill_Follower_Magic_Gravity",
+  "AbilityStacking": "Unique"
+}

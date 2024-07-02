@@ -1,0 +1,173 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LockLifePropertyMixin",
+      "RatioLockList": [
+        {
+          "LockType": "Total",
+          "LockValue": "%AS_LockLifeRatio"
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "ReferMaxPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ListenHitBreakModifier",
+                  "Target": "Self"
+                }
+              ],
+              "Val": "%AS_BreakLifeRatio"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_NovicePerform",
+  "AbilitySpecials": {
+    "AS_BreakLifeRatio": {
+      "Value": 0.05
+    },
+    "AS_LockLifeRatio": {
+      "Value": 0.03
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Novice"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenHitBreakModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitResolved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TriggerActionModifier",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Other"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "TriggerActionModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": false,
+          "CharacterBagMute": false,
+          "CharacterMoveMute": false,
+          "CharacterQTEMute": true,
+          "CharacterSkillMute": false,
+          "CharacterSwitchMute": false,
+          "Tag": "Durahan_NovicePerform_InputMute"
+        },
+        {
+          "$type": "CameraLockOnAction",
+          "CameraLockTargetKey": "BossPeform_CamLock_01",
+          "IsLockPermanently": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_NovicePerform",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyStunStateAction",
+          "Target": "Self",
+          "TargetState": "Normal"
+        },
+        {
+          "$type": "DecreaseStunAction",
+          "Amount": 0,
+          "Percentage": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenHitBreakModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TriggerActionModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.75
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_End_02_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Ether_Core_Bullet",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 3,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.5
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_Nassellaria_ATK02_Attackproperty_01",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_End_04_Explore"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_End_03_Explore"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_End_03_Explore"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementAutoParabola",
+        "Accelerated": -10,
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 12.0
+        },
+        "DefaultRotAngle": 0,
+        "Duration": -1,
+        "ExpectSpeed": 10,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.4,
+        "HitTangentialRatio": 0.5,
+        "MaxAngle": 50,
+        "MaxSpeed": 15,
+        "MinAngle": 30,
+        "MinSpeed": 2,
+        "TargetPosRot": {
+          "BackupCoordsOption": "ReferTarget",
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupPositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 12.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "Caster",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetRotLimitAngleLeft": 15,
+        "TargetRotLimitAngleRight": 15,
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_Hati_Armored_Bullet_01_Enhance_Explosion_CamShake_01"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "Targetting": "Enemy",
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Nassellaria_Attack_02_End_03_Explore"
+      }
+    }
+  ],
+  "AbilityName": "Nassellaria_Skill02_Bullet",
+  "AbilityStacking": "Unique"
+}

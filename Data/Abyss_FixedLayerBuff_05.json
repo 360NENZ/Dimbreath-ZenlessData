@@ -1,0 +1,45 @@
+{
+  "AbilityName": "Abyss_FixedLayerBuff_05",
+  "AbilitySpecials": {
+    "AS_AddedAccumulationRatio": {
+      "Value": 0.4
+    },
+    "AS_AddedDamageRatio": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_BuffDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ice"
+          }
+        ],
+        "PropertyKey": "Actor_AddedElementAccumulationRatio",
+        "PropertyValue": "%AS_AddedAccumulationRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "AbilityName": "TestGraph_06",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Event": {
+        "OnStart": {
+          "x": 341.5504,
+          "y": 184.6039
+        }
+      },
+      "Graph": {
+        "Position": {
+          "x": -602,
+          "y": -128,
+          "z": 0
+        },
+        "Scale": {
+          "x": 1.15,
+          "y": 1.15,
+          "z": 1
+        }
+      },
+      "Node": [
+        {
+          "x": 401.4248,
+          "y": 329
+        },
+        {
+          "x": 402.4248,
+          "y": 446
+        },
+        {
+          "x": 741.0549,
+          "y": 327
+        },
+        {
+          "x": 739.0549,
+          "y": 449
+        },
+        {
+          "x": 1308,
+          "y": 185
+        },
+        {
+          "x": 465.0549,
+          "y": 184.6026
+        },
+        {
+          "x": 616.8798,
+          "y": 185.0418
+        },
+        {
+          "x": 780.8627,
+          "y": 186.1778
+        },
+        {
+          "x": 943.3699,
+          "y": 186.3425
+        },
+        {
+          "x": 1635,
+          "y": 185
+        },
+        {
+          "x": 1479,
+          "y": 197
+        },
+        {
+          "x": 1789,
+          "y": 185
+        },
+        {
+          "x": 251.0967,
+          "y": 345.0275
+        },
+        {
+          "x": 249.0967,
+          "y": 442.0274
+        },
+        {
+          "x": 599.0549,
+          "y": 341
+        },
+        {
+          "x": 596.0549,
+          "y": 442
+        },
+        {
+          "x": 1182.652,
+          "y": 434.5218
+        },
+        {
+          "x": 1125.428,
+          "y": 184.713
+        },
+        {
+          "x": 1093.652,
+          "y": 301.8696
+        },
+        {
+          "x": 942.2175,
+          "y": 389
+        },
+        {
+          "x": 941.2174,
+          "y": 478.0001
+        },
+        {
+          "x": 943.2174,
+          "y": 302
+        },
+        {
+          "x": 1358,
+          "y": 433.7392
+        }
+      ]
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 5,
+        "ParametersBind": []
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "BoolAndNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1000
+        },
+        "ParamTwo": {
+          "BindId": 1001
+        },
+        "PreActionBind": [
+          12,
+          13
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1004
+          ]
+        }
+      },
+      {
+        "$type": "BoolOrNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1003
+        },
+        "ParamTwo": {
+          "BindId": 1002
+        },
+        "PreActionBind": [
+          13,
+          12
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1005
+          ]
+        }
+      },
+      {
+        "$type": "BoolXorNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1006
+        },
+        "ParamTwo": {
+          "BindId": 1008
+        },
+        "PreActionBind": [
+          14,
+          15
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1009
+          ]
+        }
+      },
+      {
+        "$type": "BoolNotNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1007
+        },
+        "PreActionBind": [
+          14
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1010
+          ]
+        }
+      },
+      {
+        "$type": "StageVariableNode",
+        "DefaultOutBind": 10,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 1011
+        },
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1013
+          ]
+        },
+        "PreActionBind": [
+          16
+        ]
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 6,
+        "PreActionBind": [
+          0
+        ],
+        "Value": {
+          "BindId": 1004
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 7,
+        "PreActionBind": [
+          1
+        ],
+        "Value": {
+          "BindId": 1005
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 8,
+        "PreActionBind": [
+          2
+        ],
+        "Value": {
+          "BindId": 1009
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 17,
+        "PreActionBind": [
+          3
+        ],
+        "Value": {
+          "BindId": 1010
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 11,
+        "Value": {
+          "BindId": 1013
+        }
+      },
+      {
+        "$type": "SetVariable",
+        "ConstValue": {
+          "$type": "ConfigDynamicValue"
+        },
+        "DefaultOutBind": 9,
+        "Input": {
+          "$type": "ConfigInputValue",
+          "BindId": 1012
+        },
+        "PreActionBind": [
+          22
+        ],
+        "VarScope": "Auto",
+        "VariableKey": "Bool_1"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "PreActionBind": [
+          16
+        ],
+        "Value": {
+          "BindId": 1014
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1003
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1001,
+            1002
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_2"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1006,
+            1007
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1008
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_2"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1011,
+            1014,
+            1019
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_1"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 4,
+        "PreActionBind": [
+          18
+        ],
+        "Value": {
+          "BindId": 1015
+        }
+      },
+      {
+        "$type": "ParamSwitchNode",
+        "DefaultOutBind": -1,
+        "ParamFalse": {
+          "$type": "ConfigInputValue",
+          "BindId": 1018
+        },
+        "ParamTrue": {
+          "$type": "ConfigInputValue",
+          "BindId": 1017
+        },
+        "PreActionBind": [
+          21,
+          19,
+          20
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1015
+          ]
+        },
+        "Switch": {
+          "BindId": 1016
+        }
+      },
+      {
+        "$type": "ConstValueNode",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1017
+          ]
+        },
+        "Value": {
+          "$type": "ConfigDynamicValueFloat",
+          "Value": 1
+        }
+      },
+      {
+        "$type": "ConstValueNode",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1018
+          ]
+        },
+        "Value": {
+          "$type": "ConfigDynamicValueFloat",
+          "Value": 2
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1016
+          ]
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Bool_1"
+      },
+      {
+        "$type": "BoolNotNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1019
+        },
+        "PreActionBind": [
+          16
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1012
+          ]
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueBool",
+          "Value": false
+        },
+        "ElementType": "Integer",
+        "Key": "Bool_1",
+        "Scope": "Auto",
+        "Type": "Boolean"
+      },
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueBool",
+          "Value": true
+        },
+        "ElementType": "Integer",
+        "Key": "Bool_2",
+        "Scope": "Auto",
+        "Type": "Boolean"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "AbilityName": "TestGraph_06",
+      "EventName": "OnStart"
+    }
+  ]
+}

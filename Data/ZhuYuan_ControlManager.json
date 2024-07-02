@@ -1,0 +1,195 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Branch01CountModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_End",
+          "FrameCountHigh": 45,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Branch01CountModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "RushModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "PointUp",
+              "PressTime": 0.0,
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "TransformEnableModifier",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "Branch01Count",
+          "CustomReferMaxPropertyType": "Branch01CountMax",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_ZhuYuanBranch01",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_ZhuYuanBranch01",
+                  "ParamType": 2,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ZhuYuan_ControlManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Branch01CountModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 3,
+          "CustomPropertyType": "Branch01Count",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ZhuYuanBranch01",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 3,
+          "CustomPropertyType": "Branch01Count",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ZhuYuanBranch01",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "RushModifier": {
+      "Duration": 0.65,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_CanPistolRunToRush",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_CanPistolRunToRush",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "TransformEnableModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": true,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ZhuYuan_CanTransform",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Edrink_2000207",
+  "AbilitySpecials": {
+    "AS_FeverGetRatio": {
+      "Value": 100
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_FeverGetRatio": "%AS_FeverGetRatio"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "AbilityName": "GasTank_HideMesh",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "PushEntityVisibleWithTagAction",
+      "Tag": "GasTank_HideMesh",
+      "Target": "Self",
+      "Visible": false
+    }
+  ]
+}

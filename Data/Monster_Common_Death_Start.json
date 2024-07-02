@@ -1,0 +1,570 @@
+{
+  "AbilityName": "Monster_Common_Death_Start",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BiosDeathStartModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Red_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Red_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Red_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Tag": "Monster_Death_Start_1",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Red_S_Start_Glitch"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "BySmall"
+                }
+              ]
+            }
+          ],
+          "Tag": "Monster_Death_Start_1",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Glitch_Red_Start_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_2",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Transition_Start_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_3",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Dither_Start_01"
+        }
+      ]
+    },
+    "DeathStartModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BiosDeathStartModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Mech"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Gigantic"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BiosDeathStartModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Bios"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EtherDeathStartModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Ether"
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "GigantMechDeathStartModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Mech"
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Gigantic"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "EtherDeathStartModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Ether_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Ether_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Ether_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Tag": "Monster_Death_Start_1",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Ether_S_Start_Glitch"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "BySmall"
+                }
+              ]
+            }
+          ],
+          "Tag": "Monster_Death_Start_1",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Glitch_Ether_Start_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_2",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Transition_Start_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_3",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Dither_Start_01"
+        }
+      ]
+    },
+    "GigantMechDeathStartModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_Death_Cube_Red_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Death_Start_1",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Glitch_Red_Gigantic_Start_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_2",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Transition_Start_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Predicates": [
+            {
+              "$type": "ByLevelEnd",
+              "LevelEnd": "false"
+            }
+          ],
+          "Tag": "Monster_Death_Start_3",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Death_Dither_Start_01"
+        }
+      ]
+    },
+    "VRDeathStartModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Cube_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Cube_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Common_VR_Death_Cube_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_VR_End_S",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "BySmall"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_VR_End_M",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByMiddle"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_VR_End_L",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "ByLarge"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Death_Start_1",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Monster_VR_End_01_OverrideOutline_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Death_Start_2",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Monster_VR_End_02_Override2Tone_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Death_Start_3",
+          "Target": "Self",
+          "key": "Monster_Common_MA_Monster_VR_End_03_Dither_03"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "DeathStartModifier",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "IsVR"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "VRDeathStartModifier",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "IsVR"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "Predicates": {
+    "ByLarge": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Large",
+                  "CompareType": "GreaterEqual",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "UniqueDeathEff"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DeathEffLarge"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ByMiddle": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Middle",
+                  "CompareType": "Equal",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "UniqueDeathEff"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DeathEffMiddle"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BySmall": {
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByCharacterSize",
+                  "CharacterSize": "Small",
+                  "CompareType": "LessEqual",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "UniqueDeathEff"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "DeathEffSmall"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "AbilityName": "NinevehBee_DropItem",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DropItemModifier",
+        "Predicates": [
+          {
+            "$type": "ByStageName",
+            "CompareType": "Equal",
+            "StageName": "Stage_Zero_Boss_Nineveh"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DropItemModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnKilled": [
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1002:10000:2",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

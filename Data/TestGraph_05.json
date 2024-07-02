@@ -1,0 +1,615 @@
+{
+  "AbilityName": "TestGraph_05",
+  "EventGraph": {
+    "EditorOnlyData": {
+      "Position": {
+        "x": -1885,
+        "y": -343,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1.749006,
+        "y": 1.749006,
+        "z": 1
+      }
+    },
+    "EventMap": {
+      "OnStart": {
+        "$type": "ConfigAbilityGraphEvent",
+        "EventNodeBind": 2,
+        "ParametersBind": [],
+        "Position": {
+          "x": 250.0046,
+          "y": 207.1435
+        }
+      }
+    },
+    "NodeList": [
+      {
+        "$type": "FloatAddNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1000
+        },
+        "ParamTwo": {
+          "BindId": 1002
+        },
+        "Position": {
+          "x": 320.5,
+          "y": 334
+        },
+        "PreActionBind": [
+          8,
+          9
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1004
+          ]
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 6,
+        "Position": {
+          "x": 512,
+          "y": 206.5
+        },
+        "PreActionBind": [
+          7
+        ],
+        "Value": {
+          "BindId": 1005
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 1,
+        "Position": {
+          "x": 363.4283,
+          "y": 206.5718
+        },
+        "PreActionBind": [
+          0
+        ],
+        "Value": {
+          "BindId": 1004
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 4,
+        "Position": {
+          "x": 835,
+          "y": 205.5
+        },
+        "PreActionBind": [
+          13
+        ],
+        "Value": {
+          "BindId": 1011
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 5,
+        "Position": {
+          "x": 996.1413,
+          "y": 204.713
+        },
+        "PreActionBind": [
+          16
+        ],
+        "Value": {
+          "BindId": 1016
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 18,
+        "Position": {
+          "x": 1156.576,
+          "y": 205.4283
+        },
+        "PreActionBind": [
+          17
+        ],
+        "Value": {
+          "BindId": 1017
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 3,
+        "Position": {
+          "x": 667.5,
+          "y": 207
+        },
+        "PreActionBind": [
+          12
+        ],
+        "Value": {
+          "BindId": 1006
+        }
+      },
+      {
+        "$type": "FloatSubNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1001
+        },
+        "ParamTwo": {
+          "BindId": 1003
+        },
+        "Position": {
+          "x": 320,
+          "y": 456.5
+        },
+        "PreActionBind": [
+          8,
+          9
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1005
+          ]
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1000,
+            1001
+          ]
+        },
+        "Position": {
+          "x": 171,
+          "y": 362.5
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1002,
+            1003
+          ]
+        },
+        "Position": {
+          "x": 170,
+          "y": 447
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_2"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1007,
+            1008
+          ]
+        },
+        "Position": {
+          "x": 498,
+          "y": 358
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1009,
+            1010
+          ]
+        },
+        "Position": {
+          "x": 497,
+          "y": 441.5
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_2"
+      },
+      {
+        "$type": "FloatMulNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1007
+        },
+        "ParamTwo": {
+          "BindId": 1010
+        },
+        "Position": {
+          "x": 645,
+          "y": 333.5
+        },
+        "PreActionBind": [
+          10,
+          11
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1006
+          ]
+        }
+      },
+      {
+        "$type": "FloatDivNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1008
+        },
+        "ParamTwo": {
+          "BindId": 1009
+        },
+        "Position": {
+          "x": 643,
+          "y": 443.5
+        },
+        "PreActionBind": [
+          11,
+          10
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1011
+          ]
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1012,
+            1013
+          ]
+        },
+        "Position": {
+          "x": 826.6301,
+          "y": 368.9451
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1014,
+            1015
+          ]
+        },
+        "Position": {
+          "x": 828.6575,
+          "y": 451.4248
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_2"
+      },
+      {
+        "$type": "FloatMaxNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1012
+        },
+        "ParamTwo": {
+          "BindId": 1014
+        },
+        "Position": {
+          "x": 969.6301,
+          "y": 340.9451
+        },
+        "PreActionBind": [
+          14,
+          15
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1016
+          ]
+        }
+      },
+      {
+        "$type": "FloatMinNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1013
+        },
+        "ParamTwo": {
+          "BindId": 1015
+        },
+        "Position": {
+          "x": 967.6577,
+          "y": 452.4248
+        },
+        "PreActionBind": [
+          14,
+          15
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1017
+          ]
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 19,
+        "Position": {
+          "x": 1323.123,
+          "y": 205.1003
+        },
+        "PreActionBind": [
+          20
+        ],
+        "Value": {
+          "BindId": 1020
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 24,
+        "Position": {
+          "x": 1482.857,
+          "y": 205.4283
+        },
+        "PreActionBind": [
+          21
+        ],
+        "Value": {
+          "BindId": 1021
+        }
+      },
+      {
+        "$type": "FloatCompareNode",
+        "CompareType": "Greater",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1018
+        },
+        "ParamTwo": {
+          "DefaultValue": 1.2
+        },
+        "Position": {
+          "x": 1285.401,
+          "y": 334.5582
+        },
+        "PreActionBind": [
+          22
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1020
+          ]
+        }
+      },
+      {
+        "$type": "FloatCompareNode",
+        "CompareType": "LessEqual",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1019
+        },
+        "ParamTwo": {
+          "DefaultValue": 1.2
+        },
+        "Position": {
+          "x": 1284.267,
+          "y": 446.2507
+        },
+        "PreActionBind": [
+          23
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1021
+          ]
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1018
+          ]
+        },
+        "Position": {
+          "x": 1154.141,
+          "y": 334.713
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1019
+          ]
+        },
+        "Position": {
+          "x": 1155.431,
+          "y": 446.4305
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": 25,
+        "Position": {
+          "x": 1658.572,
+          "y": 205.4305
+        },
+        "PreActionBind": [
+          28
+        ],
+        "Value": {
+          "BindId": 1026
+        }
+      },
+      {
+        "$type": "LogValueNode",
+        "DefaultOutBind": -1,
+        "Position": {
+          "x": 1825.854,
+          "y": 205.1413
+        },
+        "PreActionBind": [
+          29
+        ],
+        "Value": {
+          "BindId": 1027
+        }
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1024,
+            1025
+          ]
+        },
+        "Position": {
+          "x": 1473.854,
+          "y": 355.7153
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_1"
+      },
+      {
+        "$type": "GetVariable",
+        "DefaultOutBind": -1,
+        "Output": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1022,
+            1023
+          ]
+        },
+        "Position": {
+          "x": 1475.428,
+          "y": 465.9955
+        },
+        "VarScope": "Auto",
+        "VariableKey": "Float_2"
+      },
+      {
+        "$type": "FloatLerpNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1022
+        },
+        "ParamTwo": {
+          "BindId": 1024
+        },
+        "Position": {
+          "x": 1629.139,
+          "y": 327.1412
+        },
+        "PreActionBind": [
+          27,
+          26
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1026
+          ]
+        },
+        "T": {
+          "DefaultValue": 0.5
+        }
+      },
+      {
+        "$type": "FloatLerpNode",
+        "DefaultOutBind": -1,
+        "ParamOne": {
+          "BindId": 1023
+        },
+        "ParamTwo": {
+          "BindId": 1025
+        },
+        "Position": {
+          "x": 1628.139,
+          "y": 467.1413
+        },
+        "PreActionBind": [
+          27,
+          26
+        ],
+        "Result": {
+          "$type": "ConfigOutputValue",
+          "BindId": [
+            1027
+          ]
+        },
+        "T": {
+          "DefaultValue": 1.5
+        }
+      }
+    ],
+    "VariableRegisterList": [
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueFloat",
+          "Value": 1.2
+        },
+        "ElementType": "Integer",
+        "Key": "Float_1",
+        "Scope": "Auto",
+        "Type": "Float"
+      },
+      {
+        "$type": "AbilityVariableRegister",
+        "DefaultValue": {
+          "$type": "ConfigDynamicValueFloat",
+          "Value": 0.5
+        },
+        "ElementType": "Integer",
+        "Key": "Float_2",
+        "Scope": "Auto",
+        "Type": "Float"
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "CallGraphEvent",
+      "AbilityName": "TestGraph_05",
+      "EventName": "OnStart"
+    }
+  ]
+}

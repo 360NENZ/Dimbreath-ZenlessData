@@ -1,0 +1,11 @@
+{
+  "AbilityName": "Golem_Ability_BeatBack_MOD_Remove",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "Golem_Ability_BeatBack",
+      "Target": "Self"
+    }
+  ]
+}

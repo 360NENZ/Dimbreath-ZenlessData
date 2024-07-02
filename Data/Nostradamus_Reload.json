@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Nostradamus_Reload",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyProperty",
+      "Amount": 8,
+      "CustomPropertyType": "BulletShell",
+      "Percentage": 0,
+      "PropertyModifyFunction": "Add",
+      "PropertyType": "Custom"
+    },
+    {
+      "$type": "GamepadRumbleAction",
+      "GamepadRumbleKey": "Nostradamus_GamepadRumble_E_Reload"
+    }
+  ]
+}

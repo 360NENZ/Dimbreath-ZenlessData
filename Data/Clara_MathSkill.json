@@ -1,0 +1,95 @@
+{
+  "AbilityName": "Clara_MathSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.18
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Clara_MathSkillModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Clara_MathSkillModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Clara_MathSkill_BuffIcon",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Clara_MathSkill_BuffIcon",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    },
+    "Clara_MathSkillModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "DoInitialCheck": true,
+          "PropertyActions": [
+            {
+              "CustomPropertyType": "InspireCount",
+              "IsUsePercentage": false,
+              "PropertyType": "Custom",
+              "ValueRangeActions": [
+                {
+                  "LowToValueActions": [
+                    {
+                      "$type": "ApplyModifier",
+                      "ModifierName": "AddDamageModifier",
+                      "Target": "TeamAvatars"
+                    }
+                  ],
+                  "Val": 20,
+                  "ValueToLowActions": [
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "AddDamageModifier",
+                      "Target": "TeamAvatars"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "Clara_MathSkill_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000052,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Refresh"
+    }
+  }
+}

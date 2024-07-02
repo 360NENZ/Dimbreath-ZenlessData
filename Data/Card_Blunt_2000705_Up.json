@@ -1,0 +1,78 @@
+{
+  "AbilityName": "Card_Blunt_2000705_Up",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Blunt_2000700",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Blunt_2000700",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Blunt_2000700",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_01",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackSpecial",
+                "ExSp"
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

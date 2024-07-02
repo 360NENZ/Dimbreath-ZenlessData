@@ -1,0 +1,76 @@
+{
+  "AbilityName": "LightfootRover_ATK3_Fire",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LightfootRover_Attack_3_Fire_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "LightfootRover_Attack03_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "LightfootRover_Attack01_Attackproperty_H",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "LightfootRover_Attack_3_Fire_HitCount",
+            "StackCount": 3,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "LightfootRover_Attack03_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "LightfootRover_Attack_3_Fire_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "LightfootRover_Attack_3_Fire_HitCount",
+            "StackCount": 3,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "LightfootRover_Attack03_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 3,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LightfootRover_Attack_3_Fire_HitCount": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

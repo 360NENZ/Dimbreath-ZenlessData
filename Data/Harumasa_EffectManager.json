@@ -1,0 +1,303 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Aim_Start",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Aim_Start_02",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 18,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Aim_Loop",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Aim_Loop_02",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 5,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 4,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 54,
+          "FrameCountLow": 35,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 5,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_01",
+          "FrameCountHigh": 40,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02",
+          "FrameCountHigh": 56,
+          "FrameCountLow": 6,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_02",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 6,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04",
+          "FrameCountHigh": 101,
+          "FrameCountLow": 10,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 25,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Idle_AFK_01",
+          "FrameCountHigh": 340,
+          "FrameCountLow": 65,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 17,
+          "FrameCountLow": 3,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 28,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "FrameCountHigh": 99,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_MoveAttck_Left",
+          "FrameCountHigh": 29,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_MoveAttck_Right",
+          "FrameCountHigh": 29,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt",
+          "FrameCountHigh": 360,
+          "FrameCountLow": 35,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialPropertiesModifier01"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Harumasa_EffectManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MaterialPropertiesModifier01": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Harumasa_Weapon_3_03"
+            }
+          ],
+          "Tag": "Harumasa_MaterialProperty01",
+          "Target": "Self",
+          "key": "Avatar_Male_Size01_Harumasa_MA_Attack_Normal_01_Mat_01_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Harumasa_MaterialProperty01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

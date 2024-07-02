@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Card_Gun_2000309",
+  "AbilitySpecials": {
+    "AtkDecreseRatio": {
+      "Value": -0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDamageCalculatedPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AtkDebuff_Card_2000309",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AtkDebuff_Card_2000309": {
+      "Duration": 10,
+      "IsUnique": true,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AtkDecreseRatio"
+      }
+    }
+  }
+}

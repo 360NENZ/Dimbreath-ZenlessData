@@ -1,0 +1,50 @@
+{
+  "AbilityName": "GoldenBomb_Opening",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GoldenBomb_Opening",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "GoldenBomb_Opening": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 5,
+          "Tag": "GoldenBomb_Opening_RBL",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "GoldenBomb_RBLRemove",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "GoldenBomb_Opening",
+          "Target": "Self"
+        }
+      ]
+    },
+    "GoldenBomb_RBLRemove": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "GoldenBomb_Opening_RBL",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

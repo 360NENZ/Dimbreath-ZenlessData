@@ -1,0 +1,36 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "Interact_Switch",
+      "InteractTag": "Interact_Switch",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CloseModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    }
+  ],
+  "AbilityName": "Switch_Interact",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CloseModifier": {
+      "Duration": 6,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Close",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

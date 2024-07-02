@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Card_Ashes_2000111",
+  "AbilitySpecials": {
+    "Burn_Duration_Delta": {
+      "Value": 10
+    },
+    "Ignite_Duration_Delta": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Burn",
+        "Params": [
+          {
+            "Delta": "%Burn_Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      },
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Ignite",
+        "Params": [
+          {
+            "Delta": "%Ignite_Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      }
+    ],
+    "ModifierStacking": "Unique"
+  }
+}

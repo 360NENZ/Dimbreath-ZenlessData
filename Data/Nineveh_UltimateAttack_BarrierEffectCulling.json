@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Nineveh_UltimateAttack_BarrierEffectCulling",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "AddBarrierToEffectAction",
+      "SourceTag": "NinevehWallSmall",
+      "Target": "Self",
+      "TargetTag": "NinevehWallBlock",
+      "Width": 0.63
+    },
+    {
+      "$type": "AddBarrierToEffectAction",
+      "SourceTag": "NinevehWallBig",
+      "Target": "Self",
+      "TargetTag": "NinevehWallBlock",
+      "Width": 0.75
+    }
+  ]
+}

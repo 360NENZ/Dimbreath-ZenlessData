@@ -1,0 +1,309 @@
+{
+  "AbilityName": "Lucy_Wood_Spawn",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "MoveAwayTimerModifier": {
+      "Duration": 5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_canMoveAway",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_canMoveAway",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "WriteAIParamAction",
+      "IntParamValue": 0,
+      "ParamName": "Int_WoodNum",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood00"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "WriteAIParamAction",
+      "IntParamValue": 1,
+      "ParamName": "Int_WoodNum",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood01"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "WriteAIParamAction",
+      "IntParamValue": 2,
+      "ParamName": "Int_WoodNum",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood02"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_WoodNum",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood00"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 1,
+      "ParamName": "Int_WoodNum",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood01"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 2,
+      "ParamName": "Int_WoodNum",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood02"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByEntityTemplateID",
+          "EntityType": "Avatar",
+          "Target": "LocalAvatar",
+          "TemplateID": 1151
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_LucyShow",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByEntityTemplateID",
+          "EntityType": "Avatar",
+          "Target": "LocalAvatar",
+          "TemplateID": 1151
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ],
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LucyWood00"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerBehaviorTreeAction",
+      "Enable": true,
+      "Target": "Self"
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByAIParam",
+          "BoolParamValue": true,
+          "CompareType": "Equal",
+          "ParamName": "Bool_WoodShow",
+          "Target": "Self"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 2,
+          "ParamName": "Int_ActionMode",
+          "Target": "Self"
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableCollider"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "DisableHitCollider"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "OnAdded": [
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "LucyWood00"
+      ],
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "IsAdd": true,
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "LucyWood01"
+      ],
+      "CustomKey": "LucyWood_AbilityTargetting_01",
+      "IsAdd": true,
+      "Target": "Custom"
+    },
+    {
+      "$type": "HandleAnimatorZoneTagsAction",
+      "AnimatorStateTags": [
+        "LucyWood02"
+      ],
+      "CustomKey": "LucyWood_AbilityTargetting_02",
+      "IsAdd": true,
+      "Target": "Custom"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Lucy_Wood_Spawn",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "MoveAwayTimerModifier",
+      "Target": "Self"
+    }
+  ],
+  "Predicates": {
+    "ByLocalAvatarCondition": {
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByEntityTemplateID",
+              "EntityType": "Avatar",
+              "Target": "LocalAvatar",
+              "TemplateID": 1151
+            }
+          ],
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  }
+}

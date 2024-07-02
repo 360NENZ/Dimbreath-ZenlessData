@@ -1,0 +1,73 @@
+{
+  "AbilityName": "Card_Ether_2001906",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Ether_2001900",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ControlModifier_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CDController": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ControlModifier_01",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ControlModifier_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ControlModifier_01": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Ether_2001900",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ether"
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CDController",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Ether"
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

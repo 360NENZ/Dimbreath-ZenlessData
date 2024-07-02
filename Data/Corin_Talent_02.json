@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Corin_Talent_02",
+  "AbilitySpecials": {
+    "AS_PhyDmgResDownDuration_Talent_02": {
+      "Value": 15
+    },
+    "AS_PhyDmgResDownValue_Talent_02": {
+      "Value": -0.02
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PhysicsDamageResistDown",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackSpecial",
+                  "ExSp"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "NormalQTE"
+                ]
+              },
+              {
+                "$type": "ByAnimTagList",
+                "TagList": [
+                  "AttackQTE",
+                  "ExQTE"
+                ]
+              }
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PhysicsDamageResistDown": {
+      "Duration": "%AS_PhyDmgResDownDuration_Talent_02",
+      "MaxStackingNumber": 20,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_PhysicsDamageResist": "%AS_PhyDmgResDownValue_Talent_02"
+      }
+    }
+  }
+}

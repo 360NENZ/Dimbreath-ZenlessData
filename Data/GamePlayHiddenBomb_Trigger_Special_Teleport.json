@@ -1,0 +1,47 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_Trigger_Special_Teleport",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    },
+    "ShieldAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 73,
+        "ParamName": "Int_AttackIndex",
+        "ParamType": 3,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_PressAttackA",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Teleport_End_Modifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_Switch_Teleport",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

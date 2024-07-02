@@ -1,0 +1,155 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 3.6,
+      "BeamEffectEndClip": "Eff_Monster_ComplexCorrupted_Range_Attack_01_ShockWave_End",
+      "BeamEffectLoopClip": "Eff_Monster_ComplexCorrupted_Range_Attack_01_ShockWave_Loop",
+      "BlockActionCD": 0.5,
+      "BlockActionList": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Attack_Range_01_BulletType_01",
+          "PosRotConfig": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomAngleRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomPositionRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "LaserBlockAttachPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Caster"
+            }
+          },
+          "PositionArgument": "Owner",
+          "Predicates": [
+            {
+              "$type": "ByLaserCurrentState",
+              "CurrentState": "Loop"
+            }
+          ]
+        }
+      ],
+      "BlockCameraShake": "Monster_ComplexCorrupted_Attack_Range_01_CamShake_E_01",
+      "BlockColliderRadius": 0,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_01_Burst_Loop"
+      },
+      "BlockEffectEndClip": "Eff_Monster_ComplexCorrupted_Range_Attack_01_Burst_End",
+      "BlockEffectLoopClip": "Eff_Monster_ComplexCorrupted_Range_Attack_01_Burst_Loop",
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.85
+      },
+      "EffectName": "Eff_Monster_ComplexCorrupted_Range_Attack_01_ShockWave_Loop",
+      "EndEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_01_Burst_Loop"
+      },
+      "FadeRatio": 0.3,
+      "FirstHitDelayTime": 0.0,
+      "HitAnimEventID": "Monster_ComplexCorrupted_Range_Attack_01_Attackproperty_01",
+      "HitColliderRadius": 1.5,
+      "HitInterval": 0.1,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "InterruptAnimationSpeed": 8,
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserEndPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserStartPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 999,
+      "OnLaserInterruptAction": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Monster_ComplexCorrupted_Range_Attack_01_Burst_Loop"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.2,
+          "Target": "Self"
+        }
+      ],
+      "Tag": "ComplexCorrupted_Attack_Range_01_Laser"
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Attack_Range_01_Laser",
+  "AbilityStacking": "Unique"
+}

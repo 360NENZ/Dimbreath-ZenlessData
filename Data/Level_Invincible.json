@@ -1,0 +1,21 @@
+{
+  "AbilityName": "Level_Invincible",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Duration": -1,
+    "IgnoreTimeScale": true,
+    "ModifierStacking": "Refresh",
+    "OnAdded": [
+      {
+        "$type": "PushInvincibleAction",
+        "Tag": "Level_Invincible"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "PopInvincibleAction",
+        "Tag": "Level_Invincible"
+      }
+    ]
+  }
+}

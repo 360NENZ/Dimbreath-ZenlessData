@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Weapon_Ability_12010",
+  "AbilitySpecials": {
+    "AS_Duration": {
+      "Value": 10.0
+    },
+    "AS_ElementAbnormalPowerDelta": {
+      "Value": 30.0
+    },
+    "AS_IntervalCD": {
+      "Value": 20.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElementModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByHitDataValue",
+            "CompareType": "Greater",
+            "CompareValue": 0,
+            "HitDataType": "ElementAbnormalAccumulation",
+            "TargetElement": "ElementAll",
+            "isRatio": false
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ElementModifier_Controller": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ElementModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ElementModifier_Effect": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_ElementAbnormalPowerDelta": "%AS_ElementAbnormalPowerDelta"
+      }
+    }
+  }
+}

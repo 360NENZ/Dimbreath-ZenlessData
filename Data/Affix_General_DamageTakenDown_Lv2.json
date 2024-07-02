@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Affix_General_DamageTakenDown_Lv2",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.1
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakenDown",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageTakenDown": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%DamageTakeRatio"
+      }
+    }
+  }
+}

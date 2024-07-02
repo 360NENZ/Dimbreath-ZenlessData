@@ -1,0 +1,228 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_01_02",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 2,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_02",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 3,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_03",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 3,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "CustomKey": "Rina_Self_AbilityTargetting_01",
+                  "ParamName": "Bool_TarotCard_CounterCombo",
+                  "ParamType": 2,
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 3,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "BoolVal": true,
+                  "CompareType": "Equal",
+                  "CustomKey": "Rina_Self_AbilityTargetting_01",
+                  "ParamName": "Bool_TarotCard_CounterCombo",
+                  "ParamType": 2,
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_Dash",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_03_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_EvadeAid_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Follow",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "SwitchIn",
+          "Frame": 0,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "IntVal": 1,
+              "ParamName": "Int_NormalCount",
+              "ParamType": 3,
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Teleport",
+          "Frame": 0,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_Drusilla_NormalCount",
+  "AbilityStacking": "Unique"
+}

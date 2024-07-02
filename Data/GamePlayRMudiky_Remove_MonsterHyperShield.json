@@ -1,0 +1,147 @@
+{
+  "AbilityName": "GamePlayRMudiky_Remove_MonsterHyperShield",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.01
+    },
+    "ShieldAmount": {
+      "Value": 0.01
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GamePlayRMudiky_MonsterHyperShield"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TriggerHit_Modifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ResistBreakReset_Modifier",
+        "Target": "Self"
+      }
+    ],
+    "OnStunDestroyActions": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(HpPercentage)*property(MaxHP)",
+        "ParamName": "ShieldAmount",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyHpShieldAction",
+        "MaxValueDelta": "%ShieldAmount",
+        "Tag": "MonsterHyperShield"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyStunStateAction",
+          "Target": "Self",
+          "TargetState": "Break"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunBuffModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Arlaune_Stun_Start_GasOff_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BreakStunModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ResistBreakReset_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_Goblin_Buff_SuperArmor",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": 2,
+          "Tag": "Monster_RBLSet_4",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Goblin_ATK06_ResistBreakLevelUp",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "TriggerHit_Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Hit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

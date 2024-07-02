@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Card_Edrink_2000208",
+  "AbilitySpecials": {
+    "AS_AddedSPGetRatio": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackNormal",
+              "Normal"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_SPGetRatio",
+        "PropertyValue": "%AS_AddedSPGetRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

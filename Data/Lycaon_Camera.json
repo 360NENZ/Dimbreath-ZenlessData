@@ -1,0 +1,298 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalCameraModifer_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalCameraModifer_02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalCameraModifer_03"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_04_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalCameraModifer_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NormalCameraModifer_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSpCameraModifer"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ExSpCameraModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lycaon_Camera",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ExSpCameraModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Branch_02_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Branch_02_CamStretch_01"
+        }
+      ]
+    },
+    "NormalCameraModifer_01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_01_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_01_CamStretch_01"
+        }
+      ]
+    },
+    "NormalCameraModifer_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_02_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_02_CamStretch_01"
+        }
+      ]
+    },
+    "NormalCameraModifer_03": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_03_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_03_CamStretch_01"
+        }
+      ]
+    },
+    "NormalCameraModifer_04": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_04_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_04_CamStretch_01"
+        }
+      ]
+    },
+    "NormalCameraModifer_05": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_05_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Normal_05_CamStretch_01"
+        }
+      ]
+    },
+    "SpCameraModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Branch_01_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraZoomKey": "Lycaon_Attack_Branch_01_CamStretch_01"
+        }
+      ]
+    }
+  }
+}

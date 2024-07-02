@@ -1,0 +1,31 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_3",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Attack3Listener"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ThugBulkyAbuser_Ability_Attack_03",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Attack3Listener": {
+      "OnHitOther": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "isAttackLanded"
+        }
+      ]
+    }
+  }
+}

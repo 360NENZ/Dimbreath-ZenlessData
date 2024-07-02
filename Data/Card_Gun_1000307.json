@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Card_Gun_1000307",
+  "AbilitySpecials": {
+    "StunRatio": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDamageCalculated": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%StunRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

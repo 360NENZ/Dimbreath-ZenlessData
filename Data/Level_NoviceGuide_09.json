@@ -1,0 +1,17 @@
+{
+  "AbilityName": "Level_NoviceGuide_09",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "InterruptSetupUIAction",
+        "IgnoreFadeAnimation": false,
+        "SetupTag": "Level_NoviceGuide_SetupTag_01"
+      },
+      {
+        "$type": "InterruptInputEnableAction",
+        "Tag": "Level_NoviceGuide_InputMute_01"
+      }
+    ]
+  }
+}

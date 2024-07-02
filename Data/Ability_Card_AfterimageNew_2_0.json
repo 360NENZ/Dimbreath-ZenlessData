@@ -1,0 +1,275 @@
+{
+  "AbilityName": "Ability_Card_AfterimageNew_2_0",
+  "AbilitySpecials": {
+    "AS_AfterImage02CD": {
+      "Value": 0.5
+    },
+    "AS_AfterImageDuration_Main": {
+      "Value": 2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_2_1",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 200
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_2_2",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 201
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_2_3",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 202
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_2_4",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 203
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_2_5",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 205
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_2_1",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_2_2",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_2_3",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_2_4",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_2_5",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType02Modifier01",
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 200
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType02Modifier02",
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 201
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType02Modifier03",
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 202
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType02Modifier04",
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 203
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType02Modifier05",
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 205
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AfterImageType02Modifier01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_2_1"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage02CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType02Modifier02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_2_2"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage02CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType02Modifier03": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_2_3"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage02CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType02Modifier04": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_2_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage02CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType02Modifier05": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_2_5"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage02CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

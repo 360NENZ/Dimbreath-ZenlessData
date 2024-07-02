@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Prologue_ACT2_RecoverStunEnemy",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunUpModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunUpModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "RecoverStunAction",
+          "Amount": 80,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

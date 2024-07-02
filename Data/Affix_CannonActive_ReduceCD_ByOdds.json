@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Affix_CannonActive_ReduceCD_ByOdds",
+  "AbilitySpecials": {
+    "ByOdds": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "RandomOperator",
+        "Odds": "%ByOdds",
+        "OnSuccess": [
+          {
+            "$type": "ModifySkillTypeCDAction",
+            "Ratio": -1,
+            "SkillType": "Cannon",
+            "Target": "Buddy"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Cannon",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  }
+}

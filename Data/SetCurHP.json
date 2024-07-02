@@ -1,0 +1,18 @@
+{
+  "AbilityName": "SetCurHP",
+  "AbilitySpecials": {
+    "AS_CurHPRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyProperty",
+      "Percentage": "%AS_CurHPRatio",
+      "PropertyModifyFunction": "Replace",
+      "PropertyType": "CurHP",
+      "Target": "Self"
+    }
+  ]
+}

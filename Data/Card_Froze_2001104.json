@@ -1,0 +1,87 @@
+{
+  "AbilityName": "Card_Froze_2001104",
+  "AbilitySpecials": {
+    "AS_FrozenAddCount": {
+      "Value": 20
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Froze_2001100",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAddToOther": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Froze_2001100",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Froze_2001100",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Add",
+                "Param": "AS_FrozenAddCount",
+                "ParamName": "AS_FrozenBuffCount",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Card_Froze_2001100",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_FrozenAddCount",
+                "ParamName": "AS_AddFrozenBuffIconCount",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

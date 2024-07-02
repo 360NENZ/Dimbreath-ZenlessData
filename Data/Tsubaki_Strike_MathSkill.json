@@ -1,0 +1,105 @@
+{
+  "AbilityName": "Tsubaki_Strike_MathSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_1": {
+      "Value": 0.225
+    },
+    "AS_AddedDamageRatio_2": {
+      "Value": 0.45
+    },
+    "AS_StackNum": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffDamageBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 1,
+            "ParamName": "AS_StackNum",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_1",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Equal",
+            "Param": 2,
+            "ParamName": "AS_StackNum",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_2",
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "AS_StackNum",
+        "ParamType": "Integer",
+        "Predicates": [
+          {
+            "$type": "ByBuffAttackProperty",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          },
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 1,
+            "ParamName": "AS_StackNum",
+            "ParamType": "Integer",
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Add",
+      "Param": 1,
+      "ParamName": "AS_StackNum",
+      "ParamType": "Integer",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Less",
+          "Param": 2,
+          "ParamName": "AS_StackNum",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

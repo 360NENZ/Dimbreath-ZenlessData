@@ -1,0 +1,153 @@
+{
+  "AbilityName": "Suit_Ability_50431300",
+  "AbilitySpecials": {
+    "AS_AbnormalResistDelta": {
+      "Value": -0.3
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalResistDeltaModifier_200_Suit_Ability_50431300",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          },
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 200,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalResistDeltaModifier_201_Suit_Ability_50431300",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          },
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 201,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalResistDeltaModifier_202_Suit_Ability_50431300",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          },
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 202,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalResistDeltaModifier_203_Suit_Ability_50431300",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          },
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 203,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AbnormalResistDeltaModifier_205_Suit_Ability_50431300",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ]
+          },
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 205,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbnormalResistDeltaModifier_200_Suit_Ability_50431300": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AbnormalResistDelta_Physics": "%AS_AbnormalResistDelta"
+      }
+    },
+    "AbnormalResistDeltaModifier_201_Suit_Ability_50431300": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AbnormalResistDelta_Fire": "%AS_AbnormalResistDelta"
+      }
+    },
+    "AbnormalResistDeltaModifier_202_Suit_Ability_50431300": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AbnormalResistDelta_Ice": "%AS_AbnormalResistDelta"
+      }
+    },
+    "AbnormalResistDeltaModifier_203_Suit_Ability_50431300": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AbnormalResistDelta_Elec": "%AS_AbnormalResistDelta"
+      }
+    },
+    "AbnormalResistDeltaModifier_205_Suit_Ability_50431300": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AbnormalResistDelta_Ether": "%AS_AbnormalResistDelta"
+      }
+    }
+  }
+}

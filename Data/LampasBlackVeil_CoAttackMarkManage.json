@@ -1,0 +1,1080 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_01_B",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_01_B",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_01_A",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_01_A",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_01_A",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_01_B",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_02_B",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_02_B",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_02_A",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_02_A",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_02_A",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_02_B",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_B_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_B_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_A_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_A_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_B_02",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_B_02",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_A_02",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_03_A_02",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_04_B_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_04_B_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_04_A_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_04_A_01",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_B_01",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_Opening_B",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_Opening_B",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_Opening_A",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_Hit",
+              "ParamType": 1,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_Opening_A",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+              "IntVal": 0,
+              "ParamName": "Int_GroundHitIndex",
+              "ParamType": 3,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "CoAttack_Opening_A",
+                      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "IsLoop": false,
+                      "LayerIndex": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false,
+                      "Target": "Custom"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_Opening_B",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 10,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_01_F",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_B",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier",
+            "Attack_02_DirectionTagRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier",
+            "Attack_02_DirectionTagRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_End",
+          "FrameCountHigh": 180,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier",
+            "Attack_02_DirectionTagRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_01",
+          "FrameCountHigh": 220,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_02",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04_01",
+          "FrameCountHigh": 260,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04_02",
+          "FrameCountHigh": 100,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05",
+          "FrameCountHigh": 295,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06",
+          "FrameCountHigh": 175,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_07",
+          "FrameCountHigh": 420,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackMarkRemoveModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttack_03_A_InAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttack_03_A_InAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttack_03_A_InAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttack_03_A_InAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttack_03_A_InAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_06",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttack_03_A_InAttack"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_CoAttackMarkManage",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Attack_02_DirectionTagRemoveModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Attack_02_MoveRight"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Attack_02_MoveRight"
+          ],
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "IsAdd": false,
+          "Target": "Custom"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Attack_02_MoveLeft"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Attack_02_MoveLeft"
+          ],
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "IsAdd": false,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "CoAttackMarkRemoveModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "LampasBlackVeil_CoAttackMark_Remove",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "LampasBlackVeil_IsLeader"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "CoAttack_03_A_InAttack": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ParamName": "Bool_IsInCoAttack03",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+          "ParamName": "Bool_IsInCoAttack03",
+          "ParamType": 2,
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

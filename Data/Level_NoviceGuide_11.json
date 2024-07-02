@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Level_NoviceGuide_11",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HitListenerModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HitListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_01",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackQTE"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Sample_1001203",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedDamageRatio"
+    }
+  }
+}

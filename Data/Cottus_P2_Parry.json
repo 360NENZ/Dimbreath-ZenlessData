@@ -1,0 +1,499 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Parry_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ParryModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ParryModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry_End",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ParryModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry_End",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveBeCounterModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveBeCounterModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Parry_End",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveBeCounterModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_15",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "RemoveBeCounterModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_P2_Parry",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -100
+    },
+    "AS_NormalHitCount": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HardModeModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "Hard"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddCountModifier": {
+      "Duration": 0.2,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_NormalHitCount",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BeCounterModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 4,
+              "ParamName": "AS_NormalHitCount",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_ParryLong",
+              "ParamType": 2
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BeCounterModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_ParryCounter",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetRBLAction",
+          "RBL": 4,
+          "Tag": "Cottus_Parry",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_ParryCounter",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Cottus_Parry",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeDamageCalculated": [
+        {
+          "$type": "ReplaceDamageByHpAction",
+          "Amount": 1,
+          "HpProperty": "MaxHP",
+          "Percentage": 0
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoStun",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "EffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnd",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": false,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_ParryLong",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": true,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_Parry",
+                      "ParamType": 2
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAnd",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Less",
+                      "Param": 4,
+                      "ParamName": "AS_NormalHitCount",
+                      "ParamType": "Integer"
+                    },
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": true,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_ParryLong",
+                      "ParamType": 2
+                    },
+                    {
+                      "$type": "ByAnimCtrlerParam",
+                      "BoolVal": true,
+                      "CompareType": "Equal",
+                      "ParamName": "Bool_Parry",
+                      "ParamType": 2
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_Parry",
+              "ParamType": 2
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_2"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_Cottus_MA_P2_Parry_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_Cottus_MA_P2_Parry_Mat01_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 4,
+              "ParamName": "AS_NormalHitCount",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_ParryLong",
+              "ParamType": 2
+            },
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_Parry",
+              "ParamType": 2
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_2"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_Cottus_MA_P2_Parry_Mat02_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_Cottus_MA_P2_Parry_Mat02_SecondaryEmission_02"
+        }
+      ]
+    },
+    "HardModeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "P2_Parry_Start",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "DamageTakeRatioModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "P2_Parry",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "DamageTakeRatioModifier"
+              ]
+            },
+            {
+              "AnimatorStateName": "P2_Parry_End",
+              "FrameCountHigh": 30,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": false,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "DamageTakeRatioModifier"
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageTakeRatioModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_NormalHitCount",
+          "ParamType": "Integer"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_ParryHit",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddCountModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SkillStartAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimCtrlerParam",
+              "BoolVal": true,
+              "CompareType": "Equal",
+              "ParamName": "Bool_ParryLong",
+              "ParamType": 2
+            }
+          ],
+          "StartedSkillName": "Cottus_P2_ParryCounter",
+          "Target": "Self"
+        },
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Cottus_P2_Parry",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_ParryLong",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_NormalHitCount",
+          "ParamType": "Integer"
+        }
+      ]
+    },
+    "RemoveBeCounterModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BeCounterModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

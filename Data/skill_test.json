@@ -1,0 +1,82 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "cpAnimRotationType": 0,
+      "curve": {
+        "keys": [
+          {
+            "inTangent": 2.011169,
+            "inWeight": 0.0,
+            "outTangent": 2.011169,
+            "outWeight": 0.333333343,
+            "tangentMode": 34,
+            "time": 0.0,
+            "value": 0.0,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": -0.004868865,
+            "inWeight": 0.333333343,
+            "outTangent": -0.004868865,
+            "outWeight": 0.333333343,
+            "tangentMode": 34,
+            "time": 0.50120753,
+            "value": 1.008013,
+            "weightedMode": 0
+          },
+          {
+            "inTangent": -2.02090669,
+            "inWeight": 0.333333343,
+            "outTangent": -2.02090669,
+            "outWeight": 0.0,
+            "tangentMode": 34,
+            "time": 1.0,
+            "value": 0.0,
+            "weightedMode": 0
+          }
+        ],
+        "length": 3,
+        "postWrapMode": 8,
+        "preWrapMode": 8
+      },
+      "effectType": 2,
+      "endFrame": 29,
+      "idx": 559447040,
+      "speedEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 360.0
+      },
+      "speedParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 30,
+  "frameRate": 20,
+  "loop": false,
+  "modelPath": "",
+  "partLoop": false,
+  "seqName": "skill_test",
+  "speedParams": {
+    "param1": 0,
+    "param2": 0
+  },
+  "topSpeed": 99.0,
+  "totalTime": 1.5,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Rotation",
+      "trackType": 2
+    }
+  ]
+}

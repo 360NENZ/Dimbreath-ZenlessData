@@ -1,0 +1,36 @@
+{
+  "AbilityName": "FierySerpent_Teleport_FadeIn",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "VisibleModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "InterruptDitherFadeAction",
+              "Tag": "Monster_DeathXIII_Dither_Fade",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "PopEntityVisibleWithTagAction",
+          "Tag": "Death"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "VisibleModifier",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "IdleModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Prop_Switch_02_Normal",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "IdleModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PlayTextureSheetSequenceAction",
+          "InterruptType": "Interrupt",
+          "IsKeepLastFrame": false,
+          "MeshPath": "Device_Prop_Switch_02",
+          "Target": "Self",
+          "TextureSheetKey": "Device_Prop_Switch_02_Normal"
+        }
+      ]
+    }
+  }
+}

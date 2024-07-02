@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Card_Edrink_2000206",
+  "AbilitySpecials": {
+    "AS_RecoverSp": {
+      "Value": 100
+    },
+    "AS_RecoverSpCD": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RecoverSPModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RecoverSPModifier": {
+      "Duration": "%AS_RecoverSpCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

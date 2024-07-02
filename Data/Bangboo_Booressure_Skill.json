@@ -1,0 +1,140 @@
+{
+  "AbilityName": "Bangboo_Booressure_Skill",
+  "AbilitySpecials": {
+    "AS_ExtraSpRecoverRadio": {
+      "Value": 0
+    },
+    "AS_ExtraSpRecoverValue": {
+      "Value": 0
+    },
+    "AS_SpRecoverValue": {
+      "Value": 0
+    },
+    "AS_SpRecoverValueBase": {
+      "Value": 2.4
+    },
+    "AS_SpRecoverValuePreLevel": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ExSpRecoverModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_ExtraSpRecoverValue",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "RecoveredSP"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "MaterialPropertyModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Tag": "BultlerMaterial",
+          "Target": "Self",
+          "key": "Common_MA_Buff_AddSp_RimGlow_01"
+        }
+      ]
+    },
+    "SpRecoverModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecoverValue",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_AddSp",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialPropertyModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "RecoveredSP"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "RecoveredSP"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "specials(AS_SpRecoverValueBase)+property(Level)*specials(AS_SpRecoverValuePreLevel)",
+      "ParamName": "AS_SpRecoverValue",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "(specials(AS_SpRecoverValueBase)+property(Level)*specials(AS_SpRecoverValuePreLevel))*specials(AS_ExtraSpRecoverRadio)",
+      "ParamName": "AS_ExtraSpRecoverValue",
+      "Target": "Self",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SpRecoverModifier",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ExSpRecoverModifier",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "MathSkillBooressure"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "TeamAvatars"
+    }
+  ]
+}

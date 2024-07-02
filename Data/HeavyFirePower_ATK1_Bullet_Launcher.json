@@ -1,0 +1,78 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_1_Upper",
+          "LayerIndex": 3,
+          "ModifierNameList": [
+            "BulletLauncherModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "HeavyFirePower_ATK1_Bullet_Launcher",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBehaviorTreeDisabled": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": false,
+        "ParamName": "Bool_IsShooting",
+        "ParamType": 2,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BulletLauncherModifier": {
+      "Duration": 1.4,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BulletRepeaterModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BulletRepeaterModifier": {
+      "Duration": 0.08,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "HeavyFirePower_ATK1_Bullet_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BulletRepeaterModifier",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "BulletLauncherModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BulletLauncherModifier",
+      "Target": "Self"
+    }
+  ]
+}

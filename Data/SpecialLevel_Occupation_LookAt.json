@@ -1,0 +1,33 @@
+{
+  "AbilityName": "SpecialLevel_Occupation_LookAt",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpecialLevel_Occupation_LookAtModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "SpecialLevel_Occupation_LookAtModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ActCameraShotAction",
+          "CameraShotKey": "SpecialLevel_Occupation",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SpecialLevel_Occupation_LookAtModifier",
+      "Target": "Self"
+    }
+  ]
+}

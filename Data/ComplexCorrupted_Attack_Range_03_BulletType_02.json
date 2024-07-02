@@ -1,0 +1,145 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 4,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_03_Smoke_04"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        },
+        "Targetting": "Enemy"
+      },
+      "BulletName": "Bullet_Empty_IgnoreWall",
+      "CanHitStage": false,
+      "DelayActionList": [
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.3,
+                "EffFadeOutTime": 0.1,
+                "EffHoldTime": 0.1,
+                "EffStartSizeX": 7,
+                "EffStartSizeY": 7
+              },
+              "EffectPattern": "Eff_Common_Alert_Circle",
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 0.0,
+          "HitAnimEventID": "Monster_ComplexCorrupted_Range_Attack_03_Attackproperty_02"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_ComplexCorrupted_Attack_Range_03_CamShake_E_02",
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 0.3,
+          "HitAnimEventID": "Monster_ComplexCorrupted_Range_Attack_03_Attackproperty_03"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_ComplexCorrupted_Attack_Range_03_CamShake_E_02",
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 0.4,
+          "HitAnimEventID": "Monster_ComplexCorrupted_Range_Attack_03_Attackproperty_04"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_ComplexCorrupted_Attack_Range_03_CamShake_E_02",
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 0.5,
+          "HitAnimEventID": "Monster_ComplexCorrupted_Range_Attack_03_Attackproperty_03"
+        },
+        {
+          "Actions": [
+            {
+              "$type": "AttackCameraShakeAction",
+              "ShakeConfigKey": "Monster_ComplexCorrupted_Attack_Range_03_CamShake_E_02",
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 0.6,
+          "HitAnimEventID": "Monster_ComplexCorrupted_Range_Attack_03_Attackproperty_03"
+        }
+      ],
+      "DestroyExplode": false,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": -1,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Attack_Range_03_BulletType_02",
+  "AbilityStacking": "Unique"
+}

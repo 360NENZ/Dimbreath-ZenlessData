@@ -1,0 +1,33 @@
+{
+  "AbilityName": "BangbooStunnedOnBeingHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Stunned",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Stunned": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsInStun",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "BangbooStunnedOnBeingHit",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Evade",
+          "FrameCountHigh": 125,
+          "FrameCountLow": 45,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeHideModifier"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "IsUsePercentage": true,
+          "PropertyType": "CurHP",
+          "ReferMaxPropertyType": "MaxHP",
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "EvadeSkillModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByTags",
+                      "TagList": [
+                        "Promote"
+                      ],
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "BySkillReady",
+                      "SkillName": "Monster_Ahriman_Evade",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ahriman_Evade",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EvadeHideModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_Ahriman_Evade_Dither_Fade",
+          "Tag": "Monster_Ahriman_Evade_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Monster_Ahriman_Evade_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EvadeSkillModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 4,
+          "Tag": "Ahriman_RBL",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 11,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Ahriman_RBL",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

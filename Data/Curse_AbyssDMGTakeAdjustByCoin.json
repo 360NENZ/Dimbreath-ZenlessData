@@ -1,0 +1,50 @@
+{
+  "AbilityName": "Curse_AbyssDMGTakeAdjustByCoin",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": 0.5
+    },
+    "CurCoin": {
+      "Value": 0
+    },
+    "GoldLimit": {
+      "Value": 1500
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "item(1)",
+        "ParamName": "CurCoin",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Less",
+            "Param": "%GoldLimit",
+            "ParamName": "CurCoin",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageTakeUpModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    }
+  }
+}

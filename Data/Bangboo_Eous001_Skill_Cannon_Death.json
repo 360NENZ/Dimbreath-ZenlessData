@@ -1,0 +1,218 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Cannon_Death_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": -2.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "GunPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Bangboo_Eous001_Skill_Cannon_Death_Attackproperty_01",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Cannon_Death_Explode"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 20
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Cannon_Death_Explosion",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Skill_Cannon_CamShake_01",
+          "Target": "Other"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 0.3,
+        "ReachTargetStop": false,
+        "RotateSpeed": 360,
+        "RotateType": "Fixed",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TrailEffect": {
+        "EffectPattern": "Eff_Bangboo_Cannon_Death_Trail"
+      }
+    }
+  ],
+  "AbilityName": "Bangboo_Eous001_Skill_Cannon_Death",
+  "AbilitySpecials": {
+    "AS_AddedCD": {
+      "Value": -1.5
+    },
+    "AS_InternalCD": {
+      "Value": 1.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Bangboo_Eous001_Skill_Cannon_Death_Explosion",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "GetItemListenerModifier",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DropItemModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Eous001_Skill_Cannon_Death_Attackproperty_01",
+              "Bangboo_Eous001_Skill_Cannon_Death_Explosion_Attackproperty_01"
+            ]
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DropItemModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnKilled": [
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1001:10000:1",
+          "Target": "Self"
+        }
+      ]
+    },
+    "GetItemListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnGetItem": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ReduceCDModifier",
+          "Target": "Caster"
+        }
+      ]
+    },
+    "ReduceCDModifier": {
+      "Duration": "%AS_InternalCD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifySkillCDAction",
+          "Delta": "%AS_AddedCD",
+          "Ratio": 0,
+          "SkillName": "Bangboo_Eous001_Skill_Cannon_Death",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SkillStartAction",
+      "StartedSkillName": "Bangboo_Eous001_Skill_Cannon_Death",
+      "Target": "Self"
+    }
+  ]
+}

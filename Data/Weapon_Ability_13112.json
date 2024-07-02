@@ -1,0 +1,115 @@
+{
+  "AbilityName": "Weapon_Ability_13112",
+  "AbilitySpecials": {
+    "AS_AddedAttackDelta": {
+      "Value": 0.0
+    },
+    "AS_DamageTakeRatio": {
+      "Value": 0.0
+    },
+    "AS_DefenceToDamageRatio": {
+      "Value": 6.0
+    },
+    "AS_IntervalCD": {
+      "Value": 7.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageTakeRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedAttackDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "IntervalCDModifier"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedAttackDeltaModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "IntervalCDModifier",
+          "Predicates": [
+            {
+              "$type": "ByHitDataValue",
+              "CompareType": "Greater",
+              "CompareValue": 0,
+              "isRatio": false
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AddedAttackDeltaModifier",
+          "Predicates": [
+            {
+              "$type": "ByHitDataValue",
+              "CompareType": "Greater",
+              "CompareValue": 0,
+              "isRatio": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_CriticalDelta",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_AddedAttackDelta",
+          "Percentage": "%AS_DefenceToDamageRatio",
+          "PropertyType": "Def_Battle",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedAttackDelta",
+          "PropertyValue": "%AS_AddedAttackDelta",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageTakeRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+      }
+    },
+    "IntervalCDModifier": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique"
+    }
+  }
+}

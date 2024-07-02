@@ -1,0 +1,384 @@
+{
+  "AbilityName": "Core_Default_02",
+  "AbilitySpecials": {
+    "AlliedNum": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "DelayHandlers": [
+      {
+        "DelayTime": 2,
+        "TimeUpActions": [
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "CloseModifier",
+            "Predicates": [
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 0,
+                "ParamName": "AlliedNum",
+                "ParamType": "Integer",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      }
+    ],
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FieldRangeModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyLogicMoveAction",
+        "MovementConfig": {
+          "$type": "ConfigMovementSimple",
+          "Acceleration": {
+            "x": 0.0,
+            "y": -20.0,
+            "z": 0.0
+          },
+          "CoordinateType": "Local",
+          "Duration": 0.5,
+          "Gravity": 0.0,
+          "HitNormalRatio": 1,
+          "HitTangentialRatio": 1,
+          "InitVelocity": {
+            "x": 0.0,
+            "y": 10.0,
+            "z": 0.0
+          },
+          "TimesUpMoveOption": "Stop"
+        },
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CloseModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsOperating",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementSimple",
+            "Acceleration": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "CoordinateType": "Local",
+            "Duration": -1,
+            "Gravity": -40.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "InitVelocity": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "MaxHitNumber": 3,
+            "TimesUpMoveOption": "Remain"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "EnterModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AlliedNum",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "AlliedNum",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CloseModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AlliedNum",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ExitModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": -1,
+          "ParamName": "AlliedNum",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": -1,
+          "CustomPropertyType": "AlliedNum",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CloseModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AlliedNum",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 10,
+            "FanCylinderColliderRadius": 9,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "EndEffectPattern": "Eff_TestField_End",
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "EnterModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByEntityTemplateID",
+                      "EntityType": "Monster",
+                      "Target": "Target",
+                      "TemplateID": 14021
+                    }
+                  ]
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByEntityTemplateID",
+                      "EntityType": "Monster",
+                      "Target": "Target",
+                      "TemplateID": 21041
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ExitModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByEntityTemplateID",
+                      "EntityType": "Monster",
+                      "Target": "Target",
+                      "TemplateID": 14021
+                    }
+                  ]
+                },
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByEntityTemplateID",
+                      "EntityType": "Monster",
+                      "Target": "Target",
+                      "TemplateID": 21041
+                    }
+                  ]
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": true,
+          "LoopEffectPattern": "Eff_TestField_Loop",
+          "StartEffectPattern": "Eff_TestField_Start"
+        }
+      ],
+      "ModifierStacking": "Refresh"
+    },
+    "OpenModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsOperating",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpecialEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Common_Core_Idle",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TestModifier_01": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TestModifier_02": {
+      "Duration": 1.0,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "FieldRangeModifier",
+      "Target": "Self"
+    }
+  ]
+}

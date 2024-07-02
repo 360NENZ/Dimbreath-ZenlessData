@@ -1,0 +1,211 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_End",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02",
+          "FrameCountHigh": 120,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_01_R1",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_01_R2",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_01_R3",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_02_R1",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_02_R2",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_Loop_02_R3",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05",
+          "FrameCountHigh": 250,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Loop_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "MaterialHandler_CameraOverrideTrack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Modifier_MaterialHandler_Attack_01_CameraOverrideTrack_01": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "MaterialHandler_Attack_01_CameraOverrideTrack_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "MaterialHandler_Attack_01_CameraOverrideTrack_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

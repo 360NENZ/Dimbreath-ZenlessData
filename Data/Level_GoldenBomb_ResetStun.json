@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Level_GoldenBomb_ResetStun",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyStunStateAction",
+      "Target": "Self",
+      "TargetState": "Normal"
+    },
+    {
+      "$type": "ProcessStunCDAction",
+      "ProcessType": "Trigger",
+      "Target": "Self"
+    },
+    {
+      "$type": "ModifyProperty",
+      "Percentage": 0.95,
+      "PropertyModifyFunction": "Add",
+      "PropertyType": "CurStun",
+      "Target": "Self"
+    }
+  ]
+}

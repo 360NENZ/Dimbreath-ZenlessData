@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Card_Gun_2000307_Up",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.5
+    },
+    "TimeOfDuration": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Gun_2000300",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01": {
+      "Duration": -1,
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Gun_2000300",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

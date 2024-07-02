@@ -1,0 +1,50 @@
+{
+  "AbilityName": "Player_PerfectSwitchValue",
+  "AbilitySpecials": {
+    "AS_PerfectSwitchChargeValue": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierMixins": [],
+    "OnSkillStart": [
+      {
+        "$type": "ModifyPerfectSwitchChargeValueAction",
+        "Amount": 0,
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Counter",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ModifyPerfectSwitchChargeValueAction",
+        "Amount": 120,
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ModifyPerfectSwitchChargeValueAction",
+        "Amount": 360,
+        "ModifyFunction": "Add",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  }
+}

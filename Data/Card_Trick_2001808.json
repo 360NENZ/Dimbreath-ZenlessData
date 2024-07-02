@@ -1,0 +1,60 @@
+{
+  "AbilityName": "Card_Trick_2001808",
+  "AbilitySpecials": {
+    "%AS_Odd": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "QTEDecreasePointModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "QTEDecreasePointModifier": {
+      "Duration": -1,
+      "OnAttackLanded": [
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": -1,
+          "ModifyFunction": "Add",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "NormalQTE"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "QTEDecreasePointModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "NormalQTE"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

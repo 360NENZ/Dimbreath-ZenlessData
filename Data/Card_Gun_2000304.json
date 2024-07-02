@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Gun_2000304",
+  "AbilitySpecials": {
+    "AS_BreakStunRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDamageCalculated": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunModifier",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunModifier": {
+      "Duration": 3,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedBreakStunRatio": "%AS_BreakStunRatio"
+      }
+    }
+  }
+}

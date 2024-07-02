@@ -1,0 +1,279 @@
+{
+  "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter",
+  "AbilitySpecials": {
+    "CloseCheck": {
+      "Value": 0
+    },
+    "LeftRightCheck": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FrontWallCalculateModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "FrontWallModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FrontWallCalculateModifier",
+          "Predicates": [
+            {
+              "$type": "ByObstacle",
+              "BoxDistance": 2.0,
+              "BoxHeight": 0.1,
+              "BoxPosOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+              },
+              "BoxWidth": 0.1,
+              "CheckShape": "Box",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "LeftWallModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "RightWallModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 2,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "FrontWallModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "LeftWallModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "RemoveModifier",
+      "ModifierName": "RightWallModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FrontWallModifier",
+      "Target": "LastSelfAttackTarget"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "LeftWallModifier",
+      "Predicates": [
+        {
+          "$type": "ByObstacle",
+          "BoxDistance": 0.1,
+          "BoxHeight": 0.1,
+          "BoxPosOffset": {
+            "x": -2.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "BoxWidth": 4.0,
+          "CheckShape": "Box",
+          "Target": "LastSelfAttackTarget"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "RightWallModifier",
+      "Predicates": [
+        {
+          "$type": "ByObstacle",
+          "BoxDistance": 0.1,
+          "BoxHeight": 0.1,
+          "BoxPosOffset": {
+            "x": 2.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "BoxWidth": 4.0,
+          "CheckShape": "Box",
+          "Target": "LastSelfAttackTarget"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_FarLeft",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_FarRight",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 2,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_FarMid",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_CloseLeft",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_CloseRight",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 2,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "ZhuYuan_SwitchInAttack_Bullet_Emitter_CloseMid",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 0,
+          "ParamName": "LeftRightCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "Equal",
+          "Param": 1,
+          "ParamName": "CloseCheck",
+          "ParamType": "Float",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

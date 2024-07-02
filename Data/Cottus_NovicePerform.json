@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Cottus_NovicePerform",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Novice"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 1,
+        "ParamName": "Int_BornType",
+        "ParamType": 3,
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_Born",
+        "ParamType": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "TriggerBehaviorTreeAction",
+        "Enable": true,
+        "Target": "Self"
+      }
+    ]
+  }
+}

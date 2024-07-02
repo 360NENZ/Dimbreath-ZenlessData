@@ -1,0 +1,307 @@
+{
+  "AbilityName": "LightfootRover_ATK8_UAV_Trigger",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LightfootRover_UAV_TriggerModifier": {
+      "OnThinkInterval": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "SelfAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 5
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 4,
+              "ParamName": "Int_Attack_Index",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "ParamName": "Trigger_Attack",
+              "ParamType": 1,
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyLogicMoveAction",
+              "MovementConfig": {
+                "$type": "ConfigMovementTarget",
+                "Duration": -1,
+                "Gravity": 0.0,
+                "HitNormalRatio": 1,
+                "HitTangentialRatio": 1,
+                "MoveType": {
+                  "$type": "MovementTypeFixedSpeed",
+                  "Speed": 18.0
+                },
+                "ReachTargetStop": false,
+                "TargetPosRot": {
+                  "CoordsOption": "Relative",
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "IsUseRotationXZ": true,
+                    "IsUseRotationY": true,
+                    "PositionOffset": {
+                      "x": -0.6,
+                      "y": 0.9,
+                      "z": -0.6
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SelfAttackTarget"
+                  }
+                },
+                "TargetUpdateMode": "Always",
+                "TimesUpMoveOption": "Remain"
+              },
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "LightfootRover_UAV_L"
+                  ]
+                }
+              ],
+              "RotationConfig": {
+                "$type": "ConfigRotationToTarget",
+                "Duration": -1,
+                "ReachTargetStop": true,
+                "RotateSpeed": 8.0,
+                "RotateType": "Lerp",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "IsUseRotationXZ": true,
+                    "IsUseRotationY": true,
+                    "PositionOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SelfAttackTarget"
+                  }
+                },
+                "TargetUpdateMode": "Always"
+              },
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyLogicMoveAction",
+              "MovementConfig": {
+                "$type": "ConfigMovementTarget",
+                "Duration": -1,
+                "Gravity": 0.0,
+                "HitNormalRatio": 1,
+                "HitTangentialRatio": 1,
+                "MoveType": {
+                  "$type": "MovementTypeLerpSpeed",
+                  "Speed": 7.5
+                },
+                "ReachTargetStop": false,
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "IsUseRotationXZ": true,
+                    "IsUseRotationY": true,
+                    "PositionOffset": {
+                      "x": -0.5,
+                      "y": 0.6,
+                      "z": -0.5
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SelfAttackTarget"
+                  }
+                },
+                "TargetUpdateMode": "Always",
+                "TimesUpMoveOption": "Remain"
+              },
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "LightfootRover_UAV_R"
+                  ]
+                }
+              ],
+              "RotationConfig": {
+                "$type": "ConfigRotationToTarget",
+                "Duration": -1,
+                "ReachTargetStop": true,
+                "RotateSpeed": 8.0,
+                "RotateType": "Lerp",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "IsUseRotationXZ": true,
+                    "IsUseRotationY": true,
+                    "PositionOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SelfAttackTarget"
+                  }
+                },
+                "TargetUpdateMode": "Always"
+              },
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "ThinkInterval": 0.1
+    }
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "ApplyLogicMoveAction",
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeFixedSpeed",
+          "Speed": 20.0
+        },
+        "ReachTargetStop": false,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": -1.0,
+              "y": 0.5,
+              "z": -1.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Remain"
+      },
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LightfootRover_UAV_L"
+          ]
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "AllowRootMotionRotation": true,
+        "Duration": -1,
+        "ReachTargetStop": false,
+        "RotateType": "Instant",
+        "TargetUpdateMode": "Always"
+      },
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyLogicMoveAction",
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeFixedSpeed",
+          "Speed": 20.0
+        },
+        "ReachTargetStop": false,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 1.0,
+              "y": 0.8,
+              "z": -1.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Remain"
+      },
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "LightfootRover_UAV_R"
+          ]
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "AllowRootMotionRotation": true,
+        "Duration": -1,
+        "ReachTargetStop": false,
+        "RotateType": "Instant",
+        "TargetUpdateMode": "Always"
+      },
+      "Target": "Self"
+    }
+  ]
+}

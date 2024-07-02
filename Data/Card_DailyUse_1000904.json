@@ -1,0 +1,32 @@
+{
+  "AbilityName": "Card_DailyUse_1000904",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.2
+    },
+    "TargetNum": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByEnemyCount",
+            "CompareType": "LessEqual",
+            "CompareValue": "%TargetNum",
+            "EnemyFunctionType": [
+              "Monster"
+            ]
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

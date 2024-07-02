@@ -1,0 +1,156 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 20,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.25
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Trail_01"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LauncherPoint_R_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 4,
+        "CapsuleColliderRadius": 0.4,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Monster_ComplexCorrupted_Range_Attack_02_Attackproperty_01",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 1.7,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_01"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_02"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_02"
+      },
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementCurve",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0,
+        "HitTangentialRatio": 0,
+        "ScaleRatio": 15,
+        "TimesUpMoveOption": "Stop",
+        "VelocityCurveX": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_Speed_X",
+        "VelocityCurveY": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_Speed_Y",
+        "VelocityCurveZ": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_Speed_Z"
+      },
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_M"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_M_Ground"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "ReachTargetStop": false,
+        "RotateType": "Fixed",
+        "RotationCurve": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_RotationCurve",
+        "ScaleRatio": 1,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "LocalAvatar"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": true,
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_02"
+      },
+      "UseScenePropCollider": true
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_Attack_Range_02_BulletType_01",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,112 @@
+{
+  "AbilityName": "Weapon_Ability_13113",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.1
+    },
+    "AS_BaseAttackRatio_PerCount": {
+      "Value": 0.05
+    },
+    "AS_BaseAttackRatio_Total": {
+      "Value": 0.05
+    },
+    "AS_CurrentCount": {
+      "Value": 0
+    },
+    "AS_Duration": {
+      "Value": 12.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "0",
+        "ParamName": "AS_CurrentCount",
+        "Target": "Self",
+        "ValueType": "Integer"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier_Controller",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_AddedDamageRatio_Ice": "%AS_AddedDamageRatio"
+      }
+    },
+    "BaseAttackRatioModifier_Controller": {
+      "DelayHandlers": [
+        {
+          "DelayTime": "%AS_Duration",
+          "TimeUpActions": [
+            {
+              "$type": "SetAbilitySpecialByExpression",
+              "Expression": "0",
+              "ParamName": "AS_CurrentCount",
+              "Target": "Self",
+              "ValueType": "Integer"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "BaseAttackRatioModifier_Controller",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_CurrentCount)+1",
+          "ParamName": "AS_CurrentCount",
+          "Target": "Self",
+          "ValueType": "Integer"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_BaseAttackRatio_PerCount)*min(specials(AS_CurrentCount),4)",
+          "ParamName": "AS_BaseAttackRatio_Total",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BaseAttackRatioModifier_Effect_Weapon_Ability_13113",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "BaseAttackRatioModifier_Effect_Weapon_Ability_13113": {
+      "Duration": "%AS_Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio_Total"
+      }
+    }
+  }
+}

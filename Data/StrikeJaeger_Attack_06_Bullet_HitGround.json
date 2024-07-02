@@ -1,0 +1,146 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 1.0,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.5
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_StrikeJaeger_Attack_04_Bullet_WarningZone"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": false,
+      "CanHitStage": false,
+      "DelayActionList": [
+        {
+          "Actions": [
+            {
+              "$type": "FireEffect",
+              "EffectAutoDynamic": {
+                "EffFadeInTime": 0.7,
+                "EffFadeOutTime": 0.1,
+                "EffHoldTime": 0.2,
+                "EffStartSizeX": 1.3,
+                "EffStartSizeY": 1.3
+              },
+              "EffectPattern": "Eff_Common_Alert_Circle",
+              "FireEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "NeedRaycastGround": true,
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": false,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomAngleRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "RandomPositionRange": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget"
+                }
+              },
+              "Target": "Other"
+            }
+          ],
+          "DelayTime": 0.0
+        }
+      ],
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Monster_StrikeJaeger_ATK06_Attackproperty_2",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_StrikeJaeger_Attack_04_Boom"
+      },
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 1.5,
+      "HitInterval": 0.0,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": -1000.0,
+        "HitNormalRatio": 0,
+        "HitTangentialRatio": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletTimeUpDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_StrikeJaeger_ATK4_Perform_CamShake_01",
+          "Target": "Other"
+        }
+      ],
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "StrikeJaeger_Attack_06_Bullet_HitGround",
+  "AbilityStacking": "Unique"
+}

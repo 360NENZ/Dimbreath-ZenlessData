@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Ability_Card_Blade_6",
+  "AbilitySpecials": {
+    "CForceDamageRatio": {
+      "Op": "Add",
+      "OpValue": 0.01,
+      "Value": 0.01
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "OnGetItem": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CForceDamageModfier",
+        "Predicates": [
+          {
+            "$type": "ByGetItem",
+            "GoodID": 7,
+            "Target": "Caster"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "CForceDamageModfier": {
+      "ModifierStacking": "Multiple",
+      "Properties": {
+        "CForceDamageRatioDelta": "%CForceDamageRatio"
+      }
+    }
+  }
+}

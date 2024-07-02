@@ -1,0 +1,15 @@
+{
+  "AbilityName": "GamePlayHiddenBomb_HideBomb_03_Perform_OnBridge_End",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_TanutEnd",
+        "ParamType": 1,
+        "Target": "Self"
+      }
+    ]
+  }
+}

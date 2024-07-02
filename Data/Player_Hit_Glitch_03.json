@@ -1,0 +1,53 @@
+{
+  "AbilityName": "Player_Hit_Glitch_03",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Player_Hit_Glitch_03",
+      "FireEffectPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Camera"
+        }
+      },
+      "MpExecMode": "AuthorityOnly",
+      "Predicates": [
+        {
+          "$type": "ByIsLocalAvatar",
+          "IsLocalAvatar": true,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "GamepadRumbleAction",
+      "GamepadRumbleKey": "Common_GamepadRumble_E_Hit_Fly",
+      "MpExecMode": "AuthorityOnly",
+      "Predicates": [
+        {
+          "$type": "ByIsLocalAvatar",
+          "IsLocalAvatar": true,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

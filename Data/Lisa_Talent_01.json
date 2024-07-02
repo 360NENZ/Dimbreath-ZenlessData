@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Lisa_Talent_01",
+  "AbilitySpecials": {
+    "AS_RecoverSp": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnPatternHitOther": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%AS_RecoverSp",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Lisa_Attack_Normal_04_AttackProperty_01",
+              "Lisa_Attack_Normal_04_AttackProperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

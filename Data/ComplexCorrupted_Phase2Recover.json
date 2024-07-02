@@ -1,0 +1,30 @@
+{
+  "AbilityName": "ComplexCorrupted_Phase2Recover",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "WriteAIParamAction",
+      "IntParamValue": 2,
+      "ParamName": "Int_SwitchPhaseAttackType",
+      "Predicates": [
+        {
+          "$type": "ByPlayerPropertyValue",
+          "CompareType": "GreaterEqual",
+          "CustomNumerator": "Int_PartDestroyed",
+          "IsUsePercent": false,
+          "Numerator": "Custom",
+          "Target": "Self",
+          "Val1": 4
+        },
+        {
+          "$type": "ByAnimCtrlerParam",
+          "BoolVal": true,
+          "CompareType": "Equal",
+          "ParamName": "Bool_IsPhase2",
+          "ParamType": 2
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

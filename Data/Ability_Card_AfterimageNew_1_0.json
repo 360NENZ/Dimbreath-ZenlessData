@@ -1,0 +1,1034 @@
+{
+  "AbilityName": "Ability_Card_AfterimageNew_1_0",
+  "AbilitySpecials": {
+    "AS_AfterImage01CD": {
+      "Value": 8
+    },
+    "AS_AfterImageDuration_Main": {
+      "Value": 8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_1_1",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 200
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_1_2",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 201
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_1_3",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 202
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_1_4",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 203
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Ability_Card_AfterimageNew_1_5",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 205
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "SetTargetAbilitySpecialAction",
+        "Params": [
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_1_1",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_1_2",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_1_3",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_1_4",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "AbilityName": "Ability_Card_AfterimageNew_1_5",
+            "AbilitySpecials": [
+              {
+                "ModifyFunction": "Replace",
+                "Param": "AS_AfterImageDuration_Main",
+                "ParamName": "AS_AfterImageDuration",
+                "ParamType": "Float"
+              }
+            ]
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Anbi_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1011
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Anbi_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1011
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Tsubaki",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1021
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Nostradamus",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1031
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Longinus_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1041
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Longinus_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1041
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Corin",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1061
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Billy_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1081
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Billy_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1081
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Billy_03",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1081
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front_02",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_OokumaMari",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1101
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Anton",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1111
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Ben",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1121
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Aokaku",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1131
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Lycaon_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1141
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Lycaon_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1141
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Lisa_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1181
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Lisa_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1181
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Ellen_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1191
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Ellen_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1191
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Rina_01",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1211
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Front",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_Rina_02",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1211
+          },
+          {
+            "$type": "ByAnimatorStateNormalizedTime",
+            "AnimatorStateName": "Evade_Back",
+            "LayerIndex": 0,
+            "NormalizedTimeHigh": 1.0,
+            "NormalizedTimeLow": 0.0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AfterImageType01Modifier_ZhuYuan",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByEntityTemplateID",
+            "EntityType": "Avatar",
+            "Target": "Self",
+            "TemplateID": 1241
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AfterImageType01Modifier_Anbi_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Anbi_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.11,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Anton": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Aokaku": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_3"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Ben": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_2"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Billy_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_1"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Billy_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.133,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_1"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Billy_03": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.11,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_1"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Corin": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_1"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Ellen_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_3"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Ellen_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.15,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_3"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Lisa01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Lisa02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Longinus_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_2"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Longinus_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.183,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_2"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Lycaon_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_3"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Lycaon_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.25,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_3"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Nostradamus": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_5"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_OokumaMari": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_2"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Rina_01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.33,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Rina_02": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_4"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_Tsubaki": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_1"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    },
+    "AfterImageType01Modifier_ZhuYuan": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.2,
+          "TimeUpActions": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Ability_Card_AfterimageNew_1_5"
+            }
+          ]
+        }
+      ],
+      "Duration": "%AS_AfterImage01CD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

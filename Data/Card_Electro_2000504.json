@@ -1,0 +1,95 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Electro_2000504",
+      "OnListenAbilityStarted": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ElectroRecoverFever",
+          "Target": "Self"
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Electro_2000504",
+  "AbilitySpecials": {
+    "AS_RecoverCD": {
+      "Value": 10
+    },
+    "AS_RecoverFever": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElectroRecoverFever",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Card510CDController": {
+      "Duration": "%AS_RecoverCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ElectroRecoverFever",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000504",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "ElectroRecoverFever": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": "%AS_RecoverFever",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Card510CDController",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ],
+              "Target": "Target"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

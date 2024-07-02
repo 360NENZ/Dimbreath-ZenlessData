@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Card_Gun_2000301",
+  "AbilitySpecials": {
+    "CriticalDamageRatioDelta": {
+      "Value": 0.1
+    },
+    "TimeOfDuration": {
+      "Value": -1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDamageCalculatedPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDMGUp",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalDMGUp": {
+      "Duration": "%TimeOfDuration",
+      "MaxStackingNumber": 10,
+      "ModifierStacking": "MultipleAllRefresh",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%CriticalDamageRatioDelta"
+      }
+    }
+  }
+}

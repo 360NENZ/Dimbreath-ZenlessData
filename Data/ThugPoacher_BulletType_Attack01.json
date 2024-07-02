@@ -1,0 +1,105 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 1.0,
+        "CapsuleColliderRadius": 0.2,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.2
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_ThugPoacher_Attack_1_bullet_01"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1.2,
+            "z": 0.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": false,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 8.0,
+        "CapsuleColliderRadius": 1.0,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 4.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "Monster_ThugPoacher_ATK01_Attackproperty",
+      "HitExplodeRadius": 0,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 40
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_S"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_S_Ground"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "ThugPoacher_BulletType_Attack01",
+  "AbilityStacking": "Unique"
+}

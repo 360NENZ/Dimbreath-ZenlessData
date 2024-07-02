@@ -1,0 +1,18 @@
+{
+  "AbilityName": "BUFF_WitchTime_Stun_Remove",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_Stun",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_Stun_Remove",
+        "Target": "Self"
+      }
+    ]
+  }
+}

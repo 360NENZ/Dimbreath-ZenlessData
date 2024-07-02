@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Ellen_MathSkill",
+  "AbilitySpecials": {
+    "AS_Actor_AddedDamageRatio_Ice": {
+      "Value": 0.01
+    },
+    "AS_IceDamage_Duration": {
+      "Value": 10.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ice"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IceDamageModifier": {
+      "Duration": "%AS_IceDamage_Duration",
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 10,
+      "ModifierStacking": "MultipleAllRefresh",
+      "Properties": {
+        "Actor_AddedDamageRatio_Ice": "%AS_Actor_AddedDamageRatio_Ice"
+      }
+    }
+  }
+}

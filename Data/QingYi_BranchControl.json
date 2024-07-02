@@ -1,0 +1,46 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Enhance_End",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "PerfectEvadePredicateModifer_Branch_01_Enhance_End"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "QingYi_BranchControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "PerfectEvadePredicateModifer_Branch_01_Enhance_End": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnDodgeSuccess": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Female_Size01_QingYi_MA_SpecialBeHit_Unbreakable_OverrideRimGlow_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_SpecialBeHit_Unbreakable_OverrideRimGlow_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Female_Size01_QingYi_MA_SpecialBeHit_Unbreakable_ScreenImage_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_SpecialBeHit_Unbreakable_ScreenImage_01"
+        }
+      ]
+    }
+  }
+}

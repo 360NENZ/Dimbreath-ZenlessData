@@ -1,0 +1,101 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "DisableHitEffectModifier"
+          ],
+          "ZoneTag": "Attack"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Wood_SetRBL",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DisableHitEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTeamGoodRoleType",
+                  "RoleType": "TeamAvatars",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByTeamGoodRoleType",
+                  "RoleType": "Buddy",
+                  "Target": "Target"
+                }
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ]
+    },
+    "RBLModifier": {
+      "Duration": 3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLAction",
+          "RBL": 4,
+          "Tag": "Lucy_Wood_RBL",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByTeamGoodRoleType",
+                  "RoleType": "TeamAvatars",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByTeamGoodRoleType",
+                  "RoleType": "Buddy",
+                  "Target": "Target"
+                }
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLAction",
+          "Tag": "Lucy_Wood_RBL",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "RBLModifier",
+      "Target": "Self"
+    }
+  ]
+}

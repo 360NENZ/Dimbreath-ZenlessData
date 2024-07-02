@@ -1,0 +1,512 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenEffectFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenEffectFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenEffectFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenEffectFadeOutModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ListenEffectFadeOutModifier"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "DashCutDmgUpModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Dash_Cut_01",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 13,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_Talent_04",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 2
+    },
+    "AS_AddedPenRatio_Talent_04": {
+      "Value": 0.4
+    },
+    "AS_PenBuffDuration": {
+      "Value": 6
+    },
+    "AS_TokenCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Ellen_Talent_04",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Ellen_Talent_04",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DashCutDmgUpModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_TokenCount",
+          "ParamType": "Integer"
+        }
+      ],
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Dash_Cut_01_AttackProperty_01_02",
+                "Ellen_Attack_Dash_Cut_01_AttackProperty_02_02",
+                "Ellen_Attack_Dash_Cut_01_AttackProperty_03_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenDashCutModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EffectFadeModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier02",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier01",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "PenRatioUpModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier02",
+          "Predicates": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "ListenDashCutModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "EffectModifier01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Ellen_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_02_OverrideOutline",
+          "Target": "Self",
+          "key": "Avatar_Female_Size02_Ellen_MA_Attack_Common_02_OverrideOutline"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "EffectFadeModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_02_OverrideOutline",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "RemoveMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_02_OverrideOutline",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "EffectModifier02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Ctr_Wpn_A1",
+          "EffectPattern": "Eff_Ellen_Attack_Common_01_GlowMod",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Ctr_Wpn_B1",
+          "EffectPattern": "Eff_Ellen_Attack_Common_02_Flash",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Ellen_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_01_SecondaryEmission",
+          "Target": "Self",
+          "key": "Avatar_Female_Size02_Ellen_MA_Attack_Common_01_SecondaryEmission"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByHasModifier",
+              "ModifierNameList": [
+                "EffectFadeModifier"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "InterruptMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_01_SecondaryEmission",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SpecialEffectFadeAction",
+              "EffectNames": [
+                "Eff_Ellen_Attack_Common_01_GlowMod"
+              ],
+              "OverrideFadeOutCurve": "QuintEaseInReverse",
+              "OverrideFadeOutTime": 0.0,
+              "Target": "Self"
+            },
+            {
+              "$type": "SpecialEffectFadeAction",
+              "EffectNames": [
+                "Eff_Ellen_Attack_Common_02_Flash"
+              ],
+              "OverrideFadeOutCurve": "QuintEaseInReverse",
+              "OverrideFadeOutTime": 0.0,
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveMaterialPropertyAction",
+              "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_01_SecondaryEmission",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "ListenDashCutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier02",
+          "Target": "Self"
+        }
+      ],
+      "OnPatternHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DashCutDmgUpModifier",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Ellen_Attack_Dash_Cut_01_AttackProperty_01_02",
+                "Ellen_Attack_Dash_Cut_01_AttackProperty_02_02",
+                "Ellen_Attack_Dash_Cut_01_AttackProperty_03_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenEffectFadeOutModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectFadeModifier",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "EffectFadeCondition"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "PenRatioUpModifier": {
+      "Duration": "%AS_PenBuffDuration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "EffectModifier01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "EffectModifier01",
+          "Target": "Self"
+        }
+      ],
+      "Properties": {
+        "Actor_PenRatio": "%AS_AddedPenRatio_Talent_04"
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "PenRatioUpModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Add",
+      "Param": 1,
+      "ParamName": "AS_TokenCount",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "ListenDashCutModifier",
+      "Predicates": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "GreaterEqual",
+          "Param": 3,
+          "ParamName": "AS_TokenCount",
+          "ParamType": "Integer",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ],
+  "Predicates": {
+    "EffectFadeCondition": {
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_03",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_03_Back",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_03",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                },
+                {
+                  "$type": "ByAnimatorStateNormalizedTime",
+                  "AnimatorStateName": "Attack_AssaultAid_Back",
+                  "FrameCountHigh": 0,
+                  "FrameCountLow": 0,
+                  "MaxFrameCountHigh": true,
+                  "MaxFrameCountLow": false
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

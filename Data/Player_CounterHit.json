@@ -1,0 +1,54 @@
+{
+  "AbilityName": "Player_CounterHit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnCounterHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnCounterHitModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByOr",
+                "Predicates": [
+                  {
+                    "$type": "ByAnimTagList",
+                    "TagList": [
+                      "ParryAid"
+                    ]
+                  }
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OnCounterHitModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Avatar_Common_CounterHit_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_CounterHit_CamShake_01"
+        }
+      ]
+    }
+  }
+}

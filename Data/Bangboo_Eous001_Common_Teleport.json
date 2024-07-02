@@ -1,0 +1,64 @@
+{
+  "AbilityName": "Bangboo_Eous001_Common_Teleport",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Bangboo_FightingCommon_Teleport",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "EousGuide"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Bangboo_Eous001_Teleport_Type01",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "EousGuide"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAIParam",
+          "CompareType": "Equal",
+          "IntParamValue": 0,
+          "ParamName": "Int_EousGuideType",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Bangboo_Eous001_Teleport_Type02",
+      "Predicates": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "EousGuide"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByAIParam",
+          "CompareType": "Equal",
+          "IntParamValue": 1,
+          "ParamName": "Int_EousGuideType",
+          "Target": "Self"
+        }
+      ]
+    }
+  ]
+}

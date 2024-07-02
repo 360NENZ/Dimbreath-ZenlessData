@@ -1,0 +1,77 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "plugin_innerworld",
+  "Plugin": [
+    {
+      "$type": "CInnerWorldPluginConfig",
+      "BackgroundBrightnessDiffusion": "Innerworld",
+      "ItemIDCanUse": [
+        400029,
+        400028
+      ],
+      "NoInteractEventEffect": "InteractionDisable_TV",
+      "TarotCardIDCanUse": []
+    },
+    {
+      "$type": "COverwriteGridStateTextureConfig",
+      "FinishTextureOverride": {
+        "TextureList": {
+          "EventIcon_InnerPath_01": {},
+          "EventIcon_InnerPath_02": {},
+          "EventIcon_InnerPath_03": {}
+        }
+      },
+      "PathTextureOverride": {
+        "TextureList": {
+          "EventIcon_InnerPath_01": {},
+          "EventIcon_InnerPath_02": {},
+          "EventIcon_InnerPath_03": {}
+        }
+      },
+      "SpecifiedEventTextureOverride": [
+        {
+          "$type": "COverwriteEventTextureConfig",
+          "SpecifiedEventIDList": [
+            1030547,
+            1030364,
+            1030365
+          ],
+          "TextureList": [
+            "EventIcon_InnerPath_01",
+            "EventIcon_InnerPath_02",
+            "EventIcon_InnerPath_03"
+          ]
+        },
+        {
+          "$type": "COverwriteEventTextureConfig",
+          "SpecifiedEventIDList": [
+            1030344,
+            1030348,
+            1030356,
+            1030436,
+            1030535,
+            1030443,
+            1030444,
+            1030402
+          ],
+          "TextureList": [
+            "EventIcon_LockedDoor_Question_GhostInner"
+          ]
+        },
+        {
+          "$type": "COverwriteEventTextureConfig",
+          "SpecifiedEventIDList": [
+            1030470
+          ],
+          "TextureList": [
+            "EventIconDirectionalTrigger_GhostInner"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "CChessboardAtmosphere",
+      "key": "InnerWorld_Special"
+    }
+  ]
+}

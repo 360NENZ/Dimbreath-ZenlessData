@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Card_Physical_2001204",
+  "AbilitySpecials": {
+    "AS_BuffDamgeRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StrikeDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StrikeDamageModifier": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BuffDamageRatio": "%AS_BuffDamgeRatio"
+      }
+    }
+  }
+}

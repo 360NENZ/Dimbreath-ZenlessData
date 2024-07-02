@@ -1,0 +1,163 @@
+{
+  "AbilityName": "Durahan_Transform_WriteParam",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "WriteParamModifier_02",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "Promote"
+                ],
+                "Target": "Self"
+              },
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "BornTransform"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "WriteParamModifier_01": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsSwitchingBossType",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_BossType_Cur",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_IsSwitchingBossType",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "Int_BossType_Cur",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "Int_ActionMode",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 1,
+          "CustomPropertyType": "BossType_Cur",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "WriteParamModifier_02": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsSwitchingBossType",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_BossType_Cur",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_IsSwitchingBossType",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 2,
+          "ParamName": "Int_BossType_Cur",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "Int_ActionMode",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 2,
+          "CustomPropertyType": "BossType_Cur",
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "WriteParamModifier_01",
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Transform_ToSword",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "WriteParamModifier_02",
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Transform_ToSwordShield",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

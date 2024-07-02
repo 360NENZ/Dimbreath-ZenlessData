@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Follower_BaseATK_Increase",
+  "AbilitySpecials": {
+    "Actor_AddedDamageRatio": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%Actor_AddedDamageRatio"
+    }
+  }
+}

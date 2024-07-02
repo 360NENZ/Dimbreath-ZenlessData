@@ -1,0 +1,267 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 0.5,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.25
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Trail_01"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LauncherPoint_R_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_01"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_02"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_02"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementAutoParabola",
+        "Accelerated": -50,
+        "DefaultRotAngle": 0,
+        "Duration": -1,
+        "ExpectTime": 0.5,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.4,
+        "HitTangentialRatio": 0.5,
+        "MaxAngle": 60,
+        "MaxSpeed": 300,
+        "MinAngle": 5,
+        "MinSpeed": 20,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 10.0,
+              "y": 7.0,
+              "z": 1.0
+            },
+            "RandomAngleRange": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "RandomPositionRange": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetRotLimitAngleLeft": 180,
+        "TargetRotLimitAngleRight": 180,
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletEmitter_01_Sub",
+          "PosRotConfig": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 7.0,
+                "z": 0.0
+              },
+              "RandomAngleRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomPositionRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SavePoint",
+              "PointName": "SpecialAttack_02_AttackPoint_02"
+            }
+          }
+        }
+      ],
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_M"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_M_Ground"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToVelocity",
+        "Duration": -1,
+        "ReachTargetStop": false,
+        "RotateType": "Instant",
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": true,
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_ComplexCorrupted_Range_Attack_02_Dust_02"
+      },
+      "UseScenePropCollider": true
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SpecialAttack_02_BulletType_02",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "CreateSavePointAction",
+      "PointName": "SpecialAttack_02_AttackPoint_02",
+      "TargetPosRot": {
+        "CoordsOption": "Relative",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 10.0,
+            "y": 0.0,
+            "z": 1.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      }
+    },
+    {
+      "$type": "FireEffect",
+      "EffectAutoDynamic": {
+        "EffFadeInTime": 0.5,
+        "EffFadeOutTime": 0.6,
+        "EffHoldTime": 0.3,
+        "EffStartSizeX": 5,
+        "EffStartSizeY": 5
+      },
+      "EffectPattern": "Eff_Common_Alert_Circle",
+      "FireEffectPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SavePoint",
+          "PointName": "SpecialAttack_02_AttackPoint_02"
+        }
+      },
+      "Target": "Self"
+    }
+  ]
+}

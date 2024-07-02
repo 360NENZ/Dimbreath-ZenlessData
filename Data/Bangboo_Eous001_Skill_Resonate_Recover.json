@@ -1,0 +1,214 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_Resonate_Recover",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SpecialEffectModifier"
+          ],
+          "NormalizedTimeHigh": 0.73,
+          "NormalizedTimeLow": 0.09
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Eous001_Skill_Resonate_Recover",
+  "AbilitySpecials": {
+    "AS_HPPre": {
+      "Value": 0.0
+    },
+    "AS_HPResolved": {
+      "Value": 0.0
+    },
+    "AS_HealAmount": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenDodgeModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Bangboo_Eous001_Skill_Resonate_Recover_Teleport",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Bangboo_Eous001_Skill_Resonate_Recover_Heal",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenDamageModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HPPre",
+          "Percentage": 1.0,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HPResolved",
+          "Percentage": 1.0,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Mul",
+          "Param": -1.0,
+          "ParamName": "AS_HPResolved",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_HPResolved",
+          "ParamName": "AS_HPPre",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_HPPre",
+          "ParamName": "AS_HealAmount",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": "%AS_HPPre",
+              "ParamName": "AS_HealAmount",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenDodgeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnDodgeSuccess": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Resonate_Recover",
+          "Predicates": [
+            {
+              "$type": "BySkillReady",
+              "SkillName": "Bangboo_Eous001_Skill_Resonate_Recover",
+              "Target": "Caster"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HealAmount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Disabled"
+                  ],
+                  "Target": "Caster"
+                }
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "SpecialEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "BombPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Bangboo_Resonate_Recover_Cast_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 33,
+      "ParamName": "Int_AttackIndex",
+      "ParamType": 3,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Trigger_PressAttackB",
+      "ParamType": 1,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Replace",
+      "Param": 0.0,
+      "ParamName": "AS_HealAmount",
+      "ParamType": "Float",
+      "Target": "Self"
+    }
+  ]
+}

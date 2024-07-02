@@ -1,0 +1,68 @@
+{
+  "AbilityName": "BUFF_RemoveAllBuff",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_DeviceCD",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_EXQTE",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_HitRecoverHP",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_HitRecoverSP",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_HPSheild",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_Invincible",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_SecKill",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_StunUP",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_Dodge",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_Item",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "BUFF_HitRecoverSPModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_RemoveAllBuff",
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

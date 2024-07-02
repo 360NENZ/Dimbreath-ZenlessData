@@ -1,0 +1,179 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "IsSameAsMaster": true,
+      "OnSummonCreatedActions": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": -1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeInstant",
+              "NeedRayCastCheck": false
+            },
+            "ReachTargetStop": false,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "FollowPoint_Anastacia_02",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always",
+            "TimesUpMoveOption": "Remain"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": false,
+            "RotateSpeed": 8.0,
+            "RotateType": "Lerp",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 99999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "AttachPoint": "FollowPoint_Anastacia_02",
+                "IsUseAttachPointPos": true,
+                "IsUseAttachPointRotation": true,
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "Always"
+          },
+          "Target": "Target"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Rina_UniqueSkill",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "Target": "Custom"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Rina_Talent_03",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "Target": "Custom"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Rina_Talent_04",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "Target": "Custom"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199140711,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "FollowPoint_Anastacia_02",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "SummonTag": [
+        "Rina_Anastacia",
+        "Summon_LivingEntity"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Rina_Anastacia_Create",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ProcessAttachPointAction",
+        "AttachPointName": "FollowPoint_Anastacia_02",
+        "HierarchyType": "World",
+        "MpExecMode": "MpTotallyLocal",
+        "PosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "FollowPoint_Anastacia",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": false,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "Target": "Self"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Rina_Anastacia_Create"
+      }
+    ]
+  }
+}

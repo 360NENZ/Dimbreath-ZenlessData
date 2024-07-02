@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Patroller_Ability_Attack_03",
+  "DefaultModifier": {
+    "OnAttackLanded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Patroller_ATK03_Attackproperty_Check"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

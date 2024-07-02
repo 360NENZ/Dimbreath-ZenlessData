@@ -1,0 +1,49 @@
+{
+  "AbilityName": "BUFF_WitchTime_TrapDamageReduction",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_WitchTime_TrapDamageReductionModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "GamePlayTest_LPG_MissleTower_DamageReduction_Test",
+          "CustomKey": "LPG_MissileTowerBuff_Search",
+          "IsAutoTrigger": true,
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "GamePlayTest_LPG_MissleTower_DamageReduction_Test",
+          "CustomKey": "LPG_MissileTowerBuff_Search",
+          "Target": "Custom"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_WitchTime_TrapDamageReductionModifier",
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Avatar_LevelUp_01",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ShowTipAction",
+      "ShowPage": 0,
+      "Target": "Self",
+      "TipID": 301206
+    }
+  ]
+}

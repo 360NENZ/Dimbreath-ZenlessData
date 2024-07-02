@@ -1,0 +1,31 @@
+{
+  "$type": "CHollowPluginCollectionConfig",
+  "CollectionName": "plugin_HeartRoom",
+  "Plugin": [
+    {
+      "$type": "COverwriteGridStateTextureConfig",
+      "FinishTextureOverride": {
+        "TextureList": {
+          "EventIcon_InnerPath_01": {},
+          "EventIcon_InnerPath_02": {},
+          "EventIcon_InnerPath_03": {}
+        }
+      },
+      "PathTextureOverride": {
+        "TextureList": {
+          "EventIcon_InnerPath_01": {},
+          "EventIcon_InnerPath_02": {},
+          "EventIcon_InnerPath_03": {}
+        }
+      }
+    },
+    {
+      "$type": "COverwriteSwitchEffectConfig",
+      "Close": "UI/3D/Hollow/TVEffects/Hollow_TV_Close_CyberNoise"
+    },
+    {
+      "$type": "CChessboardAtmosphere",
+      "key": "HeartRoomm_Special"
+    }
+  ]
+}

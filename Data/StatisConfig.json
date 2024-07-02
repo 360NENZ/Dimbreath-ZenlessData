@@ -1,0 +1,116 @@
+{
+  "$type": "ConfigStatisNodeList",
+  "NodeList": [
+    {
+      "$type": "ConfigDamageStatis",
+      "EventTemplateID": 3001,
+      "NumCompareType": "Equal",
+      "Predicates": [
+        {
+          "$type": "ConfigByDamage",
+          "DamageVal": "%TestDamageSpecialVal",
+          "DamageValCompareType": "Greater"
+        }
+      ],
+      "Result": "ToSuccess",
+      "StatisSpecials": {
+        "TestDamageSpecialVal": {
+          "Value": 35.0
+        }
+      },
+      "TargetNum": 1,
+      "TimeOption": "Duration",
+      "TimeValue": 30
+    },
+    {
+      "$type": "ConfigKillStatis",
+      "EventTemplateID": 3002,
+      "NumCompareType": "GreaterEqual",
+      "Predicates": [
+        {
+          "$type": "ConfigByMonsterStrengthType",
+          "CompareType": "GreaterEqual",
+          "StrengthType": "Normal"
+        },
+        {
+          "$type": "ConfigByEntityType",
+          "EntityType": "Avatar",
+          "PredicateTarget": "Source"
+        },
+        {
+          "$type": "ConfigByEntityType",
+          "EntityType": "Monster",
+          "PredicateTarget": "Target"
+        }
+      ],
+      "Result": "ToSuccess",
+      "TargetNum": 2
+    },
+    {
+      "$type": "ConfigSkillStatis",
+      "EventTemplateID": 3003,
+      "NumCompareType": "GreaterEqual",
+      "Predicates": [
+        {
+          "$type": "ConfigBySkillCategory",
+          "SkillCategory": "Random",
+          "SkillNameList": []
+        }
+      ],
+      "Result": "ToSuccess",
+      "TargetNum": 5
+    },
+    {
+      "$type": "ConfigBlockStatis",
+      "EventTemplateID": 3004,
+      "LevelElementType": "Fight",
+      "NumCompareType": "GreaterEqual",
+      "Result": "ToSuccess",
+      "StatisSpecials": {
+        "BlockNum": {
+          "Value": 1
+        }
+      },
+      "TargetNum": "%BlockNum"
+    },
+    {
+      "$type": "ConfigBlockStatis",
+      "EventTemplateID": 3005,
+      "LevelElementType": "Fight",
+      "NumCompareType": "GreaterEqual",
+      "Result": "ToSuccess",
+      "StatisSpecials": {
+        "BlockNum": {
+          "Value": 3
+        }
+      },
+      "TargetNum": "%BlockNum"
+    },
+    {
+      "$type": "ConfigBlockStatis",
+      "EventTemplateID": 3006,
+      "LevelElementType": "Fight",
+      "NumCompareType": "GreaterEqual",
+      "Result": "ToSuccess",
+      "StatisSpecials": {
+        "BlockNum": {
+          "Value": 2
+        }
+      },
+      "TargetNum": "%BlockNum"
+    },
+    {
+      "$type": "ConfigBlockStatis",
+      "EventTemplateID": 3007,
+      "LevelElementType": "Fight",
+      "NumCompareType": "GreaterEqual",
+      "Result": "ToSuccess",
+      "StatisSpecials": {
+        "BlockNum": {
+          "Value": 4
+        }
+      },
+      "TargetNum": "%BlockNum"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "AbilityName": "BuddyScrew_BattlePropertyDef02",
+  "AbilitySpecials": {
+    "AS_AddedAccumulationRatio": {
+      "Value": 0
+    },
+    "AS_AtkRatio": {
+      "Value": 0
+    },
+    "AS_BreakStunRatio": {
+      "Value": 0
+    },
+    "AS_CriticalDamageRatioDelta": {
+      "Value": 0
+    },
+    "AS_CriticalDelta": {
+      "Value": 0
+    },
+    "AS_DefenceRatio": {
+      "Value": 0
+    },
+    "AS_MaxHPRatio": {
+      "Value": 0
+    },
+    "AS_PenRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedElementAccumulationRatio": "%AS_AddedAccumulationRatio",
+      "Actor_BaseAttackRatio": "%AS_AtkRatio",
+      "Actor_BreakStunRatio": "%AS_BreakStunRatio",
+      "Actor_CriticalDamageRatioDelta": "%AS_CriticalDamageRatioDelta",
+      "Actor_CriticalDelta": "%AS_CriticalDelta",
+      "Actor_DefenceRatio": "%AS_DefenceRatio",
+      "Actor_MaxHPRatio": "%AS_MaxHPRatio",
+      "Actor_PenRatio": "%AS_PenRatio"
+    }
+  }
+}

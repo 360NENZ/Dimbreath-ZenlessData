@@ -1,0 +1,37 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LockLifePropertyMixin",
+      "OnLifeLockFirstTriggeredActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_BreakDown",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsBreakDown",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "LampasBlackVeil_CoAttack_LogicMovement",
+          "Instant": true
+        }
+      ],
+      "PerformBeHitEffect": true,
+      "RatioLockList": [
+        {
+          "LockType": "Total",
+          "LockValue": 0.01
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_LockLife",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,49 @@
+{
+  "AbilityName": "Card_Medical_1000607",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.5
+    },
+    "Self_CurHP": {
+      "Value": 0
+    },
+    "Target_CurHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOtherPre": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(CurHP)/property(MaxHP)",
+        "ParamName": "Self_CurHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(CurHP)/property(MaxHP)",
+        "ParamName": "Target_CurHP",
+        "Target": "Target",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Less",
+            "Param": "%Target_CurHP",
+            "ParamName": "Self_CurHP",
+            "ParamType": "Float"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

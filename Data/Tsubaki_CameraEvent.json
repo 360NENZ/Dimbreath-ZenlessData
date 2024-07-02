@@ -1,0 +1,327 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_05_01",
+          "FrameCountHigh": 24,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_02",
+          "FrameCountHigh": 24,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_03",
+          "FrameCountHigh": 24,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_01",
+          "FrameCountHigh": 26,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_02",
+          "FrameCountHigh": 26,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_03",
+          "FrameCountHigh": 26,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraEventModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_01",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_01_Front",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_02",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_02_Front",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_03",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 15,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_03_Front",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Normal_05"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_01",
+          "FrameCountHigh": 26,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_01_Front",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_02",
+          "FrameCountHigh": 26,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_02_Front",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_03",
+          "FrameCountHigh": 26,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Branch_04"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_04_03_Front",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier_Attack_Branch_04"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Tsubaki_CameraEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BlurShadowModifier_Attack_Branch_04": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "ConfigGhostEffectKey": "Common_Ghost_02",
+          "EchoTime": 0.025,
+          "IgnoreOwnerTimescale": true,
+          "IgnoreWorldTimescale": true,
+          "IsActive": true,
+          "LifeTime": 0.4,
+          "MaxGhostCount": 15,
+          "Tag": "Tsubaki_Attack_Branch_04_BlurShadow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "IsActive": false,
+          "Tag": "Tsubaki_Attack_Branch_04_BlurShadow_01"
+        }
+      ]
+    },
+    "BlurShadowModifier_Attack_Normal_05": {
+      "Duration": -1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "ConfigGhostEffectKey": "Common_Ghost_01",
+          "EchoTime": 0.05,
+          "IgnoreOwnerTimescale": true,
+          "IgnoreWorldTimescale": false,
+          "IsActive": true,
+          "LifeTime": 0.4,
+          "MaxGhostCount": 15,
+          "Tag": "Tsubaki_Attack_Normal_05_BlurShadow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "IsActive": false,
+          "Tag": "Tsubaki_Attack_Normal_05_BlurShadow_01"
+        }
+      ]
+    },
+    "CameraEventModifier_Attack_Branch_04": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Tsubaki_Attack_Branch_04_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Tsubaki_Attack_Branch_04_CamStretch_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Tsubaki_Attack_Branch_04_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Tsubaki_Attack_Branch_04_CamStretch_01"
+        }
+      ]
+    },
+    "CameraEventModifier_Attack_Normal_05": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Tsubaki_Attack_Normal_05_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Tsubaki_Attack_Normal_05_CamStretch_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Tsubaki_Attack_Normal_05_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Tsubaki_Attack_Normal_05_CamStretch_01"
+        }
+      ]
+    }
+  }
+}

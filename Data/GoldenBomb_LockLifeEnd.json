@@ -1,0 +1,13 @@
+{
+  "AbilityName": "GoldenBomb_LockLifeEnd",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "GoldenBomb_LockLife",
+        "Target": "Self"
+      }
+    ]
+  }
+}

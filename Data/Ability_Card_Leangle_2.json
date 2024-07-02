@@ -1,0 +1,16 @@
+{
+  "AbilityName": "Ability_Card_Leangle_2",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Op": "Add",
+      "OpValue": 0.03,
+      "Value": 0.03
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_CriticalDelta": "%CriticalDelta"
+    }
+  }
+}

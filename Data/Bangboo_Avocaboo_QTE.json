@@ -1,0 +1,167 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Avocaboo_Bullet_Fly"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.6
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ShootPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": true,
+      "CanHitStage": true,
+      "CanPickInvincible": true,
+      "DestroyExplode": false,
+      "ExplodePosType": "Bullet",
+      "HitAnimEventID": "Bangboo_Avocaboo_Attackproperty_Attack_QTE",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": true,
+      "HitSelfWhenExplode": false,
+      "HitStageExplode": true,
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Avocaboo_Bullet_Exploded"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": -1,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 10
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "NeedWarningHUD": false,
+      "OnBulletHitStageGroundExplodeAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Avocaboo_Explode_QTE",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "OnBulletHitStageWallExplodeAction": [
+        {
+          "$type": "HandleAnimEvent",
+          "AnimEventID": "Bangboo_Avocaboo_Attackproperty_Attack_QTE"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Avocaboo_BulletExplode_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Skill_Avocaboo_Eff_Bullet_Explo_02"
+        }
+      ],
+      "OnBulletHitTargetExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Avocaboo_BulletExplode_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_SFX_Bangboo_Skill_Avocaboo_Eff_Bullet_Explo"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Avocaboo_Bullet_Sky_Exploded",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Target"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ShowWarningHUDInScreen": false,
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Bangboo_Avocaboo_QTE",
+  "AbilityStacking": "Unique"
+}

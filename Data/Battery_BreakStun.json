@@ -1,0 +1,36 @@
+{
+  "AbilityName": "Battery_BreakStun",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunBuffModifier",
+        "Target": "Target"
+      }
+    ],
+    "OnStunResetOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunBuffModifier",
+        "Target": "Target"
+      }
+    ],
+    "OnStunResetOtherMaxActions": [
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "Tag": "Monster_Common_BreakStun_ScreenImage_01",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1
+    }
+  }
+}

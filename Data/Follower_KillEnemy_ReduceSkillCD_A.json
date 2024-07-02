@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Follower_KillEnemy_ReduceSkillCD_A",
+  "AbilitySpecials": {
+    "Dynamic_ASkillCDReduceRatio": {
+      "Value": 0
+    },
+    "Dynamic_ASkillCDReduceValue": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKillOther": [
+      {
+        "$type": "ModifySkillCDAction",
+        "CDReduceRatio": "%Dynamic_ASkillCDReduceRatio",
+        "CDReduceValue": "%Dynamic_ASkillCDReduceValue",
+        "Company": "A",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByAliveState",
+                "AliveState": "ExecuteCore",
+                "Target": "Target"
+              },
+              {
+                "$type": "ByAliveState",
+                "AliveState": "Dead",
+                "Target": "Target"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

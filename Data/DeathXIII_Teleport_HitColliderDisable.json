@@ -1,0 +1,17 @@
+{
+  "AbilityName": "DeathXIII_Teleport_HitColliderDisable",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushHitColliderEnable",
+        "ColliderName": [
+          "HitCollider"
+        ],
+        "HitColliderEnable": false,
+        "Tag": "GoldenBomb_HitCollider",
+        "Target": "Self"
+      }
+    ]
+  }
+}

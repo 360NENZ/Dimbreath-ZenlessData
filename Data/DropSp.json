@@ -1,0 +1,11 @@
+{
+  "AbilityName": "DropSp",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "DropItemAction",
+      "DropStr": "1004:10000:5",
+      "Target": "Self"
+    }
+  ]
+}

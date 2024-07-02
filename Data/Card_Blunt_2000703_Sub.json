@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Card_Blunt_2000703_Sub",
+  "AbilitySpecials": {
+    "AS_StunDamageTakeRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "StunTakeDmgUpModifier_Card_2000703": {
+      "Duration": -1,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_StunDamageTakeRatio": "%AS_StunDamageTakeRatio"
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "StunTakeDmgUpModifier_Card_2000703",
+      "Target": "Self"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "AbilityName": "Card_Exchange_2001610",
+  "AbilitySpecials": {
+    "AS_CritDMGRatio": {
+      "Value": 0.25
+    },
+    "Duration": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ExchangeToCritDMGModifier_Card_2001610",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "EvadeAid",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ParryAid",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ExchangeToCritDMGModifier_Card_2001610": {
+      "Duration": "%Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CritDMGRatio"
+      }
+    }
+  }
+}

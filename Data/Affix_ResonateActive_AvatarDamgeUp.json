@@ -1,0 +1,86 @@
+{
+  "AbilityName": "Affix_ResonateActive_AvatarDamgeUp",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.1
+    },
+    "MultipleAvatarDamageAdded": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBattleEnter": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleAvatarDamageAdded",
+        "ParamType": "Float"
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleAvatarDamageAdded",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "DamageUp",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": 0.08,
+        "ParamName": "MultipleAvatarDamageAdded",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "DamageUp",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageUp",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Resonate",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DamageUp": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%MultipleAvatarDamageAdded"
+      }
+    }
+  }
+}

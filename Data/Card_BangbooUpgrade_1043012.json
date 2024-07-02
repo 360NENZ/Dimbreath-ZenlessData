@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Bangboo_Booressure_Skill",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Booressure_Skill",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_SpRecoverValueBase",
+                  "ParamName": "AS_SpRecoverValueBase",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Booressure_Skill",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_SpRecoverValuePreLevel",
+                  "ParamName": "AS_SpRecoverValuePreLevel",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_BangbooUpgrade_1043012",
+  "AbilitySpecials": {
+    "AS_SpRecoverValueBase": {
+      "Value": 2.4
+    },
+    "AS_SpRecoverValuePreLevel": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique"
+}

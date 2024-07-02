@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Nineveh_FirstSKill_RandomSelector",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBehaviorTreeEnabled": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "RandomFirstSkill",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "RandomFirstSkill": {
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.33,
+          "OnFailure": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_FirstSkillType",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_FirstSkillType",
+              "ParamType": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

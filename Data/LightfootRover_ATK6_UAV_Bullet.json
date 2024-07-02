@@ -1,0 +1,152 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.4,
+        "CapsuleColliderRadius": 0.07,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_UAVRaven_Attack_02_02_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": -90.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "MissileWell",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 5.0,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "LightfootRover_Attack06_Attackproperty_UAV",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 1.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode_Ground"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode"
+      },
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 20
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_LightfootRover_ATK6_CamShake_UAV_Explode_E_01"
+        }
+      ],
+      "ReflectEffect": {
+        "EffectPattern": "Reflector_Bullet_M"
+      },
+      "ReflectorEffect": {
+        "EffectPattern": "Reflector_Bullet_M_Ground"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "RotateSpeed": 200,
+        "RotateType": "Fixed",
+        "SpeedRatioCurvebyDistance": {
+          "$type": "ConfigLinearCurveFunction",
+          "MaxCurveValue": 1,
+          "MaxInputValue": 4,
+          "MinCurveValue": 0,
+          "MinInputValue": 2
+        },
+        "TargetPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.5,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": true,
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_02_Explode"
+      }
+    }
+  ],
+  "AbilityName": "LightfootRover_ATK6_UAV_Bullet",
+  "AbilityStacking": "Unique"
+}

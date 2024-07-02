@@ -1,0 +1,892 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Early",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Straight",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier01",
+            "RemoveWoodMaterialModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Late",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier01",
+            "RemoveWoodMaterialModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Early",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Straight",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier02",
+            "RemoveWoodMaterialModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Late",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier02",
+            "RemoveWoodMaterialModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Branch_Hit",
+  "AbilitySpecials": {
+    "AS_Encourage_ExtraTime": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "HandleAnimatorZoneTagsAction",
+        "AnimatorStateTags": [
+          "Branch_Wood00"
+        ],
+        "IsAdd": true,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HitListenerModifier01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnMuteNormalHittingOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HitModifier01",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "Branch01Condition",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        }
+      ]
+    },
+    "HitListenerModifier02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnMuteNormalHittingOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HitModifier02",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "Branch02Condition",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        }
+      ]
+    },
+    "HitModifier01": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SwitchZoneTagModifier",
+          "Target": "Caster"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HitListenerModifier01",
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Early",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Branch_01_01",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Early",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Attack_Branch_01_Dust_04",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Early",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Straight",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Branch_01_02",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Straight",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Attack_Branch_01_Dust_03",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Straight",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Late",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Branch_01_03",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Late",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Attack_Branch_01_Dust_02",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Late",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_BeHit",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_BattleStance",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "soundActionKey": "Lucy_Attack_Branch_01_AttackProperty_Ally"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "WoodBallPosModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 9999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": -1,
+          "ParamName": "Int_ShouldWhistle",
+          "Predicates": [
+            {
+              "$type": "ByAIParam",
+              "CompareType": "LessEqual",
+              "IntParamValue": 0,
+              "ParamName": "Int_ShouldWhistle",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitModifier02": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "SwitchZoneTagModifier",
+          "Target": "Caster"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HitListenerModifier02",
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Early",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Branch_02_01",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Early",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Attack_Branch_02_Dust_04",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Early",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Straight",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Branch_02_02",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Straight",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Attack_Branch_02_Dust_03",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Straight",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_SubIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Late",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_Branch_02_03",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Late",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Lucy_Attack_Branch_02_Dust_02",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_02_Late",
+              "LayerIndex": 0,
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0,
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_BeHit",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "soundActionKey": "Lucy_Attack_Branch_02_AttackProperty_Ally"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": -1,
+          "ParamName": "Int_ShouldWhistle",
+          "Predicates": [
+            {
+              "$type": "ByAIParam",
+              "CompareType": "LessEqual",
+              "IntParamValue": 0,
+              "ParamName": "Int_ShouldWhistle",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": -1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 9999.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "OffsetReferTarget": "Caster"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "WoodBallPosModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RemoveWoodMaterialModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood00"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Lucy_Wood_Mat_02_OverrideRimGlow_02",
+          "Target": "Custom"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "BanEarlyHint"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_00",
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood00"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Lucy_Wood_Mat_02_OverrideRimGlow_02",
+          "Target": "Custom"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "BanEarlyHint"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood01"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_Lucy_Wood_MA_Lucy_Wood_Mat_02_OverrideRimGlow_02",
+          "Target": "Custom"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "BanEarlyHint"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_02",
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Custom"
+        }
+      ]
+    },
+    "SwitchZoneTagModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Branch_Wood02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Branch_Wood00"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "FailureActions": [
+                {
+                  "$type": "BranchOperator",
+                  "Conditions": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Branch_Wood01"
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "FailureActions": [
+                    {
+                      "$type": "HandleAnimatorZoneTagsAction",
+                      "AnimatorStateTags": [
+                        "Branch_Wood00"
+                      ],
+                      "IsAdd": true,
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "HandleAnimatorZoneTagsAction",
+                      "AnimatorStateTags": [
+                        "Branch_Wood01"
+                      ],
+                      "IsAdd": false,
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "HandleAnimatorZoneTagsAction",
+                      "AnimatorStateTags": [
+                        "Branch_Wood02"
+                      ],
+                      "IsAdd": false,
+                      "Target": "Self"
+                    }
+                  ],
+                  "SuccessActions": [
+                    {
+                      "$type": "HandleAnimatorZoneTagsAction",
+                      "AnimatorStateTags": [
+                        "Branch_Wood02"
+                      ],
+                      "IsAdd": true,
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "HandleAnimatorZoneTagsAction",
+                      "AnimatorStateTags": [
+                        "Branch_Wood00"
+                      ],
+                      "IsAdd": false,
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "HandleAnimatorZoneTagsAction",
+                      "AnimatorStateTags": [
+                        "Branch_Wood01"
+                      ],
+                      "IsAdd": false,
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "HandleAnimatorZoneTagsAction",
+                  "AnimatorStateTags": [
+                    "Branch_Wood01"
+                  ],
+                  "IsAdd": true,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "HandleAnimatorZoneTagsAction",
+                  "AnimatorStateTags": [
+                    "Branch_Wood00"
+                  ],
+                  "IsAdd": false,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "HandleAnimatorZoneTagsAction",
+                  "AnimatorStateTags": [
+                    "Branch_Wood02"
+                  ],
+                  "IsAdd": false,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Branch_Wood00"
+              ],
+              "IsAdd": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Branch_Wood01"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Branch_Wood02"
+              ],
+              "IsAdd": false,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "WoodBallPosModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "WoodBall",
+          "FollowPosRot": {
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "ChestPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "PosSpeed": 1.0,
+          "PosType": "Instant",
+          "RotRatio": 8.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  },
+  "Predicates": {
+    "Branch01Condition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Lucy_Attack_Branch_01_AttackProperty_Ally_00",
+            "Lucy_Attack_Branch_01_AttackProperty_Ally_01",
+            "Lucy_Attack_Branch_01_AttackProperty_Ally_02"
+          ]
+        }
+      ]
+    },
+    "Branch02Condition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Lucy_Attack_Branch_02_AttackProperty_Ally_00",
+            "Lucy_Attack_Branch_02_AttackProperty_Ally_01",
+            "Lucy_Attack_Branch_02_AttackProperty_Ally_02"
+          ]
+        }
+      ]
+    }
+  }
+}

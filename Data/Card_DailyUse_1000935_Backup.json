@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_DailyUse_1000935_Backup",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": -0.9
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedDamageRatio"
+    }
+  }
+}

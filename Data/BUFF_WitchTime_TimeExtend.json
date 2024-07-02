@@ -1,0 +1,51 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "BUFF_WitchTime_Dodge",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "BUFF_WitchTime_Dodge",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "DurationTime",
+                  "ParamName": "DurationTime",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "BUFF_WitchTime_TimeExtend",
+  "AbilitySpecials": {
+    "DurationTime": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Avatar_LevelUp_01",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ShowTipAction",
+      "ShowPage": 0,
+      "Target": "Self",
+      "TipID": 301208
+    }
+  ]
+}

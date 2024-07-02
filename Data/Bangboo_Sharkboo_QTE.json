@@ -1,0 +1,59 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SharkbooQTESetAttachPointModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_QTE",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SharkbooQTESetAttachPointModifier": {
+      "Duration": 2,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ProcessAttachPointAction",
+          "AttachPointName": "Sharkboo_QTE_AttachPoint",
+          "HierarchyType": "World",
+          "PosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

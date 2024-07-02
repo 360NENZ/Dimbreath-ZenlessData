@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Tsubaki_Talent_03",
+  "AbilitySpecials": {
+    "AS_CritBuffTime_Talent_03": {
+      "Value": 15
+    },
+    "AS_Crit_Talent_03": {
+      "Value": 0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TsubakiTalent03Modifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "TsubakiTalent03Modifier": {
+      "Duration": "%AS_CritBuffTime_Talent_03",
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_Crit_Talent_03"
+      }
+    }
+  }
+}

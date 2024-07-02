@@ -1,0 +1,347 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 0.1,
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ClearPerfectReadyModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_01",
+                          "FrameCountHigh": 13,
+                          "FrameCountLow": 7,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_02",
+                          "FrameCountHigh": 13,
+                          "FrameCountLow": 7,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_03",
+                          "FrameCountHigh": 31,
+                          "FrameCountLow": 25,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_04",
+                          "FrameCountHigh": 53,
+                          "FrameCountLow": 47,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_01",
+                          "FrameCountHigh": 11,
+                          "FrameCountLow": 5,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_02",
+                          "FrameCountHigh": 9,
+                          "FrameCountLow": 3,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_03",
+                          "FrameCountHigh": 24,
+                          "FrameCountLow": 18,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_04",
+                          "FrameCountHigh": 53,
+                          "FrameCountLow": 47,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Rush",
+                          "FrameCountHigh": 27,
+                          "FrameCountLow": 21,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Rush_Enhance",
+                          "FrameCountHigh": 27,
+                          "FrameCountLow": 21,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Counter_02",
+                          "FrameCountHigh": 33,
+                          "FrameCountLow": 27,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_BeHitAid_02",
+                          "FrameCountHigh": 33,
+                          "FrameCountLow": 27,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "TriggerPerfectAttackModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByPlayerPropertyValue",
+                      "CompareType": "Equal",
+                      "CustomNumerator": "PerfectReady",
+                      "IsUsePercent": false,
+                      "Numerator": "Custom",
+                      "Target": "Self",
+                      "Val1": 1
+                    },
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_01",
+                          "FrameCountHigh": 31,
+                          "FrameCountLow": 13,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_02",
+                          "FrameCountHigh": 31,
+                          "FrameCountLow": 13,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_03",
+                          "FrameCountHigh": 49,
+                          "FrameCountLow": 31,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_04",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 53,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_04_End",
+                          "FrameCountHigh": 1,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_01",
+                          "FrameCountHigh": 29,
+                          "FrameCountLow": 11,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_02",
+                          "FrameCountHigh": 27,
+                          "FrameCountLow": 9,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_03",
+                          "FrameCountHigh": 42,
+                          "FrameCountLow": 24,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_04",
+                          "FrameCountHigh": 0,
+                          "FrameCountLow": 53,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": true,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Normal_Enhance_04_End",
+                          "FrameCountHigh": 1,
+                          "FrameCountLow": 0,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Rush",
+                          "FrameCountHigh": 45,
+                          "FrameCountLow": 27,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Rush_Enhance",
+                          "FrameCountHigh": 45,
+                          "FrameCountLow": 27,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_Counter_02",
+                          "FrameCountHigh": 51,
+                          "FrameCountLow": 33,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        },
+                        {
+                          "$type": "ByAnimatorStateNormalizedTime",
+                          "AnimatorStateName": "Attack_BeHitAid_02",
+                          "FrameCountHigh": 51,
+                          "FrameCountLow": 33,
+                          "IsLoop": false,
+                          "LayerIndex": 0,
+                          "MaxFrameCountHigh": false,
+                          "MaxFrameCountLow": false
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Longinus_PerfectAttack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ClearPerfectReadyModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "PerfectReady",
+          "IsUsePercentage": false,
+          "Percentage": 0,
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "TriggerPerfectAttackModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PerfectAttack",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

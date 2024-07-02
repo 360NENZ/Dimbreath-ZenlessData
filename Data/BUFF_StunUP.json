@@ -1,0 +1,21 @@
+{
+  "AbilityName": "BUFF_StunUP",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_StunUPModifier": {
+      "Duration": 30,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BreakStunRatio": 5.0
+      }
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_StunUPModifier",
+      "Target": "TeamAvatars"
+    }
+  ]
+}

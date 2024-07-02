@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Card_Edrink_1000204",
+  "AbilitySpecials": {
+    "SPRecoverRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_SpRecoverRatio": "%SPRecoverRatio"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "AbilityName": "Prologue_ACT4_LookAt",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Prologue_ACT4_LookAtModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Prologue_ACT4_LookAtModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ActCameraShotAction",
+          "CameraShotKey": "Test_Level_ACT4",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Prologue_ACT4_LookAtModifier",
+      "Target": "Self"
+    }
+  ]
+}

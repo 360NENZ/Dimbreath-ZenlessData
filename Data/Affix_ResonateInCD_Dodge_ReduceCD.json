@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Affix_ResonateInCD_Dodge_ReduceCD",
+  "AbilitySpecials": {
+    "ReduceCDRatio": {
+      "Value": -0.33
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnDodgeSuccess": [
+      {
+        "$type": "ModifySkillTypeCDAction",
+        "Predicates": [
+          {
+            "$type": "BySkillTypeReady",
+            "IsAnd": true,
+            "SkillType": "Resonate"
+          }
+        ],
+        "Ratio": "%ReduceCDRatio",
+        "SkillType": "Resonate",
+        "Target": "Buddy"
+      }
+    ]
+  }
+}

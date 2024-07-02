@@ -1,0 +1,176 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "Int_BeeNum",
+          "Target": "Target"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_BornType",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "NinevehBee01"
+          ],
+          "IsAdd": true,
+          "Target": "Target"
+        },
+        {
+          "$type": "TriggerBehaviorTreeAction",
+          "Enable": true,
+          "Target": "Target"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_Bee01_Exist",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifySkillCDAction",
+          "Delta": 60,
+          "ModifyType": "ByZero",
+          "SkillCDType": "ForceCD",
+          "SkillName": "Nineveh_SummonBee",
+          "Target": "Self"
+        }
+      ],
+      "OnSummonOverrideActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_SelfDestruction",
+          "ParamType": 1,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 5,
+      "SummonDuration": -1,
+      "SummonID": 900011562,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": -5.0,
+            "y": 0.0,
+            "z": 3.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Ctr_HeadB",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "SummonPositionCorrection": false,
+      "SummonTag": [
+        "Bee_01"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    },
+    {
+      "$type": "SummonMixin",
+      "OnSummonCreatedActions": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 2,
+          "ParamName": "Int_BeeNum",
+          "Target": "Target"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_BornType",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "NinevehBee02"
+          ],
+          "IsAdd": true,
+          "Target": "Target"
+        },
+        {
+          "$type": "TriggerBehaviorTreeAction",
+          "Enable": true,
+          "Target": "Target"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_Bee02_Exist",
+          "Target": "Self"
+        }
+      ],
+      "OnSummonOverrideActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_SelfDestruction",
+          "ParamType": 1,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 999011561,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 5.0,
+            "y": 0.0,
+            "z": 3.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Ctr_HeadB",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "SummonPositionCorrection": false,
+      "SummonTag": [
+        "Bee_02"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Nineveh_Summon_Default",
+  "AbilityStacking": "Unique"
+}

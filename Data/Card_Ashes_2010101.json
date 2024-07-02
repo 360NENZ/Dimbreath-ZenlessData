@@ -1,0 +1,159 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Ashes_2010101",
+      "OnListenAbilityStarted": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ControlModifier",
+          "Target": "Self"
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Ashes_2010101",
+  "AbilitySpecials": {
+    "AS_DeflagrateCoolDownTime": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Ashes_2010101",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ControlModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DeflagrateModifier",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "#HighElement_Deflagrate",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DeflagrateCoolDownModifier",
+          "Predicates": [
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Fire"
+            },
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "DeflagrateCoolDownModifier": {
+      "Duration": "%AS_DeflagrateCoolDownTime",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ControlModifier",
+          "ModifierTargetType": "SameNameAbility",
+          "Target": "TeamAvatars"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Ashes_2010101",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "DeflagrateModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Deflagrate_S",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Deflagrate_M",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Middle",
+              "CompareType": "Equal",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Deflagrate_L",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Large",
+              "CompareType": "GreaterEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Common_MA_ Deflagrate_03",
+          "Target": "Self",
+          "key": "Monster_Common_MA_ Deflagrate_03"
+        }
+      ]
+    }
+  }
+}

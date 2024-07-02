@@ -1,0 +1,129 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Range_Attack_01_Start",
+          "LayerIndex": 1,
+          "ModifierNameList": [
+            "SkillCDModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Range_Attack_01_Loop",
+          "IsLoop": true,
+          "LayerIndex": 1,
+          "ModifierNameList": [
+            "SkillCDModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Range_Attack_01_End",
+          "LayerIndex": 1,
+          "ModifierNameList": [
+            "SkillCDModifier_01"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Range_Attack_02_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Range_Attack_02_Start_2",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Range_Attack_02_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Range_Attack_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "SkillCDModifier_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Guardian_SkillCD",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SkillCDModifier_01": {
+      "OnAdded": [
+        {
+          "$type": "ModifySkillCDAction",
+          "Delta": 4,
+          "ModifyType": "ByZero",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "LongRange"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Ratio": 0,
+          "SkillName": "Monster_Guardian_RangeAttack_01",
+          "Target": "Self",
+          "ValueType": "DefaultValue"
+        }
+      ]
+    },
+    "SkillCDModifier_02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Monster_Guardian_RangeAttack_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": true,
+          "SkillNames": [
+            "Monster_Guardian_RangeAttack_02"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": false,
+          "SkillNames": [
+            "Monster_Guardian_RangeAttack_02"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

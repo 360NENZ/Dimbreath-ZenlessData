@@ -1,0 +1,68 @@
+{
+  "AbilityName": "Lucy_Talent_01",
+  "AbilitySpecials": {
+    "AS_IntervalCD": {
+      "Value": 10,
+      "ValueType": "Float"
+    },
+    "AS_RecoverSp_Attack04": {
+      "Value": 3,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "LucyTalent01Modifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverSPModifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillID",
+              "SkillID": "Lucy_Wood_ATK04"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverSPModifier": {
+      "Duration": "%AS_IntervalCD",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Attack04",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Caster"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_00",
+      "ModifierName": "LucyTalent01Modifier",
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_01",
+      "ModifierName": "LucyTalent01Modifier",
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "LucyWood_AbilityTargetting_02",
+      "ModifierName": "LucyTalent01Modifier",
+      "Target": "Custom"
+    }
+  ]
+}

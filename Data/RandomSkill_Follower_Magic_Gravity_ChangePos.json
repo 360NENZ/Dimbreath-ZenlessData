@@ -1,0 +1,81 @@
+{
+  "AbilityName": "RandomSkill_Follower_Magic_Gravity_ChangePos",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FollowTypeModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 56.3,
+          "Avatar2CamHeight": 2.5,
+          "Avatar2CamRadius": 1.442,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 2,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 303.7,
+          "Avatar2CamHeight": 2.5,
+          "Avatar2CamRadius": 1.442,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 3,
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 56.3,
+          "Avatar2CamHeight": 2.5,
+          "Avatar2CamRadius": 1.442,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0.1,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 2,
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 303.7,
+          "Avatar2CamHeight": 2.5,
+          "Avatar2CamRadius": 1.442,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0.1,
+          "Predicates": [
+            {
+              "$type": "BySkillBtnIndex",
+              "SkillBtnIndex": 3,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FollowTypeModifier",
+      "Target": "Caster"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "AbilityName": "HeavyStriker_Attack_5_Boss",
+  "AbilitySpecials": {
+    "AS_Attack5_Count": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnCustomEventReceived": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "Attack_5_End"
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": 0,
+            "ParamName": "AS_Attack5_Count",
+            "ParamType": "Integer"
+          }
+        ]
+      }
+    ]
+  },
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAbilitySpecialAction",
+      "ModifyFunction": "Add",
+      "Param": 1,
+      "ParamName": "AS_Attack5_Count",
+      "ParamType": "Integer"
+    },
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByAbilitySpecial",
+          "CompareType": "GreaterEqual",
+          "Param": 3,
+          "ParamName": "AS_Attack5_Count",
+          "ParamType": "Integer"
+        }
+      ],
+      "FailureActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_Attack5_Continue",
+          "ParamType": 2
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_Attack5_Continue",
+          "ParamType": 2
+        }
+      ]
+    }
+  ]
+}

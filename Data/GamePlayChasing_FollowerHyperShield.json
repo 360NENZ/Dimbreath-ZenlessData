@@ -1,0 +1,96 @@
+{
+  "AbilityName": "GamePlayChasing_FollowerHyperShield",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 100.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HPShieldModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChangeBreakStunTakeRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnStunDestroyActions": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "HPShieldModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ChangeBreakStunTakeRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChangeBreakStunTakeRatio": {
+      "Properties": {
+        "Actor_BreakStunTakeRatio": -999
+      }
+    },
+    "HPShieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "Duration": -1,
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": 0,
+          "RecoverAmount": 0,
+          "RecoverPercentage": 0.0,
+          "Tag": "FollowerHyperShield",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "Mudiky_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyStunStateAction",
+          "Target": "Self",
+          "TargetState": "Break"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "StunBuffModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_Arlaune_Stun_Start_GasOff_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BreakStunModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    }
+  }
+}

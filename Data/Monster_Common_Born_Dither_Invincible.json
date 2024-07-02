@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Monster_Common_Born_Dither_Invincible",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "InvincibleBuffModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "InvincibleBuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": 0.5,
+      "ModifierStacking": "MultipleRefresh"
+    }
+  }
+}

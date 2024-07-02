@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Abyss_FixedLayerBuff_06_BaseAbility",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Abyss_FixedLayerBuff_06_DmgUp": {
+      "Duration": 30,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    },
+    "Modifiers_Abyss_FixedLayerBuff_06_Base_BuffIcon": {
+      "Buff": {
+        "BuffID": 3200011,
+        "IsOverrideDuration": true
+      },
+      "Duration": 30,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Abyss_FixedLayerBuff_06_DmgUp",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Modifiers_Abyss_FixedLayerBuff_06_Base_BuffIcon",
+      "Target": "Self"
+    }
+  ]
+}

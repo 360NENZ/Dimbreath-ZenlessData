@@ -1,0 +1,530 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SwitchPhaseMixin",
+      "CanSwitchPhase": "%AS_CanSwitchPhase",
+      "ClearStunProperty": true,
+      "DisableAI": false,
+      "ForceRBL": 9999,
+      "HeavyHitEffect": true,
+      "HideUI": true,
+      "Invincible": false,
+      "LockHPRatio": "%AS_LockHPRatio",
+      "LockHPValue": 1,
+      "MuteBeSelected": true,
+      "MuteElementAbnormal": true,
+      "MuteStunProperty": true,
+      "OnSwitchPhaseDone": [
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": 6,
+          "ModifyFunction": "Add"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_LegDisable",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Body_VFX",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_FL",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_FR",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_BL",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ComplexCorrupted_Part_Leg_BR",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_IsPhase2",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_ResetWeight",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_06_Default",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_06_Added",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_09_Default",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_09_Added",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_10_Default",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 150,
+          "ParamName": "Weight_10_Added",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "FloatParamValue": 800,
+          "ParamName": "Weight_10_Current",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 0,
+          "ParamName": "Int_SwitchPhaseAttackType",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsPhase2",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_03"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Common_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Common_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_01"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Common_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Common_Mat02_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_05"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ComplexCorrupted_Body_06"
+            }
+          ],
+          "Tag": "Monster_ComplexCorrupted_MA_Common_Mat03_SecondaryEmission_03",
+          "Target": "Self",
+          "key": "Monster_ComplexCorrupted_MA_Common_Mat03_SecondaryEmission_03"
+        }
+      ],
+      "OnSwitchPhaseStart": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "Int_SwitchPhaseAttackType",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_LegDisable",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "soundActionKey": "Play_SoundAction_ComplexCorrupted_Phase1_Trans2"
+        }
+      ],
+      "ProtectTime": 30,
+      "RecoverHPRatio": 1.0,
+      "SourcePhase": 1,
+      "SwitchPhaseTag": "ComplexCorrupted_SwitchPhase",
+      "TargetHPRatio": -1.0,
+      "TargetHPValue": 1,
+      "TargetPhase": 2
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_SwitchPhase",
+  "AbilitySpecials": {
+    "AS_CanSwitchPhase": {
+      "Value": true,
+      "ValueType": "Boolean"
+    },
+    "AS_LockHPRatio": {
+      "Value": -1.0
+    },
+    "AS_RecoverHPRatio": {
+      "Value": 1.0
+    },
+    "AS_TargetHPRatio": {
+      "Value": -1.0
+    },
+    "ComplexCorrupted_CurPartHP_Leg_BL": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_BR": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_FL": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_FR": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_L": {
+      "Value": 1
+    },
+    "ComplexCorrupted_CurPartHP_Leg_R": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ComplexCorrupted_LegDisable": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": false,
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR",
+            "LockPoint_Foot_L",
+            "LockPoint_Foot_R"
+          ],
+          "Tag": "ComplexCorrupted_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_FL",
+          "PartName": "ComplexCorrupted_Leg_FL",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_FR",
+          "PartName": "ComplexCorrupted_Leg_FR",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_BL",
+          "PartName": "ComplexCorrupted_Leg_BL",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_BR",
+          "PartName": "ComplexCorrupted_Leg_BR",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_L",
+          "PartName": "ComplexCorrupted_Leg_L",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "ComplexCorrupted_CurPartHP_Leg_R",
+          "PartName": "ComplexCorrupted_Leg_R",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FL",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_FL"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FR",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_FR"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BL",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_BL"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BR",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_BR"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_L",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_L"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_R",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "ComplexCorrupted_Leg_R"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR",
+            "LockPoint_Foot_L",
+            "LockPoint_Foot_R"
+          ],
+          "Tag": "ComplexCorrupted_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FL",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_FR",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BL",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_BR",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ComplexCorrupted_PartLockLife_Leg_R",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ComplexCorrupted_PartLockLife_Leg_BL": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_BL"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_BL"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_BR": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_BR"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_BR"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_FL": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_FL"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_FL"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_FR": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_FR"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_FR"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_L": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_L"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_L"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "ComplexCorrupted_PartLockLife_Leg_R": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%ComplexCorrupted_CurPartHP_Leg_R"
+          },
+          "SubPartName": "ComplexCorrupted_Leg_R"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

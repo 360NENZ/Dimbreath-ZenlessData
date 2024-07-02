@@ -1,0 +1,143 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_R_Hand"
+      ],
+      "CanHitAfterDestroyed": false,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxHP": "%AS_HandHP",
+      "OnPartDestroy": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RightHandBrokenModifer",
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%AS_HandHP",
+      "PartName": "RuthlessFiend_RightHand"
+    },
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_L_Hand"
+      ],
+      "CanHitAfterDestroyed": false,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxHP": "%AS_HandHP",
+      "OnPartDestroy": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LeftHandBrokenModifer",
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%AS_HandHP",
+      "PartName": "RuthlessFiend_LeftHand"
+    }
+  ],
+  "AbilityName": "RuthlessFiend_Ability_BreakHand",
+  "AbilitySpecials": {
+    "AS_HandHP": {
+      "Value": 100
+    },
+    "AS_HandHPRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_HandHPRatio)",
+        "ParamName": "AS_HandHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LeftHandBrokenModifer": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_BreakLeftHand",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_RuthlessFiend_Break_02"
+          ],
+          "Tag": "RuthlessFiend_RightHandBroken",
+          "Visible": false
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LeftHandBroken"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LeftHandBroken"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "RightHandBrokenModifer": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_BreakRightHand",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_RuthlessFiend_Break_01"
+          ],
+          "Tag": "RuthlessFiend_RightHandBroken",
+          "Visible": false
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "RightHandBroken"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "RightHandBroken"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

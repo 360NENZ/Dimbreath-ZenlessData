@@ -1,0 +1,74 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitShakeModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Front",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitShakeModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Back",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitShakeModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_HitShake",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 0,
+        "ParamName": "Int_HitShake_Type",
+        "ParamType": 3,
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HitShakeModifier": {
+      "Duration": -1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_HitShake_Type",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_HitShake_Type",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

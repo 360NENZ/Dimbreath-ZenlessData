@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Level_Buff_ACT3_Fever",
+  "AbilitySpecials": {
+    "AS_RecoverFever": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "RecoverFeverAction",
+        "Amount": 0,
+        "IgnoreRatio": false,
+        "Percentage": "%AS_RecoverFever",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

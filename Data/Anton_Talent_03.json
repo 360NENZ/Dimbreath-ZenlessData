@@ -1,0 +1,49 @@
+{
+  "AbilityName": "Anton_Talent_03",
+  "AbilitySpecials": {
+    "AS_QTEAddedCrit_Talent_03_Duration": {
+      "Value": 15
+    },
+    "AS_QTEAddedCrit_Talent_03_Value": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AntonTalent03Modifier_CriticalDelta",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "QTE",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByFromSkillType",
+                "SkillType": "ExQTE",
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AntonTalent03Modifier_CriticalDelta": {
+      "Duration": "%AS_QTEAddedCrit_Talent_03_Duration",
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_QTEAddedCrit_Talent_03_Value"
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "AbilityName": "Goblin_SkillCD",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ModifySkillCDModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ModifySkillCDModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "ModifySkillCDAction",
+          "Delta": 8,
+          "ModifyType": "ByZero",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillID",
+              "SkillID": "Monster_Goblin_ATK06",
+              "Target": "Self"
+            }
+          ],
+          "Ratio": 0,
+          "SkillCDType": "ForceCD",
+          "SkillName": "Monster_Goblin_ATK06",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ModifySkillCDModifier",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillID",
+              "SkillID": "Monster_Goblin_ATK06",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

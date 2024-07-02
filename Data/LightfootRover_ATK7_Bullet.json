@@ -1,0 +1,356 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_LightfootRover_Attack_06_07_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": -50.0,
+            "y": -90.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_MissileWell_L",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 5.0,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "LightfootRover_Attack07_Attackproperty",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 1.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode_Ground"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 25
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_LightfootRover_ATK7_CamShake_Explode_E_01"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 1,
+        "RotateSpeed": 800,
+        "RotateType": "Fixed",
+        "SpeedRatioCurvebyDistance": {
+          "$type": "ConfigLinearCurveFunction",
+          "MaxCurveValue": 0.2,
+          "MaxInputValue": 12,
+          "MinCurveValue": 1,
+          "MinInputValue": 5
+        },
+        "TargetPosRot": {
+          "CoordsOption": "ReferTarget",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "ATK7_ActualTargetPoint_L",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart",
+        "TimesUpRotateOption": "Stop"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": true,
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode"
+      }
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "CapsuleColliderHeight": 0.5,
+        "CapsuleColliderRadius": 0.1,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_LightfootRover_Attack_06_07_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": -50.0,
+            "y": 90.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_MissileWell_R_AttachPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 5.0,
+        "CapsuleColliderRadius": 0.5,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "LightfootRover_Attack07_Attackproperty",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 1.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode_Ground"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode"
+      },
+      "IsCanReflect": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 25
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_LightfootRover_ATK7_CamShake_Explode_E_01"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 1,
+        "RotateSpeed": 800,
+        "RotateType": "Fixed",
+        "SpeedRatioCurvebyDistance": {
+          "$type": "ConfigLinearCurveFunction",
+          "MaxCurveValue": 0.2,
+          "MaxInputValue": 12,
+          "MinCurveValue": 1,
+          "MinInputValue": 5
+        },
+        "TargetPosRot": {
+          "CoordsOption": "ReferTarget",
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "ATK7_ActualTargetPoint_R",
+            "IsUseAttachPointPos": true,
+            "OffsetReferTarget": "Caster"
+          }
+        },
+        "TargetUpdateMode": "OnStart",
+        "TimesUpRotateOption": "Stop"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": true,
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Monster_Common_01_Explode"
+      }
+    }
+  ],
+  "AbilityName": "LightfootRover_ATK7_Bullet",
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_BaseTargetPoint_L",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 2.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_L",
+          "IsUseAttachPointPos": true
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_BaseTargetPoint_R",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 2.5
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_R",
+          "IsUseAttachPointPos": true
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_ActualTargetPoint_L",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.3,
+            "y": 0.0,
+            "z": 0.3
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_L",
+          "IsUseAttachPointPos": true
+        }
+      }
+    },
+    {
+      "$type": "SetAttachPointPosRotAction",
+      "AttachPointName": "ATK7_ActualTargetPoint_R",
+      "TargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.3,
+            "y": 0.0,
+            "z": 0.3
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "ATK7_BaseTargetPoint_R",
+          "IsUseAttachPointPos": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Fixing",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ErrorModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Prop_Switch_02_Fix",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ErrorModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PlayTextureSheetSequenceAction",
+          "InterruptType": "Interrupt",
+          "IsKeepLastFrame": false,
+          "MeshPath": "Device_Prop_Switch_02",
+          "Target": "Self",
+          "TextureSheetKey": "Device_Prop_Switch_02_Fix"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Root",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Target"
+            }
+          },
+          "EffectPattern": "Eff_Device_Console_BrokeLoop",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

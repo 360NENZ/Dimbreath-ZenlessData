@@ -1,0 +1,388 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_02_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltPredicateModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltPredicateModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_01_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_01_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_02_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_02_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_06",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_06",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_A_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_04_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_Opening_A",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_Opening_B",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "FrameHaltModifier_CoAttack"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_FrameHaltSync",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FrameHaltModifier_CoAttack": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FrameHaltSyncMixin",
+          "CustomTargetKey": "Monster_LampasBlackVeil_CoAttacker",
+          "SyncTargetting": "Custom"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "FrameHaltPredicateModifier_CoAttack": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FrameHaltModifier_CoAttack",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "LampasBlackVeil_IsInCoAttack"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FrameHaltModifier_CoAttack",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

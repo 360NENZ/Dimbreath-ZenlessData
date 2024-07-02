@@ -1,0 +1,96 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletEmitterMixin",
+      "AttackTargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      },
+      "BulletAbilityName": "LightfootRover_ATK6_Bullet",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_MissileWell_L",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "EmmiterEffect": {
+        "EffectPattern": "Eff_Monster_LightfootRover_Attack_06_08_Trail"
+      }
+    },
+    {
+      "$type": "BulletEmitterMixin",
+      "AttackTargetPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "SelfAttackTarget"
+        }
+      },
+      "BulletAbilityName": "LightfootRover_ATK6_Bullet",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 135.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Skn_MissileWell_R_AttachPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "EmmiterEffect": {
+        "EffectPattern": "Eff_Monster_LightfootRover_Attack_06_08_Trail"
+      }
+    }
+  ],
+  "AbilityName": "LightfootRover_ATK6_BulletEmitter",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,435 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Attack_05_01",
+          "FrameCountHigh": 154,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Attack05MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_07",
+          "FrameCountHigh": 154,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Attack05MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_05_02",
+          "FrameCountHigh": 91,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Attack05MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_05_02_02",
+          "FrameCountHigh": 111,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Attack05MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_09",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 9,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Atk09MatPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Attack_09_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Atk09MatPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Born",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BodyP2MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Born_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BodyP2MaterialPropertyModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchPhase_Breath_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BodyP2MaterialPropertyModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_P2_MaterialProperty",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Atk09MatPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_Cottus_P2_MA_Attack_09_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_Cottus_P2_MA_Attack_09_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Wing"
+            }
+          ],
+          "Tag": "Monster_Cottus_P2_MA_Attack_09_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_Cottus_P2_MA_Attack_09_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_09_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_CottusGrey_MA_P2_Attack_09_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Wing"
+            }
+          ],
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_09_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_CottusGrey_MA_P2_Attack_09_Mat02_ScreenImage_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Cottus_P2_MA_Attack_09_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Cottus_P2_MA_Attack_09_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_09_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_09_Mat02_ScreenImage_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Attack05MaterialPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_Cottus_P2_MA_Attack_05_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_Cottus_P2_MA_Attack_05_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Wing"
+            }
+          ],
+          "Tag": "Monster_Cottus_P2_MA_Attack_05_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_Cottus_P2_MA_Attack_05_ScreenImage_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_05_Mat01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_CottusGrey_MA_P2_Attack_05_Mat01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Wing"
+            }
+          ],
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_05_Mat02_ScreenImage_02",
+          "Target": "Self",
+          "key": "Monster_CottusGrey_MA_P2_Attack_05_Mat02_ScreenImage_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Monster_Cottus_P2_MA_Attack_05_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Monster_Cottus_P2_MA_Attack_05_ScreenImage_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_05_Mat01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveMaterialPropertyAction",
+          "Tag": "Monster_CottusGrey_MA_P2_Attack_05_Mat02_ScreenImage_02",
+          "Target": "Self"
+        }
+      ]
+    },
+    "BodyP2MaterialPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_CottusP2_MA_P2_Common_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_CottusP2_MA_P2_Common_Mat01_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Wing"
+            }
+          ],
+          "Tag": "Monster_CottusP2_MA_P2_Common_Mat02_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_CottusP2_MA_P2_Common_Mat02_SecondaryEmission_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Body_1"
+            }
+          ],
+          "Tag": "Monster_CottusGrey_MA_P2_Common_Mat01_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Monster_CottusGrey_MA_P2_Common_Mat01_SecondaryEmission_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Cottus_Wing"
+            }
+          ],
+          "Tag": "Monster_CottusGrey_MA_P2_Common_Mat02_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_CottusGrey_MA_P2_Common_Mat02_SecondaryEmission_02"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Weapon_Ability_12014",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio": {
+      "Value": 0.2
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageRatioModifier",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageRatioModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AS_AddedDamageRatio"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Level_ElementAbnormalAdded",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffAddToOtherModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike",
+              "Frozen",
+              "Frostbite",
+              "Burn",
+              "Electric",
+              "Ignite",
+              "Erosion",
+              "Overload",
+              "Chaos"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnBuffAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffAddedModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike",
+              "Frozen",
+              "Frostbite",
+              "Burn",
+              "Electric",
+              "Ignite",
+              "Erosion",
+              "Overload",
+              "Chaos"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffAddToOtherModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "TeachLevel_ElementAbormal"
+        }
+      ]
+    },
+    "BuffAddedModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "TeachLevel_ElementAbormal"
+        }
+      ]
+    }
+  }
+}

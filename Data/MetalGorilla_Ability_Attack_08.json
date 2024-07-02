@@ -1,0 +1,23 @@
+{
+  "AbilityName": "MetalGorilla_Ability_Attack_08",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_MetalGorilla_ATK08_Attackproperty_03"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

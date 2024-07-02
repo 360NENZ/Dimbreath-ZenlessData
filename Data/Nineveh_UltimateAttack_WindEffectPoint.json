@@ -1,0 +1,119 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "CharacterWindEffectModifer",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_Ultimate_Start",
+          "Frame": 200,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "CharacterWindEffectModifer",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_Ultimate_End",
+          "Frame": 10,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_UltimateAttack_WindEffectPoint",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CharacterWindEffectModifer": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "IndicatorMixin",
+          "DestroyOnHide": true,
+          "EffectPattern": "Eff_Monster_Nineveh_Ultimate_Attack_01_08_Spark",
+          "PosRotTarget": "Self",
+          "ShowPredicates": [
+            {
+              "$type": "ByAvatarIsOnStage",
+              "IsOnStage": true,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "InvincibleField"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "SourcePositionConfig": {
+            "CoordsOption": "ReferTarget",
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "IsUseRotationXZ": true,
+                "IsUseRotationY": true,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "TargetPositionConfig": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsClampOffsetDistance": false,
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "NodePoint": "MonsterPos_A1",
+              "OffsetReferTarget": "NodePoint"
+            }
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

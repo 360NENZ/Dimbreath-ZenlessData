@@ -1,0 +1,20 @@
+{
+  "AbilityName": "Prologue_ACT1_DecreaseSP",
+  "AbilitySpecials": {
+    "SPReduce": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "DecreaseSPAction",
+        "Amount": "%SPReduce",
+        "Percentage": 0,
+        "Target": "Self"
+      }
+    ]
+  }
+}

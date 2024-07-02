@@ -1,0 +1,16 @@
+{
+  "AbilityName": "Ability_Card_Leangle_3",
+  "AbilitySpecials": {
+    "CriticalDamageRatioDelta": {
+      "Op": "Add",
+      "OpValue": 0.06,
+      "Value": 0.06
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_CriticalDamageRatioDelta": "%CriticalDamageRatioDelta"
+    }
+  }
+}

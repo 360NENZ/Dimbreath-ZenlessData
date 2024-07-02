@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Card_Physical_2001202",
+  "AbilitySpecials": {
+    "AS_CritDelta": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PhyToCritModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Strike"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PhyToCritModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 3,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CritDelta"
+      }
+    }
+  }
+}

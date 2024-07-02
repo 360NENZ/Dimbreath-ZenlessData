@@ -1,0 +1,154 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_01_Pre",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_01_SlowPre",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_02_Pre",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_04",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+              "Target": "TeamAvatars"
+            }
+          ],
+          "AnimatorStateName": "Attack_05",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_DamageBlock",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Circle_01",
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Square_01",
+              "Monster_ComplexCorrupted_Attack_02_Attackproperty_01",
+              "Monster_ComplexCorrupted_Attack_04_Attackproperty_01",
+              "Monster_ComplexCorrupted_Attack_05_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_BlockDamage",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Circle_01",
+              "Monster_ComplexCorrupted_Attack_01_Attackproperty_Square_01",
+              "Monster_ComplexCorrupted_Attack_02_Attackproperty_01",
+              "Monster_ComplexCorrupted_Attack_04_Attackproperty_01",
+              "Monster_ComplexCorrupted_Attack_05_Attackproperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_ComplexCorrupted_BlockDamage": {
+      "Duration": 4,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ComplexCorrupted_BlockDamage"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "ComplexCorrupted_BlockDamage"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

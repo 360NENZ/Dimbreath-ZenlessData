@@ -1,0 +1,251 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SwitchMuteModifier"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "IsSeam": true
+    }
+  ],
+  "AbilityName": "Lucy_SupportAid",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenModifier_ExSp",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExSp",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenModifier_QTE",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenModifier_ExQTE",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenModifier_ExQTE": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_AidAttackTag",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Switch_Attack_Ex_AttackProperty_01_Explosion"
+              ]
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutBegin": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier_ExQTE",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenModifier_ExSp": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_AidAttackTag",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_01_Explosion",
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_02_Explosion",
+                "Lucy_Wood_Attack_Branch_01_AttackProperty_03_Explosion",
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_01_Explosion",
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_02_Explosion",
+                "Lucy_Wood_Attack_Branch_02_AttackProperty_03_Explosion"
+              ]
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutBegin": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier_ExSp",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenModifier_QTE": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnHitOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Modifier_AidAttackTag",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lucy_Attack_SwitchIn_Attack_Bullet_AttackProperty_01"
+              ]
+            },
+            {
+              "$type": "ByIsLocalAvatar",
+              "IsLocalAvatar": true,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnSwitchOutBegin": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier_QTE",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_AidAttackTag": {
+      "Duration": 0.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Common"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier_ExSp",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier_QTE",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier_ExQTE",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "SwitchMuteModifier",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Common"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SwitchMuteModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "InputMuteAction",
+          "CharacterSwitchMute": false,
+          "Tag": "Player_SwitchIn_Attack_InputMute"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_SwitchIn_Attack_InputMute"
+        }
+      ],
+      "OnSwitchOutBegin": [
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_SwitchIn_Attack_InputMute"
+        }
+      ]
+    }
+  }
+}

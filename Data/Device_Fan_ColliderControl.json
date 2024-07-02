@@ -1,0 +1,127 @@
+{
+  "AbilityName": "Device_Fan_ColliderControl",
+  "AbilitySpecials": {
+    "InFan": {
+      "Value": 0
+    },
+    "InWitchTime": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazu",
+        "Target": "Self"
+      }
+    ],
+    "OnCustomEventReceived": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "BUFF_WitchTime_Dodge_EventSend"
+          }
+        ],
+        "FailureActions": [],
+        "SuccessActions": [
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": 1,
+            "ParamName": "InWitchTime",
+            "ParamType": "Integer"
+          },
+          {
+            "$type": "PushWallColliderEnable",
+            "ColliderName": [
+              "PassagewayCollider"
+            ],
+            "Tag": "PassagewayCollider",
+            "Target": "Self",
+            "WallColliderEnable": false
+          }
+        ]
+      },
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "BUFF_WitchTime_Dodge_EventEnd"
+          }
+        ],
+        "FailureActions": [],
+        "SuccessActions": [
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": 0,
+            "ParamName": "InWitchTime",
+            "ParamType": "Integer"
+          },
+          {
+            "$type": "PopWallColliderEnable",
+            "Predicates": [
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Equal",
+                "Param": 0,
+                "ParamName": "InFan",
+                "ParamType": "Integer",
+                "Target": "Self"
+              }
+            ],
+            "Tag": "PassagewayCollider",
+            "Target": "Self"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByCampType",
+              "Camp": "TeamEvil",
+              "Target": "Target"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageReplace",
+          "PropertyValue": 99999,
+          "Target": "Target"
+        }
+      ]
+    },
+    "ReopenCollider": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PopWallColliderEnable",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "InWitchTime",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "Tag": "PassagewayCollider",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "AbilityName": "TGS_MuteInLevelFever",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetupUIAction",
+        "HideUITags": [
+          "InLevelFever"
+        ],
+        "IgnoreFadeAnimation": false,
+        "Priority": 0,
+        "SetupTag": "TGS_MuteInLevelFever"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "InterruptSetupUIAction",
+        "IgnoreFadeAnimation": false,
+        "SetupTag": "TGS_MuteInLevelFever"
+      }
+    ]
+  }
+}

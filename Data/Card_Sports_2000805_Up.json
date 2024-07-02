@@ -1,0 +1,37 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Sports_2000800",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Sports_2000800",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "New_DurationTime",
+                  "ParamName": "AS_Duration",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Sports_2000805_Up",
+  "AbilitySpecials": {
+    "Add_DurationTime": {
+      "Value": 10
+    },
+    "New_DurationTime": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique"
+}

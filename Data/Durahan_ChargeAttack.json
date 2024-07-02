@@ -1,0 +1,1003 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.144
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Front",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.308
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Back",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "HitListenerModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.308
+        },
+        {
+          "AnimatorStateName": "Skill_01_Charge",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "BreakListenerModifier",
+            "ChargePointModifier",
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Front",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "BreakListenerModifier",
+            "ChargePointModifier",
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Skill_01_Hit_Back",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "BreakListenerModifier",
+            "ChargePointModifier",
+            "ReduceDamageModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "ChargePoint_Skill_01_Cur",
+          "CustomReferMaxPropertyType": "ChargePoint_Skill_01_Max",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 8
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 2,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 15
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 3,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 22
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 4,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 29
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 5,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 36
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 6,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 43
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 7,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 50
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 8,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 58
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 9,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 65
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 10,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 72
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 11,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 79
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 12,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 86
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 13,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Val": 93
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 14,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": 1,
+                  "ParamName": "AS_HitReady",
+                  "ParamType": "Float"
+                }
+              ],
+              "Val": 100
+            },
+            {
+              "Val": 100,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 13,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 93,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 12,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 86,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 11,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 79,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 10,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 72,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 9,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 65,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 8,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 58,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 7,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 50,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 6,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 43,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 5,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 36,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 4,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 29,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 3,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 22,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 2,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 15,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "Val": 8,
+              "ValueToLowActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_ChargePointIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Durahan_ChargeAttack",
+  "AbilitySpecials": {
+    "AS_Bool_CounterAttack": {
+      "Value": 0
+    },
+    "AS_BreakPoint_Cur": {
+      "Value": 0
+    },
+    "AS_BreakPoint_Max": {
+      "Value": 10
+    },
+    "AS_CounterPoint_Cur": {
+      "Value": 0
+    },
+    "AS_CounterPoint_Max": {
+      "Value": 3
+    },
+    "AS_DamageTakeRatio_Common": {
+      "Value": -0.5
+    },
+    "AS_HitReady": {
+      "Value": 0
+    },
+    "AS_Odds_CounterAttack_Cur": {
+      "Value": 0
+    },
+    "AS_Odds_CounterAttack_Default_01": {
+      "Value": 1.0
+    },
+    "AS_Odds_CounterAttack_Default_02": {
+      "Value": 0.3333
+    },
+    "AS_Odds_CounterPoint_Cur": {
+      "Value": 0
+    },
+    "AS_Odds_CounterPoint_Default_01": {
+      "Value": 1.0
+    },
+    "AS_Odds_CounterPoint_Default_02": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AS_BreakPoint_Cur_Modifier_01": {
+      "Duration": 0.3,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 10,
+          "ParamName": "AS_BreakPoint_Cur",
+          "ParamType": "Float"
+        }
+      ]
+    },
+    "BreakListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_RevengeReady",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Equal",
+              "CustomDenominator": "BossType_Max",
+              "CustomNumerator": "BossType_Cur",
+              "Denominator": "Custom",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 0,
+              "Val2": 0
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_RevengeReady",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "NotEqual",
+              "CustomDenominator": "BossType_Max",
+              "CustomNumerator": "BossType_Cur",
+              "Denominator": "Custom",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 0,
+              "Val2": 0
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_BreakPoint_Cur",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_CounterPoint_Cur",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_CounterReady",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AS_BreakPoint_Cur_Modifier_01",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            },
+            {
+              "$type": "ByCauseStun",
+              "IsCauseStun": true
+            },
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Counter"
+                  ]
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackSpecial",
+                    "ExSp"
+                  ]
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackQTE"
+                  ]
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackAid"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_GuardBreak",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_BreakPoint_Max",
+              "ParamName": "AS_BreakPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_BreakPoint_Max",
+              "ParamName": "AS_BreakPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Other"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "ChargePointModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothChangePropertyMixin",
+          "PropertyItems": [
+            {
+              "Amount": 31.25,
+              "CustomPropertyType": "ChargePoint_Skill_01_Cur",
+              "Percentage": 0,
+              "PropertyModifyFunction": "Add",
+              "PropertyType": "Custom"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyProperty",
+          "Amount": 0,
+          "CustomPropertyType": "ChargePoint_Skill_01_Cur",
+          "PropertyModifyFunction": "Replace",
+          "PropertyType": "Custom",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 0,
+          "ParamName": "AS_HitReady",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_ChargePointIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    },
+    "HitListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_GuardHit_Front",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 180,
+              "AngleMin": 0
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HitReady",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_GuardHit_Back",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 0,
+              "AngleMin": -180
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HitReady",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_GuardBreak",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_BreakPoint_Max",
+              "ParamName": "AS_BreakPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "Predicates": [
+            {
+              "$type": "ByHeavyAttack",
+              "IsHeavyAttack": true
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_BreakPoint_Max",
+              "ParamName": "AS_BreakPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Other"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HitListenerModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_HitReady",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReduceDamageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByHitAngleRange",
+                  "AngleMax": 180,
+                  "AngleMin": 0
+                },
+                {
+                  "$type": "ByHitDataType",
+                  "TheHitDataType": "Range"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_DamageTakeRatio",
+          "PropertyValue": "%AS_DamageTakeRatio_Common",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Skill_01_Hit_Back_Modifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_CounterPoint_Cur",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_CounterReady",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_CounterPoint_Max",
+              "ParamName": "AS_CounterPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_HitReady",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_CounterPoint_Max",
+              "ParamName": "AS_CounterPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "Skill_01_Hit_Front_Modifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1,
+          "ParamName": "AS_CounterPoint_Cur",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_CounterReady",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_CounterPoint_Max",
+              "ParamName": "AS_CounterPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_HitReady",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_CounterPoint_Max",
+              "ParamName": "AS_CounterPoint_Cur",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Skill_01_Hit_Front_Modifier",
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Skill_01_Hit_Front",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "Skill_01_Hit_Back_Modifier",
+      "Predicates": [
+        {
+          "$type": "ByAnimatorStateNormalizedTime",
+          "AnimatorStateName": "Skill_01_Hit_Back",
+          "LayerIndex": 0,
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0,
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

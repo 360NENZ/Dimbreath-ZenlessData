@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Nostradamus_ExQTE",
+  "AbilitySpecials": {
+    "AS_SpRecover": {
+      "Value": 10
+    },
+    "AS_SpRecover_Switch": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SpRecoverModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "ExQTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ListenModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSwitchInBegin": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover_Switch",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ListenModifier",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "SpRecoverModifier": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsModifierCaster"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ListenModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

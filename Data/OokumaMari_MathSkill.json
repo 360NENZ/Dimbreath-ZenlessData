@@ -1,0 +1,98 @@
+{
+  "AbilityName": "OokumaMari_MathSkill",
+  "AbilitySpecials": {
+    "AS_Actor_QTEAddedDamageRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "QTEBuffModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "OokumaMari_Attack_Branch_02_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_Branch_02_Explode_AttackProperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "QTEBuffModifierIcon",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "OokumaMari_Attack_Branch_02_Explode_AttackProperty_01",
+              "OokumaMari_CoAttack_Branch_02_Explode_AttackProperty_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "QTEBuffModifier": {
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackQTE",
+                "NormalQTE"
+              ]
+            },
+            {
+              "$type": "ByIsStunDestroyed",
+              "IsStunDestroyed": true,
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_Actor_QTEAddedDamageRatio"
+        }
+      ],
+      "OnStunCreateActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "QTEBuffModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "QTEBuffModifierIcon": {
+      "Buff": {
+        "BuffID": 3000061,
+        "IsOverrideDuration": true
+      },
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh",
+      "OnStunCreateActions": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "QTEBuffModifierIcon",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "Device_Prop_RailWrench",
+      "InteractTag": "Device_Prop_RailWrench",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "OpenModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "OpenStatus",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CloseModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "OpenStatus",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    }
+  ],
+  "AbilityName": "Device_Prop_RailWrench_Interact",
+  "AbilitySpecials": {
+    "OpenStatus": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CloseModifier": {
+      "Duration": 6,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsOpen",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "OpenModifier": {
+      "Duration": 6,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsOpen",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "RailWreanch_Open"
+        }
+      ]
+    }
+  }
+}

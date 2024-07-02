@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Card_Trick_2001804_Purified",
+  "AbilitySpecials": {
+    "DestroyRecoverRate_Ratio": {
+      "Value": -0.15
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_StunDestroyRecoverRate_Ratio": "%DestroyRecoverRate_Ratio"
+    }
+  }
+}

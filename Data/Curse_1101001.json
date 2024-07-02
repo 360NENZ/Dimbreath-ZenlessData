@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Curse_1101001",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 25
+    },
+    "DamageTakeRatio": {
+      "Value": 25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_AddedDamageRatio": "%AddedDamageRatio",
+      "Actor_DamageTakeRatio": "%DamageTakeRatio"
+    }
+  }
+}

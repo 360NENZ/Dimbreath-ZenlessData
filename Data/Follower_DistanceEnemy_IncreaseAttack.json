@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Follower_DistanceEnemy_IncreaseAttack",
+  "AbilitySpecials": {
+    "Dynamic_Actor_AddedAttackRatio": {
+      "Value": 0
+    },
+    "Dynamic_Distance": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDistance",
+            "CompareType": "LessEqual",
+            "Distance": "%Dynamic_Distance",
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%Dynamic_Actor_AddedAttackRatio"
+      }
+    ]
+  }
+}

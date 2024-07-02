@@ -1,0 +1,20 @@
+{
+  "AbilityName": "BUFF_Invincible",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushInvincibleAction",
+        "Tag": "BUFF_Invincible",
+        "Target": "Self"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "PopInvincibleAction",
+        "Tag": "BUFF_Invincible",
+        "Target": "Self"
+      }
+    ]
+  }
+}

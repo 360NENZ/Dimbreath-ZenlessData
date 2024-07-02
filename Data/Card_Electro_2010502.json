@@ -1,0 +1,133 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Electro_2000500",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "NewElectroCountLimit",
+                  "ParamName": "ElectroCountLimit",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Electro_2010502",
+  "AbilitySpecials": {
+    "AS_ElectroAddCount": {
+      "Value": 1
+    },
+    "NewElectroCountLimit": {
+      "Value": 40
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Electro_2000500",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddElectronCountModifier",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Elec"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddElectronCountModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Add",
+                  "Param": "AS_ElectroAddCount",
+                  "ParamName": "AS_ElectroCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Electro_2000500",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_ElectroAddCount",
+                  "ParamName": "AS_AddElectroCount",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "InitAbilitySpecialList": [
+            {
+              "SpecialName": "AS_IsAddBuffIcon",
+              "Value": 1
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetModifierMaxStackingNum",
+          "MaxStackingNum": "%NewElectroCountLimit",
+          "ModifierName": "TarotCard_Electro_2000500_BuffIcon_01",
+          "ModifierTargetType": "GlobalAbility",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetModifierMaxStackingNum",
+          "MaxStackingNum": "%NewElectroCountLimit",
+          "ModifierName": "TarotCard_Electro_2000500_BuffIcon_02",
+          "ModifierTargetType": "GlobalAbility",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_2000500",
+          "Target": "TeamAvatars"
+        }
+      ]
+    }
+  }
+}

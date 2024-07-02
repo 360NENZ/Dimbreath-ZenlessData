@@ -1,0 +1,14 @@
+{
+  "AbilityName": "Follower_CriticalDmg_Increase",
+  "AbilitySpecials": {
+    "Actor_CriticalDamageRatioRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "Properties": {
+      "Actor_CriticalDamageRatioRatio": "%Actor_CriticalDamageRatioRatio"
+    }
+  }
+}

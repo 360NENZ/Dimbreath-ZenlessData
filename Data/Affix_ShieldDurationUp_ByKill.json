@@ -1,0 +1,31 @@
+{
+  "AbilityName": "Affix_ShieldDurationUp_ByKill",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldDurationUp_ByKill",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ShieldDurationUp_ByKill": {
+      "ModifierMixins": [
+        {
+          "$type": "KillTargetMixin",
+          "Actions": [
+            {
+              "$type": "ModifyArcanaCommonPropertyAction",
+              "ArcanaProperty": "ShieldDuration",
+              "Delta": 2,
+              "Target": "Buddy"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

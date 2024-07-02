@@ -1,0 +1,15 @@
+{
+  "AbilityName": "StaminaPunish_MonsterHPUp",
+  "AbilitySpecials": {
+    "AddedEnemyHPRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_MaxHPRatio": "%AddedEnemyHPRatio"
+    }
+  }
+}

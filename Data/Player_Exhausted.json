@@ -1,0 +1,68 @@
+{
+  "AbilityName": "Player_Exhausted",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnExhaustedFinishedByAttackHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnExhaustedFinishedByAttackModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnExhaustedTriggeredHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnExhaustedTriggeredModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OnExhaustedFinishedByAttackModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Exhausted_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Exhausted_CamShake_01"
+        }
+      ]
+    },
+    "OnExhaustedTriggeredModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Exhausted_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Exhausted_CamShake_01"
+        }
+      ]
+    }
+  }
+}

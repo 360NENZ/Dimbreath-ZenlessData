@@ -1,0 +1,51 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "InheritPropertyMap": {
+        "Attack": {
+          "InheritType": "MasterTemplate",
+          "Percentage": 10.0
+        }
+      },
+      "OnSummonTimesUpActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0.5,
+      "SummonDuration": 10,
+      "SummonID": 210001,
+      "SummonPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1.8,
+            "z": 0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "SummonTag": [
+        "Test"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0.5
+    }
+  ],
+  "AbilityName": "MissileWell_Summon_Missile",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Corin_SFX_FadeOut",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SpecialEffectFadeAction",
+      "EffectNames": [
+        "Eff_Corin_Attack_Sawtooth_Loop_01"
+      ],
+      "OverrideFadeOutCurve": "QuintEaseInReverse",
+      "OverrideFadeOutTime": 0.15,
+      "Target": "Self"
+    }
+  ]
+}

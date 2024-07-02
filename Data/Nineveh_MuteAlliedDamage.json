@@ -1,0 +1,85 @@
+{
+  "AbilityName": "Nineveh_MuteAlliedDamage",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LightJaeger_ATK01_Attackproperty",
+              "Monster_LightJaeger_ATK02_Attackproperty",
+              "Monster_LightJaeger_ATK03_Attackproperty",
+              "Monster_LightJaeger_ATK04_Attackproperty",
+              "Monster_LightJaeger_ATK05_Attackproperty",
+              "Monster_RangeSoldier_ATK01_Attackproperty",
+              "Monster_RangeSoldier_ATK02_Attackproperty",
+              "Monster_RangeSoldier_ATK03_Attackproperty",
+              "Monster_RangeSoldier_ATK04_Attackproperty",
+              "Monster_RangeSoldier_ATK05_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_NoHitEffect",
+        "PropertyValue": 1,
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_LightJaeger_ATK01_Attackproperty",
+              "Monster_LightJaeger_ATK02_Attackproperty",
+              "Monster_LightJaeger_ATK03_Attackproperty",
+              "Monster_LightJaeger_ATK04_Attackproperty",
+              "Monster_LightJaeger_ATK05_Attackproperty",
+              "Monster_RangeSoldier_ATK01_Attackproperty",
+              "Monster_RangeSoldier_ATK02_Attackproperty",
+              "Monster_RangeSoldier_ATK03_Attackproperty",
+              "Monster_RangeSoldier_ATK04_Attackproperty",
+              "Monster_RangeSoldier_ATK05_Attackproperty"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_NoDamage",
+        "PropertyValue": 1,
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Nineveh_Ultimate_Attackproperty_01"
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByTeamGoodRoleType",
+                "RoleType": "TeamAvatars",
+                "Target": "Target"
+              }
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_NoHitEffect",
+        "PropertyValue": 1,
+        "Target": "Other"
+      }
+    ]
+  }
+}

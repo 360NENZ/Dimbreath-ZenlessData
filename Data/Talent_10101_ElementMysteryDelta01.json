@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Talent_10101_ElementMysteryDelta01",
+  "AbilitySpecials": {
+    "ElementMysteryDelta": {
+      "Value": 50
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_ElementMysteryDelta": "%ElementMysteryDelta"
+    }
+  }
+}

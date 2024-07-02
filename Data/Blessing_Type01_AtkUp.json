@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Blessing_Type01_AtkUp",
+  "AbilitySpecials": {
+    "AddedPlayerAttackRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedPlayerAttackRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

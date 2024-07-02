@@ -1,0 +1,91 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_1",
+          "FrameCountHigh": 130,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "AttachPointModifer"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_ATK01_AttachPoint",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ProcessAttachPointAction",
+        "AttachPointName": "Nineveh_AttackPoint",
+        "HierarchyType": "World",
+        "PosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": false,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttachPointModifer": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "Nineveh_AttackPoint",
+          "FollowPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "SelfAttackTarget"
+            }
+          },
+          "PosSpeed": 15.0,
+          "PosType": "Fixed",
+          "RotRatio": 8.0,
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

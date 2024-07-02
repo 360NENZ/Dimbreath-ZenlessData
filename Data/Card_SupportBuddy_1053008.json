@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_SupportBuddy_1053008",
+  "AbilitySpecials": {
+    "AS_DamageTakeRatio": {
+      "Value": -0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_DamageTakeRatio": "%AS_DamageTakeRatio"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "Lisa_UniqueSkill_Charge",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "Val": 8,
+              "ValueToLowActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "Quest2Modifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByHasModifier",
+                      "ModifierNameList": [
+                        "Quest1Modifier"
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lisa_TutorialAbility",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnPatternHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Quest1Modifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "UniqueSkill_Charge"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Quest1Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Lisa_1"
+        }
+      ]
+    },
+    "Quest2Modifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "AvatarTutorial_Lisa_2"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Quest1Modifier"
+        }
+      ]
+    }
+  }
+}

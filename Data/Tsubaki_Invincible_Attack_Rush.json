@@ -1,0 +1,141 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "InvincibleModifier_Mixin",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Counter_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "InvincibleModifier_Mixin",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_BeHitAid_02",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Counter_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvincibleModifier_Controller"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvincibleModifier_Controller"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush",
+          "FrameCountHigh": 16,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "InvincibleModifier_Controller"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Tsubaki_Invincible_Attack_Rush",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "InvincibleModifier_Controller": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "InvincibleModifier_Mixin",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "InvincibleModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvincibleModifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "Tsubaki_Invincible_Attack_Rush",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "Tsubaki_Invincible_Attack_Rush",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvincibleModifier_Mixin": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Attack_Rush",
+              "FrameCountHigh": 16,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": false,
+              "MaxFrameCountLow": false,
+              "ModifierNameList": [
+                "InvincibleModifier_Effect"
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Replace"
+    }
+  }
+}

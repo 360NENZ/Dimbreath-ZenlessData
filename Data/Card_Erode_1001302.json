@@ -1,0 +1,22 @@
+{
+  "AbilityName": "Card_Erode_1001302",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ],
+    "Properties": {
+      "Actor_IsBanCritical": 1
+    }
+  }
+}

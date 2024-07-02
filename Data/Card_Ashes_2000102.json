@@ -1,0 +1,33 @@
+{
+  "AbilityName": "Card_Ashes_2000102",
+  "AbilitySpecials": {
+    "AS_BuffDamgeRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FireResistModifier",
+        "Predicates": [
+          {
+            "$type": "ByAvatarElementType",
+            "ElementType": 201
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FireResistModifier": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BuffDamageRatio": "%AS_BuffDamgeRatio"
+      }
+    }
+  }
+}

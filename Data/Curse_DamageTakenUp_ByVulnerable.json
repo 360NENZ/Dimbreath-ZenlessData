@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Curse_DamageTakenUp_ByVulnerable",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": 0.5
+    },
+    "TimeOfDuration": {
+      "Value": 6
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PlayerDamageTakenUp",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Electric"
+            ],
+            "Target": "Target"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "PlayerDamageTakenUp": {
+      "Duration": "%TimeOfDuration",
+      "ModifierStacking": "Refresh",
+      "Properties": {
+        "Actor_DamageTakeRatio": "%DamageTakeRatio"
+      }
+    }
+  }
+}

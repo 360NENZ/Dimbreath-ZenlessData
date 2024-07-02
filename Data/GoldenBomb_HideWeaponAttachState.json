@@ -1,0 +1,72 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_Rocket_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideRenderModifier_Rocket"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_Rocket_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideRenderModifier_Rocket"
+          ]
+        },
+        {
+          "AnimatorStateName": "Skill_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HideRenderModifier_Rocket"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GoldenBomb_HideWeaponAttachState",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "HideRenderModifier_Rocket": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Follower_Default_Weapon_02"
+          ],
+          "Tag": "Weapon_Rocket",
+          "Visible": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopRenderVisibleAction",
+          "Path": [
+            "Follower_Default_Weapon_02"
+          ],
+          "Tag": "Weapon_Rocket"
+        }
+      ]
+    }
+  }
+}

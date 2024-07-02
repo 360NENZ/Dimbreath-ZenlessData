@@ -1,0 +1,15 @@
+{
+  "AbilityName": "TalentTreeAbility_HPBottleRecover",
+  "AbilitySpecials": {
+    "AddtionalHPRecoverRate": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_ItemHPBottleHealPercentDelta": "%AddtionalHPRecoverRate"
+    }
+  }
+}

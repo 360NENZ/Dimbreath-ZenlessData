@@ -1,0 +1,239 @@
+{
+  "AbilityName": "Lucy_MathSkill",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "FailureActions": [
+          {
+            "$type": "ApplyAbilityAction",
+            "AbilityName": "Lucy_Summon_00",
+            "IsAutoTrigger": false,
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_00_Pair"
+                        ],
+                        "Target": "Self"
+                      },
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_00"
+                        ],
+                        "Target": "Self"
+                      }
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ApplyAbilityAction",
+            "AbilityName": "Lucy_Summon_01",
+            "IsAutoTrigger": false,
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_01_Pair"
+                        ],
+                        "Target": "Self"
+                      },
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_01"
+                        ],
+                        "Target": "Self"
+                      }
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ApplyAbilityAction",
+            "AbilityName": "Lucy_Summon_02",
+            "IsAutoTrigger": false,
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_02_Pair"
+                        ],
+                        "Target": "Self"
+                      },
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_02"
+                        ],
+                        "Target": "Self"
+                      }
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "ApplyAbilityAction",
+            "AbilityName": "Lucy_Summon_00_Pair",
+            "IsAutoTrigger": false,
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_00_Pair"
+                        ],
+                        "Target": "Self"
+                      },
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_00"
+                        ],
+                        "Target": "Self"
+                      }
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ApplyAbilityAction",
+            "AbilityName": "Lucy_Summon_01_Pair",
+            "IsAutoTrigger": false,
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_01_Pair"
+                        ],
+                        "Target": "Self"
+                      },
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_01"
+                        ],
+                        "Target": "Self"
+                      }
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          },
+          {
+            "$type": "ApplyAbilityAction",
+            "AbilityName": "Lucy_Summon_02_Pair",
+            "IsAutoTrigger": false,
+            "Predicates": [
+              {
+                "$type": "ByNot",
+                "Predicates": [
+                  {
+                    "$type": "ByOr",
+                    "Predicates": [
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_02_Pair"
+                        ],
+                        "Target": "Self"
+                      },
+                      {
+                        "$type": "ByHasAbility",
+                        "AbilityNameList": [
+                          "Lucy_Summon_02"
+                        ],
+                        "Target": "Self"
+                      }
+                    ],
+                    "Target": "Self"
+                  }
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Lucy_Talent_01",
+        "Predicates": [
+          {
+            "$type": "ByAvatarTalentIndex",
+            "TalentIndex": 1,
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Lucy_UniqueSkill"
+      }
+    ]
+  }
+}

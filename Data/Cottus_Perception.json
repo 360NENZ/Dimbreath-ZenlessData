@@ -1,0 +1,207 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "AttackPerceptionModifier"
+          ],
+          "ZoneTag": "AllowAttackPerception"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_Perception",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DelayTriggerModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttackPerceptionModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_SelfAttack",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Cottus_ListenSkill": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_NormalAttack",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Normal"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_ExSP",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_Counter",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_Counter",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "BeHitAid"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_Parry",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ParryAid"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_Parry",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "EvadeAid"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Perception_Parry",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "AssaultAid"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "DelayTriggerModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Cottus_ListenSkill",
+          "Target": "EnemyAllied"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_AllowAttackPerception",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DisableAssultHintModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Enable"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "TagList": [
+                    "AssaultAid_Disable_Hint"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "TagList": [
+                    "AssaultAid_Disable_Hint"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "DisableAssultHintModifier",
+      "Target": "EnemyAllied"
+    }
+  ]
+}

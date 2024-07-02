@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Suit_Ability_50432200",
+  "AbilitySpecials": {
+    "AS_CriticalDelta": {
+      "Value": 0.3
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalDeltaModifier",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Burn",
+              "Ignite"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalDeltaModifier": {
+      "Duration": "%AS_Duration",
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_CriticalDelta": "%AS_CriticalDelta"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "AbilityName": "Card_DailyUse_1000917",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.05
+    },
+    "HpReserve": {
+      "Value": 0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpRecoverModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": false,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "HpRecoverModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchOutFinish": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HpRecoverModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "HpRecoverModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothRecoverHPMixin",
+          "IgnoreRatio": false,
+          "PropertyItem": {
+            "Amount": 0,
+            "Percentage": "%HpPercentage",
+            "Predicates": [
+              {
+                "$type": "ByIsLocalAvatar",
+                "IsLocalAvatar": false,
+                "Target": "Self"
+              },
+              {
+                "$type": "ByPlayerPropertyValue",
+                "CompareType": "Less",
+                "Denominator": "MaxHP",
+                "IsUsePercent": true,
+                "Numerator": "CurHP",
+                "Target": "Self",
+                "Val1": "%HpReserve"
+              }
+            ]
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

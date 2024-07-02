@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Sports_2000803_Up",
+  "AbilitySpecials": {},
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Sports_1000808",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Sports_2000800",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ],
+    "OnDodgeSuccess": [
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Sports_2000800",
+        "Target": "Self"
+      },
+      {
+        "$type": "TriggerAbilityAction",
+        "AbilityName": "Card_Sports_2000800",
+        "Target": "Self"
+      }
+    ]
+  }
+}

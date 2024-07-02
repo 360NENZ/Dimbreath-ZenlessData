@@ -1,0 +1,120 @@
+{
+  "AbilityName": "Nineveh_KillAllMyWingman",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "KillVineModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Inner_01",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Inner_02",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Inner_03",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Outer_01",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Outer_02",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Outer_03",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_NinevehVine_Outer_04",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        }
+      ]
+    },
+    "KillWingManModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_IsSummoningBees",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_Bee_01",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "CustomKey": "Monster_Nineveh_Bee_02",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_Bee01_Exist",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_Bee02_Exist",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "KillWingManModifier",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "KillVineModifier",
+      "Target": "Self"
+    }
+  ]
+}

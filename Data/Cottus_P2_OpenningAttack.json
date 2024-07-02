@@ -1,0 +1,182 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "OpenningAttackModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P2_Born",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 170,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "OpenningAttackModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P2_Born_02",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 30,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "OpenningAttackModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "P2_Born_03",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 170,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_P2_OpenningAttack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "OpenningAttackModifier": {
+      "Duration": 0.03,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 8,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "DistancePredicate"
+            },
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "AnglePredicate"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 9,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "DistancePredicate"
+                },
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "AnglePredicate"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 13,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "AnglePredicate"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 8,
+          "ParamName": "Int_SavedCombo",
+          "Predicates": [
+            {
+              "$type": "ByApplyPredicate",
+              "PredicateName": "DistancePredicate"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 9,
+          "ParamName": "Int_SavedCombo",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "DistancePredicate"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "AnglePredicate": {
+      "Predicates": [
+        {
+          "$type": "ByAngleRange",
+          "AngleMax": 90,
+          "AngleMin": -90,
+          "CompareTarget": "SelfAttackTarget",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DistancePredicate": {
+      "Predicates": [
+        {
+          "$type": "ByDistance",
+          "CompareTarget": "SelfAttackTarget",
+          "CompareType": "Less",
+          "Distance": 8,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

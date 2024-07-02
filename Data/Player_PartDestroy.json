@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Player_PartDestroy",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnPartDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnPartDestroyModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OnPartDestroyModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Avatar_Common_PartDestroy_TimeSlow_01",
+          "IsGlobal": true
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_PartDestroy_CamShake_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Avatar_Common_PartDestroy_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_PartDestroy_CamStretch_01"
+        }
+      ]
+    }
+  }
+}

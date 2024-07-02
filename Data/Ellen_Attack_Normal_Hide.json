@@ -1,0 +1,186 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_04",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 20,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DitherFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 4,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DitherFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 4,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DitherFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponDitherFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponDitherFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 27,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponDitherFadeModifier"
+          ],
+          "Target": "Self"
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "WeaponDitherFadeModifier"
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_Attack_Normal_Hide",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DitherFadeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Ellen_Attack_Normal_03_Dither_Fade",
+          "Tag": "Avatar_Ellen_Attack_Normal_03_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Avatar_Ellen_Attack_Normal_03_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "WeaponDitherFadeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Attack_Normal_03",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Attack_Normal_Enhance_03",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Attack_Normal_03_Back",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false
+                    },
+                    {
+                      "$type": "ByAnimatorStateNormalizedTime",
+                      "AnimatorStateName": "Attack_Normal_Enhance_03_Back",
+                      "FrameCountHigh": 0,
+                      "FrameCountLow": 0,
+                      "MaxFrameCountHigh": true,
+                      "MaxFrameCountLow": false
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Ellen_Weapon"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Ellen_Weapon_1"
+            }
+          ],
+          "Tag": "Avatar_Female_Size02_Ellen_MA_Attack_Common_Mat01_Dither_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size02_Ellen_MA_Attack_Common_Mat01_Dither_01"
+        }
+      ]
+    }
+  }
+}

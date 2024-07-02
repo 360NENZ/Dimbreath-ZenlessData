@@ -1,0 +1,85 @@
+{
+  "AbilityName": "Weapon_Ability_14001",
+  "AbilitySpecials": {
+    "AS_BaseAttackRatio": {
+      "Value": 0.16
+    },
+    "AS_IntervalCD": {
+      "Value": 5.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BaseAttackRatioModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnAttackLanded": [
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "#Weapon_CommonDamage_AttackProperty_14001",
+        "AttachPoint": "MiddlePoint",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "IntervalCDModifier"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IntervalCDModifier",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "IntervalCDModifier"
+                ],
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BaseAttackRatioModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BaseAttackRatio": "%AS_BaseAttackRatio"
+      }
+    },
+    "IntervalCDModifier": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique"
+    }
+  }
+}

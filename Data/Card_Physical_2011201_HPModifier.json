@@ -1,0 +1,199 @@
+{
+  "AbilityName": "Card_Physical_2011201_HPModifier",
+  "AbilitySpecials": {
+    "HpReduceAmount": {
+      "Value": 0
+    },
+    "HpReduceLimitValue": {
+      "Value": 0
+    },
+    "HpReduceRatioBoss": {
+      "Value": 0.03
+    },
+    "HpReduceRatioElite": {
+      "Value": 0.15
+    },
+    "HpReduceRatioNormal": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 999,
+        "ParamName": "HpReduceLimitValue",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "NormalHpReduce",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Normal",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "EliteHpReduce",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Elite",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BossHpReduce",
+        "Predicates": [
+          {
+            "$type": "ByMonsterStrengthType",
+            "CompareType": "Equal",
+            "StrengthType": "Boss",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BossHpReduce": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(HpReduceRatioBoss)*property(MaxHP)",
+          "ParamName": "HpReduceAmount",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "HpReduceLimitValue",
+          "ParamName": "HpReduceAmount",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": "HpReduceLimitValue",
+              "ParamName": "HpReduceAmount",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ReplaceDamageAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "#Card_Physical_2011201_AtkEvent"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "TargetDamage": "%HpReduceAmount"
+        }
+      ]
+    },
+    "EliteHpReduce": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(HpReduceRatioElite)*property(MaxHP)",
+          "ParamName": "HpReduceAmount",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "HpReduceLimitValue",
+          "ParamName": "HpReduceAmount",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": "HpReduceLimitValue",
+              "ParamName": "HpReduceAmount",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ReplaceDamageAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "#Card_Physical_2011201_AtkEvent"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "TargetDamage": "%HpReduceAmount"
+        }
+      ]
+    },
+    "NormalHpReduce": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(HpReduceRatioNormal)*property(MaxHP)",
+          "ParamName": "HpReduceAmount",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "HpReduceLimitValue",
+          "ParamName": "HpReduceAmount",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": "HpReduceLimitValue",
+              "ParamName": "HpReduceAmount",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ReplaceDamageAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "#Card_Physical_2011201_AtkEvent"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "TargetDamage": "%HpReduceAmount"
+        }
+      ]
+    }
+  }
+}

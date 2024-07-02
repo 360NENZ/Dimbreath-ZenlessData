@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_SupportBuddy_1053006",
+  "AbilitySpecials": {
+    "AS_CritDMGDelta": {
+      "Value": 0.2
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_CriticalDamageRatioDelta": "%AS_CritDMGDelta"
+    }
+  }
+}

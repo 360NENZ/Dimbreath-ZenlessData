@@ -1,0 +1,43 @@
+{
+  "AbilityName": "Lycaon_Talent_02",
+  "AbilitySpecials": {
+    "AS_RecoverSpCD_Talent_02": {
+      "Value": 1
+    },
+    "AS_RecoverSp_Talent_02": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LycaonTalent02Modifier_SpRecover",
+        "Target": "Self"
+      }
+    ],
+    "OnStunResetOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LycaonTalent02Modifier_SpRecover",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LycaonTalent02Modifier_SpRecover": {
+      "Duration": "%AS_RecoverSpCD_Talent_02",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_RecoverSp_Talent_02",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

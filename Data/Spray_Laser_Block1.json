@@ -1,0 +1,92 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 999999.0,
+      "AudioEffect": "",
+      "BlockColliderRadius": 0.1,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Device_Spray_Scan_Flare"
+      },
+      "BlockInterval": 0.2,
+      "BlockLayers": [
+        "ScenePropCollider",
+        "HitCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.45
+      },
+      "EffectName": "Eff_Device_Spray_Scan_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_06_Brust_End"
+      },
+      "FirstHitDelayTime": 0.1,
+      "HitAnimEventID": "Device_Spray_ATK01",
+      "HitColliderRadius": 0.1,
+      "HitEffect": {
+        "EffectPattern": "Eff_Device_Prop_DefensiveTower_03_Attack_02_06_Brust_End"
+      },
+      "HitInterval": 0.01,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Root",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "None"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": -90.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "Block1Point",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 50,
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      }
+    }
+  ],
+  "AbilityName": "Spray_Laser_Block1",
+  "AbilityStacking": "Unique"
+}

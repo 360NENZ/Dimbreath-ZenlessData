@@ -1,0 +1,86 @@
+{
+  "AbilityName": "Prologue_ACT1_ExSp",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ACT1SPGetRatio",
+        "Target": "LocalAvatar"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ACT1SPRecoverDelta",
+        "Target": "LocalAvatar"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ACT1SPGetRatio": {
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Normal"
+                  ],
+                  "Target": "LocalAvatar"
+                },
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AttackNormal",
+                    "Rush"
+                  ],
+                  "Target": "LocalAvatar"
+                }
+              ],
+              "Target": "LocalAvatar"
+            }
+          ],
+          "PropertyKey": "Actor_SPGetRatio",
+          "PropertyValue": 0.5,
+          "Target": "LocalAvatar"
+        }
+      ]
+    },
+    "ACT1SPRecoverDelta": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 3,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RecoverTimeModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "RecoverTimeModifier": {
+      "Duration": 0.9,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ACT1SPRecoverDelta",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

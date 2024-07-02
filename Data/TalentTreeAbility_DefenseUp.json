@@ -1,0 +1,15 @@
+{
+  "AbilityName": "TalentTreeAbility_DefenseUp",
+  "AbilitySpecials": {
+    "AddedPlayerDefenseRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_DefenceRatio": "%AddedPlayerDefenseRatio"
+    }
+  }
+}

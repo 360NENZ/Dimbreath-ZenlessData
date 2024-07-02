@@ -1,0 +1,38 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "EousInvincibleModifier"
+          ],
+          "ZoneTag": "EousGuide"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Eous001_GuideInvincible",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EousInvincibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushInvincibleAction",
+          "Tag": "EousGuide_Invincible",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopInvincibleAction",
+          "Tag": "EousGuide_Invincible",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "AbilityName": "Card_DailyUse_1000919",
+  "AbilitySpecials": {
+    "DamageTakeRatio": {
+      "Value": -0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHitPre": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 1
+          }
+        ],
+        "PropertyKey": "Actor_DamageTakeRatio",
+        "PropertyValue": "%DamageTakeRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 1010134091,
+      "SummonPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "SavePoint",
+          "PointName": "InnerWallPoint"
+        }
+      },
+      "SummonPositionCorrection": false,
+      "SummonTag": [
+        "InnerWall"
+      ],
+      "SummonTeam": "TeamNeutral",
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Nineveh_Summon_Wall_Inner",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,18 @@
+{
+  "AbilityName": "TalentTreeAbility_CriticalRatioUp",
+  "AbilitySpecials": {
+    "AddedCriticalRatio": {
+      "Value": 0.05
+    },
+    "AddedPlayerAttackRatio": {
+      "Value": 0.075
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_CriticalRatio": "%AddedCriticalRatio"
+    }
+  }
+}

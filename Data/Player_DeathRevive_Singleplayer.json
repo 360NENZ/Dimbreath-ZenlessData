@@ -1,0 +1,209 @@
+{
+  "AbilityName": "Player_DeathRevive_Singleplayer",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKilled": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AttachModifier",
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 0
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 0
+          }
+        ],
+        "Tag": "Avatar_Common_MA_Death_Dither",
+        "Target": "Self",
+        "key": "Avatar_Common_MA_Death_Dither"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByAvatarCount",
+            "CompareType": "Equal",
+            "CompareValue": 0
+          }
+        ],
+        "Tag": "Avatar_Common_MA_Death_ScreenImage",
+        "Target": "Self",
+        "key": "Avatar_Common_MA_Death_ScreenImage"
+      }
+    ],
+    "OnRemoved": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "AttachModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "CustomKey": "Avatar_Common_MA_Death_Dither",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "CustomKey": "Avatar_Common_MA_Death_ScreenImage",
+        "Target": "Self"
+      }
+    ],
+    "OnRevived": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "AttachModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DelayModifier",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "CustomKey": "Avatar_Common_MA_Death_Dither",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveMaterialPropertyAction",
+        "CustomKey": "Avatar_Common_MA_Death_ScreenImage",
+        "Target": "Self"
+      },
+      {
+        "$type": "FireEffect",
+        "EffectPattern": "Eff_Common_Revive_Enter_S",
+        "FireEffectPosRot": {
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsUseRotationXZ": true,
+            "IsUseRotationY": true,
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true
+          }
+        ],
+        "Tag": "Avatar_Common_MA_Revive_Dither",
+        "Target": "Self",
+        "key": "Avatar_Common_MA_Revive_Dither"
+      },
+      {
+        "$type": "ModifyMaterialPropertyAction",
+        "ApplyAllRenderers": true,
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true
+          }
+        ],
+        "Tag": "Avatar_Common_MA_Revive_ScreenImage",
+        "Target": "Self",
+        "key": "Avatar_Common_MA_Revive_ScreenImage"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AttachModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Common_Death_Enter_S",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DelayModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 1,
+          "TimeUpActions": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Avatar_Common_MA_Revive_ScreenImage_01",
+              "Target": "Self",
+              "key": "Avatar_Common_MA_Revive_ScreenImage_01"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Replace"
+    }
+  }
+}

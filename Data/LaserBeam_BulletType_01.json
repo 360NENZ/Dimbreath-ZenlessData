@@ -1,0 +1,64 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 120.0,
+      "AudioEffect": "",
+      "ColliderLayers": [
+        "StageCollider",
+        "HitCollider"
+      ],
+      "ColliderRadius": 0.0,
+      "EffectName": "Eff_SkillEffect_LightningChain_TransmitEffect_Basic_Test",
+      "EndEffect": {
+        "EffectPattern": "Eff_Monster_Patroller_Debuff_Stun_Loop_Spark"
+      },
+      "FirstHitDelayTime": 0.0,
+      "HitAnimEventID": "#SkillEffect_Test_LaserBeam",
+      "HitEffect": {
+        "EffectPattern": "Eff_Nostradamus_Attack_Branch_01_Explode"
+      },
+      "HitInterval": 0.2,
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 2.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "MiddlePoint",
+          "IsUseAttachPointPos": false,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 40,
+      "OnLaserStartAction": []
+    }
+  ],
+  "AbilityName": "LaserBeam_BulletType_01",
+  "AbilityStacking": "Unique"
+}

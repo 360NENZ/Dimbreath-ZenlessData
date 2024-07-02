@@ -1,0 +1,57 @@
+{
+  "AbilityName": "Durahan_ChargeAttack_02",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 0,
+      "ParamName": "Int_Skill_01_AttackIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAngleRange",
+              "AngleMax": 90,
+              "AngleMin": -90,
+              "CompareTarget": "SelfAttackTarget",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 1,
+      "ParamName": "Int_Skill_01_AttackIndex",
+      "ParamType": 3,
+      "Predicates": [
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAngleRange",
+              "AngleMax": -90,
+              "AngleMin": -180,
+              "CompareTarget": "SelfAttackTarget",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAngleRange",
+              "AngleMax": 180,
+              "AngleMin": 90,
+              "CompareTarget": "SelfAttackTarget",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

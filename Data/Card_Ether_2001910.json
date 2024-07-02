@@ -1,0 +1,38 @@
+{
+  "AbilityName": "Card_Ether_2001910",
+  "AbilitySpecials": {
+    "AS_ElementMysteryDelta": {
+      "Value": 10.0
+    },
+    "Duration": {
+      "Value": 30
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PhyBreakStunUpModifier_Card_2001910",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "QTE",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "PhyBreakStunUpModifier_Card_2001910": {
+      "Duration": "%Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_ElementMysteryDelta": "%AS_ElementMysteryDelta"
+      }
+    }
+  }
+}

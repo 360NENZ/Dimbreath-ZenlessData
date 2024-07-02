@@ -1,0 +1,72 @@
+{
+  "AbilityName": "Affix_ShieldStart_ReduceCD",
+  "AbilitySpecials": {
+    "MultipleStartTimeAdded": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBattleEnter": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleStartTimeAdded",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldStart_ReduceCD",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnBattleExit": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "MultipleStartTimeAdded",
+        "ParamType": "Float"
+      }
+    ],
+    "ShieldStartActions": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": -0.1,
+        "ParamName": "MultipleStartTimeAdded",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": -0.9,
+            "ParamName": "MultipleStartTimeAdded",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "ShieldStart_ReduceCD",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ShieldStart_ReduceCD",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ShieldStart_ReduceCD": {
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Shield_SkillCD_Delta": "%MultipleStartTimeAdded"
+      }
+    }
+  }
+}

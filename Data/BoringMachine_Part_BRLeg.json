@@ -1,0 +1,376 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_BRLeg"
+      ],
+      "CanHitAfterDestroyed": true,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxPartHP": "%MaxPartHP",
+      "OnPartDestroy": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 4,
+          "ParamName": "Int_HitPartIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_OnPartDestroyed",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_PartDestroyed_BRLeg",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Base_02_02_P"
+          ],
+          "Tag": "Base_02_02_P",
+          "Visible": false
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoringMachine_Part_BRLeg_DestroyedEffect",
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Monster_BoringMachine_PartDestroyed_Leg_Attackproperty_01",
+          "AttachPoint": "Skn_BR_Leg_04",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_PartDestroy_StunPercentage)*property(MaxStun)",
+          "ParamName": "StunRecoverAmount",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "RecoverStunAction",
+          "Amount": "%StunRecoverAmount",
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "BoringMachine_FLLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "BoringMachine_FLLeg",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "BoringMachine_FRLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "BoringMachine_FRLeg",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyPartParamAction",
+          "Amount": "%RecoverPartHP",
+          "ModifyFunction": "Add",
+          "ParamType": "PartHP",
+          "PartName": "BoringMachine_BLLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "BoringMachine_BLLeg",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnPartHit": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 4,
+          "ParamName": "Int_HitPartIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PartHit",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%InitPartHP",
+      "PartName": "BoringMachine_BRLeg"
+    }
+  ],
+  "AbilityName": "BoringMachine_Part_BRLeg",
+  "AbilitySpecials": {
+    "AS_InitPartHP_Ratio": {
+      "Value": 0.1
+    },
+    "AS_MaxPartHP_Ratio": {
+      "Value": 0.1
+    },
+    "AS_PartDestroy_StunPercentage": {
+      "Value": 0.5
+    },
+    "AS_RecoverPartHP_Ratio": {
+      "Value": 0.1
+    },
+    "HpReduceAmount": {
+      "Value": 1
+    },
+    "InitPartHP": {
+      "Value": 1
+    },
+    "MaxPartHP": {
+      "Value": 1
+    },
+    "RecoverPartHP": {
+      "Value": 1
+    },
+    "StunRecoverAmount": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BoringMachine_Part_BRLeg_DestroyedEffect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Monster_BoringMachine_LegBreak_Dust_01",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_BR_Leg_04",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Red"
+                      ],
+                      "Target": "Self"
+                    },
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Purple"
+                      ],
+                      "Target": "Self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Base_02_02"
+            }
+          ],
+          "Tag": "Monster_BoringMachine_MA_BRLeg_Break_MainMaps_01",
+          "Target": "Self",
+          "key": "Monster_BoringMachine_MA_BRLeg_Break_MainMaps_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Red"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Base_02_02"
+            }
+          ],
+          "Tag": "Monster_BoringMachineRed_MA_BRLeg_Break_MainMaps_01",
+          "Target": "Self",
+          "key": "Monster_BoringMachineRed_MA_BRLeg_Break_MainMaps_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Purple"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Base_02_02"
+            }
+          ],
+          "Tag": "Monster_MaterialHandlerPurple_MA_Leg_Break_01_MainMaps_02",
+          "Target": "Self",
+          "key": "Monster_MaterialHandlerPurple_MA_Leg_Break_01_MainMaps_02"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_BR_Leg_04",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_BoringMachine_LegBreak_Lightning_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Skn_BR_Leg_03",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Monster_BoringMachine_LegBreak_Lightning_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAdded": [
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_MaxPartHP_Ratio)",
+      "ParamName": "MaxPartHP",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_InitPartHP_Ratio)",
+      "ParamName": "InitPartHP",
+      "ValueType": "Float"
+    },
+    {
+      "$type": "SetAbilitySpecialByExpression",
+      "Expression": "property(MaxHP)*specials(AS_RecoverPartHP_Ratio)",
+      "ParamName": "RecoverPartHP",
+      "ValueType": "Float"
+    }
+  ]
+}

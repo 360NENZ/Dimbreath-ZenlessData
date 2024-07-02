@@ -1,0 +1,62 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Born",
+          "FrameCountHigh": 240,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SetQTECheckModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_Trap_AutoDie",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "QTECheckModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "SetQTECheckModifier": {
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "AbilityTarget_Bangboo_Sharkboo",
+          "ModifierName": "QTECheckModifier",
+          "Target": "Custom"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "CustomKey": "AbilityTarget_Bangboo_Sharkboo",
+          "ModifierName": "QTECheckModifier",
+          "Target": "Custom"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Card_DailyUse_1000906",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.12
+    },
+    "DurationTime": {
+      "Value": 8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnKillOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IncreaseDamageModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IncreaseDamageModifier": {
+      "Duration": "%DurationTime",
+      "ModifierStacking": "Refresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "AbilityName": "Curse_1105002",
+  "AbilitySpecials": {
+    "Added_Ratio": {
+      "Value": 0
+    },
+    "CompareParam": {
+      "Value": 0
+    },
+    "Param": {
+      "Value": 11
+    },
+    "Ratio": {
+      "Value": 0.05
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "itemtype(31)",
+        "ParamName": "CompareParam",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "DoRefresh": true,
+        "Expression": "itemtype(31)*specials(Ratio)",
+        "ParamName": "Added_Ratio",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": "%Param",
+            "ParamName": "CompareParam",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ],
+    "Properties": {
+      "Actor_AddedDamageRatio": "%Added_Ratio"
+    }
+  }
+}

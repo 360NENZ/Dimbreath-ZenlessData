@@ -1,0 +1,48 @@
+{
+  "AbilityName": "Abyss_PeriodicLayerBuff_02",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio": {
+      "Value": 0.5
+    },
+    "AS_AddedDamageRatio": {
+      "Value": -0.2
+    },
+    "DestroyRecoverRate_Ratio": {
+      "Value": -0.16
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": false,
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio",
+        "Target": "Target"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": false,
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio",
+        "Target": "Target"
+      }
+    ],
+    "Properties": {
+      "Actor_StunDestroyRecoverRate_Ratio": "%DestroyRecoverRate_Ratio"
+    }
+  }
+}

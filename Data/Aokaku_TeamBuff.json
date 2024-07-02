@@ -1,0 +1,136 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "CoAttackStartAction",
+              "SwitchInIndex": 54,
+              "TargetAvatarID": 1011,
+              "TargetPosRot": {
+                "CoordsOption": "Self",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": -150.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "PositionOffset": {
+                    "x": -2.6,
+                    "y": 0.0,
+                    "z": -4.503333
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Flag",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 51,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "CoAttackStartAction",
+              "SwitchInIndex": 54,
+              "TargetAvatarID": 1081,
+              "TargetPosRot": {
+                "CoordsOption": "Self",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 150.0,
+                    "z": 0.0
+                  },
+                  "IsClampOffsetDistance": false,
+                  "PositionOffset": {
+                    "x": 2.6,
+                    "y": 0.0,
+                    "z": -4.503333
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "OffsetReferTarget": "Self"
+                }
+              }
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Flag",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 51,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Flag",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CoAttackModifer_TeamBuff"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_TeamBuff",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSwitchTriggered": [
+      {
+        "$type": "CoAttackFinishAction",
+        "SwitchOutIndex": 2,
+        "TargetAvatarID": 1011
+      },
+      {
+        "$type": "CoAttackFinishAction",
+        "SwitchOutIndex": 2,
+        "TargetAvatarID": 1081
+      }
+    ]
+  },
+  "Modifiers": {
+    "CoAttackModifer_TeamBuff": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CoAttackFinishAction",
+          "SwitchOutIndex": 2,
+          "TargetAvatarID": 1011
+        },
+        {
+          "$type": "CoAttackFinishAction",
+          "SwitchOutIndex": 2,
+          "TargetAvatarID": 1081
+        }
+      ]
+    }
+  }
+}

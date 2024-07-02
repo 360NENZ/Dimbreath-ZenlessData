@@ -1,0 +1,33 @@
+{
+  "AbilityName": "Card_Ether_2001904",
+  "AbilitySpecials": {
+    "Duration_Delta": {
+      "Value": 4
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "BuffRevises": [
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Erosion",
+        "Params": [
+          {
+            "Delta": "%Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      },
+      {
+        "FilterType": "ByBuffGroup",
+        "GroupName": "Chaos",
+        "Params": [
+          {
+            "Delta": "%Duration_Delta",
+            "Name": "Duration"
+          }
+        ]
+      }
+    ]
+  }
+}

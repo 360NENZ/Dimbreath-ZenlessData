@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Ability_Card_Blade_5",
+  "AbilitySpecials": {
+    "BForceDamageRatio": {
+      "Op": "Add",
+      "OpValue": 0.01,
+      "Value": 0.01
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "OnGetItem": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BForceDamageModfier",
+        "Predicates": [
+          {
+            "$type": "ByGetItem",
+            "GoodID": 7,
+            "Target": "Caster"
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "BForceDamageModfier": {
+      "ModifierStacking": "Multiple",
+      "Properties": {
+        "BForceDamageRatioDelta": "%BForceDamageRatio"
+      }
+    }
+  }
+}

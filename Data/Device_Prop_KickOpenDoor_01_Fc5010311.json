@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Device_Prop_KickOpenDoor_01_Fc5010311",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CloseNavmeshColliderModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CloseNavmeshColliderModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "NavmeshObstacle1"
+          ],
+          "IsActive": false,
+          "Tag": "Device_Prop_KickOpenDoor"
+        }
+      ]
+    }
+  }
+}

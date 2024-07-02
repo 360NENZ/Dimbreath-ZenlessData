@@ -1,0 +1,104 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchPhase_Breath_02",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraShakeModifier01"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchPhase_Breath_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 110,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraShakeModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchPhase",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraShakeModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "P2_Born_03",
+          "FrameCountHigh": 85,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraShakeModifier02"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_SwitchPhase_CameraShake",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CameraShakeModifier01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_Cottus_SwitchPhase_CamShake_E_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptCameraShakeAction",
+          "IsGlobal": false,
+          "ShakeConfigKey": "Monster_Cottus_SwitchPhase_CamShake_E_01",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CameraShakeModifier02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_Cottus_SwitchPhase_CamShake_E_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptCameraShakeAction",
+          "IsGlobal": false,
+          "ShakeConfigKey": "Monster_Cottus_SwitchPhase_CamShake_E_02",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

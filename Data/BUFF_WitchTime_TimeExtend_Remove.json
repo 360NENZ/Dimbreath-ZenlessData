@@ -1,0 +1,18 @@
+{
+  "AbilityName": "BUFF_WitchTime_TimeExtend_Remove",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_TimeExtend",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "BUFF_WitchTime_TimeExtend_Remove",
+        "Target": "Self"
+      }
+    ]
+  }
+}

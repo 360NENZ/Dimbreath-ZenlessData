@@ -1,0 +1,34 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Card_Sports_1000808",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Sports_1000808",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AddedDamageRatio",
+                  "ParamName": "AddedDamageRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_Sports_1000806",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique"
+}

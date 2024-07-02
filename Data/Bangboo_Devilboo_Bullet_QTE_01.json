@@ -1,0 +1,127 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.2
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_AirAttack_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": -0.45
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Bangboo_Devilboo_AttackProperty_QTE_01",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_AirAttack_GroundExplode"
+      },
+      "HitStageScenePropExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_AirAttack_Explode"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_AirAttack_Explode"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_AirAttack_Explode"
+      },
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 5
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "ReachTargetStop": true,
+        "RotateSpeed": 360,
+        "RotateType": "Fixed",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_AirAttack_Explode"
+      }
+    }
+  ],
+  "AbilityName": "Bangboo_Devilboo_Bullet_QTE_01",
+  "AbilityStacking": "Unique"
+}

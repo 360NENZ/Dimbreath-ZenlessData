@@ -1,0 +1,64 @@
+{
+  "AbilityName": "OokumaMari_Burn_MathSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_1": {
+      "Value": 0.225
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BurnDamageModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 2,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBuffDamageBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Burn",
+                "Ignite"
+              ]
+            },
+            {
+              "$type": "ByModifierStackCount",
+              "CompareType": "GreaterEqual",
+              "CountModifierType": "CurTargetAbility",
+              "ModifierName": "BurnDamageModifier",
+              "StackCount": 1,
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_1",
+          "Target": "Self"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BurnDamageModifier",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Burn",
+                "Ignite"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BurnDamageModifier",
+      "Target": "Self"
+    }
+  ]
+}

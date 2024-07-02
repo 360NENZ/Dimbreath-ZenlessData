@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Card_Trick_2001803",
+  "AbilitySpecials": {
+    "AS_CriticalDelta": {
+      "Value": -0.8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "PropertyKey": "Actor_CriticalDelta",
+        "PropertyValue": "%AS_CriticalDelta",
+        "Target": "Self"
+      }
+    ]
+  }
+}

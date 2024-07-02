@@ -1,0 +1,15 @@
+{
+  "AbilityName": "RamenStore_Buff_30021202",
+  "AbilitySpecials": {
+    "SPRecoverRatio": {
+      "Value": 10000
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_SPGetRatio": "%SPRecoverRatio"
+    }
+  }
+}

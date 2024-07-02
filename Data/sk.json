@@ -1,0 +1,132 @@
+{
+  "aaEventData": [
+    {
+      "autoDestroy": false,
+      "axisInfos": [
+        {
+          "axis": 2,
+          "baseValue": 0.8,
+          "curve": {
+            "keys": [
+              {
+                "inTangent": 0.0985096544,
+                "inWeight": 0.0,
+                "outTangent": 0.0985096544,
+                "outWeight": 0.196526781,
+                "tangentMode": 0,
+                "time": 0.0,
+                "value": 0.0,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 0.619197,
+                "inWeight": 0.577467442,
+                "outTangent": 0.5723493,
+                "outWeight": 0.47537,
+                "tangentMode": 1,
+                "time": 0.223562434,
+                "value": -0.107488953,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": 0.446795255,
+                "inWeight": 1.0,
+                "outTangent": 0.446795255,
+                "outWeight": 0.118602365,
+                "tangentMode": 0,
+                "time": 0.3231511,
+                "value": 0.972213149,
+                "weightedMode": 0
+              },
+              {
+                "inTangent": -0.04494437,
+                "inWeight": 0.378988534,
+                "outTangent": 2.0,
+                "outWeight": 0.0,
+                "tangentMode": 1,
+                "time": 1.0083313,
+                "value": -2.28881836e-05,
+                "weightedMode": 0
+              }
+            ],
+            "length": 4,
+            "postWrapMode": 8,
+            "preWrapMode": 8
+          },
+          "param": {
+            "param1": 11,
+            "param2": 1000
+          }
+        }
+      ],
+      "brakeDestroy": false,
+      "effectType": 1,
+      "endFrame": 10,
+      "idx": -1775960192,
+      "moveType": 1,
+      "pos": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "posParam": {
+        "param1": 0,
+        "param2": 0
+      },
+      "startFrame": 0,
+      "trackOrder": 0
+    },
+    {
+      "aoeAreaParam": {
+        "areaParam1": 2.0,
+        "areaParam2": 1.0,
+        "areaType": 3,
+        "param1Param": {
+          "param1": 0,
+          "param2": 0
+        },
+        "param2Param": {
+          "param1": 0,
+          "param2": 0
+        }
+      },
+      "autoDestroy": false,
+      "brakeDestroy": false,
+      "cpDamageInternal": 1,
+      "effectType": 4,
+      "endFrame": 10,
+      "idx": -1620343296,
+      "selectTargetType": 0,
+      "startFrame": 0,
+      "trackOrder": 1
+    }
+  ],
+  "backFrame": 0,
+  "clipPath": "",
+  "frameCount": 11,
+  "frameRate": 35,
+  "loop": false,
+  "modelPath": "Assets/NapResources/UI/Animation/Arcade/Game/Companion/CP_weapon_prefab.prefab",
+  "partLoop": false,
+  "seqName": "sk",
+  "speedParams": {
+    "param1": 0,
+    "param2": 100000
+  },
+  "topSpeed": 99.0,
+  "totalTime": 0.314285725,
+  "trackArray": [
+    {
+      "order": 0,
+      "trackID": 1,
+      "trackName": "动画Position",
+      "trackType": 1
+    },
+    {
+      "order": 1,
+      "trackID": 2,
+      "trackName": "伤害判定",
+      "trackType": 4
+    }
+  ]
+}

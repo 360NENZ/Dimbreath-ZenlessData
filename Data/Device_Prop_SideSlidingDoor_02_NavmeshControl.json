@@ -1,0 +1,109 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Close_Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CloseIdleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Open",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CloseIdleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Open_Idle",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "OpenIdleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Close",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CloseIdleModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Device_Prop_SideSlidingDoor_02_NavmeshControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CloseIdleModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "NavmeshObstacle1",
+            "NavmeshObstacle2",
+            "NavmeshObstacle3",
+            "NavmeshObstacle4",
+            "NavmeshObstacle5"
+          ],
+          "IsActive": true,
+          "Tag": "SideSlidingDoor_02_NavmeshControl_Open"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopPointGameObjectControlAction",
+          "Tag": "SideSlidingDoor_02_NavmeshControl_Open"
+        }
+      ]
+    },
+    "OpenIdleModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushPointGameObjectControlAction",
+          "AttachPointNameList": [
+            "NavmeshObstacle1",
+            "NavmeshObstacle2",
+            "NavmeshObstacle3",
+            "NavmeshObstacle4",
+            "NavmeshObstacle5"
+          ],
+          "IsActive": false,
+          "Tag": "SideSlidingDoor_02_NavmeshControl_Close"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopPointGameObjectControlAction",
+          "Tag": "SideSlidingDoor_02_NavmeshControl_Close"
+        }
+      ]
+    }
+  }
+}

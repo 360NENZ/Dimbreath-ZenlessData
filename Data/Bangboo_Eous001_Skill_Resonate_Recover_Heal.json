@@ -1,0 +1,389 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Resonate_Recover_Heal",
+  "AbilitySpecials": {
+    "AS_HPPre": {
+      "Value": 0.0
+    },
+    "AS_HPResolved": {
+      "Value": 0.0
+    },
+    "AS_HealAmount_01": {
+      "Value": 0.0
+    },
+    "AS_HealAmount_02": {
+      "Value": 0.0
+    },
+    "AS_HealAmount_03": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenDamageModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 12,
+            "FanCylinderColliderRadius": 3,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "HealModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "BombPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "FieldStopActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 0.0,
+              "ParamName": "AS_HealAmount_01",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 0.0,
+              "ParamName": "AS_HealAmount_02",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 0.0,
+              "ParamName": "AS_HealAmount_03",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HealModifier",
+              "Target": "All"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "FieldRangeModifier",
+              "Target": "Self"
+            }
+          ],
+          "IsFollow": false,
+          "TotalDuration": 2.5
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Bangboo_Resonate_Recover_Cast_02",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "BombPoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        }
+      ]
+    },
+    "HealModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%AS_HealAmount_01",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 1
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_HealSmall",
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 1
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HealAmount_01",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%AS_HealAmount_02",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 2
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_HealSmall",
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 2
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HealAmount_02",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverHPAction",
+          "Amount": "%AS_HealAmount_03",
+          "Percentage": 0,
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 3
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_HealSmall",
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 3
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_HealAmount_03",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenDamageModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHitPre": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HPPre",
+          "Percentage": 1.0,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        }
+      ],
+      "OnBeingHitResolved": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_HPResolved",
+          "Percentage": 1.0,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Mul",
+          "Param": -1.0,
+          "ParamName": "AS_HPResolved",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": "%AS_HPResolved",
+          "ParamName": "AS_HPPre",
+          "ParamType": "Float",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_HPPre",
+          "ParamName": "AS_HealAmount_01",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 1
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": "%AS_HPPre",
+              "ParamName": "AS_HealAmount_01",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_HPPre",
+          "ParamName": "AS_HealAmount_02",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 2
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": "%AS_HPPre",
+              "ParamName": "AS_HealAmount_02",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_HPPre",
+          "ParamName": "AS_HealAmount_03",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByOriginalAvatarTeamIndex",
+              "Target": "Self",
+              "TeamIndex": 3
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": "%AS_HPPre",
+              "ParamName": "AS_HealAmount_03",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FieldRangeModifier",
+      "Target": "Self"
+    }
+  ]
+}

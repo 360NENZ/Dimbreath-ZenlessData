@@ -1,0 +1,127 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "LycaonTalent01Modifier_Effect",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrame": false
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lycaon_Talent_01",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio_01_Talent_01": {
+      "Value": 0.5
+    },
+    "AS_AddedBreakStunRatio_02_Talent_01": {
+      "Value": 0.5
+    },
+    "AS_AddedBreakStunRatio_CD_Talent_01": {
+      "Value": 8
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LycaonTalent01Modifier_Add",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Lycaon_Attack_Branch_02_AttackProperty_01",
+              "Lycaon_Attack_Branch_02_AttackProperty_02",
+              "Lycaon_Attack_Branch_02_AttackProperty_03",
+              "Lycaon_Attack_Branch_02_Enhance_01_AttackProperty_01_01",
+              "Lycaon_Attack_Branch_02_Enhance_01_AttackProperty_01_02",
+              "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_01",
+              "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_02",
+              "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_03",
+              "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_01",
+              "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LycaonTalent01Modifier_Add": {
+      "Duration": "%AS_AddedBreakStunRatio_CD_Talent_01",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LycaonTalent01Modifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LycaonTalent01Modifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lycaon_Attack_Branch_02_AttackProperty_01",
+                "Lycaon_Attack_Branch_02_AttackProperty_02",
+                "Lycaon_Attack_Branch_02_AttackProperty_03",
+                "Lycaon_Attack_Branch_02_Enhance_01_AttackProperty_01_01",
+                "Lycaon_Attack_Branch_02_Enhance_01_AttackProperty_01_02",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_01",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_02",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_03",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_01",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AS_AddedBreakStunRatio_01_Talent_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_01",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_02",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_03",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_01",
+                "Lycaon_Attack_Branch_02_Enhance_02_AttackProperty_04_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AS_AddedBreakStunRatio_02_Talent_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

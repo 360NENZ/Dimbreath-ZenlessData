@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Follower_Increase_MaxEP",
+  "AbilitySpecials": {
+    "AddedPlayerMaxEpDelta": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Multiple",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifySkillMaxEP",
+        "DeltaValue": "%AddedPlayerMaxEpDelta",
+        "SkillName": "EVD",
+        "Target": "Self"
+      }
+    ]
+  }
+}

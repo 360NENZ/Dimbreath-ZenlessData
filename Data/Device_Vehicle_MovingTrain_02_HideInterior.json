@@ -1,0 +1,16 @@
+{
+  "AbilityName": "Device_Vehicle_MovingTrain_02_HideInterior",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushRenderVisibleAction",
+        "Paths": [
+          "Train_02_Interior"
+        ],
+        "Tag": "MovingTrain_02_HideInterior",
+        "Visible": false
+      }
+    ]
+  }
+}

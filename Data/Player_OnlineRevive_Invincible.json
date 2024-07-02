@@ -1,0 +1,203 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Death",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "DeathEffectModifier"
+          ],
+          "NormalizedTimeHigh": 1,
+          "NormalizedTimeLow": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_OnlineRevive_Invincible",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnRevived": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "InvincibleBuffModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "DeathEffectModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ReviveEffectModifier",
+        "Target": "Self"
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "InvincibleBuffModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DeathEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Common_Death_Enter_S",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Common_MA_Death_Dither",
+          "Target": "Self",
+          "key": "Avatar_Common_MA_Death_Dither"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Common_MA_Death_ScreenImage",
+          "Target": "Self",
+          "key": "Avatar_Common_MA_Death_ScreenImage"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_Death_Dither",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_Death_ScreenImage",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvincibleBuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": 1.2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh"
+    },
+    "ReviveEffectModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 1,
+          "TimeUpActions": [
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "ApplyAllRenderers": true,
+              "Tag": "Avatar_Common_MA_Revive_ScreenImage_01",
+              "Target": "Self",
+              "key": "Avatar_Common_MA_Revive_ScreenImage_01"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Common_Revive_Enter_S",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "MiddlePoint",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Common_MA_Revive_Dither",
+          "Target": "Self",
+          "key": "Avatar_Common_MA_Revive_Dither"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Avatar_Common_MA_Revive_ScreenImage",
+          "Target": "Self",
+          "key": "Avatar_Common_MA_Revive_ScreenImage"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_Revive_Dither",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_Revive_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_Revive_ScreenImage",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Common_MA_Revive_Dither01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

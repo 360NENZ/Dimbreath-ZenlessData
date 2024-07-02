@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Card_Froze_1001106",
+  "AbilitySpecials": {
+    "CurDmg": {
+      "Value": 0
+    },
+    "DmgDelta": {
+      "Value": 0.01
+    },
+    "MaxDmg": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ice",
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%CurDmg",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOtherPre": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%DmgDelta",
+        "ParamName": "CurDmg",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Less",
+            "Param": "%MaxDmg",
+            "ParamName": "CurDmg",
+            "ParamType": "Float",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Frozen"
+            ],
+            "Target": "Target"
+          }
+        ]
+      }
+    ]
+  }
+}

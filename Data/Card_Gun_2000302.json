@@ -1,0 +1,76 @@
+{
+  "AbilityName": "Card_Gun_2000302",
+  "AbilitySpecials": {
+    "CriticalDelta": {
+      "Value": 0.1
+    },
+    "MaxStackNum": {
+      "Value": 10
+    },
+    "StackCanBeReduce": {
+      "Value": 1
+    },
+    "TimeOfDuration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Card_Gun_2000300",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BuffModifier_01",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "SetSpecialModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier_01": {
+      "Duration": -1,
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Gun_2000300",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BuffModifier_01",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "SetSpecialModifier": {
+      "Duration": -1,
+      "OnAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Card_Gun_2000300",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": 1,
+                  "ParamName": "StackCanBeReduce",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

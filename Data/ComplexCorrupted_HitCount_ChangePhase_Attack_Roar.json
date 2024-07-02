@@ -1,0 +1,142 @@
+{
+  "AbilityName": "ComplexCorrupted_HitCount_ChangePhase_Attack_Roar",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_HitLight",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+            "StackCount": 3,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_HitLight",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+            "StackCount": 6,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_HitLight",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+            "StackCount": 9,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_HitFly",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+            "StackCount": 15,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount",
+            "StackCount": 15,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_ComplexCorrupted_ChangePhase_Attack_Attackproperty_Roar_01"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 15,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_ComplexCorrupted_ChangePhase_Attack_Roar_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 15,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

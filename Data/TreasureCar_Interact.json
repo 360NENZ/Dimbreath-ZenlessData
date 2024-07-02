@@ -1,0 +1,49 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "TreasureCar_Interact",
+      "InteractTag": "TreasureCar_Interact",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 3,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsMoving",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 0,
+          "ParamName": "Int_ActionMode",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_IsOpened",
+          "Target": "Self"
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    }
+  ],
+  "AbilityName": "TreasureCar_Interact",
+  "AbilityStacking": "Unique"
+}

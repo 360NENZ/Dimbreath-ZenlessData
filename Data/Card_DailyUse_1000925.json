@@ -1,0 +1,105 @@
+{
+  "AbilityName": "Card_DailyUse_1000925",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0.5
+    },
+    "DamageTakeRatio": {
+      "Value": -0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "SetGlobalValue",
+        "Key": "_Global_AliveNum",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars",
+        "Value": 0
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Lonely",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnBeingHitPre": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByTargetGlobalValue",
+            "CompareType": "Equal",
+            "Key": "_Global_AliveNum",
+            "Target": "Self",
+            "Value": 1
+          }
+        ],
+        "PropertyKey": "Actor_DamageTakeRatio",
+        "PropertyValue": "%DamageTakeRatio",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByTargetGlobalValue",
+            "CompareType": "Equal",
+            "Key": "_Global_AliveNum",
+            "Target": "Self",
+            "Value": 1
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Lonely": {
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AddGlobalValue",
+          "Key": "_Global_AliveNum",
+          "Target": "TeamAvatars",
+          "Value": 1.0
+        }
+      ],
+      "OnKilled": [
+        {
+          "$type": "AddGlobalValue",
+          "Key": "_Global_AliveNum",
+          "Target": "TeamAvatars",
+          "Value": -1.0
+        }
+      ],
+      "OnRevived": [
+        {
+          "$type": "AddGlobalValue",
+          "Key": "_Global_AliveNum",
+          "Target": "TeamAvatars",
+          "Value": 1.0
+        }
+      ]
+    }
+  }
+}

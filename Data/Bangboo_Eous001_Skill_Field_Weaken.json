@@ -1,0 +1,300 @@
+{
+  "AbilityName": "Bangboo_Eous001_Skill_Field_Weaken",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "QTEListenerModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TriggerFieldModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffModifier": {
+      "Buff": {
+        "BuffID": 1000004,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "IgnoreTimeScale": false
+    },
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 10,
+            "FanCylinderColliderRadius": 5,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "EndEffectPattern": "Eff_Bangboo_Field_Electric_End",
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "BuffModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "BuffModifier",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Enemy",
+                  "Target": "Target"
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": false,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "FieldStopActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_FieldEnd",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ],
+          "IsFollow": true,
+          "LoopEffectPattern": "Eff_Bangboo_Field_Electric_Start",
+          "TotalDuration": 10
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Bangboo_Eous001_Skill_Field_Weaken",
+          "Target": "Self"
+        },
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": true,
+          "SkillNames": [
+            "Bangboo_Eous001_Skill_Field_Weaken"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PauseSkillCDAction",
+          "IsPause": false,
+          "SkillNames": [
+            "Bangboo_Eous001_Skill_Field_Weaken"
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "QTEListenerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Eous001_Skill_Field_Weaken",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            },
+            {
+              "$type": "BySkillReady",
+              "SkillName": "Bangboo_Eous001_Skill_Field_Weaken",
+              "Target": "Caster"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "Disabled"
+                  ],
+                  "Target": "Caster"
+                }
+              ]
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    },
+    "TriggerFieldModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachStateWithModifierMixin",
+          "ConfigList": [
+            {
+              "AnimatorStateName": "Skill_Field_Weaken_Start",
+              "LayerIndex": 0,
+              "ModifierNameList": [
+                "FieldRangeModifier"
+              ],
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.4
+            },
+            {
+              "AnimatorStateName": "Skill_Field_Weaken_Loop",
+              "IsLoop": true,
+              "LayerIndex": 0,
+              "ModifierNameList": [
+                "FieldRangeModifier"
+              ],
+              "NormalizedTimeHigh": 1.0,
+              "NormalizedTimeLow": 0.0
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "DitherFadeAction",
+      "DitherFadeKey": "Bangboo_Teleport_Dither_Fade",
+      "Tag": "Bangboo_Teleport_Dither_Fade",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyLogicMoveAction",
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 5.0
+        },
+        "Duration": 0.1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeInstant"
+        },
+        "ReachTargetStop": true,
+        "TargetPosRot": {
+          "CoordsOption": "Camera",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": false,
+            "PositionOffset": {
+              "x": 2.0,
+              "y": 0.0,
+              "z": 2.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "LocalAvatar"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Stop"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": 0.1,
+        "ReachTargetStop": false,
+        "RotateSpeed": 1,
+        "RotateType": "Instant",
+        "TargetPosRot": {
+          "CoordsOption": "Camera",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "IntVal": 41,
+      "ParamName": "Int_AttackIndex",
+      "ParamType": 3,
+      "Target": "Self"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "ParamName": "Trigger_PressAttackB",
+      "ParamType": 1,
+      "Target": "Self"
+    }
+  ]
+}

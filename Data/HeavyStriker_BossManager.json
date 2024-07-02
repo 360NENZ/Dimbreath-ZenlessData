@@ -1,0 +1,85 @@
+{
+  "AbilityName": "HeavyStriker_BossManager",
+  "AbilityStacking": "Unique",
+  "OnAdded": [
+    {
+      "$type": "BranchOperator",
+      "Conditions": [
+        {
+          "$type": "ByIsInZoneTags",
+          "Tags": [
+            "Boss"
+          ]
+        }
+      ],
+      "SuccessActions": [
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_4_Boss",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_4_Burst_Ex",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_4_Burst_Ex_Predicate",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_5_Boss",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_6_Boss",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_6_Burst_Ex",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Attack_6_Burst_Ex_Predicate",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Transform_Pre_Bullet_1",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Transform_Pre_Bullet_2",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Transform_Pre_Bullet_HitGround",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_Transform_Pre_Bullet_Explode_Predicate",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "HeavyStriker_BossShieldController",
+          "IsAutoTrigger": false
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsBoss",
+          "ParamType": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "AbilityName": "GoldenBomb_IdleEffect",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LightEffectTest",
+        "Predicates": [
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Test"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LightEffectTest": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_Monster_GoldenBomb_Light_Test",
+          "Target": "Self"
+        },
+        {
+          "$type": "LogStringAction",
+          "LogStr": "LightEffectTest启动!!!"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LoopTest",
+          "Target": "Self"
+        }
+      ]
+    },
+    "LoopTest": {
+      "Duration": 2,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LightEffectTest",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

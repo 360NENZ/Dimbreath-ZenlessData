@@ -1,0 +1,132 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 2.1,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Device_Prop_ClusterMunitions_02_03_Trail"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 300.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 3.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "SplitPoint_6",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_ClusterMunitions_ChildGrenade",
+      "CanHitStage": true,
+      "DelayActionList": [
+        {
+          "Actions": [],
+          "DelayTime": 2.0,
+          "HitAnimEventID": "Device_Military_SplitMine_TiniUnit_Explode_ToEnemy"
+        }
+      ],
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Device_Military_SplitMine_TiniUnit_Explode",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Monster_HeavyFirepower_Attack_04_Explode_02"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 2.5,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": -1,
+      "MaxHitTargetNum": -1,
+      "MaxTouchStageNum": 2,
+      "MovementConfig": {
+        "$type": "ConfigMovementParabola",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "DefaultRotAngle": 0,
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.4,
+        "HitTangentialRatio": 0.8,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Self"
+          }
+        },
+        "TimesUpMoveOption": "Remain",
+        "h1": 2.0,
+        "h2": 3.5,
+        "s1": 3.0,
+        "s2": 5.5,
+        "t1": 0.8,
+        "t2": 0.8
+      },
+      "NeedWarningHUD": false,
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_HeavyFirePower_ATK4_CamShake_E_02",
+          "Target": "Other"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Device_Prop_Military_ClusterMunitions_SplitExplodeUnit_ToMonster",
+          "PositionArgument": "Bullet"
+        }
+      ],
+      "ShowWarningHUDInScreen": false,
+      "Targetting": "Enemy",
+      "TrailEffect": {
+        "EffectPattern": "Eff_Common_Alert_Circle_04"
+      }
+    }
+  ],
+  "AbilityName": "Device_Prop_Military_ClusterMunitions_SplitExplodeUnit_6",
+  "AbilityStacking": "Unique"
+}

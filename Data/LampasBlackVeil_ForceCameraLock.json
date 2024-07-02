@@ -1,0 +1,342 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "CameraLockOnAction",
+              "IsLockPermanently": false,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_04_A_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "CameraLockOnAction",
+              "IsLockPermanently": false,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "CoAttack_03_A_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "CoAttack_01_A",
+          "FrameCountHigh": 285,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EnableFeatureTargetModifier_CoAttack_01_A"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_01_B",
+          "FrameCountHigh": 285,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EnableFeatureTargetModifier_CoAttack_01_B"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_A_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_CoAttack_03_A"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_CoAttack_03_B"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_04",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_CoAttack_03_B"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_CoAttack_03_B"
+          ]
+        },
+        {
+          "AnimatorStateName": "CoAttack_03_B_06",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_CoAttack_03_B"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_01",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_Revive"
+          ]
+        },
+        {
+          "AnimatorStateName": "Revive_02",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ForceCameraLockModifier_Revive"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_ForceCameraLock",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "EnableFeatureTargetModifier_CoAttack_01_A": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "CoAttack_01_LockPoint",
+          "FollowPosRot": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.6,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_L_Calf",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": true,
+          "FeatureTargetName": [
+            "CoAttack_01_LockPoint"
+          ],
+          "Tag": "LampasBlackVeil_CoAttack_01_A_CameraLockPoint",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "CoAttack_01_LockPoint"
+          ],
+          "Tag": "LampasBlackVeil_CoAttack_01_A_CameraLockPoint",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EnableFeatureTargetModifier_CoAttack_01_B": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "AttachPointFollowMixin",
+          "AttachPointName": "CoAttack_01_LockPoint",
+          "FollowPosRot": {
+            "CoordsOption": "Self",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.6,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_L_Calf",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": false,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "PosType": "Instant",
+          "RotType": "Instant"
+        }
+      ],
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": true,
+          "FeatureTargetName": [
+            "CoAttack_01_LockPoint"
+          ],
+          "Tag": "LampasBlackVeil_CoAttack_01_B_CameraLockPoint",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "CoAttack_01_LockPoint"
+          ],
+          "Tag": "LampasBlackVeil_CoAttack_01_B_CameraLockPoint",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ForceCameraLockModifier_CoAttack_03_A": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": true,
+          "FeatureTargetName": [
+            "CoAttack_03_LockPoint"
+          ],
+          "Tag": "LampasBlackVeil_CoAttack_03_A_CameraLockPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushCameraLockOnTargetAction",
+          "FeatureTarget": "CoAttack_03_LockPoint",
+          "Priority": 0,
+          "Tag": "LampasBlackVeil_CoAttack_03_A_ForceCameraLock",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "CoAttack_03_LockPoint"
+          ],
+          "Tag": "LampasBlackVeil_CoAttack_03_A_CameraLockPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopCameraLockOnTargetAction",
+          "Tag": "LampasBlackVeil_CoAttack_03_A_ForceCameraLock",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ForceCameraLockModifier_CoAttack_03_B": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushCameraLockOnTargetAction",
+          "Priority": 1,
+          "Tag": "LampasBlackVeil_CoAttack_03_B_ForceCameraLock",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopCameraLockOnTargetAction",
+          "Tag": "LampasBlackVeil_CoAttack_03_B_ForceCameraLock",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ForceCameraLockModifier_Revive": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraLockOnAction",
+          "IsLockPermanently": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

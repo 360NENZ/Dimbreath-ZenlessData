@@ -1,0 +1,56 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "EnemiesNum_InRange",
+          "CustomReferMaxPropertyType": "EnemiesNum_InRange_Max",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Bool_AllowExplode",
+                  "ParamType": 2,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": true,
+                  "ParamName": "Bool_AllowExplode",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            },
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": false,
+                  "ParamName": "Bool_AllowExplode",
+                  "ParamType": 2,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "WriteAIParamAction",
+                  "BoolParamValue": false,
+                  "ParamName": "Bool_AllowExplode",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Paperboo_AllowExplode",
+  "AbilityStacking": "Unique"
+}

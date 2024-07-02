@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Card_Blunt_1000704",
+  "AbilitySpecials": {
+    "DestroyRecoverRate_Ratio": {
+      "Value": -20
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_StunDestroyRecoverRate_Ratio": "%DestroyRecoverRate_Ratio"
+    }
+  }
+}

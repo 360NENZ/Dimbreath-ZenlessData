@@ -1,0 +1,59 @@
+{
+  "AbilityName": "Card_Electro_1000506",
+  "AbilitySpecials": {
+    "AddedDamage": {
+      "Value": 0.1
+    },
+    "CurDMG": {
+      "Value": 0
+    },
+    "MaxAddedDamage": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBuffAddToOther": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "DoRefresh": true,
+        "ModifyFunction": "Add",
+        "Param": "%AddedDamage",
+        "ParamName": "CurDMG",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Less",
+            "Param": "%MaxAddedDamage",
+            "ParamName": "CurDMG",
+            "ParamType": "Float",
+            "Target": "Self"
+          },
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Electric"
+            ],
+            "Target": "Target"
+          }
+        ]
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Elec",
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%CurDMG",
+        "Target": "Self"
+      }
+    ]
+  }
+}

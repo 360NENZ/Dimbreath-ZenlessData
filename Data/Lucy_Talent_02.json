@@ -1,0 +1,10 @@
+{
+  "AbilityName": "Lucy_Talent_02",
+  "AbilitySpecials": {
+    "AS_Encourage_ExtraTime": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {}
+}

@@ -1,0 +1,203 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_Start_02_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_02_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02"
+          ],
+          "NormalizedTimeHigh": 0.216,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02",
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_B_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02",
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_F_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02",
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_L_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02",
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_Start_02_R_01",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_02",
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_A",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_B",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 0.212,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_03_End_02",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "CameraEventModifier_Normal_03"
+          ],
+          "NormalizedTimeHigh": 0.003,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Billy_CameraEvent",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CameraEventModifier_Normal_02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Billy_Attack_Normal_02_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Billy_Attack_Normal_02_CamStretch_01"
+        }
+      ]
+    },
+    "CameraEventModifier_Normal_03": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Billy_Attack_Normal_03_CamZoom_01_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Billy_Attack_Normal_03_CamZoom_01_02"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Billy_Attack_Normal_03_CamZoom_02"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Billy_Attack_Normal_03_CamStretch_01_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Billy_Attack_Normal_03_CamStretch_01_02"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Billy_Attack_Normal_03_CamStretch_02"
+        }
+      ]
+    }
+  }
+}

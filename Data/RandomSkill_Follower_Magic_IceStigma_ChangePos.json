@@ -1,0 +1,52 @@
+{
+  "AbilityName": "RandomSkill_Follower_Magic_IceStigma_ChangePos",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FollowTypeModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 240,
+          "Avatar2CamHeight": 1,
+          "Avatar2CamRadius": 0,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ModifyFollowerFollowTypeAction",
+          "Avatar2CamAngle": 240,
+          "Avatar2CamHeight": 1,
+          "Avatar2CamRadius": 0,
+          "FollowType": "ModifyPosReferCamera",
+          "PosLerpRatio": 0.1
+        }
+      ]
+    },
+    "HideFollowerModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetFollowerInvisibleAction",
+          "IsInvisible": true
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FollowTypeModifier",
+      "Target": "Caster"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "HideFollowerModifier",
+      "Target": "Caster"
+    }
+  ]
+}

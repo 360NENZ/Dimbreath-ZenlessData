@@ -1,0 +1,37 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "WriteAIParamAction",
+              "IntParamValue": -1,
+              "ModifyFunction": "Add",
+              "ParamName": "Int_SyncAttack",
+              "Predicates": [
+                {
+                  "$type": "ByAIParam",
+                  "CompareType": "GreaterEqual",
+                  "IntParamValue": 1,
+                  "ParamName": "Int_SyncAttack",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_04_Loop",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lucy_Wood_SyncAttack",
+  "AbilityStacking": "Unique"
+}

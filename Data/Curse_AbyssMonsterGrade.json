@@ -1,0 +1,28 @@
+{
+  "AbilityName": "Curse_AbyssMonsterGrade",
+  "AbilitySpecials": {
+    "MonsterTypeTag": {
+      "Value": "Ether"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "AddMonsterUpgradeTagToLevelBuff",
+        "MonsterTag": "Ether",
+        "Target": "Level"
+      },
+      {
+        "$type": "AddMonsterUpgradeTagToLevelBuff",
+        "MonsterTag": "Mech",
+        "Target": "Level"
+      },
+      {
+        "$type": "AddMonsterUpgradeTagToLevelBuff",
+        "MonsterTag": "Bios",
+        "Target": "Level"
+      }
+    ]
+  }
+}

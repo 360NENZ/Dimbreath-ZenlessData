@@ -1,0 +1,150 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 3,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Bangboo_Cryboo_SwitchIn_Attack_04_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "WeaponPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitOther": true,
+      "CanHitStage": true,
+      "CanPickInvincible": true,
+      "DestroyExplode": false,
+      "ExplodeAnimEventID": "Bangboo_Cryboo_Attackproperty_QTE",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Bangboo_Cryboo_SwitchIn_Attack_03_Exploded"
+      },
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": true,
+      "HitSelfWhenExplode": false,
+      "HitStageExplode": true,
+      "IsCanReflect": false,
+      "MaxHitNum": -1,
+      "MaxHitStageNum": 1,
+      "MaxHitTargetNum": 1,
+      "MaxTouchStageNum": -1,
+      "MovementConfig": {
+        "$type": "ConfigMovementParabola",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "DefaultRotAngle": 0,
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0.0,
+        "HitTangentialRatio": 0.0,
+        "TargetPosRot": {
+          "BackupCoordsOption": "ReferTarget",
+          "CoordsOption": "ReferTarget",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "BackupPositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 6.0
+            },
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "Caster",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetRotLimitAngleLeft": 30,
+        "TargetRotLimitAngleRight": 30,
+        "TimesUpMoveOption": "Remain",
+        "h1": 0.2,
+        "h2": 0.6,
+        "s1": 2,
+        "s2": 18,
+        "t1": 0.15,
+        "t2": 0.4
+      },
+      "NeedWarningHUD": false,
+      "OnBulletExplodeAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Cryboo_BulletExplode_CamShake_E_01",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Cryboo_GamepadRumble_E_QTE_02"
+        }
+      ],
+      "OverrideReflectDestroyExplode": "NotExplode",
+      "ShowWarningHUDInScreen": false,
+      "Targetting": "Enemy",
+      "TimeUpExplode": true
+    }
+  ],
+  "AbilityName": "Bangboo_Cryboo_QTEBomb",
+  "AbilityStacking": "Unique"
+}

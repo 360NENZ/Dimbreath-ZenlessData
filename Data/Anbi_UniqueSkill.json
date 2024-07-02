@@ -1,0 +1,87 @@
+{
+  "AbilityName": "Anbi_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByApplyPredicate",
+            "PredicateName": "ByUniqueSkillCondition"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Predicates": {
+    "ByUniqueSkillCondition": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Anbi_Attack_Normal_04_Perfect_AttackProperty_01",
+            "Anbi_Attack_Normal_04_Perfect_AttackProperty_02",
+            "Anbi_Attack_Normal_04_Perfect_AttackProperty_03",
+            "Anbi_Attack_Normal_04_Perfect_AttackProperty_04",
+            "Anbi_Attack_Normal_04_Perfect_AttackProperty_05",
+            "Anbi_Attack_Branch_01_AttackProperty_01",
+            "Anbi_Attack_Branch_01_AttackProperty_02",
+            "Anbi_Attack_Branch_01_AttackProperty_03",
+            "Anbi_Attack_Branch_04_AttackProperty_01",
+            "Anbi_Attack_Branch_04_AttackProperty_02",
+            "Anbi_Attack_Branch_04_AttackProperty_03",
+            "Anbi_Attack_Branch_04_AttackProperty_04",
+            "Anbi_Attack_Branch_04_AttackProperty_05",
+            "Anbi_Attack_Branch_04_AttackProperty_06"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByOr",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Normal_04_Perfect",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false
+            },
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_01_Perfect",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false
+            },
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "Attack_Branch_04_Perfect",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

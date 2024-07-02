@@ -1,0 +1,95 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_06_01",
+          "FrameCountHigh": 140,
+          "FrameCountLow": 31,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_EnableHitCollider_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_02",
+          "FrameCountHigh": 140,
+          "FrameCountLow": 31,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_EnableHitCollider_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_03",
+          "FrameCountHigh": 140,
+          "FrameCountLow": 31,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_EnableHitCollider_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Combo_01",
+          "FrameCountHigh": 51,
+          "FrameCountLow": 28,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_EnableHitCollider_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Combo_02",
+          "FrameCountHigh": 51,
+          "FrameCountLow": 28,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ComplexCorrupted_EnableHitCollider_Claw"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_ColliderManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ComplexCorrupted_EnableHitCollider_Claw": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHitColliderEnable",
+          "ColliderName": [
+            "HitCollider_Claw"
+          ],
+          "HitColliderEnable": true,
+          "Tag": "HitCollider_Claw",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHitColliderEnable",
+          "Tag": "HitCollider_Claw",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1246 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Base_Attack_Leg_FR",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 16,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_FR"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_R",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 16,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_BR",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 16,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_BR"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_FL",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 16,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_FL"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_L",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 16,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_L"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_BL",
+          "FrameCountHigh": 46,
+          "FrameCountLow": 16,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_BL"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_FR_P2",
+          "FrameCountHigh": 43,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_FR"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_R_P2",
+          "FrameCountHigh": 43,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_BR_P2",
+          "FrameCountHigh": 43,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_BR"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_FL_P2",
+          "FrameCountHigh": 43,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_FL"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_L_P2",
+          "FrameCountHigh": 43,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_L"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_BL_P2",
+          "FrameCountHigh": 43,
+          "FrameCountLow": 13,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_BL"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_FR_Weak",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 39,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_FR"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_R_Weak",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 39,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_BR_Weak",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 39,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_BR"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_FL_Weak",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 39,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_FL"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_L_Weak",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 39,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_L"
+          ]
+        },
+        {
+          "AnimatorStateName": "Base_Attack_Leg_BL_Weak",
+          "FrameCountHigh": 69,
+          "FrameCountLow": 39,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Foot_BL"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_Pre",
+          "FrameCountLow": 66,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_SlowPre",
+          "FrameCountLow": 96,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_F",
+          "FrameCountHigh": 7,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_FR_01",
+          "FrameCountHigh": 7,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_FR_02",
+          "FrameCountHigh": 7,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_01_R",
+          "FrameCountHigh": 7,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_Pre",
+          "FrameCountLow": 90,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_LeftHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_F",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_FL_01",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_FL_02",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_02_L",
+          "FrameCountHigh": 15,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_01_F",
+          "FrameCountHigh": 135,
+          "FrameCountLow": 105,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_02_F",
+          "FrameCountHigh": 102,
+          "FrameCountLow": 72,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_LeftHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_01_B",
+          "FrameCountHigh": 124,
+          "FrameCountLow": 94,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_03_02_B",
+          "FrameCountHigh": 70,
+          "FrameCountLow": 40,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_LeftHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04",
+          "FrameCountHigh": 110,
+          "FrameCountLow": 80,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_04",
+          "FrameCountHigh": 234,
+          "FrameCountLow": 204,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05",
+          "FrameCountHigh": 89,
+          "FrameCountLow": 59,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_LeftHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05",
+          "FrameCountHigh": 202,
+          "FrameCountLow": 172,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05_SlowPre",
+          "FrameCountHigh": 135,
+          "FrameCountLow": 105,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_LeftHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_05_SlowPre",
+          "FrameCountHigh": 248,
+          "FrameCountLow": 218,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_01",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_02",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_03",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 2,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Combo_01",
+          "FrameCountHigh": 29,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_06_Combo_02",
+          "FrameCountHigh": 29,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_07_Stay_F",
+          "FrameCountHigh": 84,
+          "FrameCountLow": 54,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_07_Stay_B",
+          "FrameCountHigh": 84,
+          "FrameCountLow": 54,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_07_Turn_F",
+          "FrameCountHigh": 84,
+          "FrameCountLow": 54,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_07_Turn_B",
+          "FrameCountHigh": 84,
+          "FrameCountLow": 54,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "HeavyParryTagContralModifier",
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_Claw"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Turn_01",
+          "FrameCountHigh": 94,
+          "FrameCountLow": 64,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_LeftHand"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Turn_02",
+          "FrameCountHigh": 42,
+          "FrameCountLow": 12,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EvadeTagContralModifier",
+            "SwitchTagContralModifier",
+            "FireAttackWarningEffect_Base_Attack_RightHand"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ComplexCorrupted_AidTriggerControl",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AssaultPriorityAddModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Assault": 1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Assault": 0
+        }
+      ]
+    },
+    "AssaultTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Assault"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Assault"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "EvadePriorityAddModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Evade": 1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Evade": 0
+        }
+      ]
+    },
+    "EvadeTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Evade"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Evade"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Claw": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "HeadPoint",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "HeadPoint",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Foot_BL": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_BL",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_BL",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Foot_BR": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_BR",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_BR",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Foot_FL": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_FL",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_FL",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Foot_FR": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_FR",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_FR",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Foot_L": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_L",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_L",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_Foot_R": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_R",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "LockPoint_Foot_R",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_LeftHand": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "HeadPoint",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "HeadPoint",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FireAttackWarningEffect_Base_Attack_RightHand": {
+      "Duration": 0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAidAttackOpenWindowAction",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "HeadPoint",
+          "EffectPattern": "Eff_Hint_CrossLight_3",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": true
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "HeadPoint",
+          "EffectPattern": "Eff_Hint_CrossLight_2",
+          "MpExecMode": "MpTotallyLocal",
+          "Predicates": [
+            {
+              "$type": "ByPerfectSwitchWindowOpen",
+              "IsOpen": false
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "HeavyParryTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_H",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_H",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "LightParryTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_L",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Parry_L",
+            "AidAttack_Parry_ZoneCheck"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryPriorityAddModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Parry": 1
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetPerfectSwitchPriorityDeltaAction",
+          "Parry": 0
+        }
+      ]
+    },
+    "ParryTypeContral_Left": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_ParryType",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ParryTypeContral_Right": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_ParryType",
+          "ParamType": 3,
+          "Target": "Self"
+        }
+      ]
+    },
+    "SwitchTagContralModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Switch"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AidAttack_Switch"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

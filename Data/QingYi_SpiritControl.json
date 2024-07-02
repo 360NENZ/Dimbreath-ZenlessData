@@ -1,0 +1,265 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ModifyProperty",
+              "Amount": 0,
+              "CustomPropertyType": "QingYi_Spirit",
+              "IsUsePercentage": false,
+              "Percentage": 0,
+              "PropertyModifyFunction": "Replace",
+              "PropertyType": "Custom"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_01_Enhance",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 13,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "QingYi_Spirit",
+          "CustomReferMaxPropertyType": "QingYi_Spirit_MaxValue",
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "Modifier_SpiritEnhance",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 75
+            },
+            {
+              "Val": 75,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Modifier_SpiritEnhance",
+                  "Target": "Self"
+                }
+              ]
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "Modifier_SpiritEnhance_Max",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 100
+            },
+            {
+              "Val": 100,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "Modifier_SpiritEnhance",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "QingYi_SpiritControl",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyProperty",
+        "Amount": 1.5,
+        "CustomPropertyType": "QingYi_Spirit",
+        "IsUsePercentage": false,
+        "Percentage": 0,
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "Custom"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_SpiritEnhance": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsSpiritEnhance",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_01_ScreenImage_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_01_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_02_OverrideRimGlow_02",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_02_OverrideRimGlow_02"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_04_SecondaryEmission_04",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_04_SecondaryEmission_04"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_IsSpiritEnhance",
+          "ParamType": 2,
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_01_ScreenImage_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_02_OverrideRimGlow_02",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_04_SecondaryEmission_04",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Modifier_SpiritEnhance_Max": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.133,
+          "TimeUpActions": [
+            {
+              "$type": "AttachEffect",
+              "AttachEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Skn_WeaponStringB_06",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "EffectPattern": "Eff_QingYi_Attack_SpiritEnhance_Common_02_Weapon",
+              "Target": "Self"
+            },
+            {
+              "$type": "AttachEffect",
+              "AttachEffectPosRot": {
+                "CoordsOption": "ReferTarget",
+                "Offset": {
+                  "AngleOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "IsUseRotationXZ": true,
+                  "IsUseRotationY": true,
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "TargetOption": {
+                  "$type": "ConfigPosRotReferTarget",
+                  "AttachPoint": "Skn_WeaponStringB_06",
+                  "IsUseAttachPointPos": true,
+                  "IsUseAttachPointRotation": true,
+                  "OffsetReferTarget": "Self"
+                }
+              },
+              "EffectPattern": "Eff_QingYi_Attack_SpiritEnhance_Common_03_Weapon",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "QingYi_Weapon"
+            }
+          ],
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_03_SecondaryEmission_03",
+          "Target": "Self",
+          "key": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_03_SecondaryEmission_03"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size01_QingYi_MA_Attack_SpiritEnhance_01_Mat_03_SecondaryEmission_03",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

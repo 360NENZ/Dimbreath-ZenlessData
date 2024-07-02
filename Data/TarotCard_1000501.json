@@ -1,0 +1,51 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AddInteractMixin",
+      "InteractKey": "TarotCard_1000501",
+      "InteractTag": "TarotCard_1000501",
+      "IsMonopolize": false,
+      "OnInteract": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DieModifier"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Interact",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnInteractForbidden": [],
+      "OnInteractRemove": []
+    }
+  ],
+  "AbilityName": "TarotCard_1000501",
+  "Modifiers": {
+    "DieModifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Die",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Device_TartoCard_Add",
+          "Target": "LocalAvatar"
+        },
+        {
+          "$type": "LDListenEntityAction",
+          "TargetKey": "TarotCard_1000501_Get"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": []
+}

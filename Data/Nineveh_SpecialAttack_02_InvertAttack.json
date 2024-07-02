@@ -1,0 +1,419 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "FrameCountHigh": 200,
+          "FrameCountLow": 40,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_UltimateAttack_LogicMovement"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_InvertAttack_CameraTrackOverrideModifier",
+            "Nineveh_InvertAttack_ZoneModifier",
+            "Nineveh_InvertMaterialAnimation_4th_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "FrameCountLow": 20,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_InvertMaterialAnimation_1st_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "FrameCountLow": 50,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_InvertMaterialAnimation_2nd_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "FrameCountLow": 100,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_InvertMaterialAnimation_3rd_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "FrameCountLow": 270,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Nineveh_InvertMaterialAnimation_5th_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Loop_Phase_2",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_InvertAttack_CameraTrackOverrideModifier",
+            "Nineveh_InvertAttack_ZoneModifier",
+            "Nineveh_InvertMaterialAnimation_1st_Modifier",
+            "Nineveh_InvertMaterialAnimation_3rd_Modifier",
+            "Nineveh_InvertMaterialAnimation_4th_Modifier",
+            "Nineveh_InvertMaterialAnimation_5th_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Nineveh_InvertAttack_CameraTrackOverrideModifier",
+            "Nineveh_InvertAttack_ZoneModifier",
+            "Nineveh_InvertMaterialAnimation_1st_Modifier",
+            "Nineveh_InvertMaterialAnimation_3rd_Modifier",
+            "Nineveh_InvertMaterialAnimation_4th_Modifier",
+            "Nineveh_InvertMaterialAnimation_5th_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "FrameCountHigh": 1030,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Nineveh_InvertMaterialAnimation_2nd_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Loop_Phase_2",
+          "FrameCountHigh": 1170,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Nineveh_InvertMaterialAnimation_2nd_Modifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SpecialAttack_02_Upright",
+          "FrameCountHigh": 70,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Nineveh_InvertAttack_CameraTrackOverrideModifier",
+            "Nineveh_InvertAttack_ZoneModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_SpecialAttack_02_InvertAttack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "Nineveh_InvertAttack_CameraTrackOverrideModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraOverrideTrackAction",
+          "OverrideKey": "Nineveh_Attack_Invert_CameraOverrideTrack_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "OverrideKey": "Nineveh_Attack_Invert_CameraOverrideTrack_01"
+        }
+      ]
+    },
+    "Nineveh_InvertAttack_ZoneModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InvertAttack"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "UltimateSkillReady"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "TokushuDankai"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InvertAttack"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "PushAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "TokushuDankai"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": false,
+          "ParamName": "Bool_InvertSkill_Ready",
+          "Target": "Self"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "ParamName": "Bool_ActionTriggered",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Nineveh_InvertMaterialAnimation_1st_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_02"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_ScreenImage_01",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_ScreenImage_01"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_03"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_ScreenImage_03",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_ScreenImage_03"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_01"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_05",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_SecondaryEmission_05"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_ScreenImage_01"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_ScreenImage_03"
+        },
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_05"
+        }
+      ]
+    },
+    "Nineveh_InvertMaterialAnimation_2nd_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_02"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_02",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_SecondaryEmission_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_02"
+        }
+      ]
+    },
+    "Nineveh_InvertMaterialAnimation_3rd_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_03"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_06",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_SecondaryEmission_06"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_06"
+        }
+      ]
+    },
+    "Nineveh_InvertMaterialAnimation_4th_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_04"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_07",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_SecondaryEmission_07"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_07"
+        }
+      ]
+    },
+    "Nineveh_InvertMaterialAnimation_5th_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": " Monster_Nineveh_04"
+            }
+          ],
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_08",
+          "Target": "Self",
+          "key": "Monster_Nineveh_MA_Invert_SecondaryEmission_08"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Monster_Nineveh_MA_Invert_SecondaryEmission_08"
+        }
+      ]
+    },
+    "Nineveh_UltimateAttack_LogicMovement": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementTarget",
+            "Duration": 1,
+            "Gravity": 0.0,
+            "HitNormalRatio": 1,
+            "HitTangentialRatio": 1,
+            "MoveType": {
+              "$type": "MovementTypeFixedSpeed",
+              "Speed": 4.5
+            },
+            "ReachTargetStop": true,
+            "TargetPosRot": {
+              "CoordsOption": "ReferTarget",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "IsClampOffsetDistance": false,
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "Self",
+                "NodePoint": "MonsterPos_A1",
+                "OffsetReferTarget": "NodePoint"
+              }
+            },
+            "TargetUpdateMode": "OnStart",
+            "TimesUpMoveOption": "Stop"
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

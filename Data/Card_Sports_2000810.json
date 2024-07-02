@@ -1,0 +1,29 @@
+{
+  "AbilityName": "Card_Sports_2000810",
+  "AbilitySpecials": {
+    "AS_RecoverSp": {
+      "Value": 40
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%AS_RecoverSp",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Counter",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "Target": "TeamAvatars"
+  }
+}

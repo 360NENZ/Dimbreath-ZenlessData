@@ -1,0 +1,161 @@
+{
+  "AbilityName": "Abyss_PeriodicLayerBuff_01",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Elite": {
+      "Value": -0.5
+    },
+    "AS_AddedDamageRatio_Normal": {
+      "Value": 0.25
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "MonsterCountModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChangeMonsterDefence_Elite",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByMonsterStrengthType",
+                "CompareType": "Equal",
+                "StrengthType": "Elite",
+                "Target": "Self"
+              },
+              {
+                "$type": "ByMonsterStrengthType",
+                "CompareType": "Equal",
+                "StrengthType": "Boss",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ChangeMonsterDefence_Normal",
+        "Predicates": [
+          {
+            "$type": "ByOr",
+            "Predicates": [
+              {
+                "$type": "ByMonsterStrengthType",
+                "CompareType": "Equal",
+                "StrengthType": "Normal",
+                "Target": "Self"
+              }
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ChangeMonsterDefence_Elite": {
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Elite",
+          "Target": "Target"
+        }
+      ]
+    },
+    "ChangeMonsterDefence_Normal": {
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio_Normal",
+          "Target": "Target"
+        }
+      ]
+    },
+    "MonsterCountModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "MonsterCountMonitorMixin",
+          "DoInitialCheck": false,
+          "OnlyCheckStrengthType": true,
+          "StrengthTypeList": [
+            "Normal"
+          ],
+          "ValueRangeActions": [
+            {
+              "HighToValueActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ChangeMonsterDefence_Elite",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ChangeMonsterDefence_Normal",
+                  "Target": "Self"
+                }
+              ],
+              "Val": 0
+            },
+            {
+              "LowToValueActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ChangeMonsterDefence_Elite",
+                  "Predicates": [
+                    {
+                      "$type": "ByOr",
+                      "Predicates": [
+                        {
+                          "$type": "ByMonsterStrengthType",
+                          "CompareType": "Equal",
+                          "StrengthType": "Elite",
+                          "Target": "Self"
+                        },
+                        {
+                          "$type": "ByMonsterStrengthType",
+                          "CompareType": "Equal",
+                          "StrengthType": "Boss",
+                          "Target": "Self"
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "ChangeMonsterDefence_Normal",
+                  "Predicates": [
+                    {
+                      "$type": "ByMonsterStrengthType",
+                      "CompareType": "Equal",
+                      "StrengthType": "Normal",
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Val": 1
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

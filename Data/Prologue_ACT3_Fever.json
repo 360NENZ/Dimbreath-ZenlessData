@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Prologue_ACT3_Fever",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifyTeamFeverAction",
+        "ModifyFunction": "Add",
+        "Percent": 0.3
+      },
+      {
+        "$type": "ModifyProperty",
+        "Amount": 0,
+        "Percentage": 1,
+        "PropertyModifyFunction": "Add",
+        "PropertyType": "CurSP",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "CameraLockOnAction",
+        "CameraLockTargetKey": "Player_ManualLock_LockTarget_01",
+        "IsLockPermanently": true,
+        "Target": "Self"
+      }
+    ]
+  }
+}

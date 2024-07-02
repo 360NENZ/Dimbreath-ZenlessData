@@ -1,0 +1,135 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Attack_04_03",
+          "FrameCountHigh": 296,
+          "FrameCountLow": 254,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Attack04ColliderModifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "P2_Attack_06_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 105,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "Attack06ColliderModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Cottus_SetCollider",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushHullColliderEnable",
+        "ColliderName": [
+          "HullCollider_Body_Attack_06"
+        ],
+        "HullColliderEnable": false,
+        "Tag": "HullCollider_Body_Attack_06_Default",
+        "Target": "Self"
+      },
+      {
+        "$type": "PushHullColliderEnable",
+        "ColliderName": [
+          "HullCollider_L_WingArm",
+          "HullCollider_R_WingArm",
+          "HullCollider_Body_Attack_04"
+        ],
+        "HullColliderEnable": false,
+        "Tag": "HullCollider_WingArm_Default",
+        "Target": "Self"
+      },
+      {
+        "$type": "PushWallColliderEnable",
+        "ColliderName": [
+          "WallCollider_Body_Attack_06"
+        ],
+        "Tag": "WallCollider_Body_Attack_06_Default",
+        "Target": "Self",
+        "WallColliderEnable": false
+      }
+    ]
+  },
+  "Modifiers": {
+    "Attack04ColliderModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "ColliderName": [
+            "HullCollider_L_WingArm",
+            "HullCollider_R_WingArm",
+            "HullCollider_Body_Attack_04"
+          ],
+          "HullColliderEnable": true,
+          "Tag": "HullCollider_WingArm",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "HullCollider_WingArm",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Attack06ColliderModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "ColliderName": [
+            "HullCollider_Body_Attack_06"
+          ],
+          "HullColliderEnable": true,
+          "Tag": "HullCollider_Body_Attack_06",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushWallColliderEnable",
+          "ColliderName": [
+            "WallCollider_Body_Attack_06"
+          ],
+          "Tag": "WallCollider_Body_Attack_06",
+          "Target": "Self",
+          "WallColliderEnable": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "HullCollider_Body_Attack_06",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopWallColliderEnable",
+          "Tag": "WallCollider_Body_Attack_06",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

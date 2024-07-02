@@ -1,0 +1,63 @@
+{
+  "AbilityName": "Card_DailyUse_1000934_Backup",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "DamageTakeRatio": {
+      "Value": -0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBeingHitPre": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffID",
+            "BuffIDList": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              12,
+              13,
+              15
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_DamageTakeRatio",
+        "PropertyValue": "%DamageTakeRatio",
+        "Target": "TeamAvatars"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffID",
+            "BuffIDList": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              12,
+              13,
+              15
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

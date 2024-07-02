@@ -1,0 +1,683 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "Intermitten_Search_Modifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Born_Default",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 116,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "idle",
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "Empty_InAttackMode_Modifier"
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "Indentify_Attack_Modifier"
+          ],
+          "ZoneTag": "Attack"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "NinevehVine_Autonomous_Attack_Automaton",
+  "AbilitySpecials": {
+    "AS_Consecutive_AttackCount": {
+      "Value": 1,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBehaviorTreeEnabled": [
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Intermitten_Search_Modifier",
+        "Predicates": [
+          {
+            "$type": "ByHasModifier",
+            "ModifierCaster": "Caster",
+            "ModifierNameList": [
+              "Intermitten_Search_Modifier"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Autonomous_Attack_Modifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InAttackMode"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "First_Attack_Modifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_Consecutive_AttackCount",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Second_Attack_Modifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 2,
+              "ParamName": "AS_Consecutive_AttackCount",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Third_Attack_Modifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 3,
+              "ParamName": "AS_Consecutive_AttackCount",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "CD_Update_Modifier": {
+      "Duration": 0.2,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "LessEqual",
+              "Param": 2,
+              "ParamName": "AS_Consecutive_AttackCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "FailureActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 1,
+              "ParamName": "AS_Consecutive_AttackCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Add",
+              "Param": 1,
+              "ParamName": "AS_Consecutive_AttackCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InAttackMode"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Autonomous_Attack_Modifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Empty_InAttackMode_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "InAttackMode"
+          ],
+          "IsAdd": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "InAttackMode"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "First_Attack_Modifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.67,
+          "OnFailure": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAngleRange",
+                  "AngleMax": 90,
+                  "AngleMin": -90,
+                  "CompareTarget": "Custom",
+                  "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                  "Target": "Self"
+                }
+              ],
+              "FailureActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 2,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAngleRange",
+                  "AngleMax": 90,
+                  "AngleMin": -90,
+                  "CompareTarget": "Custom",
+                  "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                  "Target": "Self"
+                }
+              ],
+              "FailureActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "Indentify_Attack_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CD_Update_Modifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Intermitten_Search_Modifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Autonomous_Attack_Modifier",
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "Custom",
+              "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+              "CompareType": "LessEqual",
+              "Distance": 6,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "InAttackMode"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.2
+    },
+    "Second_Attack_Modifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.85,
+          "OnFailure": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAngleRange",
+                  "AngleMax": 90,
+                  "AngleMin": -90,
+                  "CompareTarget": "Custom",
+                  "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                  "Target": "Self"
+                }
+              ],
+              "FailureActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 3,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "RandomOperator",
+              "Odds": 0.67,
+              "OnFailure": [
+                {
+                  "$type": "BranchOperator",
+                  "Conditions": [
+                    {
+                      "$type": "ByAngleRange",
+                      "AngleMax": 90,
+                      "AngleMin": -90,
+                      "CompareTarget": "Custom",
+                      "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                      "Target": "Self"
+                    }
+                  ],
+                  "FailureActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 1,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "SuccessActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 0,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 2,
+                  "ParamName": "Int_AttackIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_PressAttackA",
+                  "ParamType": 1,
+                  "Target": "Self"
+                }
+              ],
+              "OnSuccess": [
+                {
+                  "$type": "BranchOperator",
+                  "Conditions": [
+                    {
+                      "$type": "ByAngleRange",
+                      "AngleMax": 90,
+                      "AngleMin": -90,
+                      "CompareTarget": "Custom",
+                      "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                      "Target": "Self"
+                    }
+                  ],
+                  "FailureActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 1,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "SuccessActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 0,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 2,
+                  "ParamName": "Int_AttackIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_PressAttackA",
+                  "ParamType": 1,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Third_Attack_Modifier": {
+      "Duration": 0.3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RandomOperator",
+          "Odds": 0.85,
+          "OnFailure": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAngleRange",
+                  "AngleMax": 90,
+                  "AngleMin": -90,
+                  "CompareTarget": "Custom",
+                  "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                  "Target": "Self"
+                }
+              ],
+              "FailureActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 1,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 0,
+                  "ParamName": "Int_EnemyDirection",
+                  "ParamType": 3,
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "IntVal": 1,
+              "ParamName": "Int_AttackIndex",
+              "ParamType": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Trigger_PressAttackA",
+              "ParamType": 1,
+              "Target": "Self"
+            }
+          ],
+          "OnSuccess": [
+            {
+              "$type": "RandomOperator",
+              "Odds": 0.67,
+              "OnFailure": [
+                {
+                  "$type": "BranchOperator",
+                  "Conditions": [
+                    {
+                      "$type": "ByAngleRange",
+                      "AngleMax": 90,
+                      "AngleMin": -90,
+                      "CompareTarget": "Custom",
+                      "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                      "Target": "Self"
+                    }
+                  ],
+                  "FailureActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 1,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "SuccessActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 0,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 2,
+                  "ParamName": "Int_AttackIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_PressAttackA",
+                  "ParamType": 1,
+                  "Target": "Self"
+                }
+              ],
+              "OnSuccess": [
+                {
+                  "$type": "BranchOperator",
+                  "Conditions": [
+                    {
+                      "$type": "ByAngleRange",
+                      "AngleMax": 90,
+                      "AngleMin": -90,
+                      "CompareTarget": "Custom",
+                      "CompareTargetCustomKey": "Monster_NinevehVine_SearchNearestTarget",
+                      "Target": "Self"
+                    }
+                  ],
+                  "FailureActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 1,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "SuccessActions": [
+                    {
+                      "$type": "SetAnimCtrlerParamAction",
+                      "IntVal": 0,
+                      "ParamName": "Int_EnemyDirection",
+                      "ParamType": 3,
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "IntVal": 3,
+                  "ParamName": "Int_AttackIndex",
+                  "ParamType": 3,
+                  "Target": "Self"
+                },
+                {
+                  "$type": "SetAnimCtrlerParamAction",
+                  "BoolVal": true,
+                  "ParamName": "Trigger_PressAttackA",
+                  "ParamType": 1,
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

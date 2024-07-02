@@ -1,0 +1,91 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 100,
+          "FrameCountLow": 50,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShootStateModifer01"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Amillion001_QTE",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ShootStateModifer01": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.05,
+          "TimeUpActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ShootStateModifer02",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_QTE_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ShootStateModifer02",
+          "Target": "Self"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_QTE_01",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.1
+    },
+    "ShootStateModifer02": {
+      "Duration": 4,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_QTE_01",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_QTE_03",
+          "Target": "Self"
+        }
+      ],
+      "OnThinkInterval": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Bangboo_Amillion001_BulletType_QTE_02",
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.1
+    }
+  }
+}

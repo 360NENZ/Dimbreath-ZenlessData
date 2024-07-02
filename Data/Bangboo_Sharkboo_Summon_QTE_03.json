@@ -1,0 +1,51 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SummonMixin",
+      "IsSameAsMaster": true,
+      "OnSummonCreatedActions": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "ParamName": "Trigger_QTE",
+          "ParamType": 1,
+          "Target": "Target"
+        }
+      ],
+      "OverrideDelay": 0,
+      "SummonDuration": -1,
+      "SummonID": 199140911,
+      "SummonPosRot": {
+        "CoordsOption": "Relative",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 130.0,
+            "z": 0.0
+          },
+          "IsClampOffsetDistance": false,
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": -1.7,
+            "y": 0.0,
+            "z": 0.6
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "SummonTag": [
+        "Sharkboo_Trap_QTE"
+      ],
+      "SummonType": "Monster",
+      "TimesUpDelay": 0
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_Summon_QTE_03",
+  "AbilityStacking": "Unique"
+}

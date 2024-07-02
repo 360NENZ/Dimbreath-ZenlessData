@@ -1,0 +1,561 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_01_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_01_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Charge",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_01_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_02_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 4,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 4,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 4,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L",
+            "SpecialEffectModifer_R"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SpecialEffectModifer_L"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lycaon_SpecialEffect",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SpecialEffectModifer_L": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_01_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_02_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_03_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_04_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_05_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_06_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_07_Weapon_L"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Bip001 L Foot",
+          "EffectPattern": "Eff_Lycaon_Enhance_01_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Bip001 L Toe0",
+          "EffectPattern": "Eff_Lycaon_Enhance_02_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "PT_L_WeaponE_01",
+          "EffectPattern": "Eff_Lycaon_Enhance_03_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "PT_L_WeaponE_02",
+          "EffectPattern": "Eff_Lycaon_Enhance_04_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Bip001 L Calf",
+          "EffectPattern": "Eff_Lycaon_Enhance_05_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Ext_L_WeaponC_01",
+          "EffectPattern": "Eff_Lycaon_Enhance_06_Weapon_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Ext_L_WeaponC_02",
+          "EffectPattern": "Eff_Lycaon_Enhance_07_Weapon_L",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SpecialEffectModifer_R": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_01_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_02_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_03_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_04_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_05_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_06_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Lycaon_Enhance_07_Weapon_R"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.0,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Bip001 R Foot",
+          "EffectPattern": "Eff_Lycaon_Enhance_01_Weapon_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Bip001 R Toe0",
+          "EffectPattern": "Eff_Lycaon_Enhance_02_Weapon_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "PT_R_WeaponE_02",
+          "EffectPattern": "Eff_Lycaon_Enhance_03_Weapon_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "PT_R_WeaponE_01",
+          "EffectPattern": "Eff_Lycaon_Enhance_04_Weapon_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Bip001 R Calf",
+          "EffectPattern": "Eff_Lycaon_Enhance_05_Weapon_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Ext_R_WeaponC_01",
+          "EffectPattern": "Eff_Lycaon_Enhance_06_Weapon_R",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachPointName": "Ext_R_WeaponC_02",
+          "EffectPattern": "Eff_Lycaon_Enhance_07_Weapon_R",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

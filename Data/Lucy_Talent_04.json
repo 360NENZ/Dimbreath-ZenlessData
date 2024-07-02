@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Lucy_Talent_04",
+  "AbilitySpecials": {
+    "AS_Attack05SkillDamageRatio": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Lucy_SyncAttack",
+        "IsAutoTrigger": false,
+        "Target": "Self"
+      }
+    ]
+  }
+}

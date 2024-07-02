@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Follower_CompanyADmg_Increase",
+  "AbilitySpecials": {
+    "AForceDamageRatioDelta": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "AForceDamageRatioDelta": "%AForceDamageRatioDelta"
+    }
+  }
+}

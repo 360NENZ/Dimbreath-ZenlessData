@@ -1,0 +1,25 @@
+{
+  "AbilityName": "Golem_Ability_BeatBackEnd_SetActionMode",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SetActionMode_0": {
+      "Duration": 1.0,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 0,
+          "ParamName": "ActionMode",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "SetActionMode_0",
+      "Target": "Self"
+    }
+  ]
+}

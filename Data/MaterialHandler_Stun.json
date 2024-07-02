@@ -1,0 +1,460 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Start_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Overload_Stun_Loop",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Stay",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Up",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Down",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Left",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Front_Right",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Up",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Down",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Left",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Light_Back_Right",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Heavy_Front",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        },
+        {
+          "AnimatorStateName": "Stun_Hit_Heavy_Back",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "MaterialHandler_Stun"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "MaterialHandler_Stun",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AbilitySpecials": {
+      "MaterialHandler_CurPartHP_BLLeg": {
+        "Value": 1
+      },
+      "MaterialHandler_CurPartHP_BRLeg": {
+        "Value": 1
+      },
+      "MaterialHandler_CurPartHP_FLLeg": {
+        "Value": 1
+      },
+      "MaterialHandler_CurPartHP_FRLeg": {
+        "Value": 1
+      }
+    },
+    "MaterialHandler_PartLockLife_BLLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%MaterialHandler_CurPartHP_BLLeg"
+          },
+          "SubPartName": "MaterialHandler_BLLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MaterialHandler_PartLockLife_BRLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%MaterialHandler_CurPartHP_BRLeg"
+          },
+          "SubPartName": "MaterialHandler_BRLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MaterialHandler_PartLockLife_FLLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%MaterialHandler_CurPartHP_FLLeg"
+          },
+          "SubPartName": "MaterialHandler_FLLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MaterialHandler_PartLockLife_FRLeg": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SubPartLockLifePropertyMixin",
+          "DeltaLock": {
+            "LockType": "Total",
+            "LockValue": "%MaterialHandler_CurPartHP_FRLeg"
+          },
+          "SubPartName": "MaterialHandler_FRLeg"
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MaterialHandler_Stun": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PushHullColliderEnable",
+          "ColliderName": [
+            "HullCollider_L"
+          ],
+          "HullColliderEnable": false,
+          "Tag": "HullCollider_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushFeatureTargetEnableAction",
+          "FeatureTargetEnable": false,
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR"
+          ],
+          "Tag": "MaterialHandler_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "MaterialHandler_CurPartHP_BLLeg",
+          "PartName": "MaterialHandler_BLLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "MaterialHandler_CurPartHP_BRLeg",
+          "PartName": "MaterialHandler_BRLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "MaterialHandler_CurPartHP_FLLeg",
+          "PartName": "MaterialHandler_FLLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPartPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "MaterialHandler_CurPartHP_FRLeg",
+          "PartName": "MaterialHandler_FRLeg",
+          "Percentage": 1,
+          "PropertyType": "PartHP"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_BLLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "MaterialHandler_BLLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_BRLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "MaterialHandler_BRLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_FLLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "MaterialHandler_FLLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_FRLeg",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByPartDestroy",
+                  "PartName": "MaterialHandler_FRLeg"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopHullColliderEnable",
+          "Tag": "HullCollider_L",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopFeatureTargetEnableAction",
+          "FeatureTargetName": [
+            "LockPoint_Foot_FL",
+            "LockPoint_Foot_FR",
+            "LockPoint_Foot_BL",
+            "LockPoint_Foot_BR"
+          ],
+          "Tag": "MaterialHandler_Stun_DisableLegPoint",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_BLLeg",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_BRLeg",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_FLLeg",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "MaterialHandler_PartLockLife_FRLeg",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

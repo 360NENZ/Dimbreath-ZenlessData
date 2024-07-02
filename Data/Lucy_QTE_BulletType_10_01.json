@@ -1,0 +1,288 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Lucy_Attack_QTE_Trail_02"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 2,
+            "y": 20.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Caster",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "IsUseAttachPointPos": false,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Custom"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Lucy_Attack_SwitchIn_Attack_Bullet_AttackProperty_01",
+      "ExplodePosType": "HitPoint",
+      "HitExplodeRadius": 3.5,
+      "HitOtherExplode": true,
+      "HitStageExplode": true,
+      "HitStageGroundExplodeEffect": {
+        "EffectPattern": "Eff_Lucy_Attack_QTE_Explode_03"
+      },
+      "HitStageWallExplodeEffect": {
+        "EffectPattern": "Eff_Lucy_Attack_QTE_Explode_02"
+      },
+      "HitTargetExplodeEffect": {
+        "EffectPattern": "Eff_Lucy_Attack_QTE_Explode_02"
+      },
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementSimple",
+        "Acceleration": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "InitVelocity": {
+          "x": 0,
+          "y": 0,
+          "z": 7
+        },
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletCreateAction": [
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "Invisible"
+          ],
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "IsAdd": true,
+          "Target": "Custom"
+        }
+      ],
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Lucy_SwitchIn_Attack_CamShake_E_02",
+          "Target": "Other"
+        },
+        {
+          "$type": "GamepadRumbleAction",
+          "GamepadRumbleKey": "Lucy_GamepadRumble_E_QTE_Explosion"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Other",
+          "soundActionKey": "Play_SFX_Char_Skill_Lucy_Wood_SwitchIn_Attack_Explo"
+        },
+        {
+          "$type": "CreateSavePointAction",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "PointName": "Lucy_WoodQTEPoint_01",
+          "Target": "Custom"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAnimatorStateNormalizedTime",
+              "AnimatorStateName": "SwitchIn_Attack_Hide_02",
+              "CustomKey": "LucyWood_AbilityTargetting_01",
+              "FrameCountHigh": 0,
+              "FrameCountLow": 0,
+              "IsLoop": false,
+              "LayerIndex": 0,
+              "MaxFrameCountHigh": true,
+              "MaxFrameCountLow": false,
+              "Target": "Custom"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "ApplyLogicMoveAction",
+              "CustomKey": "LucyWood_AbilityTargetting_01",
+              "MovementConfig": {
+                "$type": "ConfigMovementTarget",
+                "Duration": 0.01,
+                "Gravity": 0.0,
+                "HitNormalRatio": 1,
+                "HitTangentialRatio": 1,
+                "MoveType": {
+                  "$type": "MovementTypeInstant",
+                  "CorrectionReferTarget": "LocalAvatar",
+                  "NeedRayCastCheck": false,
+                  "NeedTargetPositionCorrection": true
+                },
+                "ReachTargetStop": true,
+                "TargetPosRot": {
+                  "CoordsOption": "Relative",
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "PositionOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": -1.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SavePoint",
+                    "PointName": "Lucy_WoodQTEPoint_01"
+                  }
+                },
+                "TargetUpdateMode": "Always",
+                "TimesUpMoveOption": "Stop"
+              },
+              "RotationConfig": {
+                "$type": "ConfigRotationToTargetRotation",
+                "AllowRootMotionRotation": true,
+                "Duration": 0.01,
+                "ReachTargetStop": false,
+                "RotateSpeed": 1,
+                "RotateType": "Instant",
+                "TargetPosRot": {
+                  "CoordsOption": "ReferTarget",
+                  "NeedRaycastGround": true,
+                  "Offset": {
+                    "AngleOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "IsClampOffsetDistance": false,
+                    "IsUseRotationXZ": false,
+                    "IsUseRotationY": true,
+                    "PositionOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 100.0
+                    }
+                  },
+                  "TargetOption": {
+                    "$type": "ConfigPosRotReferTarget",
+                    "OffsetReferTarget": "SavePoint",
+                    "PointName": "Lucy_WoodQTEPoint_01"
+                  }
+                },
+                "TargetUpdateMode": "OnStart"
+              },
+              "Target": "Custom"
+            },
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "CustomKey": "LucyWood_AbilityTargetting_01",
+              "ParamName": "Trigger_Launch",
+              "ParamType": 1,
+              "Target": "Custom"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "Invisible"
+              ],
+              "CustomKey": "LucyWood_AbilityTargetting_01",
+              "IsAdd": false,
+              "Target": "Custom"
+            },
+            {
+              "$type": "DamageByAttackPropertyAction",
+              "AnimEventID": "Lucy_Attack_SwitchIn_Attack_AttackProperty_Ally_02",
+              "Attacker": "Self",
+              "CustomKey": "LucyWood_AbilityTargetting_01",
+              "Target": "Custom"
+            }
+          ]
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Lucy_Wood_BattleStance",
+          "CustomKey": "LucyWood_AbilityTargetting_01",
+          "Target": "Custom"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "FreezeRotateXZ": false,
+        "FreezeRotateY": false,
+        "ReachLimitStop": false,
+        "ReachTargetStop": false,
+        "RotateSpeed": 360,
+        "RotateType": "Instant",
+        "RotationAngleLimit": 360.0,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "NeedRaycastGround": true,
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 2.5,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "RaycastGroundOffset": 0.25,
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "SelfAttackTarget"
+          }
+        },
+        "TargetUpdateMode": "OnStart"
+      },
+      "Targetting": "Enemy"
+    }
+  ],
+  "AbilityName": "Lucy_QTE_BulletType_10_01",
+  "AbilityStacking": "Unique"
+}

@@ -1,0 +1,99 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "PlayTextureSheetSequenceAction",
+              "InterruptType": "Interrupt",
+              "IsKeepLastFrame": false,
+              "MeshPath": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Item_PlayerPhone_Model/Item_PlayerPhone",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Equal",
+                  "IntVal": 1,
+                  "ParamName": "Int_TextureSheetType",
+                  "ParamType": 3
+                }
+              ],
+              "Target": "Self",
+              "TextureSheetKey": "PlayerPhone_OpenMessage"
+            },
+            {
+              "$type": "PlayTextureSheetSequenceAction",
+              "InterruptType": "Interrupt",
+              "IsKeepLastFrame": false,
+              "MeshPath": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Item_PlayerPhone_Model/Item_PlayerPhone",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Equal",
+                  "IntVal": 2,
+                  "ParamName": "Int_TextureSheetType",
+                  "ParamType": 3
+                }
+              ],
+              "Target": "Self",
+              "TextureSheetKey": "PlayerPhone_OpenInterKnot"
+            }
+          ],
+          "AnimatorStateName": "Action_PlayPhone_Start",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "PlayTextureSheetSequenceAction",
+              "InterruptType": "Interrupt",
+              "IsKeepLastFrame": false,
+              "MeshPath": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Item_PlayerPhone_Model/Item_PlayerPhone",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Equal",
+                  "IntVal": 1,
+                  "ParamName": "Int_TextureSheetType",
+                  "ParamType": 3
+                }
+              ],
+              "Target": "Self",
+              "TextureSheetKey": "PlayerPhone_CloseMessage"
+            },
+            {
+              "$type": "PlayTextureSheetSequenceAction",
+              "InterruptType": "Interrupt",
+              "IsKeepLastFrame": false,
+              "MeshPath": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Item_PlayerPhone_Model/Item_PlayerPhone",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Equal",
+                  "IntVal": 2,
+                  "ParamName": "Int_TextureSheetType",
+                  "ParamType": 3
+                }
+              ],
+              "Target": "Self",
+              "TextureSheetKey": "PlayerPhone_CloseInterKnot"
+            }
+          ],
+          "AnimatorStateName": "Action_PlayPhone_End",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_MainCity_TextureSheetManage",
+  "AbilityStacking": "Unique"
+}

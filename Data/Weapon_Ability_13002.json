@@ -1,0 +1,195 @@
+{
+  "AbilityName": "Weapon_Ability_13002",
+  "AbilitySpecials": {
+    "AS_FeverRecover_Aid": {
+      "Value": 20
+    },
+    "AS_FeverRecover_Counter": {
+      "Value": 10
+    },
+    "AS_FeverRecover_ExSp": {
+      "Value": 20
+    },
+    "AS_FeverRecover_QTE": {
+      "Value": 50
+    },
+    "AS_IntervalCD": {
+      "Value": 12.0
+    },
+    "AS_SpRecover": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ListenerModifier_Weapon_Ability_13002",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FeverRecoverModifier_Aid": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": "%AS_FeverRecover_Aid",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    },
+    "FeverRecoverModifier_Counter": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": "%AS_FeverRecover_Counter",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    },
+    "FeverRecoverModifier_ExSp": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": "%AS_FeverRecover_ExSp",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    },
+    "FeverRecoverModifier_QTE": {
+      "Duration": "%AS_IntervalCD",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverFeverAction",
+          "Amount": "%AS_FeverRecover_QTE",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_SpRecover",
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ]
+    },
+    "ListenerModifier_Weapon_Ability_13002": {
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Unique",
+      "OnSkillStart": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FeverRecoverModifier_Counter",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "Counter",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FeverRecoverModifier_ExSp",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "ExSp",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FeverRecoverModifier_Aid",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "BeHitAid",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "ParryAid",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "EvadeAid",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "AssaultAid",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByFromSkillType",
+                  "SkillType": "CommonAid",
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Caster"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FeverRecoverModifier_QTE",
+          "Predicates": [
+            {
+              "$type": "ByFromSkillType",
+              "SkillType": "QTE",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}

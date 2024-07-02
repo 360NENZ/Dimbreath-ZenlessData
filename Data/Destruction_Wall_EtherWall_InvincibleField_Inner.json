@@ -1,0 +1,167 @@
+{
+  "AbilityName": "Destruction_Wall_EtherWall_InvincibleField_Inner",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FieldRangeModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FieldRangeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 270.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 200,
+            "FanCylinderColliderHeight": 4,
+            "FanCylinderColliderRadius": 4.5,
+            "FanCylinderColliderVertexNum": 36
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "InvincibleModifier",
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "NedfSoilder"
+                      ],
+                      "Target": "Target"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "InvincibleField"
+              ],
+              "IsAdd": true,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "NedfSoilder"
+                      ],
+                      "Target": "Target"
+                    }
+                  ]
+                }
+              ],
+              "Target": "Target"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "InvincibleModifier",
+              "Target": "Target"
+            },
+            {
+              "$type": "HandleAnimatorZoneTagsAction",
+              "AnimatorStateTags": [
+                "InvincibleField"
+              ],
+              "IsAdd": false,
+              "Target": "Target"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "MultipleRefresh"
+    },
+    "InvincibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Monster_Nineveh_Ultimate_Attackproperty_01",
+                "Monster_Nineveh_Ultimate_Attackproperty_02"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Monster_Nineveh_Ultimate_Attackproperty_01",
+                "Monster_Nineveh_Ultimate_Attackproperty_02",
+                "Monster_Nineveh_Ultimate_Attackproperty_03"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_NoDamage",
+          "PropertyValue": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

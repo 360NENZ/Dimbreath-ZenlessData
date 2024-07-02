@@ -1,0 +1,45 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "DitherFadeModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_OnlineExQTE_Dither",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DitherFadeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Common_OnlineExQTE_Dither",
+          "MpExecMode": "MpNonAuthorityOnly",
+          "Tag": "Avatar_Common_OnlineExQTE_Dither",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "MpExecMode": "MpNonAuthorityOnly",
+          "Tag": "Avatar_Common_OnlineExQTE_Dither",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

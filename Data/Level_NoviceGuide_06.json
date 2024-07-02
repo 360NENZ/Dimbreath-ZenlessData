@@ -1,0 +1,23 @@
+{
+  "AbilityName": "Level_NoviceGuide_06",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BreakStunRatioDownModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BreakStunRatioDownModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_BreakStunRatio": 1.0
+      }
+    }
+  }
+}

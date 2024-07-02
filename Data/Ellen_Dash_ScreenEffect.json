@@ -1,0 +1,606 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Start_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_End_01",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ScreenEffectModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Start_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 21,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 21,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 21,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_End_01",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier01"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Start_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 21,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Start_03",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_End_01",
+          "FrameCountHigh": 6,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier02"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "EffectModifier02"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "ReflectBullet",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ReflectBulletEffectModifier01"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ReflectBulletEffectModifier01"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_ReflectBullet",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ReflectBulletEffectModifier02"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Dash_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_ReflectBullet_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "BlurShadowModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DashAudioManageModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Dash_Loop_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DashAudioManageModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Ellen_Dash_ScreenEffect",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AidAttackDashAudioModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "ActwithStateFrameMixin",
+          "ConfigList": [
+            {
+              "ActionList": [
+                {
+                  "$type": "TriggerSoundAction",
+                  "Target": "Self",
+                  "soundActionKey": "Play_SFX_Char_Foley_Ellen_Evade_Dash_01_Loop"
+                },
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "AidAttackDashAudioModifier",
+                  "Target": "Self"
+                }
+              ],
+              "AnimatorStateName": "Dash_Loop_01",
+              "ForceTriggerOnTransitionIn": true,
+              "ForceTriggerOnTransitionOut": false,
+              "Frame": 0,
+              "IsLoop": false,
+              "LayerIndex": 0
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "BlurShadowModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "ConfigGhostEffectKey": "Common_Ghost_03",
+          "EchoTime": 0.1,
+          "IgnoreOwnerTimescale": true,
+          "IgnoreWorldTimescale": true,
+          "IsActive": true,
+          "LifeTime": 0.15,
+          "MaxGhostCount": 15,
+          "Tag": "Ellen_Dash_BlurShadow_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "BeginBlurShadowAction",
+          "IsActive": false,
+          "Tag": "Ellen_Dash_BlurShadow_01"
+        }
+      ]
+    },
+    "DashAudioManageModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AidAttackDashAudioModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EffectModifier01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Ellen_Attack_Dash_Loop_01_Dust",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Ellen_Attack_Dash_Loop_02_Trail",
+          "Target": "Self"
+        }
+      ]
+    },
+    "EffectModifier02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_Wpn_A1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Ellen_Attack_Dash_Loop_03_Weapon",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReflectBulletEffectModifier01": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Ellen_ReflectBullet_01_Smoke",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ReflectBulletEffectModifier02": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Prop1",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_Ellen_ReflectBullet_02_Weapon",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ScreenEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Avatar_Ellen_Dash_ScreenEffect_01",
+          "EffectType": "ScreenEffects",
+          "MpExecMode": "AuthorityOnly"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Avatar_Ellen_Dash_Vignette_01",
+          "EffectType": "Vignette",
+          "MpExecMode": "AuthorityOnly"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "Avatar_Ellen_Dash_Loop_RadialBlur_01",
+          "EffectType": "RadialBlur",
+          "MpExecMode": "AuthorityOnly"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "ScreenEffects",
+          "TargetKey": "Avatar_Ellen_Dash_ScreenEffect_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "Avatar_Ellen_Dash_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "RadialBlur",
+          "MpExecMode": "AuthorityOnly",
+          "TargetKey": "Avatar_Ellen_Dash_Loop_RadialBlur_01"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "AidAttackDashAudioModifier",
+      "Target": "Self"
+    }
+  ]
+}

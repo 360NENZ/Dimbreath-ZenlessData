@@ -1,0 +1,97 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 1.0,
+      "AudioEffect": "",
+      "BeamEffectEndClip": "Eff_Monster_TarasqueMixer_Attack_03_Beam_End",
+      "BeamEffectLoopClip": "Eff_Monster_TarasqueMixer_Attack_03_Beam",
+      "BlockColliderRadius": 0.3,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Monster_TarasqueMixer_Attack_03_Burst"
+      },
+      "BlockEffectEndClip": "Eff_Monster_TarasqueMixer_Attack_03_Burst_End",
+      "BlockEffectLoopClip": "Eff_Monster_TarasqueMixer_Attack_03_Burst",
+      "BlockInterval": -1,
+      "BlockInvincible": false,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "DodgeColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 1.0
+      },
+      "EffectName": "Eff_Monster_TarasqueMixer_Attack_03_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Monster_TarasqueMixer_Attack_03_Burst"
+      },
+      "FirstHitDelayTime": 0.0,
+      "HitAnimEventID": "Monster_TarasqueMixer_ATK03_AttackProperty_Laser_01",
+      "HitColliderRadius": 0.3,
+      "HitInterval": 0.05,
+      "HitInvincible": false,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "IgnoreTimeScale": false,
+      "LaserEndPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaserPoint_End",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "AimPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 99,
+      "Tag": "TarasqueMixer_ATK3_Laser"
+    }
+  ],
+  "AbilityName": "TarasqueMixer_ATK3_Laser",
+  "AbilityStacking": "Unique"
+}

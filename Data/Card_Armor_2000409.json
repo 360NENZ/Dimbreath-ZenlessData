@@ -1,0 +1,105 @@
+{
+  "AbilityName": "Card_Armor_2000409",
+  "AbilitySpecials": {
+    "Duration": {
+      "Value": 10
+    },
+    "HpPercentage": {
+      "Value": 0.2
+    },
+    "RecoverPercentage": {
+      "Value": 0
+    },
+    "ShieldAmount": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Control_Modifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BloodhandModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "HpShieldMixin",
+          "AddedActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Buff_Common_Defense",
+              "Target": "Self"
+            },
+            {
+              "$type": "ModifyMaterialPropertyAction",
+              "Tag": "CommonDefenseMaterial",
+              "Target": "Self",
+              "key": "Common_MA_Buff_Defence_RimGlow_01"
+            }
+          ],
+          "Duration": "%Duration",
+          "IfTakeRestDamageWhenEmpty": true,
+          "Priority": -1,
+          "RecoverAmount": 0,
+          "RecoverPercentage": "%RecoverPercentage",
+          "RemovedActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HpListenerModifier"
+            }
+          ],
+          "Tag": "BloodHand",
+          "TotalValueConfig": {
+            "Amount": 0,
+            "Percentage": "%ShieldAmount",
+            "PropertyType": "MaxHP"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "Control_Modifier": {
+      "Duration": -1,
+      "OnBeingHit": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HpListenerModifier"
+        }
+      ]
+    },
+    "HpListenerModifier": {
+      "ModifierMixins": [
+        {
+          "$type": "ActionsOnPropertyChangeMixin",
+          "PropertyActions": [
+            {
+              "IsUsePercentage": true,
+              "PropertyType": "CurHP",
+              "ReferMaxPropertyType": "MaxHP",
+              "ValueRangeActions": [
+                {
+                  "HighToValueActions": [
+                    {
+                      "$type": "ApplyModifier",
+                      "ModifierName": "BloodhandModifier"
+                    },
+                    {
+                      "$type": "RemoveModifier",
+                      "ModifierName": "Control_Modifier"
+                    }
+                  ],
+                  "Val": "%HpPercentage"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

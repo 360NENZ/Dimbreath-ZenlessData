@@ -1,0 +1,91 @@
+{
+  "AbilityName": "Weapon_Ability_14114",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio": {
+      "Value": 0.12
+    },
+    "AS_AddedDamageRatio": {
+      "Value": 0.12
+    },
+    "AS_Duration": {
+      "Value": 8.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TriggerModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedBreakStunRatioModifier": {
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackNormal",
+                "Normal"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AS_AddedBreakStunRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "AddedDamageRatioModifier": {
+      "Duration": "%AS_Duration",
+      "MaxStackingNumber": 5,
+      "ModifierStacking": "MultipleRefresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AttackNormal",
+                "Normal"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio",
+          "PropertyValue": "%AS_AddedDamageRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "TriggerModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOtherPre": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedDamageRatioModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AddedBreakStunRatioModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "TriggerModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

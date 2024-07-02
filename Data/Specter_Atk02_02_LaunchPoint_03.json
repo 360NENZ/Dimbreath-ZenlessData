@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Specter_Atk02_02_LaunchPoint_03",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ProcessAttachPointAction",
+      "AttachPointName": "LaunchPoint_02_01_World",
+      "HierarchyType": "World",
+      "PosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": true,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LaunchPoint_02_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "ProcessType": "Create",
+      "Target": "Self"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Specter_Atk02_02_Generator_02",
+      "Target": "Self"
+    }
+  ]
+}

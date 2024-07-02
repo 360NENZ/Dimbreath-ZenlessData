@@ -1,0 +1,27 @@
+{
+  "AbilityName": "Player_AnimEventBuff",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AnimEventBuff_1": {
+      "Buff": {
+        "BuffID": 1,
+        "IsOverrideDuration": false,
+        "IsOverrideOdds": false
+      }
+    },
+    "AnimEventBuff_2": {
+      "Buff": {
+        "BuffID": 2,
+        "IsOverrideDuration": false,
+        "IsOverrideOdds": false
+      }
+    },
+    "AnimEventBuff_3": {
+      "Buff": {
+        "BuffID": 3,
+        "IsOverrideDuration": false,
+        "IsOverrideOdds": false
+      }
+    }
+  }
+}

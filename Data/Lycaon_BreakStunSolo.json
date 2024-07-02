@@ -1,0 +1,558 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_End",
+          "FrameCountHigh": 65,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_01_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_Enhance_02_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_Attack_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_ChargeAttack_02_End",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_Attack_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_02",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_ChargeAttack_02_End",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_End",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 1,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_End",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "ModifierNameList": [
+            "StunResetControl"
+          ]
+        }
+      ],
+      "IsSeam": false
+    }
+  ],
+  "AbilityName": "Lycaon_BreakStunSolo",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnStunResetOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnStunResetModifier_Solo",
+        "MpExecMode": "MpAuthorityOnly",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BoolQTESoloModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.3,
+          "TimeUpActions": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_QTESolo",
+              "ParamType": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "InterruptInputEnableAction",
+              "Tag": "Player_QTEsolo_InputMute"
+            },
+            {
+              "$type": "InputMuteAction",
+              "CameraMoveMute": false,
+              "CharacterBagMute": false,
+              "CharacterMoveMute": false,
+              "CharacterSkillMute": true,
+              "CharacterSwitchMute": false,
+              "Tag": "Player_QTE_InputMute"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "NotIgnoreList": [
+        "World",
+        "Owner"
+      ],
+      "OnAdded": [
+        {
+          "$type": "InputMuteAction",
+          "CameraMoveMute": false,
+          "CharacterBagMute": false,
+          "CharacterMoveMute": false,
+          "CharacterSkillMute": false,
+          "CharacterSkillMute_KeepUI": true,
+          "CharacterSwitchMute": false,
+          "Tag": "Player_QTEsolo_InputMute"
+        },
+        {
+          "$type": "SkillButtonReplaceAction",
+          "SourceBtnIndex": 9,
+          "Tag": "Player_QTEsolo",
+          "TargetBtnIndex": 10
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_QTESolo",
+          "ParamType": 2
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ButtonReplaceTimer",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_QTEsolo_InputMute"
+        }
+      ]
+    },
+    "ButtonReplaceTimer": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "InterruptSkillButtonReplaceAction",
+          "Tag": "Player_QTEsolo"
+        }
+      ]
+    },
+    "CameraZoomType2": {
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "InvincibleBuffModifier": {
+      "Buff": {
+        "BuffID": 121001,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1,
+      "ModifierStacking": "Refresh"
+    },
+    "OnStunResetModifier_Solo": {
+      "Duration": 1.5,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "BoolQTESoloModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "PerfectEvade_TimeSlow",
+          "IsGlobal": false,
+          "MpExecMode": "MpDefault",
+          "Target": "Self"
+        },
+        {
+          "$type": "AttachModifier",
+          "ModifierName": "InvincibleBuffModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "SFX_Char_QTE_Online_Begin"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "QTESolo_Trigger_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "QTESolo_Trigger_CamStretch_01"
+        },
+        {
+          "$type": "CameraOverrideTrackAction",
+          "MpExecMode": "AuthorityOnly",
+          "OverrideKey": "QTE_Trigger_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "QTE_Trigger_RadialBlur_01",
+          "EffectType": "RadialBlur"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "QTE_Trigger_Vignette_01",
+          "EffectType": "Vignette"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "QTE_Trigger_ColorAdjustments_01",
+          "EffectType": "ColorAdjustments"
+        },
+        {
+          "$type": "ActSingleShakeDataModeAction",
+          "SingleMode": true
+        },
+        {
+          "$type": "CameraOverrideScreenDampingAction",
+          "EnableHorizontalDamping": true,
+          "EnableVerticalDamping": true,
+          "HorizontalDampingValue": 0.0,
+          "Target": "Self",
+          "VerticalDampingValue": 0.0
+        },
+        {
+          "$type": "PushMuteManullyCameraLockAction",
+          "Tag": "Player_QTE_ManullyCameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "PushMuteCameraLockOnTargetAction",
+          "Tag": "Player_QTE_CameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "CancelCameraLockOnAction",
+          "ExitBossLockTime": 0.3,
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Switch_Multiplayer_UI",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "NeedRaycastGround": false,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomAngleRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RandomPositionRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Camera"
+            }
+          },
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "BoolQTESoloModifier",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_QTE_InputMute"
+        },
+        {
+          "$type": "TriggerSoundAction",
+          "Target": "Self",
+          "soundActionKey": "SFX_Char_QTE_Online_Stop"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "QTESolo_Trigger_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "QTESolo_Trigger_CamStretch_01"
+        },
+        {
+          "$type": "CameraOverrideTrackEndAction",
+          "MpExecMode": "AuthorityOnly",
+          "OverrideKey": "QTE_Trigger_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "RadialBlur",
+          "TargetKey": "QTE_Trigger_RadialBlur_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectType": "Vignette",
+          "TargetKey": "QTE_Trigger_Vignette_01"
+        },
+        {
+          "$type": "InterruptScreenEffectAction",
+          "EffectKey": "QTE_Trigger_ColorAdjustments_01",
+          "EffectType": "ColorAdjustments"
+        },
+        {
+          "$type": "ActSingleShakeDataModeAction",
+          "SingleMode": false
+        },
+        {
+          "$type": "CameraOverrideScreenDampingEndAction",
+          "DisableHorizontalDamping": true,
+          "DisableVerticalDamping": true,
+          "Target": "Self"
+        },
+        {
+          "$type": "PopMuteManullyCameraLockAction",
+          "Tag": "Player_QTE_ManullyCameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "PopMuteCameraLockOnTargetAction",
+          "Tag": "Player_QTE_CameraLock",
+          "Target": "Self"
+        },
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Switch_Multiplayer_UI"
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptSetupUIAction",
+          "IgnoreFadeAnimation": false,
+          "SetupTag": "Player_QTE_SetupTag"
+        },
+        {
+          "$type": "InterruptInputEnableAction",
+          "Tag": "Player_QTE_InputMute"
+        }
+      ]
+    },
+    "StunResetControl": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "OnStunResetModifier_Solo",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

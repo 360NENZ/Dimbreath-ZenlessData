@@ -1,0 +1,186 @@
+{
+  "AbilityName": "Nineveh_WingMan_CoordinatedAttack",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SubsequentAttack_Bee": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 1,
+          "IgnoreTimeScale": false,
+          "TimeUpActions": [
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Hit"
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "WriteAIParamAction",
+              "IntParamValue": 1,
+              "ParamName": "ActionMode",
+              "Predicates": [
+                {
+                  "$type": "ByNot",
+                  "Predicates": [
+                    {
+                      "$type": "ByIsInZoneTags",
+                      "Tags": [
+                        "Hit"
+                      ],
+                      "Target": "Self"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": 2,
+      "ModifierStacking": "Unique"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "RandomOperator",
+      "Odds": 0.5,
+      "OnFailure": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "Monster_Nineveh_Bee_02",
+          "ParamName": "Bool_WingmanActionMode",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "CustomKey": "Monster_Nineveh_Bee_02",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "CustomKey": "Monster_Nineveh_Bee_02",
+                  "Tags": [
+                    "Hit"
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "CustomKey": "Monster_Nineveh_Bee_02",
+          "IntParamValue": 1,
+          "ParamName": "ActionMode",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "CustomKey": "Monster_Nineveh_Bee_02",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "CustomKey": "Monster_Nineveh_Bee_02",
+                  "Tags": [
+                    "Hit"
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Monster_Nineveh_Bee_01",
+          "ModifierName": "SubsequentAttack_Bee_01",
+          "Target": "Custom"
+        }
+      ],
+      "OnSuccess": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "CustomKey": "Monster_Nineveh_Bee_01",
+          "ParamName": "Bool_WingmanActionMode",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "CustomKey": "Monster_Nineveh_Bee_01",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "CustomKey": "Monster_Nineveh_Bee_01",
+                  "Tags": [
+                    "Hit"
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "WriteAIParamAction",
+          "CustomKey": "Monster_Nineveh_Bee_01",
+          "IntParamValue": 1,
+          "ParamName": "ActionMode",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "CustomKey": "Monster_Nineveh_Bee_01",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "CustomKey": "Monster_Nineveh_Bee_01",
+                  "Tags": [
+                    "Hit"
+                  ],
+                  "Target": "Custom"
+                }
+              ],
+              "Target": "Custom"
+            }
+          ],
+          "Target": "Custom"
+        },
+        {
+          "$type": "ApplyModifier",
+          "CustomKey": "Monster_Nineveh_Bee_02",
+          "ModifierName": "SubsequentAttack_Bee_02",
+          "Target": "Custom"
+        }
+      ],
+      "Predicates": [
+        {
+          "$type": "ByAIParam",
+          "BoolParamValue": true,
+          "ParamName": "Bool_UseCoordinatedAttack",
+          "Target": "Self"
+        }
+      ],
+      "Target": "Self"
+    }
+  ]
+}

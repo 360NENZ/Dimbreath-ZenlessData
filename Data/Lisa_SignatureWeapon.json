@@ -1,0 +1,125 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 7,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_MoveFront",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 7,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_MoveLeft",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 7,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_MoveRight",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 7,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "SignatureMaterialWeaponModifier",
+            "SignatureLightWeaponModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Lisa_SignatureWeapon",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "SignatureLightWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyIndicatedLightAction",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "indicatedLightKey": "Lisa_IndicatedLight"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveIndicatedLightAction",
+          "Target": "Self"
+        }
+      ]
+    },
+    "SignatureMaterialWeaponModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "HasSignatureWeapon"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "Lisa_Body_2"
+            }
+          ],
+          "Tag": "Avatar_Female_Size03_Lisa_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self",
+          "key": "Avatar_Female_Size03_Lisa_MA_SignatureWeapon_SecondaryEmission_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Avatar_Female_Size03_Lisa_MA_SignatureWeapon_SecondaryEmission_01",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

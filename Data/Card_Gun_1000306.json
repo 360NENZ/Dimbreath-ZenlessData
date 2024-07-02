@@ -1,0 +1,42 @@
+{
+  "AbilityName": "Card_Gun_1000306",
+  "AbilitySpecials": {
+    "HPRecoverRatio": {
+      "Value": 0.01
+    },
+    "TimeOfDuration": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CriticalHpUp",
+        "Predicates": [
+          {
+            "$type": "ByHitResult",
+            "HitResult": "Critical",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CriticalHpUp": {
+      "Duration": "%TimeOfDuration",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "RecoverHPAction",
+          "Percentage": "%HPRecoverRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

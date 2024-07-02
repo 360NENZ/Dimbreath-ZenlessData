@@ -1,0 +1,130 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenQTEMixin",
+      "ListenQTEWindowCanceled": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DitherFadeModifier_Listener",
+          "Target": "Self"
+        }
+      ],
+      "ListenQTEWindowClosed": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DitherFadeModifier_Listener",
+          "Target": "Self"
+        }
+      ],
+      "ListenQTEWindowOpened": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DitherFadeModifier_Listener",
+          "Target": "Self"
+        },
+        {
+          "$type": "InterruptDitherFadeAction",
+          "OverrideExitTime": 0.0,
+          "Tag": "Avatar_Rina_Attack_Rush_Dither_Fade",
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DitherFadeModifier_Effect",
+          "Target": "Self"
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_IsColliderOther_Attack_Rush",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush",
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Rush_02",
+          "FrameCountHigh": 36,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DitherFadeModifier_Effect"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Rina_IsColliderOther_Attack_Rush",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DitherFadeModifier_Listener",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DitherFadeModifier_Effect": {
+      "Duration": 0.35,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Avatar_Rina_Attack_Rush_Dither_Fade",
+          "Tag": "Avatar_Rina_Attack_Rush_Dither_Fade",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptDitherFadeAction",
+          "Tag": "Avatar_Rina_Attack_Rush_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DitherFadeModifier_Listener": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_IsColliderOther_Attack_Rush",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Rina_Attack_Rush_AttackProperty_Check"
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

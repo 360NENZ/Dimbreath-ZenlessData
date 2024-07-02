@@ -1,0 +1,41 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAidAttackTagMixin",
+      "AidAttackTagList": [
+        {
+          "CheckIsInView": true,
+          "CheckIsInViewOnlyOpenWindow": true,
+          "CheckTargetRangeOnlyOpenWindow": true,
+          "CheckWitchTimeOnlyOpenWindow": false,
+          "CloseDelayTime": 0,
+          "DisableInWitchTime": true,
+          "Tag": "AidAttack_Evade",
+          "TagHolder": "EnemyAllied",
+          "TargetRange": 20
+        }
+      ],
+      "CheckOpenWindow": true,
+      "OnListenTagAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_EvadeAidSolo",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ],
+      "OnListenTagRemoved": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_EvadeAidSolo",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ZhuYuan_EvadeAidSolo",
+  "AbilityStacking": "Unique"
+}

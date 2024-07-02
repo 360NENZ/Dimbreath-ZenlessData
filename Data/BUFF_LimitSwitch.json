@@ -1,0 +1,88 @@
+{
+  "AbilityName": "BUFF_LimitSwitch",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "BUFF_LimitSwitchModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BUFF_LimitSwitchModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnSwitchInBegin": [
+        {
+          "$type": "ModifyTeamFeverAction",
+          "ModifyFunction": "Add",
+          "Percent": 0.3,
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByAvatarSwitchType",
+                  "SwitchType": "AidAttack",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAidAttackType",
+                  "AidAttackType": "AssaultAid"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyTeamFeverAction",
+          "ModifyFunction": "Add",
+          "Percent": 0.3,
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByAvatarSwitchType",
+                  "SwitchType": "AidAttack",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAidAttackType",
+                  "AidAttackType": "ParryAid"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "$type": "ModifyTeamFeverAction",
+          "ModifyFunction": "Add",
+          "Percent": 0.3,
+          "Predicates": [
+            {
+              "$type": "ByAnd",
+              "Predicates": [
+                {
+                  "$type": "ByAvatarSwitchType",
+                  "SwitchType": "AidAttack",
+                  "Target": "Self"
+                },
+                {
+                  "$type": "ByAidAttackType",
+                  "AidAttackType": "EvadeAid"
+                }
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Curse_AbyssBuffToAvatar",
+  "AbilitySpecials": {},
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "Curse_AbyssDMGTakeAdjustByCoin",
+        "IsAutoTrigger": false,
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

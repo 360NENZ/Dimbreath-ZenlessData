@@ -1,0 +1,41 @@
+{
+  "AbilityName": "BUFF_HitRecoverSP",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "BUFF_HitRecoverSPModifier": {
+      "Duration": 30,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 0,
+          "IgnoreRatio": false,
+          "Percentage": 0.05,
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "BUFF_HitRecoverSPModifier",
+      "Target": "TeamAvatars"
+    },
+    {
+      "$type": "FireAudio",
+      "AudioPattern": "Play_sfx_interact_inlevel_pickup_sp"
+    },
+    {
+      "$type": "FireEffect",
+      "EffectPattern": "Eff_Avatar_LevelUp_01",
+      "Target": "LocalAvatar"
+    },
+    {
+      "$type": "ShowTipAction",
+      "ShowPage": 3,
+      "Target": "Self",
+      "TipID": 301101
+    }
+  ]
+}

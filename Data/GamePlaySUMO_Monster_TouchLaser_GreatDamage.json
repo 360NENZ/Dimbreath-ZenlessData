@@ -1,0 +1,20 @@
+{
+  "AbilityName": "GamePlaySUMO_Monster_TouchLaser_GreatDamage",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ReplaceDamageAction",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Device_MilitaryFence_Activating_Attackproperty_ToMonster"
+            ]
+          }
+        ],
+        "TargetDamage": 9999999
+      }
+    ]
+  }
+}

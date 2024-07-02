@@ -1,0 +1,51 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "StunMixin",
+      "AutoRecoverCD": "%AutoRecoverCD",
+      "AutoRecoverRate": "%AutoRecoverRate",
+      "CanInterruptAutoRecover": "%CanInterruptAutoRecover",
+      "CanInterruptDestroyRecover": "%CanInterruptDestroyRecover",
+      "DestroyRecoverCD": "%DestroyRecoverCD",
+      "DestroyRecoverRate": "%DestroyRecoverRate",
+      "OnStunCreateActions": [
+        {
+          "$type": "RemoveBuffModifier",
+          "BuffID": 101002,
+          "Target": "Self"
+        }
+      ],
+      "StunResetCount": "%StunResetCount",
+      "StunResetRecoverCD": "%StunResetRecoverCD",
+      "StunValueFullRecoverCD": "%StunValueFullRecoverCD"
+    }
+  ],
+  "AbilityName": "Monster_Common_StunMixin",
+  "AbilitySpecials": {
+    "AutoRecoverCD": {
+      "Value": 1
+    },
+    "AutoRecoverRate": {
+      "Value": 200
+    },
+    "CanInterruptAutoRecover": {
+      "Value": true
+    },
+    "CanInterruptDestroyRecover": {
+      "Value": false
+    },
+    "DestroyRecoverCD": {
+      "Value": 3
+    },
+    "DestroyRecoverRate": {
+      "Value": 70
+    },
+    "StunResetRecoverCD": {
+      "Value": 3
+    },
+    "StunValueFullRecoverCD": {
+      "Value": 3
+    }
+  },
+  "AbilityStacking": "Unique"
+}

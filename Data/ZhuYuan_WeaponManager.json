@@ -1,0 +1,1027 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 8,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_05_End",
+          "FrameCountHigh": 65,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Counter_End",
+          "FrameCountHigh": 75,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 11,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_01_End",
+          "FrameCountHigh": 122,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_1",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_End",
+          "FrameCountHigh": 52,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02_1_End",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid_End",
+          "FrameCountHigh": 70,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_BeHitAid_End",
+          "FrameCountHigh": 75,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "GrenadeEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "UltimateEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_End",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "UltimateEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_Start",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "UltimateEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "UltimateEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Ex_End",
+          "FrameCountHigh": 90,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "UltimateEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt_01",
+          "FrameCountHigh": 474,
+          "FrameCountLow": 172,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NoteBookVisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Taunt_02",
+          "FrameCountHigh": 419,
+          "FrameCountLow": 96,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "NoteBookVisibleModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "WeaponTransform_Shotgun_Back",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier",
+            "TransformCDModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "WeaponTransform_Shotgun_Back_01",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier",
+            "TransformCDModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "WeaponTransform_Shotgun_Front",
+          "FrameCountHigh": 20,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier",
+            "TransformCDModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_01",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_01_End",
+          "FrameCountHigh": 10,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_02",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_03",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_03_End",
+          "FrameCountHigh": 32,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_04",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Shotgun_04_End",
+          "FrameCountHigh": 78,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Shotgun_End",
+          "FrameCountHigh": 30,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_End_Shotgun",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Right_Shotgun",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Rush_Left_Shotgun",
+          "FrameCountHigh": 35,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Branch_02ToShotgun",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "ShotgunEquipModifier"
+          ]
+        }
+      ],
+      "IsSeam": false
+    },
+    {
+      "$type": "ActionsOnPropertyChangeMixin",
+      "PropertyActions": [
+        {
+          "CustomPropertyType": "ShotgunBullet",
+          "CustomReferMaxPropertyType": "ShotgunBulletMax",
+          "IsUsePercentage": false,
+          "PropertyType": "Custom",
+          "ReferMaxPropertyType": "Custom",
+          "ValueRangeActions": [
+            {
+              "Val": 1,
+              "ValueToLowActions": [
+                {
+                  "$type": "RemoveModifier",
+                  "ModifierName": "ShotgunEffectModifier",
+                  "Predicates": [
+                    {
+                      "$type": "ByNot",
+                      "Predicates": [
+                        {
+                          "$type": "ByOr",
+                          "Predicates": [
+                            {
+                              "$type": "ByIsInZoneTags",
+                              "Tags": [
+                                "ZhuYuan_Talent_01_QTEReady"
+                              ]
+                            },
+                            {
+                              "$type": "ByIsInZoneTags",
+                              "Tags": [
+                                "ZhuYuan_Talent_01_EXQTEReady"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "PopRenderVisibleAction",
+              "Predicates": [
+                {
+                  "$type": "ByAnimCtrlerParam",
+                  "CompareType": "Equal",
+                  "IntVal": 1,
+                  "ParamName": "Int_ZhuYuanWeaponIndex",
+                  "ParamType": 3
+                }
+              ],
+              "Tag": "ZhuYuan_Weapon_4"
+            }
+          ],
+          "AnimatorStateName": "Attack_Branch_02_End",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 11,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ShotgunEffectModifier",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "ZhuYuanHasBullet"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "WeaponTransform_Shotgun_Back",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 33,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ShotgunEffectModifier",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "ZhuYuanHasBullet"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "WeaponTransform_Shotgun_Back_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 33,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ShotgunEffectModifier",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "ZhuYuanHasBullet"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "WeaponTransform_Shotgun_Front",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 15,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "ShotgunEffectModifier",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "ZhuYuanHasBullet"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 15,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ShotgunEnterModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Normal_Shotgun_01",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 19,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "ShotgunEnterModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_Rush_Shotgun",
+          "ForceTriggerOnTransitionIn": true,
+          "ForceTriggerOnTransitionOut": true,
+          "Frame": 27,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "ZhuYuan_WeaponManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PistolEquipModifier",
+        "Target": "Self"
+      },
+      {
+        "$type": "PushRenderVisibleAction",
+        "Paths": [
+          "ZhuYuan_Props_01"
+        ],
+        "Tag": "ZhuYuan_Props_01",
+        "Visible": false
+      },
+      {
+        "$type": "PushRenderVisibleAction",
+        "Paths": [
+          "ZhuYuan_Weapon_4"
+        ],
+        "Tag": "ZhuYuan_Weapon_4",
+        "Visible": false
+      }
+    ]
+  },
+  "Modifiers": {
+    "GrenadeEquipModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PopRenderVisibleAction",
+          "Tag": "ZhuYuan_Weapon_3"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_3"
+          ],
+          "Tag": "ZhuYuan_Weapon_3",
+          "Visible": false
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PistolEquipModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "NoteBookVisibleModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "PopRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Props_01"
+          ],
+          "Tag": "ZhuYuan_Props_01"
+        },
+        {
+          "$type": "PlayTextureSheetSequenceAction",
+          "InterruptType": "Interrupt",
+          "IsKeepLastFrame": false,
+          "MeshPath": "ZhuYuan_Props_01",
+          "Target": "Self",
+          "TextureSheetKey": "Avatar_ZhuYuan_Taunt_NoteBook"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Props_01"
+          ],
+          "Tag": "ZhuYuan_Props_01",
+          "Visible": false
+        },
+        {
+          "$type": "InterruptTextureSheetSequenceAction",
+          "MeshPath": "ZhuYuan_Props_01",
+          "Target": "Self",
+          "TextureSheetKey": "Avatar_ZhuYuan_Taunt_NoteBook"
+        }
+      ]
+    },
+    "PistolEquipModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_2"
+          ],
+          "Tag": "ZhuYuan_Weapon_2",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_3"
+          ],
+          "Tag": "ZhuYuan_Weapon_3",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_5"
+          ],
+          "Tag": "ZhuYuan_Weapon_5",
+          "Visible": false
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 0,
+          "ParamName": "Int_ZhuYuanWeaponIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ShotgunEffectModifier",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShotgunDitherModifier": {
+      "Duration": 0.15,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ZhuYuan_Weapon_4"
+            }
+          ],
+          "Tag": "Avatar_Female_Size03_ZhuYuan_MA_Attack_Common_Mat05_Dither_05",
+          "Target": "Self",
+          "key": "Avatar_Female_Size03_ZhuYuan_MA_Attack_Common_Mat05_Dither_05"
+        },
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_B_Weapon",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_ZhuYuan_Attack_Common_06_Dust",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_4"
+          ],
+          "Tag": "ZhuYuan_Weapon_4",
+          "Visible": false
+        }
+      ]
+    },
+    "ShotgunEffectModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": false,
+          "RendererList": [
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ZhuYuan_Weapon_1"
+            },
+            {
+              "ApplyAllMaterials": true,
+              "RenderPath": "ZhuYuan_Weapon_4"
+            }
+          ],
+          "Tag": "ZhuYuan_ShotgunMA",
+          "Target": "Self",
+          "key": "Avatar_Female_Size03_ZhuYuan_MA_Attack_Common_Mat02_OverrideOutline_02"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "ZhuYuan_ShotgunMA",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShotgunEnterModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "AttachEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "AttachPoint": "Ctr_B_Weapon",
+              "IsUseAttachPointPos": true,
+              "IsUseAttachPointRotation": true,
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "EffectPattern": "Eff_ZhuYuan_Attack_Common_11_Flash",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ShotgunEquipModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "PopRenderVisibleAction",
+          "Tag": "ZhuYuan_Weapon_4"
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_3"
+          ],
+          "Tag": "ZhuYuan_Weapon_3",
+          "Visible": false
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 1,
+          "ParamName": "Int_ZhuYuanWeaponIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ShotgunEnterModifier",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "ZhuYuanHasBullet"
+              ],
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "ShotgunDitherModifier"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PistolEquipModifier"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "ShotgunEffectModifier"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "ZhuYuan_Talent_04",
+          "Predicates": [
+            {
+              "$type": "ByPlayerPropertyValue",
+              "CompareType": "Equal",
+              "CustomNumerator": "UnlockTalent_04",
+              "IsUsePercent": false,
+              "Numerator": "Custom",
+              "Target": "Self",
+              "Val1": 1
+            }
+          ]
+        }
+      ]
+    },
+    "TransformCDModifier": {
+      "Duration": 0.1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_ZhuYuan_CanTransform",
+          "ParamType": 2,
+          "Target": "Self"
+        }
+      ]
+    },
+    "UltimateEquipModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "PopRenderVisibleAction",
+          "Tag": "ZhuYuan_Weapon_5"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "ZhuYuan_Weapon_5"
+          ],
+          "Tag": "ZhuYuan_Weapon_5",
+          "Visible": false
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PistolEquipModifier",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

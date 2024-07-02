@@ -1,0 +1,18 @@
+{
+  "AbilityName": "Card_Edrink_1000206",
+  "AbilitySpecials": {
+    "ConfigSPRatio": {
+      "Value": 50
+    },
+    "SPRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "UniqueOverrideMap",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_SPGetRatio": "%ConfigSPRatio"
+    }
+  }
+}

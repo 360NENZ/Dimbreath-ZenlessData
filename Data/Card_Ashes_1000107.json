@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Card_Ashes_1000107",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 1
+    },
+    "Duration": {
+      "Value": 60
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "AddedDamageModifier",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffID",
+            "BuffIDList": [
+              1
+            ],
+            "Target": "Target"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AddedDamageModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_AddedDamageRatio": "%AddedDamageRatio"
+      }
+    }
+  }
+}

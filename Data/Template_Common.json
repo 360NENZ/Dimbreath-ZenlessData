@@ -1,0 +1,462 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "SkillBtnListenerMixin",
+      "BtnListeners": [
+        {
+          "BtnOperations": [
+            {
+              "ListenerType": "Click",
+              "PressTime": 1.0,
+              "TriggerActions": [
+                {
+                  "$type": "ApplyModifier",
+                  "ModifierName": "BleedBuffModifier"
+                }
+              ]
+            }
+          ],
+          "SkillBtnIndex": 0
+        }
+      ]
+    },
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 10,
+      "BulletColliderConfig": {
+        "BulletTypeName": "ConfigurableSphereCollider",
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Nostradamus_Attack_Branch_01_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Caster",
+        "NeedRaycastGround": false,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 5.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.11,
+            "y": 0.68,
+            "z": 1
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Caster",
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": true,
+      "DestroyExplode": true,
+      "DodgeColliderConfig": {
+        "CapsuleColliderHeight": 10.0,
+        "CapsuleColliderRadius": 2.0,
+        "ColliderAngleOffset": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 5.0
+        },
+        "ColliderType": "Capsule"
+      },
+      "ExplodeAnimEventID": "Nostradamus_Attack_Branch_01_Bullet_AttackProperty_01",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_Nostradamus_Attack_Branch_01_Explode"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "Nostradamus_Attack_Branch_01_Bullet_AttackProperty_01",
+      "HitExplodeRadius": 2,
+      "HitStageEffect": {
+        "EffectPattern": "TestHit_Punch"
+      },
+      "HitStageExplode": true,
+      "HitTargetEffect": {
+        "EffectPattern": "Eff_Anbi_Discharge_Cancel"
+      },
+      "HitTargetExplode": true,
+      "IsCanReflect": true,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementTarget",
+        "DefaultOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 10
+        },
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 1,
+        "HitTangentialRatio": 1,
+        "MoveType": {
+          "$type": "MovementTypeLerpSpeed",
+          "Speed": 5
+        },
+        "ReachTargetStop": false,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "IsClampOffsetDistance": true,
+            "PositionOffset": {
+              "x": 10,
+              "y": 0,
+              "z": 3
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "Always",
+        "TimesUpMoveOption": "Remain"
+      },
+      "OnBulletDestroyAction": [
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Nostradamus_BulletType_10_Explosion_01",
+          "PositionArgument": "Bullet"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Nostradamus_Bullet_Explosion_CamShake_01",
+          "Target": "Other"
+        }
+      ],
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "ReachTargetStop": false,
+        "RotateSpeed": 360,
+        "RotateType": "Fixed",
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "BackupOffsetReferTarget": "None",
+            "OffsetReferTarget": "Target"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TrailEffect": {
+        "EffectPattern": "Eff_Common_RandomSkill_Ani_Dagger_Explosive_FlyingTrail"
+      }
+    }
+  ],
+  "AbilityName": "Template_Common",
+  "AbilitySpecials": {
+    "AddedPlayerMaxEpDelta": {
+      "Value": 1
+    },
+    "RecoverSP": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ModifySkillMaxEP",
+        "DeltaValue": "%AddedPlayerMaxEpDelta",
+        "SkillName": "EVD",
+        "Target": "Self"
+      },
+      {
+        "$type": "LogStringAction",
+        "LogStr": "Template_Common启动!!!"
+      }
+    ]
+  },
+  "Modifiers": {
+    "AbilitySpecialsModifier": {
+      "Duration": -1,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%RecoverSP",
+          "IgnoreRatio": false,
+          "Percentage": 0
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 10,
+          "ParamName": "RecoverSP",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 5,
+              "ParamName": "RecoverSP",
+              "ParamType": "Float",
+              "Target": "Self"
+            }
+          ]
+        }
+      ]
+    },
+    "AnglePredicateModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Anbi_Discharge_Start",
+          "Predicates": [
+            {
+              "$type": "ByHitAngleRange",
+              "AngleMax": 120.0,
+              "AngleMin": 60.0
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "BleedBuffModifier": {
+      "Buff": {
+        "BuffID": 108006,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1
+    },
+    "CampTypePredicateModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Anbi_Discharge_Start",
+          "Predicates": [
+            {
+              "$type": "ByCampType",
+              "Camp": "TeamEvil"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DelayModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 1,
+          "TimeUpActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Anbi_Discharge_Start",
+              "Target": "Self"
+            }
+          ]
+        },
+        {
+          "DelayTime": 2,
+          "TimeUpActions": [
+            {
+              "$type": "FireEffect",
+              "EffectPattern": "Eff_Anbi_Discharge_Start",
+              "Target": "Self"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "RecoverSPAction",
+          "Amount": 0.12,
+          "IgnoreRatio": false,
+          "Percentage": 0,
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 0.01
+    },
+    "DitherFadeModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_Default_Dither_Fade",
+          "Tag": "Monster_Default_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    },
+    "InvincibleModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "WriteAIParamAction",
+          "BoolParamValue": true,
+          "FloatParamValue": 24.58,
+          "IntParamValue": 13,
+          "ParamName": "TestParam_01",
+          "StringParamValue": "ABCDCBA",
+          "Target": "Self"
+        }
+      ]
+    },
+    "ModifyArcanaCommonPropertyModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyArcanaCommonPropertyAction",
+          "ArcanaProperty": "ShieldDuration",
+          "Delta": 5.0,
+          "Ratio": 10.0,
+          "Target": "Buddy"
+        },
+        {
+          "$type": "ModifyProperty",
+          "Amount": 5.0,
+          "CustomPropertyType": "ShieldDuration_Delta",
+          "IsUsePercentage": false,
+          "Percentage": 0.2,
+          "PropertyModifyFunction": "Add",
+          "PropertyType": "Custom"
+        }
+      ]
+    },
+    "RecoverSPModifier": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "SmoothRecoverSPMixin",
+          "IgnoreRatio": false,
+          "PropertyItem": {
+            "Amount": 10,
+            "Percentage": 0,
+            "PropertyModifyFunction": "Add"
+          }
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "RelationShipPredicateModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Anbi_Discharge_Start",
+          "Predicates": [
+            {
+              "$type": "ByRelativeCampType",
+              "Relationship": "Enemy"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "ScreenEffectModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "TestCurve",
+          "EffectType": "Glitch"
+        }
+      ]
+    },
+    "StatePredicateModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Anbi_Discharge_Start",
+          "Predicates": [
+            {
+              "$type": "ByAnimatorStateType",
+              "AnimatorStateType": "Sky"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "MovementModifier"
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Nostradamus_BulletType_10_Explosion_01"
+    },
+    {
+      "$type": "InputMuteAction",
+      "CameraMoveMute": false,
+      "CharacterBagMute": false,
+      "CharacterMoveMute": false,
+      "CharacterSkillMute": false,
+      "Tag": "Template_Common_InputMute",
+      "ingoreTimeScale": true
+    }
+  ]
+}

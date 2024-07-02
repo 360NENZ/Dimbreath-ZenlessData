@@ -1,0 +1,17 @@
+{
+  "AbilityName": "Level_ZeroSwitch_Audio",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "FireAudio",
+        "AudioPattern": "Play_sfx_interaction_EtherMechanism_Glitch"
+      },
+      {
+        "$type": "RemoveAbilityAction",
+        "AbilityName": "Level_ZeroSwitch_Audio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

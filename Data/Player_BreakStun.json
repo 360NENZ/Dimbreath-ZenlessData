@@ -1,0 +1,126 @@
+{
+  "AbilityName": "Player_BreakStun",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnStunDestroyOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunBuffModifier",
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "OnBreakStunModifier",
+        "MpExecMode": "NotExecuted",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnStunResetOtherActions": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "StunBuffModifier",
+        "Target": "Target"
+      }
+    ],
+    "OnStunResetOtherMaxActions": [
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "MpExecMode": "NotExecuted",
+        "Tag": "Monster_Common_MA_BreakStun_ScreenImage_01",
+        "Target": "Target"
+      },
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "MpExecMode": "NotExecuted",
+        "Tag": "Monster_Common_MA_BreakStun_ScreenImage_02",
+        "Target": "Target"
+      },
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "MpExecMode": "NotExecuted",
+        "Tag": "Monster_Common_MA_BreakStun_OverrideRimGlow",
+        "Target": "Target"
+      },
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "MpExecMode": "AuthorityOnly",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_Common_MA_BreakStun_ScreenImage_01",
+        "Target": "Target"
+      },
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "MpExecMode": "AuthorityOnly",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_Common_MA_BreakStun_ScreenImage_02",
+        "Target": "Target"
+      },
+      {
+        "$type": "InterruptMaterialPropertyAction",
+        "MpExecMode": "AuthorityOnly",
+        "Predicates": [
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Tag": "Monster_Common_MA_BreakStun_OverrideRimGlow",
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "OnBreakStunModifier": {
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "TimeSlowByConfigKeyAction",
+          "ConfigKey": "Avatar_Common_BreakStun_TimeSlow_01",
+          "IsGlobal": true,
+          "MpExecMode": "NotExecuted"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_BreakStun_CamShake_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Avatar_Common_BreakStun_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_BreakStun_CamStretch_01"
+        }
+      ]
+    },
+    "StunBuffModifier": {
+      "Buff": {
+        "BuffID": 101002,
+        "IsOverrideDuration": true
+      },
+      "Duration": -1
+    }
+  }
+}

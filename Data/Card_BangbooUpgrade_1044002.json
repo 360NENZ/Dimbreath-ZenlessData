@@ -1,0 +1,53 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ListenAbilityMixin",
+      "AbilityName": "Bangboo_Safety_ReduceDefence",
+      "OnListenAbilityAdded": [
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Safety_ReduceDefence",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_DefenceRatio",
+                  "ParamName": "AS_DefenceRatio",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "SetTargetAbilitySpecialAction",
+          "Params": [
+            {
+              "AbilityName": "Bangboo_Safety_ReduceDefence",
+              "AbilitySpecials": [
+                {
+                  "ModifyFunction": "Replace",
+                  "Param": "AS_ReduceDefenceTime",
+                  "ParamName": "AS_ReduceDefenceTime",
+                  "ParamType": "Float"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Targetting": "Self"
+    }
+  ],
+  "AbilityName": "Card_BangbooUpgrade_1044002",
+  "AbilitySpecials": {
+    "AS_DefenceRatio": {
+      "Value": -0.15
+    },
+    "AS_ReduceDefenceTime": {
+      "Value": 10
+    }
+  },
+  "AbilityStacking": "Unique"
+}

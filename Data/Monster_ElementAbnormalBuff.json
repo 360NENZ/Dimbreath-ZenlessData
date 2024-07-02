@@ -1,0 +1,63 @@
+{
+  "AbilityName": "Monster_ElementAbnormalBuff",
+  "AbilitySpecials": {
+    "ElementAbnormalBuffDuration_1": {
+      "Value": 0
+    },
+    "ElementAbnormalBuffDuration_2": {
+      "Value": 0
+    },
+    "ElementAbnormalBuffDuration_3": {
+      "Value": 0
+    },
+    "ElementAbnormalBuffDuration_4": {
+      "Value": 0
+    },
+    "ElementAbnormalBuffDuration_5": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ElementAbnormalBuff_1": {
+      "Buff": {
+        "BuffID": 1,
+        "IsOverrideDuration": true,
+        "IsOverrideOdds": false
+      },
+      "Duration": "%ElementAbnormalBuffDuration_1"
+    },
+    "ElementAbnormalBuff_2": {
+      "Buff": {
+        "BuffID": 2,
+        "IsOverrideDuration": true,
+        "IsOverrideOdds": false
+      },
+      "Duration": "%ElementAbnormalBuffDuration_2"
+    },
+    "ElementAbnormalBuff_3": {
+      "Buff": {
+        "BuffID": 3,
+        "IsOverrideDuration": true,
+        "IsOverrideOdds": false
+      },
+      "Duration": "%ElementAbnormalBuffDuration_3"
+    },
+    "ElementAbnormalBuff_4": {
+      "Buff": {
+        "BuffID": 4,
+        "IsOverrideDuration": true,
+        "IsOverrideOdds": false
+      },
+      "Duration": "%ElementAbnormalBuffDuration_4"
+    },
+    "ElementAbnormalBuff_5": {
+      "Buff": {
+        "BuffID": 5,
+        "IsOverrideDuration": true,
+        "IsOverrideOdds": false
+      },
+      "Duration": "%ElementAbnormalBuffDuration_5"
+    }
+  }
+}

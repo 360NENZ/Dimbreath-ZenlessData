@@ -1,0 +1,91 @@
+{
+  "AbilityName": "Bangboo_Bagboo_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "ParamName": "Trigger_PressAttackA",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Bagboo_Attackproperty_Attack01_HitCheck"
+            ]
+          },
+          {
+            "$type": "ByAIParam",
+            "CompareType": "Equal",
+            "IntParamValue": 0,
+            "ParamName": "Int_Bagboo_SkillType"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 2,
+        "ParamName": "Int_AttackIndex",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Bagboo_Attackproperty_Attack01_HitCheck"
+            ]
+          },
+          {
+            "$type": "ByAIParam",
+            "CompareType": "Equal",
+            "IntParamValue": 0,
+            "ParamName": "Int_Bagboo_SkillType"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "ParamName": "Trigger_PressAttackA",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Bagboo_Attackproperty_Attack02_HitCheck"
+            ]
+          },
+          {
+            "$type": "ByAIParam",
+            "CompareType": "Equal",
+            "IntParamValue": 1,
+            "ParamName": "Int_Bagboo_SkillType"
+          }
+        ],
+        "Target": "Self"
+      },
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "IntVal": 3,
+        "ParamName": "Int_AttackIndex",
+        "ParamType": 3,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Bagboo_Attackproperty_Attack02_HitCheck"
+            ]
+          },
+          {
+            "$type": "ByAIParam",
+            "CompareType": "Equal",
+            "IntParamValue": 1,
+            "ParamName": "Int_Bagboo_SkillType"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

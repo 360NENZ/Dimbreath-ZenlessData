@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Card_Blunt_2000710",
+  "AbilitySpecials": {
+    "AddedStunRatio": {
+      "Value": 0.5
+    },
+    "Duration": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnDodgeSuccess": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DodgeModifier"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DodgeModifier": {
+      "Duration": "%Duration",
+      "ModifierStacking": "Refresh",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_AddedBreakStunRatio",
+          "PropertyValue": "%AddedStunRatio",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "AbilityName": "Device_Vehicle_MovingTrain_02_ControlDoor",
+  "AbilitySpecials": {
+    "OpenDoor": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DoorModifier": {
+      "Duration": 3,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_OpenDoor",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "OpenDoor",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_CloseDoor",
+          "ParamType": 1,
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "OpenDoor",
+              "ParamType": "Integer"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "DoorModifier",
+      "Target": "Self"
+    }
+  ]
+}

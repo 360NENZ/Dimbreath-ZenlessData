@@ -1,0 +1,108 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "LaserMixin",
+      "AliveDuration": 0.5,
+      "AudioEffect": "",
+      "BeamEffectLoopClip": "Eff_Bangboo_Devilboo_SwitchIn_Attack_11_Beam",
+      "BlockColliderRadius": 0,
+      "BlockEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_SwitchIn_Attack_16_Burst"
+      },
+      "BlockInterval": -1,
+      "BlockLayers": [
+        "ScenePropCollider"
+      ],
+      "EffectName": "Eff_Bangboo_Devilboo_SwitchIn_Attack_11_Beam",
+      "EndEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_SwitchIn_Attack_16_Burst"
+      },
+      "FadeRatio": 0.3,
+      "FirstHitDelayTime": 0.0,
+      "HitAnimEventID": "Bangboo_Devilboo_AttackProperty_QTE_03",
+      "HitColliderRadius": 0.5,
+      "HitEffect": {
+        "EffectPattern": "Eff_Bangboo_Devilboo_SwitchIn_Attack_16_Burst"
+      },
+      "HitInterval": 0.06,
+      "HitLayers": [
+        "HitCollider"
+      ],
+      "InterruptAnimationSpeed": 1.5,
+      "LaserEndPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "LaserInitPosRot": {
+        "CoordsOption": "Self",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "HeadPoint",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": false,
+          "OffsetReferTarget": "Self"
+        }
+      },
+      "Length": 100,
+      "OnLaserEndAction": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Bangboo_Devilboo_SwitchIn_Attack_16_Burst"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.2,
+          "Target": "Self"
+        }
+      ],
+      "OnLaserHitOtherAction": [],
+      "OnLaserInterruptAction": [
+        {
+          "$type": "SpecialEffectFadeAction",
+          "EffectNames": [
+            "Eff_Bangboo_Devilboo_SwitchIn_Attack_16_Burst"
+          ],
+          "OverrideFadeOutCurve": "QuintEaseInReverse",
+          "OverrideFadeOutTime": 0.2,
+          "Target": "Self"
+        }
+      ],
+      "OnLaserStartAction": [],
+      "StartEffect": {
+        "EffectPattern": ""
+      },
+      "Tag": "Devilboo_QTE_Laser"
+    }
+  ],
+  "AbilityName": "Bangboo_Devilboo_QTE_Laser",
+  "AbilityStacking": "Unique"
+}

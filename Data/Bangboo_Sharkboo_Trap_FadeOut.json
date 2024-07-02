@@ -1,0 +1,68 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "TrapFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 4,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "TrapFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "MoveAttack",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 23,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "TrapFadeOutModifier",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Death",
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 60,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Sharkboo_Trap_FadeOut",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TrapFadeOutModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Bangboo_Sharboo_Trap_Death_Dither_Fade",
+          "Tag": "Trap_FadeOut",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

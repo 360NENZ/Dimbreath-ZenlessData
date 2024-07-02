@@ -1,0 +1,142 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 20,
+      "BulletColliderConfig": {
+        "BoxColliderDistance": 0.4,
+        "BoxColliderHeight": 3,
+        "BoxColliderWidth": 1,
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Box"
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_Monster_LampasBlackVeil_Attack_05_10_Bullet"
+      },
+      "BulletHitDelayTime": 0.06,
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "ReferTarget",
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomAngleRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "RandomPositionRange": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "AttachPoint": "LauncherPoint_R_01",
+          "IsUseAttachPointPos": true,
+          "IsUseAttachPointRotation": true,
+          "OffsetReferTarget": "Caster"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": false,
+      "DestroyExplode": false,
+      "DodgeColliderConfig": {
+        "BoxColliderDistance": 0.75,
+        "BoxColliderHeight": 3,
+        "BoxColliderWidth": 1,
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Box"
+      },
+      "ExplodePosType": "HitPoint",
+      "HitAnimEventID": "Monster_LampasBlackVeil_Attack_05_Attackproperty_01",
+      "HitExplodeRadius": 3,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "IsCanReflect": false,
+      "MaxHitNum": 2,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 2,
+      "MaxTouchStageNum": 0,
+      "MovementConfig": {
+        "$type": "ConfigMovementCurve",
+        "CoordinateType": "Local",
+        "Duration": -1,
+        "Gravity": 0.0,
+        "HitNormalRatio": 0,
+        "HitTangentialRatio": 0,
+        "ScaleRatio": 15,
+        "TimesUpMoveOption": "Stop",
+        "VelocityCurveX": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_Speed_X",
+        "VelocityCurveY": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_Speed_Y",
+        "VelocityCurveZ": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_Speed_Z"
+      },
+      "RotationConfig": {
+        "$type": "ConfigRotationToTarget",
+        "Duration": -1,
+        "ReachTargetStop": false,
+        "RotateType": "Fixed",
+        "RotationCurve": "Monster_ComplexCorrupted_Attack_Range_02_Bullet_01_RotationCurve",
+        "ScaleRatio": 1,
+        "TargetPosRot": {
+          "CoordsOption": "Relative",
+          "Offset": {
+            "AngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "PositionOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "TargetOption": {
+            "$type": "ConfigPosRotReferTarget",
+            "AttachPoint": "MiddlePoint",
+            "BackupOffsetReferTarget": "None",
+            "IsUseAttachPointPos": true,
+            "IsUseAttachPointRotation": true,
+            "OffsetReferTarget": "LocalAvatar"
+          }
+        },
+        "TargetUpdateMode": "Always"
+      },
+      "Targetting": "Enemy",
+      "TimeUpExplode": false,
+      "UseScenePropCollider": true
+    }
+  ],
+  "AbilityName": "LampasBlackVeil_Attack_05_BulletType_01",
+  "AbilityStacking": "Unique"
+}

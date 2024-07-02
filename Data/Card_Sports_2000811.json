@@ -1,0 +1,35 @@
+{
+  "AbilityName": "Card_Sports_2000811",
+  "AbilitySpecials": {
+    "AddedDefenceeRatio": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DefUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Evade",
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DefUpModifier": {
+      "Duration": 5,
+      "ModifierStacking": "Replace",
+      "Properties": {
+        "Actor_DefenceRatio": "%AddedDefenceeRatio"
+      }
+    }
+  }
+}

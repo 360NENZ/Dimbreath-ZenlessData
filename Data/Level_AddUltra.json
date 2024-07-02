@@ -1,0 +1,67 @@
+{
+  "AbilityName": "Level_AddUltra",
+  "AbilitySpecials": {
+    "UitraRatio": {
+      "Value": 0
+    }
+  },
+  "Modifiers": {
+    "UltraModifier": {
+      "Duration": 0.1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ModifyTeamFeverAction",
+          "ModifyFunction": "Add",
+          "Percent": "%UitraRatio"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Common_Attack",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByInBlackCurtain",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "CommonAttackMaterial",
+          "Target": "Self",
+          "key": "Common_MA_Buff_Attack_RimGlow_01"
+        },
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "BUFF_EXQTE"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "UltraModifier",
+      "Target": "LocalAvatar"
+    }
+  ]
+}

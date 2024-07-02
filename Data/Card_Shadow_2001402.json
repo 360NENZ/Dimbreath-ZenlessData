@@ -1,0 +1,39 @@
+{
+  "AbilityName": "Card_Shadow_2001402",
+  "AbilitySpecials": {
+    "AS_WitchAfterImage03CD": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "TestModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "Afterimage"
+            ]
+          }
+        ],
+        "Target": "LocalAvatar"
+      }
+    ]
+  },
+  "Modifiers": {
+    "TestModifier": {
+      "Duration": 1,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Avatar_LevelUp_01",
+          "Target": "LocalAvatar"
+        }
+      ]
+    }
+  }
+}

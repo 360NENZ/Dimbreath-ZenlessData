@@ -1,0 +1,35 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Skill_Tanut_02_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "GoldenBomb_TanutBeHit"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "GoldenBomb_TanutBeHit",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "GoldenBomb_TanutBeHit": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "WriteAIParamAction",
+          "IntParamValue": 1,
+          "ParamName": "Int_EscapeType",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

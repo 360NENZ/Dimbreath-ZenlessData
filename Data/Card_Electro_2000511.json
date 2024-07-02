@@ -1,0 +1,30 @@
+{
+  "AbilityName": "Card_Electro_2000511",
+  "AbilitySpecials": {
+    "AS_AddedDMGRatio": {
+      "Value": 0.3
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Electric",
+              "Overload"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDMGRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

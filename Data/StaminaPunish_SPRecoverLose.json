@@ -1,0 +1,28 @@
+{
+  "AbilityName": "StaminaPunish_SPRecoverLose",
+  "AbilitySpecials": {
+    "AddedSpDelta": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnSkillStart": [
+      {
+        "$type": "RecoverSPAction",
+        "Amount": "%AddedSpDelta",
+        "IgnoreRatio": false,
+        "Percentage": 0,
+        "Predicates": [
+          {
+            "$type": "ByFromSkillType",
+            "SkillType": "Normal",
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  }
+}

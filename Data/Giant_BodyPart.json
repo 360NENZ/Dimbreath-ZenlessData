@@ -1,0 +1,151 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_L_Hand"
+      ],
+      "CanHitAfterDestroyed": false,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxHP": "%AS_HandHP",
+      "OnPartDestroy": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_Giant_Break_L_1"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Giant_LeftHandBroken",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_GiantGrey_Break_L_1"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Giant_LeftHandBroken",
+          "Visible": false
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Bip001 L Forearm",
+          "EffectPattern": "Eff_Monster_Giant_Broken_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "LeftHandBroken"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%AS_HandHP",
+      "PartName": "Giant_LeftHand"
+    },
+    {
+      "$type": "MultiPartMixin",
+      "BindHitColliderList": [
+        "HitCollider_R_Hand"
+      ],
+      "CanHitAfterDestroyed": false,
+      "IsUseHitFlowOnDestroyed": true,
+      "MaxHP": "%AS_HandHP",
+      "OnPartDestroy": [
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_Giant_Break_R_1"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Black"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Giant_RightHandBroken",
+          "Visible": false
+        },
+        {
+          "$type": "PushRenderVisibleAction",
+          "Paths": [
+            "Monster_GiantGrey_Break_R_1"
+          ],
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Grey"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Tag": "Giant_RightHandBroken",
+          "Visible": false
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "Bip001 R Forearm",
+          "EffectPattern": "Eff_Monster_Giant_Broken_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "RightHandBroken"
+          ],
+          "IsAdd": true,
+          "Target": "Self"
+        }
+      ],
+      "OwnerDamagetakeRatio": 0,
+      "PartDamageTakeRatio": 0,
+      "PartHP": "%AS_HandHP",
+      "PartName": "Giant_BodyPart"
+    }
+  ],
+  "AbilityName": "Giant_BodyPart",
+  "AbilitySpecials": {
+    "AS_HandHP": {
+      "Value": 100
+    },
+    "AS_HandHPRatio": {
+      "Value": 0.001
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(MaxHP)*specials(AS_HandHPRatio)",
+        "ParamName": "AS_HandHP",
+        "Target": "Self",
+        "ValueType": "Float"
+      }
+    ]
+  }
+}

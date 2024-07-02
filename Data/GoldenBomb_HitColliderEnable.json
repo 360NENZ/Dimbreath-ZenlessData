@@ -1,0 +1,17 @@
+{
+  "AbilityName": "GoldenBomb_HitColliderEnable",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "PushHitColliderEnable",
+        "ColliderName": [
+          "HitCollider"
+        ],
+        "HitColliderEnable": true,
+        "Tag": "GoldenBomb_HitCollider",
+        "Target": "Self"
+      }
+    ]
+  }
+}

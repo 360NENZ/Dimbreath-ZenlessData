@@ -1,0 +1,37 @@
+{
+  "AbilityName": "Affix_FieldDurationUp_ByKillInField",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "FieldDurationUp_ByKillInField",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "FieldDurationUp_ByKillInField": {
+      "ModifierMixins": [
+        {
+          "$type": "KillTargetMixin",
+          "Actions": [
+            {
+              "$type": "ModifyArcanaCommonPropertyAction",
+              "ArcanaProperty": "FieldRangeDuration",
+              "Delta": 1,
+              "Predicates": [
+                {
+                  "$type": "ByIsInFieldRange",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Buddy"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

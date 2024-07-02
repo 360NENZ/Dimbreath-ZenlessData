@@ -1,0 +1,84 @@
+{
+  "AbilityName": "Longinus_Talent_01",
+  "AbilitySpecials": {
+    "AS_AddSP": {
+      "Value": 0
+    },
+    "AS_AddedSpCD_Talent_03": {
+      "Value": 40
+    },
+    "AS_Proportion_Talent_03": {
+      "Value": 40
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBattleEnter": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LonginusTalent03Modifier",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "Less",
+            "Denominator": "MaxSP",
+            "IsUsePercent": false,
+            "Numerator": "CurSP",
+            "Target": "Self",
+            "Val1": "%AS_Proportion_Talent_03"
+          },
+          {
+            "$type": "ByIsLocalAvatar",
+            "IsLocalAvatar": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ],
+    "OnSwitchInBegin": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LonginusTalent03Modifier",
+        "Predicates": [
+          {
+            "$type": "ByPlayerPropertyValue",
+            "CompareType": "Less",
+            "Denominator": "MaxSP",
+            "IsUsePercent": false,
+            "Numerator": "CurSP",
+            "Target": "Self",
+            "Val1": "%AS_Proportion_Talent_03"
+          },
+          {
+            "$type": "ByInOutBattleStatus",
+            "IsInBattle": true,
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "LonginusTalent03Modifier": {
+      "Duration": "%AS_AddedSpCD_Talent_03",
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "80-property(CurSP)",
+          "ParamName": "AS_AddSP",
+          "Target": "Self",
+          "ValueType": "Float"
+        },
+        {
+          "$type": "RecoverSPAction",
+          "Amount": "%AS_AddSP",
+          "IgnoreRatio": true,
+          "Percentage": 0
+        }
+      ]
+    }
+  }
+}

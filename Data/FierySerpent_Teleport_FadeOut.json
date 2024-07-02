@@ -1,0 +1,38 @@
+{
+  "AbilityName": "FierySerpent_Teleport_FadeOut",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "InvisibleModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "PushEntityVisibleWithTagAction",
+              "Tag": "Death",
+              "Visible": false
+            }
+          ]
+        }
+      ],
+      "Duration": 1.0,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "DitherFadeAction",
+          "DitherFadeKey": "Monster_DeathXIII_Dither_Fade",
+          "Tag": "Monster_DeathXIII_Dither_Fade",
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "InvisibleModifier",
+      "Target": "Self"
+    }
+  ]
+}

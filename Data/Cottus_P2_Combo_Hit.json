@@ -1,0 +1,34 @@
+{
+  "AbilityName": "Cottus_P2_Combo_Hit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "WriteAIParamAction",
+        "BoolParamValue": true,
+        "ParamName": "Bool_BeHit",
+        "Target": "Self"
+      }
+    ],
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Cottus_P2_ATK06_Attackproperty_Detect",
+              "Monster_Cottus_P2_ATK06_Attackproperty_01",
+              "Monster_Cottus_P2_ATK05_Attackproperty_Detect",
+              "Monster_Cottus_P2_Evade_Attackproperty_Detect"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

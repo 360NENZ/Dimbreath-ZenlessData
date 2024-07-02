@@ -1,0 +1,50 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_05",
+          "FrameCountHigh": 0,
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "CameraStretchModifier_Attack_05"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "QingYi_CameraAction",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "CameraStretchModifier_Attack_05": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "QingYi_Attack_Normal_05_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "QingYi_Attack_Normal_05_CamStretch_01"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "QingYi_Attack_Normal_05_CamZoom_01"
+        },
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "QingYi_Attack_Normal_05_CamStretch_01"
+        }
+      ]
+    }
+  }
+}

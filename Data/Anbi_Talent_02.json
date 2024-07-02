@@ -1,0 +1,61 @@
+{
+  "AbilityName": "Anbi_Talent_02",
+  "AbilitySpecials": {
+    "AS_AddedBreakStunRatio_Talent_02": {
+      "Value": 0.2
+    },
+    "AS_AddedDamageRatio_Talent_02": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": true,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Anbi_Attack_Normal_04_Perfect_AttackProperty_01",
+              "Anbi_Attack_Normal_04_Perfect_AttackProperty_02",
+              "Anbi_Attack_Normal_04_Perfect_AttackProperty_03",
+              "Anbi_Attack_Normal_04_Perfect_AttackProperty_04",
+              "Anbi_Attack_Normal_04_Perfect_AttackProperty_05"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AS_AddedDamageRatio_Talent_02",
+        "Target": "Self"
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByIsStunDestroyed",
+            "IsStunDestroyed": false,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "AttackSpecial",
+              "ExSp"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedBreakStunRatio",
+        "PropertyValue": "%AS_AddedBreakStunRatio_Talent_02",
+        "Target": "Self"
+      }
+    ]
+  }
+}

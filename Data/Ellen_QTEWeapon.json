@@ -1,0 +1,226 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_Normal_03",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 26,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DistanceZone"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_Normal_Enhance_03",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 26,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DistanceZone"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_AssaultAid",
+          "FrameCountHigh": 60,
+          "FrameCountLow": 26,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": false,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "DistanceZone"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Ellen_QTEWeapon",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "DistanceZone": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 1,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 1,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.8,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 1,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 2,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.67,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 2,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 3,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.53,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 3,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 4,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.42,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 4,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 5,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.3,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 5,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 6,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.18,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 6,
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "LessEqual",
+              "Distance": 7,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "FloatVal": 0.0,
+          "ParamName": "Float_QTEBlend",
+          "ParamType": 4,
+          "Predicates": [
+            {
+              "$type": "ByDistance",
+              "CompareTarget": "LastLocalAvatarAttackTarget",
+              "CompareType": "Greater",
+              "Distance": 7,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

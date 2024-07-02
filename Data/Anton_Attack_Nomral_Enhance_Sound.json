@@ -1,0 +1,40 @@
+{
+  "AbilityName": "Anton_Attack_Nomral_Enhance_Sound",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DrillSoundModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Anton_Attack_Counter_02_AttackProperty_01_02",
+              "Anton_Attack_Counter_02_AttackProperty_01_03",
+              "Anton_Attack_Normal_Enhance_03_AttackProperty_02_01",
+              "Anton_Attack_Normal_Enhance_03_AttackProperty_02_02",
+              "Anton_Attack_Normal_Enhance_03_AttackProperty_02_03",
+              "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_01",
+              "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_02",
+              "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_03"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Modifiers": {
+    "DrillSoundModifier": {
+      "Duration": 0.08,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireAudio",
+          "AudioPattern": "Play_sfx_impact_char_anton_attack_normal_enhance_03_2_Common"
+        }
+      ]
+    }
+  }
+}

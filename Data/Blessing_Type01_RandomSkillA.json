@@ -1,0 +1,31 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Born",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "TestModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Blessing_Type01_RandomSkillA",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "TestModifier": {
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "GetRandomFollowerAction",
+          "Company": 1
+        }
+      ]
+    }
+  }
+}

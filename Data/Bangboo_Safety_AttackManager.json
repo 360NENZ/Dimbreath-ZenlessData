@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Bangboo_Safety_AttackManager",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Bangboo_Safety_Attackproperty_HitCheck"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

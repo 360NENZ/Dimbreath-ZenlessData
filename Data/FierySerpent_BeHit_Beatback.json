@@ -1,0 +1,129 @@
+{
+  "AbilityName": "FierySerpent_BeHit_Beatback",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "FierySerpent_BeHit_Beatback": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnBeingHit": [
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementSimple",
+            "Acceleration": {
+              "x": 0,
+              "y": 0,
+              "z": 50
+            },
+            "CoordinateType": "Local",
+            "Duration": 0.2,
+            "Gravity": 0.0,
+            "HitNormalRatio": 0,
+            "HitTangentialRatio": 0,
+            "InitVelocity": {
+              "x": 0,
+              "y": 0,
+              "z": -15
+            },
+            "TimesUpMoveOption": "Stop"
+          },
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Other"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyLogicMoveAction",
+          "MovementConfig": {
+            "$type": "ConfigMovementSimple",
+            "Acceleration": {
+              "x": 0,
+              "y": 0,
+              "z": 50
+            },
+            "CoordinateType": "Local",
+            "Duration": 0.2,
+            "Gravity": 0.0,
+            "HitNormalRatio": 0,
+            "HitTangentialRatio": 0,
+            "InitVelocity": {
+              "x": 0,
+              "y": 0,
+              "z": -35
+            },
+            "TimesUpMoveOption": "Stop"
+          },
+          "Predicates": [
+            {
+              "$type": "ByTargetHitEffect",
+              "TargetSubHitEffectGrounds": [
+                "Heavy"
+              ]
+            }
+          ],
+          "RotationConfig": {
+            "$type": "ConfigRotationToTarget",
+            "Duration": 0.1,
+            "ReachTargetStop": true,
+            "RotateSpeed": 1,
+            "RotateType": "Instant",
+            "TargetPosRot": {
+              "CoordsOption": "Relative",
+              "Offset": {
+                "AngleOffset": {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                },
+                "PositionOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "TargetOption": {
+                "$type": "ConfigPosRotReferTarget",
+                "BackupOffsetReferTarget": "None",
+                "OffsetReferTarget": "Other"
+              }
+            },
+            "TargetUpdateMode": "OnStart"
+          },
+          "Target": "Self"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "FierySerpent_BeHit_Beatback",
+      "Target": "Self"
+    }
+  ]
+}

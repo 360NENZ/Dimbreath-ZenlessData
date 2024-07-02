@@ -1,0 +1,396 @@
+{
+  "AbilityName": "Anton_MathSkill",
+  "AbilitySpecials": {
+    "AS_CanClearBuffAttack": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_CanCritCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_CanTriggerBuffAttack": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_DamageRatio": {
+      "Value": 0.1,
+      "ValueType": "Float"
+    },
+    "AS_HitCount": {
+      "Value": 0,
+      "ValueType": "Integer"
+    },
+    "AS_InternalCD": {
+      "Value": 0.5,
+      "ValueType": "Float"
+    },
+    "AS_MaxHitCount": {
+      "Value": 10,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ApplyTriggerBuffAttackModifier",
+        "Predicates": [
+          {
+            "$type": "ByMathSkillSuccess"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ApplyTriggerBuffAttackModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "TriggerBuffAttackModifier",
+          "Predicates": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "AttackEnhanceHit"
+                },
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "ExModeOtherHit"
+                }
+              ],
+              "Target": "Caster"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_CanTriggerBuffAttack",
+              "ParamType": "Integer",
+              "Target": "Caster"
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByOr",
+              "Predicates": [
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "AttackEnhanceHit"
+                },
+                {
+                  "$type": "ByApplyPredicate",
+                  "PredicateName": "ExModeOtherHit"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Less",
+              "Param": "%AS_MaxHitCount",
+              "ParamName": "AS_HitCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByHitResult",
+              "HitResult": "Critical"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_CanCritCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByOr",
+                  "Predicates": [
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 0,
+                      "ParamName": "AS_CanTriggerBuffAttack",
+                      "ParamType": "Integer",
+                      "Target": "Caster"
+                    },
+                    {
+                      "$type": "ByAbilitySpecial",
+                      "CompareType": "Equal",
+                      "Param": 1,
+                      "ParamName": "AS_CanClearBuffAttack",
+                      "ParamType": "Integer",
+                      "Target": "Caster"
+                    }
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Add",
+                  "Param": 1,
+                  "ParamName": "AS_HitCount",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": 0,
+                  "ParamName": "AS_CanCritCount",
+                  "ParamType": "Integer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "OnPatternAttackLandedFinished": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": "%AS_MaxHitCount",
+              "ParamName": "AS_HitCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "TriggerBuffAttackCDModifier"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            },
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 0,
+              "ParamName": "AS_CanTriggerBuffAttack",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 1,
+              "ParamName": "AS_CanTriggerBuffAttack",
+              "ParamType": "Integer"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 0,
+              "ParamName": "AS_HitCount",
+              "ParamType": "Integer"
+            }
+          ]
+        }
+      ],
+      "OnPatternAttackLandedPre": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": 1,
+          "ParamName": "AS_CanCritCount",
+          "ParamType": "Integer"
+        },
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Equal",
+              "Param": 1,
+              "ParamName": "AS_CanTriggerBuffAttack",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "BranchOperator",
+              "Conditions": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Equal",
+                  "Param": 1,
+                  "ParamName": "AS_CanClearBuffAttack",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "SuccessActions": [
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": 0,
+                  "ParamName": "AS_CanTriggerBuffAttack",
+                  "ParamType": "Integer"
+                },
+                {
+                  "$type": "SetAbilitySpecialAction",
+                  "ModifyFunction": "Replace",
+                  "Param": 0,
+                  "ParamName": "AS_CanClearBuffAttack",
+                  "ParamType": "Integer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "TriggerBuffAttackCDModifier": {
+      "Duration": "%AS_InternalCD",
+      "ModifierStacking": "Replace"
+    },
+    "TriggerBuffAttackModifier": {
+      "Duration": 0.03,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "BranchOperator",
+          "Conditions": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "SuccessActions": [
+            {
+              "$type": "TriggerBuffAttackAction",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ],
+              "DamageRatio": "%AS_DamageRatio",
+              "Target": "Self"
+            },
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "TriggerBuffAttackCDModifier",
+              "Target": "Caster"
+            },
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": 1,
+              "ParamName": "AS_CanClearBuffAttack",
+              "ParamType": "Integer",
+              "Target": "Caster"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Predicates": {
+    "AttackEnhanceHit": {
+      "Predicates": [
+        {
+          "$type": "ByAnimEventIDs",
+          "AnimEventIDs": [
+            "Anton_Attack_Normal_Enhance_01_AttackProperty_01",
+            "Anton_Attack_Normal_Enhance_01_AttackProperty_02",
+            "Anton_Attack_Normal_Enhance_01_AttackProperty_03",
+            "Anton_Attack_Normal_Enhance_01_AttackProperty_04",
+            "Anton_Attack_Normal_Enhance_03_AttackProperty_01",
+            "Anton_Attack_Normal_Enhance_03_AttackProperty_02_01",
+            "Anton_Attack_Normal_Enhance_03_AttackProperty_02_02",
+            "Anton_Attack_Normal_Enhance_03_AttackProperty_02_03",
+            "Anton_Attack_Normal_Enhance_03_AttackProperty_02_04",
+            "Anton_Attack_Normal_Enhance_04_AttackProperty_01_01",
+            "Anton_Attack_Normal_Enhance_04_AttackProperty_01_02",
+            "Anton_Attack_Normal_Enhance_04_AttackProperty_02",
+            "Anton_Attack_Rush_02_AttackProperty_01",
+            "Anton_Attack_Rush_02_AttackProperty_02",
+            "Anton_Attack_Rush_02_AttackProperty_03",
+            "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_01",
+            "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_02",
+            "Anton_Attack_BeHitAid_Enhance_AttackProperty_01_03",
+            "Anton_Attack_BeHitAid_Enhance_AttackProperty_02",
+            "Anton_Attack_Counter_02_AttackProperty_01_01",
+            "Anton_Attack_Counter_02_AttackProperty_01_02",
+            "Anton_Attack_Counter_02_AttackProperty_01_03",
+            "Anton_Attack_Counter_02_AttackProperty_02",
+            "Anton_Attack_Branch_02_AttackProperty_01",
+            "Anton_Attack_Branch_02_AttackProperty_02",
+            "Anton_Attack_Branch_02_AttackProperty_03",
+            "Anton_Attack_Branch_03_AttackProperty_01",
+            "Anton_Attack_Branch_03_AttackProperty_02",
+            "Anton_Attack_Branch_03_AttackProperty_03"
+          ]
+        }
+      ]
+    },
+    "ExModeOtherHit": {
+      "Predicates": [
+        {
+          "$type": "ByAnd",
+          "Predicates": [
+            {
+              "$type": "ByIsInZoneTags",
+              "Tags": [
+                "Anton_ExMode"
+              ]
+            },
+            {
+              "$type": "ByAnimEventIDs",
+              "AnimEventIDs": [
+                "Anton_Attack_AssaultAid_AttackProperty_01",
+                "Anton_Attack_AssaultAid_AttackProperty_02_01",
+                "Anton_Attack_AssaultAid_AttackProperty_02_02",
+                "Anton_Attack_SwitchIn_Attack_AttackProperty_01",
+                "Anton_Attack_SwitchIn_Attack_AttackProperty_02",
+                "Anton_Attack_SwitchIn_Attack_AttackProperty_03",
+                "Anton_Attack_SwitchIn_Attack_AttackProperty_04_01",
+                "Anton_Attack_SwitchIn_Attack_AttackProperty_04_02",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_01",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_02",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_03",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_04",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_05_01",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_05_02",
+                "Anton_Attack_SwitchIn_Attack_Ex_AttackProperty_05_03"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

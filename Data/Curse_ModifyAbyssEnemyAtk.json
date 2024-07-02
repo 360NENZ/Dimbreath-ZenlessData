@@ -1,0 +1,15 @@
+{
+  "AbilityName": "Curse_ModifyAbyssEnemyAtk",
+  "AbilitySpecials": {
+    "AddedAttackRatio": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "Properties": {
+      "Actor_BaseAttackRatio": "%AddedAttackRatio"
+    }
+  }
+}

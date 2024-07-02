@@ -1,0 +1,22 @@
+{
+  "AbilityName": "LampasBlackVeil_AidAttackTrigger_Attack_02",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "BoolVal": true,
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "ParamName": "Trigger_PressAttackA",
+      "ParamType": 1,
+      "Target": "Custom"
+    },
+    {
+      "$type": "SetAnimCtrlerParamAction",
+      "CustomKey": "Monster_LampasBlackVeil_CoAttacker",
+      "IntVal": 2,
+      "ParamName": "Int_AttackIndex",
+      "ParamType": 3,
+      "Target": "Custom"
+    }
+  ]
+}

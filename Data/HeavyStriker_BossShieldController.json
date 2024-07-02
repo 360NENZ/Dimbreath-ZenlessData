@@ -1,0 +1,217 @@
+{
+  "AbilityName": "HeavyStriker_BossShieldController",
+  "AbilitySpecials": {
+    "AS_ShieldCD": {
+      "Value": 15.0,
+      "ValueType": "Float"
+    },
+    "AS_ShieldOpenTimer": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    },
+    "AS_ShieldReduceAmount": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    },
+    "AS_ShieldReduceSkillRatio": {
+      "Value": 0.0,
+      "ValueType": "Float"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "HeavyStriker_BossShield_CD_Modifier"
+      }
+    ],
+    "OnCustomEventReceived": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByCustomEvent",
+            "EventKey": "HeavyStriker_BreakShield"
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": "%AS_ShieldOpenTimer",
+            "ParamName": "AS_ShieldCD",
+            "ParamType": "Float"
+          },
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Add",
+            "Param": 10,
+            "ParamName": "AS_ShieldCD",
+            "ParamType": "Float"
+          },
+          {
+            "$type": "ApplyModifier",
+            "ModifierName": "HeavyStriker_BossShield_CD_Modifier"
+          },
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Replace",
+            "Param": 0.0,
+            "ParamName": "AS_ShieldOpenTimer",
+            "ParamType": "Float"
+          }
+        ]
+      }
+    ],
+    "OnSkillStart": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "GreaterEqual",
+            "Param": 10.0,
+            "ParamName": "AS_ShieldOpenTimer",
+            "ParamType": "Float"
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "BranchOperator",
+            "Conditions": [
+              {
+                "$type": "ByOr",
+                "Predicates": [
+                  {
+                    "$type": "ByFromSkillID",
+                    "SkillID": "Monster_HeavyStriker_ATK04"
+                  },
+                  {
+                    "$type": "ByFromSkillID",
+                    "SkillID": "Monster_HeavyStriker_ATK06"
+                  }
+                ]
+              }
+            ],
+            "FailureActions": [
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": 1.0,
+                "ParamName": "AS_ShieldReduceSkillRatio",
+                "ParamType": "Float"
+              }
+            ],
+            "SuccessActions": [
+              {
+                "$type": "SetAbilitySpecialAction",
+                "ModifyFunction": "Replace",
+                "Param": 3.0,
+                "ParamName": "AS_ShieldReduceSkillRatio",
+                "ParamType": "Float"
+              }
+            ]
+          },
+          {
+            "$type": "SetAbilitySpecialByExpressionListAction",
+            "Expressions": [
+              {
+                "AbilitySpecialName": "AS_ShieldReduceAmount",
+                "Expression": "-min((min(({0}/10-1),10)/100*{1}*{2}),({3}-0.01*{4}))",
+                "OutputType": "Float"
+              }
+            ],
+            "Params": [
+              {
+                "$type": "ExpressionParamAbilitySpecial",
+                "AbilitySpecialKey": "AS_ShieldOpenTimer"
+              },
+              {
+                "$type": "ExpressionParamAbilitySpecial",
+                "AbilitySpecialKey": "AS_ShieldReduceSkillRatio"
+              },
+              {
+                "$type": "ExpressionParamHPShield",
+                "HPShieldTag": "HeavyStriker_Shield",
+                "HPShieldValueType": "MaxValue"
+              },
+              {
+                "$type": "ExpressionParamHPShield",
+                "HPShieldTag": "HeavyStriker_Shield",
+                "HPShieldValueType": "CurValue"
+              },
+              {
+                "$type": "AbilitySpecialExpressionParamProperty",
+                "PropertyType": "MaxHP"
+              }
+            ]
+          },
+          {
+            "$type": "ModifyHpShieldAction",
+            "CurValueDelta": "%AS_ShieldReduceAmount",
+            "Predicates": [
+              {
+                "$type": "ByAbilitySpecial",
+                "CompareType": "Less",
+                "Param": 0.0,
+                "ParamName": "AS_ShieldReduceAmount",
+                "ParamType": "Float"
+              }
+            ],
+            "Tag": "HeavyStriker_Shield"
+          }
+        ]
+      }
+    ],
+    "OnThinkInterval": [
+      {
+        "$type": "BranchOperator",
+        "Conditions": [
+          {
+            "$type": "ByIsInZoneTags",
+            "Tags": [
+              "ShieldOpen",
+              "Boss"
+            ]
+          }
+        ],
+        "SuccessActions": [
+          {
+            "$type": "SetAbilitySpecialAction",
+            "ModifyFunction": "Add",
+            "Param": 0.1,
+            "ParamName": "AS_ShieldOpenTimer",
+            "ParamType": "Float"
+          },
+          {
+            "$type": "RemoveModifier",
+            "ModifierName": "HeavyStriker_BossShield_CD_Modifier"
+          }
+        ]
+      }
+    ],
+    "ThinkInterval": 0.1
+  },
+  "Modifiers": {
+    "HeavyStriker_BossShield_CD_Modifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": "%AS_ShieldCD",
+          "TimeUpActions": [
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": true,
+              "ParamName": "TryTransform"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "HeavyStriker_BossShield_CD_Modifier"
+            }
+          ]
+        }
+      ],
+      "Duration": -1
+    }
+  }
+}

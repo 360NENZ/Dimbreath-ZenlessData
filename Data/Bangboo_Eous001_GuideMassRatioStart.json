@@ -1,0 +1,11 @@
+{
+  "AbilityName": "Bangboo_Eous001_GuideMassRatioStart",
+  "AbilityStacking": "Unique",
+  "OnAbilityStart": [
+    {
+      "$type": "ModifyMassRatioAction",
+      "Ratio": 999.0,
+      "Target": "Self"
+    }
+  ]
+}

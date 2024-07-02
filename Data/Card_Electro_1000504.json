@@ -1,0 +1,46 @@
+{
+  "AbilityName": "Card_Electro_1000504",
+  "AbilitySpecials": {
+    "Odds": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnKillOtherPre": [
+      {
+        "$type": "RandomOperator",
+        "Odds": "%Odds",
+        "OnSuccess": [
+          {
+            "$type": "ApplyModifier",
+            "CustomKey": "Card_Eletric_Kill_Ability_Small_AbilityTargetting",
+            "ModifierName": "Elc_Buff",
+            "Target": "Custom"
+          }
+        ],
+        "Predicates": [
+          {
+            "$type": "ByHasBuffGroup",
+            "BuffGroupList": [
+              "Electric"
+            ],
+            "Target": "Target"
+          }
+        ],
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Elc_Buff": {
+      "Buff": {
+        "BuffID": 3,
+        "IsOverrideDuration": false
+      },
+      "Duration": 1,
+      "ModifierStacking": "Replace"
+    }
+  }
+}

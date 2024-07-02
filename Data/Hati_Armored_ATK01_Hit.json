@@ -1,0 +1,24 @@
+{
+  "AbilityName": "Hati_Armored_ATK01_Hit",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOtherPre": [
+      {
+        "$type": "SetAnimCtrlerParamAction",
+        "BoolVal": true,
+        "ParamName": "Trigger_AttackLanded",
+        "ParamType": 1,
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_Hati_Armored_ATK01_Attackproperty_01",
+              "Monster_Hati_Armored_ATK07_Attackproperty_01"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  }
+}

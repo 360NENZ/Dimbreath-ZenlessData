@@ -1,0 +1,26 @@
+{
+  "AbilityName": "ComplexCorrupted_SwitchPhasePredicate",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyAbilityAction",
+        "AbilityName": "ComplexCorrupted_SwitchPhase",
+        "IsAutoTrigger": false,
+        "Predicates": [
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByTags",
+                "TagList": [
+                  "P1Only"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

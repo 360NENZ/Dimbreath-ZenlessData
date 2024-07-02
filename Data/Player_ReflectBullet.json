@@ -1,0 +1,119 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachZoneTagWithModifierMixin",
+      "ConfigList": [
+        {
+          "ModifierNameList": [
+            "ReflectBulletModifier"
+          ],
+          "ZoneTag": "ReflectBullet"
+        }
+      ]
+    },
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Run_Start",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReflectBulletModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Run_Loop",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReflectBulletModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "TurnBack",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReflectBulletModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "ReflectBullet",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReflectBulletModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "ReflectBullet_End",
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "ReflectBulletModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Player_ReflectBullet",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "ReflectBulletModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ChangeReflectBulletStatusAction",
+          "ColliderConfig": {
+            "BulletTypeName": "ConfigurableSphereCollider",
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "ColliderType": "Sphere",
+            "SphereColliderRadius": 0.75
+          },
+          "HitEffect": {},
+          "ReflectStatus": true
+        }
+      ],
+      "OnReflectBullet": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_ReflectBullet",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ChangeReflectBulletStatusAction",
+          "ReflectStatus": false
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Trigger_ReflectBullet",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

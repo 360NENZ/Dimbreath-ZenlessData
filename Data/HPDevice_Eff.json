@@ -1,0 +1,80 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Idle_Undomain",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "Idle_UndomainModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Open",
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "OpenModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        },
+        {
+          "AnimatorStateName": "Domaining",
+          "IsLoop": true,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "DomainingModifier"
+          ],
+          "NormalizedTimeHigh": 1.0,
+          "NormalizedTimeLow": 0.0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "HPDevice_Eff",
+  "Modifiers": {
+    "DomainingModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domained_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "Idle_UndomainModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "AttachEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Idle_Domaining_Loop",
+          "Target": "Self"
+        }
+      ]
+    },
+    "OpenModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_NPC_DomainOccupy_Domaining_End",
+          "Target": "Self"
+        },
+        {
+          "$type": "DropItemAction",
+          "DropStr": "1222:10000:20",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

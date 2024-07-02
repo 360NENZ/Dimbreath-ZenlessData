@@ -1,0 +1,36 @@
+{
+  "AbilityName": "GamePlayEvadeChampion_Cyclops_ChargeShot_Interval_1",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Trigger_Skill02",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Trigger_Skill02": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnThinkInterval": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "IntVal": 2,
+          "ParamName": "Int_AttackIndex",
+          "ParamType": 3,
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_PressAttackA",
+          "ParamType": 1,
+          "Target": "Self"
+        }
+      ],
+      "ThinkInterval": 5
+    }
+  }
+}

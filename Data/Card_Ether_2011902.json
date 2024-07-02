@@ -1,0 +1,58 @@
+{
+  "AbilityName": "Card_Ether_2011902",
+  "AbilitySpecials": {
+    "AS_BuffDamageRatio": {
+      "Value": 1
+    },
+    "Duration": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHit": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Ether_ControlModifier_Card_2011902",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Ether"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Ether_ControlModifier_Card_2011902": {
+      "Duration": "%Duration",
+      "IsUnique": true,
+      "ModifierStacking": "Replace",
+      "OnBuffDamageBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByBuffAttackProperty",
+              "BuffGroupList": [
+                "Electric",
+                "Overload",
+                "Erosion",
+                "Chaos",
+                "Frozen",
+                "Frostbite",
+                "Burn",
+                "Ignite",
+                "Strike"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_BuffDamageRatio",
+          "PropertyValue": "%AS_BuffDamageRatio",
+          "Target": "Target"
+        }
+      ]
+    }
+  }
+}

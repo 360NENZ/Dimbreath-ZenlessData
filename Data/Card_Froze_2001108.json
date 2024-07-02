@@ -1,0 +1,41 @@
+{
+  "AbilityName": "Card_Froze_2001108",
+  "AbilitySpecials": {
+    "AS_DefRatio": {
+      "Value": 0.5
+    },
+    "AS_MaxStack": {
+      "Value": 5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnBuffAddToOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "IceToDEFUpModifier",
+        "Predicates": [
+          {
+            "$type": "ByHandlingBuffGroup",
+            "BuffGroupList": [
+              "Frozen",
+              "Frostbite"
+            ]
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "IceToDEFUpModifier": {
+      "Duration": -1,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleRefresh",
+      "Properties": {
+        "Actor_DefenceRatio": "%AS_DefRatio"
+      }
+    }
+  }
+}

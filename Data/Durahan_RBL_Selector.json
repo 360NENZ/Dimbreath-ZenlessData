@@ -1,0 +1,49 @@
+{
+  "AbilityName": "Durahan_RBL_Selector",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnBeingHitPre": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DurahanParryAidedModifier",
+        "Predicates": [
+          {
+            "$type": "ByAnimTagList",
+            "TagList": [
+              "ParryAid"
+            ]
+          },
+          {
+            "$type": "ByTags",
+            "TagList": [
+              "Boss"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DurahanParryAidedModifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Refresh",
+      "OnAdded": [
+        {
+          "$type": "SetRBLOffsetAction",
+          "RBLOffset": -2,
+          "Tag": "Durahan_RBL_ParryAid",
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "UnsetRBLOffsetAction",
+          "Tag": "Durahan_RBL_ParryAid",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

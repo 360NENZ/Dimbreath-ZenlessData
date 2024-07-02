@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Card_Edrink_1000207",
+  "AbilitySpecials": {
+    "SPRecover": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnKillOtherPre": [
+      {
+        "$type": "DropItemAction",
+        "DropStr": "1002:10000:1",
+        "Target": "Target"
+      }
+    ]
+  }
+}

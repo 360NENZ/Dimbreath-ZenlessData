@@ -1,0 +1,174 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "BulletMixin",
+      "AliveDuration": 2.0,
+      "BulletColliderConfig": {
+        "ColliderAngleOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderPosOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "ColliderType": "Sphere",
+        "SphereColliderRadius": 0.3
+      },
+      "BulletEffect": {
+        "EffectPattern": "Eff_RandomSkill_NuclearStrike_Bullet"
+      },
+      "BulletHitTypeName": "Normal",
+      "BulletInitPosRot": {
+        "CoordsOption": "Relative",
+        "NeedRaycastGround": true,
+        "Offset": {
+          "AngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupAngleOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "BackupPositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "IsUseRotationXZ": false,
+          "IsUseRotationY": true,
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "RaycastGroundOffset": 0.0,
+        "TargetOption": {
+          "$type": "ConfigPosRotReferTarget",
+          "BackupOffsetReferTarget": "Caster",
+          "OffsetReferTarget": "Target"
+        }
+      },
+      "BulletName": "Bullet_Empty",
+      "CanHitStage": false,
+      "DestroyExplode": true,
+      "ExplodeAnimEventID": "Bangboo_Eous001_Skill_Cannon_Nuclear_Attackproperty_01",
+      "ExplodeEffect": {
+        "EffectPattern": "Eff_RandomSkill_NuclearStrike_Explode"
+      },
+      "ExplodePosType": "Bullet",
+      "HitExplodeRadius": 6,
+      "HitOtherExplode": false,
+      "HitStageExplode": false,
+      "MaxHitNum": 0,
+      "MaxHitStageNum": 0,
+      "MaxHitTargetNum": 0,
+      "MaxTouchStageNum": 0,
+      "OnBulletDestroyAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Bangboo_Skill_Cannon_CamShake_01",
+          "Target": "Other"
+        }
+      ],
+      "Targetting": "Stage"
+    }
+  ],
+  "AbilityName": "Bangboo_Eous001_Skill_Cannon_Nuclear",
+  "AbilitySpecials": {
+    "AS_CDReductionRatio": {
+      "Value": 0
+    },
+    "AS_ConvertRatio": {
+      "Value": 0.5
+    },
+    "AS_CurHP": {
+      "Value": 0
+    },
+    "AS_MaxHP": {
+      "Value": 0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "RevocerCDModifier": {
+      "Duration": 0.01,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_CurHP",
+          "Percentage": 100.0,
+          "PropertyType": "CurHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialsByPropertyAction",
+          "ModifyFunction": "Replace",
+          "ParamName": "AS_MaxHP",
+          "Percentage": 100.0,
+          "PropertyType": "MaxHP",
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_CurHP",
+          "ParamName": "AS_CDReductionRatio",
+          "ParamType": "Float",
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Div",
+          "Param": "%AS_MaxHP",
+          "ParamName": "AS_CDReductionRatio",
+          "ParamType": "Float",
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": -1.0,
+          "ParamName": "AS_CDReductionRatio",
+          "ParamType": "Float",
+          "Target": "Caster"
+        },
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Mul",
+          "Param": "%AS_ConvertRatio",
+          "ParamName": "AS_CDReductionRatio",
+          "ParamType": "Float",
+          "Target": "Caster"
+        },
+        {
+          "$type": "ModifySkillCDAction",
+          "Delta": 0.0,
+          "Ratio": "%AS_CDReductionRatio",
+          "SkillName": "Bangboo_Eous001_Skill_Cannon_Nuclear",
+          "Target": "Caster"
+        }
+      ]
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "SkillStartAction",
+      "StartedSkillName": "Bangboo_Eous001_Skill_Cannon_Nuclear",
+      "Target": "Self"
+    },
+    {
+      "$type": "ApplyModifier",
+      "ModifierName": "RevocerCDModifier",
+      "Target": "LocalAvatar"
+    }
+  ]
+}

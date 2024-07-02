@@ -1,0 +1,765 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "Attack_ParrySolo_Start",
+          "FrameCountHigh": 75,
+          "FrameCountLow": 0,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "DeflectModifier",
+            "CameraEventModifier_Start",
+            "ReflectBulletModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "Attack_ParrySolo_H",
+          "FrameCountHigh": 50,
+          "FrameCountLow": 12,
+          "LayerIndex": 0,
+          "ModifierNameList": [
+            "AutoDeflectModifier",
+            "ReflectBulletModifier"
+          ]
+        }
+      ],
+      "IsSeam": true
+    },
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Player_AssaultAid_EnableEffect",
+              "MpExecMode": "AuthorityOnly",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "AssaultAid_Disable_Hint"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_ParrySolo_L",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "TriggerAbilityAction",
+              "AbilityName": "Player_AssaultAid_EnableEffect",
+              "MpExecMode": "AuthorityOnly",
+              "Predicates": [
+                {
+                  "$type": "ByIsInZoneTags",
+                  "Tags": [
+                    "AssaultAid_Disable_Hint"
+                  ],
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "Attack_ParrySolo_H",
+          "ForceTriggerOnTransitionIn": false,
+          "ForceTriggerOnTransitionOut": false,
+          "Frame": 1,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Aokaku_ParrySolo",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "AutoDeflectModifier": {
+      "OnAdded": [
+        {
+          "$type": "PushBlockStateAction"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Aokaku_Attack_ParryAid_H_AttackProperty_01",
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Heavy"
+            },
+            {
+              "$type": "ByHitDataType",
+              "TheHitDataType": "Melee"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Aokaku_Attack_ParryAid_L_AttackProperty_01",
+          "Predicates": [
+            {
+              "$type": "ByHitDataType",
+              "TheHitDataType": "Melee"
+            },
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Light"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_01_Solo",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 1
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Light"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_02_Solo",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 1
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Heavy"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "AutoParryModifer",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopBlockStateAction"
+        }
+      ]
+    },
+    "AutoParryModifer": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry_H",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_ParryAid_H_CamShake_01"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "ParrySolo_RadialBlur_01",
+          "EffectType": "RadialBlur",
+          "MpExecMode": "AuthorityOnly"
+        },
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Aokaku_ParryAid"
+        }
+      ],
+      "OnAttackLanded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "AutoParryModifer"
+        }
+      ]
+    },
+    "CameraEventModifier_Start": {
+      "OnRemoved": [
+        {
+          "$type": "CameraStretchEndAction",
+          "EndCameraStretchKey": "Avatar_Common_ParrySolo_Start_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomEndAction",
+          "EndCameraZoomKey": "Avatar_Common_ParrySolo_Start_CamZoom_01"
+        }
+      ]
+    },
+    "DeflectModifier": {
+      "OnAdded": [
+        {
+          "$type": "PushBlockStateAction"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_ParrySolo_Start_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "ZoomConfigKey": "Avatar_Common_ParrySolo_Start_CamZoom_01"
+        },
+        {
+          "$type": "FireEffect",
+          "AttachPointName": "ChestPoint",
+          "EffectPattern": "Eff_PerfectAid_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_PerfectAid_01_Cube",
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Common_MA_Avatar_PerfectAid_OverrideOutline",
+          "Target": "Self",
+          "key": "Common_MA_Avatar_PerfectAid_OverrideOutline"
+        }
+      ],
+      "OnBeingHit": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "PropertyKey": "Actor_NoHitEffect",
+          "PropertyValue": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Aokaku_Attack_ParryAid_H_AttackProperty_01",
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Heavy"
+            },
+            {
+              "$type": "ByHitDataType",
+              "TheHitDataType": "Melee"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "DamageByAttackPropertyAction",
+          "AnimEventID": "Aokaku_Attack_ParryAid_L_AttackProperty_01",
+          "Predicates": [
+            {
+              "$type": "ByHitDataType",
+              "TheHitDataType": "Melee"
+            },
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Light"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Target"
+        },
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": -1,
+          "ModifyFunction": "Add",
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Light"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "ModifyPerfectSwitchPointAction",
+          "Amount": -1,
+          "ModifyFunction": "Add",
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Heavy"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_01_Solo",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 1
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Light"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Eff_Hit_Parry_02_Solo",
+          "FireEffectPosRot": {
+            "CoordsOption": "ReferTarget",
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": true,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 1
+              }
+            },
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Heavy"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": false,
+          "Target": "Self"
+        },
+        {
+          "$type": "HandleAnimatorZoneTagsAction",
+          "AnimatorStateTags": [
+            "AssaultAid_Disable_Hint"
+          ],
+          "IsAdd": true,
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AssaultAid_Disable_Hint"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": false,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "AssaultAid_Disable_Hint"
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Bool_AssaultAid_Enable",
+          "ParamType": 2,
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "AssaultAid_Disable_Hint"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LightParryModifer",
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Light"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HeavyParryModifer",
+          "Predicates": [
+            {
+              "$type": "ByHitStrengthType",
+              "TheHitStrengthType": "Heavy"
+            },
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByAnimTagList",
+                  "TagList": [
+                    "ParryNotCount"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "PopBlockStateAction"
+        }
+      ]
+    },
+    "HeavyParryModifer": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry_H",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_ParryAid_H_CamShake_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_ParryAid_H_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "StretchConfigKey": "Avatar_Common_ParryAid_H_CamZoom_01"
+        },
+        {
+          "$type": "CameraOverrideTrackAction",
+          "MpExecMode": "AuthorityOnly",
+          "OverrideKey": "Avatar_Common_ParryAid_H_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "ParrySolo_RadialBlur_01",
+          "EffectType": "RadialBlur",
+          "MpExecMode": "AuthorityOnly"
+        },
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Aokaku_ParryAid"
+        }
+      ],
+      "OnAttackLanded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "HeavyParryModifer"
+        }
+      ]
+    },
+    "LightParryModifer": {
+      "Duration": 1.0,
+      "ModifierStacking": "Replace",
+      "OnAdded": [
+        {
+          "$type": "SetAnimCtrlerParamAction",
+          "BoolVal": true,
+          "ParamName": "Trigger_Parry_L",
+          "ParamType": 1,
+          "Target": "Self"
+        },
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Avatar_Common_ParryAid_L_CamShake_01"
+        },
+        {
+          "$type": "CameraStretchAction",
+          "StretchConfigKey": "Avatar_Common_ParryAid_L_CamStretch_01"
+        },
+        {
+          "$type": "CameraZoomAction",
+          "StretchConfigKey": "Avatar_Common_ParryAid_L_CamZoom_01"
+        },
+        {
+          "$type": "CameraOverrideTrackAction",
+          "MpExecMode": "AuthorityOnly",
+          "OverrideKey": "Avatar_Common_ParryAid_L_CameraOverrideTrack_01",
+          "Target": "Self"
+        },
+        {
+          "$type": "ProcessScreenEffectAction",
+          "EffectKey": "ParrySolo_RadialBlur_01",
+          "EffectType": "RadialBlur",
+          "MpExecMode": "AuthorityOnly"
+        },
+        {
+          "$type": "SkillStartAction",
+          "StartedSkillName": "Aokaku_ParryAid"
+        }
+      ],
+      "OnAttackLanded": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LightParryModifer"
+        }
+      ]
+    },
+    "ReflectBulletModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ChangeReflectBulletStatusAction",
+          "ColliderConfig": {
+            "BulletTypeName": "ConfigurableSphereCollider",
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "ColliderType": "Sphere",
+            "SphereColliderRadius": 0.75
+          },
+          "HitEffect": {},
+          "ReflectStatus": true
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ChangeReflectBulletStatusAction",
+          "ReflectStatus": false
+        }
+      ]
+    }
+  }
+}

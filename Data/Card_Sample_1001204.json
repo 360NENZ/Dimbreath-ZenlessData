@@ -1,0 +1,123 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "GenerateGlitchMonsterMixin",
+      "AmountMax": 1,
+      "AmountMin": 1,
+      "CreateTags": [
+        "GlitchMonster"
+      ],
+      "GlitchAbilityName": "Curse_1100016_GlitchMonster",
+      "MaxMonster": 5,
+      "MonsterList": [
+        101110151
+      ],
+      "Odds": "%odds",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "GlitchMonster"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Human"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "RandomType": "Random"
+    },
+    {
+      "$type": "GenerateGlitchMonsterMixin",
+      "AmountMax": 1,
+      "AmountMin": 1,
+      "CreateTags": [
+        "GlitchMonster"
+      ],
+      "GlitchAbilityName": "Curse_1100016_GlitchMonster",
+      "MaxMonster": -1,
+      "MonsterList": [
+        101110941
+      ],
+      "Odds": "%odds",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "GlitchMonster"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Ether"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "RandomType": "Random"
+    },
+    {
+      "$type": "GenerateGlitchMonsterMixin",
+      "AmountMax": 1,
+      "AmountMin": 1,
+      "CreateTags": [
+        "GlitchMonster"
+      ],
+      "GlitchAbilityName": "Curse_1100016_GlitchMonster",
+      "MaxMonster": -1,
+      "MonsterList": [
+        101110721
+      ],
+      "Odds": "%odds",
+      "Predicates": [
+        {
+          "$type": "ByNot",
+          "Predicates": [
+            {
+              "$type": "ByTags",
+              "TagList": [
+                "GlitchMonster"
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ByTags",
+          "TagList": [
+            "Mech"
+          ],
+          "Target": "Self"
+        }
+      ],
+      "RandomType": "Random"
+    }
+  ],
+  "AbilityName": "Card_Sample_1001204",
+  "AbilitySpecials": {
+    "odds": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {}
+}

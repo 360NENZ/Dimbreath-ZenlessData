@@ -1,0 +1,798 @@
+{
+  "AbilityName": "Rina_UniqueSkill",
+  "AbilitySpecials": {
+    "AS_AddedDamageRatio_Anastacia_Default_InElec": {
+      "Value": 0.15
+    },
+    "AS_PenFinalValue": {
+      "Value": 0.1
+    },
+    "AS_PenFinalValueMax": {
+      "Value": 0.25
+    },
+    "AS_PenFinalValue_Total": {
+      "Value": 0
+    },
+    "AS_PenIncreaseValue": {
+      "Value": 0.1
+    },
+    "AS_PenRatio_Drusilla_Default": {
+      "Value": 0.1
+    },
+    "AS_PenRatio_Drusilla_Ratio": {
+      "Value": 1.5
+    },
+    "AS_PenRatio_Drusilla_Talent_01": {
+      "Value": 0.5
+    },
+    "AS_ProviderCount": {
+      "Value": 0
+    },
+    "AS_RinaPenRatio": {
+      "Value": 0.1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "property(PenRatio_Battle)*specials(AS_RinaPenRatio)",
+        "ParamName": "AS_PenIncreaseValue",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_PenIncreaseValue)+specials(AS_PenRatio_Drusilla_Default)",
+        "ParamName": "AS_PenFinalValue",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%AS_PenFinalValueMax",
+        "ParamName": "AS_PenFinalValue",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByAbilitySpecial",
+            "CompareType": "Greater",
+            "Param": "%AS_PenFinalValueMax",
+            "ParamName": "AS_PenFinalValue",
+            "ParamType": "Float",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialByExpression",
+        "Expression": "specials(AS_PenFinalValue)*(specials(AS_PenRatio_Drusilla_Ratio)-1)",
+        "ParamName": "AS_PenRatio_Drusilla_Talent_01",
+        "Target": "Self",
+        "ValueType": "Float"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ElecListenerModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DamageModifier_Effect_AddedDamageRatio",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": "%AS_PenFinalValue",
+        "ParamName": "AS_PenFinalValue_Total",
+        "ParamType": "Float"
+      }
+    ]
+  },
+  "Modifiers": {
+    "BuffIcon_Controller_DelayModifier": {
+      "DelayHandlers": [
+        {
+          "DelayTime": 0.1,
+          "TimeUpActions": [
+            {
+              "$type": "SetAbilitySpecialAction",
+              "ModifyFunction": "Replace",
+              "Param": "%AS_PenFinalValue",
+              "ParamName": "AS_PenFinalValue_Total",
+              "ParamType": "Float"
+            }
+          ]
+        }
+      ],
+      "Duration": -1,
+      "ModifierStacking": "Unique"
+    },
+    "DamageModifier_Anastacia_Controller": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageModifier_Anastacia_Effect_PenRatio",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageModifier_Anastacia_Effect_PenRatio",
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageModifier_Anastacia_Effect_PenRatio",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "DamageModifier_Anastacia_Effect_PenRatio": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageModifier_Effect_PenRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Rina_UniqueSkill_BuffIcon",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByEntityTemplateID",
+                  "EntityType": "Avatar",
+                  "Target": "Self",
+                  "TemplateID": 1211
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageModifier_Effect_PenRatio",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "DamageModifier_Drusilla_Effect_PenRatio"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Rina_UniqueSkill_BuffIcon",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "DamageModifier_Drusilla_Effect_PenRatio"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageModifier_Drusilla_Controller": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageModifier_Drusilla_Effect_PenRatio",
+          "Target": "TeamAvatars"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageModifier_Drusilla_Effect_PenRatio",
+          "Target": "Caster"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageModifier_Drusilla_Effect_PenRatio",
+          "Target": "TeamAvatars"
+        }
+      ]
+    },
+    "DamageModifier_Drusilla_Effect_PenRatio": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "DamageModifier_Effect_PenRatio",
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "Rina_UniqueSkill_BuffIcon",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByEntityTemplateID",
+                  "EntityType": "Avatar",
+                  "Target": "Self",
+                  "TemplateID": 1211
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "DamageModifier_Effect_PenRatio",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "DamageModifier_Anastacia_Effect_PenRatio"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "Rina_UniqueSkill_BuffIcon",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "DamageModifier_Anastacia_Effect_PenRatio"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageModifier_Effect_AddedDamageRatio": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "Greater",
+              "Param": 0,
+              "ParamName": "AS_ProviderCount",
+              "ParamType": "Integer",
+              "Target": "Self"
+            }
+          ],
+          "PropertyKey": "Actor_AddedDamageRatio_Elec",
+          "PropertyValue": "%AS_AddedDamageRatio_Anastacia_Default_InElec",
+          "Target": "Self"
+        }
+      ]
+    },
+    "DamageModifier_Effect_PenRatio": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_PenRatio": "%AS_PenFinalValue"
+      }
+    },
+    "ElecListenerModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnBuffAddToOther": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "RinaElecModifier_Mark",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            },
+            {
+              "$type": "ByMathSkillSuccess"
+            }
+          ],
+          "Target": "Other"
+        }
+      ]
+    },
+    "FieldRangeModifier_Anastacia_Controller": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 10,
+            "FanCylinderColliderRadius": 10,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "FieldRangeModifier_Anastacia_Effect",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "FieldRangeModifier_Anastacia_Effect",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "RaycastGroundOffset": 0.0,
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": true,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "FieldRangeModifier_Anastacia_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FieldRangeModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsModifierCaster",
+                  "Target": "Target"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FieldRangeModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "FieldRangeModifier_Drusilla_Effect"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FieldRangeModifier_Drusilla_Controller": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "FieldRangeMixin",
+          "ColliderConfig": {
+            "ColliderAngleOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderPosOffset": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "ColliderType": "FanCylinder",
+            "FanCylinderColliderAngle": 360,
+            "FanCylinderColliderHeight": 10,
+            "FanCylinderColliderRadius": 10,
+            "FanCylinderColliderVertexNum": 24
+          },
+          "FieldEnterActions": [
+            {
+              "$type": "ApplyModifier",
+              "ModifierName": "FieldRangeModifier_Drusilla_Effect",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "FieldExitActions": [
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "FieldRangeModifier_Drusilla_Effect",
+              "Predicates": [
+                {
+                  "$type": "ByRelativeCampType",
+                  "Relationship": "Allied",
+                  "Target": "Other"
+                }
+              ],
+              "Target": "Other"
+            }
+          ],
+          "FieldInitPosRot": {
+            "CoordsOption": "Self",
+            "NeedRaycastGround": true,
+            "Offset": {
+              "AngleOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "IsUseRotationXZ": false,
+              "IsUseRotationY": true,
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "RaycastGroundOffset": 0.0,
+            "TargetOption": {
+              "$type": "ConfigPosRotReferTarget",
+              "OffsetReferTarget": "Self"
+            }
+          },
+          "IsFollow": true,
+          "TotalDuration": -1
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "FieldRangeModifier_Drusilla_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "FieldRangeModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByIsModifierCaster",
+                  "Target": "Target"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "FieldRangeModifier_Effect",
+          "Predicates": [
+            {
+              "$type": "ByNot",
+              "Predicates": [
+                {
+                  "$type": "ByHasModifier",
+                  "ModifierNameList": [
+                    "FieldRangeModifier_Anastacia_Effect"
+                  ],
+                  "Target": "Self"
+                }
+              ]
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "FieldRangeModifier_Effect": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_PenFinalValue)+specials(AS_PenRatio_Drusilla_Talent_01)",
+          "ParamName": "AS_PenFinalValue_Total",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "TalentIndex": 1,
+              "Target": "Custom"
+            }
+          ],
+          "ValueType": "Float"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Replace",
+          "Param": "%AS_PenFinalValue",
+          "ParamName": "AS_PenFinalValue_Total",
+          "ParamType": "Float",
+          "Predicates": [
+            {
+              "$type": "ByAvatarTalentIndex",
+              "CustomKey": "Rina_Self_AbilityTargetting_01",
+              "TalentIndex": 1,
+              "Target": "Custom"
+            }
+          ]
+        }
+      ],
+      "Properties": {
+        "Actor_PenRatio": "%AS_PenRatio_Drusilla_Talent_01"
+      }
+    },
+    "MixinModifier_Anastacia_Default": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "DamageModifier_Anastacia_Controller",
+                "BuffIcon_Controller_DelayModifier"
+              ],
+              "ZoneTag": "Rina_Anastacia_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MixinModifier_Anastacia_Talent_01": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "FieldRangeModifier_Anastacia_Controller"
+              ],
+              "ZoneTag": "Rina_Anastacia_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MixinModifier_Drusilla_Default": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "DamageModifier_Drusilla_Controller",
+                "BuffIcon_Controller_DelayModifier"
+              ],
+              "ZoneTag": "Rina_Drusilla_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "MixinModifier_Drusilla_Talent_01": {
+      "Duration": -1,
+      "ModifierMixins": [
+        {
+          "$type": "AttachZoneTagWithModifierMixin",
+          "ConfigList": [
+            {
+              "ModifierNameList": [
+                "FieldRangeModifier_Drusilla_Controller"
+              ],
+              "ZoneTag": "Rina_Drusilla_IsAttacking"
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    },
+    "RinaElecModifier_Mark": {
+      "Duration": -1,
+      "MaxStackingNumber": 99,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)+1",
+          "ParamName": "AS_ProviderCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        }
+      ],
+      "OnBuffRemoved": [
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "RinaElecModifier_Mark",
+          "Predicates": [
+            {
+              "$type": "ByHandlingBuffGroup",
+              "BuffGroupList": [
+                "Electric",
+                "Overload"
+              ]
+            }
+          ],
+          "StackCount": 1,
+          "Target": "Self"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "SetAbilitySpecialByExpression",
+          "Expression": "specials(AS_ProviderCount)-1",
+          "ParamName": "AS_ProviderCount",
+          "Target": "Caster",
+          "ValueType": "Integer"
+        }
+      ]
+    },
+    "Rina_UniqueSkill_BuffIcon": {
+      "Buff": {
+        "BuffID": 3000031,
+        "IsOverrideDuration": false
+      },
+      "Duration": -1,
+      "IsUnique": true,
+      "ModifierStacking": "Replace"
+    }
+  },
+  "OnAbilityStart": [
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+      "ModifierName": "MixinModifier_Anastacia_Default",
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Rina_Anastacia_AbilityTargetting_01",
+      "ModifierName": "MixinModifier_Anastacia_Talent_01",
+      "Predicates": [
+        {
+          "$type": "ByAvatarTalentIndex",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "TalentIndex": 1,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+      "ModifierName": "MixinModifier_Drusilla_Default",
+      "Target": "Custom"
+    },
+    {
+      "$type": "ApplyModifier",
+      "CustomKey": "Rina_Drusilla_AbilityTargetting_01",
+      "ModifierName": "MixinModifier_Drusilla_Talent_01",
+      "Predicates": [
+        {
+          "$type": "ByAvatarTalentIndex",
+          "CustomKey": "Rina_Self_AbilityTargetting_01",
+          "TalentIndex": 1,
+          "Target": "Custom"
+        }
+      ],
+      "Target": "Custom"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "AbilityName": "ComplexCorrupted_LevelSpecial_AvatarLockLife",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "ComplexCorrupted_AvatarLockLifeModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "ComplexCorrupted_AvatarLockLifeModifier": {
+      "Duration": -1,
+      "IgnoreTimeScale": false,
+      "ModifierMixins": [
+        {
+          "$type": "LockLifePropertyMixin",
+          "OnLifeLockFirstTriggeredActions": [
+            {
+              "$type": "LDListenEntityAction",
+              "TargetKey": "10103011_LockLifeActive"
+            }
+          ],
+          "PerformBeHitEffect": true,
+          "RatioLockList": [
+            {
+              "LockType": "Total",
+              "LockValue": 0.1
+            }
+          ]
+        }
+      ],
+      "ModifierStacking": "Unique"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "AttachStateWithModifierMixin",
+      "ConfigList": [
+        {
+          "AnimatorStateName": "SwitchIn_Attack",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "QTEMaterialPropertiesModifier"
+          ]
+        },
+        {
+          "AnimatorStateName": "SwitchIn_Attack_Launch",
+          "FrameCountLow": 0,
+          "IsLoop": false,
+          "LayerIndex": 0,
+          "MaxFrameCountHigh": true,
+          "MaxFrameCountLow": false,
+          "ModifierNameList": [
+            "QTEMaterialPropertiesModifier"
+          ]
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Bangboo_Bagboo_QTE_EffectManager",
+  "AbilityStacking": "Unique",
+  "Modifiers": {
+    "QTEMaterialPropertiesModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "InterruptMaterialPropertyAction",
+          "Tag": "Bagboo_QTE",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

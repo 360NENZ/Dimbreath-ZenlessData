@@ -1,0 +1,186 @@
+{
+  "AbilityName": "Card_Gun_2010301",
+  "AbilitySpecials": {
+    "AS_CritDMG": {
+      "Value": 0.36
+    },
+    "ByOddsNormal": {
+      "Value": 0.5
+    },
+    "CD": {
+      "Value": 12
+    },
+    "HpPercentage": {
+      "Value": 0.5
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CauseHiisazu",
+        "Target": "Self"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "CritDmgModifier",
+        "Target": "Self"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CauseHiisazu": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnDamageCalculatedPre": [
+        {
+          "$type": "RandomOperator",
+          "Odds": "%ByOddsNormal",
+          "OnSuccess": [
+            {
+              "$type": "ModifyAttackDataAction",
+              "Predicates": [
+                {
+                  "$type": "ByHitResult",
+                  "HitResult": "Critical"
+                },
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Normal",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByMonsterFunctionType",
+                  "CompareType": "Equal",
+                  "MonsterFunctionType": "Monster",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByHeavyAttack",
+                  "IsHeavyAttack": true
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "LessEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "Target",
+                  "Val1": "%HpPercentage",
+                  "Val2": 0
+                }
+              ],
+              "PropertyKey": "Actor_Hiisazu",
+              "PropertyValue": 1,
+              "Target": "Target"
+            },
+            {
+              "$type": "TriggerSoundAction",
+              "Predicates": [
+                {
+                  "$type": "ByHitResult",
+                  "HitResult": "Critical"
+                },
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Normal",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByMonsterFunctionType",
+                  "CompareType": "Equal",
+                  "MonsterFunctionType": "Monster",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByHeavyAttack",
+                  "IsHeavyAttack": true
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "LessEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "Target",
+                  "Val1": "%HpPercentage",
+                  "Val2": 0
+                }
+              ],
+              "Target": "Target",
+              "soundActionKey": "Play_SFX_Char_TarotCard_Gun_2010301"
+            },
+            {
+              "$type": "RemoveModifier",
+              "ModifierName": "CauseHiisazu",
+              "ModifierTargetType": "SameNameAbility",
+              "Predicates": [
+                {
+                  "$type": "ByHitResult",
+                  "HitResult": "Critical"
+                },
+                {
+                  "$type": "ByMonsterStrengthType",
+                  "CompareType": "Equal",
+                  "StrengthType": "Normal",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByMonsterFunctionType",
+                  "CompareType": "Equal",
+                  "MonsterFunctionType": "Monster",
+                  "Target": "Target"
+                },
+                {
+                  "$type": "ByHeavyAttack",
+                  "IsHeavyAttack": true
+                },
+                {
+                  "$type": "ByPlayerPropertyValue",
+                  "CompareType": "LessEqual",
+                  "Denominator": "MaxHP",
+                  "IsUsePercent": true,
+                  "Numerator": "CurHP",
+                  "Target": "Target",
+                  "Val1": "%HpPercentage",
+                  "Val2": 0
+                }
+              ],
+              "Target": "TeamAvatars"
+            }
+          ],
+          "Target": "Target"
+        }
+      ],
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "HiisazuCD",
+          "Target": "Self"
+        }
+      ]
+    },
+    "CritDmgModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "Properties": {
+        "Actor_CriticalDamageRatioDelta": "%AS_CritDMG"
+      }
+    },
+    "HiisazuCD": {
+      "Duration": "%CD",
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CauseHiisazu",
+          "Target": "Self"
+        }
+      ]
+    }
+  }
+}

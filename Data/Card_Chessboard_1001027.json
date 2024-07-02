@@ -1,0 +1,19 @@
+{
+  "AbilityName": "Card_Chessboard_1001027",
+  "AbilitySpecials": {
+    "HpPercentage": {
+      "Value": 0.07
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "RecoverHPAction",
+        "Percentage": "%HpPercentage",
+        "Target": "Self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "AbilityName": "Card_HighElement_Deflagrate",
+  "AbilitySpecials": {
+    "AS_DeflagrateCoolDownTime": {
+      "Value": 1.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnHitOther": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DeflagrateModifier",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          },
+          {
+            "$type": "ByHeavyAttack",
+            "IsHeavyAttack": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "DeflagrateCoolDownModifier_Card_Deflagrate"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "#HighElement_Deflagrate",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          },
+          {
+            "$type": "ByHeavyAttack",
+            "IsHeavyAttack": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "DeflagrateCoolDownModifier_Card_Deflagrate"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "DeflagrateCoolDownModifier_Card_Deflagrate",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire"
+          },
+          {
+            "$type": "ByHeavyAttack",
+            "IsHeavyAttack": true,
+            "Target": "Self"
+          },
+          {
+            "$type": "ByNot",
+            "Predicates": [
+              {
+                "$type": "ByHasModifier",
+                "ModifierNameList": [
+                  "DeflagrateCoolDownModifier_Card_Deflagrate"
+                ],
+                "Target": "Self"
+              }
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "DeflagrateCoolDownModifier_Card_Deflagrate": {
+      "Duration": "%AS_DeflagrateCoolDownTime",
+      "ModifierStacking": "GlobalUnique",
+      "OnAdded": []
+    },
+    "DeflagrateModifier": {
+      "Duration": 0.5,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Deflagrate_S",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Small",
+              "CompareType": "LessEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Deflagrate_M",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Middle",
+              "CompareType": "Equal",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "FireEffect",
+          "EffectPattern": "Buff_Deflagrate_L",
+          "Predicates": [
+            {
+              "$type": "ByCharacterSize",
+              "CharacterSize": "Large",
+              "CompareType": "GreaterEqual",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ModifyMaterialPropertyAction",
+          "ApplyAllRenderers": true,
+          "Tag": "Monster_Common_MA_ Deflagrate_03",
+          "Target": "Self",
+          "key": "Monster_Common_MA_ Deflagrate_03"
+        }
+      ]
+    }
+  }
+}

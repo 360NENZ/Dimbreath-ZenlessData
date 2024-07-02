@@ -1,0 +1,230 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "TransmitChainMixin",
+      "CanChangeTransmitDamageRatio": true,
+      "CanTransmitBack": false,
+      "ChangeRatio": 1,
+      "FirstTransmitTarget": "Target",
+      "IsTransmittedFromAttacker": true,
+      "NextTargetCustomKey": "Test_TransmitChainMixin_AbilityTargetting_02",
+      "NextTransmitTarget": "Custom",
+      "OnTransmitingEndPointAction": [
+        {
+          "$type": "AttackCameraShakeAction",
+          "ShakeConfigKey": "Monster_DeathXIII_ATK3_CamShake_01",
+          "Target": "Other"
+        }
+      ],
+      "TransmitAttackProperty": "#Card_Electirc_ChainDMG_Ability_AttackProperty_01",
+      "TransmitEffect": {
+        "EffectPattern": "Eff_SkillEffect_LightningChain_TransmitEffect_Basic_Test"
+      },
+      "TransmitEffectDelayTime": 0.0,
+      "TransmitInterval": 0.3,
+      "TransmitTimes": 5,
+      "TransmitingEndPointEffect": {
+        "EffectPattern": "Eff_SkillEffect_LightningChain_TransmitEndEffect_Basic_Test"
+      },
+      "TransmitingEndPointEffectDelayTime": 0.0,
+      "TransmitingPickTargetNum": 1,
+      "TransmittingPlayTime": 0.5
+    }
+  ],
+  "AbilityName": "Card_Electro_1000508",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAdded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "LightingChainTrigger"
+      }
+    ]
+  },
+  "Modifiers": {
+    "CD": {
+      "Duration": 5,
+      "ModifierStacking": "Unique",
+      "OnRemoved": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "LightingChainTrigger"
+        }
+      ]
+    },
+    "LightingChainModifier": {
+      "Duration": 5,
+      "ModifierMixins": [
+        {
+          "$type": "TransmitChainMixin",
+          "CanChangeTransmitDamageRatio": true,
+          "CanTransmitBack": false,
+          "ChangeRatio": 1,
+          "FirstCasterCustomKey": "Card_Eletric_TransmitChainMixin_Targetting01",
+          "OnTransmitingEndPointAction": [],
+          "TargetCustomKey": "Card_Eletric_TransmitChainMixin_Targetting02",
+          "TransmitAttackProperty": "#Card_Electirc_ChainDMG_Ability_AttackProperty_01",
+          "TransmitEffect": {
+            "EffectPattern": "Eff_SkillEffect_LightningChain_TransmitEffect_Basic_Test"
+          },
+          "TransmitEffectDelayTime": 0.0,
+          "TransmitEndEffectDelayTime": 0.0,
+          "TransmitInterval": 0.2,
+          "TransmitPickTargetNum": 1,
+          "TransmitSource": "Target",
+          "TransmitStartEffectDelayTime": 0.0,
+          "TransmitTarget": "Custom",
+          "TransmitTimes": 5,
+          "TransmitingEndPointEffect": {
+            "EffectPattern": "Eff_SkillEffect_LightningChain_TransmitEndEffect_Basic_Test"
+          },
+          "TransmitingEndPointEffectDelayTime": 0.0,
+          "TransmitingStartPointEffectDelayTime": 0.0,
+          "TransmittingPlayTime": 0.5
+        }
+      ],
+      "ModifierStacking": "Replace"
+    },
+    "LightingChainTrigger": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnAttackLanded": [
+        {
+          "$type": "RemoveAbilityAction",
+          "AbilityName": "Card_Electro_1000508_Ability",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDirectHit",
+              "IsDirect": true
+            },
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "ApplyAbilityAction",
+          "AbilityName": "Card_Electro_1000508_Ability",
+          "IsAutoTrigger": false,
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDirectHit",
+              "IsDirect": true
+            },
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            }
+          ],
+          "Target": "Self"
+        },
+        {
+          "$type": "TriggerAbilityAction",
+          "AbilityName": "Card_Electro_1000508_Ability",
+          "ExtraTarget": "Target",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDirectHit",
+              "IsDirect": true
+            },
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            }
+          ]
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "CD",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDirectHit",
+              "IsDirect": true
+            },
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            }
+          ]
+        },
+        {
+          "$type": "RemoveModifier",
+          "ModifierName": "LightingChainTrigger",
+          "Predicates": [
+            {
+              "$type": "ByHasBuffGroup",
+              "BuffGroupList": [
+                "Electric"
+              ],
+              "Target": "Target"
+            },
+            {
+              "$type": "ByDamageElementType",
+              "DamageElement": "Elec",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByDirectHit",
+              "IsDirect": true
+            },
+            {
+              "$type": "ByAtkHitIsOwnAbility",
+              "IsOwnAbility": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

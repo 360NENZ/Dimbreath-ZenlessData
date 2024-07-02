@@ -1,0 +1,143 @@
+{
+  "AbilityMixins": [
+    {
+      "$type": "ActwithStateFrameMixin",
+      "ConfigList": [
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": false,
+              "ParamName": "Bool_InvertDone_SpecialAttack_02",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "WriteAIParamAction",
+              "BoolParamValue": false,
+              "ParamName": "Bool_InvertSkill_Ready",
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Invert",
+          "Frame": 465,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_InvertDone_SpecialAttack_02",
+              "ParamType": 2,
+              "Predicates": [
+                {
+                  "$type": "ByAbilitySpecial",
+                  "CompareType": "Greater",
+                  "Param": 2,
+                  "ParamName": "ClusterKilledNumber",
+                  "ParamType": "Integer",
+                  "Target": "Self"
+                }
+              ],
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop",
+          "Frame": 1049,
+          "IsLoop": false,
+          "LayerIndex": 0
+        },
+        {
+          "ActionList": [
+            {
+              "$type": "SetAnimCtrlerParamAction",
+              "BoolVal": true,
+              "ParamName": "Bool_InvertDone_SpecialAttack_02",
+              "ParamType": 2,
+              "Target": "Self"
+            }
+          ],
+          "AnimatorStateName": "SpecialAttack_02_Loop_Phase_2",
+          "Frame": 0,
+          "IsLoop": false,
+          "LayerIndex": 0
+        }
+      ]
+    }
+  ],
+  "AbilityName": "Nineveh_SummonVines_Manager_SpecialAttack_02",
+  "AbilitySpecials": {
+    "ClusterKilledNumber": {
+      "Value": 0,
+      "ValueType": "Integer"
+    }
+  },
+  "AbilityStacking": "Unique",
+  "OnAbilityTrigger": [
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Nineveh_Summon_Vine_Spawn_Inner_01",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Nineveh_Summon_Vine_Spawn_Inner_02",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Nineveh_Summon_Vine_Spawn_Outer_01",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Nineveh_Summon_Vine_Spawn_Outer_02",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ]
+    },
+    {
+      "$type": "TriggerAbilityAction",
+      "AbilityName": "Nineveh_Summon_Vine_Spawn_Outer_03",
+      "Predicates": [
+        {
+          "$type": "ByStageName",
+          "CompareType": "Equal",
+          "StageName": "Stage_Zero_Boss_Nineveh"
+        }
+      ]
+    }
+  ]
+}

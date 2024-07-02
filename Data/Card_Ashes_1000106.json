@@ -1,0 +1,147 @@
+{
+  "AbilityName": "Card_Ashes_1000106",
+  "AbilitySpecials": {
+    "AddedDamageRatio": {
+      "Value": 0
+    },
+    "AddedDamageRatio_Delta": {
+      "Value": 1
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnHitOther": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0,
+        "ParamName": "AddedDamageRatio",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%AddedDamageRatio_Delta",
+        "ParamName": "AddedDamageRatio",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByBuffCountAllEnemy",
+            "CompareType": "GreaterEqual",
+            "CompareValue": 1,
+            "EnemyType": [
+              "Normal",
+              "Elite",
+              "Boss"
+            ],
+            "FilterType": "ByBuffGroup",
+            "GroupName": "Burn",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%AddedDamageRatio_Delta",
+        "ParamName": "AddedDamageRatio",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByBuffCountAllEnemy",
+            "CompareType": "GreaterEqual",
+            "CompareValue": 2,
+            "EnemyType": [
+              "Normal",
+              "Elite",
+              "Boss"
+            ],
+            "FilterType": "ByBuffGroup",
+            "GroupName": "Burn",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%AddedDamageRatio_Delta",
+        "ParamName": "AddedDamageRatio",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByBuffCountAllEnemy",
+            "CompareType": "GreaterEqual",
+            "CompareValue": 3,
+            "EnemyType": [
+              "Normal",
+              "Elite",
+              "Boss"
+            ],
+            "FilterType": "ByBuffGroup",
+            "GroupName": "Burn",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%AddedDamageRatio_Delta",
+        "ParamName": "AddedDamageRatio",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByBuffCountAllEnemy",
+            "CompareType": "GreaterEqual",
+            "CompareValue": 4,
+            "EnemyType": [
+              "Normal",
+              "Elite",
+              "Boss"
+            ],
+            "FilterType": "ByBuffGroup",
+            "GroupName": "Burn",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Add",
+        "Param": "%AddedDamageRatio_Delta",
+        "ParamName": "AddedDamageRatio",
+        "ParamType": "Float",
+        "Predicates": [
+          {
+            "$type": "ByBuffCountAllEnemy",
+            "CompareType": "GreaterEqual",
+            "CompareValue": 5,
+            "EnemyType": [
+              "Normal",
+              "Elite",
+              "Boss"
+            ],
+            "FilterType": "ByBuffGroup",
+            "GroupName": "Burn",
+            "Target": "Self"
+          }
+        ]
+      },
+      {
+        "$type": "ModifyAttackDataAction",
+        "Predicates": [
+          {
+            "$type": "ByDamageElementType",
+            "DamageElement": "Fire",
+            "Target": "Self"
+          }
+        ],
+        "PropertyKey": "Actor_AddedDamageRatio",
+        "PropertyValue": "%AddedDamageRatio",
+        "Target": "Self"
+      }
+    ]
+  }
+}

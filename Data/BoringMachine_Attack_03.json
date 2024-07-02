@@ -1,0 +1,79 @@
+{
+  "AbilityName": "BoringMachine_Attack_03",
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "ModifierStacking": "Unique",
+    "OnAttackLanded": [
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "Modifier_BoringMachine_Attack_03_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_03_Attackproperty_01",
+              "Monster_BoringMachine_Attack_03_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "DamageByAttackPropertyAction",
+        "AnimEventID": "Monster_BoringMachine_Attack_03_Attackproperty_03",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_BoringMachine_Attack_03_HitCount",
+            "StackCount": 4,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_03_Attackproperty_01",
+              "Monster_BoringMachine_Attack_03_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "Target": "Target"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "Modifier_BoringMachine_Attack_03_HitCount",
+        "Predicates": [
+          {
+            "$type": "ByModifierStackCount",
+            "CompareType": "Equal",
+            "CountModifierType": "CurTargetAbility",
+            "ModifierName": "Modifier_BoringMachine_Attack_03_HitCount",
+            "StackCount": 4,
+            "Target": "Target"
+          },
+          {
+            "$type": "ByAnimEventIDs",
+            "AnimEventIDs": [
+              "Monster_BoringMachine_Attack_03_Attackproperty_01",
+              "Monster_BoringMachine_Attack_03_Attackproperty_02"
+            ],
+            "Target": "Self"
+          }
+        ],
+        "StackCount": 4,
+        "Target": "Target"
+      }
+    ]
+  },
+  "Modifiers": {
+    "Modifier_BoringMachine_Attack_03_HitCount": {
+      "Duration": 2,
+      "IgnoreTimeScale": false,
+      "MaxStackingNumber": 4,
+      "ModifierStacking": "MultipleAllRefresh"
+    }
+  }
+}

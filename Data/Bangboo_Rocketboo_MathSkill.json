@@ -1,0 +1,108 @@
+{
+  "AbilityName": "Bangboo_Rocketboo_MathSkill",
+  "AbilitySpecials": {
+    "AS_AddedElementAccumulationRatio": {
+      "Value": 1.0
+    },
+    "AS_PairACount": {
+      "Value": 0.0
+    }
+  },
+  "AbilityStacking": "Unique",
+  "DefaultModifier": {
+    "OnTeamAvatarConstructed": [
+      {
+        "$type": "SetAbilitySpecialAction",
+        "ModifyFunction": "Replace",
+        "Param": 0.0,
+        "ParamName": "AS_PairACount",
+        "ParamType": "Float"
+      },
+      {
+        "$type": "RemoveModifier",
+        "ModifierName": "PairCheckModifier",
+        "Target": "TeamAvatars"
+      },
+      {
+        "$type": "ApplyModifier",
+        "ModifierName": "PairCheckModifier",
+        "Target": "TeamAvatars"
+      }
+    ]
+  },
+  "Modifiers": {
+    "MathSkillModifier": {
+      "Duration": -1,
+      "ModifierStacking": "Unique",
+      "OnHitOther": [
+        {
+          "$type": "ModifyAttackDataAction",
+          "Predicates": [
+            {
+              "$type": "ByAnimTagList",
+              "TagList": [
+                "BangbooQTE"
+              ]
+            }
+          ],
+          "PropertyKey": "Actor_AddedElementAccumulationRatio",
+          "PropertyValue": "%AS_AddedElementAccumulationRatio",
+          "Target": "Self"
+        }
+      ]
+    },
+    "PairAModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "MultipleRefresh",
+      "OnAdded": [
+        {
+          "$type": "SetAbilitySpecialAction",
+          "ModifyFunction": "Add",
+          "Param": 1.0,
+          "ParamName": "AS_PairACount",
+          "ParamType": "Float"
+        },
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "MathSkillModifier",
+          "Predicates": [
+            {
+              "$type": "ByAbilitySpecial",
+              "CompareType": "GreaterEqual",
+              "Param": 2.0,
+              "ParamName": "AS_PairACount",
+              "ParamType": "Float",
+              "Target": "Self"
+            },
+            {
+              "$type": "ByBuddyTeamType",
+              "CheckBuddyTeam": "Fighting",
+              "Target": "Self"
+            }
+          ],
+          "Target": "Self"
+        }
+      ]
+    },
+    "PairCheckModifier": {
+      "Duration": 1,
+      "IgnoreTimeScale": false,
+      "ModifierStacking": "Unique",
+      "OnAdded": [
+        {
+          "$type": "ApplyModifier",
+          "ModifierName": "PairAModifier",
+          "Predicates": [
+            {
+              "$type": "ByAvatarElementType",
+              "ElementType": 201,
+              "Target": "Self"
+            }
+          ],
+          "Target": "Caster"
+        }
+      ]
+    }
+  }
+}
