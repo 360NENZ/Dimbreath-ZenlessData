@@ -1,6 +1,8 @@
 # ZenlessData
 Repository containing the data for the game Zenless Zone Zero.
 
+**NOTE:** Configs will come soon.
+
 ## Notes
 
 The repository has two modifications compared to the original data:

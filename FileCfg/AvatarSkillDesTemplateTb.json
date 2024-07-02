@@ -7520,7 +7520,7 @@
       "FNKMGGKBACN": 1,
       "CAHOBGPCJNN": "",
       "HKCCGGECKHJ": "Common_Property_Desc_DamageRatio",
-      "LPOMPMJAFLK": "{Skill:1131024, Prop:1001}",
+      "LPOMPMJAFLK": "{{Skill:1131024, Prop:1001} + {Skill:1131026, Prop:1001}}",
       "GFIPIDNFICC": 0,
       "AAAGHBBNOAM": 0
     },
@@ -7532,7 +7532,7 @@
       "FNKMGGKBACN": 1,
       "CAHOBGPCJNN": "",
       "HKCCGGECKHJ": "Common_Property_Desc_BreakStunRatio",
-      "LPOMPMJAFLK": "{Skill:1131024, Prop:1002}",
+      "LPOMPMJAFLK": "{{Skill:1131024, Prop:1002} + {Skill:1131026, Prop:1002}}",
       "GFIPIDNFICC": 0,
       "AAAGHBBNOAM": 0
     },
