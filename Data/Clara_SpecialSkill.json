@@ -182,9 +182,9 @@
         {
           "$type": "ModifyMaterialPropertyAction",
           "ApplyAllRenderers": true,
-          "Tag": "Avatar_Female_Size01_Clara_MA_Attack_Branch_ChargeAttack_Loop_OverrideRimGlow_02",
+          "Tag": "Avatar_Female_Size01_Clara_MA_Attack_Branch_ChargeAttack_Loop_OverrideOutline_03",
           "Target": "Self",
-          "key": "Avatar_Female_Size01_Clara_MA_Attack_Branch_ChargeAttack_Loop_OverrideRimGlow_02"
+          "key": "Avatar_Female_Size01_Clara_MA_Attack_Branch_ChargeAttack_Loop_OverrideOutline_03"
         },
         {
           "$type": "GamepadRumbleAction",
@@ -205,7 +205,7 @@
         },
         {
           "$type": "RemoveMaterialPropertyAction",
-          "Tag": "Avatar_Female_Size01_Clara_MA_Attack_Branch_ChargeAttack_Loop_OverrideRimGlow_02",
+          "Tag": "Avatar_Female_Size01_Clara_MA_Attack_Branch_ChargeAttack_Loop_OverrideOutline_03",
           "Target": "Self"
         },
         {

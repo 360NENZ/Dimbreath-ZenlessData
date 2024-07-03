@@ -23,9 +23,9 @@
       "OnAdded": [
         {
           "$type": "ModifyMaterialPropertyAction",
-          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Tag": "Monster_Common_MA_Buff_Attack_OverrideOutline_01",
           "Target": "Self",
-          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+          "key": "Monster_Common_MA_Buff_Attack_OverrideOutline_01"
         },
         {
           "$type": "ModifyMaterialPropertyAction",
@@ -46,7 +46,7 @@
       "OnRemoved": [
         {
           "$type": "InterruptMaterialPropertyAction",
-          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Tag": "Monster_Common_MA_Buff_Attack_OverrideOutline_01",
           "Target": "Self"
         },
         {
@@ -244,9 +244,9 @@
         },
         {
           "$type": "ModifyMaterialPropertyAction",
-          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Tag": "Monster_Common_MA_Buff_Attack_OverrideOutline_01",
           "Target": "Self",
-          "key": "Monster_Common_MA_Buff_Attack_RimGlow_01"
+          "key": "Monster_Common_MA_Buff_Attack_OverrideOutline_01"
         },
         {
           "$type": "ModifyMaterialPropertyAction",
@@ -273,7 +273,7 @@
         },
         {
           "$type": "InterruptMaterialPropertyAction",
-          "Tag": "Monster_Common_MA_Buff_Attack_RimGlow_01",
+          "Tag": "Monster_Common_MA_Buff_Attack_OverrideOutline_01",
           "Target": "Self"
         },
         {
